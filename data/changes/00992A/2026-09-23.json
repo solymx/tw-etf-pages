@@ -1,0 +1,44 @@
+{
+  "etf_ticker": "00992A",
+  "as_of_date": "2026-09-23",
+  "prev_as_of_date": "2026-09-22",
+  "compared_at": "2026-09-23T22:50:55+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 1,
+    "decrease": 1,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "6223",
+      "stock_name": "旺矽科技",
+      "prev_shares": 268000,
+      "curr_shares": 344000,
+      "shares_delta": 76000,
+      "prev_weight_pct": 3.3771,
+      "curr_weight_pct": 4.587,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "6584",
+      "stock_name": "南俊國際",
+      "prev_shares": 2231000,
+      "curr_shares": 2213000,
+      "shares_delta": -18000,
+      "prev_weight_pct": 2.9086,
+      "curr_weight_pct": 2.8458,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": []
+}
