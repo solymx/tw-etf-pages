@@ -139,6 +139,12 @@ etfs:
     fund_code: "0056"
     source_page: "https://www.yuantaetfs.com/product/detail/0056/ratio"
 
+  - ticker: "00713"
+    name: "元大台灣高息低波"
+    issuer: yuanta
+    fund_code: "00713"
+    source_page: "https://www.yuantaetfs.com/product/detail/00713/ratio"
+
 fetch:
   timeout_sec: 60
   retries: 3
