@@ -162,19 +162,21 @@ def fetch_etf_holdings(
     Capital Fund (群益投信), Fubon (富邦投信), CTBC (中國信託投信),
     Nomura (野村投信), Allianz (安聯投信), Cathay (國泰投信),
     J.P. Morgan AM Taiwan / 摩根投信 (jpm), Taishin / 台新投信 (taishin),
-    and First Securities Investment Trust / 第一金投信 (fsitc)
+    First Securities Investment Trust / 第一金投信 (fsitc),
+    and Mega Funds / 兆豐投信 (mega)
     have no reliable public Excel/CSV download URL for automation; for issuer in
-    {"capital", "fubon", "ctbc", "nomura", "allianz", "cathay", "jpm", "taishin", "fsitc"}
+    {"capital", "fubon", "ctbc", "nomura", "allianz", "cathay", "jpm", "taishin", "fsitc", "mega"}
     we archive via zdsetf.com snapshot, which mirrors the official portfolio/PCF
     page (source_url points at capitalfund.com.tw / websys.fsit.com.tw /
     ctbcinvestments.com / nomurafunds.com.tw / etf.allianzgi.com.tw /
-    cathaysite.com.tw / am.jpmorgan.com / tsit.com.tw / fsitc.com.tw).
+    cathaysite.com.tw / am.jpmorgan.com / tsit.com.tw / fsitc.com.tw /
+    megafunds.com.tw).
     """
     stamp = today_taipei().isoformat()
     raw_dir = cfg.raw_dir / etf.ticker
 
-    # Primary path for capital / fubon / ctbc / nomura / allianz / cathay / jpm / taishin / fsitc: zdsetf mirror (no Excel API).
-    if etf.issuer in ("capital", "fubon", "ctbc", "nomura", "allianz", "cathay", "jpm", "taishin", "fsitc"):
+    # Primary path for capital / fubon / ctbc / nomura / allianz / cathay / jpm / taishin / fsitc / mega: zdsetf mirror (no Excel API).
+    if etf.issuer in ("capital", "fubon", "ctbc", "nomura", "allianz", "cathay", "jpm", "taishin", "fsitc", "mega"):
         path = raw_dir / f"{etf.ticker}_{stamp}_zdsetf.json"
         fetch_zdsetf_snapshot(cfg, etf.ticker, path)
         return path, "zdsetf"

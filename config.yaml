@@ -115,6 +115,12 @@ etfs:
     fund_code: "00995A"
     source_page: "https://www.ctbcinvestments.com/etfprod/00995A/pcf"
 
+  - ticker: "00996A"
+    name: "主動兆豐台灣豐收"
+    issuer: mega
+    fund_code: "23"
+    source_page: "https://www.megafunds.com.tw/MEGA/etf/etf_product.aspx?id=23"
+
 fetch:
   timeout_sec: 60
   retries: 3

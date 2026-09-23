@@ -83,3 +83,10 @@
 - **無穩定公開 Excel／CSV API** 可供本站直接下載（`FormDownload.aspx`／`ETFAccWeb`／`ETFList.aspx` 未提供可自動化的持股 Excel／CSV URL）。
 - 本站以 `zdsetf.com/api/etfs/{TICKER}/snapshot` 作為主來源（JSON 內 `source_url` 指向 fsitc.com.tw）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
+
+## 兆豐（00996A／Mega Funds／mega）
+
+- 官網產品／投組頁：`https://www.megafunds.com.tw/MEGA/etf/etf_product.aspx?id=23`（zdsetf `source_url` 指向此頁；產品 id=23）。
+- **無穩定公開 Excel／CSV API** 可供本站直接下載（官網為 HTML 投組頁；本機直連可能被 WAF 擋）。
+- 本站以 `zdsetf.com/api/etfs/00996A/snapshot` 作為主來源（JSON 內 `source_url` 指向 megafunds.com.tw）；僅最新一日，**無法一次回補**。
+- 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
