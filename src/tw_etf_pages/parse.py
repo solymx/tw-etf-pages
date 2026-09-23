@@ -214,7 +214,7 @@ def parse_zdsetf_snapshot(
 ) -> dict[str, Any]:
     """Fallback: zdsetf.com snapshot JSON.
 
-    Field aliases (00405A / 00406A / 00980A / 00984A / 00400A / 00401A / future issuers may differ slightly from 00992A):
+    Field aliases (00405A / 00406A / 00980A / 00984A / 00400A / 00401A / 00987A / future issuers may differ slightly from 00992A):
     - date: snapshot_date | as_of_date | date
     - holdings list: holdings | positions | stocks
     - code/name: stock_code|code , stock_name|name

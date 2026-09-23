@@ -160,20 +160,20 @@ def fetch_etf_holdings(
     Returns (path, kind) where kind is 'uni_excel' | 'fh_excel' | 'zdsetf'.
 
     Capital Fund (群益投信), Fubon (富邦投信), CTBC (中國信託投信),
-    Nomura (野村投信), Allianz (安聯投信), Cathay (國泰投信), and
-    J.P. Morgan AM Taiwan / 摩根投信 (jpm) have no reliable public Excel/CSV
-    download URL for automation; for issuer in
-    {"capital", "fubon", "ctbc", "nomura", "allianz", "cathay", "jpm"} we archive
-    via zdsetf.com snapshot, which mirrors the official portfolio/PCF page
-    (source_url points at capitalfund.com.tw / websys.fsit.com.tw /
+    Nomura (野村投信), Allianz (安聯投信), Cathay (國泰投信),
+    J.P. Morgan AM Taiwan / 摩根投信 (jpm), and Taishin / 台新投信 (taishin)
+    have no reliable public Excel/CSV download URL for automation; for issuer in
+    {"capital", "fubon", "ctbc", "nomura", "allianz", "cathay", "jpm", "taishin"}
+    we archive via zdsetf.com snapshot, which mirrors the official portfolio/PCF
+    page (source_url points at capitalfund.com.tw / websys.fsit.com.tw /
     ctbcinvestments.com / nomurafunds.com.tw / etf.allianzgi.com.tw /
-    cathaysite.com.tw / am.jpmorgan.com).
+    cathaysite.com.tw / am.jpmorgan.com / tsit.com.tw).
     """
     stamp = today_taipei().isoformat()
     raw_dir = cfg.raw_dir / etf.ticker
 
-    # Primary path for capital / fubon / ctbc / nomura / allianz / cathay / jpm: zdsetf mirror (no Excel API).
-    if etf.issuer in ("capital", "fubon", "ctbc", "nomura", "allianz", "cathay", "jpm"):
+    # Primary path for capital / fubon / ctbc / nomura / allianz / cathay / jpm / taishin: zdsetf mirror (no Excel API).
+    if etf.issuer in ("capital", "fubon", "ctbc", "nomura", "allianz", "cathay", "jpm", "taishin"):
         path = raw_dir / f"{etf.ticker}_{stamp}_zdsetf.json"
         fetch_zdsetf_snapshot(cfg, etf.ticker, path)
         return path, "zdsetf"

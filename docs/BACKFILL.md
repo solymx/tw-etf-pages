@@ -68,3 +68,11 @@
 - 本站以 `zdsetf.com/api/etfs/00401A/snapshot` 作為主來源（JSON 內 `source_url` 指向 am.jpmorgan.com）；僅最新一日，**無法一次回補**。
 - **權重 caveat**：zdsetf 快照中 `weight_pct` 可能全為 `null`（與國泰 `00400A` 相同）；parser 正規化為 `0.0`，**不臆造權重**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
+
+## 台新（00987A／Taishin／taishin）
+
+- 官網產品頁：`https://www.tsit.com.tw/ETF/Home/ETFSeriesDetail/00987A`；PCF／投組：`https://www.tsit.com.tw/ETF/Home/Pcf/00987A`（zdsetf `source_url` 指向此 PCF 頁）。
+- **無穩定公開 Excel／CSV API** 可供本站直接下載（官網為 HTML 投組／PCF 頁）。
+- 本站以 `zdsetf.com/api/etfs/00987A/snapshot` 作為主來源（JSON 內 `source_url` 指向 tsit.com.tw）；僅最新一日，**無法一次回補**。
+- **權重 caveat**：zdsetf 快照中 `weight_pct` 可能全為 `null`（與國泰 `00400A`／摩根 `00401A` 相同）；parser 正規化為 `0.0`，**不臆造權重**。
+- 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
