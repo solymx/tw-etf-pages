@@ -3,196 +3,2830 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>台灣主動式 ETF 持股異動總覽</title>
-  <style>
-    :root {
-      --bg: #0f1419;
-      --card: #1a2332;
-      --text: #e7ecf3;
-      --muted: #8b9bb4;
-      --border: #2a3a52;
-      --buy: #3dd68c;
-      --inc: #5b9fd4;
-      --dec: #f0a060;
-      --exit: #e86a6a;
-      --link: #7eb8ff;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.55;
-      padding: 1.25rem clamp(1rem, 3vw, 2.5rem) 3rem;
-    }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    header { margin-bottom: 1.5rem; }
-    h1 { font-size: 1.55rem; margin: 0 0 0.35rem; font-weight: 700; }
-    h2 { font-size: 1.2rem; margin: 1.6rem 0 0.6rem; }
-    h3 { font-size: 1.05rem; margin: 1.1rem 0 0.45rem; }
-    .muted { color: var(--muted); font-size: 0.92rem; }
-    .nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin: 0.75rem 0 0; }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 0.85rem;
-      margin: 1rem 0 1.5rem;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1rem 1.1rem;
-    }
-    .card h2 { margin: 0 0 0.35rem; font-size: 1.1rem; }
-    .badge {
-      display: inline-block;
-      font-size: 0.75rem;
-      padding: 0.12rem 0.45rem;
-      border-radius: 999px;
-      background: #243247;
-      color: var(--muted);
-      margin-right: 0.25rem;
-    }
-    .badge.buy { background: #1a3d2e; color: var(--buy); }
-    .badge.inc { background: #1a2e40; color: var(--inc); }
-    .badge.dec { background: #3d2e1a; color: var(--dec); }
-    .badge.exit { background: #3d1a1a; color: var(--exit); }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.92rem;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    th, td {
-      padding: 0.55rem 0.7rem;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-    th { background: #152033; color: var(--muted); font-weight: 600; white-space: nowrap; }
-    tr:last-child td { border-bottom: none; }
-    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
-    .section-buy h3 { color: var(--buy); }
-    .section-inc h3 { color: var(--inc); }
-    .section-dec h3 { color: var(--dec); }
-    .section-exit h3 { color: var(--exit); }
-    .empty { color: var(--muted); font-style: italic; padding: 0.5rem 0; }
-    footer {
-      margin-top: 2.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-    .tag-row { margin: 0.4rem 0 0.8rem; }
-  </style>
+  <title>台灣主動式 ETF 持股異動日報</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <header>
-    <h1>台灣主動式 ETF 每日持股異動</h1>
-    <p class="muted">依發行人官方持股 Excel 自建日快照，比較股數增減（非價格）。</p>
+  
+  <div class="layout">
     
-<nav class="nav">
-  
-  <a href="00981A.html">00981A 主動統一台股增長</a>
-  
-  <a href="00988A.html">00988A 主動統一全球創新</a>
-  
-  <a href="00991A.html">00991A 主動復華未來50</a>
-  
-  <a href="00403A.html">00403A 主動統一升級50</a>
-  
+<button type="button" class="mobile-toc-toggle" data-toc-toggle>目錄 ☰</button>
+<nav class="toc" id="toc" aria-label="頁面目錄">
+  <h2>目錄</h2>
+  <ol>
+    <li><a href="#part1">第一部分：整體 ETF 新增／剔除</a>
+      <div class="toc-sub"><ol>
+        <li><a href="#part1_add">🆕 整體 ETF 新增標的</a></li>
+        <li><a href="#part1_rem">❌ 整體 ETF 剔除標的</a></li>
+      </ol></div>
+    </li>
+    <li><a href="#part2">第二部分：主動型 ETF 變動專區</a>
+      <div class="toc-sub"><ol>
+        
+        <li><a href="#act_00981A">📊 00981A 主動統一台股增長</a></li>
+        
+        <li><a href="#act_00988A">📊 00988A 主動統一全球創新</a></li>
+        
+        <li><a href="#act_00991A">📊 00991A 主動復華未來50</a></li>
+        
+        <li><a href="#act_00403A">📊 00403A 主動統一升級50</a></li>
+        
+      </ol></div>
+    </li>
+    <li><a href="#part_water">水位變動（觀察清單彙總）</a>
+      <div class="toc-sub"><ol>
+        <li><a href="#water_inc">📈 部位總計增加</a></li>
+        <li><a href="#water_dec">📉 部位總計減少</a></li>
+      </ol></div>
+    </li>
+  </ol>
 </nav>
 
-  </header>
-  <main>
-    
-<section class="cards">
+    <div class="main">
+      <header class="page-header">
+        <h1>台灣主動式 ETF 持股異動日報</h1>
+        <p class="muted">
+觀察清單：00981A、00988A、00991A、00403A。
+資料日 <strong>2026-09-21／2026-09-22</strong>（各檔以其最新可對比快照為準）。
+規模／申贖／淨買超等市場數據<strong>尚無資料</strong>，本頁僅呈現持股股數異動。
+</p>
+        
+<nav class="nav-inline">
   
-  <article class="card">
-    <h2><a href="00981A.html">00981A</a></h2>
-    <p>主動統一台股增長</p>
-    <p class="muted">資料日：2026-09-22</p>
+  <a href="00981A.html">00981A 明細頁</a>
+  
+  <a href="00988A.html">00988A 明細頁</a>
+  
+  <a href="00991A.html">00991A 明細頁</a>
+  
+  <a href="00403A.html">00403A 明細頁</a>
+  
+</nav>
+<div class="summary-chips">
+  <span class="chip buy">新建倉 2</span>
+  <span class="chip inc">加碼 12</span>
+  <span class="chip dec">減碼 10</span>
+  <span class="chip exit">全部出清 3</span>
+</div>
+
+      </header>
+      
+
+<section>
+  <h2 class="banner" id="part1">第一部分：整體 ETF 持股 新增／剔除</h2>
+
+  <h3 class="section-title" id="part1_add">🆕 整體 ETF 新增標的</h3>
+  
+  <ul class="add-list">
     
-    <p class="muted">對比前一日快照：2026-09-21</p>
+    <li>
+      <strong>ETF 00988A</strong> 新增：
+      <strong>COIN US</strong> COINBASE GLOBAL INC -CLASS A
+      <span class="muted">（+70張／資料日 2026-09-21）</span>
+    </li>
     
-    <p class="tag-row">
-      <span class="badge buy">第一次買 0</span>
-      <span class="badge inc">加碼 5</span>
-      <span class="badge dec">減碼 4</span>
-      <span class="badge exit">全部出清 0</span>
-    </p>
-    <p class="muted">來源：uni_excel</p>
+    <li>
+      <strong>ETF 00991A</strong> 新增：
+      <strong>2308</strong> 台達電子
+      <span class="muted">（+871張／資料日 2026-09-22）</span>
+    </li>
+    
+  </ul>
+  
+
+  <h3 class="section-title rem" id="part1_rem">❌ 整體 ETF 剔除標的</h3>
+  
+  <ul class="rem-list">
+    
+    <li>
+      <strong>ETF 00403A</strong> 剔除：
+      <strong>3533</strong> 嘉澤端子工業
+      <span class="muted">（-40張／資料日 2026-09-22）</span>
+    </li>
+    
+    <li>
+      <strong>ETF 00403A</strong> 剔除：
+      <strong>6239</strong> 力成
+      <span class="muted">（-1,800張／資料日 2026-09-22）</span>
+    </li>
+    
+    <li>
+      <strong>ETF 00991A</strong> 剔除：
+      <strong>7769</strong> 鴻勁精密
+      <span class="muted">（-250張／資料日 2026-09-22）</span>
+    </li>
+    
+  </ul>
+  
+</section>
+
+<section>
+  <h2 class="banner" id="part2">第二部分：主動型 ETF 變動專區</h2>
+  <p class="muted">預設僅顯示異動列；可切換「全部持股」。部位以<strong>張</strong>（股數÷1000）顯示。權重僅供參考。</p>
+
+  
+  <article class="etf-block">
+    <div class="etf-head" id="act_00981A">
+      <h3>📊 00981A 主動統一台股增長</h3>
+      <div class="etf-meta">
+        資料日 <strong>2026-09-22</strong>
+        ／對比 <strong>2026-09-21</strong>
+        ／來源 uni_excel
+        ／持股檔數 50
+      </div>
+      <div class="etf-meta na">規模／申贖／淨買超：尚無資料</div>
+      <div class="summary-chips">
+        <span class="chip buy">新建倉 0</span>
+        <span class="chip inc">加碼 5</span>
+        <span class="chip dec">減碼 4</span>
+        <span class="chip exit">全部出清 0</span>
+        <a class="chip" href="00981A.html">開啟明細頁</a>
+      </div>
+    </div>
+
+    
+    <div class="toolbar" data-filter-group="00981A">
+      <button type="button" class="btn-toggle active" data-filter="changed">只看異動（9）</button>
+      <button type="button" class="btn-toggle" data-filter="all">全部持股</button>
+    </div>
+    <div class="table-wrap">
+      <table class="report" data-etf-table="00981A">
+        <colgroup>
+          <col style="width:12%" />
+          <col style="width:18%" />
+          <col style="width:16%" />
+          <col style="width:16%" />
+          <col style="width:38%" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>代號</th>
+            <th>名稱</th>
+            <th>今天部位</th>
+            <th>權重(%)</th>
+            <th>變動狀態</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr class="changed">
+            <td>4958</td>
+            <td>臻鼎-KY</td>
+            <td class="num">3,543 張</td>
+            <td class="num">
+              
+                <strong>0.60</strong>
+                
+                  <br />
+                  <span class="delta-up">
+                    🔺+0.15
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-inc">加碼(連1天 / +831張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>2308</td>
+            <td>台達電</td>
+            <td class="num">7,420 張</td>
+            <td class="num">
+              
+                <strong>4.86</strong>
+                
+                  <br />
+                  <span class="delta-up">
+                    🔺+0.11
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-inc">加碼(連1天 / +180張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>6274</td>
+            <td>台燿</td>
+            <td class="num">5,696 張</td>
+            <td class="num">
+              
+                <strong>2.83</strong>
+                
+                  <br />
+                  <span class="delta-up">
+                    🔺+0.05
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-inc">加碼(連1天 / +150張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>2368</td>
+            <td>金像電</td>
+            <td class="num">1,363 張</td>
+            <td class="num">
+              
+                <strong>0.49</strong>
+                
+                  <br />
+                  <span class="delta-up">
+                    🔺+0.04
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-inc">加碼(連1天 / +129張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>2327</td>
+            <td>國巨*</td>
+            <td class="num">25,107 張</td>
+            <td class="num">
+              
+                <strong>4.94</strong>
+                
+                  <br />
+                  <span class="delta-up">
+                    🔺+0.07
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-inc">加碼(連1天 / +120張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>3264</td>
+            <td>欣銓</td>
+            <td class="num">5,182 張</td>
+            <td class="num">
+              
+                <strong>0.49</strong>
+                
+                  <br />
+                  <span class="delta-down">
+                    🟢-0.17
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-dec">減碼(連1天 / -1,446張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>3665</td>
+            <td>貿聯-KY</td>
+            <td class="num">3,943.848 張</td>
+            <td class="num">
+              
+                <strong>3.05</strong>
+                
+                  <br />
+                  <span class="delta-down">
+                    🟢-0.39
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-dec">減碼(連1天 / -337張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>6669</td>
+            <td>緯穎</td>
+            <td class="num">5,582.561 張</td>
+            <td class="num">
+              
+                <strong>4.07</strong>
+                
+                  <br />
+                  <span class="delta-down">
+                    🟢-0.18
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-dec">減碼(連1天 / -74張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>6510</td>
+            <td>精測</td>
+            <td class="num">400 張</td>
+            <td class="num">
+              
+                <strong>0.51</strong>
+                
+                  <br />
+                  <span class="delta-down">
+                    🟢-0.03
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-dec">減碼(連1天 / -46張)</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2330</td>
+            <td>台積電</td>
+            <td class="num">11,864 張</td>
+            <td class="num">
+              
+                <strong>10.05</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2454</td>
+            <td>聯發科</td>
+            <td class="num">5,186 張</td>
+            <td class="num">
+              
+                <strong>9.25</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2383</td>
+            <td>台光電</td>
+            <td class="num">4,750 張</td>
+            <td class="num">
+              
+                <strong>7.95</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3037</td>
+            <td>欣興</td>
+            <td class="num">20,300 張</td>
+            <td class="num">
+              
+                <strong>7.83</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3017</td>
+            <td>奇鋐</td>
+            <td class="num">5,949 張</td>
+            <td class="num">
+              
+                <strong>6.95</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3653</td>
+            <td>健策</td>
+            <td class="num">2,512 張</td>
+            <td class="num">
+              
+                <strong>5.04</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2303</td>
+            <td>聯電</td>
+            <td class="num">89,118 張</td>
+            <td class="num">
+              
+                <strong>4.91</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6223</td>
+            <td>旺矽</td>
+            <td class="num">2,544 張</td>
+            <td class="num">
+              
+                <strong>4.68</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2345</td>
+            <td>智邦</td>
+            <td class="num">6,464 張</td>
+            <td class="num">
+              
+                <strong>4.26</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3711</td>
+            <td>日月光投控</td>
+            <td class="num">16,811 張</td>
+            <td class="num">
+              
+                <strong>4.01</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>8046</td>
+            <td>南電</td>
+            <td class="num">9,037 張</td>
+            <td class="num">
+              
+                <strong>3.63</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6805</td>
+            <td>富世達</td>
+            <td class="num">1,773 張</td>
+            <td class="num">
+              
+                <strong>1.53</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>5274</td>
+            <td>信驊</td>
+            <td class="num">207.9 張</td>
+            <td class="num">
+              
+                <strong>1.50</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2449</td>
+            <td>京元電子</td>
+            <td class="num">13,138.45 張</td>
+            <td class="num">
+              
+                <strong>1.43</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3443</td>
+            <td>創意</td>
+            <td class="num">413 張</td>
+            <td class="num">
+              
+                <strong>1.19</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>8210</td>
+            <td>勤誠</td>
+            <td class="num">1,159 張</td>
+            <td class="num">
+              
+                <strong>0.36</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>8996</td>
+            <td>高力</td>
+            <td class="num">485 張</td>
+            <td class="num">
+              
+                <strong>0.28</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6278</td>
+            <td>台表科</td>
+            <td class="num">3,248 張</td>
+            <td class="num">
+              
+                <strong>0.24</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6515</td>
+            <td>穎崴</td>
+            <td class="num">95 張</td>
+            <td class="num">
+              
+                <strong>0.19</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6271</td>
+            <td>同欣電</td>
+            <td class="num">2,222 張</td>
+            <td class="num">
+              
+                <strong>0.17</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6191</td>
+            <td>精成科</td>
+            <td class="num">3,988 張</td>
+            <td class="num">
+              
+                <strong>0.12</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3376</td>
+            <td>新日興</td>
+            <td class="num">1,740 張</td>
+            <td class="num">
+              
+                <strong>0.11</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2313</td>
+            <td>華通</td>
+            <td class="num">501 張</td>
+            <td class="num">
+              
+                <strong>0.04</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2002</td>
+            <td>中鋼</td>
+            <td class="num">5,163 張</td>
+            <td class="num">
+              
+                <strong>0.03</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2481</td>
+            <td>強茂</td>
+            <td class="num">5 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    
+    
   </article>
   
-  <article class="card">
-    <h2><a href="00988A.html">00988A</a></h2>
-    <p>主動統一全球創新</p>
-    <p class="muted">資料日：2026-09-21</p>
+  <article class="etf-block">
+    <div class="etf-head" id="act_00988A">
+      <h3>📊 00988A 主動統一全球創新</h3>
+      <div class="etf-meta">
+        資料日 <strong>2026-09-21</strong>
+        ／對比 <strong>2026-09-20</strong>
+        ／來源 uni_excel
+        ／持股檔數 42
+      </div>
+      <div class="etf-meta na">規模／申贖／淨買超：尚無資料</div>
+      <div class="summary-chips">
+        <span class="chip buy">新建倉 1</span>
+        <span class="chip inc">加碼 2</span>
+        <span class="chip dec">減碼 1</span>
+        <span class="chip exit">全部出清 0</span>
+        <a class="chip" href="00988A.html">開啟明細頁</a>
+      </div>
+    </div>
+
     
-    <p class="muted">對比前一日快照：2026-09-20</p>
+    <div class="toolbar" data-filter-group="00988A">
+      <button type="button" class="btn-toggle active" data-filter="changed">只看異動（4）</button>
+      <button type="button" class="btn-toggle" data-filter="all">全部持股</button>
+    </div>
+    <div class="table-wrap">
+      <table class="report" data-etf-table="00988A">
+        <colgroup>
+          <col style="width:12%" />
+          <col style="width:18%" />
+          <col style="width:16%" />
+          <col style="width:16%" />
+          <col style="width:38%" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>代號</th>
+            <th>名稱</th>
+            <th>今天部位</th>
+            <th>權重(%)</th>
+            <th>變動狀態</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr class="changed">
+            <td>COIN US</td>
+            <td>COINBASE GLOBAL INC -CLASS A</td>
+            <td class="num">70 張</td>
+            <td class="num">
+              
+                <strong>0.84</strong>
+                
+              
+            </td>
+            <td><span class="status-buy">新建倉 (+70張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>HOOD US</td>
+            <td>ROBINHOOD MARKETS INC - A</td>
+            <td class="num">400.12 張</td>
+            <td class="num">
+              
+                <strong>2.96</strong>
+                
+                  <br />
+                  <span class="delta-up">
+                    🔺+0.76
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-inc">加碼(連1天 / +100張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>2454</td>
+            <td>聯發科</td>
+            <td class="num">380 張</td>
+            <td class="num">
+              
+                <strong>3.59</strong>
+                
+                  <br />
+                  <span class="delta-up">
+                    🔺+0.59
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-inc">加碼(連1天 / +50張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>6515</td>
+            <td>穎崴</td>
+            <td class="num">60 張</td>
+            <td class="num">
+              
+                <strong>0.66</strong>
+                
+                  <br />
+                  <span class="delta-down">
+                    🟢-0.58
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-dec">減碼(連1天 / -40張)</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>LITE US</td>
+            <td>LUMENTUM HOLDINGS INC</td>
+            <td class="num">117 張</td>
+            <td class="num">
+              
+                <strong>6.70</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>BE US</td>
+            <td>BLOOM ENERGY CORP- A</td>
+            <td class="num">350 張</td>
+            <td class="num">
+              
+                <strong>5.73</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>SPCX US</td>
+            <td>SPACE EXPLORATION TECHN-CL A</td>
+            <td class="num">550 張</td>
+            <td class="num">
+              
+                <strong>5.01</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3037</td>
+            <td>欣興</td>
+            <td class="num">2,600 張</td>
+            <td class="num">
+              
+                <strong>5.01</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>009150 KS</td>
+            <td>Samsung Electro-Mechanics co(009150 ks)</td>
+            <td class="num">70 張</td>
+            <td class="num">
+              
+                <strong>4.35</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6981 JP</td>
+            <td>MURATA MANUFACTURING CO LTD</td>
+            <td class="num">1,350 張</td>
+            <td class="num">
+              
+                <strong>4.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>MU US</td>
+            <td>MICRON TECHNOLOGY INC</td>
+            <td class="num">60 張</td>
+            <td class="num">
+              
+                <strong>3.76</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>PANW US</td>
+            <td>PALO ALTO NETWORKS INC</td>
+            <td class="num">150 張</td>
+            <td class="num">
+              
+                <strong>3.34</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>INTC US</td>
+            <td>INTEL CORP</td>
+            <td class="num">450.399 張</td>
+            <td class="num">
+              
+                <strong>3.29</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>MSFT US</td>
+            <td>MICROSOFT CORP(微軟公司)</td>
+            <td class="num">100 張</td>
+            <td class="num">
+              
+                <strong>3.01</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3017</td>
+            <td>奇鋐</td>
+            <td class="num">440 張</td>
+            <td class="num">
+              
+                <strong>2.84</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>SNOW US</td>
+            <td>SNOWFLAKE INC-CLASS A(Snowflake公司)</td>
+            <td class="num">130 張</td>
+            <td class="num">
+              
+                <strong>2.65</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2303</td>
+            <td>聯電</td>
+            <td class="num">8,500 張</td>
+            <td class="num">
+              
+                <strong>2.52</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>PLTR US</td>
+            <td>PALANTIR TECHNOLOGIES INC-A</td>
+            <td class="num">225 張</td>
+            <td class="num">
+              
+                <strong>2.47</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>NVDA US</td>
+            <td>NVIDIA CORP(輝達公司)</td>
+            <td class="num">175 張</td>
+            <td class="num">
+              
+                <strong>2.39</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2383</td>
+            <td>台光電</td>
+            <td class="num">250 張</td>
+            <td class="num">
+              
+                <strong>2.31</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3308 HK</td>
+            <td>ZHONGJI INNOLIGHT CO LTD-H</td>
+            <td class="num">220 張</td>
+            <td class="num">
+              
+                <strong>2.10</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>000660 KS</td>
+            <td>SK HYNIX INC</td>
+            <td class="num">25 張</td>
+            <td class="num">
+              
+                <strong>2.03</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>CRWD US</td>
+            <td>CROWDSTRIKE HOLDINGS INC - A</td>
+            <td class="num">130.754 張</td>
+            <td class="num">
+              
+                <strong>1.96</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>NOW US</td>
+            <td>SERVICENOW INC</td>
+            <td class="num">230 張</td>
+            <td class="num">
+              
+                <strong>1.90</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2330</td>
+            <td>台積電</td>
+            <td class="num">400 張</td>
+            <td class="num">
+              
+                <strong>1.87</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>300757 CH</td>
+            <td>ROBOTECHNIK INTELLIGENT TE-A</td>
+            <td class="num">334.997 張</td>
+            <td class="num">
+              
+                <strong>1.86</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>AMD US</td>
+            <td>ADVANCED MICRO DEVICES.amd us(超微半導體公司)</td>
+            <td class="num">50 張</td>
+            <td class="num">
+              
+                <strong>1.85</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>4979</td>
+            <td>華星光</td>
+            <td class="num">1,510 張</td>
+            <td class="num">
+              
+                <strong>1.76</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>992 HK</td>
+            <td>LENOVO GROUP LTD</td>
+            <td class="num">6,000 張</td>
+            <td class="num">
+              
+                <strong>1.64</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>TWLO US</td>
+            <td>TWILIO INC - A</td>
+            <td class="num">100 張</td>
+            <td class="num">
+              
+                <strong>1.60</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>TER US</td>
+            <td>TERADYNE INC</td>
+            <td class="num">70 張</td>
+            <td class="num">
+              
+                <strong>1.60</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>NET US</td>
+            <td>CLOUDFLARE INC - CLASS A</td>
+            <td class="num">70 張</td>
+            <td class="num">
+              
+                <strong>1.48</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>OKTA US</td>
+            <td>OKTA INC</td>
+            <td class="num">120 張</td>
+            <td class="num">
+              
+                <strong>1.38</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>IFX GY</td>
+            <td>INFINEON TECHNOLOGIES AG</td>
+            <td class="num">300 張</td>
+            <td class="num">
+              
+                <strong>1.20</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6997 JP</td>
+            <td>NIPPON CHEMI-CON CORP</td>
+            <td class="num">1,060 張</td>
+            <td class="num">
+              
+                <strong>1.13</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>STX US</td>
+            <td>SEAGATE TECHNOLOGY</td>
+            <td class="num">20 張</td>
+            <td class="num">
+              
+                <strong>1.05</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3081</td>
+            <td>聯亞</td>
+            <td class="num">150 張</td>
+            <td class="num">
+              
+                <strong>0.81</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>285A JP</td>
+            <td>KIOXIA HOLDINGS CORP</td>
+            <td class="num">37 張</td>
+            <td class="num">
+              
+                <strong>0.77</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>SNDK US</td>
+            <td>SANDISK CORP</td>
+            <td class="num">7 張</td>
+            <td class="num">
+              
+                <strong>0.74</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>5801 JP</td>
+            <td>FURUKAWA ELECTRIC CO LTD</td>
+            <td class="num">500 張</td>
+            <td class="num">
+              
+                <strong>0.74</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>NTRA US</td>
+            <td>NATERA INC</td>
+            <td class="num">25 張</td>
+            <td class="num">
+              
+                <strong>0.56</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>4180 JP</td>
+            <td>APPIER GROUP INC</td>
+            <td class="num">950 張</td>
+            <td class="num">
+              
+                <strong>0.55</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
     
-    <p class="tag-row">
-      <span class="badge buy">第一次買 1</span>
-      <span class="badge inc">加碼 2</span>
-      <span class="badge dec">減碼 1</span>
-      <span class="badge exit">全部出清 0</span>
-    </p>
-    <p class="muted">來源：uni_excel</p>
+    
   </article>
   
-  <article class="card">
-    <h2><a href="00991A.html">00991A</a></h2>
-    <p>主動復華未來50</p>
-    <p class="muted">資料日：2026-09-22</p>
+  <article class="etf-block">
+    <div class="etf-head" id="act_00991A">
+      <h3>📊 00991A 主動復華未來50</h3>
+      <div class="etf-meta">
+        資料日 <strong>2026-09-22</strong>
+        ／對比 <strong>2026-09-18</strong>
+        ／來源 fh_excel
+        ／持股檔數 50
+      </div>
+      <div class="etf-meta na">規模／申贖／淨買超：尚無資料</div>
+      <div class="summary-chips">
+        <span class="chip buy">新建倉 1</span>
+        <span class="chip inc">加碼 0</span>
+        <span class="chip dec">減碼 1</span>
+        <span class="chip exit">全部出清 1</span>
+        <a class="chip" href="00991A.html">開啟明細頁</a>
+      </div>
+    </div>
+
     
-    <p class="muted">對比前一日快照：2026-09-18</p>
+    <div class="toolbar" data-filter-group="00991A">
+      <button type="button" class="btn-toggle active" data-filter="changed">只看異動（3）</button>
+      <button type="button" class="btn-toggle" data-filter="all">全部持股</button>
+    </div>
+    <div class="table-wrap">
+      <table class="report" data-etf-table="00991A">
+        <colgroup>
+          <col style="width:12%" />
+          <col style="width:18%" />
+          <col style="width:16%" />
+          <col style="width:16%" />
+          <col style="width:38%" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>代號</th>
+            <th>名稱</th>
+            <th>今天部位</th>
+            <th>權重(%)</th>
+            <th>變動狀態</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr class="changed">
+            <td>2308</td>
+            <td>台達電子</td>
+            <td class="num">871 張</td>
+            <td class="num">
+              
+                <strong>2.09</strong>
+                
+              
+            </td>
+            <td><span class="status-buy">新建倉 (+871張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>6223</td>
+            <td>旺矽科技</td>
+            <td class="num">300 張</td>
+            <td class="num">
+              
+                <strong>2.02</strong>
+                
+                  <br />
+                  <span class="delta-down">
+                    🟢-1.31
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-dec">減碼(連1天 / -150張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>7769</td>
+            <td>鴻勁精密</td>
+            <td class="num">0 張</td>
+            <td class="num">
+              —
+            </td>
+            <td><span class="status-exit">全部出清 (-250張)</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2330</td>
+            <td>台灣積體</td>
+            <td class="num">3,800 張</td>
+            <td class="num">
+              
+                <strong>11.79</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2408</td>
+            <td>南亞科技</td>
+            <td class="num">13,800 張</td>
+            <td class="num">
+              
+                <strong>8.65</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2383</td>
+            <td>台光電子</td>
+            <td class="num">1,380 張</td>
+            <td class="num">
+              
+                <strong>8.46</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2059</td>
+            <td>川湖科技</td>
+            <td class="num">500 張</td>
+            <td class="num">
+              
+                <strong>7.99</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3037</td>
+            <td>欣興電子</td>
+            <td class="num">5,100 張</td>
+            <td class="num">
+              
+                <strong>7.20</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2454</td>
+            <td>聯發科技</td>
+            <td class="num">1,080 張</td>
+            <td class="num">
+              
+                <strong>7.05</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2327</td>
+            <td>國巨股份</td>
+            <td class="num">7,500 張</td>
+            <td class="num">
+              
+                <strong>5.40</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3017</td>
+            <td>奇鋐科技</td>
+            <td class="num">1,250 張</td>
+            <td class="num">
+              
+                <strong>5.34</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3189</td>
+            <td>景碩科技</td>
+            <td class="num">4,250 張</td>
+            <td class="num">
+              
+                <strong>4.87</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>8046</td>
+            <td>南亞電路</td>
+            <td class="num">3,300 張</td>
+            <td class="num">
+              
+                <strong>4.85</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>5274</td>
+            <td>信驊科技</td>
+            <td class="num">140.5 張</td>
+            <td class="num">
+              
+                <strong>3.70</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3081</td>
+            <td>聯亞光電</td>
+            <td class="num">900 張</td>
+            <td class="num">
+              
+                <strong>3.21</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6669</td>
+            <td>緯穎科技</td>
+            <td class="num">1,150.02 張</td>
+            <td class="num">
+              
+                <strong>3.07</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3026</td>
+            <td>禾伸堂企</td>
+            <td class="num">2,700 張</td>
+            <td class="num">
+              
+                <strong>2.66</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3711</td>
+            <td>日月光投</td>
+            <td class="num">2,500 張</td>
+            <td class="num">
+              
+                <strong>2.19</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3653</td>
+            <td>健策精密</td>
+            <td class="num">290 張</td>
+            <td class="num">
+              
+                <strong>2.13</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2303</td>
+            <td>聯華電子</td>
+            <td class="num">10,400 張</td>
+            <td class="num">
+              
+                <strong>2.10</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2345</td>
+            <td>智邦科技</td>
+            <td class="num">850 張</td>
+            <td class="num">
+              
+                <strong>2.05</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>1303</td>
+            <td>南亞塑膠</td>
+            <td class="num">6,700 張</td>
+            <td class="num">
+              
+                <strong>1.96</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2382</td>
+            <td>廣達電腦</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2317</td>
+            <td>鴻海精密</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2603</td>
+            <td>長榮海運</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3231</td>
+            <td>緯創資通</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>5347</td>
+            <td>世界先進</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2881</td>
+            <td>富邦金融</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2882</td>
+            <td>國泰金融</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2885</td>
+            <td>元大金融</td>
+            <td class="num">9.36 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2891</td>
+            <td>中國信託</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2890</td>
+            <td>永豐金融</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2886</td>
+            <td>兆豐金融</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2449</td>
+            <td>京元電子</td>
+            <td class="num">1.45 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2884</td>
+            <td>玉山金融</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2880</td>
+            <td>華南金融</td>
+            <td class="num">9.09 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2883</td>
+            <td>凱基金融</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2887</td>
+            <td>台新新光</td>
+            <td class="num">9 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2313</td>
+            <td>華通電腦</td>
+            <td class="num">1.253 張</td>
+            <td class="num">
+              
+                <strong>0.00</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
     
-    <p class="tag-row">
-      <span class="badge buy">第一次買 1</span>
-      <span class="badge inc">加碼 0</span>
-      <span class="badge dec">減碼 1</span>
-      <span class="badge exit">全部出清 1</span>
-    </p>
-    <p class="muted">來源：fh_excel</p>
+    
   </article>
   
-  <article class="card">
-    <h2><a href="00403A.html">00403A</a></h2>
-    <p>主動統一升級50</p>
-    <p class="muted">資料日：2026-09-22</p>
+  <article class="etf-block">
+    <div class="etf-head" id="act_00403A">
+      <h3>📊 00403A 主動統一升級50</h3>
+      <div class="etf-meta">
+        資料日 <strong>2026-09-22</strong>
+        ／對比 <strong>2026-09-21</strong>
+        ／來源 uni_excel
+        ／持股檔數 50
+      </div>
+      <div class="etf-meta na">規模／申贖／淨買超：尚無資料</div>
+      <div class="summary-chips">
+        <span class="chip buy">新建倉 0</span>
+        <span class="chip inc">加碼 5</span>
+        <span class="chip dec">減碼 4</span>
+        <span class="chip exit">全部出清 2</span>
+        <a class="chip" href="00403A.html">開啟明細頁</a>
+      </div>
+    </div>
+
     
-    <p class="muted">對比前一日快照：2026-09-21</p>
+    <div class="toolbar" data-filter-group="00403A">
+      <button type="button" class="btn-toggle active" data-filter="changed">只看異動（11）</button>
+      <button type="button" class="btn-toggle" data-filter="all">全部持股</button>
+    </div>
+    <div class="table-wrap">
+      <table class="report" data-etf-table="00403A">
+        <colgroup>
+          <col style="width:12%" />
+          <col style="width:18%" />
+          <col style="width:16%" />
+          <col style="width:16%" />
+          <col style="width:38%" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>代號</th>
+            <th>名稱</th>
+            <th>今天部位</th>
+            <th>權重(%)</th>
+            <th>變動狀態</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr class="changed">
+            <td>2449</td>
+            <td>京元電子</td>
+            <td class="num">4,000 張</td>
+            <td class="num">
+              
+                <strong>0.81</strong>
+                
+                  <br />
+                  <span class="delta-up">
+                    🔺+0.13
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-inc">加碼(連1天 / +500張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>2308</td>
+            <td>台達電</td>
+            <td class="num">2,900 張</td>
+            <td class="num">
+              
+                <strong>3.51</strong>
+                
+                  <br />
+                  <span class="delta-up">
+                    🔺+0.11
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-inc">加碼(連1天 / +70張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>8996</td>
+            <td>高力</td>
+            <td class="num">1,625 張</td>
+            <td class="num">
+              
+                <strong>1.71</strong>
+                
+                  <br />
+                  <span class="delta-up">
+                    🔺+0.19
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-inc">加碼(連1天 / +45張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>2059</td>
+            <td>川湖</td>
+            <td class="num">75 張</td>
+            <td class="num">
+              
+                <strong>0.61</strong>
+                
+                  <br />
+                  <span class="delta-up">
+                    🔺+0.08
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-inc">加碼(連1天 / +10張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>3443</td>
+            <td>創意</td>
+            <td class="num">646 張</td>
+            <td class="num">
+              
+                <strong>3.45</strong>
+                
+                  <br />
+                  <span class="delta-up">
+                    🔺+0.30
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-inc">加碼(連1天 / +1張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>2330</td>
+            <td>台積電</td>
+            <td class="num">9,400 張</td>
+            <td class="num">
+              
+                <strong>14.74</strong>
+                
+                  <br />
+                  <span class="delta-down">
+                    🟢-0.51
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-dec">減碼(連1天 / -200張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>2345</td>
+            <td>智邦</td>
+            <td class="num">2,060 張</td>
+            <td class="num">
+              
+                <strong>2.52</strong>
+                
+                  <br />
+                  <span class="delta-down">
+                    🟢-0.05
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-dec">減碼(連1天 / -120張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>6669</td>
+            <td>緯穎</td>
+            <td class="num">1,867.956 張</td>
+            <td class="num">
+              
+                <strong>2.52</strong>
+                
+                  <br />
+                  <span class="delta-down">
+                    🟢-0.22
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-dec">減碼(連1天 / -120張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>2360</td>
+            <td>致茂</td>
+            <td class="num">680 張</td>
+            <td class="num">
+              
+                <strong>1.06</strong>
+                
+                  <br />
+                  <span class="delta-down">
+                    🟢-0.11
+                  </span>
+                
+              
+            </td>
+            <td><span class="status-dec">減碼(連1天 / -90張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>6239</td>
+            <td>力成</td>
+            <td class="num">0 張</td>
+            <td class="num">
+              —
+            </td>
+            <td><span class="status-exit">全部出清 (-1,800張)</span></td>
+          </tr>
+          
+          <tr class="changed">
+            <td>3533</td>
+            <td>嘉澤端子工業</td>
+            <td class="num">0 張</td>
+            <td class="num">
+              —
+            </td>
+            <td><span class="status-exit">全部出清 (-40張)</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2454</td>
+            <td>聯發科</td>
+            <td class="num">2,210 張</td>
+            <td class="num">
+              
+                <strong>7.30</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3017</td>
+            <td>奇鋐</td>
+            <td class="num">2,850 張</td>
+            <td class="num">
+              
+                <strong>6.16</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2303</td>
+            <td>聯電</td>
+            <td class="num">60,000 張</td>
+            <td class="num">
+              
+                <strong>6.12</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3037</td>
+            <td>欣興</td>
+            <td class="num">8,460 張</td>
+            <td class="num">
+              
+                <strong>6.04</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2383</td>
+            <td>台光電</td>
+            <td class="num">1,600 張</td>
+            <td class="num">
+              
+                <strong>4.96</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3653</td>
+            <td>健策</td>
+            <td class="num">1,115 張</td>
+            <td class="num">
+              
+                <strong>4.14</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6223</td>
+            <td>旺矽</td>
+            <td class="num">1,100 張</td>
+            <td class="num">
+              
+                <strong>3.75</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2327</td>
+            <td>國巨*</td>
+            <td class="num">8,000 張</td>
+            <td class="num">
+              
+                <strong>2.91</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3189</td>
+            <td>景碩</td>
+            <td class="num">4,000 張</td>
+            <td class="num">
+              
+                <strong>2.32</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>8046</td>
+            <td>南電</td>
+            <td class="num">2,770 張</td>
+            <td class="num">
+              
+                <strong>2.06</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>1303</td>
+            <td>南亞</td>
+            <td class="num">13,500 張</td>
+            <td class="num">
+              
+                <strong>1.99</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3665</td>
+            <td>貿聯-KY</td>
+            <td class="num">1,293 張</td>
+            <td class="num">
+              
+                <strong>1.85</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6274</td>
+            <td>台燿</td>
+            <td class="num">1,900 張</td>
+            <td class="num">
+              
+                <strong>1.74</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6488</td>
+            <td>環球晶</td>
+            <td class="num">2,800 張</td>
+            <td class="num">
+              
+                <strong>1.73</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>5274</td>
+            <td>信驊</td>
+            <td class="num">120.5 張</td>
+            <td class="num">
+              
+                <strong>1.61</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6805</td>
+            <td>富世達</td>
+            <td class="num">840 張</td>
+            <td class="num">
+              
+                <strong>1.34</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3008</td>
+            <td>大立光</td>
+            <td class="num">280 張</td>
+            <td class="num">
+              
+                <strong>1.14</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2408</td>
+            <td>南亞科</td>
+            <td class="num">2,000 張</td>
+            <td class="num">
+              
+                <strong>0.63</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2317</td>
+            <td>鴻海</td>
+            <td class="num">3,200 張</td>
+            <td class="num">
+              
+                <strong>0.52</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>7769</td>
+            <td>鴻勁</td>
+            <td class="num">130 張</td>
+            <td class="num">
+              
+                <strong>0.51</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3450</td>
+            <td>聯鈞</td>
+            <td class="num">1,500 張</td>
+            <td class="num">
+              
+                <strong>0.50</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3211</td>
+            <td>順達</td>
+            <td class="num">2,000 張</td>
+            <td class="num">
+              
+                <strong>0.49</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3711</td>
+            <td>日月光投控</td>
+            <td class="num">1,000 張</td>
+            <td class="num">
+              
+                <strong>0.44</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>3583</td>
+            <td>辛耘</td>
+            <td class="num">800 張</td>
+            <td class="num">
+              
+                <strong>0.36</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6442</td>
+            <td>光聖</td>
+            <td class="num">350 張</td>
+            <td class="num">
+              
+                <strong>0.34</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2481</td>
+            <td>強茂</td>
+            <td class="num">3,000 張</td>
+            <td class="num">
+              
+                <strong>0.33</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2882</td>
+            <td>國泰金</td>
+            <td class="num">4,000 張</td>
+            <td class="num">
+              
+                <strong>0.29</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2404</td>
+            <td>漢唐</td>
+            <td class="num">250 張</td>
+            <td class="num">
+              
+                <strong>0.18</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2455</td>
+            <td>全新</td>
+            <td class="num">386 張</td>
+            <td class="num">
+              
+                <strong>0.13</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>1560</td>
+            <td>中砂</td>
+            <td class="num">191 張</td>
+            <td class="num">
+              
+                <strong>0.12</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>1717</td>
+            <td>長興</td>
+            <td class="num">1,500 張</td>
+            <td class="num">
+              
+                <strong>0.07</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>6285</td>
+            <td>啟碁</td>
+            <td class="num">350 張</td>
+            <td class="num">
+              
+                <strong>0.05</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>2301</td>
+            <td>光寶科</td>
+            <td class="num">300 張</td>
+            <td class="num">
+              
+                <strong>0.05</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+          <tr class="unchanged hidden">
+            <td>8358</td>
+            <td>金居</td>
+            <td class="num">100 張</td>
+            <td class="num">
+              
+                <strong>0.03</strong>
+                
+              
+            </td>
+            <td><span class="status-flat">持平</span></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
     
-    <p class="tag-row">
-      <span class="badge buy">第一次買 0</span>
-      <span class="badge inc">加碼 5</span>
-      <span class="badge dec">減碼 4</span>
-      <span class="badge exit">全部出清 2</span>
-    </p>
-    <p class="muted">來源：uni_excel</p>
+    
   </article>
   
 </section>
+
 <section>
+  <h2 class="banner sub" id="part_water">水位變動（觀察清單跨 ETF 彙總）</h2>
+  <p class="muted">依股票代號加總本站觀察清單內各 ETF 的股數增減；細節列顯示各檔狀態與連續加減碼。不含金額推估。</p>
+
+  <h3 class="section-title inc" id="water_inc">📈 部位總計增加</h3>
+  
+  <div class="table-wrap">
+    <table class="report">
+      <colgroup>
+        <col style="width:18%" />
+        <col style="width:18%" />
+        <col style="width:64%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>代號／名稱</th>
+          <th>淨變動</th>
+          <th>細節</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td><strong>2308</strong><br />台達電</td>
+          <td class="num delta-up"><strong>+1,121張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="buy">00991A 主動復華未來50 (新建倉 / +871張)</div>
+            
+            <div class="buy">00981A 主動統一台股增長 (連1買 / +180張)</div>
+            
+            <div class="buy">00403A 主動統一升級50 (連1買 / +70張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>4958</strong><br />臻鼎-KY</td>
+          <td class="num delta-up"><strong>+831張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="buy">00981A 主動統一台股增長 (連1買 / +831張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>2449</strong><br />京元電子</td>
+          <td class="num delta-up"><strong>+500張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="buy">00403A 主動統一升級50 (連1買 / +500張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>6274</strong><br />台燿</td>
+          <td class="num delta-up"><strong>+150張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="buy">00981A 主動統一台股增長 (連1買 / +150張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>2368</strong><br />金像電</td>
+          <td class="num delta-up"><strong>+129張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="buy">00981A 主動統一台股增長 (連1買 / +129張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>2327</strong><br />國巨*</td>
+          <td class="num delta-up"><strong>+120張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="buy">00981A 主動統一台股增長 (連1買 / +120張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>HOOD US</strong><br />ROBINHOOD MARKETS INC - A</td>
+          <td class="num delta-up"><strong>+100張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="buy">00988A 主動統一全球創新 (連1買 / +100張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>COIN US</strong><br />COINBASE GLOBAL INC -CLASS A</td>
+          <td class="num delta-up"><strong>+70張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="buy">00988A 主動統一全球創新 (新建倉 / +70張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>2454</strong><br />聯發科</td>
+          <td class="num delta-up"><strong>+50張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="buy">00988A 主動統一全球創新 (連1買 / +50張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>8996</strong><br />高力</td>
+          <td class="num delta-up"><strong>+45張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="buy">00403A 主動統一升級50 (連1買 / +45張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>2059</strong><br />川湖</td>
+          <td class="num delta-up"><strong>+10張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="buy">00403A 主動統一升級50 (連1買 / +10張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>3443</strong><br />創意</td>
+          <td class="num delta-up"><strong>+1張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="buy">00403A 主動統一升級50 (連1買 / +1張)</div>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+  <h3 class="section-title dec" id="water_dec">📉 部位總計減少</h3>
+  
+  <div class="table-wrap">
+    <table class="report">
+      <colgroup>
+        <col style="width:18%" />
+        <col style="width:18%" />
+        <col style="width:64%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>代號／名稱</th>
+          <th>淨變動</th>
+          <th>細節</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td><strong>6239</strong><br />力成</td>
+          <td class="num delta-down"><strong>-1,800張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="exit">00403A 主動統一升級50 (全部出清 / -1,800張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>3264</strong><br />欣銓</td>
+          <td class="num delta-down"><strong>-1,446張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="sell">00981A 主動統一台股增長 (連1賣 / -1,446張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>3665</strong><br />貿聯-KY</td>
+          <td class="num delta-down"><strong>-337張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="sell">00981A 主動統一台股增長 (連1賣 / -337張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>7769</strong><br />鴻勁精密</td>
+          <td class="num delta-down"><strong>-250張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="exit">00991A 主動復華未來50 (全部出清 / -250張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>2330</strong><br />台積電</td>
+          <td class="num delta-down"><strong>-200張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="sell">00403A 主動統一升級50 (連1賣 / -200張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>6669</strong><br />緯穎</td>
+          <td class="num delta-down"><strong>-194張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="sell">00403A 主動統一升級50 (連1賣 / -120張)</div>
+            
+            <div class="sell">00981A 主動統一台股增長 (連1賣 / -74張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>6223</strong><br />旺矽科技</td>
+          <td class="num delta-down"><strong>-150張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="sell">00991A 主動復華未來50 (連1賣 / -150張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>2345</strong><br />智邦</td>
+          <td class="num delta-down"><strong>-120張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="sell">00403A 主動統一升級50 (連1賣 / -120張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>2360</strong><br />致茂</td>
+          <td class="num delta-down"><strong>-90張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="sell">00403A 主動統一升級50 (連1賣 / -90張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>6510</strong><br />精測</td>
+          <td class="num delta-down"><strong>-46張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="sell">00981A 主動統一台股增長 (連1賣 / -46張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>3533</strong><br />嘉澤端子工業</td>
+          <td class="num delta-down"><strong>-40張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="exit">00403A 主動統一升級50 (全部出清 / -40張)</div>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>6515</strong><br />穎崴</td>
+          <td class="num delta-down"><strong>-40張</strong></td>
+          <td class="detail-lines">
+            
+            <div class="sell">00988A 主動統一全球創新 (連1賣 / -40張)</div>
+            
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+</section>
+
+<section class="notes">
   <h2>說明</h2>
-  <ul class="muted">
-    <li>比對鍵為股票代號；增減以<strong>股數</strong>為準（權重僅供參考，會受股價影響）。</li>
+  <ul>
+    <li>比對鍵為股票代號；增減以<strong>股數</strong>為準（權重會受股價影響，僅供參考）。</li>
     <li>統一投信檔案中股數 ≤ 1000 且權重 &lt; 0.01% 的占位列會標記並自異動表排除。</li>
     <li>「連續天數」為相對已歸檔快照的連續加碼／減碼日數。</li>
+    <li>本站<strong>不提供</strong> AUM 規模、申贖張數、淨買超金額、處置預估等（無可靠來源則不顯示假數字）。</li>
   </ul>
 </section>
 
-  </main>
-  <footer>
-    <p>資料來源為各投信公開揭露之持股 Excel；本站僅做歸檔與股數異動比對，不構成投資建議。</p>
-    <p>時區：Asia/Taipei。最後產生時間：2026-09-23T10:44:09+08:00。</p>
-    
-  </footer>
+      <footer class="site-footer">
+        <p>資料來源為各投信公開揭露之持股 Excel；本站僅做歸檔與股數異動比對，不構成投資建議。</p>
+        <p>時區：Asia/Taipei。最後產生時間：2026-09-23T10:56:18+08:00。</p>
+        
+      </footer>
+    </div>
+  </div>
+  
+  <script src="assets/app.js" defer></script>
 </body>
 </html>
