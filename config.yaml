@@ -31,6 +31,11 @@ etfs:
     issuer: uni
     fund_code: "63YTW"
     source_page: "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=63YTW"
+  - ticker: "00992A"
+    name: "主動群益科技創新"
+    issuer: capital
+    fund_code: "500"
+    source_page: "https://www.capitalfund.com.tw/etf/product/detail/500/portfolio"
 
 fetch:
   timeout_sec: 60

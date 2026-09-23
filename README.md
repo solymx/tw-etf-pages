@@ -2,7 +2,7 @@
 
 台灣**主動式 ETF**每日**持股異動**靜態報告（非股價）。
 
-觀察清單：`00981A`、`00988A`、`00991A`、`00403A`。
+觀察清單：`00981A`、`00988A`、`00991A`、`00403A`、`00992A`。
 
 每個交易日對每檔 ETF，與**前一份已歸檔快照**比較股數，產出：
 
@@ -64,6 +64,7 @@
 |--------|------------|----------|
 | **統一（uni）** `00981A`／`00988A`／`00403A` | **僅最新一日**（`AssetExcelNPOI`），無公開依日期回補 API；zdsetf 亦無 history endpoint | **無法一次回補 20 日**。功能先以現有快照上線，之後靠每日 Actions 累積。 |
 | **復華（fh）** `00991A` | URL 帶 `YYYYMMDD`，可下載歷史 | 可選擇性回補（本 repo 已為 00991A 歸檔約 20 個交易日供圖表展示） |
+| **群益（capital）** `00992A` | 無公開 Excel／依日期 API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像群益官網投組歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
 
 
 
@@ -119,13 +120,14 @@ python -m tw_etf_pages render
 etfs:
   - ticker: "00981A"
     name: "主動統一台股增長"
-    issuer: uni          # uni | fh
+    issuer: uni          # uni | fh | capital
     fund_code: "49YTW"   # 統一 fundCode 或復華 ETF23
     source_page: "https://..."
 ```
 
 - 統一投信：`issuer: uni`，`fund_code` 為 ezmoney 的 `fundCode`。
 - 復華投信：`issuer: fh`，`fund_code` 為路徑中的產品碼（本專案為 `ETF23`）。
+- 群益投信：`issuer: capital`，`fund_code` 為官網產品 id（本專案 `00992A` 為 `500`）；無公開 Excel API，抓取走 zdsetf 鏡像官網投組。
 
 ---
 
@@ -135,7 +137,8 @@ etfs:
 |------|------|------|
 | 主 | 統一 ezmoney `AssetExcelNPOI?fundCode=` | 需先 GET 官網取得 WAF cookie；**僅最新**，本專案自行 archive |
 | 主 | 復華 `api/assetsExcel/ETF23/{YYYYMMDD}` | 無需登入；可依日期取歷史；無資料時回 JSON |
-| 備 | [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` | 第三方 JSON；官方失敗時 fallback |
+| 主 | 群益 `capital`（`00992A`） | **無公開 Excel API**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/00992A/snapshot` 鏡像官網投組（`source_url` → capitalfund.com.tw） |
+| 備 | [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` | 第三方 JSON；統一／復華官方失敗時 fallback |
 
 比對規則：
 

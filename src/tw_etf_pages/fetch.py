@@ -140,7 +140,7 @@ def fetch_zdsetf_snapshot(cfg: AppConfig, ticker: str, dest: Path) -> Path:
     backoff = float(cfg.fetch.get("retry_backoff_sec", 2))
     session = _session(cfg)
     url = ZDSETF_SNAPSHOT.format(ticker=ticker)
-    logger.info("Fallback zdsetf snapshot %s", url)
+    logger.info("zdsetf snapshot %s", url)
     resp = _retry_get(session, url, retries=retries, backoff=backoff, timeout=timeout)
     if resp.status_code != 200:
         raise FetchError(f"zdsetf HTTP {resp.status_code}: {url}")
@@ -158,9 +158,20 @@ def fetch_etf_holdings(
     """
     Fetch primary issuer Excel; on failure optionally fallback to zdsetf JSON.
     Returns (path, kind) where kind is 'uni_excel' | 'fh_excel' | 'zdsetf'.
+
+    Capital Fund (群益投信) has no public Excel API; for issuer == "capital"
+    we archive via zdsetf.com snapshot, which mirrors the official portfolio
+    page (source_url points at capitalfund.com.tw).
     """
     stamp = today_taipei().isoformat()
     raw_dir = cfg.raw_dir / etf.ticker
+
+    # Primary path for capital: zdsetf mirror of official portfolio (no Excel API).
+    if etf.issuer == "capital":
+        path = raw_dir / f"{etf.ticker}_{stamp}_zdsetf.json"
+        fetch_zdsetf_snapshot(cfg, etf.ticker, path)
+        return path, "zdsetf"
+
     try:
         if etf.issuer == "uni":
             path = raw_dir / f"{etf.ticker}_{stamp}_uni.xlsx"
