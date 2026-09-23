@@ -105,7 +105,7 @@
           <option value="{{ d }}"{% if loop.first %} selected{% endif %}>{{ d }}</option>
           {% endfor %}
         </select>
-        <span class="muted date-count">共 {{ b.available_dates|length }} 日 · 選取後開啟明細頁</span>
+        <span class="muted date-count">最近 {{ b.available_dates|length }} 日（最多 10 日）· 選取後開啟明細頁</span>
       </div>
       {% endif %}
       <div class="summary-chips">

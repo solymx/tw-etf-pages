@@ -62,6 +62,7 @@ def test_build_change_history_00991A_many_dates():
     ensure_change_reports(cfg, "00991A")
     history = build_change_history(cfg, "00991A")
     assert len(history) >= 2
+    assert len(history) <= 10  # UI date menu capped at 10 days
     for h in history:
         assert h["as_of_date"]
         assert "first_buy" in h
@@ -70,9 +71,22 @@ def test_build_change_history_00991A_many_dates():
         assert "full_exit" in h
 
 
+def test_build_change_history_respects_max_days():
+    cfg = load_config(ROOT)
+    ensure_change_reports(cfg, "00991A")
+    capped = build_change_history(cfg, "00991A", max_days=3)
+    assert len(capped) <= 3
+    all_dates = list_change_dates(cfg.changes_dir, "00991A")
+    if len(all_dates) >= 3:
+        assert [h["as_of_date"] for h in capped] == [
+            d.isoformat() for d in reversed(all_dates[-3:])
+        ]
+
+
 if __name__ == "__main__":
     test_list_change_dates_00981A()
     test_ensure_backfills_missing_from_snapshots()
     test_build_change_history_newest_first()
     test_build_change_history_00991A_many_dates()
+    test_build_change_history_respects_max_days()
     print("OK")

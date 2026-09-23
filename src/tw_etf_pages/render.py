@@ -119,13 +119,26 @@ def ensure_change_reports(cfg: AppConfig, ticker: str) -> int:
     return written
 
 
-def build_change_history(cfg: AppConfig, ticker: str) -> list[dict[str, Any]]:
+# Max dates shown in the 「異動資料日」 selector (newest first).
+CHANGE_HISTORY_MAX_DAYS = 10
+
+
+def build_change_history(
+    cfg: AppConfig,
+    ticker: str,
+    *,
+    max_days: int = CHANGE_HISTORY_MAX_DAYS,
+) -> list[dict[str, Any]]:
     """
-    Load every change report under data/changes/{ticker}/ (newest first).
-    Each entry includes pre-built table rows (with matching snapshot holdings
-    when available) for client-side date switching.
+    Load recent change reports under data/changes/{ticker}/ (newest first).
+
+    Only the latest ``max_days`` (default 10) dates appear in the date menu;
+    older archives stay on GitHub under data/changes/ but are not listed in UI.
+    Each entry includes pre-built table rows for client-side date switching.
     """
     dates = list_change_dates(cfg.changes_dir, ticker)
+    if max_days > 0:
+        dates = dates[-max_days:]
     history: list[dict[str, Any]] = []
     for as_of in reversed(dates):  # newest first
         report = load_change_report(cfg.changes_dir, ticker, as_of)
