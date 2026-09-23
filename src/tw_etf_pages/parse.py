@@ -207,6 +207,64 @@ def parse_fh_excel(
     )
 
 
+
+def parse_yuanta_ratio(
+    path: Path,
+    ticker: str,
+    policy: PlaceholderPolicy,
+) -> dict[str, Any]:
+    """Parse normalized Yuanta ratio JSON (from official SSR extract).
+
+    Expected keys: snapshot_date, holdings[{stock_code,stock_name,shares,weight_pct}],
+    optional source_url / fundname / futures (futures excluded from equity holdings).
+    """
+    data = read_json(path)
+    raw_date = data.get("snapshot_date") or data.get("as_of_date") or data.get("date")
+    if raw_date is None:
+        raise ValueError(f"{path}: missing snapshot_date")
+    # Accept YYYYMMDD or YYYY-MM-DD
+    ds = str(raw_date).strip()
+    if len(ds) == 8 and ds.isdigit():
+        ds = f"{ds[0:4]}-{ds[4:6]}-{ds[6:8]}"
+    as_of = parse_iso_or_slash_date(ds)
+    rows = data.get("holdings") or []
+    if not isinstance(rows, list):
+        rows = []
+    holdings = []
+    for h in rows:
+        if not isinstance(h, dict):
+            continue
+        code = h.get("stock_code") or h.get("code") or h.get("ticker")
+        if code is None or str(code).strip() == "":
+            continue
+        # Skip non-equity futures codes if mixed in
+        code_s = str(code).strip().upper()
+        if not any(ch.isdigit() for ch in code_s):
+            continue
+        name = h.get("stock_name") or h.get("name") or ""
+        shares = parse_int(h.get("shares", h.get("qty", 0)))
+        weight = parse_weight_pct(
+            h.get("weight_pct", h.get("weight", h.get("weights", 0)))
+        )
+        holdings.append(_holding(code_s, name, shares, weight, policy))
+    source_url = data.get("source_url") or data.get("official_url") or data.get("url")
+    meta = {
+        "source_url": source_url,
+        "fundid": data.get("fundid"),
+        "fundname": data.get("fundname"),
+        "upddate": data.get("upddate"),
+        "futures_count": len(data.get("futures") or []),
+    }
+    return _snapshot(
+        ticker=ticker,
+        as_of_date=as_of,
+        holdings=holdings,
+        source="yuanta",
+        raw_path=path,
+        meta=meta,
+    )
+
+
 def parse_zdsetf_snapshot(
     path: Path,
     ticker: str,
@@ -214,7 +272,7 @@ def parse_zdsetf_snapshot(
 ) -> dict[str, Any]:
     """Fallback: zdsetf.com snapshot JSON.
 
-    Field aliases (00405A / 00406A / 00980A / 00984A / 00400A / 00401A / 00987A / 00408A / 00996A / future issuers may differ slightly from 00992A):
+    Field aliases (00405A / 00406A / 00980A / 00984A / 00400A / 00401A / 00987A / 00408A / 00996A / 0050 yuanta / future issuers may differ slightly from 00992A):
     - date: snapshot_date | as_of_date | date
     - holdings list: holdings | positions | stocks
     - code/name: stock_code|code , stock_name|name

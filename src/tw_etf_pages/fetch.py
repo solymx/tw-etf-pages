@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import subprocess
 import time
 from datetime import date, timedelta
 from pathlib import Path
@@ -19,6 +20,55 @@ UNI_WARMUP = "https://www.ezmoney.com.tw/"
 UNI_EXCEL = "https://www.ezmoney.com.tw/ETF/Fund/AssetExcelNPOI?fundCode={fund_code}"
 FH_EXCEL = "https://www.fhtrust.com.tw/api/assetsExcel/{fund_code}/{yyyymmdd}"
 ZDSETF_SNAPSHOT = "https://zdsetf.com/api/etfs/{ticker}/snapshot"
+YUANTA_RATIO = "https://www.yuantaetfs.com/product/detail/{ticker}/ratio"
+
+# Node extracts FundWeights from Nuxt SSR window.__NUXT__ (packed IIFE; not pure-JSON).
+_YUANTA_EXTRACT_JS = r"""
+const fs = require('fs');
+const html = fs.readFileSync(process.argv[1], 'utf8');
+const m = html.match(/<script>window\.__NUXT__=(.*?)<\/script>/s);
+if (!m) { console.error('yuanta: missing window.__NUXT__'); process.exit(2); }
+const nuxt = eval(m[1]);
+const pages = (nuxt && nuxt.data) || [];
+let wd = null;
+for (const page of pages) {
+  if (page && page.weightData && page.weightData.FundWeights) { wd = page.weightData; break; }
+}
+if (!wd) { console.error('yuanta: weightData.FundWeights not found'); process.exit(3); }
+const pcf = wd.PCF || {};
+const fw = wd.FundWeights || {};
+const stocks = fw.StockWeights || [];
+const futures = fw.FutureWeights || [];
+const tr = String(pcf.trandate || '');
+const snapshot_date = /^\d{8}$/.test(tr)
+  ? tr.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3')
+  : tr;
+const out = {
+  source_url: process.argv[2] || '',
+  ticker: process.argv[3] || String(pcf.markcd || ''),
+  snapshot_date,
+  fundid: pcf.fundid,
+  fundname: pcf.fundname,
+  markcd: pcf.markcd,
+  upddate: pcf.upddate,
+  summary: fw.Summary || null,
+  holdings: stocks.map((h) => ({
+    stock_code: String(h.code),
+    stock_name: h.name,
+    shares: h.qty,
+    weight_pct: h.weights,
+  })),
+  futures: futures.map((h) => ({
+    code: h.code,
+    name: h.name,
+    shares: h.qty,
+    weight_pct: h.weights,
+    ym: h.ym,
+  })),
+};
+process.stdout.write(JSON.stringify(out));
+"""
+
 
 
 class FetchError(RuntimeError):
@@ -149,6 +199,88 @@ def fetch_zdsetf_snapshot(cfg: AppConfig, ticker: str, dest: Path) -> Path:
     return dest
 
 
+
+def fetch_yuanta_ratio(cfg: AppConfig, etf: EtfConfig, dest: Path) -> Path:
+    """Download YuantaETFs ratio SSR page and extract FundWeights JSON via Node.
+
+    Official page embeds holdings in window.__NUXT__ (Nuxt 2 packed payload).
+    There is no stable public Excel/CSV URL; zdsetf does not track passive 0050.
+    Requires Node.js on PATH (preinstalled on GitHub-hosted Ubuntu runners).
+    """
+    timeout = float(cfg.fetch.get("timeout_sec", 60))
+    retries = int(cfg.fetch.get("retries", 3))
+    backoff = float(cfg.fetch.get("retry_backoff_sec", 2))
+    session = _session(cfg)
+    url = etf.source_page or YUANTA_RATIO.format(ticker=etf.ticker)
+    logger.info("Yuanta ratio page %s", url)
+    html = ""
+    req_err: Exception | None = None
+    try:
+        # Single attempt: Yuanta cert chain fails SSL verify on some OpenSSL builds
+        # (Missing Subject Key Identifier). Fall back to curl quickly.
+        resp = session.get(url, timeout=timeout)
+        if resp.status_code != 200:
+            raise FetchError(f"Yuanta ratio HTTP {resp.status_code}: {url}")
+        html = resp.text
+    except Exception as exc:  # noqa: BLE001 — SSL or transport → curl fallback
+        req_err = exc
+        logger.warning("Yuanta requests GET failed (%s); trying curl", exc)
+        try:
+            proc = subprocess.run(
+                [
+                    "curl", "-fsSL", "--max-time", str(int(timeout)),
+                    "-A", session.headers.get("User-Agent", "tw-etf-pages/1.0"),
+                    url,
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+                timeout=timeout + 5,
+            )
+        except (FileNotFoundError, subprocess.TimeoutExpired) as curl_exc:
+            raise FetchError(
+                f"Yuanta ratio fetch failed (requests+curl): {req_err}"
+            ) from curl_exc
+        if proc.returncode != 0:
+            raise FetchError(
+                f"Yuanta curl failed rc={proc.returncode}: {proc.stderr[:300]!r} "
+                f"(requests: {req_err})"
+            ) from req_err
+        html = proc.stdout
+    if "window.__NUXT__" not in html:
+        raise FetchError(f"Yuanta ratio missing __NUXT__ for {etf.ticker}")
+    if len(html) < 5000:
+        raise FetchError(f"Yuanta ratio HTML too small ({len(html)}) for {etf.ticker}")
+
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    html_path = dest.with_suffix(".html")
+    html_path.write_text(html, encoding="utf-8")
+    try:
+        proc = subprocess.run(
+            ["node", "-e", _YUANTA_EXTRACT_JS, str(html_path), url, etf.ticker],
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=timeout,
+        )
+    except FileNotFoundError as exc:
+        raise FetchError(
+            "Yuanta extract requires Node.js on PATH (node -e ...)"
+        ) from exc
+    except subprocess.TimeoutExpired as exc:
+        raise FetchError(f"Yuanta Node extract timed out for {etf.ticker}") from exc
+    if proc.returncode != 0:
+        raise FetchError(
+            f"Yuanta Node extract failed for {etf.ticker}: "
+            f"rc={proc.returncode} stderr={proc.stderr[:500]!r}"
+        )
+    raw = proc.stdout.strip()
+    if not raw.startswith("{"):
+        raise FetchError(f"Yuanta extract did not return JSON for {etf.ticker}")
+    dest.write_text(raw + "\n", encoding="utf-8")
+    return dest
+
+
 def fetch_etf_holdings(
     cfg: AppConfig,
     etf: EtfConfig,
@@ -157,7 +289,7 @@ def fetch_etf_holdings(
 ) -> tuple[Path, str]:
     """
     Fetch primary issuer Excel; on failure optionally fallback to zdsetf JSON.
-    Returns (path, kind) where kind is 'uni_excel' | 'fh_excel' | 'zdsetf'.
+    Returns (path, kind) where kind is 'uni_excel' | 'fh_excel' | 'zdsetf' | 'yuanta'.
 
     Capital Fund (群益投信), Fubon (富邦投信), CTBC (中國信託投信),
     Nomura (野村投信), Allianz (安聯投信), Cathay (國泰投信),
@@ -174,6 +306,12 @@ def fetch_etf_holdings(
     """
     stamp = today_taipei().isoformat()
     raw_dir = cfg.raw_dir / etf.ticker
+
+    # Primary path for Yuanta (元大投信) passive ETFs: official ratio SSR → JSON.
+    if etf.issuer == "yuanta":
+        path = raw_dir / f"{etf.ticker}_{stamp}_yuanta.json"
+        fetch_yuanta_ratio(cfg, etf, path)
+        return path, "yuanta"
 
     # Primary path for capital / fubon / ctbc / nomura / allianz / cathay / jpm / taishin / fsitc / mega: zdsetf mirror (no Excel API).
     if etf.issuer in ("capital", "fubon", "ctbc", "nomura", "allianz", "cathay", "jpm", "taishin", "fsitc", "mega"):

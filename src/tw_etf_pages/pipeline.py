@@ -16,7 +16,7 @@ from .compare import (
 )
 from .config import AppConfig, EtfConfig, load_config
 from .fetch import FetchError, fetch_etf_holdings
-from .parse import parse_excel_for_issuer, parse_uni_excel, parse_fh_excel, parse_zdsetf_snapshot
+from .parse import parse_excel_for_issuer, parse_uni_excel, parse_fh_excel, parse_zdsetf_snapshot, parse_yuanta_ratio
 from .render import render_site
 from .utils import read_json, write_json
 
@@ -32,6 +32,8 @@ def _parse_fetched(
         return parse_fh_excel(path, etf.ticker, cfg.placeholder)
     if kind == "zdsetf":
         return parse_zdsetf_snapshot(path, etf.ticker, cfg.placeholder)
+    if kind == "yuanta":
+        return parse_yuanta_ratio(path, etf.ticker, cfg.placeholder)
     raise ValueError(kind)
 
 
