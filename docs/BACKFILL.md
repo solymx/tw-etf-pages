@@ -91,11 +91,11 @@
 - 本站以 `zdsetf.com/api/etfs/00996A/snapshot` 作為主來源（JSON 內 `source_url` 指向 megafunds.com.tw）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
-## 元大（0050／Yuanta／yuanta）
+## 元大（0050／0056／Yuanta／yuanta）
 
-- 官網持股比重頁：`https://www.yuantaetfs.com/product/detail/0050/ratio`（PCF：`https://www.yuantaetfs.com/tradeInfo/pcf/0050`）。
+- 官網持股比重頁：`https://www.yuantaetfs.com/product/detail/{TICKER}/ratio`（例：`0050`、`0056`；PCF：`https://www.yuantaetfs.com/tradeInfo/pcf/{TICKER}`）。
 - **無公開 Excel／CSV API**；頁面為 Nuxt SSR，完整持股在 `window.__NUXT__` → `weightData.FundWeights.StockWeights`。
-- [zdsetf.com](https://zdsetf.com) **僅追蹤主動式 *A ETF**，`0050` 回 404，不可作 fallback。
+- [zdsetf.com](https://zdsetf.com) **僅追蹤主動式 *A ETF**，被動 `0050`／`0056` 回 404，不可作 fallback。
 - 本站以官網 ratio 頁為主來源：下載 HTML 後以 Node.js 解析 `__NUXT__` 寫成 JSON 再歸檔；**無法一次回補**。
-- **Caveat**：0050 為被動追蹤臺灣50，日常調倉少，日對日異動常為空；指數定期審核／再平衡時才會有明顯換股。
+- **Caveat**：被動指數型（0050 臺灣50、0056 高股息）日常調倉少，日對日異動常為空；指數定期審核／再平衡時才會有明顯換股。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。

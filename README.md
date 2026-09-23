@@ -2,7 +2,7 @@
 
 台灣**主動式／被動式 ETF**每日**持股異動**靜態報告（非股價）。
 
-觀察清單：`00981A`、`00988A`、`00991A`、`00403A`、`00992A`、`00405A`、`00406A`、`00980A`、`00985A`、`00982A`、`00984A`、`00993A`、`00400A`、`00401A`、`00987A`、`00408A`、`00994A`、`00995A`、`00996A`、`00999A`、`0050`。
+觀察清單：`00981A`、`00988A`、`00991A`、`00403A`、`00992A`、`00405A`、`00406A`、`00980A`、`00985A`、`00982A`、`00984A`、`00993A`、`00400A`、`00401A`、`00987A`、`00408A`、`00994A`、`00995A`、`00996A`、`00999A`、`0050`、`0056`。
 
 每個交易日對每檔 ETF，與**前一份已歸檔快照**比較股數，產出：
 
@@ -74,7 +74,7 @@
 | **台新（taishin）** `00987A` | 官網 PCF／投組頁無穩定公開 Excel／CSV API；zdsetf 僅最新一日；權重可能為 null | **無法一次回補**。以 zdsetf 鏡像台新官網 PCF／投組歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。權重 null 正規化為 0.0（不臆造）。 |
 | **第一金（fsitc）** `00408A`／`00994A` | 官網投組頁無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像第一金官網投組頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
 | **兆豐（mega）** `00996A` | 官網投組頁無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像兆豐官網投組頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
-| **元大（yuanta）** `0050` | 官網持股比重頁（Nuxt SSR）無公開 Excel／CSV；zdsetf **不收錄**被動 ETF | **無法一次回補**。以官網 `product/detail/{TICKER}/ratio` SSR `__NUXT__` 抽取 FundWeights；被動指數型日調倉少，日對日異動常為空。需 Node.js。 |
+| **元大（yuanta）** `0050`／`0056` | 官網持股比重頁（Nuxt SSR）無公開 Excel／CSV；zdsetf **不收錄**被動 ETF | **無法一次回補**。以官網 `product/detail/{TICKER}/ratio` SSR `__NUXT__` 抽取 FundWeights；被動指數型日調倉少，日對日異動常為空。需 Node.js。 |
 
 
 
@@ -147,7 +147,7 @@ etfs:
 - 台新投信：`issuer: taishin`，`fund_code` 為股票代號（本專案 `00987A`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網 PCF／投組（`source_url` → tsit.com.tw）。zdsetf `weight_pct` 可能為 null，解析後正規化為 `0.0`（不臆造權重）。
 - 第一金投信：`issuer: fsitc`，`fund_code` 為官網 FundDetail ID（本專案 `00408A` 為 `183`、`00994A` 為 `182`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網投組（`source_url` → fsitc.com.tw）。
 - 兆豐投信：`issuer: mega`，`fund_code` 為官網產品 id（本專案 `00996A` 為 `23`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網投組（`source_url` → megafunds.com.tw）。
-- 元大投信：`issuer: yuanta`，`fund_code` 為股票代號（本專案 `0050`）；無公開 Excel／CSV，抓取走官網持股比重頁 SSR（`source_page` → yuantaetfs.com `/product/detail/0050/ratio`）；抽取需 Node.js。zdsetf 不收錄被動 `0050`。
+- 元大投信：`issuer: yuanta`，`fund_code` 為股票代號（本專案 `0050`／`0056`）；無公開 Excel／CSV，抓取走官網持股比重頁 SSR（`source_page` → yuantaetfs.com `/product/detail/{TICKER}/ratio`）；抽取需 Node.js。zdsetf 不收錄被動 `0050`／`0056`。
 
 ---
 
@@ -167,7 +167,7 @@ etfs:
 | 主 | 台新 `taishin`（`00987A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/00987A/snapshot` 鏡像官網 PCF／投組（`source_url` → tsit.com.tw）；權重 null → 0.0 |
 | 主 | 第一金 `fsitc`（`00408A`／`00994A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` 鏡像官網投組（`source_url` → fsitc.com.tw） |
 | 主 | 兆豐 `mega`（`00996A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/00996A/snapshot` 鏡像官網投組（`source_url` → megafunds.com.tw） |
-| 主 | 元大 `yuanta`（`0050`） | **無公開 Excel／CSV**；官網持股比重 [yuantaetfs.com/.../0050/ratio](https://www.yuantaetfs.com/product/detail/0050/ratio) Nuxt SSR `__NUXT__.weightData.FundWeights`（需 Node.js）；zdsetf 不收錄 |
+| 主 | 元大 `yuanta`（`0050`／`0056`） | **無公開 Excel／CSV**；官網持股比重 [yuantaetfs.com/.../{TICKER}/ratio](https://www.yuantaetfs.com/product/detail/0050/ratio) Nuxt SSR `__NUXT__.weightData.FundWeights`（需 Node.js）；zdsetf 不收錄被動 ETF |
 | 備 | [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` | 第三方 JSON；統一／復華官方失敗時 fallback |
 
 比對規則：

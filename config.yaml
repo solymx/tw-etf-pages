@@ -133,6 +133,12 @@ etfs:
     fund_code: "0050"
     source_page: "https://www.yuantaetfs.com/product/detail/0050/ratio"
 
+  - ticker: "0056"
+    name: "元大台灣高股息"
+    issuer: yuanta
+    fund_code: "0056"
+    source_page: "https://www.yuantaetfs.com/product/detail/0056/ratio"
+
 fetch:
   timeout_sec: 60
   retries: 3
