@@ -1,185 +1,177 @@
 {
   "etf_ticker": "00991A",
-  "as_of_date": "2026-09-22",
+  "as_of_date": "2026-09-16",
   "source": "fh_excel",
   "fetched_at": "2026-09-23T11:09:24+08:00",
-  "raw_file": "00991A_2026-09-22_fh_backfill.xlsx",
-  "raw_file_hash": "e695588d6726be716e7d1682def037a10f29ee9dc277ed92d212563ca0832c86",
+  "raw_file": "00991A_2026-09-16_fh_backfill.xlsx",
+  "raw_file_hash": "5e4cb00179b36d2a8e8f0da51610707d09cc21c3372da919121114eb8f3f4d4b",
   "holdings_count": 50,
   "placeholder_count": 12,
   "meta": {
-    "nav_total_raw": "79,300,118,246",
-    "units_raw": "4,427,416,000",
-    "nav_pu_raw": "17.91"
+    "nav_total_raw": "76,376,028,157",
+    "units_raw": "4,461,916,000",
+    "nav_pu_raw": "17.12"
   },
   "holdings": [
     {
       "stock_code": "2330",
       "stock_name": "台灣積體",
       "shares": 3800000,
-      "weight_pct": 11.788,
+      "weight_pct": 11.841,
       "is_placeholder": false,
-      "market_value": 9348000000.0
-    },
-    {
-      "stock_code": "2408",
-      "stock_name": "南亞科技",
-      "shares": 13800000,
-      "weight_pct": 8.649,
-      "is_placeholder": false,
-      "market_value": 6858600000.0
+      "market_value": 9044000000.0
     },
     {
       "stock_code": "2383",
       "stock_name": "台光電子",
       "shares": 1380000,
-      "weight_pct": 8.457,
+      "weight_pct": 9.188,
       "is_placeholder": false,
-      "market_value": 6706800000.0
+      "market_value": 7017300000.0
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科技",
+      "shares": 13800000,
+      "weight_pct": 8.899,
+      "is_placeholder": false,
+      "market_value": 6796500000.0
     },
     {
       "stock_code": "2059",
       "stock_name": "川湖科技",
       "shares": 500000,
-      "weight_pct": 7.989,
+      "weight_pct": 7.885,
       "is_placeholder": false,
-      "market_value": 6335000000.0
+      "market_value": 6022500000.0
     },
     {
       "stock_code": "3037",
       "stock_name": "欣興電子",
       "shares": 5100000,
-      "weight_pct": 7.203,
+      "weight_pct": 6.417,
       "is_placeholder": false,
-      "market_value": 5712000000.0
+      "market_value": 4901100000.0
     },
     {
       "stock_code": "2454",
       "stock_name": "聯發科技",
       "shares": 1080000,
-      "weight_pct": 7.055,
+      "weight_pct": 6.406,
       "is_placeholder": false,
-      "market_value": 5594400000.0
+      "market_value": 4892400000.0
     },
     {
       "stock_code": "2327",
       "stock_name": "國巨股份",
       "shares": 7500000,
-      "weight_pct": 5.4,
+      "weight_pct": 5.263,
       "is_placeholder": false,
-      "market_value": 4282500000.0
+      "market_value": 4020000000.0
     },
     {
       "stock_code": "3017",
       "stock_name": "奇鋐科技",
       "shares": 1250000,
-      "weight_pct": 5.344,
+      "weight_pct": 5.196,
       "is_placeholder": false,
-      "market_value": 4237500000.0
-    },
-    {
-      "stock_code": "3189",
-      "stock_name": "景碩科技",
-      "shares": 4250000,
-      "weight_pct": 4.872,
-      "is_placeholder": false,
-      "market_value": 3863250000.0
+      "market_value": 3968750000.0
     },
     {
       "stock_code": "8046",
       "stock_name": "南亞電路",
       "shares": 3300000,
-      "weight_pct": 4.848,
+      "weight_pct": 4.774,
       "is_placeholder": false,
-      "market_value": 3844500000.0
+      "market_value": 3646500000.0
+    },
+    {
+      "stock_code": "3189",
+      "stock_name": "景碩科技",
+      "shares": 4250000,
+      "weight_pct": 4.563,
+      "is_placeholder": false,
+      "market_value": 3485000000.0
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎科技",
+      "shares": 1500020,
+      "weight_pct": 4.252,
+      "is_placeholder": false,
+      "market_value": 3247543300.0
     },
     {
       "stock_code": "5274",
       "stock_name": "信驊科技",
       "shares": 140500,
-      "weight_pct": 3.704,
+      "weight_pct": 3.357,
       "is_placeholder": false,
-      "market_value": 2937152500.0
+      "market_value": 2564125000.0
     },
     {
       "stock_code": "3081",
       "stock_name": "聯亞光電",
       "shares": 900000,
-      "weight_pct": 3.206,
+      "weight_pct": 3.305,
       "is_placeholder": false,
-      "market_value": 2542500000.0
+      "market_value": 2524500000.0
     },
     {
-      "stock_code": "6669",
-      "stock_name": "緯穎科技",
-      "shares": 1150020,
-      "weight_pct": 3.067,
+      "stock_code": "6223",
+      "stock_name": "旺矽科技",
+      "shares": 450000,
+      "weight_pct": 3.299,
       "is_placeholder": false,
-      "market_value": 2432292300.0
+      "market_value": 2520000000.0
     },
     {
       "stock_code": "3026",
       "stock_name": "禾伸堂企",
       "shares": 2700000,
-      "weight_pct": 2.656,
+      "weight_pct": 2.729,
       "is_placeholder": false,
-      "market_value": 2106000000.0
+      "market_value": 2084400000.0
     },
     {
-      "stock_code": "3711",
-      "stock_name": "日月光投",
-      "shares": 2500000,
-      "weight_pct": 2.185,
+      "stock_code": "2345",
+      "stock_name": "智邦科技",
+      "shares": 1100000,
+      "weight_pct": 2.65,
       "is_placeholder": false,
-      "market_value": 1732500000.0
+      "market_value": 2024000000.0
+    },
+    {
+      "stock_code": "6274",
+      "stock_name": "台燿科技",
+      "shares": 1400000,
+      "weight_pct": 2.594,
+      "is_placeholder": false,
+      "market_value": 1981000000.0
+    },
+    {
+      "stock_code": "7769",
+      "stock_name": "鴻勁精密",
+      "shares": 250000,
+      "weight_pct": 2.005,
+      "is_placeholder": false,
+      "market_value": 1531250000.0
     },
     {
       "stock_code": "3653",
       "stock_name": "健策精密",
       "shares": 290000,
-      "weight_pct": 2.132,
+      "weight_pct": 1.99,
       "is_placeholder": false,
-      "market_value": 1690700000.0
+      "market_value": 1519600000.0
     },
     {
-      "stock_code": "2303",
-      "stock_name": "聯華電子",
-      "shares": 10400000,
-      "weight_pct": 2.098,
+      "stock_code": "3711",
+      "stock_name": "日月光投",
+      "shares": 2500000,
+      "weight_pct": 1.98,
       "is_placeholder": false,
-      "market_value": 1664000000.0
-    },
-    {
-      "stock_code": "2308",
-      "stock_name": "台達電子",
-      "shares": 871000,
-      "weight_pct": 2.087,
-      "is_placeholder": false,
-      "market_value": 1654900000.0
-    },
-    {
-      "stock_code": "2345",
-      "stock_name": "智邦科技",
-      "shares": 850000,
-      "weight_pct": 2.053,
-      "is_placeholder": false,
-      "market_value": 1627750000.0
-    },
-    {
-      "stock_code": "6223",
-      "stock_name": "旺矽科技",
-      "shares": 300000,
-      "weight_pct": 2.022,
-      "is_placeholder": false,
-      "market_value": 1603500000.0
-    },
-    {
-      "stock_code": "1303",
-      "stock_name": "南亞塑膠",
-      "shares": 6700000,
-      "weight_pct": 1.956,
-      "is_placeholder": false,
-      "market_value": 1551050000.0
+      "market_value": 1512500000.0
     },
     {
       "stock_code": "3008",
@@ -187,15 +179,7 @@
       "shares": 1000,
       "weight_pct": 0.008,
       "is_placeholder": true,
-      "market_value": 6405000.0
-    },
-    {
-      "stock_code": "7769",
-      "stock_name": "鴻勁精密",
-      "shares": 1000,
-      "weight_pct": 0.008,
-      "is_placeholder": true,
-      "market_value": 6155000.0
+      "market_value": 6225000.0
     },
     {
       "stock_code": "2382",
@@ -203,15 +187,7 @@
       "shares": 9000,
       "weight_pct": 0.004,
       "is_placeholder": false,
-      "market_value": 3078000.0
-    },
-    {
-      "stock_code": "2360",
-      "stock_name": "致茂電子",
-      "shares": 1000,
-      "weight_pct": 0.003,
-      "is_placeholder": true,
-      "market_value": 2440000.0
+      "market_value": 3064500.0
     },
     {
       "stock_code": "2317",
@@ -219,23 +195,7 @@
       "shares": 9000,
       "weight_pct": 0.003,
       "is_placeholder": false,
-      "market_value": 2277000.0
-    },
-    {
-      "stock_code": "3665",
-      "stock_name": "貿聯-KY",
-      "shares": 1000,
-      "weight_pct": 0.003,
-      "is_placeholder": true,
-      "market_value": 2245000.0
-    },
-    {
-      "stock_code": "8299",
-      "stock_name": "群聯電子",
-      "shares": 1000,
-      "weight_pct": 0.003,
-      "is_placeholder": true,
-      "market_value": 2185000.0
+      "market_value": 2232000.0
     },
     {
       "stock_code": "2603",
@@ -243,7 +203,39 @@
       "shares": 9000,
       "weight_pct": 0.003,
       "is_placeholder": false,
-      "market_value": 2182500.0
+      "market_value": 2151000.0
+    },
+    {
+      "stock_code": "2360",
+      "stock_name": "致茂電子",
+      "shares": 1000,
+      "weight_pct": 0.003,
+      "is_placeholder": true,
+      "market_value": 2090000.0
+    },
+    {
+      "stock_code": "3665",
+      "stock_name": "貿聯-KY",
+      "shares": 1000,
+      "weight_pct": 0.003,
+      "is_placeholder": true,
+      "market_value": 1995000.0
+    },
+    {
+      "stock_code": "8299",
+      "stock_name": "群聯電子",
+      "shares": 1000,
+      "weight_pct": 0.003,
+      "is_placeholder": true,
+      "market_value": 1985000.0
+    },
+    {
+      "stock_code": "2308",
+      "stock_name": "台達電子",
+      "shares": 1000,
+      "weight_pct": 0.002,
+      "is_placeholder": true,
+      "market_value": 1710000.0
     },
     {
       "stock_code": "3231",
@@ -251,7 +243,7 @@
       "shares": 9000,
       "weight_pct": 0.002,
       "is_placeholder": false,
-      "market_value": 1624500.0
+      "market_value": 1647000.0
     },
     {
       "stock_code": "5347",
@@ -259,15 +251,7 @@
       "shares": 9000,
       "weight_pct": 0.002,
       "is_placeholder": false,
-      "market_value": 1557000.0
-    },
-    {
-      "stock_code": "6274",
-      "stock_name": "台燿科技",
-      "shares": 1000,
-      "weight_pct": 0.002,
-      "is_placeholder": true,
-      "market_value": 1440000.0
+      "market_value": 1422000.0
     },
     {
       "stock_code": "2881",
@@ -275,7 +259,15 @@
       "shares": 9000,
       "weight_pct": 0.002,
       "is_placeholder": false,
-      "market_value": 1390500.0
+      "market_value": 1377000.0
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯華電子",
+      "shares": 9000,
+      "weight_pct": 0.002,
+      "is_placeholder": false,
+      "market_value": 1278000.0
     },
     {
       "stock_code": "2882",
@@ -283,7 +275,7 @@
       "shares": 9000,
       "weight_pct": 0.001,
       "is_placeholder": false,
-      "market_value": 1008000.0
+      "market_value": 1012500.0
     },
     {
       "stock_code": "2357",
@@ -291,7 +283,7 @@
       "shares": 1000,
       "weight_pct": 0.001,
       "is_placeholder": true,
-      "market_value": 953000.0
+      "market_value": 939000.0
     },
     {
       "stock_code": "2379",
@@ -299,7 +291,7 @@
       "shares": 1000,
       "weight_pct": 0.001,
       "is_placeholder": true,
-      "market_value": 755000.0
+      "market_value": 720000.0
     },
     {
       "stock_code": "2885",
@@ -307,7 +299,7 @@
       "shares": 9360,
       "weight_pct": 0.001,
       "is_placeholder": false,
-      "market_value": 660816.0
+      "market_value": 649584.0
     },
     {
       "stock_code": "2891",
@@ -315,7 +307,7 @@
       "shares": 9000,
       "weight_pct": 0.001,
       "is_placeholder": false,
-      "market_value": 626400.0
+      "market_value": 637200.0
     },
     {
       "stock_code": "3044",
@@ -323,31 +315,7 @@
       "shares": 1000,
       "weight_pct": 0.001,
       "is_placeholder": true,
-      "market_value": 539000.0
-    },
-    {
-      "stock_code": "2890",
-      "stock_name": "永豐金融",
-      "shares": 9000,
-      "weight_pct": 0.001,
-      "is_placeholder": false,
-      "market_value": 408600.0
-    },
-    {
-      "stock_code": "2886",
-      "stock_name": "兆豐金融",
-      "shares": 9000,
-      "weight_pct": 0.001,
-      "is_placeholder": false,
-      "market_value": 454500.0
-    },
-    {
-      "stock_code": "2449",
-      "stock_name": "京元電子",
-      "shares": 1450,
-      "weight_pct": 0.001,
-      "is_placeholder": false,
-      "market_value": 459650.0
+      "market_value": 504000.0
     },
     {
       "stock_code": "2884",
@@ -355,7 +323,31 @@
       "shares": 9000,
       "weight_pct": 0.001,
       "is_placeholder": false,
-      "market_value": 414450.0
+      "market_value": 418050.0
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金融",
+      "shares": 9000,
+      "weight_pct": 0.001,
+      "is_placeholder": false,
+      "market_value": 458100.0
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光",
+      "shares": 9000,
+      "weight_pct": 0.001,
+      "is_placeholder": false,
+      "market_value": 399600.0
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金融",
+      "shares": 9000,
+      "weight_pct": 0.001,
+      "is_placeholder": false,
+      "market_value": 407700.0
     },
     {
       "stock_code": "2880",
@@ -363,7 +355,7 @@
       "shares": 9090,
       "weight_pct": 0.001,
       "is_placeholder": false,
-      "market_value": 423140.0
+      "market_value": 430412.0
     },
     {
       "stock_code": "2883",
@@ -371,15 +363,15 @@
       "shares": 9000,
       "weight_pct": 0.0,
       "is_placeholder": false,
-      "market_value": 353700.0
+      "market_value": 352350.0
     },
     {
-      "stock_code": "2887",
-      "stock_name": "台新新光",
-      "shares": 9000,
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "shares": 1450,
       "weight_pct": 0.0,
       "is_placeholder": false,
-      "market_value": 386100.0
+      "market_value": 379175.0
     },
     {
       "stock_code": "2313",
@@ -387,7 +379,15 @@
       "shares": 1253,
       "weight_pct": 0.0,
       "is_placeholder": false,
-      "market_value": 278166.0
+      "market_value": 281925.0
+    },
+    {
+      "stock_code": "2912",
+      "stock_name": "統一超商",
+      "shares": 1000,
+      "weight_pct": 0.0,
+      "is_placeholder": true,
+      "market_value": 215000.0
     },
     {
       "stock_code": "3036",
@@ -395,7 +395,7 @@
       "shares": 1000,
       "weight_pct": 0.0,
       "is_placeholder": true,
-      "market_value": 205000.0
+      "market_value": 191000.0
     },
     {
       "stock_code": "2412",
@@ -403,7 +403,7 @@
       "shares": 1000,
       "weight_pct": 0.0,
       "is_placeholder": true,
-      "market_value": 145000.0
+      "market_value": 143500.0
     },
     {
       "stock_code": "1216",
@@ -411,7 +411,7 @@
       "shares": 1000,
       "weight_pct": 0.0,
       "is_placeholder": true,
-      "market_value": 74600.0
+      "market_value": 74500.0
     }
   ]
 }

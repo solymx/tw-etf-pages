@@ -12,6 +12,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from .compare import list_snapshot_dates, load_snapshot
 from .config import AppConfig
+from .trend import build_holdings_trend
 from .utils import now_taipei_iso, read_json
 
 logger = logging.getLogger(__name__)
@@ -330,6 +331,9 @@ def render_site(cfg: AppConfig) -> Path:
             summary = report.get("summary", summary)
         rows = build_etf_table_rows(report, snap)
         changed_count = sum(1 for r in rows if r["changed"])
+        trend = build_holdings_trend(
+            cfg.snapshots_dir, etf.ticker, cfg.placeholder
+        )
         block = {
             "ticker": etf.ticker,
             "name": etf.name,
@@ -344,6 +348,7 @@ def render_site(cfg: AppConfig) -> Path:
             "rows": rows,
             "changed_count": changed_count,
             "holdings_count": (snap or {}).get("holdings_count"),
+            "trend": trend,
         }
         etf_blocks.append(block)
         index_rows.append(
@@ -370,11 +375,13 @@ def render_site(cfg: AppConfig) -> Path:
             rows=rows,
             changed_count=changed_count,
             summary=summary,
+            trend=trend,
             all_etfs=all_etfs_meta,
             generated_at=generated_at,
             ph_max_shares=cfg.placeholder.max_shares,
             ph_max_weight=cfg.placeholder.max_weight_pct,
             assets_prefix="assets",
+            issuer=etf.issuer,
         )
         (site / f"{etf.ticker}.html").write_text(html, encoding="utf-8")
         logger.info("Wrote %s", site / f"{etf.ticker}.html")

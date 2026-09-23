@@ -327,3 +327,76 @@ table.report tr.unchanged.hidden { display: none; }
   .toc.open { display: block; }
   table.report { font-size: 0.84rem; }
 }
+
+/* ---- 近20天持股趨勢 ---- */
+.trend-section { scroll-margin-top: 1rem; }
+
+.trend-hint { margin-top: 0.5rem; }
+
+.trend-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.55rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  margin: 0.85rem 0 1rem;
+}
+
+.trend-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--banner);
+}
+
+.trend-select {
+  width: 100%;
+  max-width: 520px;
+  font-size: 0.88rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.35rem;
+  background: #fff;
+  color: var(--text);
+}
+
+.trend-quick { margin: 0; }
+
+.trend-selected-hint { margin: 0; }
+
+.trend-chart-wrap {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.trend-pick-row {
+  cursor: pointer;
+}
+
+.trend-pick-row:hover {
+  outline: 2px solid rgba(37, 99, 235, 0.35);
+  outline-offset: -2px;
+}
+
+.trend-pick-row.is-selected {
+  background: #eff6ff !important;
+}
+
+.pattern-cell {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 720px) {
+  .trend-controls {
+    grid-template-columns: minmax(220px, 320px) 1fr;
+    align-items: start;
+  }
+  .trend-label { grid-column: 1 / -1; }
+  .trend-select { grid-row: span 2; }
+}

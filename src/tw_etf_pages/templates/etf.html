@@ -13,6 +13,7 @@
   <ol>
     <li><a href="index.html">← 回日報總覽</a></li>
     <li><a href="#{{ anchor }}">異動表</a></li>
+    <li><a href="#trend">近20天持股趨勢</a></li>
     <li><a href="#snapshot">快照摘要</a></li>
   </ol>
   <h2 style="margin-top:0.9rem">其他 ETF</h2>
@@ -88,6 +89,92 @@
   {% endif %}
 </section>
 
+<section id="trend" class="trend-section" data-trend-root>
+  <h2 class="banner sub">近20天持股趨勢</h2>
+  <p class="muted">
+    依已歸檔快照繪製持股股數時間序列（最多 {{ trend.max_days }} 個交易日）。
+    目前可用 <strong>{{ trend.day_count }}</strong> 日
+    {% if trend.total_archived > trend.day_count %}（總歸檔 {{ trend.total_archived }} 日，取最近 {{ trend.max_days }} 日）{% endif %}。
+    圖表單位為<strong>張</strong>（1 張 = 1,000 股）。
+  </p>
+
+  {% if not trend.enough_for_chart %}
+  <div class="empty-box">
+    歷史快照不足（需至少 2 個交易日）才能繪製趨勢圖。
+    {% if issuer == "uni" %}
+    統一投信 Excel <strong>僅提供最新一日</strong>，無法一次回補歷史；本站會隨每日 Actions 自動累積，約 20 個交易日後圖表會完整。
+    {% else %}
+    請等待後續交易日歸檔，或確認發行人歷史 Excel 是否可下載。
+    {% endif %}
+  </div>
+  {% else %}
+
+  {% if not trend.enough_for_intermittent %}
+  <div class="empty-box trend-hint">
+    目前僅有 {{ trend.day_count }} 日資料：可看股數折線，但「間歇加碼」（買→持平／減→再買）需至少 3 個交易日才能標示。
+    {% if issuer == "uni" %}統一投信無歷史 API，回補不可行；資料會隨每日歸檔成長。{% endif %}
+  </div>
+  {% endif %}
+
+  {% if trend.top_intermittent %}
+  <h3 class="section-title inc">間歇／反覆加碼標示</h3>
+  <p class="muted">依「加碼 → 間隔（持平或減碼）→ 再加碼」次數排序；可點選列以切換圖表標的。</p>
+  <div class="table-wrap">
+    <table class="report trend-tip-table">
+      <thead>
+        <tr>
+          <th>代號</th>
+          <th>名稱</th>
+          <th>型態</th>
+          <th>日序（↑加 ↓減 ·持平）</th>
+          <th>期間淨變動</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for t in trend.top_intermittent %}
+        <tr class="trend-pick-row" data-pick-code="{{ t.stock_code }}" tabindex="0" role="button">
+          <td>{{ t.stock_code }}</td>
+          <td>{{ t.stock_name }}</td>
+          <td>
+            {% if t.intermittent_buy_score > 0 %}
+            <span class="chip buy">{{ t.intermittent_label }}</span>
+            {% else %}
+            <span class="chip inc">{{ t.intermittent_label or "—" }}</span>
+            {% endif %}
+          </td>
+          <td class="num pattern-cell">{{ t.pattern or "—" }}</td>
+          <td class="num {% if t.net_delta > 0 %}delta-up{% elif t.net_delta < 0 %}delta-down{% endif %}">
+            {{ t.net_delta|signed_lots }}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% elif trend.enough_for_intermittent %}
+  <div class="empty-box">近 {{ trend.day_count }} 日尚未偵測到明顯的間歇加碼型態（買→間隔→再買）。</div>
+  {% endif %}
+
+  <div class="trend-controls">
+    <label class="trend-label" for="trend-stock-select">選擇標的（可多選）</label>
+    <select id="trend-stock-select" class="trend-select" multiple size="8" aria-label="持股趨勢標的"></select>
+    <div class="toolbar trend-quick">
+      <button type="button" class="btn-toggle" data-trend-preset="intermittent">間歇加碼前列</button>
+      <button type="button" class="btn-toggle" data-trend-preset="default">預設標的</button>
+      <button type="button" class="btn-toggle" data-trend-preset="clear">清除</button>
+    </div>
+    <p class="muted trend-selected-hint">已選：<span data-trend-selected-count>0</span> 檔（建議 ≤ 5 檔以便閱讀）</p>
+  </div>
+
+  <div class="trend-chart-wrap">
+    <canvas id="trend-chart" height="120" aria-label="持股股數趨勢圖"></canvas>
+  </div>
+  <p class="muted">提示：在上方下拉選單按住 Ctrl／⌘ 可多選；點「間歇加碼」表列亦可快速切換。</p>
+
+  <script type="application/json" id="trend-data">{{ trend | tojson }}</script>
+  {% endif %}
+</section>
+
 <section id="snapshot">
   <h2 class="banner sub">持股快照摘要</h2>
   {% if snapshot %}
@@ -98,6 +185,9 @@
   </p>
   {% if source_page %}
   <p class="muted">發行人頁面：<a href="{{ source_page }}" rel="noopener">{{ source_page }}</a></p>
+  {% endif %}
+  {% if issuer == "uni" %}
+  <p class="muted">資料說明：統一投信公開 Excel 僅最新一日；本站自行歸檔，歷史天數隨每日更新累積（目前趨勢可用 {{ trend.day_count }} 日）。</p>
   {% endif %}
   {% else %}
   <div class="empty-box">尚無快照。</div>

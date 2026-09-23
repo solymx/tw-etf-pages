@@ -16,6 +16,7 @@
   <ol>
     <li><a href="index.html">← 回日報總覽</a></li>
     <li><a href="#act_00988A">異動表</a></li>
+    <li><a href="#trend">近20天持股趨勢</a></li>
     <li><a href="#snapshot">快照摘要</a></li>
   </ol>
   <h2 style="margin-top:0.9rem">其他 ETF</h2>
@@ -653,6 +654,46 @@
   
 </section>
 
+<section id="trend" class="trend-section" data-trend-root>
+  <h2 class="banner sub">近20天持股趨勢</h2>
+  <p class="muted">
+    依已歸檔快照繪製持股股數時間序列（最多 20 個交易日）。
+    目前可用 <strong>2</strong> 日
+    。
+    圖表單位為<strong>張</strong>（1 張 = 1,000 股）。
+  </p>
+
+  
+
+  
+  <div class="empty-box trend-hint">
+    目前僅有 2 日資料：可看股數折線，但「間歇加碼」（買→持平／減→再買）需至少 3 個交易日才能標示。
+    統一投信無歷史 API，回補不可行；資料會隨每日歸檔成長。
+  </div>
+  
+
+  
+
+  <div class="trend-controls">
+    <label class="trend-label" for="trend-stock-select">選擇標的（可多選）</label>
+    <select id="trend-stock-select" class="trend-select" multiple size="8" aria-label="持股趨勢標的"></select>
+    <div class="toolbar trend-quick">
+      <button type="button" class="btn-toggle" data-trend-preset="intermittent">間歇加碼前列</button>
+      <button type="button" class="btn-toggle" data-trend-preset="default">預設標的</button>
+      <button type="button" class="btn-toggle" data-trend-preset="clear">清除</button>
+    </div>
+    <p class="muted trend-selected-hint">已選：<span data-trend-selected-count>0</span> 檔（建議 ≤ 5 檔以便閱讀）</p>
+  </div>
+
+  <div class="trend-chart-wrap">
+    <canvas id="trend-chart" height="120" aria-label="持股股數趨勢圖"></canvas>
+  </div>
+  <p class="muted">提示：在上方下拉選單按住 Ctrl／⌘ 可多選；點「間歇加碼」表列亦可快速切換。</p>
+
+  <script type="application/json" id="trend-data">{"dates": ["2026-09-20", "2026-09-21"], "day_count": 2, "default_codes": ["HOOD US", "2454", "6515"], "enough_for_chart": true, "enough_for_intermittent": false, "etf_ticker": "00988A", "max_days": 20, "stocks": [{"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 117000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [117000, 117000], "stock_code": "LITE US", "stock_name": "LUMENTUM HOLDINGS INC"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 350000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [350000, 350000], "stock_code": "BE US", "stock_name": "BLOOM ENERGY CORP- A"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 550000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [550000, 550000], "stock_code": "SPCX US", "stock_name": "SPACE EXPLORATION TECHN-CL A"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 2600000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [2600000, 2600000], "stock_code": "3037", "stock_name": "\u6b23\u8208"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 70000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [70000, 70000], "stock_code": "009150 KS", "stock_name": "Samsung Electro-Mechanics co(009150 ks)"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1350000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [1350000, 1350000], "stock_code": "6981 JP", "stock_name": "MURATA MANUFACTURING CO LTD"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 60000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [60000, 60000], "stock_code": "MU US", "stock_name": "MICRON TECHNOLOGY INC"}, {"activity": 100000, "buy_days": 1, "intermittent_buy_score": 0, "intermittent_label": "\u52a0\u78bc1\u65e5", "latest_shares": 380000, "net_delta": 50000, "pattern": "\u2191", "sell_days": 0, "shares": [330000, 380000], "stock_code": "2454", "stock_name": "\u806f\u767c\u79d1"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 150000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [150000, 150000], "stock_code": "PANW US", "stock_name": "PALO ALTO NETWORKS INC"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 450399, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [450399, 450399], "stock_code": "INTC US", "stock_name": "INTEL CORP"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 100000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [100000, 100000], "stock_code": "MSFT US", "stock_name": "MICROSOFT CORP(\u5fae\u8edf\u516c\u53f8)"}, {"activity": 200000, "buy_days": 1, "intermittent_buy_score": 0, "intermittent_label": "\u52a0\u78bc1\u65e5", "latest_shares": 400120, "net_delta": 100000, "pattern": "\u2191", "sell_days": 0, "shares": [300120, 400120], "stock_code": "HOOD US", "stock_name": "ROBINHOOD MARKETS INC - A"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 440000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [440000, 440000], "stock_code": "3017", "stock_name": "\u5947\u92d0"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 130000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [130000, 130000], "stock_code": "SNOW US", "stock_name": "SNOWFLAKE INC-CLASS A(Snowflake\u516c\u53f8)"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 8500000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [8500000, 8500000], "stock_code": "2303", "stock_name": "\u806f\u96fb"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 225000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [225000, 225000], "stock_code": "PLTR US", "stock_name": "PALANTIR TECHNOLOGIES INC-A"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 175000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [175000, 175000], "stock_code": "NVDA US", "stock_name": "NVIDIA CORP(\u8f1d\u9054\u516c\u53f8)"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 250000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [250000, 250000], "stock_code": "2383", "stock_name": "\u53f0\u5149\u96fb"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 220000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [220000, 220000], "stock_code": "3308 HK", "stock_name": "ZHONGJI INNOLIGHT CO LTD-H"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 25000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [25000, 25000], "stock_code": "000660 KS", "stock_name": "SK HYNIX INC"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 130754, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [130754, 130754], "stock_code": "CRWD US", "stock_name": "CROWDSTRIKE HOLDINGS INC - A"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 230000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [230000, 230000], "stock_code": "NOW US", "stock_name": "SERVICENOW INC"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 400000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [400000, 400000], "stock_code": "2330", "stock_name": "\u53f0\u7a4d\u96fb"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 334997, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [334997, 334997], "stock_code": "300757 CH", "stock_name": "ROBOTECHNIK INTELLIGENT TE-A"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 50000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [50000, 50000], "stock_code": "AMD US", "stock_name": "ADVANCED MICRO DEVICES.amd us(\u8d85\u5fae\u534a\u5c0e\u9ad4\u516c\u53f8)"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1510000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [1510000, 1510000], "stock_code": "4979", "stock_name": "\u83ef\u661f\u5149"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 6000000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [6000000, 6000000], "stock_code": "992 HK", "stock_name": "LENOVO GROUP LTD"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 100000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [100000, 100000], "stock_code": "TWLO US", "stock_name": "TWILIO INC - A"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 70000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [70000, 70000], "stock_code": "TER US", "stock_name": "TERADYNE INC"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 70000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [70000, 70000], "stock_code": "NET US", "stock_name": "CLOUDFLARE INC - CLASS A"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 120000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [120000, 120000], "stock_code": "OKTA US", "stock_name": "OKTA INC"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 300000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [300000, 300000], "stock_code": "IFX GY", "stock_name": "INFINEON TECHNOLOGIES AG"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1060000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [1060000, 1060000], "stock_code": "6997 JP", "stock_name": "NIPPON CHEMI-CON CORP"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 20000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [20000, 20000], "stock_code": "STX US", "stock_name": "SEAGATE TECHNOLOGY"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 150000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [150000, 150000], "stock_code": "3081", "stock_name": "\u806f\u4e9e"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 37000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [37000, 37000], "stock_code": "285A JP", "stock_name": "KIOXIA HOLDINGS CORP"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 7000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [7000, 7000], "stock_code": "SNDK US", "stock_name": "SANDISK CORP"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 500000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [500000, 500000], "stock_code": "5801 JP", "stock_name": "FURUKAWA ELECTRIC CO LTD"}, {"activity": 80000, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 60000, "net_delta": -40000, "pattern": "\u2193", "sell_days": 1, "shares": [100000, 60000], "stock_code": "6515", "stock_name": "\u7a4e\u5d34"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 25000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [25000, 25000], "stock_code": "NTRA US", "stock_name": "NATERA INC"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 950000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [950000, 950000], "stock_code": "4180 JP", "stock_name": "APPIER GROUP INC"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 70000, "net_delta": 0, "pattern": "?", "sell_days": 0, "shares": [null, 70000], "stock_code": "COIN US", "stock_name": "COINBASE GLOBAL INC -CLASS A"}], "top_intermittent": [], "total_archived": 2}</script>
+  
+</section>
+
 <section id="snapshot">
   <h2 class="banner sub">持股快照摘要</h2>
   
@@ -665,11 +706,14 @@
   <p class="muted">發行人頁面：<a href="https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=61YTW" rel="noopener">https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=61YTW</a></p>
   
   
+  <p class="muted">資料說明：統一投信公開 Excel 僅最新一日；本站自行歸檔，歷史天數隨每日更新累積（目前趨勢可用 2 日）。</p>
+  
+  
 </section>
 
       <footer class="site-footer">
         <p>資料來源為各投信公開揭露之持股 Excel；本站僅做歸檔與股數異動比對，不構成投資建議。</p>
-        <p>時區：Asia/Taipei。最後產生時間：2026-09-23T10:56:57+08:00。</p>
+        <p>時區：Asia/Taipei。最後產生時間：2026-09-23T11:10:49+08:00。</p>
         
 <p>占位列政策：股數 ≤ 1000 且權重 &lt; 0.01% 自異動分類排除（快照仍保留並標記）。</p>
 
@@ -677,6 +721,7 @@
     </div>
   </div>
   
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js" defer></script>
   <script src="assets/app.js" defer></script>
 </body>
 </html>

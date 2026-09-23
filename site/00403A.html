@@ -16,6 +16,7 @@
   <ol>
     <li><a href="index.html">← 回日報總覽</a></li>
     <li><a href="#act_00403A">異動表</a></li>
+    <li><a href="#trend">近20天持股趨勢</a></li>
     <li><a href="#snapshot">快照摘要</a></li>
   </ol>
   <h2 style="margin-top:0.9rem">其他 ETF</h2>
@@ -716,6 +717,46 @@
   
 </section>
 
+<section id="trend" class="trend-section" data-trend-root>
+  <h2 class="banner sub">近20天持股趨勢</h2>
+  <p class="muted">
+    依已歸檔快照繪製持股股數時間序列（最多 20 個交易日）。
+    目前可用 <strong>2</strong> 日
+    。
+    圖表單位為<strong>張</strong>（1 張 = 1,000 股）。
+  </p>
+
+  
+
+  
+  <div class="empty-box trend-hint">
+    目前僅有 2 日資料：可看股數折線，但「間歇加碼」（買→持平／減→再買）需至少 3 個交易日才能標示。
+    統一投信無歷史 API，回補不可行；資料會隨每日歸檔成長。
+  </div>
+  
+
+  
+
+  <div class="trend-controls">
+    <label class="trend-label" for="trend-stock-select">選擇標的（可多選）</label>
+    <select id="trend-stock-select" class="trend-select" multiple size="8" aria-label="持股趨勢標的"></select>
+    <div class="toolbar trend-quick">
+      <button type="button" class="btn-toggle" data-trend-preset="intermittent">間歇加碼前列</button>
+      <button type="button" class="btn-toggle" data-trend-preset="default">預設標的</button>
+      <button type="button" class="btn-toggle" data-trend-preset="clear">清除</button>
+    </div>
+    <p class="muted trend-selected-hint">已選：<span data-trend-selected-count>0</span> 檔（建議 ≤ 5 檔以便閱讀）</p>
+  </div>
+
+  <div class="trend-chart-wrap">
+    <canvas id="trend-chart" height="120" aria-label="持股股數趨勢圖"></canvas>
+  </div>
+  <p class="muted">提示：在上方下拉選單按住 Ctrl／⌘ 可多選；點「間歇加碼」表列亦可快速切換。</p>
+
+  <script type="application/json" id="trend-data">{"dates": ["2026-09-21", "2026-09-22"], "day_count": 2, "default_codes": ["2449", "2308", "8996", "2059", "3443"], "enough_for_chart": true, "enough_for_intermittent": false, "etf_ticker": "00403A", "max_days": 20, "stocks": [{"activity": 400000, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 9400000, "net_delta": -200000, "pattern": "\u2193", "sell_days": 1, "shares": [9600000, 9400000], "stock_code": "2330", "stock_name": "\u53f0\u7a4d\u96fb"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 2210000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [2210000, 2210000], "stock_code": "2454", "stock_name": "\u806f\u767c\u79d1"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 2850000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [2850000, 2850000], "stock_code": "3017", "stock_name": "\u5947\u92d0"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 60000000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [60000000, 60000000], "stock_code": "2303", "stock_name": "\u806f\u96fb"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 8460000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [8460000, 8460000], "stock_code": "3037", "stock_name": "\u6b23\u8208"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1600000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [1600000, 1600000], "stock_code": "2383", "stock_name": "\u53f0\u5149\u96fb"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1115000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [1115000, 1115000], "stock_code": "3653", "stock_name": "\u5065\u7b56"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1100000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [1100000, 1100000], "stock_code": "6223", "stock_name": "\u65fa\u77fd"}, {"activity": 140000, "buy_days": 1, "intermittent_buy_score": 0, "intermittent_label": "\u52a0\u78bc1\u65e5", "latest_shares": 2900000, "net_delta": 70000, "pattern": "\u2191", "sell_days": 0, "shares": [2830000, 2900000], "stock_code": "2308", "stock_name": "\u53f0\u9054\u96fb"}, {"activity": 2000, "buy_days": 1, "intermittent_buy_score": 0, "intermittent_label": "\u52a0\u78bc1\u65e5", "latest_shares": 646000, "net_delta": 1000, "pattern": "\u2191", "sell_days": 0, "shares": [645000, 646000], "stock_code": "3443", "stock_name": "\u5275\u610f"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 8000000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [8000000, 8000000], "stock_code": "2327", "stock_name": "\u570b\u5de8*"}, {"activity": 240000, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1867956, "net_delta": -120000, "pattern": "\u2193", "sell_days": 1, "shares": [1987956, 1867956], "stock_code": "6669", "stock_name": "\u7def\u7a4e"}, {"activity": 240000, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 2060000, "net_delta": -120000, "pattern": "\u2193", "sell_days": 1, "shares": [2180000, 2060000], "stock_code": "2345", "stock_name": "\u667a\u90a6"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 4000000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [4000000, 4000000], "stock_code": "3189", "stock_name": "\u666f\u78a9"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 2770000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [2770000, 2770000], "stock_code": "8046", "stock_name": "\u5357\u96fb"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 13500000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [13500000, 13500000], "stock_code": "1303", "stock_name": "\u5357\u4e9e"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1293000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [1293000, 1293000], "stock_code": "3665", "stock_name": "\u8cbf\u806f-KY"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1900000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [1900000, 1900000], "stock_code": "6274", "stock_name": "\u53f0\u71ff"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 2800000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [2800000, 2800000], "stock_code": "6488", "stock_name": "\u74b0\u7403\u6676"}, {"activity": 90000, "buy_days": 1, "intermittent_buy_score": 0, "intermittent_label": "\u52a0\u78bc1\u65e5", "latest_shares": 1625000, "net_delta": 45000, "pattern": "\u2191", "sell_days": 0, "shares": [1580000, 1625000], "stock_code": "8996", "stock_name": "\u9ad8\u529b"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 120500, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [120500, 120500], "stock_code": "5274", "stock_name": "\u4fe1\u9a4a"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 840000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [840000, 840000], "stock_code": "6805", "stock_name": "\u5bcc\u4e16\u9054"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 280000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [280000, 280000], "stock_code": "3008", "stock_name": "\u5927\u7acb\u5149"}, {"activity": 180000, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 680000, "net_delta": -90000, "pattern": "\u2193", "sell_days": 1, "shares": [770000, 680000], "stock_code": "2360", "stock_name": "\u81f4\u8302"}, {"activity": 1000000, "buy_days": 1, "intermittent_buy_score": 0, "intermittent_label": "\u52a0\u78bc1\u65e5", "latest_shares": 4000000, "net_delta": 500000, "pattern": "\u2191", "sell_days": 0, "shares": [3500000, 4000000], "stock_code": "2449", "stock_name": "\u4eac\u5143\u96fb\u5b50"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 2000000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [2000000, 2000000], "stock_code": "2408", "stock_name": "\u5357\u4e9e\u79d1"}, {"activity": 20000, "buy_days": 1, "intermittent_buy_score": 0, "intermittent_label": "\u52a0\u78bc1\u65e5", "latest_shares": 75000, "net_delta": 10000, "pattern": "\u2191", "sell_days": 0, "shares": [65000, 75000], "stock_code": "2059", "stock_name": "\u5ddd\u6e56"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 3200000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [3200000, 3200000], "stock_code": "2317", "stock_name": "\u9d3b\u6d77"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 130000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [130000, 130000], "stock_code": "7769", "stock_name": "\u9d3b\u52c1"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1500000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [1500000, 1500000], "stock_code": "3450", "stock_name": "\u806f\u921e"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 2000000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [2000000, 2000000], "stock_code": "3211", "stock_name": "\u9806\u9054"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1000000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [1000000, 1000000], "stock_code": "3711", "stock_name": "\u65e5\u6708\u5149\u6295\u63a7"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 800000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [800000, 800000], "stock_code": "3583", "stock_name": "\u8f9b\u8018"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 350000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [350000, 350000], "stock_code": "6442", "stock_name": "\u5149\u8056"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 3000000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [3000000, 3000000], "stock_code": "2481", "stock_name": "\u5f37\u8302"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 4000000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [4000000, 4000000], "stock_code": "2882", "stock_name": "\u570b\u6cf0\u91d1"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 250000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [250000, 250000], "stock_code": "2404", "stock_name": "\u6f22\u5510"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 386000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [386000, 386000], "stock_code": "2455", "stock_name": "\u5168\u65b0"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 191000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [191000, 191000], "stock_code": "1560", "stock_name": "\u4e2d\u7802"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1500000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [1500000, 1500000], "stock_code": "1717", "stock_name": "\u9577\u8208"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 350000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [350000, 350000], "stock_code": "6285", "stock_name": "\u555f\u7881"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 300000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [300000, 300000], "stock_code": "2301", "stock_name": "\u5149\u5bf6\u79d1"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 100000, "net_delta": 0, "pattern": "\u00b7", "sell_days": 0, "shares": [100000, 100000], "stock_code": "8358", "stock_name": "\u91d1\u5c45"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 1800000, "net_delta": 0, "pattern": "?", "sell_days": 0, "shares": [1800000, null], "stock_code": "6239", "stock_name": "\u529b\u6210"}, {"activity": 0, "buy_days": 0, "intermittent_buy_score": 0, "intermittent_label": "", "latest_shares": 40000, "net_delta": 0, "pattern": "?", "sell_days": 0, "shares": [40000, null], "stock_code": "3533", "stock_name": "\u5609\u6fa4\u7aef\u5b50\u5de5\u696d"}], "top_intermittent": [], "total_archived": 2}</script>
+  
+</section>
+
 <section id="snapshot">
   <h2 class="banner sub">持股快照摘要</h2>
   
@@ -728,11 +769,14 @@
   <p class="muted">發行人頁面：<a href="https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=63YTW" rel="noopener">https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=63YTW</a></p>
   
   
+  <p class="muted">資料說明：統一投信公開 Excel 僅最新一日；本站自行歸檔，歷史天數隨每日更新累積（目前趨勢可用 2 日）。</p>
+  
+  
 </section>
 
       <footer class="site-footer">
         <p>資料來源為各投信公開揭露之持股 Excel；本站僅做歸檔與股數異動比對，不構成投資建議。</p>
-        <p>時區：Asia/Taipei。最後產生時間：2026-09-23T10:56:57+08:00。</p>
+        <p>時區：Asia/Taipei。最後產生時間：2026-09-23T11:10:49+08:00。</p>
         
 <p>占位列政策：股數 ≤ 1000 且權重 &lt; 0.01% 自異動分類排除（快照仍保留並標記）。</p>
 
@@ -740,6 +784,7 @@
     </div>
   </div>
   
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js" defer></script>
   <script src="assets/app.js" defer></script>
 </body>
 </html>
