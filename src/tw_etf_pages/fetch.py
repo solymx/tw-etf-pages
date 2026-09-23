@@ -21,6 +21,14 @@ UNI_EXCEL = "https://www.ezmoney.com.tw/ETF/Fund/AssetExcelNPOI?fundCode={fund_c
 FH_EXCEL = "https://www.fhtrust.com.tw/api/assetsExcel/{fund_code}/{yyyymmdd}"
 ZDSETF_SNAPSHOT = "https://zdsetf.com/api/etfs/{ticker}/snapshot"
 YUANTA_RATIO = "https://www.yuantaetfs.com/product/detail/{ticker}/ratio"
+CATHAY_CWAPI = "https://cwapi.cathaysite.com.tw"
+CATHAY_WEIGHTS = CATHAY_CWAPI + "/api/ETF/GetIndexStockWeights"
+# cwapi/Akamai blocks non-browser User-Agents (project UA → 403).
+CATHAY_BROWSER_UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/120.0.0.0 Safari/537.36"
+)
 
 # Node extracts FundWeights from Nuxt SSR window.__NUXT__ (packed IIFE; not pure-JSON).
 _YUANTA_EXTRACT_JS = r"""
@@ -281,6 +289,88 @@ def fetch_yuanta_ratio(cfg: AppConfig, etf: EtfConfig, dest: Path) -> Path:
     return dest
 
 
+
+def fetch_cathay_weights(cfg: AppConfig, etf: EtfConfig, dest: Path) -> Path:
+    """Download Cathay cwapi GetIndexStockWeights JSON (official 持股權重).
+
+    Used when zdsetf does not track the ticker (typical for Cathay passives
+    such as 00881). Requires fund_code = cwapi fundCode (e.g. CR for 00881;
+    page slug may be ECR). Shares are not disclosed; we synthesize
+    shares = round(weight_pct * 1e6) for relative day-to-day tracking.
+    """
+    timeout = float(cfg.fetch.get("timeout_sec", 60))
+    retries = int(cfg.fetch.get("retries", 3))
+    backoff = float(cfg.fetch.get("retry_backoff_sec", 2))
+    session = _session(cfg)
+    session.headers["User-Agent"] = CATHAY_BROWSER_UA
+    session.headers["Referer"] = etf.source_page or "https://www.cathaysite.com.tw/"
+    session.headers["Accept"] = "application/json, text/plain, */*"
+    fund_code = (etf.fund_code or "").strip()
+    if not fund_code:
+        raise FetchError(f"Cathay weights require fund_code for {etf.ticker}")
+    url = CATHAY_WEIGHTS
+    params = {"fundCode": fund_code}
+    logger.info("Cathay weights %s fundCode=%s", url, fund_code)
+    resp = _retry_get(
+        session, url, retries=retries, backoff=backoff, timeout=timeout, params=params
+    )
+    if resp.status_code != 200:
+        raise FetchError(f"Cathay weights HTTP {resp.status_code}: {url}?fundCode={fund_code}")
+    try:
+        payload = resp.json()
+    except Exception as exc:  # noqa: BLE001
+        raise FetchError(f"Cathay weights non-JSON for {etf.ticker}") from exc
+    if str(payload.get("returnCode")) != "2000" or not payload.get("success"):
+        raise FetchError(
+            f"Cathay weights API error for {etf.ticker}: "
+            f"returnCode={payload.get('returnCode')} "
+            f"msg={payload.get('returnMessage')!r}"
+        )
+    result = payload.get("result") or {}
+    rows = result.get("stockWeights") or []
+    if not isinstance(rows, list) or not rows:
+        raise FetchError(f"Cathay weights empty stockWeights for {etf.ticker}")
+    raw_date = result.get("date") or ""
+    ds = str(raw_date).strip().replace("/", "-")
+    holdings = []
+    for h in rows:
+        if not isinstance(h, dict):
+            continue
+        code = h.get("stockCode") or h.get("stock_code")
+        if code is None or str(code).strip() == "":
+            continue
+        try:
+            w = float(h.get("weights") if h.get("weights") is not None else h.get("weight_pct") or 0)
+        except (TypeError, ValueError):
+            w = 0.0
+        holdings.append(
+            {
+                "stock_code": str(code).strip(),
+                "stock_name": h.get("stockName") or h.get("stock_name") or "",
+                "shares": int(round(w * 1_000_000)),
+                "weight_pct": w,
+            }
+        )
+    if not holdings:
+        raise FetchError(f"Cathay weights parsed 0 holdings for {etf.ticker}")
+    out = {
+        "source_url": etf.source_page
+        or f"https://www.cathaysite.com.tw/ETF/detail/{fund_code}",
+        "api_url": f"{url}?fundCode={fund_code}",
+        "ticker": etf.ticker,
+        "fund_code": fund_code,
+        "snapshot_date": ds,
+        "holdings": holdings,
+        "shares_note": "synthetic_from_weight_pct_x_1e6",
+    }
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(
+        __import__("json").dumps(out, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    return dest
+
+
 def fetch_etf_holdings(
     cfg: AppConfig,
     etf: EtfConfig,
@@ -297,12 +387,13 @@ def fetch_etf_holdings(
     First Securities Investment Trust / 第一金投信 (fsitc),
     and Mega Funds / 兆豐投信 (mega)
     have no reliable public Excel/CSV download URL for automation; for issuer in
-    {"capital", "fubon", "ctbc", "nomura", "allianz", "cathay", "jpm", "taishin", "fsitc", "mega"}
+    {"capital", "fubon", "ctbc", "nomura", "allianz", "jpm", "taishin", "fsitc", "mega"}
     we archive via zdsetf.com snapshot, which mirrors the official portfolio/PCF
     page (source_url points at capitalfund.com.tw / websys.fsit.com.tw /
     ctbcinvestments.com / nomurafunds.com.tw / etf.allianzgi.com.tw /
-    cathaysite.com.tw / am.jpmorgan.com / tsit.com.tw / fsitc.com.tw /
-    megafunds.com.tw).
+    am.jpmorgan.com / tsit.com.tw / fsitc.com.tw / megafunds.com.tw).
+    Cathay (cathay): try zdsetf first; on failure use official cwapi
+    GetIndexStockWeights (passives like 00881; weights only, synthetic shares).
     """
     stamp = today_taipei().isoformat()
     raw_dir = cfg.raw_dir / etf.ticker
@@ -313,8 +404,25 @@ def fetch_etf_holdings(
         fetch_yuanta_ratio(cfg, etf, path)
         return path, "yuanta"
 
-    # Primary path for capital / fubon / ctbc / nomura / allianz / cathay / jpm / taishin / fsitc / mega: zdsetf mirror (no Excel API).
-    if etf.issuer in ("capital", "fubon", "ctbc", "nomura", "allianz", "cathay", "jpm", "taishin", "fsitc", "mega"):
+    # Cathay: prefer zdsetf when available (actives like 00400A have share counts).
+    # Passives such as 00881 are not on zdsetf → official cwapi GetIndexStockWeights.
+    if etf.issuer == "cathay":
+        path_z = raw_dir / f"{etf.ticker}_{stamp}_zdsetf.json"
+        try:
+            fetch_zdsetf_snapshot(cfg, etf.ticker, path_z)
+            return path_z, "zdsetf"
+        except FetchError as exc:
+            logger.warning(
+                "Cathay zdsetf unavailable for %s (%s); trying official weights",
+                etf.ticker,
+                exc,
+            )
+            path_c = raw_dir / f"{etf.ticker}_{stamp}_cathay.json"
+            fetch_cathay_weights(cfg, etf, path_c)
+            return path_c, "cathay"
+
+    # Primary path for capital / fubon / ctbc / nomura / allianz / jpm / taishin / fsitc / mega: zdsetf mirror (no Excel API).
+    if etf.issuer in ("capital", "fubon", "ctbc", "nomura", "allianz", "jpm", "taishin", "fsitc", "mega"):
         path = raw_dir / f"{etf.ticker}_{stamp}_zdsetf.json"
         fetch_zdsetf_snapshot(cfg, etf.ticker, path)
         return path, "zdsetf"

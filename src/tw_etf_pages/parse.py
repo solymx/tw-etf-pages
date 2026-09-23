@@ -265,6 +265,72 @@ def parse_yuanta_ratio(
     )
 
 
+def parse_cathay_weights(
+    path: Path,
+    ticker: str,
+    policy: PlaceholderPolicy,
+) -> dict[str, Any]:
+    """Parse normalized Cathay cwapi GetIndexStockWeights JSON.
+
+    Expected keys: snapshot_date, holdings[{stock_code,stock_name,shares,weight_pct}],
+    optional source_url / api_url / fund_code / shares_note.
+    Official API discloses weights only; fetch synthesizes shares = weight_pct * 1e6.
+    """
+    data = read_json(path)
+    raw_date = data.get("snapshot_date") or data.get("as_of_date") or data.get("date")
+    if raw_date is None:
+        raise ValueError(f"{path}: missing snapshot_date")
+    ds = str(raw_date).strip().replace("/", "-")
+    if len(ds) == 8 and ds.isdigit():
+        ds = f"{ds[0:4]}-{ds[4:6]}-{ds[6:8]}"
+    as_of = parse_iso_or_slash_date(ds)
+    rows = data.get("holdings") or data.get("stockWeights") or []
+    if not isinstance(rows, list):
+        rows = []
+    holdings = []
+    for h in rows:
+        if not isinstance(h, dict):
+            continue
+        code = (
+            h.get("stock_code")
+            or h.get("stockCode")
+            or h.get("code")
+            or h.get("ticker")
+        )
+        if code is None or str(code).strip() == "":
+            continue
+        code_s = str(code).strip().upper()
+        if not any(ch.isdigit() for ch in code_s):
+            continue
+        name = h.get("stock_name") or h.get("stockName") or h.get("name") or ""
+        weight = parse_weight_pct(
+            h.get("weight_pct", h.get("weights", h.get("weight", 0)))
+        )
+        raw_shares = h.get("shares", h.get("qty"))
+        if raw_shares in (None, ""):
+            shares = int(round(weight * 1_000_000))
+        else:
+            shares = parse_int(raw_shares)
+        holdings.append(_holding(code_s, name, shares, weight, policy))
+    source_url = data.get("source_url") or data.get("official_url") or data.get("url")
+    meta = {
+        "source_url": source_url,
+        "api_url": data.get("api_url"),
+        "fund_code": data.get("fund_code"),
+        "shares_note": data.get("shares_note") or "synthetic_from_weight_pct_x_1e6",
+    }
+    return _snapshot(
+        ticker=ticker,
+        as_of_date=as_of,
+        holdings=holdings,
+        source="cathay",
+        raw_path=path,
+        meta=meta,
+    )
+
+
+
+
 def parse_zdsetf_snapshot(
     path: Path,
     ticker: str,

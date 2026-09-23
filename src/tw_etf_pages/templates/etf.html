@@ -131,7 +131,7 @@
     {% elif issuer == "allianz" %}
     安聯投信無穩定公開 Excel／CSV 下載可供自動化；本站以 zdsetf 鏡像安聯官網投組頁歸檔，歷史天數會隨每日 Actions 累積（異動資料日選單仍最多 10 日）。
     {% elif issuer == "cathay" %}
-    國泰投信無穩定公開 Excel／CSV 下載可供自動化；本站以 zdsetf 鏡像國泰官網投組頁歸檔，歷史天數會隨每日 Actions 累積（異動資料日選單仍最多 10 日）。
+    國泰投信無穩定公開 Excel／CSV；主動檔以 zdsetf 鏡像官網，被動檔（如 00881）改走官網 cwapi 持股權重（股數由權重合成）。歷史天數會隨每日 Actions 累積（異動資料日選單仍最多 10 日）。
     {% elif issuer == "jpm" %}
     摩根投信無穩定公開 Excel／CSV 下載可供自動化；本站以 zdsetf 鏡像摩根官網 PCF／投組歸檔，歷史天數會隨每日 Actions 累積（異動資料日選單仍最多 10 日）。
     {% elif issuer == "taishin" %}
@@ -149,7 +149,7 @@
   {% if not trend.enough_for_intermittent %}
   <div class="empty-box trend-hint">
     目前僅有 {{ trend.day_count }} 日資料：可看股數折線，但「間歇加碼」（買→持平／減→再買）需至少 3 個交易日才能標示。
-    {% if issuer == "uni" %}統一投信無歷史 API，回補不可行；資料會隨每日歸檔成長。{% elif issuer == "capital" %}群益（capital）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "fubon" %}富邦（fubon）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "ctbc" %}中信（ctbc）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "nomura" %}野村（nomura）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "allianz" %}安聯（allianz）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "cathay" %}國泰（cathay）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "jpm" %}摩根（jpm）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "taishin" %}台新（taishin）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "fsitc" %}第一金（fsitc）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "mega" %}兆豐（mega）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% endif %}
+    {% if issuer == "uni" %}統一投信無歷史 API，回補不可行；資料會隨每日歸檔成長。{% elif issuer == "capital" %}群益（capital）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "fubon" %}富邦（fubon）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "ctbc" %}中信（ctbc）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "nomura" %}野村（nomura）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "allianz" %}安聯（allianz）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "cathay" %}國泰（cathay）經 zdsetf 或官網 cwapi 權重，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "jpm" %}摩根（jpm）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "taishin" %}台新（taishin）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "fsitc" %}第一金（fsitc）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "mega" %}兆豐（mega）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% endif %}
   </div>
   {% endif %}
 
@@ -236,7 +236,7 @@
   {% elif issuer == "allianz" %}
   <p class="muted">資料說明：安聯投信（Allianz）無穩定公開 Excel／CSV 下載；本站以 <a href="https://zdsetf.com" rel="noopener">zdsetf.com</a> 鏡像安聯官網投組頁歸檔（source_url 指向 etf.allianzgi.com.tw）。歷史稀疏至 Actions 累積為止；異動資料日選單最多 10 日。目前趨勢可用 {{ trend.day_count }} 日。</p>
   {% elif issuer == "cathay" %}
-  <p class="muted">資料說明：國泰投信（Cathay）無穩定公開 Excel／CSV 下載；本站以 <a href="https://zdsetf.com" rel="noopener">zdsetf.com</a> 鏡像國泰官網投組頁歸檔（source_url 指向 cathaysite.com.tw）。歷史稀疏至 Actions 累積為止；異動資料日選單最多 10 日。目前趨勢可用 {{ trend.day_count }} 日。</p>
+  <p class="muted">資料說明：國泰投信（Cathay）無穩定公開 Excel／CSV；主動檔以 <a href="https://zdsetf.com" rel="noopener">zdsetf.com</a> 鏡像官網；被動檔（如 00881）以官網 cwapi <code>GetIndexStockWeights</code> 歸檔權重（股數為 weight×1e6 合成，非實際持股數）。歷史稀疏至 Actions 累積為止；異動資料日選單最多 10 日。目前趨勢可用 {{ trend.day_count }} 日。</p>
   {% elif issuer == "jpm" %}
   <p class="muted">資料說明：摩根投信（J.P. Morgan AM Taiwan）無穩定公開 Excel／CSV 下載；本站以 <a href="https://zdsetf.com" rel="noopener">zdsetf.com</a> 鏡像摩根官網 PCF／投組歸檔（source_url 指向 am.jpmorgan.com）。zdsetf 權重欄位可能為 null，解析後正規化為 0.0（不臆造權重）。歷史稀疏至 Actions 累積為止；異動資料日選單最多 10 日。目前趨勢可用 {{ trend.day_count }} 日。</p>
   {% elif issuer == "taishin" %}

@@ -145,6 +145,12 @@ etfs:
     fund_code: "00713"
     source_page: "https://www.yuantaetfs.com/product/detail/00713/ratio"
 
+  - ticker: "00881"
+    name: "國泰台灣科技龍頭"
+    issuer: cathay
+    fund_code: "CR"
+    source_page: "https://www.cathaysite.com.tw/ETF/detail/ECR?tab=etf3"
+
 fetch:
   timeout_sec: 60
   retries: 3
