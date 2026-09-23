@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}台灣主動式 ETF 持股異動總覽{% endblock %}
+{% block nav %}
+<nav class="nav">
+  {% for e in etfs %}
+  <a href="{{ e.ticker }}.html">{{ e.ticker }} {{ e.name }}</a>
+  {% endfor %}
+</nav>
+{% endblock %}
+{% block content %}
+<section class="cards">
+  {% for e in etfs %}
+  <article class="card">
+    <h2><a href="{{ e.ticker }}.html">{{ e.ticker }}</a></h2>
+    <p>{{ e.name }}</p>
+    <p class="muted">資料日：{{ e.as_of_date or "尚無快照" }}</p>
+    {% if e.prev_as_of_date %}
+    <p class="muted">對比前一日快照：{{ e.prev_as_of_date }}</p>
+    {% endif %}
+    <p class="tag-row">
+      <span class="badge buy">第一次買 {{ e.summary.first_buy }}</span>
+      <span class="badge inc">加碼 {{ e.summary.increase }}</span>
+      <span class="badge dec">減碼 {{ e.summary.decrease }}</span>
+      <span class="badge exit">全部出清 {{ e.summary.full_exit }}</span>
+    </p>
+    <p class="muted">來源：{{ e.source or "—" }}</p>
+  </article>
+  {% endfor %}
+</section>
+<section>
+  <h2>說明</h2>
+  <ul class="muted">
+    <li>比對鍵為股票代號；增減以<strong>股數</strong>為準（權重僅供參考，會受股價影響）。</li>
+    <li>統一投信檔案中股數 ≤ 1000 且權重 &lt; 0.01% 的占位列會標記並自異動表排除。</li>
+    <li>「連續天數」為相對已歸檔快照的連續加碼／減碼日數。</li>
+  </ul>
+</section>
+{% endblock %}

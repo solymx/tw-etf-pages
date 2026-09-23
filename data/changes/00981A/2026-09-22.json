@@ -1,0 +1,114 @@
+{
+  "etf_ticker": "00981A",
+  "as_of_date": "2026-09-22",
+  "prev_as_of_date": "2026-09-21",
+  "compared_at": "2026-09-23T10:32:20+08:00",
+  "source": "uni_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 5,
+    "decrease": 4,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "4958",
+      "stock_name": "臻鼎-KY",
+      "prev_shares": 2712000,
+      "curr_shares": 3543000,
+      "shares_delta": 831000,
+      "prev_weight_pct": 0.45,
+      "curr_weight_pct": 0.6,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2308",
+      "stock_name": "台達電",
+      "prev_shares": 7240000,
+      "curr_shares": 7420000,
+      "shares_delta": 180000,
+      "prev_weight_pct": 4.75,
+      "curr_weight_pct": 4.86,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6274",
+      "stock_name": "台燿",
+      "prev_shares": 5546000,
+      "curr_shares": 5696000,
+      "shares_delta": 150000,
+      "prev_weight_pct": 2.78,
+      "curr_weight_pct": 2.83,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "prev_shares": 1234000,
+      "curr_shares": 1363000,
+      "shares_delta": 129000,
+      "prev_weight_pct": 0.45,
+      "curr_weight_pct": 0.49,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨*",
+      "prev_shares": 24987000,
+      "curr_shares": 25107000,
+      "shares_delta": 120000,
+      "prev_weight_pct": 4.87,
+      "curr_weight_pct": 4.94,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "3264",
+      "stock_name": "欣銓",
+      "prev_shares": 6628000,
+      "curr_shares": 5182000,
+      "shares_delta": -1446000,
+      "prev_weight_pct": 0.66,
+      "curr_weight_pct": 0.49,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3665",
+      "stock_name": "貿聯-KY",
+      "prev_shares": 4280848,
+      "curr_shares": 3943848,
+      "shares_delta": -337000,
+      "prev_weight_pct": 3.44,
+      "curr_weight_pct": 3.05,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎",
+      "prev_shares": 5656561,
+      "curr_shares": 5582561,
+      "shares_delta": -74000,
+      "prev_weight_pct": 4.25,
+      "curr_weight_pct": 4.07,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6510",
+      "stock_name": "精測",
+      "prev_shares": 446000,
+      "curr_shares": 400000,
+      "shares_delta": -46000,
+      "prev_weight_pct": 0.54,
+      "curr_weight_pct": 0.51,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": []
+}

@@ -1,0 +1,135 @@
+{
+  "etf_ticker": "00403A",
+  "as_of_date": "2026-09-22",
+  "prev_as_of_date": "2026-09-21",
+  "compared_at": "2026-09-23T10:32:20+08:00",
+  "source": "uni_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 5,
+    "decrease": 4,
+    "full_exit": 2
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "prev_shares": 3500000,
+      "curr_shares": 4000000,
+      "shares_delta": 500000,
+      "prev_weight_pct": 0.68,
+      "curr_weight_pct": 0.81,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2308",
+      "stock_name": "台達電",
+      "prev_shares": 2830000,
+      "curr_shares": 2900000,
+      "shares_delta": 70000,
+      "prev_weight_pct": 3.4,
+      "curr_weight_pct": 3.51,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "8996",
+      "stock_name": "高力",
+      "prev_shares": 1580000,
+      "curr_shares": 1625000,
+      "shares_delta": 45000,
+      "prev_weight_pct": 1.52,
+      "curr_weight_pct": 1.71,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2059",
+      "stock_name": "川湖",
+      "prev_shares": 65000,
+      "curr_shares": 75000,
+      "shares_delta": 10000,
+      "prev_weight_pct": 0.53,
+      "curr_weight_pct": 0.61,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3443",
+      "stock_name": "創意",
+      "prev_shares": 645000,
+      "curr_shares": 646000,
+      "shares_delta": 1000,
+      "prev_weight_pct": 3.15,
+      "curr_weight_pct": 3.45,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "prev_shares": 9600000,
+      "curr_shares": 9400000,
+      "shares_delta": -200000,
+      "prev_weight_pct": 15.25,
+      "curr_weight_pct": 14.74,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦",
+      "prev_shares": 2180000,
+      "curr_shares": 2060000,
+      "shares_delta": -120000,
+      "prev_weight_pct": 2.57,
+      "curr_weight_pct": 2.52,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎",
+      "prev_shares": 1987956,
+      "curr_shares": 1867956,
+      "shares_delta": -120000,
+      "prev_weight_pct": 2.74,
+      "curr_weight_pct": 2.52,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2360",
+      "stock_name": "致茂",
+      "prev_shares": 770000,
+      "curr_shares": 680000,
+      "shares_delta": -90000,
+      "prev_weight_pct": 1.17,
+      "curr_weight_pct": 1.06,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": [
+    {
+      "stock_code": "6239",
+      "stock_name": "力成",
+      "prev_shares": 1800000,
+      "curr_shares": 0,
+      "shares_delta": -1800000,
+      "prev_weight_pct": 0.34,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3533",
+      "stock_name": "嘉澤端子工業",
+      "prev_shares": 40000,
+      "curr_shares": 0,
+      "shares_delta": -40000,
+      "prev_weight_pct": 0.04,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+# Daily holdings update + GitHub Pages deploy
+# Schedule: weekdays 18:00 Taiwan (UTC+8) = 10:00 UTC
+name: Update ETF holdings
+
+on:
+  schedule:
+    - cron: "0 10 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write   # commit archived snapshots / change JSON
+  pages: write      # deploy GitHub Pages
+  id-token: write   # OIDC for pages deploy
+
+concurrency:
+  group: pages-update
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e .
+
+      - name: Fetch, archive, compare, render
+        run: python -m tw_etf_pages run
+        # Retries are inside the Python client; issuer WAF may still fail —
+        # fallback to zdsetf.com is enabled unless --no-fallback.
+
+      - name: Commit data snapshots (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/snapshots data/changes data/last_run.json site
+          if git diff --staged --quiet; then
+            echo "No data/site changes to commit"
+          else
+            git commit -m "chore: update ETF holdings snapshots $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.DS_Store
+.env
+*.log
+data/raw/*
+!data/raw/.gitkeep
+# Keep archived snapshots and changes in git for history / Pages rebuild
+src/*.egg-info/
+*.egg-info/

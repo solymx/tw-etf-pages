@@ -1,0 +1,113 @@
+# tw-etf-pages
+
+台灣**主動式 ETF**每日**持股異動**靜態報告（非股價）。
+
+觀察清單：`00981A`、`00988A`、`00991A`、`00403A`。
+
+每個交易日對每檔 ETF，與**前一份已歸檔快照**比較股數，產出：
+
+1. **第一次買**（新建倉）
+2. **加碼**（含連續加碼天數）
+3. **減碼**（含連續減碼天數）
+4. **全部出清**
+
+靜態 HTML 透過 **GitHub Pages** 發布；持股 JSON 快照自行歸檔於 `data/snapshots/`。
+
+---
+
+## 快速開始（本機離線 dry-run）
+
+不需網路；使用 `samples/` 內已下載的發行人 Excel：
+
+```bash
+cd tw-etf-pages
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install -e .
+python -m tw_etf_pages dry-run
+# 或：./scripts/dry_run.sh
+```
+
+產出：`site/index.html` 與各檔 `site/{TICKER}.html`。
+
+線上抓取（需能連到投信官網）：
+
+```bash
+python -m tw_etf_pages run
+```
+
+僅依既有 `data/` 重繪頁面：
+
+```bash
+python -m tw_etf_pages render
+```
+
+---
+
+## 如何 Fork 並啟用 GitHub Pages
+
+1. Fork（或複製）本 repo，保持公開（發行人 endpoints 無需密鑰）。
+2. **Settings → Pages → Build and deployment → Source：GitHub Actions**。
+3. 首次可到 **Actions → Update ETF holdings → Run workflow** 手動觸發。
+4. Workflow 會：安裝依賴 → `python -m tw_etf_pages run` → commit `data/` 與 `site/` → 以 `actions/upload-pages-artifact` + `actions/deploy-pages` 部署。
+5. 權限已在 `.github/workflows/update.yml` 宣告：`contents: write`、`pages: write`、`id-token: write`。若 org 限制 Actions 權限，請在 repo Settings → Actions → General 允許 read/write。
+
+排程：週一至週五 **台灣時間 18:00**（cron `0 10 * * 1-5` UTC），另支援 `workflow_dispatch`。
+
+---
+
+## 變更觀察清單
+
+編輯根目錄 [`config.yaml`](config.yaml)：
+
+```yaml
+etfs:
+  - ticker: "00981A"
+    name: "主動統一台股增長"
+    issuer: uni          # uni | fh
+    fund_code: "49YTW"   # 統一 fundCode 或復華 ETF23
+    source_page: "https://..."
+```
+
+- 統一投信：`issuer: uni`，`fund_code` 為 ezmoney 的 `fundCode`。
+- 復華投信：`issuer: fh`，`fund_code` 為路徑中的產品碼（本專案為 `ETF23`）。
+
+---
+
+## 資料來源
+
+| 優先 | 來源 | 說明 |
+|------|------|------|
+| 主 | 統一 ezmoney `AssetExcelNPOI?fundCode=` | 需先 GET 官網取得 WAF cookie；**僅最新**，本專案自行 archive |
+| 主 | 復華 `api/assetsExcel/ETF23/{YYYYMMDD}` | 無需登入；可依日期取歷史；無資料時回 JSON |
+| 備 | [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` | 第三方 JSON；官方失敗時 fallback |
+
+比對規則：
+
+- 鍵：`stock_code`；數量用 **shares（股數）**，不用權重。
+- **占位列政策（預設）**：`shares ≤ 1000` **且** `weight_pct < 0.01` 視為占位 → 快照仍保留並標記 `is_placeholder`，但**不進入**四類異動表。可在 `config.yaml` 的 `placeholder` 調整。
+- **連續天數**：回溯已歸檔快照，計算同一代號連續加碼／減碼的日數。
+- 時區：`Asia/Taipei`。
+
+研究紀錄見姊妹目錄調查報告（本機開發用）。
+
+---
+
+## 專案結構
+
+```
+config.yaml                 # 觀察清單與占位政策
+src/tw_etf_pages/           # fetch / parse / compare / render
+samples/                    # 離線單元測試與 dry-run 用 Excel
+data/snapshots/{TICKER}/    # 日快照 JSON
+data/changes/{TICKER}/      # 異動報告 JSON
+site/                       # GitHub Pages 靜態輸出
+.github/workflows/update.yml
+```
+
+---
+
+## 授權
+
+MIT — 見 [LICENSE](LICENSE)。持股資料版權屬各發行人；本專案僅做公開揭露內容之歸檔與呈現。

@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}{{ ticker }} {{ name }} 持股異動{% endblock %}
+{% block heading %}{{ ticker }} {{ name }}{% endblock %}
+{% block subtitle %}
+資料日 <strong>{{ as_of_date or "—" }}</strong>
+{% if prev_as_of_date %}／對比 <strong>{{ prev_as_of_date }}</strong>{% endif %}
+／來源 {{ source or "—" }}
+{% endblock %}
+{% block nav %}
+<nav class="nav">
+  <a href="index.html">← 總覽</a>
+  {% for e in all_etfs %}
+  <a href="{{ e.ticker }}.html"{% if e.ticker == ticker %} style="font-weight:700"{% endif %}>{{ e.ticker }}</a>
+  {% endfor %}
+</nav>
+{% endblock %}
+{% block content %}
+{% if not report %}
+<p class="empty">尚無可對比的前後日快照。首次歸檔後，下一營業日才會出現異動表。</p>
+{% else %}
+<p class="tag-row">
+  <span class="badge buy">第一次買 {{ report.summary.first_buy }}</span>
+  <span class="badge inc">加碼 {{ report.summary.increase }}</span>
+  <span class="badge dec">減碼 {{ report.summary.decrease }}</span>
+  <span class="badge exit">全部出清 {{ report.summary.full_exit }}</span>
+</p>
+
+{% macro change_table(rows, show_streak) %}
+{% if rows %}
+<table>
+  <thead>
+    <tr>
+      <th>代號</th>
+      <th>名稱</th>
+      <th class="num">前股數</th>
+      <th class="num">今股數</th>
+      <th class="num">增減</th>
+      {% if show_streak %}<th class="num">連續天數</th>{% endif %}
+      <th class="num">前權重%</th>
+      <th class="num">今權重%</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for r in rows %}
+    <tr>
+      <td>{{ r.stock_code }}</td>
+      <td>{{ r.stock_name }}</td>
+      <td class="num">{{ "{:,}".format(r.prev_shares) }}</td>
+      <td class="num">{{ "{:,}".format(r.curr_shares) }}</td>
+      <td class="num">{{ "{:+,}".format(r.shares_delta) }}</td>
+      {% if show_streak %}<td class="num">{{ r.streak_days }}</td>{% endif %}
+      <td class="num">{% if r.prev_weight_pct is not none %}{{ "%.4f"|format(r.prev_weight_pct) }}{% else %}—{% endif %}</td>
+      <td class="num">{% if r.curr_weight_pct is not none %}{{ "%.4f"|format(r.curr_weight_pct) }}{% else %}—{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p class="empty">本日無此類異動。</p>
+{% endif %}
+{% endmacro %}
+
+<section class="section-buy">
+  <h3>1. 第一次買（新建倉）</h3>
+  {{ change_table(report.first_buy, false) }}
+</section>
+<section class="section-inc">
+  <h3>2. 加碼（含連續加碼天數）</h3>
+  {{ change_table(report.increase, true) }}
+</section>
+<section class="section-dec">
+  <h3>3. 減碼（含連續減碼天數）</h3>
+  {{ change_table(report.decrease, true) }}
+</section>
+<section class="section-exit">
+  <h3>4. 全部出清</h3>
+  {{ change_table(report.full_exit, false) }}
+</section>
+{% endif %}
+
+<section>
+  <h2>持股快照摘要</h2>
+  {% if snapshot %}
+  <p class="muted">
+    持股檔數 {{ snapshot.holdings_count }}
+    （占位 {{ snapshot.placeholder_count }}）／
+    原始檔雜湊 {{ snapshot.raw_file_hash[:12] }}…
+  </p>
+  {% if source_page %}
+  <p class="muted">發行人頁面：<a href="{{ source_page }}" rel="noopener">{{ source_page }}</a></p>
+  {% endif %}
+  {% else %}
+  <p class="empty">尚無快照。</p>
+  {% endif %}
+</section>
+{% endblock %}
+{% block footer_extra %}
+<p>占位列政策：股數 ≤ {{ ph_max_shares }} 且權重 &lt; {{ ph_max_weight }}% 自異動分類排除（快照仍保留並標記）。</p>
+{% endblock %}

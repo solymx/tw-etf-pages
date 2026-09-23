@@ -1,0 +1,47 @@
+# Taiwan active ETF watchlist — edit this file to add/remove tickers.
+timezone: Asia/Taipei
+
+# Placeholder filter (Uni issuer noise): exclude from change categories when
+# shares <= max_shares AND weight_pct < max_weight_pct. Snapshot JSON still
+# retains full holdings with is_placeholder tagged.
+placeholder:
+  max_shares: 1000
+  max_weight_pct: 0.01
+  # Policy: exclude from first-buy / increase / decrease / full-exit tables
+  exclude_from_changes: true
+
+etfs:
+  - ticker: "00981A"
+    name: "主動統一台股增長"
+    issuer: uni
+    fund_code: "49YTW"
+    source_page: "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=49YTW"
+  - ticker: "00988A"
+    name: "主動統一全球創新"
+    issuer: uni
+    fund_code: "61YTW"
+    source_page: "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=61YTW"
+  - ticker: "00991A"
+    name: "主動復華未來50"
+    issuer: fh
+    fund_code: "ETF23"
+    source_page: "https://www.fhtrust.com.tw/ETF/etf_detail/ETF23"
+  - ticker: "00403A"
+    name: "主動統一升級50"
+    issuer: uni
+    fund_code: "63YTW"
+    source_page: "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=63YTW"
+
+fetch:
+  timeout_sec: 60
+  retries: 3
+  retry_backoff_sec: 2
+  user_agent: "tw-etf-pages/1.0 (+https://github.com/qsweb3/tw-etf-pages; public ETF holdings archive)"
+
+paths:
+  data_dir: data
+  snapshots_dir: data/snapshots
+  changes_dir: data/changes
+  raw_dir: data/raw
+  site_dir: site
+  samples_dir: samples

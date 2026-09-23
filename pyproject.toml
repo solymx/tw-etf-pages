@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tw-etf-pages"
+version = "1.0.0"
+description = "Taiwan active ETF daily holdings change reports (static GitHub Pages)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+  "openpyxl>=3.1.0",
+  "PyYAML>=6.0",
+  "Jinja2>=3.1.0",
+  "requests>=2.31.0",
+]
+
+[project.scripts]
+tw-etf-pages = "tw_etf_pages.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+tw_etf_pages = ["templates/*.html"]
