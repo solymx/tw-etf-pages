@@ -48,6 +48,167 @@
     setActive();
   }
 
+  /* ---- 異動資料日切換 ---- */
+  function formatLots(shares) {
+    if (shares == null) return '—';
+    var lots = Number(shares) / 1000;
+    if (Math.abs(lots - Math.round(lots)) < 1e-9) {
+      return Math.round(lots).toLocaleString('zh-TW') + ' 張';
+    }
+    var s = lots.toLocaleString('zh-TW', { maximumFractionDigits: 3 });
+    return s + ' 張';
+  }
+
+  function formatWeight(v) {
+    if (v == null || v === '') return null;
+    return Number(v).toFixed(2);
+  }
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function rowHtml(r) {
+    var changed = !!r.changed;
+    var cls = changed ? 'changed' : 'unchanged hidden';
+    var w = formatWeight(r.curr_weight_pct);
+    var weightCell = '—';
+    if (w != null) {
+      weightCell = '<strong>' + w + '</strong>';
+      var wd = r.weight_delta;
+      if (changed && wd != null && Number(wd) !== 0) {
+        var up = Number(wd) > 0;
+        var sign = up ? '+' : '';
+        weightCell += '<br /><span class="' + (up ? 'delta-up' : 'delta-down') + '">'
+          + (up ? '🔺' : '🟢') + sign + Number(wd).toFixed(2) + '</span>';
+      }
+    }
+    var status = r.status || {};
+    return '<tr class="' + cls + '">'
+      + '<td>' + escapeHtml(r.stock_code) + '</td>'
+      + '<td>' + escapeHtml(r.stock_name) + '</td>'
+      + '<td class="num">' + formatLots(r.curr_shares) + '</td>'
+      + '<td class="num">' + weightCell + '</td>'
+      + '<td><span class="' + escapeHtml(status.css || '') + '">'
+      + escapeHtml(status.label || '') + '</span></td>'
+      + '</tr>';
+  }
+
+  function applyChangeDay(root, entry) {
+    if (!entry) return;
+    var asOf = qs('[data-as-of]', root) || qs('[data-as-of]');
+    var prev = qs('[data-prev-as-of]', root) || qs('[data-prev-as-of]');
+    var prevWrap = qs('[data-prev-wrap]', root) || qs('[data-prev-wrap]');
+    var source = qs('[data-source]', root) || qs('[data-source]');
+    // Header subtitle may live outside root — update page-level meta too
+    qsa('[data-as-of]').forEach(function (el) { el.textContent = entry.as_of_date || '—'; });
+    if (entry.prev_as_of_date) {
+      qsa('[data-prev-wrap]').forEach(function (el) {
+        el.innerHTML = '／對比 <strong data-prev-as-of>' + escapeHtml(entry.prev_as_of_date) + '</strong>';
+        el.classList.remove('hidden');
+      });
+    } else {
+      qsa('[data-prev-wrap]').forEach(function (el) {
+        el.innerHTML = '';
+      });
+    }
+    if (source || qs('[data-source]')) {
+      qsa('[data-source]').forEach(function (el) {
+        el.textContent = entry.source || '—';
+      });
+    }
+
+    var summary = entry.summary || {};
+    qsa('[data-chip]', root).forEach(function (el) {
+      var key = el.getAttribute('data-chip');
+      el.textContent = String(summary[key] != null ? summary[key] : 0);
+    });
+
+    var countEl = qs('[data-changed-count]', root);
+    if (countEl) countEl.textContent = String(entry.changed_count || 0);
+
+    var tbody = qs('[data-change-tbody]', root);
+    if (tbody) {
+      tbody.innerHTML = (entry.rows || []).map(rowHtml).join('');
+    }
+
+    var noCh = qs('[data-no-changes]', root);
+    if (noCh) {
+      noCh.classList.toggle('hidden', (entry.changed_count || 0) !== 0);
+    }
+
+    // Reset filter to "changed"
+    var group = qs('[data-filter-group]', root);
+    if (group) {
+      qsa('[data-filter]', group).forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-filter') === 'changed');
+      });
+      var table = qs('[data-etf-table]', root);
+      if (table) {
+        qsa('tr.unchanged', table).forEach(function (row) {
+          row.classList.add('hidden');
+        });
+      }
+    }
+  }
+
+  function initDateSwitcher() {
+    qsa('[data-change-history-root]').forEach(function (root) {
+      var dataEl = qs('[data-change-history-json]', root);
+      var select = qs('[data-date-select]', root);
+      if (!dataEl || !select) return;
+      var history;
+      try {
+        history = JSON.parse(dataEl.textContent);
+      } catch (err) {
+        console.error('change history JSON parse failed', err);
+        return;
+      }
+      if (!history || !history.length) return;
+      var byDate = {};
+      history.forEach(function (h) { byDate[h.as_of_date] = h; });
+
+      function show(dateStr) {
+        var entry = byDate[dateStr];
+        if (!entry) return;
+        applyChangeDay(root, entry);
+        try {
+          var url = new URL(window.location.href);
+          url.searchParams.set('date', dateStr);
+          window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+        } catch (e) { /* ignore */ }
+      }
+
+      select.addEventListener('change', function () {
+        show(select.value);
+      });
+
+      var want = null;
+      try {
+        want = new URLSearchParams(window.location.search).get('date');
+      } catch (e) { want = null; }
+      if (want && byDate[want]) {
+        select.value = want;
+      }
+      show(select.value);
+    });
+
+    // Index: navigate to ETF detail with ?date=
+    qsa('[data-index-date-nav]').forEach(function (sel) {
+      sel.addEventListener('change', function () {
+        var ticker = sel.getAttribute('data-index-date-nav');
+        var d = sel.value;
+        if (ticker && d) {
+          window.location.href = ticker + '.html?date=' + encodeURIComponent(d);
+        }
+      });
+    });
+  }
+
   /* ---- 近20天持股趨勢 (Chart.js) ---- */
   function sharesToLots(v) {
     if (v == null) return null;
@@ -242,11 +403,14 @@
     setTimeout(function () { whenChartReady(fn, tries - 1); }, 50);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function () {
-      whenChartReady(initTrend);
-    });
-  } else {
+  function boot() {
+    initDateSwitcher();
     whenChartReady(initTrend);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
   }
 })();

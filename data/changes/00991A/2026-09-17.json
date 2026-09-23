@@ -1,0 +1,76 @@
+{
+  "etf_ticker": "00991A",
+  "as_of_date": "2026-09-17",
+  "prev_as_of_date": "2026-09-16",
+  "compared_at": "2026-09-23T11:16:31+08:00",
+  "source": "fh_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 1,
+    "increase": 1,
+    "decrease": 2,
+    "full_exit": 1
+  },
+  "first_buy": [
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞塑膠",
+      "prev_shares": 0,
+      "curr_shares": 6700000,
+      "shares_delta": 6700000,
+      "prev_weight_pct": null,
+      "curr_weight_pct": 2.099,
+      "streak_days": 1
+    }
+  ],
+  "increase": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯華電子",
+      "prev_shares": 9000,
+      "curr_shares": 10400000,
+      "shares_delta": 10391000,
+      "prev_weight_pct": 0.002,
+      "curr_weight_pct": 2.037,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎科技",
+      "prev_shares": 1500020,
+      "curr_shares": 1150020,
+      "shares_delta": -350000,
+      "prev_weight_pct": 4.252,
+      "curr_weight_pct": 3.26,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦科技",
+      "prev_shares": 1100000,
+      "curr_shares": 850000,
+      "shares_delta": -250000,
+      "prev_weight_pct": 2.65,
+      "curr_weight_pct": 2.031,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": [
+    {
+      "stock_code": "6274",
+      "stock_name": "台燿科技",
+      "prev_shares": 1400000,
+      "curr_shares": 0,
+      "shares_delta": -1400000,
+      "prev_weight_pct": 2.594,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    }
+  ]
+}

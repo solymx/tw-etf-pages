@@ -168,6 +168,35 @@ a:hover { text-decoration: underline; }
   color: var(--muted);
 }
 
+.date-picker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.65rem;
+  margin: 0.55rem 0 0.35rem;
+  font-size: 0.9rem;
+}
+.date-picker label {
+  font-weight: 600;
+  color: var(--banner);
+}
+.date-select {
+  font: inherit;
+  padding: 0.32rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  min-width: 12rem;
+  max-width: 100%;
+}
+.date-select:focus {
+  outline: 2px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 1px;
+}
+.date-count { font-size: 0.82rem; }
+.hidden { display: none !important; }
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;

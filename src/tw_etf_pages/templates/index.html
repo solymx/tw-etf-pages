@@ -97,6 +97,17 @@
         {% if b.holdings_count is not none %}／持股檔數 {{ b.holdings_count }}{% endif %}
       </div>
       <div class="etf-meta na">規模／申贖／淨買超：尚無資料</div>
+      {% if b.available_dates %}
+      <div class="date-picker">
+        <label for="idx-date-{{ b.ticker }}">異動資料日</label>
+        <select id="idx-date-{{ b.ticker }}" class="date-select" data-index-date-nav="{{ b.ticker }}" aria-label="{{ b.ticker }} 異動資料日">
+          {% for d in b.available_dates %}
+          <option value="{{ d }}"{% if loop.first %} selected{% endif %}>{{ d }}</option>
+          {% endfor %}
+        </select>
+        <span class="muted date-count">共 {{ b.available_dates|length }} 日 · 選取後開啟明細頁</span>
+      </div>
+      {% endif %}
       <div class="summary-chips">
         <span class="chip buy">新建倉 {{ b.summary.first_buy }}</span>
         <span class="chip inc">加碼 {{ b.summary.increase }}</span>

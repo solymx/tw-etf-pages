@@ -1,0 +1,43 @@
+{
+  "etf_ticker": "00991A",
+  "as_of_date": "2026-08-28",
+  "prev_as_of_date": "2026-08-27",
+  "compared_at": "2026-09-23T11:16:31+08:00",
+  "source": "fh_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 0,
+    "decrease": 2,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [],
+  "decrease": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台灣積體",
+      "prev_shares": 4200000,
+      "curr_shares": 4000000,
+      "shares_delta": -200000,
+      "prev_weight_pct": 11.736,
+      "curr_weight_pct": 11.3,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6223",
+      "stock_name": "旺矽科技",
+      "prev_shares": 460000,
+      "curr_shares": 380000,
+      "shares_delta": -80000,
+      "prev_weight_pct": 2.715,
+      "curr_weight_pct": 2.231,
+      "streak_days": 2
+    }
+  ],
+  "full_exit": []
+}

@@ -13,7 +13,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from .compare import list_snapshot_dates, load_snapshot
 from .config import AppConfig
 from .trend import build_holdings_trend
-from .utils import now_taipei_iso, read_json
+from .utils import now_taipei_iso, read_json, write_json
 
 logger = logging.getLogger(__name__)
 
@@ -74,6 +74,83 @@ def latest_snapshot(cfg: AppConfig, ticker: str) -> dict[str, Any] | None:
     if not dates:
         return None
     return load_snapshot(cfg.snapshots_dir, ticker, dates[-1])
+
+
+def list_change_dates(changes_dir: Path, ticker: str) -> list[date]:
+    """Return archived change-report dates ascending."""
+    d = changes_dir / ticker
+    if not d.is_dir():
+        return []
+    dates: list[date] = []
+    for p in d.glob("*.json"):
+        try:
+            dates.append(date.fromisoformat(p.stem))
+        except ValueError:
+            continue
+    return sorted(dates)
+
+
+def load_change_report(changes_dir: Path, ticker: str, as_of: date) -> dict[str, Any]:
+    return read_json(changes_dir / ticker / f"{as_of.isoformat()}.json")
+
+
+def ensure_change_reports(cfg: AppConfig, ticker: str) -> int:
+    """
+    Fill missing data/changes/{ticker}/{date}.json by comparing consecutive
+    archived snapshots. Existing reports are left untouched. Returns count written.
+    """
+    from .compare import compare_snapshots, save_change_report
+
+    dates = list_snapshot_dates(cfg.snapshots_dir, ticker)
+    if len(dates) < 2:
+        return 0
+    written = 0
+    for i in range(1, len(dates)):
+        prev_d, curr_d = dates[i - 1], dates[i]
+        out = cfg.changes_dir / ticker / f"{curr_d.isoformat()}.json"
+        if out.is_file():
+            continue
+        prev = load_snapshot(cfg.snapshots_dir, ticker, prev_d)
+        curr = load_snapshot(cfg.snapshots_dir, ticker, curr_d)
+        report = compare_snapshots(prev, curr, cfg)
+        save_change_report(cfg, report)
+        written += 1
+        logger.info("Backfilled change report %s %s vs %s", ticker, curr_d, prev_d)
+    return written
+
+
+def build_change_history(cfg: AppConfig, ticker: str) -> list[dict[str, Any]]:
+    """
+    Load every change report under data/changes/{ticker}/ (newest first).
+    Each entry includes pre-built table rows (with matching snapshot holdings
+    when available) for client-side date switching.
+    """
+    dates = list_change_dates(cfg.changes_dir, ticker)
+    history: list[dict[str, Any]] = []
+    for as_of in reversed(dates):  # newest first
+        report = load_change_report(cfg.changes_dir, ticker, as_of)
+        snap_path = cfg.snapshots_dir / ticker / f"{as_of.isoformat()}.json"
+        snap = load_snapshot(cfg.snapshots_dir, ticker, as_of) if snap_path.is_file() else None
+        rows = build_etf_table_rows(report, snap)
+        summary = report.get(
+            "summary",
+            {"first_buy": 0, "increase": 0, "decrease": 0, "full_exit": 0},
+        )
+        history.append(
+            {
+                "as_of_date": report.get("as_of_date") or as_of.isoformat(),
+                "prev_as_of_date": report.get("prev_as_of_date"),
+                "source": report.get("source"),
+                "summary": summary,
+                "changed_count": sum(1 for r in rows if r["changed"]),
+                "rows": rows,
+                "first_buy": report.get("first_buy", []),
+                "increase": report.get("increase", []),
+                "decrease": report.get("decrease", []),
+                "full_exit": report.get("full_exit", []),
+            }
+        )
+    return history
 
 
 def _status_for_change(kind: str, streak: int, shares_delta: int) -> dict[str, str]:
@@ -323,14 +400,35 @@ def render_site(cfg: AppConfig) -> Path:
     etf_blocks: list[dict[str, Any]] = []
     index_rows: list[dict[str, Any]] = []
 
+    # Ensure consecutive snapshot pairs have change JSON (fills gaps e.g. FH backfill)
+    data_out = site / "data"
+    data_out.mkdir(parents=True, exist_ok=True)
+
     for etf in cfg.etfs:
+        n_backfill = ensure_change_reports(cfg, etf.ticker)
+        if n_backfill:
+            logger.info("%s: backfilled %d change report(s)", etf.ticker, n_backfill)
+
         snap = latest_snapshot(cfg, etf.ticker)
-        report = latest_change_report(cfg, etf.ticker)
+        change_history = build_change_history(cfg, etf.ticker)
+        report = None
+        if change_history:
+            latest_d = date.fromisoformat(change_history[0]["as_of_date"])
+            report = load_change_report(cfg.changes_dir, etf.ticker, latest_d)
         summary = {"first_buy": 0, "increase": 0, "decrease": 0, "full_exit": 0}
         if report:
             summary = report.get("summary", summary)
-        rows = build_etf_table_rows(report, snap)
-        changed_count = sum(1 for r in rows if r["changed"])
+        rows = (
+            change_history[0]["rows"]
+            if change_history
+            else build_etf_table_rows(report, snap)
+        )
+        changed_count = (
+            change_history[0]["changed_count"]
+            if change_history
+            else sum(1 for r in rows if r["changed"])
+        )
+        available_dates = [h["as_of_date"] for h in change_history]
         trend = build_holdings_trend(
             cfg.snapshots_dir, etf.ticker, cfg.placeholder
         )
@@ -349,6 +447,8 @@ def render_site(cfg: AppConfig) -> Path:
             "changed_count": changed_count,
             "holdings_count": (snap or {}).get("holdings_count"),
             "trend": trend,
+            "change_history": change_history,
+            "available_dates": available_dates,
         }
         etf_blocks.append(block)
         index_rows.append(
@@ -359,7 +459,18 @@ def render_site(cfg: AppConfig) -> Path:
                 "prev_as_of_date": block["prev_as_of_date"],
                 "source": block["source"],
                 "summary": summary,
+                "available_dates": available_dates,
             }
+        )
+
+        # JSON asset for Pages date menu / external reuse
+        write_json(
+            data_out / f"{etf.ticker}-changes.json",
+            {
+                "etf_ticker": etf.ticker,
+                "dates": available_dates,
+                "history": change_history,
+            },
         )
 
         html = env.get_template("etf.html").render(
@@ -376,6 +487,8 @@ def render_site(cfg: AppConfig) -> Path:
             changed_count=changed_count,
             summary=summary,
             trend=trend,
+            change_history=change_history,
+            available_dates=available_dates,
             all_etfs=all_etfs_meta,
             generated_at=generated_at,
             ph_max_shares=cfg.placeholder.max_shares,

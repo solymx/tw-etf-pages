@@ -1,0 +1,95 @@
+{
+  "etf_ticker": "00991A",
+  "as_of_date": "2026-09-02",
+  "prev_as_of_date": "2026-09-01",
+  "compared_at": "2026-09-23T11:16:31+08:00",
+  "source": "fh_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 1,
+    "increase": 2,
+    "decrease": 4,
+    "full_exit": 0
+  },
+  "first_buy": [
+    {
+      "stock_code": "3008",
+      "stock_name": "大立光電",
+      "prev_shares": 0,
+      "curr_shares": 1000,
+      "shares_delta": 1000,
+      "prev_weight_pct": null,
+      "curr_weight_pct": 0.01,
+      "streak_days": 1
+    }
+  ],
+  "increase": [
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎科技",
+      "prev_shares": 580000,
+      "curr_shares": 1730020,
+      "shares_delta": 1150020,
+      "prev_weight_pct": 5.458,
+      "curr_weight_pct": 5.596,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "5274",
+      "stock_name": "信驊科技",
+      "prev_shares": 120500,
+      "curr_shares": 140500,
+      "shares_delta": 20000,
+      "prev_weight_pct": 2.489,
+      "curr_weight_pct": 3.086,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "6274",
+      "stock_name": "台燿科技",
+      "prev_shares": 2000000,
+      "curr_shares": 1800000,
+      "shares_delta": -200000,
+      "prev_weight_pct": 3.499,
+      "curr_weight_pct": 3.145,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦科技",
+      "prev_shares": 1600000,
+      "curr_shares": 1450000,
+      "shares_delta": -150000,
+      "prev_weight_pct": 4.257,
+      "curr_weight_pct": 3.846,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "8299",
+      "stock_name": "群聯電子",
+      "prev_shares": 880000,
+      "curr_shares": 780000,
+      "shares_delta": -100000,
+      "prev_weight_pct": 2.256,
+      "curr_weight_pct": 1.996,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "7769",
+      "stock_name": "鴻勁精密",
+      "prev_shares": 300000,
+      "curr_shares": 280000,
+      "shares_delta": -20000,
+      "prev_weight_pct": 2.125,
+      "curr_weight_pct": 1.981,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": []
+}

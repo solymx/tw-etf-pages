@@ -43,6 +43,8 @@ jobs:
         # Retries are inside the Python client; issuer WAF may still fail —
         # fallback to zdsetf.com is enabled unless --no-fallback.
 
+      # Archive of record: lightweight holdings JSON + per-day change reports.
+      # data/raw Excel stays gitignored to avoid binary bloat.
       - name: Commit data snapshots (if changed)
         run: |
           git config user.name "github-actions[bot]"

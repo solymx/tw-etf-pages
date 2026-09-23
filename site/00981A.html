@@ -37,9 +37,11 @@
       <header class="page-header">
         <h1>00981A 主動統一台股增長</h1>
         <p class="muted">
-資料日 <strong>2026-09-22</strong>
-／對比 <strong>2026-09-21</strong>
-／來源 uni_excel
+<span data-date-meta>
+資料日 <strong data-as-of>2026-09-22</strong>
+<span data-prev-wrap>／對比 <strong data-prev-as-of>2026-09-21</strong></span>
+／來源 <span data-source>uni_excel</span>
+</span>
 </p>
         
 <nav class="nav-inline">
@@ -57,21 +59,34 @@
 
       </header>
       
-<section class="etf-block">
+<section class="etf-block" data-change-history-root data-ticker="00981A">
   <div class="etf-head" id="act_00981A">
     <h3>📊 00981A 主動統一台股增長</h3>
     <div class="etf-meta na">規模／申贖／淨買超：尚無資料</div>
-    <div class="summary-chips">
-      <span class="chip buy">新建倉 0</span>
-      <span class="chip inc">加碼 5</span>
-      <span class="chip dec">減碼 4</span>
-      <span class="chip exit">全部出清 0</span>
+    
+    <div class="date-picker">
+      <label for="date-select-00981A">異動資料日</label>
+      <select id="date-select-00981A" class="date-select" data-date-select aria-label="選擇異動資料日">
+        
+        <option value="2026-09-22" selected>
+          2026-09-22（對比 2026-09-21）
+        </option>
+        
+      </select>
+      <span class="muted date-count">共 1 個可對比日</span>
+    </div>
+    
+    <div class="summary-chips" data-summary-chips>
+      <span class="chip buy">新建倉 <span data-chip="first_buy">0</span></span>
+      <span class="chip inc">加碼 <span data-chip="increase">5</span></span>
+      <span class="chip dec">減碼 <span data-chip="decrease">4</span></span>
+      <span class="chip exit">全部出清 <span data-chip="full_exit">0</span></span>
     </div>
   </div>
 
   
   <div class="toolbar" data-filter-group="00981A">
-    <button type="button" class="btn-toggle active" data-filter="changed">只看異動（9）</button>
+    <button type="button" class="btn-toggle active" data-filter="changed">只看異動（<span data-changed-count>9</span>）</button>
     <button type="button" class="btn-toggle" data-filter="all">全部持股</button>
   </div>
   <div class="table-wrap">
@@ -85,7 +100,7 @@
           <th>變動狀態</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody data-change-tbody>
         
         <tr class="changed">
           <td>4958</td>
@@ -577,6 +592,8 @@
       </tbody>
     </table>
   </div>
+  <div class="empty-box hidden" data-no-changes>本日無股數異動（已排除占位列）。</div>
+  <script type="application/json" data-change-history-json>[{"as_of_date": "2026-09-22", "changed_count": 9, "decrease": [{"curr_shares": 5182000, "curr_weight_pct": 0.49, "prev_shares": 6628000, "prev_weight_pct": 0.66, "shares_delta": -1446000, "stock_code": "3264", "stock_name": "\u6b23\u9293", "streak_days": 1}, {"curr_shares": 3943848, "curr_weight_pct": 3.05, "prev_shares": 4280848, "prev_weight_pct": 3.44, "shares_delta": -337000, "stock_code": "3665", "stock_name": "\u8cbf\u806f-KY", "streak_days": 1}, {"curr_shares": 5582561, "curr_weight_pct": 4.07, "prev_shares": 5656561, "prev_weight_pct": 4.25, "shares_delta": -74000, "stock_code": "6669", "stock_name": "\u7def\u7a4e", "streak_days": 1}, {"curr_shares": 400000, "curr_weight_pct": 0.51, "prev_shares": 446000, "prev_weight_pct": 0.54, "shares_delta": -46000, "stock_code": "6510", "stock_name": "\u7cbe\u6e2c", "streak_days": 1}], "first_buy": [], "full_exit": [], "increase": [{"curr_shares": 3543000, "curr_weight_pct": 0.6, "prev_shares": 2712000, "prev_weight_pct": 0.45, "shares_delta": 831000, "stock_code": "4958", "stock_name": "\u81fb\u9f0e-KY", "streak_days": 1}, {"curr_shares": 7420000, "curr_weight_pct": 4.86, "prev_shares": 7240000, "prev_weight_pct": 4.75, "shares_delta": 180000, "stock_code": "2308", "stock_name": "\u53f0\u9054\u96fb", "streak_days": 1}, {"curr_shares": 5696000, "curr_weight_pct": 2.83, "prev_shares": 5546000, "prev_weight_pct": 2.78, "shares_delta": 150000, "stock_code": "6274", "stock_name": "\u53f0\u71ff", "streak_days": 1}, {"curr_shares": 1363000, "curr_weight_pct": 0.49, "prev_shares": 1234000, "prev_weight_pct": 0.45, "shares_delta": 129000, "stock_code": "2368", "stock_name": "\u91d1\u50cf\u96fb", "streak_days": 1}, {"curr_shares": 25107000, "curr_weight_pct": 4.94, "prev_shares": 24987000, "prev_weight_pct": 4.87, "shares_delta": 120000, "stock_code": "2327", "stock_name": "\u570b\u5de8*", "streak_days": 1}], "prev_as_of_date": "2026-09-21", "rows": [{"change_kind": "increase", "changed": true, "curr_shares": 3543000, "curr_weight_pct": 0.6, "prev_shares": 2712000, "prev_weight_pct": 0.45, "shares_delta": 831000, "status": {"css": "status-inc", "kind": "increase", "label": "\u52a0\u78bc(\u90231\u5929 / +831\u5f35)", "short": "\u52a0\u78bc(\u90231\u5929)", "streak_text": "\u90231\u8cb7"}, "stock_code": "4958", "stock_name": "\u81fb\u9f0e-KY", "weight_delta": 0.14999999999999997}, {"change_kind": "increase", "changed": true, "curr_shares": 7420000, "curr_weight_pct": 4.86, "prev_shares": 7240000, "prev_weight_pct": 4.75, "shares_delta": 180000, "status": {"css": "status-inc", "kind": "increase", "label": "\u52a0\u78bc(\u90231\u5929 / +180\u5f35)", "short": "\u52a0\u78bc(\u90231\u5929)", "streak_text": "\u90231\u8cb7"}, "stock_code": "2308", "stock_name": "\u53f0\u9054\u96fb", "weight_delta": 0.11000000000000032}, {"change_kind": "increase", "changed": true, "curr_shares": 5696000, "curr_weight_pct": 2.83, "prev_shares": 5546000, "prev_weight_pct": 2.78, "shares_delta": 150000, "status": {"css": "status-inc", "kind": "increase", "label": "\u52a0\u78bc(\u90231\u5929 / +150\u5f35)", "short": "\u52a0\u78bc(\u90231\u5929)", "streak_text": "\u90231\u8cb7"}, "stock_code": "6274", "stock_name": "\u53f0\u71ff", "weight_delta": 0.050000000000000266}, {"change_kind": "increase", "changed": true, "curr_shares": 1363000, "curr_weight_pct": 0.49, "prev_shares": 1234000, "prev_weight_pct": 0.45, "shares_delta": 129000, "status": {"css": "status-inc", "kind": "increase", "label": "\u52a0\u78bc(\u90231\u5929 / +129\u5f35)", "short": "\u52a0\u78bc(\u90231\u5929)", "streak_text": "\u90231\u8cb7"}, "stock_code": "2368", "stock_name": "\u91d1\u50cf\u96fb", "weight_delta": 0.03999999999999998}, {"change_kind": "increase", "changed": true, "curr_shares": 25107000, "curr_weight_pct": 4.94, "prev_shares": 24987000, "prev_weight_pct": 4.87, "shares_delta": 120000, "status": {"css": "status-inc", "kind": "increase", "label": "\u52a0\u78bc(\u90231\u5929 / +120\u5f35)", "short": "\u52a0\u78bc(\u90231\u5929)", "streak_text": "\u90231\u8cb7"}, "stock_code": "2327", "stock_name": "\u570b\u5de8*", "weight_delta": 0.07000000000000028}, {"change_kind": "decrease", "changed": true, "curr_shares": 5182000, "curr_weight_pct": 0.49, "prev_shares": 6628000, "prev_weight_pct": 0.66, "shares_delta": -1446000, "status": {"css": "status-dec", "kind": "decrease", "label": "\u6e1b\u78bc(\u90231\u5929 / -1,446\u5f35)", "short": "\u6e1b\u78bc(\u90231\u5929)", "streak_text": "\u90231\u8ce3"}, "stock_code": "3264", "stock_name": "\u6b23\u9293", "weight_delta": -0.17000000000000004}, {"change_kind": "decrease", "changed": true, "curr_shares": 3943848, "curr_weight_pct": 3.05, "prev_shares": 4280848, "prev_weight_pct": 3.44, "shares_delta": -337000, "status": {"css": "status-dec", "kind": "decrease", "label": "\u6e1b\u78bc(\u90231\u5929 / -337\u5f35)", "short": "\u6e1b\u78bc(\u90231\u5929)", "streak_text": "\u90231\u8ce3"}, "stock_code": "3665", "stock_name": "\u8cbf\u806f-KY", "weight_delta": -0.3900000000000001}, {"change_kind": "decrease", "changed": true, "curr_shares": 5582561, "curr_weight_pct": 4.07, "prev_shares": 5656561, "prev_weight_pct": 4.25, "shares_delta": -74000, "status": {"css": "status-dec", "kind": "decrease", "label": "\u6e1b\u78bc(\u90231\u5929 / -74\u5f35)", "short": "\u6e1b\u78bc(\u90231\u5929)", "streak_text": "\u90231\u8ce3"}, "stock_code": "6669", "stock_name": "\u7def\u7a4e", "weight_delta": -0.17999999999999972}, {"change_kind": "decrease", "changed": true, "curr_shares": 400000, "curr_weight_pct": 0.51, "prev_shares": 446000, "prev_weight_pct": 0.54, "shares_delta": -46000, "status": {"css": "status-dec", "kind": "decrease", "label": "\u6e1b\u78bc(\u90231\u5929 / -46\u5f35)", "short": "\u6e1b\u78bc(\u90231\u5929)", "streak_text": "\u90231\u8ce3"}, "stock_code": "6510", "stock_name": "\u7cbe\u6e2c", "weight_delta": -0.030000000000000027}, {"change_kind": "flat", "changed": false, "curr_shares": 11864000, "curr_weight_pct": 10.05, "prev_shares": 11864000, "prev_weight_pct": 10.05, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "2330", "stock_name": "\u53f0\u7a4d\u96fb", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 5186000, "curr_weight_pct": 9.25, "prev_shares": 5186000, "prev_weight_pct": 9.25, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "2454", "stock_name": "\u806f\u767c\u79d1", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 4750000, "curr_weight_pct": 7.95, "prev_shares": 4750000, "prev_weight_pct": 7.95, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "2383", "stock_name": "\u53f0\u5149\u96fb", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 20300000, "curr_weight_pct": 7.83, "prev_shares": 20300000, "prev_weight_pct": 7.83, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "3037", "stock_name": "\u6b23\u8208", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 5949000, "curr_weight_pct": 6.95, "prev_shares": 5949000, "prev_weight_pct": 6.95, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "3017", "stock_name": "\u5947\u92d0", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 2512000, "curr_weight_pct": 5.04, "prev_shares": 2512000, "prev_weight_pct": 5.04, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "3653", "stock_name": "\u5065\u7b56", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 89118000, "curr_weight_pct": 4.91, "prev_shares": 89118000, "prev_weight_pct": 4.91, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "2303", "stock_name": "\u806f\u96fb", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 2544000, "curr_weight_pct": 4.68, "prev_shares": 2544000, "prev_weight_pct": 4.68, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "6223", "stock_name": "\u65fa\u77fd", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 6464000, "curr_weight_pct": 4.26, "prev_shares": 6464000, "prev_weight_pct": 4.26, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "2345", "stock_name": "\u667a\u90a6", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 16811000, "curr_weight_pct": 4.01, "prev_shares": 16811000, "prev_weight_pct": 4.01, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "3711", "stock_name": "\u65e5\u6708\u5149\u6295\u63a7", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 9037000, "curr_weight_pct": 3.63, "prev_shares": 9037000, "prev_weight_pct": 3.63, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "8046", "stock_name": "\u5357\u96fb", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 1773000, "curr_weight_pct": 1.53, "prev_shares": 1773000, "prev_weight_pct": 1.53, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "6805", "stock_name": "\u5bcc\u4e16\u9054", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 207900, "curr_weight_pct": 1.5, "prev_shares": 207900, "prev_weight_pct": 1.5, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "5274", "stock_name": "\u4fe1\u9a4a", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 13138450, "curr_weight_pct": 1.43, "prev_shares": 13138450, "prev_weight_pct": 1.43, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "2449", "stock_name": "\u4eac\u5143\u96fb\u5b50", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 413000, "curr_weight_pct": 1.19, "prev_shares": 413000, "prev_weight_pct": 1.19, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "3443", "stock_name": "\u5275\u610f", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 1159000, "curr_weight_pct": 0.36, "prev_shares": 1159000, "prev_weight_pct": 0.36, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "8210", "stock_name": "\u52e4\u8aa0", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 485000, "curr_weight_pct": 0.28, "prev_shares": 485000, "prev_weight_pct": 0.28, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "8996", "stock_name": "\u9ad8\u529b", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 3248000, "curr_weight_pct": 0.24, "prev_shares": 3248000, "prev_weight_pct": 0.24, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "6278", "stock_name": "\u53f0\u8868\u79d1", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 95000, "curr_weight_pct": 0.19, "prev_shares": 95000, "prev_weight_pct": 0.19, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "6515", "stock_name": "\u7a4e\u5d34", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 2222000, "curr_weight_pct": 0.17, "prev_shares": 2222000, "prev_weight_pct": 0.17, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "6271", "stock_name": "\u540c\u6b23\u96fb", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 3988000, "curr_weight_pct": 0.12, "prev_shares": 3988000, "prev_weight_pct": 0.12, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "6191", "stock_name": "\u7cbe\u6210\u79d1", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 1740000, "curr_weight_pct": 0.11, "prev_shares": 1740000, "prev_weight_pct": 0.11, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "3376", "stock_name": "\u65b0\u65e5\u8208", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 501000, "curr_weight_pct": 0.04, "prev_shares": 501000, "prev_weight_pct": 0.04, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "2313", "stock_name": "\u83ef\u901a", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 5163000, "curr_weight_pct": 0.03, "prev_shares": 5163000, "prev_weight_pct": 0.03, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "2002", "stock_name": "\u4e2d\u92fc", "weight_delta": 0.0}, {"change_kind": "flat", "changed": false, "curr_shares": 5000, "curr_weight_pct": 0.0, "prev_shares": 5000, "prev_weight_pct": 0.0, "shares_delta": 0, "status": {"css": "status-flat", "kind": "flat", "label": "\u6301\u5e73", "short": "\u6301\u5e73"}, "stock_code": "2481", "stock_name": "\u5f37\u8302", "weight_delta": 0.0}], "source": "uni_excel", "summary": {"decrease": 4, "first_buy": 0, "full_exit": 0, "increase": 5}}]</script>
   
 </section>
 
@@ -632,14 +649,14 @@
   <p class="muted">發行人頁面：<a href="https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=49YTW" rel="noopener">https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=49YTW</a></p>
   
   
-  <p class="muted">資料說明：統一投信公開 Excel 僅最新一日；本站自行歸檔，歷史天數隨每日更新累積（目前趨勢可用 2 日）。</p>
+  <p class="muted">資料說明：統一投信公開 Excel 僅最新一日；本站自行歸檔，歷史天數隨每日更新累積（目前趨勢可用 2 日）。異動報告與持股 JSON 均保存在 GitHub <code>data/</code>。</p>
   
   
 </section>
 
       <footer class="site-footer">
         <p>資料來源為各投信公開揭露之持股 Excel；本站僅做歸檔與股數異動比對，不構成投資建議。</p>
-        <p>時區：Asia/Taipei。最後產生時間：2026-09-23T11:11:39+08:00。</p>
+        <p>時區：Asia/Taipei。最後產生時間：2026-09-23T11:16:31+08:00。</p>
         
 <p>占位列政策：股數 ≤ 1000 且權重 &lt; 0.01% 自異動分類排除（快照仍保留並標記）。</p>
 

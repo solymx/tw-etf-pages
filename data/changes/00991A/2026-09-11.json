@@ -1,0 +1,85 @@
+{
+  "etf_ticker": "00991A",
+  "as_of_date": "2026-09-11",
+  "prev_as_of_date": "2026-09-10",
+  "compared_at": "2026-09-23T11:16:31+08:00",
+  "source": "fh_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 4,
+    "decrease": 1,
+    "full_exit": 1
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光投",
+      "prev_shares": 9000,
+      "curr_shares": 2500000,
+      "shares_delta": 2491000,
+      "prev_weight_pct": 0.007,
+      "curr_weight_pct": 1.991,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3189",
+      "stock_name": "景碩科技",
+      "prev_shares": 4100000,
+      "curr_shares": 4250000,
+      "shares_delta": 150000,
+      "prev_weight_pct": 4.256,
+      "curr_weight_pct": 4.501,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興電子",
+      "prev_shares": 5000000,
+      "curr_shares": 5100000,
+      "shares_delta": 100000,
+      "prev_weight_pct": 6.239,
+      "curr_weight_pct": 6.42,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南亞電路",
+      "prev_shares": 3250000,
+      "curr_shares": 3300000,
+      "shares_delta": 50000,
+      "prev_weight_pct": 4.365,
+      "curr_weight_pct": 4.592,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦科技",
+      "prev_shares": 1350000,
+      "curr_shares": 1100000,
+      "shares_delta": -250000,
+      "prev_weight_pct": 3.33,
+      "curr_weight_pct": 2.671,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": [
+    {
+      "stock_code": "8299",
+      "stock_name": "群聯電子",
+      "prev_shares": 780000,
+      "curr_shares": 0,
+      "shares_delta": -780000,
+      "prev_weight_pct": 2.022,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    }
+  ]
+}

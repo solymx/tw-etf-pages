@@ -1,0 +1,134 @@
+{
+  "etf_ticker": "00991A",
+  "as_of_date": "2026-08-31",
+  "prev_as_of_date": "2026-08-28",
+  "compared_at": "2026-09-23T11:16:31+08:00",
+  "source": "fh_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 1,
+    "decrease": 10,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "3081",
+      "stock_name": "聯亞光電",
+      "prev_shares": 800000,
+      "curr_shares": 900000,
+      "shares_delta": 100000,
+      "prev_weight_pct": 3.086,
+      "curr_weight_pct": 3.891,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "6274",
+      "stock_name": "台燿科技",
+      "prev_shares": 2400000,
+      "curr_shares": 2000000,
+      "shares_delta": -400000,
+      "prev_weight_pct": 4.174,
+      "curr_weight_pct": 3.515,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨股份",
+      "prev_shares": 7700000,
+      "curr_shares": 7500000,
+      "shares_delta": -200000,
+      "prev_weight_pct": 5.366,
+      "curr_weight_pct": 5.006,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台灣積體",
+      "prev_shares": 4000000,
+      "curr_shares": 3800000,
+      "shares_delta": -200000,
+      "prev_weight_pct": 11.3,
+      "curr_weight_pct": 11.193,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科技",
+      "prev_shares": 14000000,
+      "curr_shares": 13800000,
+      "shares_delta": -200000,
+      "prev_weight_pct": 8.825,
+      "curr_weight_pct": 9.177,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦科技",
+      "prev_shares": 1700000,
+      "curr_shares": 1600000,
+      "shares_delta": -100000,
+      "prev_weight_pct": 4.217,
+      "curr_weight_pct": 3.988,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2454",
+      "stock_name": "聯發科技",
+      "prev_shares": 1000000,
+      "curr_shares": 900000,
+      "shares_delta": -100000,
+      "prev_weight_pct": 4.652,
+      "curr_weight_pct": 4.326,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "7769",
+      "stock_name": "鴻勁精密",
+      "prev_shares": 360000,
+      "curr_shares": 300000,
+      "shares_delta": -60000,
+      "prev_weight_pct": 2.727,
+      "curr_weight_pct": 2.153,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電子",
+      "prev_shares": 1400000,
+      "curr_shares": 1380000,
+      "shares_delta": -20000,
+      "prev_weight_pct": 8.972,
+      "curr_weight_pct": 9.27,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎科技",
+      "prev_shares": 600000,
+      "curr_shares": 580000,
+      "shares_delta": -20000,
+      "prev_weight_pct": 5.043,
+      "curr_weight_pct": 5.04,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2059",
+      "stock_name": "川湖科技",
+      "prev_shares": 510000,
+      "curr_shares": 500000,
+      "shares_delta": -10000,
+      "prev_weight_pct": 8.514,
+      "curr_weight_pct": 8.683,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": []
+}

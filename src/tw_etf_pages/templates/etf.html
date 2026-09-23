@@ -2,9 +2,11 @@
 {% block title %}{{ ticker }} {{ name }} 持股異動{% endblock %}
 {% block heading %}{{ ticker }} {{ name }}{% endblock %}
 {% block subtitle %}
-資料日 <strong>{{ as_of_date or "—" }}</strong>
-{% if prev_as_of_date %}／對比 <strong>{{ prev_as_of_date }}</strong>{% endif %}
-／來源 {{ source or "—" }}
+<span data-date-meta>
+資料日 <strong data-as-of>{{ as_of_date or "—" }}</strong>
+<span data-prev-wrap>{% if prev_as_of_date %}／對比 <strong data-prev-as-of>{{ prev_as_of_date }}</strong>{% endif %}</span>
+／來源 <span data-source>{{ source or "—" }}</span>
+</span>
 {% endblock %}
 {% block sidebar %}
 <button type="button" class="mobile-toc-toggle" data-toc-toggle>目錄 ☰</button>
@@ -33,23 +35,36 @@
 </nav>
 {% endblock %}
 {% block content %}
-<section class="etf-block">
+<section class="etf-block" data-change-history-root data-ticker="{{ ticker }}">
   <div class="etf-head" id="{{ anchor }}">
     <h3>📊 {{ ticker }} {{ name }}</h3>
     <div class="etf-meta na">規模／申贖／淨買超：尚無資料</div>
-    <div class="summary-chips">
-      <span class="chip buy">新建倉 {{ summary.first_buy }}</span>
-      <span class="chip inc">加碼 {{ summary.increase }}</span>
-      <span class="chip dec">減碼 {{ summary.decrease }}</span>
-      <span class="chip exit">全部出清 {{ summary.full_exit }}</span>
+    {% if change_history %}
+    <div class="date-picker">
+      <label for="date-select-{{ ticker }}">異動資料日</label>
+      <select id="date-select-{{ ticker }}" class="date-select" data-date-select aria-label="選擇異動資料日">
+        {% for h in change_history %}
+        <option value="{{ h.as_of_date }}"{% if loop.first %} selected{% endif %}>
+          {{ h.as_of_date }}{% if h.prev_as_of_date %}（對比 {{ h.prev_as_of_date }}）{% endif %}
+        </option>
+        {% endfor %}
+      </select>
+      <span class="muted date-count">共 {{ change_history|length }} 個可對比日</span>
+    </div>
+    {% endif %}
+    <div class="summary-chips" data-summary-chips>
+      <span class="chip buy">新建倉 <span data-chip="first_buy">{{ summary.first_buy }}</span></span>
+      <span class="chip inc">加碼 <span data-chip="increase">{{ summary.increase }}</span></span>
+      <span class="chip dec">減碼 <span data-chip="decrease">{{ summary.decrease }}</span></span>
+      <span class="chip exit">全部出清 <span data-chip="full_exit">{{ summary.full_exit }}</span></span>
     </div>
   </div>
 
-  {% if not report %}
+  {% if not change_history %}
   <div class="empty-box">尚無可對比的前後日快照。首次歸檔後，下一營業日才會出現異動表。</div>
   {% else %}
   <div class="toolbar" data-filter-group="{{ ticker }}">
-    <button type="button" class="btn-toggle active" data-filter="changed">只看異動（{{ changed_count }}）</button>
+    <button type="button" class="btn-toggle active" data-filter="changed">只看異動（<span data-changed-count>{{ changed_count }}</span>）</button>
     <button type="button" class="btn-toggle" data-filter="all">全部持股</button>
   </div>
   <div class="table-wrap">
@@ -63,7 +78,7 @@
           <th>變動狀態</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody data-change-tbody>
         {% for r in rows %}
         <tr class="{% if r.changed %}changed{% else %}unchanged hidden{% endif %}">
           <td>{{ r.stock_code }}</td>
@@ -86,6 +101,8 @@
       </tbody>
     </table>
   </div>
+  <div class="empty-box{% if changed_count != 0 %} hidden{% endif %}" data-no-changes>本日無股數異動（已排除占位列）。</div>
+  <script type="application/json" data-change-history-json>{{ change_history | tojson }}</script>
   {% endif %}
 </section>
 
@@ -187,7 +204,7 @@
   <p class="muted">發行人頁面：<a href="{{ source_page }}" rel="noopener">{{ source_page }}</a></p>
   {% endif %}
   {% if issuer == "uni" %}
-  <p class="muted">資料說明：統一投信公開 Excel 僅最新一日；本站自行歸檔，歷史天數隨每日更新累積（目前趨勢可用 {{ trend.day_count }} 日）。</p>
+  <p class="muted">資料說明：統一投信公開 Excel 僅最新一日；本站自行歸檔，歷史天數隨每日更新累積（目前趨勢可用 {{ trend.day_count }} 日）。異動報告與持股 JSON 均保存在 GitHub <code>data/</code>。</p>
   {% endif %}
   {% else %}
   <div class="empty-box">尚無快照。</div>

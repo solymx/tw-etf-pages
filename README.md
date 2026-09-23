@@ -13,6 +13,30 @@
 
 靜態 HTML 透過 **GitHub Pages** 發布；持股 JSON 快照自行歸檔於 `data/snapshots/`。
 
+### GitHub 歸檔（每日持股清單）
+
+每個交易日 Actions 會把下列路徑 **commit 進本 repo**（並部署 Pages）：
+
+| 路徑 | 內容 |
+|------|------|
+| `data/snapshots/{TICKER}/YYYY-MM-DD.json` | 當日完整持股清單（輕量 JSON，**歸檔主體**） |
+| `data/changes/{TICKER}/YYYY-MM-DD.json` | 與前一已歸檔日比較的買賣異動報告 |
+| `data/last_run.json` | 最近一次 pipeline 狀態 |
+| `site/` | 靜態頁面（含 `site/data/{TICKER}-changes.json` 供日期選單） |
+
+- 原始 Excel 位於 `data/raw/`，預設 **gitignore**（避免二元檔膨脹）。若需原始檔可從發行人重新下載；**以 JSON 快照為準**。
+- Workflow（週一至週五台灣 18:00）執行 `python -m tw_etf_pages run` 後 `git add data/snapshots data/changes data/last_run.json site` 並 push。
+- 瀏覽歷史：GitHub 上直接開啟上述路徑，或在 Pages 明細頁用「異動資料日」下拉選單切換。
+
+### 日期選單（買賣清單）
+
+各檔 `site/{TICKER}.html`（優先 `00981A`）提供 **異動資料日** `<select>`：
+
+- 列出 `data/changes/{TICKER}/` 所有可對比日（新→舊）；僅 1–2 日也會顯示選單。
+- 切換後以客戶端 JS 更新「新建倉／加碼／減碼／全部出清」異動表，並顯示該日的 `as_of_date` 與 `prev_as_of_date`。
+- 支援網址 `?date=YYYY-MM-DD`；總覽頁各 ETF 區塊的日期選單會連到明細頁並帶此參數。
+
+
 ### 頁面配置（日報風格）
 
 `site/index.html` 為單頁日報，含：
