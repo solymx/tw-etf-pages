@@ -212,32 +212,66 @@ def parse_zdsetf_snapshot(
     ticker: str,
     policy: PlaceholderPolicy,
 ) -> dict[str, Any]:
-    """Fallback: zdsetf.com snapshot JSON."""
+    """Fallback: zdsetf.com snapshot JSON.
+
+    Field aliases (00405A / future issuers may differ slightly from 00992A):
+    - date: snapshot_date | as_of_date | date
+    - holdings list: holdings | positions | stocks
+    - code/name: stock_code|code , stock_name|name
+    - weight: weight_pct | weight (string or number OK)
+    - market value: market_value | market_value_ntd | mv
+    """
     data = read_json(path)
-    as_of = parse_iso_or_slash_date(str(data["snapshot_date"]))
+    raw_date = (
+        data.get("snapshot_date")
+        or data.get("as_of_date")
+        or data.get("date")
+    )
+    if raw_date is None:
+        raise ValueError(f"{path}: missing snapshot_date/as_of_date/date")
+    as_of = parse_iso_or_slash_date(str(raw_date))
+    rows = data.get("holdings")
+    if rows is None:
+        rows = data.get("positions")
+    if rows is None:
+        rows = data.get("stocks")
+    if not isinstance(rows, list):
+        rows = []
     holdings = []
-    for h in data.get("holdings", []):
-        shares = parse_int(h.get("shares", 0))
-        weight = parse_weight_pct(h.get("weight_pct", 0))
+    for h in rows:
+        if not isinstance(h, dict):
+            continue
+        code = h.get("stock_code") or h.get("code") or h.get("ticker")
+        if code is None or str(code).strip() == "":
+            continue
+        name = h.get("stock_name") or h.get("name") or ""
+        shares = parse_int(h.get("shares", h.get("share", 0)))
+        weight = parse_weight_pct(
+            h.get("weight_pct", h.get("weight", h.get("weight_percent", 0)))
+        )
         mv = h.get("market_value")
+        if mv in (None, ""):
+            mv = h.get("market_value_ntd", h.get("mv"))
         market_value = float(mv) if mv not in (None, "") else None
         holdings.append(
             _holding(
-                h["stock_code"],
-                h.get("stock_name", ""),
+                code,
+                name,
                 shares,
                 weight,
                 policy,
                 market_value=market_value,
             )
         )
+    source_url = data.get("source_url") or data.get("official_url") or data.get("url")
+    fetched_up = data.get("fetched_at") or data.get("fetched_at_upstream")
     return _snapshot(
         ticker=ticker,
         as_of_date=as_of,
         holdings=holdings,
         source="zdsetf",
         raw_path=path,
-        meta={"source_url": data.get("source_url"), "fetched_at_upstream": data.get("fetched_at")},
+        meta={"source_url": source_url, "fetched_at_upstream": fetched_up},
     )
 
 

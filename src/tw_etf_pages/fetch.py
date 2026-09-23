@@ -159,15 +159,16 @@ def fetch_etf_holdings(
     Fetch primary issuer Excel; on failure optionally fallback to zdsetf JSON.
     Returns (path, kind) where kind is 'uni_excel' | 'fh_excel' | 'zdsetf'.
 
-    Capital Fund (群益投信) has no public Excel API; for issuer == "capital"
+    Capital Fund (群益投信) and Fubon (富邦投信) have no reliable public
+    Excel/CSV download URL for automation; for issuer in {"capital", "fubon"}
     we archive via zdsetf.com snapshot, which mirrors the official portfolio
-    page (source_url points at capitalfund.com.tw).
+    page (source_url points at capitalfund.com.tw / websys.fsit.com.tw).
     """
     stamp = today_taipei().isoformat()
     raw_dir = cfg.raw_dir / etf.ticker
 
-    # Primary path for capital: zdsetf mirror of official portfolio (no Excel API).
-    if etf.issuer == "capital":
+    # Primary path for capital / fubon: zdsetf mirror of official portfolio (no Excel API).
+    if etf.issuer in ("capital", "fubon"):
         path = raw_dir / f"{etf.ticker}_{stamp}_zdsetf.json"
         fetch_zdsetf_snapshot(cfg, etf.ticker, path)
         return path, "zdsetf"
