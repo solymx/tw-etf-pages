@@ -67,6 +67,11 @@ etfs:
     fund_code: "E0001"
     source_page: "https://etf.allianzgi.com.tw/etf-info/E0001"
 
+  - ticker: "00993A"
+    name: "主動安聯台灣"
+    issuer: allianz
+    fund_code: "E0002"
+    source_page: "https://etf.allianzgi.com.tw/etf-info/E0002"
 
   - ticker: "00400A"
     name: "主動國泰動能高息"

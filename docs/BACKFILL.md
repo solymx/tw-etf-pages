@@ -47,11 +47,11 @@
 - 本站以 `zdsetf.com/api/etfs/00980A/snapshot` 作為主來源（JSON 內 `source_url` 指向 nomurafunds.com.tw）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
-## 安聯（00984A／Allianz）
+## 安聯（00984A／00993A／Allianz）
 
-- 官網產品／投組頁：`https://etf.allianzgi.com.tw/etf-info/E0001`（zdsetf `source_url` 指向 `https://etf.allianzgi.com.tw/list-trade`）。
+- 官網產品／投組頁：`00984A` → `https://etf.allianzgi.com.tw/etf-info/E0001`；`00993A` → `https://etf.allianzgi.com.tw/etf-info/E0002`（zdsetf `source_url` 指向 `https://etf.allianzgi.com.tw/list-trade`）。
 - **無穩定公開 Excel／CSV API** 可供本站直接下載。
-- 本站以 `zdsetf.com/api/etfs/00984A/snapshot` 作為主來源（JSON 內 `source_url` 指向 etf.allianzgi.com.tw）；僅最新一日，**無法一次回補**。
+- 本站以 `zdsetf.com/api/etfs/{TICKER}/snapshot` 作為主來源（JSON 內 `source_url` 指向 etf.allianzgi.com.tw）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
 ## 國泰（00400A／Cathay）
