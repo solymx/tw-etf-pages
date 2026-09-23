@@ -61,3 +61,10 @@
 - 本站以 `zdsetf.com/api/etfs/00400A/snapshot` 作為主來源（JSON 內 `source_url` 指向 cathaysite.com.tw）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
+## 摩根（00401A／J.P. Morgan AM Taiwan／jpm）
+
+- 官網產品頁：`https://am.jpmorgan.com/tw/zh/asset-management/twetf/products/jpmorgan-taiwan-taiwan-equity-high-income-active-etf-tw00000401a1`（行銷頁：`…/funds/jpmorgan-tw-equity-high-income-etf/`）。
+- **無穩定公開 Excel／CSV API** 可供本站直接下載（zdsetf `source_url` 雖可能指向 am.jpmorgan.com 上的 PCF xlsx dam 路徑，但不視為穩定可自動化 API）。
+- 本站以 `zdsetf.com/api/etfs/00401A/snapshot` 作為主來源（JSON 內 `source_url` 指向 am.jpmorgan.com）；僅最新一日，**無法一次回補**。
+- **權重 caveat**：zdsetf 快照中 `weight_pct` 可能全為 `null`（與國泰 `00400A` 相同）；parser 正規化為 `0.0`，**不臆造權重**。
+- 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
