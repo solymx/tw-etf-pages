@@ -26,3 +26,17 @@
 - 本站以 `zdsetf.com/api/etfs/00992A/snapshot` 作為主來源（JSON 內 `source_url` 指向群益官網）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
+## 富邦（00405A／Fubon）
+
+- 官網投組頁：`https://websys.fsit.com.tw/FubonETF/Fund/Profile.aspx?stkId=00405A`。
+- **無穩定公開 Excel／CSV URL** 可供本站直接下載。
+- 本站以 `zdsetf.com/api/etfs/00405A/snapshot` 作為主來源（JSON 內 `source_url` 指向 websys.fsit.com.tw）；僅最新一日，**無法一次回補**。
+- 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
+
+## 中信（00406A／CTBC）
+
+- 官網 PCF／投組頁：`https://www.ctbcinvestments.com/etfprod/00406A/pcf`。
+- **無穩定公開 Excel／CSV API** 可供本站直接下載。
+- 本站以 `zdsetf.com/api/etfs/00406A/snapshot` 作為主來源（JSON 內 `source_url` 指向 ctbcinvestments.com）；僅最新一日，**無法一次回補**。
+- 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
+

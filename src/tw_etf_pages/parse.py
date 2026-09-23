@@ -214,11 +214,11 @@ def parse_zdsetf_snapshot(
 ) -> dict[str, Any]:
     """Fallback: zdsetf.com snapshot JSON.
 
-    Field aliases (00405A / future issuers may differ slightly from 00992A):
+    Field aliases (00405A / 00406A / future issuers may differ slightly from 00992A):
     - date: snapshot_date | as_of_date | date
     - holdings list: holdings | positions | stocks
     - code/name: stock_code|code , stock_name|name
-    - weight: weight_pct | weight (string or number OK)
+    - weight: weight_pct | weight | weight_percent (string or number OK)
     - market value: market_value | market_value_ntd | mv
     """
     data = read_json(path)

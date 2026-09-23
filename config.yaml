@@ -43,6 +43,12 @@ etfs:
     fund_code: "00405A"
     source_page: "https://websys.fsit.com.tw/FubonETF/Fund/Profile.aspx?stkId=00405A"
 
+  - ticker: "00406A"
+    name: "主動中信台灣收益"
+    issuer: ctbc
+    fund_code: "00406A"
+    source_page: "https://www.ctbcinvestments.com/etfprod/00406A/pcf"
+
 fetch:
   timeout_sec: 60
   retries: 3
