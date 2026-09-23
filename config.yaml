@@ -61,6 +61,12 @@ etfs:
     fund_code: "399"
     source_page: "https://www.capitalfund.com.tw/etf/product/detail/399/portfolio"
 
+  - ticker: "00984A"
+    name: "主動安聯台灣高息"
+    issuer: allianz
+    fund_code: "E0001"
+    source_page: "https://etf.allianzgi.com.tw/etf-info/E0001"
+
 fetch:
   timeout_sec: 60
   retries: 3
