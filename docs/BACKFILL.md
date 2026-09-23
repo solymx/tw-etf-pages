@@ -77,9 +77,9 @@
 - **權重 caveat**：zdsetf 快照中 `weight_pct` 可能全為 `null`（與國泰 `00400A`／摩根 `00401A` 相同）；parser 正規化為 `0.0`，**不臆造權重**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
-## 第一金（00408A／FSITC／fsitc）
+## 第一金（00408A／00994A／FSITC／fsitc）
 
-- 官網產品／投組頁：`https://www.fsitc.com.tw/FundDetail.aspx?ID=183`（zdsetf `source_url` 指向此頁；基金代號 ID=183）。
-- **無穩定公開 Excel／CSV API** 可供本站直接下載（`FormDownload.aspx`／`ETFAccWeb`／`ETFList.aspx` 未提供可自動化的 00408A 持股 Excel／CSV URL）。
-- 本站以 `zdsetf.com/api/etfs/00408A/snapshot` 作為主來源（JSON 內 `source_url` 指向 fsitc.com.tw）；僅最新一日，**無法一次回補**。
+- 官網產品／投組頁：`00408A` → `https://www.fsitc.com.tw/FundDetail.aspx?ID=183`；`00994A` → `https://www.fsitc.com.tw/FundDetail.aspx?ID=182`（zdsetf `source_url` 指向各頁）。
+- **無穩定公開 Excel／CSV API** 可供本站直接下載（`FormDownload.aspx`／`ETFAccWeb`／`ETFList.aspx` 未提供可自動化的持股 Excel／CSV URL）。
+- 本站以 `zdsetf.com/api/etfs/{TICKER}/snapshot` 作為主來源（JSON 內 `source_url` 指向 fsitc.com.tw）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。

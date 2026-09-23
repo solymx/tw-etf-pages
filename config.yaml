@@ -103,6 +103,12 @@ etfs:
     fund_code: "183"
     source_page: "https://www.fsitc.com.tw/FundDetail.aspx?ID=183"
 
+  - ticker: "00994A"
+    name: "主動第一金台股優"
+    issuer: fsitc
+    fund_code: "182"
+    source_page: "https://www.fsitc.com.tw/FundDetail.aspx?ID=182"
+
   - ticker: "00995A"
     name: "主動中信台灣卓越"
     issuer: ctbc
