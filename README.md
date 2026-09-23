@@ -67,6 +67,7 @@
 | **群益（capital）** `00992A` | 無公開 Excel／依日期 API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像群益官網投組歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
 | **富邦（fubon）** `00405A` | 官網投組頁有 ASP.NET 下載鈕，無穩定公開 Excel／CSV URL；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像富邦官網投組歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
 | **中信（ctbc）** `00406A` | 官網 PCF／投組頁無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像中信官網 PCF 頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
+| **野村（nomura）** `00980A` | 官網投組頁（SPA）無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像野村官網投組頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
 
 
 
@@ -122,7 +123,7 @@ python -m tw_etf_pages render
 etfs:
   - ticker: "00981A"
     name: "主動統一台股增長"
-    issuer: uni          # uni | fh | capital | fubon | ctbc
+    issuer: uni          # uni | fh | capital | fubon | ctbc | nomura
     fund_code: "49YTW"   # 統一 fundCode 或復華 ETF23
     source_page: "https://..."
 ```
@@ -132,6 +133,7 @@ etfs:
 - 群益投信：`issuer: capital`，`fund_code` 為官網產品 id（本專案 `00992A` 為 `500`）；無公開 Excel API，抓取走 zdsetf 鏡像官網投組。
 - 富邦投信：`issuer: fubon`，`fund_code` 為股票代號（本專案 `00405A`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網投組（`source_url` → websys.fsit.com.tw）。
 - 中國信託投信：`issuer: ctbc`，`fund_code` 為股票代號（本專案 `00406A`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網 PCF／投組（`source_url` → ctbcinvestments.com）。
+- 野村投信：`issuer: nomura`，`fund_code` 為股票代號（本專案 `00980A`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網投組（`source_url` → nomurafunds.com.tw）。
 
 ---
 
@@ -144,6 +146,7 @@ etfs:
 | 主 | 群益 `capital`（`00992A`） | **無公開 Excel API**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/00992A/snapshot` 鏡像官網投組（`source_url` → capitalfund.com.tw） |
 | 主 | 富邦 `fubon`（`00405A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/00405A/snapshot` 鏡像官網投組（`source_url` → websys.fsit.com.tw） |
 | 主 | 中信 `ctbc`（`00406A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/00406A/snapshot` 鏡像官網 PCF（`source_url` → ctbcinvestments.com） |
+| 主 | 野村 `nomura`（`00980A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/00980A/snapshot` 鏡像官網投組（`source_url` → nomurafunds.com.tw） |
 | 備 | [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` | 第三方 JSON；統一／復華官方失敗時 fallback |
 
 比對規則：

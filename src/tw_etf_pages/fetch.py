@@ -159,17 +159,18 @@ def fetch_etf_holdings(
     Fetch primary issuer Excel; on failure optionally fallback to zdsetf JSON.
     Returns (path, kind) where kind is 'uni_excel' | 'fh_excel' | 'zdsetf'.
 
-    Capital Fund (群益投信), Fubon (富邦投信), and CTBC (中國信託投信)
-    have no reliable public Excel/CSV download URL for automation; for issuer
-    in {"capital", "fubon", "ctbc"} we archive via zdsetf.com snapshot, which
-    mirrors the official portfolio/PCF page (source_url points at
-    capitalfund.com.tw / websys.fsit.com.tw / ctbcinvestments.com).
+    Capital Fund (群益投信), Fubon (富邦投信), CTBC (中國信託投信), and
+    Nomura (野村投信) have no reliable public Excel/CSV download URL for
+    automation; for issuer in {"capital", "fubon", "ctbc", "nomura"} we
+    archive via zdsetf.com snapshot, which mirrors the official portfolio/PCF
+    page (source_url points at capitalfund.com.tw / websys.fsit.com.tw /
+    ctbcinvestments.com / nomurafunds.com.tw).
     """
     stamp = today_taipei().isoformat()
     raw_dir = cfg.raw_dir / etf.ticker
 
-    # Primary path for capital / fubon / ctbc: zdsetf mirror (no Excel API).
-    if etf.issuer in ("capital", "fubon", "ctbc"):
+    # Primary path for capital / fubon / ctbc / nomura: zdsetf mirror (no Excel API).
+    if etf.issuer in ("capital", "fubon", "ctbc", "nomura"):
         path = raw_dir / f"{etf.ticker}_{stamp}_zdsetf.json"
         fetch_zdsetf_snapshot(cfg, etf.ticker, path)
         return path, "zdsetf"

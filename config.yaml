@@ -49,6 +49,12 @@ etfs:
     fund_code: "00406A"
     source_page: "https://www.ctbcinvestments.com/etfprod/00406A/pcf"
 
+  - ticker: "00980A"
+    name: "主動野村臺灣優選"
+    issuer: nomura
+    fund_code: "00980A"
+    source_page: "https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00980A"
+
 fetch:
   timeout_sec: 60
   retries: 3
