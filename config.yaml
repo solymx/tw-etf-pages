@@ -67,6 +67,13 @@ etfs:
     fund_code: "E0001"
     source_page: "https://etf.allianzgi.com.tw/etf-info/E0001"
 
+
+  - ticker: "00400A"
+    name: "主動國泰動能高息"
+    issuer: cathay
+    fund_code: "EEA"
+    source_page: "https://www.cathaysite.com.tw/ETF/detail/EEA"
+
 fetch:
   timeout_sec: 60
   retries: 3

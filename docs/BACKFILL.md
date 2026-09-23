@@ -54,3 +54,10 @@
 - 本站以 `zdsetf.com/api/etfs/00984A/snapshot` 作為主來源（JSON 內 `source_url` 指向 etf.allianzgi.com.tw）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
+## 國泰（00400A／Cathay）
+
+- 官網產品／投組頁：`https://www.cathaysite.com.tw/ETF/detail/EEA`（zdsetf `source_url` 指向 `https://www.cathaysite.com.tw/`）。
+- **無穩定公開 Excel／CSV API** 可供本站直接下載。
+- 本站以 `zdsetf.com/api/etfs/00400A/snapshot` 作為主來源（JSON 內 `source_url` 指向 cathaysite.com.tw）；僅最新一日，**無法一次回補**。
+- 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
+

@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 class EtfConfig:
     ticker: str
     name: str
-    issuer: str  # uni | fh | capital | fubon | ctbc | nomura | allianz
+    issuer: str  # uni | fh | capital | fubon | ctbc | nomura | allianz | cathay
     fund_code: str
     source_page: str
 
