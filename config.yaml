@@ -55,6 +55,12 @@ etfs:
     fund_code: "00980A"
     source_page: "https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00980A"
 
+  - ticker: "00982A"
+    name: "主動群益台灣強棒"
+    issuer: capital
+    fund_code: "399"
+    source_page: "https://www.capitalfund.com.tw/etf/product/detail/399/portfolio"
+
 fetch:
   timeout_sec: 60
   retries: 3
