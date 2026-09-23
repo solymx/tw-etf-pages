@@ -2,7 +2,7 @@
 
 台灣**主動式 ETF**每日**持股異動**靜態報告（非股價）。
 
-觀察清單：`00981A`、`00988A`、`00991A`、`00403A`、`00992A`、`00405A`、`00406A`、`00980A`、`00985A`、`00982A`、`00984A`、`00993A`、`00400A`、`00401A`、`00987A`、`00408A`。
+觀察清單：`00981A`、`00988A`、`00991A`、`00403A`、`00992A`、`00405A`、`00406A`、`00980A`、`00985A`、`00982A`、`00984A`、`00993A`、`00400A`、`00401A`、`00987A`、`00408A`、`00995A`。
 
 每個交易日對每檔 ETF，與**前一份已歸檔快照**比較股數，產出：
 
@@ -66,7 +66,7 @@
 | **復華（fh）** `00991A` | URL 帶 `YYYYMMDD`，可下載歷史 | 可選擇性回補（本 repo 已為 00991A 歸檔約 20 個交易日供圖表展示） |
 | **群益（capital）** `00992A`／`00982A` | 無公開 Excel／依日期 API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像群益官網投組歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
 | **富邦（fubon）** `00405A` | 官網投組頁有 ASP.NET 下載鈕，無穩定公開 Excel／CSV URL；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像富邦官網投組歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
-| **中信（ctbc）** `00406A` | 官網 PCF／投組頁無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像中信官網 PCF 頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
+| **中信（ctbc）** `00406A`／`00995A` | 官網 PCF／投組頁無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像中信官網 PCF 頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
 | **野村（nomura）** `00980A`／`00985A` | 官網投組頁（SPA）無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像野村官網投組頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
 | **安聯（allianz）** `00984A`／`00993A` | 官網投組頁無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像安聯官網投組頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
 | **國泰（cathay）** `00400A` | 官網投組頁無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像國泰官網投組頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
@@ -137,7 +137,7 @@ etfs:
 - 復華投信：`issuer: fh`，`fund_code` 為路徑中的產品碼（本專案為 `ETF23`）。
 - 群益投信：`issuer: capital`，`fund_code` 為官網產品 id（本專案 `00992A` 為 `500`、`00982A` 為 `399`）；無公開 Excel API，抓取走 zdsetf 鏡像官網投組。
 - 富邦投信：`issuer: fubon`，`fund_code` 為股票代號（本專案 `00405A`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網投組（`source_url` → websys.fsit.com.tw）。
-- 中國信託投信：`issuer: ctbc`，`fund_code` 為股票代號（本專案 `00406A`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網 PCF／投組（`source_url` → ctbcinvestments.com）。
+- 中國信託投信：`issuer: ctbc`，`fund_code` 為股票代號（本專案 `00406A`／`00995A`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網 PCF／投組（`source_url` → ctbcinvestments.com）。
 - 野村投信：`issuer: nomura`，`fund_code` 為股票代號（本專案 `00980A`／`00985A`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網投組（`source_url` → nomurafunds.com.tw）。
 - 安聯投信：`issuer: allianz`，`fund_code` 為官網產品碼（本專案 `00984A` 為 `E0001`、`00993A` 為 `E0002`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網投組（`source_url` → etf.allianzgi.com.tw）。
 - 國泰投信：`issuer: cathay`，`fund_code` 為官網產品碼（本專案 `00400A` 為 `EEA`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網投組（`source_url` → cathaysite.com.tw）。
@@ -155,7 +155,7 @@ etfs:
 | 主 | 復華 `api/assetsExcel/ETF23/{YYYYMMDD}` | 無需登入；可依日期取歷史；無資料時回 JSON |
 | 主 | 群益 `capital`（`00992A`／`00982A`） | **無公開 Excel API**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` 鏡像官網投組（`source_url` → capitalfund.com.tw） |
 | 主 | 富邦 `fubon`（`00405A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/00405A/snapshot` 鏡像官網投組（`source_url` → websys.fsit.com.tw） |
-| 主 | 中信 `ctbc`（`00406A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/00406A/snapshot` 鏡像官網 PCF（`source_url` → ctbcinvestments.com） |
+| 主 | 中信 `ctbc`（`00406A`／`00995A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` 鏡像官網 PCF（`source_url` → ctbcinvestments.com） |
 | 主 | 野村 `nomura`（`00980A`／`00985A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` 鏡像官網投組（`source_url` → nomurafunds.com.tw） |
 | 主 | 安聯 `allianz`（`00984A`／`00993A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` 鏡像官網投組（`source_url` → etf.allianzgi.com.tw） |
 | 主 | 國泰 `cathay`（`00400A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/00400A/snapshot` 鏡像官網投組（`source_url` → cathaysite.com.tw） |

@@ -33,11 +33,11 @@
 - 本站以 `zdsetf.com/api/etfs/00405A/snapshot` 作為主來源（JSON 內 `source_url` 指向 websys.fsit.com.tw）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
-## 中信（00406A／CTBC）
+## 中信（00406A／00995A／CTBC）
 
-- 官網 PCF／投組頁：`https://www.ctbcinvestments.com/etfprod/00406A/pcf`。
+- 官網 PCF／投組頁：`00406A` → `https://www.ctbcinvestments.com/etfprod/00406A/pcf`；`00995A` → `https://www.ctbcinvestments.com/etfprod/00995A/pcf`（產品頁亦可見 `https://www.ctbcinvestments.com/Etf/00653201`）。
 - **無穩定公開 Excel／CSV API** 可供本站直接下載。
-- 本站以 `zdsetf.com/api/etfs/00406A/snapshot` 作為主來源（JSON 內 `source_url` 指向 ctbcinvestments.com）；僅最新一日，**無法一次回補**。
+- 本站以 `zdsetf.com/api/etfs/{TICKER}/snapshot` 作為主來源（JSON 內 `source_url` 指向 ctbcinvestments.com）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
 ## 野村（00980A／00985A／Nomura）

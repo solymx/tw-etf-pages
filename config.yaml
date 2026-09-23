@@ -103,6 +103,12 @@ etfs:
     fund_code: "183"
     source_page: "https://www.fsitc.com.tw/FundDetail.aspx?ID=183"
 
+  - ticker: "00995A"
+    name: "主動中信台灣卓越"
+    issuer: ctbc
+    fund_code: "00995A"
+    source_page: "https://www.ctbcinvestments.com/etfprod/00995A/pcf"
+
 fetch:
   timeout_sec: 60
   retries: 3
