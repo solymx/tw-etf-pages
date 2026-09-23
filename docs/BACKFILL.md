@@ -40,9 +40,9 @@
 - 本站以 `zdsetf.com/api/etfs/{TICKER}/snapshot` 作為主來源（JSON 內 `source_url` 指向 ctbcinvestments.com）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
-## 野村（00980A／00985A／Nomura）
+## 野村（00980A／00985A／00999A／Nomura）
 
-- 官網產品／投組頁：`00980A` → `https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00980A`；`00985A` → `https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00985A`（亦可 `tab=basic`；zdsetf `source_url` 指向 `tab=Shareholding`）。
+- 官網產品／投組頁：`00980A` → `https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00980A`；`00985A` → `https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00985A`；`00999A` → `https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00999A`（亦可 `tab=basic`；zdsetf `source_url` 指向 `tab=Shareholding`）。
 - **無穩定公開 Excel／CSV API** 可供本站直接下載（官網為 SPA，無穩定自動化下載 URL）。
 - 本站以 `zdsetf.com/api/etfs/{TICKER}/snapshot` 作為主來源（JSON 內 `source_url` 指向 nomurafunds.com.tw）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。

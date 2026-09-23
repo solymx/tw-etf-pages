@@ -61,6 +61,12 @@ etfs:
     fund_code: "00985A"
     source_page: "https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00985A"
 
+  - ticker: "00999A"
+    name: "主動野村臺灣高息"
+    issuer: nomura
+    fund_code: "00999A"
+    source_page: "https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00999A"
+
   - ticker: "00982A"
     name: "主動群益台灣強棒"
     issuer: capital
