@@ -151,6 +151,13 @@ etfs:
     fund_code: "CR"
     source_page: "https://www.cathaysite.com.tw/ETF/detail/ECR?tab=etf3"
 
+  - ticker: "00878"
+    name: "國泰永續高股息"
+    issuer: cathay
+    fund_code: "CN"
+    source_page: "https://www.cathaysite.com.tw/ETF/detail/ECS?tab=etf3"
+
+
 fetch:
   timeout_sec: 60
   retries: 3

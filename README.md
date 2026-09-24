@@ -2,7 +2,7 @@
 
 台灣**主動式／被動式 ETF**每日**持股異動**靜態報告（非股價）。
 
-觀察清單：`00981A`、`00988A`、`00991A`、`00403A`、`00992A`、`00405A`、`00406A`、`00980A`、`00985A`、`00982A`、`00984A`、`00993A`、`00400A`、`00401A`、`00987A`、`00408A`、`00994A`、`00995A`、`00996A`、`00999A`、`0050`、`0056`、`00713`、`00881`。
+觀察清單：`00981A`、`00988A`、`00991A`、`00403A`、`00992A`、`00405A`、`00406A`、`00980A`、`00985A`、`00982A`、`00984A`、`00993A`、`00400A`、`00401A`、`00987A`、`00408A`、`00994A`、`00995A`、`00996A`、`00999A`、`0050`、`0056`、`00713`、`00881`、`00878`。
 
 每個交易日對每檔 ETF，與**前一份已歸檔快照**比較股數，產出：
 
@@ -69,7 +69,7 @@
 | **中信（ctbc）** `00406A`／`00995A` | 官網 PCF／投組頁無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像中信官網 PCF 頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
 | **野村（nomura）** `00980A`／`00985A`／`00999A` | 官網投組頁（SPA）無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像野村官網投組頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
 | **安聯（allianz）** `00984A`／`00993A` | 官網投組頁無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像安聯官網投組頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
-| **國泰（cathay）** `00400A`／`00881` | 官網投組頁無穩定公開 Excel／CSV；zdsetf **不收錄**被動 `00881`（主動 `00400A` 可） | **無法一次回補**。`00400A` 以 zdsetf 鏡像官網；`00881` 以官網 cwapi `GetIndexStockWeights`（fundCode=`CR`）歸檔權重，股數為 weight×1e6 合成。靠每日 Actions 累積。 |
+| **國泰（cathay）** `00400A`／`00881`／`00878` | 官網投組頁無穩定公開 Excel／CSV；zdsetf **不收錄**被動 `00881`／`00878`（主動 `00400A` 可） | **無法一次回補**。`00400A` 以 zdsetf 鏡像官網；`00881`／`00878` 以官網 cwapi `GetIndexStockWeights`（fundCode=`CR`／`CN`）歸檔權重，股數為 weight×1e6 合成。靠每日 Actions 累積。 |
 | **摩根（jpm）** `00401A` | 官網產品／PCF 無穩定公開 Excel／CSV API；zdsetf 僅最新一日；權重可能為 null | **無法一次回補**。以 zdsetf 鏡像摩根官網 PCF／投組歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。權重 null 正規化為 0.0（不臆造）。 |
 | **台新（taishin）** `00987A` | 官網 PCF／投組頁無穩定公開 Excel／CSV API；zdsetf 僅最新一日；權重可能為 null | **無法一次回補**。以 zdsetf 鏡像台新官網 PCF／投組歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。權重 null 正規化為 0.0（不臆造）。 |
 | **第一金（fsitc）** `00408A`／`00994A` | 官網投組頁無穩定公開 Excel／CSV API；zdsetf 僅最新一日 | **無法一次回補**。以 zdsetf 鏡像第一金官網投組頁歸檔，靠每日 Actions 累積；異動資料日選單仍最多 10 日。 |
@@ -142,7 +142,7 @@ etfs:
 - 中國信託投信：`issuer: ctbc`，`fund_code` 為股票代號（本專案 `00406A`／`00995A`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網 PCF／投組（`source_url` → ctbcinvestments.com）。
 - 野村投信：`issuer: nomura`，`fund_code` 為股票代號（本專案 `00980A`／`00985A`／`00999A`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網投組（`source_url` → nomurafunds.com.tw）。
 - 安聯投信：`issuer: allianz`，`fund_code` 為官網產品碼（本專案 `00984A` 為 `E0001`、`00993A` 為 `E0002`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網投組（`source_url` → etf.allianzgi.com.tw）。
-- 國泰投信：`issuer: cathay`；`fund_code` 對主動 `00400A` 為官網 URL 碼 `EEA`（zdsetf）；對被動 `00881` 為 cwapi `fundCode`=`CR`（頁面 slug `ECR`）。抓取先試 zdsetf，失敗則改官網 `GetIndexStockWeights`（權重；股數為 weight×1e6 合成）。
+- 國泰投信：`issuer: cathay`；`fund_code` 對主動 `00400A` 為官網 URL 碼 `EEA`（zdsetf）；對被動 `00881`／`00878` 為 cwapi `fundCode`=`CR`／`CN`（頁面 slug `ECR`／`ECS`）。抓取先試 zdsetf，失敗則改官網 `GetIndexStockWeights`（權重；股數為 weight×1e6 合成）。
 - 摩根投信：`issuer: jpm`，`fund_code` 為股票代號（本專案 `00401A`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網 PCF／投組（`source_url` → am.jpmorgan.com）。zdsetf `weight_pct` 可能為 null，解析後正規化為 `0.0`（不臆造權重）。
 - 台新投信：`issuer: taishin`，`fund_code` 為股票代號（本專案 `00987A`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網 PCF／投組（`source_url` → tsit.com.tw）。zdsetf `weight_pct` 可能為 null，解析後正規化為 `0.0`（不臆造權重）。
 - 第一金投信：`issuer: fsitc`，`fund_code` 為官網 FundDetail ID（本專案 `00408A` 為 `183`、`00994A` 為 `182`）；無穩定公開 Excel／CSV，抓取走 zdsetf 鏡像官網投組（`source_url` → fsitc.com.tw）。
@@ -162,7 +162,7 @@ etfs:
 | 主 | 中信 `ctbc`（`00406A`／`00995A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` 鏡像官網 PCF（`source_url` → ctbcinvestments.com） |
 | 主 | 野村 `nomura`（`00980A`／`00985A`／`00999A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` 鏡像官網投組（`source_url` → nomurafunds.com.tw） |
 | 主 | 安聯 `allianz`（`00984A`／`00993A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` 鏡像官網投組（`source_url` → etf.allianzgi.com.tw） |
-| 主 | 國泰 `cathay`（`00400A`／`00881`） | **無穩定公開 Excel／CSV**；`00400A` 以 [zdsetf.com](https://zdsetf.com) snapshot；`00881`（zdsetf 404）以官網 [cwapi GetIndexStockWeights](https://cwapi.cathaysite.com.tw/api/ETF/GetIndexStockWeights?fundCode=CR)（需 browser UA；股數合成自權重） |
+| 主 | 國泰 `cathay`（`00400A`／`00881`／`00878`） | **無穩定公開 Excel／CSV**；`00400A` 以 [zdsetf.com](https://zdsetf.com) snapshot；`00881`／`00878`（zdsetf 404）以官網 cwapi [GetIndexStockWeights](https://cwapi.cathaysite.com.tw/api/ETF/GetIndexStockWeights?fundCode=CN)（fundCode=`CR`／`CN`；需 browser UA；股數合成自權重） |
 | 主 | 摩根 `jpm`（`00401A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/00401A/snapshot` 鏡像官網 PCF／投組（`source_url` → am.jpmorgan.com）；權重 null → 0.0 |
 | 主 | 台新 `taishin`（`00987A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/00987A/snapshot` 鏡像官網 PCF／投組（`source_url` → tsit.com.tw）；權重 null → 0.0 |
 | 主 | 第一金 `fsitc`（`00408A`／`00994A`） | **無穩定公開 Excel／CSV**；以 [zdsetf.com](https://zdsetf.com) `/api/etfs/{TICKER}/snapshot` 鏡像官網投組（`source_url` → fsitc.com.tw） |

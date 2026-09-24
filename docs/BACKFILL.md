@@ -54,12 +54,12 @@
 - 本站以 `zdsetf.com/api/etfs/{TICKER}/snapshot` 作為主來源（JSON 內 `source_url` 指向 etf.allianzgi.com.tw）；僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
-## 國泰（00400A／00881／Cathay）
+## 國泰（00400A／00881／00878／Cathay）
 
-- 官網產品／投組頁：主動 `00400A` → `https://www.cathaysite.com.tw/ETF/detail/EEA`；被動 `00881`（國泰台灣科技龍頭，原名 5G+）→ `https://www.cathaysite.com.tw/ETF/detail/ECR?tab=etf3`。
+- 官網產品／投組頁：主動 `00400A` → `https://www.cathaysite.com.tw/ETF/detail/EEA`；被動 `00881`（國泰台灣科技龍頭，原名 5G+）→ `https://www.cathaysite.com.tw/ETF/detail/ECR?tab=etf3`；被動 `00878`（國泰永續高股息）→ `https://www.cathaysite.com.tw/ETF/detail/ECS?tab=etf3`。
 - **無穩定公開 Excel／CSV API** 可供本站直接下載。
 - `00400A`：以 `zdsetf.com/api/etfs/00400A/snapshot` 為主（有股數）；僅最新一日，**無法一次回補**。
-- `00881`：zdsetf **404**（不收錄此被動 ETF）。以官網 cwapi `GetIndexStockWeights?fundCode=CR` 歸檔持股權重；**無股數**，本站以 `shares = round(weight_pct * 1e6)` 合成供相對異動／趨勢；cwapi 需 browser-like User-Agent（專案 UA 會 403）。僅最新一日，**無法一次回補**。
+- `00881`／`00878`：zdsetf **404**（不收錄此等被動 ETF）。以官網 cwapi `GetIndexStockWeights?fundCode=CR`／`CN` 歸檔持股權重；**無股數**，本站以 `shares = round(weight_pct * 1e6)` 合成供相對異動／趨勢；cwapi 需 browser-like User-Agent（專案 UA 會 403）。僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
 ## 摩根（00401A／J.P. Morgan AM Taiwan／jpm）
