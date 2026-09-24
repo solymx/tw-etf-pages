@@ -1,13 +1,13 @@
 # 歷史持股回補（Backfill）
 
-## 結論（00981A／統一投信）
+## 結論（00981A／00988A／00403A／00939／統一投信）
 
 **不可行（一次回補 ~20 交易日）。**
 
-- 統一 ezmoney `AssetExcelNPOI?fundCode=` 只回傳**最新**投資組合 Excel。
+- 統一 ezmoney `AssetExcelNPOI?fundCode=` 只回傳**最新**投資組合 Excel（主動 `49YTW`／`61YTW`／`63YTW`；被動 `00939` 統一台灣高息動能 → `46YTW`）。
 - 調查與實測：無依日期參數的公開歷史 endpoint。
-- 第三方 `zdsetf.com` 僅有 `/snapshot`、`/changes`（最新一日），`/history` 等回 404。
-- 因此 **00981A、00988A、00403A** 的近 20 日趨勢必須靠本站 **每日 Actions 自行歸檔** 累積；上線初期天數會少於 20。
+- 第三方 `zdsetf.com` 僅有 `/snapshot`、`/changes`（最新一日），`/history` 等回 404；被動 `00939` snapshot **404**。
+- 因此 **00981A、00988A、00403A、00939** 的近 20 日趨勢必須靠本站 **每日 Actions 自行歸檔** 累積；上線初期天數會少於 20。
 
 ## 復華（00991A／00929）
 

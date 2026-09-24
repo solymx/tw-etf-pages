@@ -1,5 +1,8 @@
 {
-  "mode": "live",
-  "generated_at": "2026-09-24T22:50:24+08:00",
+  "mode": "live-partial",
+  "tickers": [
+    "00939"
+  ],
+  "generated_at": "2026-09-24T23:58:37+08:00",
   "errors": []
 }

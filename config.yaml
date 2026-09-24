@@ -175,6 +175,12 @@ etfs:
     fund_code: "ETF21"
     source_page: "https://www.fhtrust.com.tw/ETF/etf_detail/ETF21"
 
+  - ticker: "00939"
+    name: "統一台灣高息動能"
+    issuer: uni
+    fund_code: "46YTW"
+    source_page: "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=46YTW"
+
 
 fetch:
   timeout_sec: 60
