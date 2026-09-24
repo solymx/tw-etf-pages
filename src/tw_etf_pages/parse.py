@@ -331,6 +331,72 @@ def parse_cathay_weights(
 
 
 
+
+
+def parse_uobam_pcf(
+    path: Path,
+    ticker: str,
+    policy: PlaceholderPolicy,
+) -> dict[str, Any]:
+    """Parse normalized UOBAM WebSitePcfRequest JSON.
+
+    Expected keys: snapshot_date, holdings[{stock_code,stock_name,shares,weight_pct}],
+    optional source_url / api_url / fund_code / etf002 / twName.
+    Official PCF discloses real qty (shares) and weight; Cash/Margin already dropped
+    at fetch time (kind != stock).
+    """
+    data = read_json(path)
+    raw_date = data.get("snapshot_date") or data.get("as_of_date") or data.get("date")
+    if raw_date is None:
+        raise ValueError(f"{path}: missing snapshot_date")
+    ds = str(raw_date).strip().replace("/", "-")
+    if len(ds) == 8 and ds.isdigit():
+        ds = f"{ds[0:4]}-{ds[4:6]}-{ds[6:8]}"
+    as_of = parse_iso_or_slash_date(ds)
+    rows = data.get("holdings") or data.get("result") or []
+    if not isinstance(rows, list):
+        rows = []
+    holdings = []
+    for h in rows:
+        if not isinstance(h, dict):
+            continue
+        kind = str(h.get("kind") or "stock").lower()
+        if kind and kind != "stock":
+            continue
+        code = (
+            h.get("stock_code")
+            or h.get("code")
+            or h.get("ticker")
+        )
+        if code is None or str(code).strip() == "":
+            continue
+        code_s = str(code).strip().upper()
+        if not any(ch.isdigit() for ch in code_s):
+            continue
+        name = h.get("stock_name") or h.get("cName") or h.get("name") or ""
+        weight = parse_weight_pct(
+            h.get("weight_pct", h.get("weight", h.get("weights", 0)))
+        )
+        shares = parse_int(h.get("shares", h.get("qty", 0)))
+        holdings.append(_holding(code_s, name, shares, weight, policy))
+    source_url = data.get("source_url") or data.get("official_url") or data.get("url")
+    meta = {
+        "source_url": source_url,
+        "api_url": data.get("api_url"),
+        "fund_code": data.get("fund_code"),
+        "etf002": data.get("etf002"),
+        "twName": data.get("twName"),
+    }
+    return _snapshot(
+        ticker=ticker,
+        as_of_date=as_of,
+        holdings=holdings,
+        source="uobam",
+        raw_path=path,
+        meta=meta,
+    )
+
+
 def parse_zdsetf_snapshot(
     path: Path,
     ticker: str,

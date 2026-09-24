@@ -157,6 +157,12 @@ etfs:
     fund_code: "CN"
     source_page: "https://www.cathaysite.com.tw/ETF/detail/ECS?tab=etf3"
 
+  - ticker: "00918"
+    name: "大華優利高填息30"
+    issuer: uobam
+    fund_code: "88329556"
+    source_page: "https://www.uobam.com.tw/fund/etf/88329556"
+
 
 fetch:
   timeout_sec: 60

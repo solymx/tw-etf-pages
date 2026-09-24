@@ -16,7 +16,7 @@ from .compare import (
 )
 from .config import AppConfig, EtfConfig, load_config
 from .fetch import FetchError, fetch_etf_holdings
-from .parse import parse_excel_for_issuer, parse_uni_excel, parse_fh_excel, parse_zdsetf_snapshot, parse_yuanta_ratio, parse_cathay_weights
+from .parse import parse_excel_for_issuer, parse_uni_excel, parse_fh_excel, parse_zdsetf_snapshot, parse_yuanta_ratio, parse_cathay_weights, parse_uobam_pcf
 from .render import render_site
 from .utils import read_json, write_json
 
@@ -36,6 +36,8 @@ def _parse_fetched(
         return parse_yuanta_ratio(path, etf.ticker, cfg.placeholder)
     if kind == "cathay":
         return parse_cathay_weights(path, etf.ticker, cfg.placeholder)
+    if kind == "uobam":
+        return parse_uobam_pcf(path, etf.ticker, cfg.placeholder)
     raise ValueError(kind)
 
 

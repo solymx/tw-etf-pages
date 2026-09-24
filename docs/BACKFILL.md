@@ -100,3 +100,10 @@
 - 本站以官網 ratio 頁為主來源：下載 HTML 後以 Node.js 解析 `__NUXT__` 寫成 JSON 再歸檔；**無法一次回補**。
 - **Caveat**：被動指數型（0050 臺灣50、0056 高股息、00713 高息低波）日常調倉少，日對日異動常為空；指數定期審核／再平衡時才會有明顯換股。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
+
+## 大華銀（00918／UOBAM／uobam）
+
+- 官網產品頁：`https://www.uobam.com.tw/fund/etf/88329556`；PCF：`https://www.uobam.com.tw/fund/etf/pcf?fundID=88329556`。
+- 無穩定公開 Excel／CSV 下載 URL；zdsetf **404**（不收錄被動 `00918`）。
+- 本站以官網 ServiceStack `GET /json/reply/WebSitePcfRequest?fundID=88329556` 為主來源（真實股數 qty＋weight；略過 kind≠stock 的 Cash／Margin）。部分 CA 缺中華電信中繼時 SSL verify 失敗會改 `verify=False`。僅最新一日，**無法一次回補**。
+

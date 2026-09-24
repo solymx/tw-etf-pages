@@ -30,6 +30,10 @@ CATHAY_BROWSER_UA = (
     "Chrome/120.0.0.0 Safari/537.36"
 )
 
+UOBAM_BASE = "https://www.uobam.com.tw"
+UOBAM_PCF_API = UOBAM_BASE + "/json/reply/WebSitePcfRequest"
+UOBAM_BROWSER_UA = CATHAY_BROWSER_UA
+
 # Node extracts FundWeights from Nuxt SSR window.__NUXT__ (packed IIFE; not pure-JSON).
 _YUANTA_EXTRACT_JS = r"""
 const fs = require('fs');
@@ -371,6 +375,144 @@ def fetch_cathay_weights(cfg: AppConfig, etf: EtfConfig, dest: Path) -> Path:
     return dest
 
 
+
+
+def fetch_uobam_pcf(cfg: AppConfig, etf: EtfConfig, dest: Path) -> Path:
+    """Download UOBAM (大華銀投信) official WebSitePcfRequest JSON.
+
+    zdsetf does not track passive 00918. Official PCF API returns equity
+    holdings with real share counts (qty) and weight_pct. Non-stock rows
+    (Cash / Margin) are dropped at parse time.
+
+    Some OpenSSL/CA bundles lack the Chunghwa Telecom intermediate used by
+    uobam.com.tw; on SSL failure we retry with verify=False (same class of
+    workaround as Yuanta curl fallback).
+    """
+    import json
+    import re
+    from datetime import datetime, timezone, timedelta
+    import urllib3
+
+    timeout = float(cfg.fetch.get("timeout_sec", 60))
+    retries = int(cfg.fetch.get("retries", 3))
+    backoff = float(cfg.fetch.get("retry_backoff_sec", 2))
+    session = _session(cfg)
+    session.headers["User-Agent"] = UOBAM_BROWSER_UA
+    session.headers["Referer"] = etf.source_page or (UOBAM_BASE + "/")
+    session.headers["Accept"] = "application/json, text/plain, */*"
+    fund_code = (etf.fund_code or "").strip()
+    if not fund_code:
+        raise FetchError(f"UOBAM PCF requires fund_code for {etf.ticker}")
+    url = UOBAM_PCF_API
+    params = {"fundID": fund_code}
+    logger.info("UOBAM PCF %s fundID=%s", url, fund_code)
+
+    resp = None
+    last_exc: Exception | None = None
+    for attempt in range(1, retries + 1):
+        for verify in (True, False):
+            try:
+                if not verify:
+                    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+                resp = session.get(url, params=params, timeout=timeout, verify=verify)
+                if not verify:
+                    logger.warning(
+                        "UOBAM PCF SSL verify disabled for %s (incomplete CA chain)",
+                        etf.ticker,
+                    )
+                last_exc = None
+                break
+            except requests.RequestException as exc:
+                last_exc = exc
+                logger.warning(
+                    "UOBAM GET verify=%s attempt %s/%s failed: %s",
+                    verify,
+                    attempt,
+                    retries,
+                    exc,
+                )
+        if resp is not None:
+            break
+        if attempt < retries:
+            time.sleep(backoff * attempt)
+    if resp is None:
+        raise FetchError(f"UOBAM PCF GET failed after {retries} tries: {url}: {last_exc}")
+    if resp.status_code != 200:
+        raise FetchError(f"UOBAM PCF HTTP {resp.status_code}: {url}?fundID={fund_code}")
+    try:
+        payload = resp.json()
+    except Exception as exc:  # noqa: BLE001
+        raise FetchError(f"UOBAM PCF non-JSON for {etf.ticker}") from exc
+    rows = payload.get("result") or []
+    if not isinstance(rows, list) or not rows:
+        raise FetchError(f"UOBAM PCF empty result for {etf.ticker}")
+
+    def _dotnet_date_to_iso(raw: object) -> str:
+        m = re.search(r"/Date\((\d+)", str(raw or ""))
+        if not m:
+            return ""
+        ms = int(m.group(1))
+        dt = datetime.fromtimestamp(ms / 1000, tz=timezone(timedelta(hours=8)))
+        return dt.strftime("%Y-%m-%d")
+
+    ds = _dotnet_date_to_iso(payload.get("datadate")) or _dotnet_date_to_iso(
+        payload.get("publish")
+    )
+    if not ds:
+        raise FetchError(f"UOBAM PCF missing datadate for {etf.ticker}")
+
+    holdings = []
+    for h in rows:
+        if not isinstance(h, dict):
+            continue
+        if str(h.get("kind") or "").lower() != "stock":
+            continue
+        code = h.get("code") or h.get("stock_code")
+        if code is None or str(code).strip() == "":
+            continue
+        code_s = str(code).strip()
+        if not any(ch.isdigit() for ch in code_s):
+            continue
+        try:
+            w = float(h.get("weight") if h.get("weight") is not None else h.get("weight_pct") or 0)
+        except (TypeError, ValueError):
+            w = 0.0
+        qty_raw = h.get("qty", h.get("shares", 0))
+        try:
+            if isinstance(qty_raw, (int, float)):
+                shares = int(round(float(qty_raw)))
+            else:
+                s = str(qty_raw or "0").replace(",", "").strip()
+                shares = int(round(float(s))) if s and s != "-" else 0
+        except (TypeError, ValueError):
+            shares = 0
+        holdings.append(
+            {
+                "stock_code": code_s,
+                "stock_name": h.get("cName") or h.get("stock_name") or h.get("name") or "",
+                "shares": shares,
+                "weight_pct": w,
+            }
+        )
+    if not holdings:
+        raise FetchError(f"UOBAM PCF parsed 0 stock holdings for {etf.ticker}")
+
+    out = {
+        "source_url": etf.source_page
+        or f"{UOBAM_BASE}/fund/etf/pcf?fundID={fund_code}",
+        "api_url": f"{url}?fundID={fund_code}",
+        "ticker": etf.ticker,
+        "fund_code": fund_code,
+        "etf002": payload.get("etf002") or etf.ticker,
+        "twName": payload.get("twName"),
+        "snapshot_date": ds,
+        "holdings": holdings,
+    }
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return dest
+
+
 def fetch_etf_holdings(
     cfg: AppConfig,
     etf: EtfConfig,
@@ -379,7 +521,7 @@ def fetch_etf_holdings(
 ) -> tuple[Path, str]:
     """
     Fetch primary issuer Excel; on failure optionally fallback to zdsetf JSON.
-    Returns (path, kind) where kind is 'uni_excel' | 'fh_excel' | 'zdsetf' | 'yuanta'.
+    Returns (path, kind) where kind is 'uni_excel' | 'fh_excel' | 'zdsetf' | 'yuanta' | 'cathay' | 'uobam'.
 
     Capital Fund (群益投信), Fubon (富邦投信), CTBC (中國信託投信),
     Nomura (野村投信), Allianz (安聯投信), Cathay (國泰投信),
@@ -397,6 +539,13 @@ def fetch_etf_holdings(
     """
     stamp = today_taipei().isoformat()
     raw_dir = cfg.raw_dir / etf.ticker
+
+    # Primary path for UOBAM / 大華銀投信 passive ETFs: official WebSitePcfRequest.
+    # zdsetf does not track 00918 (404).
+    if etf.issuer == "uobam":
+        path = raw_dir / f"{etf.ticker}_{stamp}_uobam.json"
+        fetch_uobam_pcf(cfg, etf, path)
+        return path, "uobam"
 
     # Primary path for Yuanta (元大投信) passive ETFs: official ratio SSR → JSON.
     if etf.issuer == "yuanta":
