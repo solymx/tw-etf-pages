@@ -181,6 +181,12 @@ etfs:
     fund_code: "46YTW"
     source_page: "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=46YTW"
 
+  - ticker: "00940"
+    name: "元大台灣價值高息"
+    issuer: yuanta
+    fund_code: "00940"
+    source_page: "https://www.yuantaetfs.com/product/detail/00940/ratio"
+
 
 fetch:
   timeout_sec: 60
