@@ -1,5 +1,7 @@
 {
-  "mode": "live",
-  "generated_at": "2026-09-24T19:22:29+08:00",
-  "errors": []
+  "mode": "run-00929",
+  "generated_at": "2026-09-24T22:09:12+08:00",
+  "tickers": [
+    "00929"
+  ]
 }

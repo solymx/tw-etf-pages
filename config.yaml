@@ -169,6 +169,12 @@ etfs:
     fund_code: "195"
     source_page: "https://www.capitalfund.com.tw/etf/product/detail/195/portfolio"
 
+  - ticker: "00929"
+    name: "復華台灣科技優息"
+    issuer: fh
+    fund_code: "ETF21"
+    source_page: "https://www.fhtrust.com.tw/ETF/etf_detail/ETF21"
+
 
 fetch:
   timeout_sec: 60

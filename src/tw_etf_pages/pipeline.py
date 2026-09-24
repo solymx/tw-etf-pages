@@ -87,6 +87,7 @@ def _sample_map(samples: Path) -> dict[str, list[Path]]:
             samples / "00991A_20260918.xlsx",
             samples / "00991A_20260922.xlsx",
         ],
+        "00929": [samples / "00929_20260924.xlsx"],
     }
     return mapping
 

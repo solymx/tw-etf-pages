@@ -148,17 +148,26 @@ def parse_fh_excel(
     policy: PlaceholderPolicy,
     source: str = "fh_excel",
 ) -> dict[str, Any]:
-    """Parse FHTrust assetsExcel workbook."""
+    """Parse FHTrust assetsExcel workbook.
+
+    Equity rows only: stop at blank line or non-stock sections (e.g. 期貨代號).
+    Passive FH ETFs such as 00929 append a futures block after stocks.
+    """
     rows = _load_rows(path)
 
     as_of: date | None = None
     holdings: list[dict[str, Any]] = []
     in_stocks = False
     meta: dict[str, Any] = {}
+    # Section headers that end the equity block (passive FH workbooks).
+    _end_stock_headers = {"期貨代號", "債券代號", "附買回債券", "附賣回債券"}
 
     for i, row in enumerate(rows):
         cell0 = row[0] if row else None
-        if cell0 is None:
+        if cell0 is None or (isinstance(cell0, str) and not cell0.strip()):
+            # Blank row after equity holdings → end stocks (futures follow on FH passives).
+            if in_stocks:
+                break
             continue
         text0 = str(cell0).strip()
         if text0.startswith("日期"):
@@ -177,7 +186,7 @@ def parse_fh_excel(
             in_stocks = True
             continue
         if in_stocks:
-            if not text0:
+            if not text0 or text0 in _end_stock_headers:
                 break
             name = row[1] if len(row) > 1 else ""
             shares = parse_int(row[2] if len(row) > 2 else 0)
