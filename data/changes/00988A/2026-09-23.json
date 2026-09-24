@@ -1,0 +1,85 @@
+{
+  "etf_ticker": "00988A",
+  "as_of_date": "2026-09-23",
+  "prev_as_of_date": "2026-09-22",
+  "compared_at": "2026-09-24T18:59:43+08:00",
+  "source": "uni_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 1,
+    "increase": 3,
+    "decrease": 2,
+    "full_exit": 0
+  },
+  "first_buy": [
+    {
+      "stock_code": "IREN US",
+      "stock_name": "IREN LTD",
+      "prev_shares": 0,
+      "curr_shares": 325000,
+      "shares_delta": 325000,
+      "prev_weight_pct": null,
+      "curr_weight_pct": 0.91,
+      "streak_days": 1
+    }
+  ],
+  "increase": [
+    {
+      "stock_code": "3017",
+      "stock_name": "奇鋐",
+      "prev_shares": 440000,
+      "curr_shares": 510000,
+      "shares_delta": 70000,
+      "prev_weight_pct": 2.78,
+      "curr_weight_pct": 3.31,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "INTC US",
+      "stock_name": "INTEL CORP",
+      "prev_shares": 500399,
+      "curr_shares": 550399,
+      "shares_delta": 50000,
+      "prev_weight_pct": 3.66,
+      "curr_weight_pct": 4.0,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "BE US",
+      "stock_name": "BLOOM ENERGY CORP- A",
+      "prev_shares": 350000,
+      "curr_shares": 365000,
+      "shares_delta": 15000,
+      "prev_weight_pct": 5.72,
+      "curr_weight_pct": 5.95,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "4979",
+      "stock_name": "華星光",
+      "prev_shares": 900000,
+      "curr_shares": 450000,
+      "shares_delta": -450000,
+      "prev_weight_pct": 1.02,
+      "curr_weight_pct": 0.5,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "MSFT US",
+      "stock_name": "MICROSOFT CORP(微軟公司)",
+      "prev_shares": 80000,
+      "curr_shares": 40000,
+      "shares_delta": -40000,
+      "prev_weight_pct": 2.36,
+      "curr_weight_pct": 1.19,
+      "streak_days": 2
+    }
+  ],
+  "full_exit": []
+}

@@ -1,0 +1,282 @@
+{
+  "etf_ticker": "00994A",
+  "as_of_date": "2026-09-24",
+  "source": "zdsetf",
+  "fetched_at": "2026-09-24T18:59:56+08:00",
+  "raw_file": "00994A_2026-09-24_zdsetf.json",
+  "raw_file_hash": "edf19fb77d7aab543e8699f23bd679771ece28fdd6959a3a00fd315aa5ed770f",
+  "holdings_count": 38,
+  "placeholder_count": 1,
+  "meta": {
+    "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=182",
+    "fetched_at_upstream": "2026-09-24T09:34:50"
+  },
+  "holdings": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "shares": 265999,
+      "weight_pct": 14.18,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2454",
+      "stock_name": "聯發科技",
+      "shares": 70101,
+      "weight_pct": 7.99,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3017",
+      "stock_name": "奇鋐科技",
+      "shares": 103500,
+      "weight_pct": 7.93,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "shares": 246001,
+      "weight_pct": 6.29,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "shares": 50001,
+      "weight_pct": 5.45,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "6223",
+      "stock_name": "旺矽科技",
+      "shares": 39901,
+      "weight_pct": 4.66,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "6274",
+      "stock_name": "台燿",
+      "shares": 138001,
+      "weight_pct": 4.45,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3443",
+      "stock_name": "創意",
+      "shares": 22050,
+      "weight_pct": 4.05,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2059",
+      "stock_name": "川湖科技",
+      "shares": 14501,
+      "weight_pct": 3.86,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3653",
+      "stock_name": "健策",
+      "shares": 25000,
+      "weight_pct": 3.73,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "shares": 125000,
+      "weight_pct": 3.34,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "5274",
+      "stock_name": "信驊科技",
+      "shares": 6420,
+      "weight_pct": 2.75,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "shares": 800000,
+      "weight_pct": 2.66,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎科技服務",
+      "shares": 55518,
+      "weight_pct": 2.53,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光投資控股",
+      "shares": 146002,
+      "weight_pct": 2.2,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3189",
+      "stock_name": "景碩科技",
+      "shares": 102000,
+      "weight_pct": 2.12,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "6805",
+      "stock_name": "富世達",
+      "shares": 37000,
+      "weight_pct": 2.02,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2308",
+      "stock_name": "台達電",
+      "shares": 46500,
+      "weight_pct": 1.92,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科技",
+      "shares": 170000,
+      "weight_pct": 1.84,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3081",
+      "stock_name": "聯亞",
+      "shares": 28000,
+      "weight_pct": 1.63,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦科技",
+      "shares": 39000,
+      "weight_pct": 1.59,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2360",
+      "stock_name": "致茂電子",
+      "shares": 25000,
+      "weight_pct": 1.24,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "8996",
+      "stock_name": "高力熱處理工業",
+      "shares": 37000,
+      "weight_pct": 1.22,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "shares": 180000,
+      "weight_pct": 1.21,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2481",
+      "stock_name": "強茂",
+      "shares": 290000,
+      "weight_pct": 1.09,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "6239",
+      "stock_name": "力成科技",
+      "shares": 175000,
+      "weight_pct": 1.08,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3491",
+      "stock_name": "昇達科",
+      "shares": 30000,
+      "weight_pct": 1.01,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "6187",
+      "stock_name": "萬潤",
+      "shares": 27000,
+      "weight_pct": 0.7,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3665",
+      "stock_name": "貿聯-KY",
+      "shares": 13000,
+      "weight_pct": 0.66,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "7769",
+      "stock_name": "鴻勁精密",
+      "shares": 4000,
+      "weight_pct": 0.49,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "shares": 95000,
+      "weight_pct": 0.49,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3264",
+      "stock_name": "欣銓科技",
+      "shares": 91000,
+      "weight_pct": 0.48,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3008",
+      "stock_name": "大立光",
+      "shares": 3000,
+      "weight_pct": 0.4,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "shares": 16000,
+      "weight_pct": 0.38,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "1560",
+      "stock_name": "中砂",
+      "shares": 16000,
+      "weight_pct": 0.34,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3026",
+      "stock_name": "禾伸堂",
+      "shares": 17000,
+      "weight_pct": 0.3,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "shares": 51000,
+      "weight_pct": 0.03,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "9941",
+      "stock_name": "裕融企業",
+      "shares": 260,
+      "weight_pct": 0.0,
+      "is_placeholder": true
+    }
+  ]
+}
