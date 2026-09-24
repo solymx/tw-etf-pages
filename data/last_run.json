@@ -1,7 +1,7 @@
 {
-  "mode": "run-00929",
-  "generated_at": "2026-09-24T22:09:12+08:00",
-  "tickers": [
-    "00929"
+  "mode": "live",
+  "generated_at": "2026-09-24T22:11:19+08:00",
+  "errors": [
+    "00929: zdsetf HTTP 404: https://zdsetf.com/api/etfs/00929/snapshot"
   ]
 }
