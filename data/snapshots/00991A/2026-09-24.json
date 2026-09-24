@@ -1,20 +1,21 @@
 {
   "etf_ticker": "00991A",
   "as_of_date": "2026-09-24",
-  "source": "zdsetf",
-  "fetched_at": "2026-09-24T22:10:29+08:00",
-  "raw_file": "00991A_2026-09-24_zdsetf.json",
-  "raw_file_hash": "941c81e8d2b57e52b28f884402c9790cbcfb36892d78e50db0397163f838363f",
+  "source": "fh_excel",
+  "fetched_at": "2026-09-24T22:49:55+08:00",
+  "raw_file": "00991A_2026-09-24_fh.xlsx",
+  "raw_file_hash": "095ccc3792891e286f5060dbcd66478f180ac0efacbdcd8eb209a52c467ae535",
   "holdings_count": 50,
   "placeholder_count": 12,
   "meta": {
-    "source_url": "https://www.fhtrust.com.tw/api/assetsExcel/ETF23/20260924",
-    "fetched_at_upstream": "2026-09-24T12:11:57"
+    "nav_total_raw": "78,898,133,489",
+    "units_raw": "4,319,416,000",
+    "nav_pu_raw": "18.27"
   },
   "holdings": [
     {
       "stock_code": "2330",
-      "stock_name": "台積電",
+      "stock_name": "台灣積體",
       "shares": 3800000,
       "weight_pct": 11.92,
       "is_placeholder": false,
@@ -22,7 +23,7 @@
     },
     {
       "stock_code": "2383",
-      "stock_name": "台光電",
+      "stock_name": "台光電子",
       "shares": 1350000,
       "weight_pct": 8.641,
       "is_placeholder": false,
@@ -38,7 +39,7 @@
     },
     {
       "stock_code": "3037",
-      "stock_name": "欣興",
+      "stock_name": "欣興電子",
       "shares": 5100000,
       "weight_pct": 7.66,
       "is_placeholder": false,
@@ -78,7 +79,7 @@
     },
     {
       "stock_code": "8046",
-      "stock_name": "南電",
+      "stock_name": "南亞電路",
       "shares": 3300000,
       "weight_pct": 5.186,
       "is_placeholder": false,
@@ -86,7 +87,7 @@
     },
     {
       "stock_code": "2327",
-      "stock_name": "國巨*",
+      "stock_name": "國巨股份",
       "shares": 6700000,
       "weight_pct": 4.925,
       "is_placeholder": false,
@@ -102,7 +103,7 @@
     },
     {
       "stock_code": "6669",
-      "stock_name": "緯穎科技服務",
+      "stock_name": "緯穎科技",
       "shares": 1150020,
       "weight_pct": 3.083,
       "is_placeholder": false,
@@ -110,7 +111,7 @@
     },
     {
       "stock_code": "3081",
-      "stock_name": "聯亞",
+      "stock_name": "聯亞光電",
       "shares": 900000,
       "weight_pct": 3.08,
       "is_placeholder": false,
@@ -118,7 +119,7 @@
     },
     {
       "stock_code": "3026",
-      "stock_name": "禾伸堂",
+      "stock_name": "禾伸堂企",
       "shares": 2700000,
       "weight_pct": 2.772,
       "is_placeholder": false,
@@ -126,7 +127,7 @@
     },
     {
       "stock_code": "3653",
-      "stock_name": "健策",
+      "stock_name": "健策精密",
       "shares": 290000,
       "weight_pct": 2.544,
       "is_placeholder": false,
@@ -134,7 +135,7 @@
     },
     {
       "stock_code": "2308",
-      "stock_name": "台達電",
+      "stock_name": "台達電子",
       "shares": 871000,
       "weight_pct": 2.109,
       "is_placeholder": false,
@@ -142,7 +143,7 @@
     },
     {
       "stock_code": "2303",
-      "stock_name": "聯電",
+      "stock_name": "聯華電子",
       "shares": 10400000,
       "weight_pct": 2.03,
       "is_placeholder": false,
@@ -150,7 +151,7 @@
     },
     {
       "stock_code": "1303",
-      "stock_name": "南亞",
+      "stock_name": "南亞塑膠",
       "shares": 6700000,
       "weight_pct": 2.021,
       "is_placeholder": false,
@@ -158,7 +159,7 @@
     },
     {
       "stock_code": "3711",
-      "stock_name": "日月光投資控股",
+      "stock_name": "日月光投",
       "shares": 2030000,
       "weight_pct": 1.798,
       "is_placeholder": false,
@@ -182,7 +183,7 @@
     },
     {
       "stock_code": "3008",
-      "stock_name": "大立光",
+      "stock_name": "大立光電",
       "shares": 1000,
       "weight_pct": 0.008,
       "is_placeholder": true,
@@ -222,7 +223,7 @@
     },
     {
       "stock_code": "2317",
-      "stock_name": "鴻海精密工業",
+      "stock_name": "鴻海精密",
       "shares": 9000,
       "weight_pct": 0.003,
       "is_placeholder": false,
@@ -262,7 +263,7 @@
     },
     {
       "stock_code": "6274",
-      "stock_name": "台燿",
+      "stock_name": "台燿科技",
       "shares": 1000,
       "weight_pct": 0.002,
       "is_placeholder": true,
@@ -270,7 +271,7 @@
     },
     {
       "stock_code": "2881",
-      "stock_name": "富邦金融控股",
+      "stock_name": "富邦金融",
       "shares": 9000,
       "weight_pct": 0.002,
       "is_placeholder": false,
@@ -278,7 +279,7 @@
     },
     {
       "stock_code": "2882",
-      "stock_name": "國泰金",
+      "stock_name": "國泰金融",
       "shares": 9000,
       "weight_pct": 0.001,
       "is_placeholder": false,
@@ -286,7 +287,7 @@
     },
     {
       "stock_code": "2357",
-      "stock_name": "華碩",
+      "stock_name": "華碩電腦",
       "shares": 1000,
       "weight_pct": 0.001,
       "is_placeholder": true,
@@ -294,7 +295,7 @@
     },
     {
       "stock_code": "2379",
-      "stock_name": "瑞昱",
+      "stock_name": "瑞昱半導",
       "shares": 1000,
       "weight_pct": 0.001,
       "is_placeholder": true,
@@ -302,7 +303,7 @@
     },
     {
       "stock_code": "2885",
-      "stock_name": "元大金",
+      "stock_name": "元大金融",
       "shares": 9360,
       "weight_pct": 0.001,
       "is_placeholder": false,
@@ -310,7 +311,7 @@
     },
     {
       "stock_code": "2891",
-      "stock_name": "中國信託金融控股",
+      "stock_name": "中國信託",
       "shares": 9000,
       "weight_pct": 0.001,
       "is_placeholder": false,
@@ -326,7 +327,7 @@
     },
     {
       "stock_code": "2884",
-      "stock_name": "玉山金融控股",
+      "stock_name": "玉山金融",
       "shares": 9000,
       "weight_pct": 0.001,
       "is_placeholder": false,
@@ -342,7 +343,7 @@
     },
     {
       "stock_code": "2886",
-      "stock_name": "兆豐金",
+      "stock_name": "兆豐金融",
       "shares": 9000,
       "weight_pct": 0.001,
       "is_placeholder": false,
@@ -350,7 +351,7 @@
     },
     {
       "stock_code": "2880",
-      "stock_name": "華南金控",
+      "stock_name": "華南金融",
       "shares": 9090,
       "weight_pct": 0.001,
       "is_placeholder": false,
@@ -366,7 +367,7 @@
     },
     {
       "stock_code": "2887",
-      "stock_name": "台新新光金",
+      "stock_name": "台新新光",
       "shares": 9000,
       "weight_pct": 0.0,
       "is_placeholder": false,
@@ -374,7 +375,7 @@
     },
     {
       "stock_code": "2883",
-      "stock_name": "凱基金控",
+      "stock_name": "凱基金融",
       "shares": 9000,
       "weight_pct": 0.0,
       "is_placeholder": false,
@@ -382,7 +383,7 @@
     },
     {
       "stock_code": "2313",
-      "stock_name": "華通",
+      "stock_name": "華通電腦",
       "shares": 1253,
       "weight_pct": 0.0,
       "is_placeholder": false,
@@ -390,7 +391,7 @@
     },
     {
       "stock_code": "3036",
-      "stock_name": "文曄",
+      "stock_name": "文曄科技",
       "shares": 1000,
       "weight_pct": 0.0,
       "is_placeholder": true,
