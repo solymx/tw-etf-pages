@@ -121,7 +121,7 @@
     {% if issuer == "uni" %}
     統一投信 Excel <strong>僅提供最新一日</strong>，無法一次回補歷史；本站會隨每日 Actions 自動累積，約 20 個交易日後圖表會完整。
     {% elif issuer == "capital" %}
-    群益投信無公開歷史 Excel API；本站以 zdsetf 鏡像群益官網投組歸檔，歷史天數會隨每日 Actions 累積（異動資料日選單仍最多 10 日）。
+    群益投信無公開歷史 Excel API；主動檔以 zdsetf 鏡像官網，被動檔（如 00919）改走官網 CFWeb buyback（真實股數）。歷史天數會隨每日 Actions 累積（異動資料日選單仍最多 10 日）。
     {% elif issuer == "fubon" %}
     富邦投信無穩定公開 Excel／CSV 下載可供自動化；本站以 zdsetf 鏡像富邦官網投組歸檔，歷史天數會隨每日 Actions 累積（異動資料日選單仍最多 10 日）。
     {% elif issuer == "ctbc" %}
@@ -149,7 +149,7 @@
   {% if not trend.enough_for_intermittent %}
   <div class="empty-box trend-hint">
     目前僅有 {{ trend.day_count }} 日資料：可看股數折線，但「間歇加碼」（買→持平／減→再買）需至少 3 個交易日才能標示。
-    {% if issuer == "uni" %}統一投信無歷史 API，回補不可行；資料會隨每日歸檔成長。{% elif issuer == "capital" %}群益（capital）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "fubon" %}富邦（fubon）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "ctbc" %}中信（ctbc）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "nomura" %}野村（nomura）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "allianz" %}安聯（allianz）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "cathay" %}國泰（cathay）經 zdsetf 或官網 cwapi 權重，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "jpm" %}摩根（jpm）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "taishin" %}台新（taishin）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "fsitc" %}第一金（fsitc）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "mega" %}兆豐（mega）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% endif %}
+    {% if issuer == "uni" %}統一投信無歷史 API，回補不可行；資料會隨每日歸檔成長。{% elif issuer == "capital" %}群益（capital）經 zdsetf 或官網 buyback，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "fubon" %}富邦（fubon）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "ctbc" %}中信（ctbc）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "nomura" %}野村（nomura）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "allianz" %}安聯（allianz）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "cathay" %}國泰（cathay）經 zdsetf 或官網 cwapi 權重，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "jpm" %}摩根（jpm）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "taishin" %}台新（taishin）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "fsitc" %}第一金（fsitc）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% elif issuer == "mega" %}兆豐（mega）經 zdsetf→官網鏡像，無一次回補；資料會隨每日歸檔成長。{% endif %}
   </div>
   {% endif %}
 
@@ -226,7 +226,7 @@
   {% if issuer == "uni" %}
   <p class="muted">資料說明：統一投信公開 Excel 僅最新一日；本站自行歸檔，歷史天數隨每日更新累積（目前趨勢可用 {{ trend.day_count }} 日）。異動報告與持股 JSON 均保存在 GitHub <code>data/</code>。</p>
   {% elif issuer == "capital" %}
-  <p class="muted">資料說明：群益投信（Capital Fund）無公開 Excel API；本站以 <a href="https://zdsetf.com" rel="noopener">zdsetf.com</a> 鏡像群益官網投組頁歸檔（source_url 指向 capitalfund.com.tw）。歷史稀疏至 Actions 累積為止；異動資料日選單最多 10 日。目前趨勢可用 {{ trend.day_count }} 日。</p>
+  <p class="muted">資料說明：群益投信（Capital Fund）無公開 Excel API；主動檔以 <a href="https://zdsetf.com" rel="noopener">zdsetf.com</a> 鏡像官網；被動檔（如 00919）以官網 CFWeb <code>/api/etf/buyback</code> 歸檔（真實股數＋權重；source_url 指向 capitalfund.com.tw）。歷史稀疏至 Actions 累積為止；異動資料日選單最多 10 日。目前趨勢可用 {{ trend.day_count }} 日。</p>
   {% elif issuer == "fubon" %}
   <p class="muted">資料說明：富邦投信（Fubon）無穩定公開 Excel／CSV 下載；本站以 <a href="https://zdsetf.com" rel="noopener">zdsetf.com</a> 鏡像富邦官網投組頁歸檔（source_url 指向 websys.fsit.com.tw）。歷史稀疏至 Actions 累積為止；異動資料日選單最多 10 日。目前趨勢可用 {{ trend.day_count }} 日。</p>
   {% elif issuer == "ctbc" %}

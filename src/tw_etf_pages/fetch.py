@@ -34,6 +34,9 @@ UOBAM_BASE = "https://www.uobam.com.tw"
 UOBAM_PCF_API = UOBAM_BASE + "/json/reply/WebSitePcfRequest"
 UOBAM_BROWSER_UA = CATHAY_BROWSER_UA
 
+CAPITAL_BASE = "https://www.capitalfund.com.tw"
+CAPITAL_BUYBACK = CAPITAL_BASE + "/CFWeb/api/etf/buyback"
+
 # Node extracts FundWeights from Nuxt SSR window.__NUXT__ (packed IIFE; not pure-JSON).
 _YUANTA_EXTRACT_JS = r"""
 const fs = require('fs');
@@ -513,6 +516,137 @@ def fetch_uobam_pcf(cfg: AppConfig, etf: EtfConfig, dest: Path) -> Path:
     return dest
 
 
+
+def fetch_capital_buyback(cfg: AppConfig, etf: EtfConfig, dest: Path) -> Path:
+    """Download Capital Fund (群益投信) official CFWeb /api/etf/buyback JSON.
+
+    Used when zdsetf does not track the ticker (typical for Capital passives
+    such as 00919). Requires fund_code = official product id (e.g. 195 for
+    00919; same id as /etf/product/detail/{id}/portfolio). Returns equity
+    stocks with real share counts and weights; bonds/futures/RP omitted.
+    As-of date uses pcf.date2 (portfolio date shown on the official page).
+    """
+    import json
+
+    timeout = float(cfg.fetch.get("timeout_sec", 60))
+    retries = int(cfg.fetch.get("retries", 3))
+    backoff = float(cfg.fetch.get("retry_backoff_sec", 2))
+    session = _session(cfg)
+    session.headers["Accept"] = "application/json, text/plain, */*"
+    session.headers["Content-Type"] = "application/json"
+    session.headers["Referer"] = etf.source_page or (CAPITAL_BASE + "/")
+    fund_code = (etf.fund_code or "").strip()
+    if not fund_code:
+        raise FetchError(f"Capital buyback requires fund_code for {etf.ticker}")
+    # API accepts numeric or string fundId
+    try:
+        fund_id_payload: int | str = int(fund_code)
+    except ValueError:
+        fund_id_payload = fund_code
+    url = CAPITAL_BUYBACK
+    logger.info("Capital buyback %s fundId=%s", url, fund_code)
+
+    resp = None
+    last_exc: Exception | None = None
+    for attempt in range(1, retries + 1):
+        try:
+            resp = session.post(
+                url, json={"fundId": fund_id_payload}, timeout=timeout
+            )
+            last_exc = None
+            break
+        except requests.RequestException as exc:
+            last_exc = exc
+            logger.warning(
+                "Capital buyback POST attempt %s/%s failed: %s",
+                attempt,
+                retries,
+                exc,
+            )
+            if attempt < retries:
+                time.sleep(backoff * attempt)
+    if resp is None:
+        raise FetchError(
+            f"Capital buyback POST failed after {retries} tries: {url}: {last_exc}"
+        )
+    if resp.status_code != 200:
+        raise FetchError(
+            f"Capital buyback HTTP {resp.status_code}: {url} fundId={fund_code}"
+        )
+    try:
+        payload = resp.json()
+    except Exception as exc:  # noqa: BLE001
+        raise FetchError(f"Capital buyback non-JSON for {etf.ticker}") from exc
+    if payload.get("code") not in (200, "200"):
+        raise FetchError(
+            f"Capital buyback API error for {etf.ticker}: "
+            f"code={payload.get('code')} msg={payload.get('message')!r}"
+        )
+    data = payload.get("data") or {}
+    pcf = data.get("pcf") or {}
+    rows = data.get("stocks") or []
+    if not isinstance(rows, list) or not rows:
+        raise FetchError(f"Capital buyback empty stocks for {etf.ticker}")
+
+    raw_date = pcf.get("date2") or pcf.get("date1") or ""
+    ds = str(raw_date).strip().replace("/", "-")
+    if not ds:
+        raise FetchError(f"Capital buyback missing date2 for {etf.ticker}")
+
+    holdings = []
+    for h in rows:
+        if not isinstance(h, dict):
+            continue
+        code = h.get("stocNo") or h.get("stock_code") or h.get("code")
+        if code is None or str(code).strip() == "":
+            continue
+        code_s = str(code).strip()
+        if not any(ch.isdigit() for ch in code_s):
+            continue
+        try:
+            w_raw = h.get("weightRound")
+            if w_raw is None:
+                w_raw = h.get("weight")
+            if w_raw is None:
+                w_raw = h.get("weight_pct")
+            w = float(w_raw or 0)
+        except (TypeError, ValueError):
+            w = 0.0
+        qty_raw = h.get("share", h.get("shares", 0))
+        try:
+            if isinstance(qty_raw, (int, float)):
+                shares = int(round(float(qty_raw)))
+            else:
+                s = str(qty_raw or "0").replace(",", "").strip()
+                shares = int(round(float(s))) if s and s != "-" else 0
+        except (TypeError, ValueError):
+            shares = 0
+        holdings.append(
+            {
+                "stock_code": code_s,
+                "stock_name": h.get("stocName") or h.get("stock_name") or h.get("name") or "",
+                "shares": shares,
+                "weight_pct": w,
+            }
+        )
+    if not holdings:
+        raise FetchError(f"Capital buyback parsed 0 stock holdings for {etf.ticker}")
+
+    out = {
+        "source_url": etf.source_page
+        or f"{CAPITAL_BASE}/etf/product/detail/{fund_code}/portfolio",
+        "api_url": url,
+        "ticker": etf.ticker,
+        "fund_code": fund_code,
+        "fund_name": pcf.get("fundName"),
+        "snapshot_date": ds,
+        "holdings": holdings,
+    }
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return dest
+
+
 def fetch_etf_holdings(
     cfg: AppConfig,
     etf: EtfConfig,
@@ -521,7 +655,7 @@ def fetch_etf_holdings(
 ) -> tuple[Path, str]:
     """
     Fetch primary issuer Excel; on failure optionally fallback to zdsetf JSON.
-    Returns (path, kind) where kind is 'uni_excel' | 'fh_excel' | 'zdsetf' | 'yuanta' | 'cathay' | 'uobam'.
+    Returns (path, kind) where kind is 'uni_excel' | 'fh_excel' | 'zdsetf' | 'yuanta' | 'cathay' | 'uobam' | 'capital'.
 
     Capital Fund (群益投信), Fubon (富邦投信), CTBC (中國信託投信),
     Nomura (野村投信), Allianz (安聯投信), Cathay (國泰投信),
@@ -529,11 +663,13 @@ def fetch_etf_holdings(
     First Securities Investment Trust / 第一金投信 (fsitc),
     and Mega Funds / 兆豐投信 (mega)
     have no reliable public Excel/CSV download URL for automation; for issuer in
-    {"capital", "fubon", "ctbc", "nomura", "allianz", "jpm", "taishin", "fsitc", "mega"}
+    {"fubon", "ctbc", "nomura", "allianz", "jpm", "taishin", "fsitc", "mega"}
     we archive via zdsetf.com snapshot, which mirrors the official portfolio/PCF
-    page (source_url points at capitalfund.com.tw / websys.fsit.com.tw /
+    page (source_url points at websys.fsit.com.tw /
     ctbcinvestments.com / nomurafunds.com.tw / etf.allianzgi.com.tw /
     am.jpmorgan.com / tsit.com.tw / fsitc.com.tw / megafunds.com.tw).
+    Capital (capital): try zdsetf first (actives like 00992A); on failure use
+    official CFWeb /api/etf/buyback (passives like 00919; real shares).
     Cathay (cathay): try zdsetf first; on failure use official cwapi
     GetIndexStockWeights (passives like 00881; weights only, synthetic shares).
     """
@@ -570,8 +706,26 @@ def fetch_etf_holdings(
             fetch_cathay_weights(cfg, etf, path_c)
             return path_c, "cathay"
 
-    # Primary path for capital / fubon / ctbc / nomura / allianz / jpm / taishin / fsitc / mega: zdsetf mirror (no Excel API).
-    if etf.issuer in ("capital", "fubon", "ctbc", "nomura", "allianz", "jpm", "taishin", "fsitc", "mega"):
+    # Capital: prefer zdsetf when available (actives like 00992A / 00982A).
+    # Passives such as 00919 are not on zdsetf → official CFWeb buyback API
+    # (real share qty + weights; fund_code = product id e.g. 195).
+    if etf.issuer == "capital":
+        path_z = raw_dir / f"{etf.ticker}_{stamp}_zdsetf.json"
+        try:
+            fetch_zdsetf_snapshot(cfg, etf.ticker, path_z)
+            return path_z, "zdsetf"
+        except FetchError as exc:
+            logger.warning(
+                "Capital zdsetf unavailable for %s (%s); trying official buyback",
+                etf.ticker,
+                exc,
+            )
+            path_c = raw_dir / f"{etf.ticker}_{stamp}_capital.json"
+            fetch_capital_buyback(cfg, etf, path_c)
+            return path_c, "capital"
+
+    # Primary path for fubon / ctbc / nomura / allianz / jpm / taishin / fsitc / mega: zdsetf mirror (no Excel API).
+    if etf.issuer in ("fubon", "ctbc", "nomura", "allianz", "jpm", "taishin", "fsitc", "mega"):
         path = raw_dir / f"{etf.ticker}_{stamp}_zdsetf.json"
         fetch_zdsetf_snapshot(cfg, etf.ticker, path)
         return path, "zdsetf"

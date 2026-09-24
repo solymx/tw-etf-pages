@@ -163,6 +163,12 @@ etfs:
     fund_code: "88329556"
     source_page: "https://www.uobam.com.tw/fund/etf/88329556"
 
+  - ticker: "00919"
+    name: "群益台灣精選高息"
+    issuer: capital
+    fund_code: "195"
+    source_page: "https://www.capitalfund.com.tw/etf/product/detail/195/portfolio"
+
 
 fetch:
   timeout_sec: 60

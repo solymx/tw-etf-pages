@@ -19,11 +19,12 @@
 
 趨勢圖與「間歇加碼」標示在天數不足時顯示 Traditional Chinese 空狀態／提示，不偽造歷史點。
 
-## 群益（00992A／00982A／Capital Fund）
+## 群益（00992A／00982A／00919／Capital Fund）
 
-- 官網投組頁：`00992A` → `https://www.capitalfund.com.tw/etf/product/detail/500/portfolio`；`00982A` → `https://www.capitalfund.com.tw/etf/product/detail/399/portfolio`。
+- 官網投組頁：`00992A` → `https://www.capitalfund.com.tw/etf/product/detail/500/portfolio`；`00982A` → `https://www.capitalfund.com.tw/etf/product/detail/399/portfolio`；被動 `00919`（群益台灣精選高息）→ `https://www.capitalfund.com.tw/etf/product/detail/195/portfolio`。
 - **無公開 Excel／依日期 API** 可供本站直接下載。
-- 本站以 `zdsetf.com/api/etfs/{TICKER}/snapshot` 作為主來源（JSON 內 `source_url` 指向群益官網）；僅最新一日，**無法一次回補**。
+- `00992A`／`00982A`：以 `zdsetf.com/api/etfs/{TICKER}/snapshot` 為主（有股數；`source_url` 指向群益官網）；僅最新一日，**無法一次回補**。
+- `00919`：zdsetf **404**（不收錄此等被動 ETF）。以官網 CFWeb `POST /CFWeb/api/etf/buyback`（body `{"fundId":195}`）歸檔持股；含真實股數 `share` 與權重；略過債券附買回／期貨／保證金。資料日取 `pcf.date2`。僅最新一日，**無法一次回補**。
 - 歷史天數靠每日 Actions 累積；異動資料日選單仍最多 10 日。
 
 ## 富邦（00405A／Fubon）
