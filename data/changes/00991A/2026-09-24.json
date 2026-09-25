@@ -2,7 +2,7 @@
   "etf_ticker": "00991A",
   "as_of_date": "2026-09-24",
   "prev_as_of_date": "2026-09-23",
-  "compared_at": "2026-09-25T00:26:21+08:00",
+  "compared_at": "2026-09-25T23:06:43+08:00",
   "source": "fh_excel",
   "placeholder_policy": {
     "max_shares": 1000,

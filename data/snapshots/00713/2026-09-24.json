@@ -2,7 +2,7 @@
   "etf_ticker": "00713",
   "as_of_date": "2026-09-24",
   "source": "yuanta",
-  "fetched_at": "2026-09-25T00:26:45+08:00",
+  "fetched_at": "2026-09-25T23:07:00+08:00",
   "raw_file": "00713_2026-09-25_yuanta.json",
   "raw_file_hash": "e38f054f84bf5570e82865d58e8da6d34dff2cfb9d981f3d050730631f89fa4f",
   "holdings_count": 50,
