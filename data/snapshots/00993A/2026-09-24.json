@@ -2,14 +2,14 @@
   "etf_ticker": "00993A",
   "as_of_date": "2026-09-24",
   "source": "zdsetf",
-  "fetched_at": "2026-09-25T23:06:49+08:00",
-  "raw_file": "00993A_2026-09-25_zdsetf.json",
-  "raw_file_hash": "eb10d85f59c2dab608eef58ad6e794d74286efefa13d21b21c954d5f2fd7aa94",
+  "fetched_at": "2026-09-29T02:03:21+08:00",
+  "raw_file": "00993A_2026-09-29_zdsetf.json",
+  "raw_file_hash": "11d1f7c95f879641af598177985d5b38c41d5851ac35d30492b5f15351ad6519",
   "holdings_count": 53,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://etf.allianzgi.com.tw/list-trade",
-    "fetched_at_upstream": "2026-09-25T12:13:39"
+    "fetched_at_upstream": "2026-09-28T12:14:05"
   },
   "holdings": [
     {
