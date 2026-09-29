@@ -1,0 +1,114 @@
+{
+  "etf_ticker": "00991A",
+  "as_of_date": "2026-09-29",
+  "prev_as_of_date": "2026-09-24",
+  "compared_at": "2026-09-30T00:26:27+08:00",
+  "source": "fh_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 6,
+    "decrease": 3,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞塑膠",
+      "prev_shares": 6700000,
+      "curr_shares": 7000000,
+      "shares_delta": 300000,
+      "prev_weight_pct": 2.021,
+      "curr_weight_pct": 2.232,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台灣積體",
+      "prev_shares": 3800000,
+      "curr_shares": 4000000,
+      "shares_delta": 200000,
+      "prev_weight_pct": 11.92,
+      "curr_weight_pct": 12.781,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興電子",
+      "prev_shares": 5100000,
+      "curr_shares": 5200000,
+      "shares_delta": 100000,
+      "prev_weight_pct": 7.66,
+      "curr_weight_pct": 7.821,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3189",
+      "stock_name": "景碩科技",
+      "prev_shares": 4400000,
+      "curr_shares": 4500000,
+      "shares_delta": 100000,
+      "prev_weight_pct": 5.365,
+      "curr_weight_pct": 5.548,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南亞電路",
+      "prev_shares": 3300000,
+      "curr_shares": 3400000,
+      "shares_delta": 100000,
+      "prev_weight_pct": 5.186,
+      "curr_weight_pct": 5.574,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2454",
+      "stock_name": "聯發科技",
+      "prev_shares": 1080000,
+      "curr_shares": 1130000,
+      "shares_delta": 50000,
+      "prev_weight_pct": 7.234,
+      "curr_weight_pct": 7.163,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨股份",
+      "prev_shares": 6700000,
+      "curr_shares": 6000000,
+      "shares_delta": -700000,
+      "prev_weight_pct": 4.925,
+      "curr_weight_pct": 4.245,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦科技",
+      "prev_shares": 740000,
+      "curr_shares": 430000,
+      "shares_delta": -310000,
+      "prev_weight_pct": 1.777,
+      "curr_weight_pct": 1.005,
+      "streak_days": 3
+    },
+    {
+      "stock_code": "6223",
+      "stock_name": "旺矽科技",
+      "prev_shares": 250000,
+      "curr_shares": 150000,
+      "shares_delta": -100000,
+      "prev_weight_pct": 1.716,
+      "curr_weight_pct": 1.004,
+      "streak_days": 4
+    }
+  ],
+  "full_exit": []
+}

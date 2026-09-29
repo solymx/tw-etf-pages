@@ -1,0 +1,95 @@
+{
+  "etf_ticker": "00981A",
+  "as_of_date": "2026-09-29",
+  "prev_as_of_date": "2026-09-24",
+  "compared_at": "2026-09-30T00:26:24+08:00",
+  "source": "uni_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 1,
+    "increase": 3,
+    "decrease": 3,
+    "full_exit": 0
+  },
+  "first_buy": [
+    {
+      "stock_code": "6187",
+      "stock_name": "萬潤",
+      "prev_shares": 0,
+      "curr_shares": 121000,
+      "shares_delta": 121000,
+      "prev_weight_pct": null,
+      "curr_weight_pct": 0.06,
+      "streak_days": 1
+    }
+  ],
+  "increase": [
+    {
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "prev_shares": 1634000,
+      "curr_shares": 2022000,
+      "shares_delta": 388000,
+      "prev_weight_pct": 0.62,
+      "curr_weight_pct": 0.8,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6274",
+      "stock_name": "台燿",
+      "prev_shares": 5886000,
+      "curr_shares": 6151000,
+      "shares_delta": 265000,
+      "prev_weight_pct": 3.03,
+      "curr_weight_pct": 3.22,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2308",
+      "stock_name": "台達電",
+      "prev_shares": 7320000,
+      "curr_shares": 7389000,
+      "shares_delta": 69000,
+      "prev_weight_pct": 4.82,
+      "curr_weight_pct": 4.78,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光投控",
+      "prev_shares": 13966000,
+      "curr_shares": 12966000,
+      "shares_delta": -1000000,
+      "prev_weight_pct": 3.36,
+      "curr_weight_pct": 3.14,
+      "streak_days": 3
+    },
+    {
+      "stock_code": "6278",
+      "stock_name": "台表科",
+      "prev_shares": 3193000,
+      "curr_shares": 2674000,
+      "shares_delta": -519000,
+      "prev_weight_pct": 0.23,
+      "curr_weight_pct": 0.2,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎",
+      "prev_shares": 4873561,
+      "curr_shares": 4812561,
+      "shares_delta": -61000,
+      "prev_weight_pct": 3.55,
+      "curr_weight_pct": 3.56,
+      "streak_days": 4
+    }
+  ],
+  "full_exit": []
+}

@@ -1,0 +1,53 @@
+{
+  "etf_ticker": "00919",
+  "as_of_date": "2026-09-29",
+  "prev_as_of_date": "2026-09-24",
+  "compared_at": "2026-09-30T00:26:56+08:00",
+  "source": "capital",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 0,
+    "decrease": 3,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [],
+  "decrease": [
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "prev_shares": 608720000,
+      "curr_shares": 607020000,
+      "shares_delta": -1700000,
+      "prev_weight_pct": 15.03,
+      "curr_weight_pct": 15.14,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠",
+      "prev_shares": 36765000,
+      "curr_shares": 36565000,
+      "shares_delta": -200000,
+      "prev_weight_pct": 3.29,
+      "curr_weight_pct": 3.25,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2357",
+      "stock_name": "華碩",
+      "prev_shares": 38440000,
+      "curr_shares": 38340000,
+      "shares_delta": -100000,
+      "prev_weight_pct": 6.03,
+      "curr_weight_pct": 6.08,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": []
+}
