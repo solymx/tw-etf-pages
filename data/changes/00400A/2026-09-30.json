@@ -1,0 +1,84 @@
+{
+  "etf_ticker": "00400A",
+  "as_of_date": "2026-09-30",
+  "prev_as_of_date": "2026-09-29",
+  "compared_at": "2026-10-01T00:21:33+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 4,
+    "decrease": 0,
+    "full_exit": 2
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "prev_shares": 3626113,
+      "curr_shares": 4168544,
+      "shares_delta": 542431,
+      "prev_weight_pct": 0.0,
+      "curr_weight_pct": 0.0,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2308",
+      "stock_name": "台達電",
+      "prev_shares": 598160,
+      "curr_shares": 668750,
+      "shares_delta": 70590,
+      "prev_weight_pct": 0.0,
+      "curr_weight_pct": 0.0,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "prev_shares": 226632,
+      "curr_shares": 282361,
+      "shares_delta": 55729,
+      "prev_weight_pct": 0.0,
+      "curr_weight_pct": 0.0,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3665",
+      "stock_name": "貿聯-KY",
+      "prev_shares": 241493,
+      "curr_shares": 293507,
+      "shares_delta": 52014,
+      "prev_weight_pct": 0.0,
+      "curr_weight_pct": 0.0,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [],
+  "full_exit": [
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦科技",
+      "prev_shares": 226632,
+      "curr_shares": 0,
+      "shares_delta": -226632,
+      "prev_weight_pct": 0.0,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6442",
+      "stock_name": "光紅建聖",
+      "prev_shares": 59444,
+      "curr_shares": 0,
+      "shares_delta": -59444,
+      "prev_weight_pct": 0.0,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    }
+  ]
+}

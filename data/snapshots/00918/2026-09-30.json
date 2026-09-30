@@ -1,0 +1,229 @@
+{
+  "etf_ticker": "00918",
+  "as_of_date": "2026-09-30",
+  "source": "uobam",
+  "fetched_at": "2026-10-01T00:21:50+08:00",
+  "raw_file": "00918_2026-10-01_uobam.json",
+  "raw_file_hash": "efd3cf3a91259be408590ec50a60885879a26c12576a792f9feaa0f796b4e871",
+  "holdings_count": 30,
+  "placeholder_count": 0,
+  "meta": {
+    "source_url": "https://www.uobam.com.tw/fund/etf/88329556",
+    "api_url": "https://www.uobam.com.tw/json/reply/WebSitePcfRequest?fundID=88329556",
+    "fund_code": "88329556",
+    "etf002": "00918",
+    "twName": "大華優利高填息30(本基金並無保證收益及配息且配息來源可能為收益平準金)"
+  },
+  "holdings": [
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "shares": 299194380,
+      "weight_pct": 7.87,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2357",
+      "stock_name": "華碩",
+      "shares": 12522000,
+      "weight_pct": 7.54,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "shares": 42110000,
+      "weight_pct": 6.32,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎",
+      "shares": 4641351,
+      "weight_pct": 6.08,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "shares": 211595000,
+      "weight_pct": 5.95,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "shares": 135848000,
+      "weight_pct": 5.83,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "shares": 42317000,
+      "weight_pct": 4.89,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "shares": 153717000,
+      "weight_pct": 4.74,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "shares": 169491200,
+      "weight_pct": 4.7,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "shares": 22224000,
+      "weight_pct": 4.65,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "shares": 163397000,
+      "weight_pct": 4.39,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "shares": 174871000,
+      "weight_pct": 4.24,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2379",
+      "stock_name": "瑞昱",
+      "shares": 8522000,
+      "weight_pct": 4.06,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "shares": 211589500,
+      "weight_pct": 3.66,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2376",
+      "stock_name": "技嘉",
+      "shares": 16137000,
+      "weight_pct": 3.63,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3702",
+      "stock_name": "大聯大",
+      "shares": 46374000,
+      "weight_pct": 3.31,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "shares": 229355000,
+      "weight_pct": 2.94,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2404",
+      "stock_name": "漢唐",
+      "shares": 3232000,
+      "weight_pct": 2.61,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "shares": 72194000,
+      "weight_pct": 2.15,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3293",
+      "stock_name": "鈊象",
+      "shares": 4199000,
+      "weight_pct": 2.07,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2377",
+      "stock_name": "微星",
+      "shares": 15976000,
+      "weight_pct": 1.51,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2474",
+      "stock_name": "可成",
+      "shares": 10693000,
+      "weight_pct": 1.38,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2353",
+      "stock_name": "宏碁",
+      "shares": 53194000,
+      "weight_pct": 1.06,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "8069",
+      "stock_name": "元太",
+      "shares": 11735000,
+      "weight_pct": 1.06,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "5289",
+      "stock_name": "宜鼎",
+      "shares": 1094444,
+      "weight_pct": 0.89,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "1476",
+      "stock_name": "儒鴻",
+      "shares": 3682000,
+      "weight_pct": 0.63,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2542",
+      "stock_name": "興富發",
+      "shares": 23977000,
+      "weight_pct": 0.58,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3706",
+      "stock_name": "神達",
+      "shares": 10525900,
+      "weight_pct": 0.52,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "8464",
+      "stock_name": "億豐",
+      "shares": 1175000,
+      "weight_pct": 0.27,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "5269",
+      "stock_name": "祥碩",
+      "shares": 98000,
+      "weight_pct": 0.09,
+      "is_placeholder": false
+    }
+  ]
+}

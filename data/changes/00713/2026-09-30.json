@@ -1,0 +1,153 @@
+{
+  "etf_ticker": "00713",
+  "as_of_date": "2026-09-30",
+  "prev_as_of_date": "2026-09-29",
+  "compared_at": "2026-10-01T00:21:45+08:00",
+  "source": "yuanta",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 13,
+    "decrease": 0,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "prev_shares": 119029567,
+      "curr_shares": 123154567,
+      "shares_delta": 4125000,
+      "prev_weight_pct": 5.02,
+      "curr_weight_pct": 5.15,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "prev_shares": 188202000,
+      "curr_shares": 191212000,
+      "shares_delta": 3010000,
+      "prev_weight_pct": 6.82,
+      "curr_weight_pct": 6.88,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "prev_shares": 55324000,
+      "curr_shares": 56668000,
+      "shares_delta": 1344000,
+      "prev_weight_pct": 1.04,
+      "curr_weight_pct": 1.08,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "1402",
+      "stock_name": "遠東新",
+      "prev_shares": 135072000,
+      "curr_shares": 136110000,
+      "shares_delta": 1038000,
+      "prev_weight_pct": 3.52,
+      "curr_weight_pct": 3.58,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "prev_shares": 72389440,
+      "curr_shares": 73283440,
+      "shares_delta": 894000,
+      "prev_weight_pct": 3.32,
+      "curr_weight_pct": 3.36,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2903",
+      "stock_name": "遠百",
+      "prev_shares": 35915000,
+      "curr_shares": 36534000,
+      "shares_delta": 619000,
+      "prev_weight_pct": 0.74,
+      "curr_weight_pct": 0.75,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2006",
+      "stock_name": "東和鋼鐵",
+      "prev_shares": 18926000,
+      "curr_shares": 19320000,
+      "shares_delta": 394000,
+      "prev_weight_pct": 1.52,
+      "curr_weight_pct": 1.54,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2377",
+      "stock_name": "微星",
+      "prev_shares": 8181000,
+      "curr_shares": 8553000,
+      "shares_delta": 372000,
+      "prev_weight_pct": 1.16,
+      "curr_weight_pct": 1.2,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "1477",
+      "stock_name": "聚陽",
+      "prev_shares": 4955000,
+      "curr_shares": 5266000,
+      "shares_delta": 311000,
+      "prev_weight_pct": 0.88,
+      "curr_weight_pct": 0.94,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "8926",
+      "stock_name": "台汽電",
+      "prev_shares": 12668000,
+      "curr_shares": 12918000,
+      "shares_delta": 250000,
+      "prev_weight_pct": 0.69,
+      "curr_weight_pct": 0.71,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "1476",
+      "stock_name": "儒鴻",
+      "prev_shares": 3175000,
+      "curr_shares": 3349000,
+      "shares_delta": 174000,
+      "prev_weight_pct": 0.81,
+      "curr_weight_pct": 0.85,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2458",
+      "stock_name": "義隆",
+      "prev_shares": 7137000,
+      "curr_shares": 7213000,
+      "shares_delta": 76000,
+      "prev_weight_pct": 0.91,
+      "curr_weight_pct": 0.92,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "8464",
+      "stock_name": "億豐",
+      "prev_shares": 3467000,
+      "curr_shares": 3513000,
+      "shares_delta": 46000,
+      "prev_weight_pct": 1.21,
+      "curr_weight_pct": 1.2,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [],
+  "full_exit": []
+}

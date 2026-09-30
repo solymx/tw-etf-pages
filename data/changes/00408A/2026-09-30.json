@@ -1,0 +1,116 @@
+{
+  "etf_ticker": "00408A",
+  "as_of_date": "2026-09-30",
+  "prev_as_of_date": "2026-09-29",
+  "compared_at": "2026-10-01T00:21:35+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 2,
+    "increase": 3,
+    "decrease": 2,
+    "full_exit": 2
+  },
+  "first_buy": [
+    {
+      "stock_code": "3105",
+      "stock_name": "穩懋",
+      "prev_shares": 0,
+      "curr_shares": 14000,
+      "shares_delta": 14000,
+      "prev_weight_pct": null,
+      "curr_weight_pct": 0.52,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6691",
+      "stock_name": "洋基工程股份有限公司",
+      "prev_shares": 0,
+      "curr_shares": 7000,
+      "shares_delta": 7000,
+      "prev_weight_pct": null,
+      "curr_weight_pct": 0.34,
+      "streak_days": 1
+    }
+  ],
+  "increase": [
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "prev_shares": 81000,
+      "curr_shares": 141000,
+      "shares_delta": 60000,
+      "prev_weight_pct": 1.36,
+      "curr_weight_pct": 2.45,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3665",
+      "stock_name": "貿聯-KY",
+      "prev_shares": 4000,
+      "curr_shares": 8000,
+      "shares_delta": 4000,
+      "prev_weight_pct": 0.67,
+      "curr_weight_pct": 1.41,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2308",
+      "stock_name": "台達電",
+      "prev_shares": 22900,
+      "curr_shares": 25900,
+      "shares_delta": 3000,
+      "prev_weight_pct": 2.87,
+      "curr_weight_pct": 3.33,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "9802",
+      "stock_name": "鈺齊國際",
+      "prev_shares": 252000,
+      "curr_shares": 192000,
+      "shares_delta": -60000,
+      "prev_weight_pct": 1.11,
+      "curr_weight_pct": 0.85,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2454",
+      "stock_name": "聯發科技",
+      "prev_shares": 18500,
+      "curr_shares": 16500,
+      "shares_delta": -2000,
+      "prev_weight_pct": 6.21,
+      "curr_weight_pct": 5.53,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": [
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大哥",
+      "prev_shares": 125000,
+      "curr_shares": 0,
+      "shares_delta": -125000,
+      "prev_weight_pct": 1.03,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "9941",
+      "stock_name": "裕融企業",
+      "prev_shares": 53200,
+      "curr_shares": 0,
+      "shares_delta": -53200,
+      "prev_weight_pct": 0.28,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "etf_ticker": "00405A",
+  "as_of_date": "2026-09-30",
+  "prev_as_of_date": "2026-09-29",
+  "compared_at": "2026-10-01T00:21:27+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 0,
+    "decrease": 3,
+    "full_exit": 1
+  },
+  "first_buy": [],
+  "increase": [],
+  "decrease": [
+    {
+      "stock_code": "6831",
+      "stock_name": "邁科科技",
+      "prev_shares": 250000,
+      "curr_shares": 100000,
+      "shares_delta": -150000,
+      "prev_weight_pct": 0.476,
+      "curr_weight_pct": 0.1819,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3017",
+      "stock_name": "奇鋐科技",
+      "prev_shares": 378000,
+      "curr_shares": 278000,
+      "shares_delta": -100000,
+      "prev_weight_pct": 4.9736,
+      "curr_weight_pct": 3.6848,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "7734",
+      "stock_name": "印能科技",
+      "prev_shares": 110000,
+      "curr_shares": 80000,
+      "shares_delta": -30000,
+      "prev_weight_pct": 1.1408,
+      "curr_weight_pct": 0.8226,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": [
+    {
+      "stock_code": "6488",
+      "stock_name": "環球晶",
+      "prev_shares": 110000,
+      "curr_shares": 0,
+      "shares_delta": -110000,
+      "prev_weight_pct": 0.4022,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    }
+  ]
+}

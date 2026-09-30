@@ -1,0 +1,63 @@
+{
+  "etf_ticker": "00919",
+  "as_of_date": "2026-09-30",
+  "prev_as_of_date": "2026-09-29",
+  "compared_at": "2026-10-01T00:21:51+08:00",
+  "source": "capital",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 0,
+    "decrease": 4,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [],
+  "decrease": [
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "prev_shares": 607020000,
+      "curr_shares": 606470000,
+      "shares_delta": -550000,
+      "prev_weight_pct": 15.14,
+      "curr_weight_pct": 15.05,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "prev_shares": 864920000,
+      "curr_shares": 864410000,
+      "shares_delta": -510000,
+      "prev_weight_pct": 5.55,
+      "curr_weight_pct": 5.52,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "prev_shares": 1256770000,
+      "curr_shares": 1256270000,
+      "shares_delta": -500000,
+      "prev_weight_pct": 8.65,
+      "curr_weight_pct": 8.66,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠",
+      "prev_shares": 36565000,
+      "curr_shares": 36435000,
+      "shares_delta": -130000,
+      "prev_weight_pct": 3.25,
+      "curr_weight_pct": 3.27,
+      "streak_days": 2
+    }
+  ],
+  "full_exit": []
+}
