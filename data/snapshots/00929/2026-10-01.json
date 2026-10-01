@@ -1,0 +1,417 @@
+{
+  "etf_ticker": "00929",
+  "as_of_date": "2026-10-01",
+  "source": "fh_excel",
+  "fetched_at": "2026-10-02T00:58:45+08:00",
+  "raw_file": "00929_2026-10-02_fh.xlsx",
+  "raw_file_hash": "65645fff6f7964caeeeae3e2c5569375b811644d71b23825d3d296c0d1374fb8",
+  "holdings_count": 50,
+  "placeholder_count": 0,
+  "meta": {
+    "nav_total_raw": "157,858,616,092",
+    "units_raw": "5,315,139,000",
+    "nav_pu_raw": "29.7"
+  },
+  "holdings": [
+    {
+      "stock_code": "2357",
+      "stock_name": "華碩電腦",
+      "shares": 6445000,
+      "weight_pct": 3.94,
+      "is_placeholder": false,
+      "market_value": 6219425000.0
+    },
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠科技",
+      "shares": 10931000,
+      "weight_pct": 3.788,
+      "is_placeholder": false,
+      "market_value": 5979257000.0
+    },
+    {
+      "stock_code": "2347",
+      "stock_name": "聯強國際",
+      "shares": 51253000,
+      "weight_pct": 3.097,
+      "is_placeholder": false,
+      "market_value": 4889536200.0
+    },
+    {
+      "stock_code": "2379",
+      "stock_name": "瑞昱半導",
+      "shares": 6390000,
+      "weight_pct": 3.085,
+      "is_placeholder": false,
+      "market_value": 4869180000.0
+    },
+    {
+      "stock_code": "2474",
+      "stock_name": "可成科技",
+      "shares": 22838000,
+      "weight_pct": 3.002,
+      "is_placeholder": false,
+      "market_value": 4738885000.0
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大哥",
+      "shares": 38129000,
+      "weight_pct": 2.947,
+      "is_placeholder": false,
+      "market_value": 4651738000.0
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達電腦",
+      "shares": 12732000,
+      "weight_pct": 2.694,
+      "is_placeholder": false,
+      "market_value": 4252488000.0
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創資通",
+      "shares": 21845000,
+      "weight_pct": 2.636,
+      "is_placeholder": false,
+      "market_value": 4161472500.0
+    },
+    {
+      "stock_code": "2412",
+      "stock_name": "中華電信",
+      "shares": 27928000,
+      "weight_pct": 2.574,
+      "is_placeholder": false,
+      "market_value": 4063524000.0
+    },
+    {
+      "stock_code": "3260",
+      "stock_name": "威剛科技",
+      "shares": 10592000,
+      "weight_pct": 2.55,
+      "is_placeholder": false,
+      "market_value": 4024960000.0
+    },
+    {
+      "stock_code": "3702",
+      "stock_name": "大聯大控",
+      "shares": 33426000,
+      "weight_pct": 2.52,
+      "is_placeholder": false,
+      "market_value": 3977694000.0
+    },
+    {
+      "stock_code": "5434",
+      "stock_name": "崇越科技",
+      "shares": 6990000,
+      "weight_pct": 2.511,
+      "is_placeholder": false,
+      "market_value": 3963330000.0
+    },
+    {
+      "stock_code": "2404",
+      "stock_name": "漢唐集成",
+      "shares": 3008000,
+      "weight_pct": 2.487,
+      "is_placeholder": false,
+      "market_value": 3925440000.0
+    },
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳電信",
+      "shares": 36729000,
+      "weight_pct": 2.443,
+      "is_placeholder": false,
+      "market_value": 3856545000.0
+    },
+    {
+      "stock_code": "2376",
+      "stock_name": "技嘉科技",
+      "shares": 10091000,
+      "weight_pct": 2.356,
+      "is_placeholder": false,
+      "market_value": 3718533500.0
+    },
+    {
+      "stock_code": "6409",
+      "stock_name": "旭隼科技",
+      "shares": 4101000,
+      "weight_pct": 2.315,
+      "is_placeholder": false,
+      "market_value": 3653991000.0
+    },
+    {
+      "stock_code": "3008",
+      "stock_name": "大立光電",
+      "shares": 585000,
+      "weight_pct": 2.299,
+      "is_placeholder": false,
+      "market_value": 3629925000.0
+    },
+    {
+      "stock_code": "2377",
+      "stock_name": "微星科技",
+      "shares": 23080000,
+      "weight_pct": 2.23,
+      "is_placeholder": false,
+      "market_value": 3519700000.0
+    },
+    {
+      "stock_code": "6691",
+      "stock_name": "洋基工程",
+      "shares": 4784400,
+      "weight_pct": 2.222,
+      "is_placeholder": false,
+      "market_value": 3506965200.0
+    },
+    {
+      "stock_code": "3706",
+      "stock_name": "神達控股",
+      "shares": 42300500,
+      "weight_pct": 2.2,
+      "is_placeholder": false,
+      "market_value": 3472871050.0
+    },
+    {
+      "stock_code": "5347",
+      "stock_name": "世界先進",
+      "shares": 18807000,
+      "weight_pct": 2.198,
+      "is_placeholder": false,
+      "market_value": 3469891500.0
+    },
+    {
+      "stock_code": "5269",
+      "stock_name": "祥碩科技",
+      "shares": 2322000,
+      "weight_pct": 2.17,
+      "is_placeholder": false,
+      "market_value": 3424950000.0
+    },
+    {
+      "stock_code": "6139",
+      "stock_name": "亞翔工程",
+      "shares": 4409000,
+      "weight_pct": 2.12,
+      "is_placeholder": false,
+      "market_value": 3346431000.0
+    },
+    {
+      "stock_code": "5483",
+      "stock_name": "中美矽晶",
+      "shares": 15578000,
+      "weight_pct": 2.087,
+      "is_placeholder": false,
+      "market_value": 3294747000.0
+    },
+    {
+      "stock_code": "6278",
+      "stock_name": "台灣表面",
+      "shares": 14684000,
+      "weight_pct": 2.014,
+      "is_placeholder": false,
+      "market_value": 3179086000.0
+    },
+    {
+      "stock_code": "3023",
+      "stock_name": "信邦電子",
+      "shares": 9893000,
+      "weight_pct": 1.937,
+      "is_placeholder": false,
+      "market_value": 3056937000.0
+    },
+    {
+      "stock_code": "3044",
+      "stock_name": "健鼎科技",
+      "shares": 5434000,
+      "weight_pct": 1.821,
+      "is_placeholder": false,
+      "market_value": 2874586000.0
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯華電子",
+      "shares": 17775000,
+      "weight_pct": 1.819,
+      "is_placeholder": false,
+      "market_value": 2870662500.0
+    },
+    {
+      "stock_code": "3211",
+      "stock_name": "順達科技",
+      "shares": 6795000,
+      "weight_pct": 1.696,
+      "is_placeholder": false,
+      "market_value": 2677230000.0
+    },
+    {
+      "stock_code": "6257",
+      "stock_name": "矽格股份",
+      "shares": 10287000,
+      "weight_pct": 1.672,
+      "is_placeholder": false,
+      "market_value": 2638615500.0
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海精密",
+      "shares": 10015000,
+      "weight_pct": 1.611,
+      "is_placeholder": false,
+      "market_value": 2543810000.0
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達股",
+      "shares": 42169000,
+      "weight_pct": 1.595,
+      "is_placeholder": false,
+      "market_value": 2517489300.0
+    },
+    {
+      "stock_code": "6121",
+      "stock_name": "新普科技",
+      "shares": 6478000,
+      "weight_pct": 1.557,
+      "is_placeholder": false,
+      "market_value": 2458401000.0
+    },
+    {
+      "stock_code": "3264",
+      "stock_name": "欣銓科技",
+      "shares": 9344000,
+      "weight_pct": 1.453,
+      "is_placeholder": false,
+      "market_value": 2293952000.0
+    },
+    {
+      "stock_code": "2301",
+      "stock_name": "光寶科技",
+      "shares": 7991000,
+      "weight_pct": 1.44,
+      "is_placeholder": false,
+      "market_value": 2273439500.0
+    },
+    {
+      "stock_code": "4966",
+      "stock_name": "譜瑞-KY",
+      "shares": 3901000,
+      "weight_pct": 1.414,
+      "is_placeholder": false,
+      "market_value": 2231372000.0
+    },
+    {
+      "stock_code": "8112",
+      "stock_name": "至上電子",
+      "shares": 26620004,
+      "weight_pct": 1.413,
+      "is_placeholder": false,
+      "market_value": 2230756335.0
+    },
+    {
+      "stock_code": "8069",
+      "stock_name": "元太科技",
+      "shares": 14913000,
+      "weight_pct": 1.36,
+      "is_placeholder": false,
+      "market_value": 2147472000.0
+    },
+    {
+      "stock_code": "2458",
+      "stock_name": "義隆電子",
+      "shares": 15340000,
+      "weight_pct": 1.346,
+      "is_placeholder": false,
+      "market_value": 2124590000.0
+    },
+    {
+      "stock_code": "6191",
+      "stock_name": "精成科技",
+      "shares": 23694000,
+      "weight_pct": 1.265,
+      "is_placeholder": false,
+      "market_value": 1997404200.0
+    },
+    {
+      "stock_code": "3563",
+      "stock_name": "牧德科技",
+      "shares": 2307000,
+      "weight_pct": 1.102,
+      "is_placeholder": false,
+      "market_value": 1739478000.0
+    },
+    {
+      "stock_code": "5536",
+      "stock_name": "聖暉工程",
+      "shares": 1593000,
+      "weight_pct": 0.968,
+      "is_placeholder": false,
+      "market_value": 1527687000.0
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿股",
+      "shares": 9000000,
+      "weight_pct": 0.964,
+      "is_placeholder": false,
+      "market_value": 1521000000.0
+    },
+    {
+      "stock_code": "2352",
+      "stock_name": "佳世達科",
+      "shares": 50331000,
+      "weight_pct": 0.928,
+      "is_placeholder": false,
+      "market_value": 1464632100.0
+    },
+    {
+      "stock_code": "8422",
+      "stock_name": "可寧衛股",
+      "shares": 54146000,
+      "weight_pct": 0.878,
+      "is_placeholder": false,
+      "market_value": 1386137600.0
+    },
+    {
+      "stock_code": "6548",
+      "stock_name": "長華科技",
+      "shares": 18948000,
+      "weight_pct": 0.858,
+      "is_placeholder": false,
+      "market_value": 1354782000.0
+    },
+    {
+      "stock_code": "5469",
+      "stock_name": "瀚宇博德",
+      "shares": 17681000,
+      "weight_pct": 0.836,
+      "is_placeholder": false,
+      "market_value": 1319002600.0
+    },
+    {
+      "stock_code": "4915",
+      "stock_name": "致伸科技",
+      "shares": 20037000,
+      "weight_pct": 0.825,
+      "is_placeholder": false,
+      "market_value": 1302405000.0
+    },
+    {
+      "stock_code": "3227",
+      "stock_name": "原相科技",
+      "shares": 6733000,
+      "weight_pct": 0.791,
+      "is_placeholder": false,
+      "market_value": 1248971500.0
+    },
+    {
+      "stock_code": "8070",
+      "stock_name": "長華電材",
+      "shares": 18224000,
+      "weight_pct": 0.58,
+      "is_placeholder": false,
+      "market_value": 914844800.0
+    }
+  ]
+}

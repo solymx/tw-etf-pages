@@ -1,0 +1,33 @@
+{
+  "etf_ticker": "00992A",
+  "as_of_date": "2026-10-01",
+  "prev_as_of_date": "2026-09-30",
+  "compared_at": "2026-10-02T00:58:19+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 0,
+    "decrease": 1,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [],
+  "decrease": [
+    {
+      "stock_code": "3017",
+      "stock_name": "奇鋐科技",
+      "prev_shares": 1001000,
+      "curr_shares": 871000,
+      "shares_delta": -130000,
+      "prev_weight_pct": 8.1946,
+      "curr_weight_pct": 7.2114,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": []
+}

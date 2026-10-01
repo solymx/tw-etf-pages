@@ -1,0 +1,54 @@
+{
+  "etf_ticker": "00982A",
+  "as_of_date": "2026-10-01",
+  "prev_as_of_date": "2026-09-30",
+  "compared_at": "2026-10-02T00:58:23+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 2,
+    "decrease": 1,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "6213",
+      "stock_name": "聯茂",
+      "prev_shares": 740000,
+      "curr_shares": 940000,
+      "shares_delta": 200000,
+      "prev_weight_pct": 0.9188,
+      "curr_weight_pct": 1.1915,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "6139",
+      "stock_name": "亞翔",
+      "prev_shares": 3697000,
+      "curr_shares": 3700000,
+      "shares_delta": 3000,
+      "prev_weight_pct": 5.5704,
+      "curr_weight_pct": 5.5447,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦科技",
+      "prev_shares": 363000,
+      "curr_shares": 222000,
+      "shares_delta": -141000,
+      "prev_weight_pct": 1.2841,
+      "curr_weight_pct": 0.8328,
+      "streak_days": 4
+    }
+  ],
+  "full_exit": []
+}

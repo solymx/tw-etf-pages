@@ -1,0 +1,44 @@
+{
+  "etf_ticker": "00991A",
+  "as_of_date": "2026-10-01",
+  "prev_as_of_date": "2026-09-30",
+  "compared_at": "2026-10-02T00:58:16+08:00",
+  "source": "fh_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 1,
+    "decrease": 1,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑石化",
+      "prev_shares": 4000000,
+      "curr_shares": 8500000,
+      "shares_delta": 4500000,
+      "prev_weight_pct": 0.499,
+      "curr_weight_pct": 1.008,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "3081",
+      "stock_name": "聯亞光電",
+      "prev_shares": 900000,
+      "curr_shares": 800000,
+      "shares_delta": -100000,
+      "prev_weight_pct": 3.108,
+      "curr_weight_pct": 2.679,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": []
+}
