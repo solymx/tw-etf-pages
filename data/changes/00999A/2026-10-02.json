@@ -1,0 +1,125 @@
+{
+  "etf_ticker": "00999A",
+  "as_of_date": "2026-10-02",
+  "prev_as_of_date": "2026-10-01",
+  "compared_at": "2026-10-03T00:11:32+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 4,
+    "decrease": 5,
+    "full_exit": 1
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "5904",
+      "stock_name": "寶雅國際",
+      "prev_shares": 1507000,
+      "curr_shares": 1646000,
+      "shares_delta": 139000,
+      "prev_weight_pct": 0.9,
+      "curr_weight_pct": 0.97,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2059",
+      "stock_name": "川湖科技",
+      "prev_shares": 39000,
+      "curr_shares": 49000,
+      "shares_delta": 10000,
+      "prev_weight_pct": 3.99,
+      "curr_weight_pct": 5.11,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "prev_shares": 279000,
+      "curr_shares": 288000,
+      "shares_delta": 9000,
+      "prev_weight_pct": 6.05,
+      "curr_weight_pct": 6.18,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2454",
+      "stock_name": "聯發科技",
+      "prev_shares": 103000,
+      "curr_shares": 111000,
+      "shares_delta": 8000,
+      "prev_weight_pct": 4.43,
+      "curr_weight_pct": 4.71,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "9941",
+      "stock_name": "裕融企業",
+      "prev_shares": 2014480,
+      "curr_shares": 1651480,
+      "shares_delta": -363000,
+      "prev_weight_pct": 1.36,
+      "curr_weight_pct": 1.09,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2393",
+      "stock_name": "億光電子工業",
+      "prev_shares": 513000,
+      "curr_shares": 256000,
+      "shares_delta": -257000,
+      "prev_weight_pct": 0.29,
+      "curr_weight_pct": 0.14,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "5534",
+      "stock_name": "長虹建設",
+      "prev_shares": 1981000,
+      "curr_shares": 1783000,
+      "shares_delta": -198000,
+      "prev_weight_pct": 1.26,
+      "curr_weight_pct": 1.12,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "4746",
+      "stock_name": "台耀化學",
+      "prev_shares": 1795000,
+      "curr_shares": 1687000,
+      "shares_delta": -108000,
+      "prev_weight_pct": 0.76,
+      "curr_weight_pct": 0.7,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2727",
+      "stock_name": "王品餐飲",
+      "prev_shares": 98000,
+      "curr_shares": 49000,
+      "shares_delta": -49000,
+      "prev_weight_pct": 0.2,
+      "curr_weight_pct": 0.1,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": [
+    {
+      "stock_code": "2395",
+      "stock_name": "研華",
+      "prev_shares": 31000,
+      "curr_shares": 0,
+      "shares_delta": -31000,
+      "prev_weight_pct": 0.19,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "etf_ticker": "00985A",
+  "as_of_date": "2026-10-02",
+  "prev_as_of_date": "2026-10-01",
+  "compared_at": "2026-10-03T00:11:31+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 9,
+    "decrease": 0,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳電信",
+      "prev_shares": 4427000,
+      "curr_shares": 5127000,
+      "shares_delta": 700000,
+      "prev_weight_pct": 4.07,
+      "curr_weight_pct": 4.1,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "prev_shares": 1092000,
+      "curr_shares": 1648000,
+      "shares_delta": 556000,
+      "prev_weight_pct": 1.54,
+      "curr_weight_pct": 2.01,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2412",
+      "stock_name": "中華電信",
+      "prev_shares": 3202000,
+      "curr_shares": 3734000,
+      "shares_delta": 532000,
+      "prev_weight_pct": 4.08,
+      "curr_weight_pct": 4.12,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2376",
+      "stock_name": "技嘉",
+      "prev_shares": 1088000,
+      "curr_shares": 1414000,
+      "shares_delta": 326000,
+      "prev_weight_pct": 3.51,
+      "curr_weight_pct": 3.99,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨*",
+      "prev_shares": 327000,
+      "curr_shares": 492000,
+      "shares_delta": 165000,
+      "prev_weight_pct": 1.72,
+      "curr_weight_pct": 2.33,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6531",
+      "stock_name": "愛普科技",
+      "prev_shares": 76000,
+      "curr_shares": 241000,
+      "shares_delta": 165000,
+      "prev_weight_pct": 0.62,
+      "curr_weight_pct": 1.82,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6442",
+      "stock_name": "光紅建聖",
+      "prev_shares": 67000,
+      "curr_shares": 135000,
+      "shares_delta": 68000,
+      "prev_weight_pct": 0.87,
+      "curr_weight_pct": 1.66,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3653",
+      "stock_name": "健策",
+      "prev_shares": 13000,
+      "curr_shares": 34000,
+      "shares_delta": 21000,
+      "prev_weight_pct": 0.78,
+      "curr_weight_pct": 1.75,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3008",
+      "stock_name": "大立光",
+      "prev_shares": 17000,
+      "curr_shares": 34000,
+      "shares_delta": 17000,
+      "prev_weight_pct": 0.92,
+      "curr_weight_pct": 1.62,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [],
+  "full_exit": []
+}

@@ -1,0 +1,113 @@
+{
+  "etf_ticker": "00713",
+  "as_of_date": "2026-10-02",
+  "prev_as_of_date": "2026-10-01",
+  "compared_at": "2026-10-03T00:11:46+08:00",
+  "source": "yuanta",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 9,
+    "decrease": 0,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "2845",
+      "stock_name": "遠東銀",
+      "prev_shares": 103594502,
+      "curr_shares": 104971502,
+      "shares_delta": 1377000,
+      "prev_weight_pct": 1.26,
+      "curr_weight_pct": 1.26,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "prev_shares": 125462567,
+      "curr_shares": 126592567,
+      "shares_delta": 1130000,
+      "prev_weight_pct": 5.28,
+      "curr_weight_pct": 5.33,
+      "streak_days": 3
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "prev_shares": 191459000,
+      "curr_shares": 191885000,
+      "shares_delta": 426000,
+      "prev_weight_pct": 6.87,
+      "curr_weight_pct": 6.87,
+      "streak_days": 3
+    },
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "prev_shares": 73626440,
+      "curr_shares": 73954440,
+      "shares_delta": 328000,
+      "prev_weight_pct": 3.31,
+      "curr_weight_pct": 3.36,
+      "streak_days": 3
+    },
+    {
+      "stock_code": "1402",
+      "stock_name": "遠東新",
+      "prev_shares": 136551000,
+      "curr_shares": 136777000,
+      "shares_delta": 226000,
+      "prev_weight_pct": 3.54,
+      "curr_weight_pct": 3.56,
+      "streak_days": 3
+    },
+    {
+      "stock_code": "1477",
+      "stock_name": "聚陽",
+      "prev_shares": 5266000,
+      "curr_shares": 5379000,
+      "shares_delta": 113000,
+      "prev_weight_pct": 0.93,
+      "curr_weight_pct": 0.96,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2458",
+      "stock_name": "義隆",
+      "prev_shares": 7213000,
+      "curr_shares": 7268000,
+      "shares_delta": 55000,
+      "prev_weight_pct": 0.93,
+      "curr_weight_pct": 0.93,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "1476",
+      "stock_name": "儒鴻",
+      "prev_shares": 3349000,
+      "curr_shares": 3388000,
+      "shares_delta": 39000,
+      "prev_weight_pct": 0.85,
+      "curr_weight_pct": 0.87,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠",
+      "prev_shares": 2325000,
+      "curr_shares": 2338000,
+      "shares_delta": 13000,
+      "prev_weight_pct": 1.18,
+      "curr_weight_pct": 1.17,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [],
+  "full_exit": []
+}
