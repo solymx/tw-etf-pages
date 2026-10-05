@@ -1,0 +1,86 @@
+{
+  "etf_ticker": "00406A",
+  "as_of_date": "2026-10-06",
+  "prev_as_of_date": "2026-10-05",
+  "compared_at": "2026-10-06T03:11:05+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 1,
+    "increase": 3,
+    "decrease": 1,
+    "full_exit": 1
+  },
+  "first_buy": [
+    {
+      "stock_code": "6715",
+      "stock_name": "嘉  基",
+      "prev_shares": 0,
+      "curr_shares": 80000,
+      "shares_delta": 80000,
+      "prev_weight_pct": null,
+      "curr_weight_pct": 0.06,
+      "streak_days": 1
+    }
+  ],
+  "increase": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "prev_shares": 9068000,
+      "curr_shares": 9768000,
+      "shares_delta": 700000,
+      "prev_weight_pct": 2.32,
+      "curr_weight_pct": 2.31,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "prev_shares": 2795000,
+      "curr_shares": 2895000,
+      "shares_delta": 100000,
+      "prev_weight_pct": 5.78,
+      "curr_weight_pct": 5.95,
+      "streak_days": 5
+    },
+    {
+      "stock_code": "3260",
+      "stock_name": "威剛科技",
+      "prev_shares": 180000,
+      "curr_shares": 188320,
+      "shares_delta": 8320,
+      "prev_weight_pct": 0.11,
+      "curr_weight_pct": 0.11,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "8210",
+      "stock_name": "勤誠興業",
+      "prev_shares": 71000,
+      "curr_shares": 41000,
+      "shares_delta": -30000,
+      "prev_weight_pct": 0.09,
+      "curr_weight_pct": 0.06,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": [
+    {
+      "stock_code": "5289",
+      "stock_name": "宜鼎國際",
+      "prev_shares": 26517,
+      "curr_shares": 0,
+      "shares_delta": -26517,
+      "prev_weight_pct": 0.05,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    }
+  ]
+}

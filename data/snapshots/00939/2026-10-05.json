@@ -1,0 +1,297 @@
+{
+  "etf_ticker": "00939",
+  "as_of_date": "2026-10-05",
+  "source": "uni_excel",
+  "fetched_at": "2026-10-06T03:11:28+08:00",
+  "raw_file": "00939_2026-10-06_uni.xlsx",
+  "raw_file_hash": "6984eca6d87f2fcd9c6205fb05c4291680d10516a8919b2714d7098b327fee13",
+  "holdings_count": 40,
+  "placeholder_count": 0,
+  "meta": {
+    "nav_total_raw": "NTD 27,789,539,164",
+    "units_raw": "1,160,476,000",
+    "nav_pu_raw": "NTD 23.95"
+  },
+  "holdings": [
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "shares": 14182650,
+      "weight_pct": 7.76,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "shares": 46245690,
+      "weight_pct": 6.8,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "shares": 16094000,
+      "weight_pct": 6.46,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2357",
+      "stock_name": "華碩",
+      "shares": 1761000,
+      "weight_pct": 6.31,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "shares": 34437000,
+      "weight_pct": 5.55,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2885",
+      "stock_name": "元大金",
+      "shares": 21019428,
+      "weight_pct": 5.16,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "shares": 21125000,
+      "weight_pct": 5.12,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "shares": 36362937,
+      "weight_pct": 4.88,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "shares": 27810000,
+      "weight_pct": 4.86,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2880",
+      "stock_name": "華南金",
+      "shares": 28396330,
+      "weight_pct": 4.56,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "shares": 27602000,
+      "weight_pct": 3.78,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "shares": 4438000,
+      "weight_pct": 3.74,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "shares": 33549750,
+      "weight_pct": 3.28,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "shares": 4644000,
+      "weight_pct": 3.17,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2412",
+      "stock_name": "中華電",
+      "shares": 5837000,
+      "weight_pct": 3.06,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "shares": 6818000,
+      "weight_pct": 3.01,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠",
+      "shares": 1313000,
+      "weight_pct": 2.57,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2379",
+      "stock_name": "瑞昱",
+      "shares": 944000,
+      "weight_pct": 2.56,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "shares": 4057000,
+      "weight_pct": 1.54,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "shares": 9836000,
+      "weight_pct": 1.48,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "1216",
+      "stock_name": "統一",
+      "shares": 5409000,
+      "weight_pct": 1.42,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2377",
+      "stock_name": "微星",
+      "shares": 1974000,
+      "weight_pct": 1.1,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3042",
+      "stock_name": "晶技",
+      "shares": 1218000,
+      "weight_pct": 0.97,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "shares": 3787000,
+      "weight_pct": 0.79,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2404",
+      "stock_name": "漢唐",
+      "shares": 134000,
+      "weight_pct": 0.63,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2606",
+      "stock_name": "裕民",
+      "shares": 2200000,
+      "weight_pct": 0.59,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3293",
+      "stock_name": "鈊象",
+      "shares": 195000,
+      "weight_pct": 0.56,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2912",
+      "stock_name": "統一超",
+      "shares": 631000,
+      "weight_pct": 0.48,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "5871",
+      "stock_name": "中租-KY",
+      "shares": 1202212,
+      "weight_pct": 0.46,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "shares": 2161000,
+      "weight_pct": 0.46,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "6409",
+      "stock_name": "旭隼",
+      "shares": 145000,
+      "weight_pct": 0.46,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "shares": 2606000,
+      "weight_pct": 0.45,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2347",
+      "stock_name": "聯強",
+      "shares": 1260000,
+      "weight_pct": 0.44,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "6139",
+      "stock_name": "亞翔",
+      "shares": 150000,
+      "weight_pct": 0.43,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "shares": 5613000,
+      "weight_pct": 0.41,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "1513",
+      "stock_name": "中興電",
+      "shares": 692000,
+      "weight_pct": 0.41,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "3702",
+      "stock_name": "大聯大",
+      "shares": 944000,
+      "weight_pct": 0.4,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "1402",
+      "stock_name": "遠東新",
+      "shares": 3926000,
+      "weight_pct": 0.39,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2105",
+      "stock_name": "正新",
+      "shares": 3205000,
+      "weight_pct": 0.35,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "2385",
+      "stock_name": "群光",
+      "shares": 841000,
+      "weight_pct": 0.32,
+      "is_placeholder": false
+    }
+  ]
+}
