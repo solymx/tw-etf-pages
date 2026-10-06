@@ -1,0 +1,83 @@
+{
+  "etf_ticker": "00919",
+  "as_of_date": "2026-10-06",
+  "prev_as_of_date": "2026-10-05",
+  "compared_at": "2026-10-07T00:38:31+08:00",
+  "source": "capital",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 6,
+    "decrease": 0,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "prev_shares": 930617000,
+      "curr_shares": 931287000,
+      "shares_delta": 670000,
+      "prev_weight_pct": 10.27,
+      "curr_weight_pct": 10.35,
+      "streak_days": 4
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "prev_shares": 608750000,
+      "curr_shares": 609290000,
+      "shares_delta": 540000,
+      "prev_weight_pct": 15.15,
+      "curr_weight_pct": 15.3,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "prev_shares": 697370000,
+      "curr_shares": 697860000,
+      "shares_delta": 490000,
+      "prev_weight_pct": 12.73,
+      "curr_weight_pct": 12.7,
+      "streak_days": 4
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "prev_shares": 194500000,
+      "curr_shares": 194620000,
+      "shares_delta": 120000,
+      "prev_weight_pct": 10.54,
+      "curr_weight_pct": 10.55,
+      "streak_days": 4
+    },
+    {
+      "stock_code": "2347",
+      "stock_name": "聯強",
+      "prev_shares": 65660000,
+      "curr_shares": 65760000,
+      "shares_delta": 100000,
+      "prev_weight_pct": 1.04,
+      "curr_weight_pct": 1.02,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2379",
+      "stock_name": "瑞昱",
+      "prev_shares": 24060000,
+      "curr_shares": 24090000,
+      "shares_delta": 30000,
+      "prev_weight_pct": 2.98,
+      "curr_weight_pct": 2.96,
+      "streak_days": 2
+    }
+  ],
+  "decrease": [],
+  "full_exit": []
+}

@@ -1,0 +1,523 @@
+{
+  "etf_ticker": "0050",
+  "as_of_date": "2026-10-06",
+  "prev_as_of_date": "2026-10-05",
+  "compared_at": "2026-10-07T00:38:19+08:00",
+  "source": "yuanta",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 50,
+    "decrease": 0,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "prev_shares": 564252945,
+      "curr_shares": 564774629,
+      "shares_delta": 521684,
+      "prev_weight_pct": 56.31,
+      "curr_weight_pct": 56.43,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "prev_shares": 540910220,
+      "curr_shares": 541412019,
+      "shares_delta": 501799,
+      "prev_weight_pct": 0.86,
+      "curr_weight_pct": 0.87,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "prev_shares": 408439203,
+      "curr_shares": 408836043,
+      "shares_delta": 396840,
+      "prev_weight_pct": 1.07,
+      "curr_weight_pct": 1.08,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "prev_shares": 369064153,
+      "curr_shares": 369406380,
+      "shares_delta": 342227,
+      "prev_weight_pct": 0.64,
+      "curr_weight_pct": 0.65,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "prev_shares": 363554634,
+      "curr_shares": 363891859,
+      "shares_delta": 337225,
+      "prev_weight_pct": 0.53,
+      "curr_weight_pct": 0.53,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "prev_shares": 302439638,
+      "curr_shares": 302733801,
+      "shares_delta": 294163,
+      "prev_weight_pct": 0.52,
+      "curr_weight_pct": 0.53,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "prev_shares": 281904036,
+      "curr_shares": 282165493,
+      "shares_delta": 261457,
+      "prev_weight_pct": 2.78,
+      "curr_weight_pct": 2.79,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "prev_shares": 273087035,
+      "curr_shares": 273340128,
+      "shares_delta": 253093,
+      "prev_weight_pct": 0.51,
+      "curr_weight_pct": 0.52,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "prev_shares": 269231858,
+      "curr_shares": 269481630,
+      "shares_delta": 249772,
+      "prev_weight_pct": 1.59,
+      "curr_weight_pct": 1.54,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2885",
+      "stock_name": "元大金",
+      "prev_shares": 264850730,
+      "curr_shares": 265096279,
+      "shares_delta": 245549,
+      "prev_weight_pct": 0.7,
+      "curr_weight_pct": 0.71,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "prev_shares": 258823402,
+      "curr_shares": 259063211,
+      "shares_delta": 239809,
+      "prev_weight_pct": 0.38,
+      "curr_weight_pct": 0.39,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "prev_shares": 248695007,
+      "curr_shares": 248924771,
+      "shares_delta": 229764,
+      "prev_weight_pct": 0.25,
+      "curr_weight_pct": 0.25,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "prev_shares": 220238531,
+      "curr_shares": 220442752,
+      "shares_delta": 204221,
+      "prev_weight_pct": 0.95,
+      "curr_weight_pct": 0.95,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2880",
+      "stock_name": "華南金",
+      "prev_shares": 214561064,
+      "curr_shares": 214759873,
+      "shares_delta": 198809,
+      "prev_weight_pct": 0.37,
+      "curr_weight_pct": 0.38,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "prev_shares": 192594609,
+      "curr_shares": 192773205,
+      "shares_delta": 178596,
+      "prev_weight_pct": 1.13,
+      "curr_weight_pct": 1.15,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "1216",
+      "stock_name": "統一",
+      "prev_shares": 114381974,
+      "curr_shares": 114487754,
+      "shares_delta": 105780,
+      "prev_weight_pct": 0.32,
+      "curr_weight_pct": 0.33,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "prev_shares": 113752540,
+      "curr_shares": 113857992,
+      "shares_delta": 105452,
+      "prev_weight_pct": 1.26,
+      "curr_weight_pct": 1.29,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2412",
+      "stock_name": "中華電",
+      "prev_shares": 88169199,
+      "curr_shares": 88250871,
+      "shares_delta": 81672,
+      "prev_weight_pct": 0.5,
+      "curr_weight_pct": 0.5,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光投控",
+      "prev_shares": 76594938,
+      "curr_shares": 76665950,
+      "shares_delta": 71012,
+      "prev_weight_pct": 2.2,
+      "curr_weight_pct": 2.2,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "prev_shares": 71444493,
+      "curr_shares": 71510708,
+      "shares_delta": 66215,
+      "prev_weight_pct": 0.5,
+      "curr_weight_pct": 0.49,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "prev_shares": 69743938,
+      "curr_shares": 69808595,
+      "shares_delta": 64657,
+      "prev_weight_pct": 0.51,
+      "curr_weight_pct": 0.51,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "prev_shares": 61071621,
+      "curr_shares": 61128201,
+      "shares_delta": 56580,
+      "prev_weight_pct": 0.78,
+      "curr_weight_pct": 0.79,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2301",
+      "stock_name": "光寶科",
+      "prev_shares": 45180384,
+      "curr_shares": 45222245,
+      "shares_delta": 41861,
+      "prev_weight_pct": 0.52,
+      "curr_weight_pct": 0.52,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2308",
+      "stock_name": "台達電",
+      "prev_shares": 44574100,
+      "curr_shares": 44615428,
+      "shares_delta": 41328,
+      "prev_weight_pct": 3.46,
+      "curr_weight_pct": 3.53,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "prev_shares": 41005101,
+      "curr_shares": 41043067,
+      "shares_delta": 37966,
+      "prev_weight_pct": 0.17,
+      "curr_weight_pct": 0.17,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨*",
+      "prev_shares": 36362042,
+      "curr_shares": 36395744,
+      "shares_delta": 33702,
+      "prev_weight_pct": 0.88,
+      "curr_weight_pct": 0.88,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2454",
+      "stock_name": "聯發科",
+      "prev_shares": 33979556,
+      "curr_shares": 34011044,
+      "shares_delta": 31488,
+      "prev_weight_pct": 6.8,
+      "curr_weight_pct": 6.47,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "prev_shares": 32750050,
+      "curr_shares": 32780308,
+      "shares_delta": 30258,
+      "prev_weight_pct": 0.16,
+      "curr_weight_pct": 0.16,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "prev_shares": 30453536,
+      "curr_shares": 30481785,
+      "shares_delta": 28249,
+      "prev_weight_pct": 1.56,
+      "curr_weight_pct": 1.54,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "prev_shares": 29802259,
+      "curr_shares": 29829852,
+      "shares_delta": 27593,
+      "prev_weight_pct": 0.61,
+      "curr_weight_pct": 0.61,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑化",
+      "prev_shares": 26684562,
+      "curr_shares": 26709121,
+      "shares_delta": 24559,
+      "prev_weight_pct": 0.1,
+      "curr_weight_pct": 0.1,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "prev_shares": 26419060,
+      "curr_shares": 26443496,
+      "shares_delta": 24436,
+      "prev_weight_pct": 0.3,
+      "curr_weight_pct": 0.3,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "prev_shares": 25193779,
+      "curr_shares": 25217026,
+      "shares_delta": 23247,
+      "prev_weight_pct": 0.23,
+      "curr_weight_pct": 0.23,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "4958",
+      "stock_name": "臻鼎-KY",
+      "prev_shares": 18239453,
+      "curr_shares": 18256345,
+      "shares_delta": 16892,
+      "prev_weight_pct": 0.41,
+      "curr_weight_pct": 0.41,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2357",
+      "stock_name": "華碩",
+      "prev_shares": 15583328,
+      "curr_shares": 15597760,
+      "shares_delta": 14432,
+      "prev_weight_pct": 0.6,
+      "curr_weight_pct": 0.6,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦",
+      "prev_shares": 11443087,
+      "curr_shares": 11453665,
+      "shares_delta": 10578,
+      "prev_weight_pct": 0.92,
+      "curr_weight_pct": 0.91,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2395",
+      "stock_name": "研華",
+      "prev_shares": 10653355,
+      "curr_shares": 10663195,
+      "shares_delta": 9840,
+      "prev_weight_pct": 0.31,
+      "curr_weight_pct": 0.3,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2360",
+      "stock_name": "致茂",
+      "prev_shares": 8511868,
+      "curr_shares": 8519740,
+      "shares_delta": 7872,
+      "prev_weight_pct": 0.77,
+      "curr_weight_pct": 0.77,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "prev_shares": 8040446,
+      "curr_shares": 8047867,
+      "shares_delta": 7421,
+      "prev_weight_pct": 0.38,
+      "curr_weight_pct": 0.39,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3017",
+      "stock_name": "奇鋐",
+      "prev_shares": 7386120,
+      "curr_shares": 7392967,
+      "shares_delta": 6847,
+      "prev_weight_pct": 1.03,
+      "curr_weight_pct": 1.05,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "6446",
+      "stock_name": "藥華藥",
+      "prev_shares": 7232800,
+      "curr_shares": 7239565,
+      "shares_delta": 6765,
+      "prev_weight_pct": 0.33,
+      "curr_weight_pct": 0.33,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎",
+      "prev_shares": 7159940,
+      "curr_shares": 7166541,
+      "shares_delta": 6601,
+      "prev_weight_pct": 0.6,
+      "curr_weight_pct": 0.63,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "prev_shares": 6712806,
+      "curr_shares": 6718997,
+      "shares_delta": 6191,
+      "prev_weight_pct": 1.48,
+      "curr_weight_pct": 1.56,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "prev_shares": 5789661,
+      "curr_shares": 5794991,
+      "shares_delta": 5330,
+      "prev_weight_pct": 0.34,
+      "curr_weight_pct": 0.34,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3665",
+      "stock_name": "貿聯-KY",
+      "prev_shares": 4131174,
+      "curr_shares": 4134987,
+      "shares_delta": 3813,
+      "prev_weight_pct": 0.4,
+      "curr_weight_pct": 0.37,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3008",
+      "stock_name": "大立光",
+      "prev_shares": 2171112,
+      "curr_shares": 2173121,
+      "shares_delta": 2009,
+      "prev_weight_pct": 0.57,
+      "curr_weight_pct": 0.58,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3653",
+      "stock_name": "健策",
+      "prev_shares": 2012905,
+      "curr_shares": 2014750,
+      "shares_delta": 1845,
+      "prev_weight_pct": 0.56,
+      "curr_weight_pct": 0.55,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3443",
+      "stock_name": "創意",
+      "prev_shares": 1857321,
+      "curr_shares": 1859002,
+      "shares_delta": 1681,
+      "prev_weight_pct": 0.62,
+      "curr_weight_pct": 0.6,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "7769",
+      "stock_name": "鴻勁",
+      "prev_shares": 1316072,
+      "curr_shares": 1317261,
+      "shares_delta": 1189,
+      "prev_weight_pct": 0.3,
+      "curr_weight_pct": 0.3,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2059",
+      "stock_name": "川湖",
+      "prev_shares": 1273388,
+      "curr_shares": 1274536,
+      "shares_delta": 1148,
+      "prev_weight_pct": 0.66,
+      "curr_weight_pct": 0.65,
+      "streak_days": 2
+    }
+  ],
+  "decrease": [],
+  "full_exit": []
+}

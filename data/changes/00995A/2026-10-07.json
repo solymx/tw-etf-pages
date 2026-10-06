@@ -1,0 +1,75 @@
+{
+  "etf_ticker": "00995A",
+  "as_of_date": "2026-10-07",
+  "prev_as_of_date": "2026-10-06",
+  "compared_at": "2026-10-07T00:38:17+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 1,
+    "increase": 2,
+    "decrease": 2,
+    "full_exit": 0
+  },
+  "first_buy": [
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "prev_shares": 0,
+      "curr_shares": 1000,
+      "shares_delta": 1000,
+      "prev_weight_pct": null,
+      "curr_weight_pct": 0.01,
+      "streak_days": 1
+    }
+  ],
+  "increase": [
+    {
+      "stock_code": "7769",
+      "stock_name": "鴻勁精密",
+      "prev_shares": 11000,
+      "curr_shares": 17000,
+      "shares_delta": 6000,
+      "prev_weight_pct": 1.26,
+      "curr_weight_pct": 2.0,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3443",
+      "stock_name": "創意",
+      "prev_shares": 8000,
+      "curr_shares": 9000,
+      "shares_delta": 1000,
+      "prev_weight_pct": 1.35,
+      "curr_weight_pct": 1.5,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨*",
+      "prev_shares": 180000,
+      "curr_shares": 1000,
+      "shares_delta": -179000,
+      "prev_weight_pct": 2.21,
+      "curr_weight_pct": 0.01,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6805",
+      "stock_name": "富世達",
+      "prev_shares": 9000,
+      "curr_shares": 1000,
+      "shares_delta": -8000,
+      "prev_weight_pct": 0.43,
+      "curr_weight_pct": 0.05,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": []
+}

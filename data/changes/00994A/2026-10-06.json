@@ -1,0 +1,105 @@
+{
+  "etf_ticker": "00994A",
+  "as_of_date": "2026-10-06",
+  "prev_as_of_date": "2026-10-05",
+  "compared_at": "2026-10-07T00:38:17+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 4,
+    "decrease": 3,
+    "full_exit": 1
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "prev_shares": 245000,
+      "curr_shares": 311000,
+      "shares_delta": 66000,
+      "prev_weight_pct": 1.46,
+      "curr_weight_pct": 1.91,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "prev_shares": 16000,
+      "curr_shares": 32000,
+      "shares_delta": 16000,
+      "prev_weight_pct": 0.41,
+      "curr_weight_pct": 0.84,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2308",
+      "stock_name": "台達電",
+      "prev_shares": 58500,
+      "curr_shares": 66500,
+      "shares_delta": 8000,
+      "prev_weight_pct": 2.44,
+      "curr_weight_pct": 2.85,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "prev_shares": 47002,
+      "curr_shares": 51002,
+      "shares_delta": 4000,
+      "prev_weight_pct": 5.58,
+      "curr_weight_pct": 6.4,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "prev_shares": 800000,
+      "curr_shares": 280000,
+      "shares_delta": -520000,
+      "prev_weight_pct": 2.54,
+      "curr_weight_pct": 0.86,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科技",
+      "prev_shares": 170000,
+      "curr_shares": 90000,
+      "shares_delta": -80000,
+      "prev_weight_pct": 1.88,
+      "curr_weight_pct": 0.99,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3264",
+      "stock_name": "欣銓科技",
+      "prev_shares": 91000,
+      "curr_shares": 49000,
+      "shares_delta": -42000,
+      "prev_weight_pct": 0.46,
+      "curr_weight_pct": 0.25,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": [
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "prev_shares": 51000,
+      "curr_shares": 0,
+      "shares_delta": -51000,
+      "prev_weight_pct": 0.03,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    }
+  ]
+}

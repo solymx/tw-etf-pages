@@ -1,0 +1,95 @@
+{
+  "etf_ticker": "00403A",
+  "as_of_date": "2026-10-06",
+  "prev_as_of_date": "2026-10-05",
+  "compared_at": "2026-10-07T00:38:10+08:00",
+  "source": "uni_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 1,
+    "increase": 2,
+    "decrease": 4,
+    "full_exit": 0
+  },
+  "first_buy": [
+    {
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "prev_shares": 0,
+      "curr_shares": 200000,
+      "shares_delta": 200000,
+      "prev_weight_pct": null,
+      "curr_weight_pct": 0.17,
+      "streak_days": 1
+    }
+  ],
+  "increase": [
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "prev_shares": 10000000,
+      "curr_shares": 11000000,
+      "shares_delta": 1000000,
+      "prev_weight_pct": 1.92,
+      "curr_weight_pct": 2.21,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3443",
+      "stock_name": "創意",
+      "prev_shares": 570000,
+      "curr_shares": 620000,
+      "shares_delta": 50000,
+      "prev_weight_pct": 3.29,
+      "curr_weight_pct": 3.56,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "prev_shares": 38000000,
+      "curr_shares": 24000000,
+      "shares_delta": -14000000,
+      "prev_weight_pct": 3.89,
+      "curr_weight_pct": 2.43,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "prev_shares": 8460000,
+      "curr_shares": 7800000,
+      "shares_delta": -660000,
+      "prev_weight_pct": 7.53,
+      "curr_weight_pct": 7.0,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2454",
+      "stock_name": "聯發科",
+      "prev_shares": 2210000,
+      "curr_shares": 1950000,
+      "shares_delta": -260000,
+      "prev_weight_pct": 7.66,
+      "curr_weight_pct": 6.57,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2455",
+      "stock_name": "全新",
+      "prev_shares": 300000,
+      "curr_shares": 200000,
+      "shares_delta": -100000,
+      "prev_weight_pct": 0.12,
+      "curr_weight_pct": 0.08,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": []
+}
