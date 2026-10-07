@@ -1,0 +1,126 @@
+{
+  "etf_ticker": "00988A",
+  "as_of_date": "2026-10-06",
+  "prev_as_of_date": "2026-10-05",
+  "compared_at": "2026-10-08T01:22:23+08:00",
+  "source": "uni_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 2,
+    "increase": 2,
+    "decrease": 5,
+    "full_exit": 1
+  },
+  "first_buy": [
+    {
+      "stock_code": "6762 JP",
+      "stock_name": "TDK CORP",
+      "prev_shares": 0,
+      "curr_shares": 700000,
+      "shares_delta": 700000,
+      "prev_weight_pct": null,
+      "curr_weight_pct": 0.94,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6787 JP",
+      "stock_name": "MEIKO ELECTRONICS CO LTD",
+      "prev_shares": 0,
+      "curr_shares": 23900,
+      "shares_delta": 23900,
+      "prev_weight_pct": null,
+      "curr_weight_pct": 0.24,
+      "streak_days": 1
+    }
+  ],
+  "increase": [
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "prev_shares": 500000,
+      "curr_shares": 1850000,
+      "shares_delta": 1350000,
+      "prev_weight_pct": 0.26,
+      "curr_weight_pct": 0.99,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "OKTA US",
+      "stock_name": "OKTA INC",
+      "prev_shares": 160000,
+      "curr_shares": 200000,
+      "shares_delta": 40000,
+      "prev_weight_pct": 2.03,
+      "curr_weight_pct": 2.55,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "prev_shares": 9700000,
+      "curr_shares": 7200000,
+      "shares_delta": -2500000,
+      "prev_weight_pct": 2.71,
+      "curr_weight_pct": 1.95,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "4180 JP",
+      "stock_name": "APPIER GROUP INC",
+      "prev_shares": 500000,
+      "curr_shares": 200000,
+      "shares_delta": -300000,
+      "prev_weight_pct": 0.25,
+      "curr_weight_pct": 0.1,
+      "streak_days": 3
+    },
+    {
+      "stock_code": "INTC US",
+      "stock_name": "INTEL CORP",
+      "prev_shares": 550399,
+      "curr_shares": 475000,
+      "shares_delta": -75399,
+      "prev_weight_pct": 3.72,
+      "curr_weight_pct": 3.11,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3081",
+      "stock_name": "聯亞",
+      "prev_shares": 150000,
+      "curr_shares": 75000,
+      "shares_delta": -75000,
+      "prev_weight_pct": 0.83,
+      "curr_weight_pct": 0.4,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "MU US",
+      "stock_name": "MICRON TECHNOLOGY INC",
+      "prev_shares": 47000,
+      "curr_shares": 40000,
+      "shares_delta": -7000,
+      "prev_weight_pct": 2.91,
+      "curr_weight_pct": 2.44,
+      "streak_days": 2
+    }
+  ],
+  "full_exit": [
+    {
+      "stock_code": "285A JP",
+      "stock_name": "KIOXIA HOLDINGS CORP",
+      "prev_shares": 111000,
+      "curr_shares": 0,
+      "shares_delta": -111000,
+      "prev_weight_pct": 0.78,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    }
+  ]
+}

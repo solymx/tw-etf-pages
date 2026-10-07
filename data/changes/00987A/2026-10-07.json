@@ -1,0 +1,65 @@
+{
+  "etf_ticker": "00987A",
+  "as_of_date": "2026-10-07",
+  "prev_as_of_date": "2026-10-06",
+  "compared_at": "2026-10-08T01:22:31+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 1,
+    "increase": 1,
+    "decrease": 2,
+    "full_exit": 0
+  },
+  "first_buy": [
+    {
+      "stock_code": "7856",
+      "stock_name": "漢測",
+      "prev_shares": 0,
+      "curr_shares": 6000,
+      "shares_delta": 6000,
+      "prev_weight_pct": null,
+      "curr_weight_pct": 0.0,
+      "streak_days": 1
+    }
+  ],
+  "increase": [
+    {
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "prev_shares": 43000,
+      "curr_shares": 60000,
+      "shares_delta": 17000,
+      "prev_weight_pct": 0.0,
+      "curr_weight_pct": 0.0,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "2455",
+      "stock_name": "全新",
+      "prev_shares": 160000,
+      "curr_shares": 115000,
+      "shares_delta": -45000,
+      "prev_weight_pct": 0.0,
+      "curr_weight_pct": 0.0,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "prev_shares": 146000,
+      "curr_shares": 126000,
+      "shares_delta": -20000,
+      "prev_weight_pct": 0.0,
+      "curr_weight_pct": 0.0,
+      "streak_days": 2
+    }
+  ],
+  "full_exit": []
+}
