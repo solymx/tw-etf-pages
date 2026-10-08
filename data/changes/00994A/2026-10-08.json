@@ -1,0 +1,75 @@
+{
+  "etf_ticker": "00994A",
+  "as_of_date": "2026-10-08",
+  "prev_as_of_date": "2026-10-07",
+  "compared_at": "2026-10-09T01:19:37+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 1,
+    "decrease": 3,
+    "full_exit": 1
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "prev_shares": 32000,
+      "curr_shares": 43000,
+      "shares_delta": 11000,
+      "prev_weight_pct": 0.85,
+      "curr_weight_pct": 1.19,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "prev_shares": 162000,
+      "curr_shares": 82000,
+      "shares_delta": -80000,
+      "prev_weight_pct": 1.04,
+      "curr_weight_pct": 0.54,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "prev_shares": 244001,
+      "curr_shares": 230001,
+      "shares_delta": -14000,
+      "prev_weight_pct": 6.79,
+      "curr_weight_pct": 6.31,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2059",
+      "stock_name": "川湖科技",
+      "prev_shares": 14501,
+      "curr_shares": 13001,
+      "shares_delta": -1500,
+      "prev_weight_pct": 3.65,
+      "curr_weight_pct": 2.98,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": [
+    {
+      "stock_code": "2481",
+      "stock_name": "強茂",
+      "prev_shares": 250000,
+      "curr_shares": 0,
+      "shares_delta": -250000,
+      "prev_weight_pct": 0.95,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    }
+  ]
+}

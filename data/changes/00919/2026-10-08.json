@@ -1,0 +1,83 @@
+{
+  "etf_ticker": "00919",
+  "as_of_date": "2026-10-08",
+  "prev_as_of_date": "2026-10-07",
+  "compared_at": "2026-10-09T01:19:52+08:00",
+  "source": "capital",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 6,
+    "decrease": 0,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "prev_shares": 1270070000,
+      "curr_shares": 1275890000,
+      "shares_delta": 5820000,
+      "prev_weight_pct": 8.66,
+      "curr_weight_pct": 8.57,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "prev_shares": 872710000,
+      "curr_shares": 875980000,
+      "shares_delta": 3270000,
+      "prev_weight_pct": 5.44,
+      "curr_weight_pct": 5.39,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "prev_shares": 931287000,
+      "curr_shares": 934477000,
+      "shares_delta": 3190000,
+      "prev_weight_pct": 10.35,
+      "curr_weight_pct": 10.3,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "prev_shares": 697860000,
+      "curr_shares": 700140000,
+      "shares_delta": 2280000,
+      "prev_weight_pct": 12.76,
+      "curr_weight_pct": 12.61,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "prev_shares": 609290000,
+      "curr_shares": 611370000,
+      "shares_delta": 2080000,
+      "prev_weight_pct": 15.33,
+      "curr_weight_pct": 15.32,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "prev_shares": 194620000,
+      "curr_shares": 195330000,
+      "shares_delta": 710000,
+      "prev_weight_pct": 10.55,
+      "curr_weight_pct": 10.41,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [],
+  "full_exit": []
+}
