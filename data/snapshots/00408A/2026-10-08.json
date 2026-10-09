@@ -2,14 +2,14 @@
   "etf_ticker": "00408A",
   "as_of_date": "2026-10-08",
   "source": "zdsetf",
-  "fetched_at": "2026-10-09T01:19:37+08:00",
-  "raw_file": "00408A_2026-10-09_zdsetf.json",
-  "raw_file_hash": "2764ae5d1ad06036389010301d49766a30ad105847e9e11f43e7fe2849415e57",
+  "fetched_at": "2026-10-10T00:55:24+08:00",
+  "raw_file": "00408A_2026-10-10_zdsetf.json",
+  "raw_file_hash": "8db69ee80d0306f5719d0b6ce20403aa7fb03a33d2cfa6ddc1260fcb53844a81",
   "holdings_count": 48,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=183",
-    "fetched_at_upstream": "2026-10-08T12:28:14"
+    "fetched_at_upstream": "2026-10-09T12:26:35"
   },
   "holdings": [
     {
@@ -223,16 +223,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "2449",
-      "stock_name": "京元電子",
-      "shares": 52000,
+      "stock_code": "6488",
+      "stock_name": "環球晶",
+      "shares": 14000,
       "weight_pct": 1.03,
       "is_placeholder": false
     },
     {
-      "stock_code": "6488",
-      "stock_name": "環球晶",
-      "shares": 14000,
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "shares": 52000,
       "weight_pct": 1.03,
       "is_placeholder": false
     },
@@ -321,16 +321,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "3026",
-      "stock_name": "禾伸堂",
-      "shares": 6000,
+      "stock_code": "2059",
+      "stock_name": "川湖科技",
+      "shares": 499,
       "weight_pct": 0.34,
       "is_placeholder": false
     },
     {
-      "stock_code": "2059",
-      "stock_name": "川湖科技",
-      "shares": 499,
+      "stock_code": "3026",
+      "stock_name": "禾伸堂",
+      "shares": 6000,
       "weight_pct": 0.34,
       "is_placeholder": false
     },
