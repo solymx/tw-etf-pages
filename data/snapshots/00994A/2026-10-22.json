@@ -2,14 +2,14 @@
   "etf_ticker": "00994A",
   "as_of_date": "2026-10-22",
   "source": "zdsetf",
-  "fetched_at": "2026-10-26T18:58:03+08:00",
-  "raw_file": "00994A_2026-10-26_zdsetf.json",
-  "raw_file_hash": "4fd77ac5da0f24c954c471d81923e4b1a1b1a06708743c2971f7f45827610533",
+  "fetched_at": "2026-10-27T00:03:44+08:00",
+  "raw_file": "00994A_2026-10-27_zdsetf.json",
+  "raw_file_hash": "2f579407ce81ee973990a5629eb13983b3baf57135a2f9de4070c28a454e682f",
   "holdings_count": 40,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=182",
-    "fetched_at_upstream": "2026-10-26T09:39:25"
+    "fetched_at_upstream": "2026-10-26T12:19:35"
   },
   "holdings": [
     {
@@ -244,9 +244,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "6526",
-      "stock_name": "達發",
-      "shares": 16000,
+      "stock_code": "6488",
+      "stock_name": "環球晶",
+      "shares": 15000,
+      "weight_pct": 0.32,
+      "is_placeholder": false
+    },
+    {
+      "stock_code": "6510",
+      "stock_name": "精測",
+      "shares": 4000,
       "weight_pct": 0.32,
       "is_placeholder": false
     },
@@ -258,16 +265,9 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "6488",
-      "stock_name": "環球晶",
-      "shares": 15000,
-      "weight_pct": 0.32,
-      "is_placeholder": false
-    },
-    {
-      "stock_code": "6510",
-      "stock_name": "精測",
-      "shares": 4000,
+      "stock_code": "6526",
+      "stock_name": "達發",
+      "shares": 16000,
       "weight_pct": 0.32,
       "is_placeholder": false
     },
