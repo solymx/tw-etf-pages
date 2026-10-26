@@ -2,14 +2,14 @@
   "etf_ticker": "00408A",
   "as_of_date": "2026-10-22",
   "source": "zdsetf",
-  "fetched_at": "2026-10-23T22:11:12+08:00",
-  "raw_file": "00408A_2026-10-23_zdsetf.json",
-  "raw_file_hash": "6d006bea4af9e35263de712baa4992d257cfe9e7af48d532a0bffea6b24ad71a",
+  "fetched_at": "2026-10-26T18:58:03+08:00",
+  "raw_file": "00408A_2026-10-26_zdsetf.json",
+  "raw_file_hash": "9feb62f4be2a87feba4db7c5076e723e5768520aa554f1ddb6b3bbd8d6338efd",
   "holdings_count": 52,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=183",
-    "fetched_at_upstream": "2026-10-23T12:27:31"
+    "fetched_at_upstream": "2026-10-26T09:45:40"
   },
   "holdings": [
     {
@@ -237,16 +237,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "3008",
-      "stock_name": "大立光",
-      "shares": 2000,
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "shares": 47000,
       "weight_pct": 0.92,
       "is_placeholder": false
     },
     {
-      "stock_code": "2449",
-      "stock_name": "京元電子",
-      "shares": 47000,
+      "stock_code": "3008",
+      "stock_name": "大立光",
+      "shares": 2000,
       "weight_pct": 0.92,
       "is_placeholder": false
     },
