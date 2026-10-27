@@ -2,9 +2,9 @@
   "etf_ticker": "00939",
   "as_of_date": "2026-10-27",
   "source": "uni_excel",
-  "fetched_at": "2026-10-27T18:52:49+08:00",
+  "fetched_at": "2026-10-27T23:17:21+08:00",
   "raw_file": "00939_2026-10-27_uni.xlsx",
-  "raw_file_hash": "f110fec6998156994fa8bb438aa7c1ea91f384437b49d955a2f8cae3c67f61a0",
+  "raw_file_hash": "bc46c74da9216325d9b76bfb182d5789e1e729d1da7ffe5f24280531c02ad039",
   "holdings_count": 40,
   "placeholder_count": 0,
   "meta": {

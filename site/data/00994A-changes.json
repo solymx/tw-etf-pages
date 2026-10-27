@@ -694,10 +694,10 @@
           }
         },
         {
-          "stock_code": "2455",
-          "stock_name": "全新",
-          "curr_shares": 25000,
-          "prev_shares": 25000,
+          "stock_code": "6510",
+          "stock_name": "精測",
+          "curr_shares": 4000,
+          "prev_shares": 4000,
           "shares_delta": 0,
           "curr_weight_pct": 0.31,
           "prev_weight_pct": 0.31,
@@ -712,10 +712,10 @@
           }
         },
         {
-          "stock_code": "6510",
-          "stock_name": "精測",
-          "curr_shares": 4000,
-          "prev_shares": 4000,
+          "stock_code": "2455",
+          "stock_name": "全新",
+          "curr_shares": 25000,
+          "prev_shares": 25000,
           "shares_delta": 0,
           "curr_weight_pct": 0.31,
           "prev_weight_pct": 0.31,

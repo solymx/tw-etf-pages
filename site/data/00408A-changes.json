@@ -353,10 +353,10 @@
           }
         },
         {
-          "stock_code": "3081",
-          "stock_name": "聯亞",
-          "curr_shares": 11500,
-          "prev_shares": 11500,
+          "stock_code": "6669",
+          "stock_name": "緯穎科技服務",
+          "curr_shares": 14767,
+          "prev_shares": 14767,
           "shares_delta": 0,
           "curr_weight_pct": 2.09,
           "prev_weight_pct": 2.09,
@@ -371,10 +371,10 @@
           }
         },
         {
-          "stock_code": "6669",
-          "stock_name": "緯穎科技服務",
-          "curr_shares": 14767,
-          "prev_shares": 14767,
+          "stock_code": "3081",
+          "stock_name": "聯亞",
+          "curr_shares": 11500,
+          "prev_shares": 11500,
           "shares_delta": 0,
           "curr_weight_pct": 2.09,
           "prev_weight_pct": 2.09,
@@ -641,10 +641,10 @@
           }
         },
         {
-          "stock_code": "3008",
-          "stock_name": "大立光",
-          "curr_shares": 2000,
-          "prev_shares": 2000,
+          "stock_code": "9802",
+          "stock_name": "鈺齊國際",
+          "curr_shares": 192000,
+          "prev_shares": 192000,
           "shares_delta": 0,
           "curr_weight_pct": 0.87,
           "prev_weight_pct": 0.87,
@@ -659,10 +659,10 @@
           }
         },
         {
-          "stock_code": "9802",
-          "stock_name": "鈺齊國際",
-          "curr_shares": 192000,
-          "prev_shares": 192000,
+          "stock_code": "3008",
+          "stock_name": "大立光",
+          "curr_shares": 2000,
+          "prev_shares": 2000,
           "shares_delta": 0,
           "curr_weight_pct": 0.87,
           "prev_weight_pct": 0.87,

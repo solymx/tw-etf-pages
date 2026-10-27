@@ -2,14 +2,14 @@
   "etf_ticker": "00994A",
   "as_of_date": "2026-10-27",
   "source": "zdsetf",
-  "fetched_at": "2026-10-27T18:52:34+08:00",
+  "fetched_at": "2026-10-27T23:17:02+08:00",
   "raw_file": "00994A_2026-10-27_zdsetf.json",
-  "raw_file_hash": "bf12abd990bb153e544986f708f74ee56f5ba0d5d1c18b7407bdaf6ea8554254",
+  "raw_file_hash": "ca344320497ae2355deb37dc4f5acd7bbbd0563039014aa69ed69ee6a9070ff1",
   "holdings_count": 41,
   "placeholder_count": 1,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=182",
-    "fetched_at_upstream": "2026-10-27T09:41:00"
+    "fetched_at_upstream": "2026-10-27T12:21:32"
   },
   "holdings": [
     {
@@ -258,16 +258,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "2455",
-      "stock_name": "全新",
-      "shares": 25000,
+      "stock_code": "6510",
+      "stock_name": "精測",
+      "shares": 4000,
       "weight_pct": 0.31,
       "is_placeholder": false
     },
     {
-      "stock_code": "6510",
-      "stock_name": "精測",
-      "shares": 4000,
+      "stock_code": "2455",
+      "stock_name": "全新",
+      "shares": 25000,
       "weight_pct": 0.31,
       "is_placeholder": false
     },
