@@ -2,7 +2,7 @@
   "etf_ticker": "00918",
   "as_of_date": "2026-10-28",
   "source": "uobam",
-  "fetched_at": "2026-10-28T18:50:38+08:00",
+  "fetched_at": "2026-10-28T23:54:39+08:00",
   "raw_file": "00918_2026-10-28_uobam.json",
   "raw_file_hash": "f193ad143e5df03aa32ef3cf183173585f9b00f791405e684457c962f03ae6fa",
   "holdings_count": 30,

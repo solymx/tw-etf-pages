@@ -2,14 +2,14 @@
   "etf_ticker": "00994A",
   "as_of_date": "2026-10-28",
   "source": "zdsetf",
-  "fetched_at": "2026-10-28T18:50:24+08:00",
+  "fetched_at": "2026-10-28T23:54:22+08:00",
   "raw_file": "00994A_2026-10-28_zdsetf.json",
-  "raw_file_hash": "65595933030223cb974d44c6e83cb97a41b0124ba6ba84aedd6fa17133ab32d8",
+  "raw_file_hash": "3cf9d2a95288f5db8f13a23f31655526f573b3fab2c8d4ba92203893f06a06a7",
   "holdings_count": 41,
   "placeholder_count": 1,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=182",
-    "fetched_at_upstream": "2026-10-28T09:41:32"
+    "fetched_at_upstream": "2026-10-28T12:21:56"
   },
   "holdings": [
     {
@@ -195,16 +195,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "2455",
-      "stock_name": "全新",
-      "shares": 50000,
+      "stock_code": "3026",
+      "stock_name": "禾伸堂",
+      "shares": 34000,
       "weight_pct": 0.65,
       "is_placeholder": false
     },
     {
-      "stock_code": "3026",
-      "stock_name": "禾伸堂",
-      "shares": 34000,
+      "stock_code": "2455",
+      "stock_name": "全新",
+      "shares": 50000,
       "weight_pct": 0.65,
       "is_placeholder": false
     },

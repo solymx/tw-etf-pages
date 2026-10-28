@@ -2,14 +2,14 @@
   "etf_ticker": "00987A",
   "as_of_date": "2026-10-28",
   "source": "zdsetf",
-  "fetched_at": "2026-10-28T18:50:23+08:00",
+  "fetched_at": "2026-10-28T23:54:21+08:00",
   "raw_file": "00987A_2026-10-28_zdsetf.json",
-  "raw_file_hash": "5490534bb3d1bb7424ba5cdee4dd386ef881b4c337b5a6a1226048e8906663d1",
+  "raw_file_hash": "561b5a94d9d8a093e9c6a0b5ada3407b4c3e0c016c8c2ff62eeb72be50f3c98a",
   "holdings_count": 27,
   "placeholder_count": 1,
   "meta": {
     "source_url": "https://www.tsit.com.tw/ETF/Home/Pcf/00987A",
-    "fetched_at_upstream": "2026-10-28T09:32:13"
+    "fetched_at_upstream": "2026-10-28T12:12:44"
   },
   "holdings": [
     {

@@ -2,14 +2,14 @@
   "etf_ticker": "00408A",
   "as_of_date": "2026-10-28",
   "source": "zdsetf",
-  "fetched_at": "2026-10-28T18:50:23+08:00",
+  "fetched_at": "2026-10-28T23:54:21+08:00",
   "raw_file": "00408A_2026-10-28_zdsetf.json",
-  "raw_file_hash": "a6d25ef6d117a1df9c2751c8731461c190e23038652090b06e793f9d73472c32",
+  "raw_file_hash": "704f227214c2e7c1990c5227dcdf4668631527566b72f882b752f0655d389650",
   "holdings_count": 53,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=183",
-    "fetched_at_upstream": "2026-10-28T09:55:16"
+    "fetched_at_upstream": "2026-10-28T12:35:18"
   },
   "holdings": [
     {

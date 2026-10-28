@@ -2,7 +2,7 @@
   "etf_ticker": "00919",
   "as_of_date": "2026-10-28",
   "source": "capital",
-  "fetched_at": "2026-10-28T18:50:40+08:00",
+  "fetched_at": "2026-10-28T23:54:40+08:00",
   "raw_file": "00919_2026-10-28_capital.json",
   "raw_file_hash": "a065f17da71cde35035470d083a90611da5ce7a3b0624dae5aece7618bcf0439",
   "holdings_count": 40,
