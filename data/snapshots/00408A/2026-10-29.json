@@ -2,14 +2,14 @@
   "etf_ticker": "00408A",
   "as_of_date": "2026-10-29",
   "source": "zdsetf",
-  "fetched_at": "2026-10-29T18:48:16+08:00",
+  "fetched_at": "2026-10-29T23:59:49+08:00",
   "raw_file": "00408A_2026-10-29_zdsetf.json",
-  "raw_file_hash": "e3e11331477351fe659c211af3aefaa0b8b0840ff877a6c4a063492f2067982b",
+  "raw_file_hash": "814b22d0d1d3e8a2221eebca27712436c16fef64d194a932dc5e309e674f11fa",
   "holdings_count": 52,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=183",
-    "fetched_at_upstream": "2026-10-29T09:55:07"
+    "fetched_at_upstream": "2026-10-29T12:35:11"
   },
   "holdings": [
     {
@@ -237,16 +237,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "2455",
-      "stock_name": "全新",
-      "shares": 24000,
+      "stock_code": "3008",
+      "stock_name": "大立光",
+      "shares": 2000,
       "weight_pct": 0.83,
       "is_placeholder": false
     },
     {
-      "stock_code": "3008",
-      "stock_name": "大立光",
-      "shares": 2000,
+      "stock_code": "2455",
+      "stock_name": "全新",
+      "shares": 24000,
       "weight_pct": 0.83,
       "is_placeholder": false
     },
@@ -300,16 +300,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "3443",
-      "stock_name": "創意",
-      "shares": 1000,
+      "stock_code": "2357",
+      "stock_name": "華碩",
+      "shares": 8000,
       "weight_pct": 0.54,
       "is_placeholder": false
     },
     {
-      "stock_code": "2357",
-      "stock_name": "華碩",
-      "shares": 8000,
+      "stock_code": "3443",
+      "stock_name": "創意",
+      "shares": 1000,
       "weight_pct": 0.54,
       "is_placeholder": false
     },
