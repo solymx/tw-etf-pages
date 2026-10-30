@@ -2,9 +2,9 @@
   "etf_ticker": "00991A",
   "as_of_date": "2026-10-30",
   "source": "fh_excel",
-  "fetched_at": "2026-10-30T18:54:46+08:00",
+  "fetched_at": "2026-10-30T23:46:49+08:00",
   "raw_file": "00991A_2026-10-30_fh.xlsx",
-  "raw_file_hash": "ac7fc82b79b20bba1494185fd0de3463654c0d014fdfd744cdafb35996f409d4",
+  "raw_file_hash": "ad580ae5ff23aef7570c79f60a1a49cc267d0d83b8c940ed6f122c231da95476",
   "holdings_count": 50,
   "placeholder_count": 14,
   "meta": {

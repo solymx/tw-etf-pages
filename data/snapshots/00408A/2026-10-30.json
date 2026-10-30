@@ -2,14 +2,14 @@
   "etf_ticker": "00408A",
   "as_of_date": "2026-10-30",
   "source": "zdsetf",
-  "fetched_at": "2026-10-30T18:54:55+08:00",
+  "fetched_at": "2026-10-30T23:46:59+08:00",
   "raw_file": "00408A_2026-10-30_zdsetf.json",
-  "raw_file_hash": "efbe9db82f57b9753be814c6406c2eedd2b96c305f9f590a63acfb77c5b6830c",
+  "raw_file_hash": "b49a030384a182310ce4990d301c2dec36b62ac3a3b1a5cae43a7ce69e612c1e",
   "holdings_count": 49,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=183",
-    "fetched_at_upstream": "2026-10-30T09:55:29"
+    "fetched_at_upstream": "2026-10-30T12:35:56"
   },
   "holdings": [
     {
@@ -125,16 +125,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "6669",
-      "stock_name": "緯穎科技服務",
-      "shares": 14767,
+      "stock_code": "6223",
+      "stock_name": "旺矽科技",
+      "shares": 5790,
       "weight_pct": 1.97,
       "is_placeholder": false
     },
     {
-      "stock_code": "6223",
-      "stock_name": "旺矽科技",
-      "shares": 5790,
+      "stock_code": "6669",
+      "stock_name": "緯穎科技服務",
+      "shares": 14767,
       "weight_pct": 1.97,
       "is_placeholder": false
     },
@@ -223,16 +223,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "9802",
-      "stock_name": "鈺齊國際",
-      "shares": 192000,
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "shares": 106000,
       "weight_pct": 0.87,
       "is_placeholder": false
     },
     {
-      "stock_code": "2303",
-      "stock_name": "聯電",
-      "shares": 106000,
+      "stock_code": "9802",
+      "stock_name": "鈺齊國際",
+      "shares": 192000,
       "weight_pct": 0.87,
       "is_placeholder": false
     },

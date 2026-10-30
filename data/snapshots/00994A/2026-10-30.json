@@ -2,14 +2,14 @@
   "etf_ticker": "00994A",
   "as_of_date": "2026-10-30",
   "source": "zdsetf",
-  "fetched_at": "2026-10-30T18:54:55+08:00",
+  "fetched_at": "2026-10-30T23:46:59+08:00",
   "raw_file": "00994A_2026-10-30_zdsetf.json",
-  "raw_file_hash": "236c8117865bdaab793988e6cd3534564aaf4f2de67107cff1bc8a0c52cbbc34",
+  "raw_file_hash": "6f19291f78d9f1a1de524c7693575c377d80913dee10dd85987b566df05869a7",
   "holdings_count": 38,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=182",
-    "fetched_at_upstream": "2026-10-30T09:41:46"
+    "fetched_at_upstream": "2026-10-30T12:22:14"
   },
   "holdings": [
     {
@@ -104,16 +104,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "1303",
-      "stock_name": "南亞",
-      "shares": 347000,
+      "stock_code": "5274",
+      "stock_name": "信驊科技",
+      "shares": 6420,
       "weight_pct": 2.79,
       "is_placeholder": false
     },
     {
-      "stock_code": "5274",
-      "stock_name": "信驊科技",
-      "shares": 6420,
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "shares": 347000,
       "weight_pct": 2.79,
       "is_placeholder": false
     },
@@ -230,6 +230,13 @@
       "is_placeholder": false
     },
     {
+      "stock_code": "2408",
+      "stock_name": "南亞科技",
+      "shares": 25000,
+      "weight_pct": 0.31,
+      "is_placeholder": false
+    },
+    {
       "stock_code": "6488",
       "stock_name": "環球晶",
       "shares": 15000,
@@ -244,23 +251,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "2408",
-      "stock_name": "南亞科技",
-      "shares": 25000,
-      "weight_pct": 0.31,
+      "stock_code": "3264",
+      "stock_name": "欣銓科技",
+      "shares": 49000,
+      "weight_pct": 0.29,
       "is_placeholder": false
     },
     {
       "stock_code": "2880",
       "stock_name": "華南金控",
       "shares": 210000,
-      "weight_pct": 0.29,
-      "is_placeholder": false
-    },
-    {
-      "stock_code": "3264",
-      "stock_name": "欣銓科技",
-      "shares": 49000,
       "weight_pct": 0.29,
       "is_placeholder": false
     },

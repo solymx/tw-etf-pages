@@ -428,10 +428,10 @@
           }
         },
         {
-          "stock_code": "6669",
-          "stock_name": "緯穎科技服務",
-          "curr_shares": 14767,
-          "prev_shares": 14767,
+          "stock_code": "6223",
+          "stock_name": "旺矽科技",
+          "curr_shares": 5790,
+          "prev_shares": 5790,
           "shares_delta": 0,
           "curr_weight_pct": 1.97,
           "prev_weight_pct": 1.97,
@@ -446,10 +446,10 @@
           }
         },
         {
-          "stock_code": "6223",
-          "stock_name": "旺矽科技",
-          "curr_shares": 5790,
-          "prev_shares": 5790,
+          "stock_code": "6669",
+          "stock_name": "緯穎科技服務",
+          "curr_shares": 14767,
+          "prev_shares": 14767,
           "shares_delta": 0,
           "curr_weight_pct": 1.97,
           "prev_weight_pct": 1.97,
@@ -644,10 +644,10 @@
           }
         },
         {
-          "stock_code": "9802",
-          "stock_name": "鈺齊國際",
-          "curr_shares": 192000,
-          "prev_shares": 192000,
+          "stock_code": "2303",
+          "stock_name": "聯電",
+          "curr_shares": 106000,
+          "prev_shares": 106000,
           "shares_delta": 0,
           "curr_weight_pct": 0.87,
           "prev_weight_pct": 0.87,
@@ -662,10 +662,10 @@
           }
         },
         {
-          "stock_code": "2303",
-          "stock_name": "聯電",
-          "curr_shares": 106000,
-          "prev_shares": 106000,
+          "stock_code": "9802",
+          "stock_name": "鈺齊國際",
+          "curr_shares": 192000,
+          "prev_shares": 192000,
           "shares_delta": 0,
           "curr_weight_pct": 0.87,
           "prev_weight_pct": 0.87,

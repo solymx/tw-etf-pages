@@ -355,10 +355,10 @@
           }
         },
         {
-          "stock_code": "1303",
-          "stock_name": "南亞",
-          "curr_shares": 347000,
-          "prev_shares": 347000,
+          "stock_code": "5274",
+          "stock_name": "信驊科技",
+          "curr_shares": 6420,
+          "prev_shares": 6420,
           "shares_delta": 0,
           "curr_weight_pct": 2.79,
           "prev_weight_pct": 2.79,
@@ -373,10 +373,10 @@
           }
         },
         {
-          "stock_code": "5274",
-          "stock_name": "信驊科技",
-          "curr_shares": 6420,
-          "prev_shares": 6420,
+          "stock_code": "1303",
+          "stock_name": "南亞",
+          "curr_shares": 347000,
+          "prev_shares": 347000,
           "shares_delta": 0,
           "curr_weight_pct": 2.79,
           "prev_weight_pct": 2.79,
@@ -643,6 +643,24 @@
           }
         },
         {
+          "stock_code": "2408",
+          "stock_name": "南亞科技",
+          "curr_shares": 25000,
+          "prev_shares": 25000,
+          "shares_delta": 0,
+          "curr_weight_pct": 0.31,
+          "prev_weight_pct": 0.31,
+          "weight_delta": 0.0,
+          "changed": false,
+          "change_kind": "flat",
+          "status": {
+            "kind": "flat",
+            "css": "status-flat",
+            "label": "持平",
+            "short": "持平"
+          }
+        },
+        {
           "stock_code": "6488",
           "stock_name": "環球晶",
           "curr_shares": 15000,
@@ -679,13 +697,13 @@
           }
         },
         {
-          "stock_code": "2408",
-          "stock_name": "南亞科技",
-          "curr_shares": 25000,
-          "prev_shares": 25000,
+          "stock_code": "3264",
+          "stock_name": "欣銓科技",
+          "curr_shares": 49000,
+          "prev_shares": 49000,
           "shares_delta": 0,
-          "curr_weight_pct": 0.31,
-          "prev_weight_pct": 0.31,
+          "curr_weight_pct": 0.29,
+          "prev_weight_pct": 0.29,
           "weight_delta": 0.0,
           "changed": false,
           "change_kind": "flat",
@@ -701,24 +719,6 @@
           "stock_name": "華南金控",
           "curr_shares": 210000,
           "prev_shares": 210000,
-          "shares_delta": 0,
-          "curr_weight_pct": 0.29,
-          "prev_weight_pct": 0.29,
-          "weight_delta": 0.0,
-          "changed": false,
-          "change_kind": "flat",
-          "status": {
-            "kind": "flat",
-            "css": "status-flat",
-            "label": "持平",
-            "short": "持平"
-          }
-        },
-        {
-          "stock_code": "3264",
-          "stock_name": "欣銓科技",
-          "curr_shares": 49000,
-          "prev_shares": 49000,
           "shares_delta": 0,
           "curr_weight_pct": 0.29,
           "prev_weight_pct": 0.29,
