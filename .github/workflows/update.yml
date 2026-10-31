@@ -5,7 +5,15 @@ name: Update ETF holdings
 on:
   schedule:
     - cron: "0 9 * * 1-5"   # weekdays 17:00 Taiwan = 09:00 UTC
+    - cron: "0 4 * * 6"     # Saturday 12:00 Taiwan: TDCC 千張大戶籌碼 weekly refresh only
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "run = full daily update; chips = TDCC 大戶籌碼 only"
+        required: false
+        default: run
+        type: choice
+        options: [run, chips]
 
 permissions:
   contents: write   # commit archived snapshots / change JSON
@@ -44,7 +52,12 @@ jobs:
           pip install -e .
 
       - name: Fetch, archive, compare, render
-        run: python -m tw_etf_pages run
+        run: |
+          if [ "${{ github.event.schedule }}" = "0 4 * * 6" ] || [ "${{ inputs.mode }}" = "chips" ]; then
+            python -m tw_etf_pages chips
+          else
+            python -m tw_etf_pages run
+          fi
         # Retries are inside the Python client; issuer WAF may still fail —
         # fallback to zdsetf.com is enabled unless --no-fallback.
 
@@ -54,11 +67,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/snapshots data/changes data/last_run.json data/taiex data/margin site
+          git add data/snapshots data/changes data/last_run.json data/taiex data/margin data/chips site
           if git diff --staged --quiet; then
             echo "No data/site changes to commit"
           else
             git commit -m "chore: update ETF holdings snapshots $(date -u +%Y-%m-%d)"
+            git pull --rebase
             git push
           fi
 

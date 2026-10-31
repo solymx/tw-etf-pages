@@ -1,0 +1,66 @@
+{% macro dpp(v) -%}
+{%- if v is none -%}<span class="muted">無資料</span>
+{%- elif v < 0 -%}<span class="mg-down">▼ {{ "%+.2f"|format(v) }}</span>
+{%- elif v > 0 -%}<span class="mg-up">▲ {{ "%+.2f"|format(v) }}</span>
+{%- else -%}<span class="muted">0.00</span>{%- endif -%}
+{%- endmacro %}
+
+{% macro dint(v) -%}
+{%- if v is none -%}<span class="muted">—</span>
+{%- elif v < 0 -%}<span class="mg-down">{{ "{:+,}".format(v) }}</span>
+{%- elif v > 0 -%}<span class="mg-up">{{ "{:+,}".format(v) }}</span>
+{%- else -%}<span class="muted">0</span>{%- endif -%}
+{%- endmacro %}
+
+{% macro chips_card(cv, link_more=True) %}
+{% set S = cv.summary %}
+<div class="mg-card {% if S.tilt == '偏減' %}down{% elif S.tilt == '偏增' %}up{% endif %}">
+  <div class="kd-card-head">
+    <div>
+      <div class="kd-title">ETF 成分股 千張大戶籌碼（週變化）</div>
+      <div class="muted">TDCC 資料日 <strong>{{ cv.data_date_fmt }}</strong> 對比 <strong>{{ cv.prev_date_fmt }}</strong></div>
+    </div>
+    <div class="mg-big {% if S.tilt == '偏減' %}down{% elif S.tilt == '偏增' %}up{% endif %}">
+      <strong>{{ S.tilt }}</strong>
+      <span>增 {{ S.up }} 檔／減 {{ S.down }} 檔／平 {{ S.flat }} 檔</span>
+    </div>
+  </div>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>追蹤股票（去重）</span><strong>{{ S.stocks }}</strong>{% if S.missing %}<span class="muted">無資料 {{ S.missing }}</span>{% endif %}</div>
+    <div class="kd-metric"><span>明顯增加（≥ {{ "%.1f"|format(cv.notable_pp) }} 個百分點）</span><strong class="mg-up">{{ S.notable_up }}</strong></div>
+    <div class="kd-metric"><span>明顯減少（≤ −{{ "%.1f"|format(cv.notable_pp) }} 個百分點）</span><strong class="mg-down">{{ S.notable_down }}</strong></div>
+  </div>
+  {% if link_more %}<p class="kd-more"><a href="chips.html">查看全部 {{ S.stocks }} 檔大戶籌碼明細 →</a></p>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro chips_table(rows) %}
+<div class="table-wrap">
+  <table class="report kd-table">
+    <thead><tr><th>代號</th><th>名稱</th><th>千張大戶比例</th><th>週變化(百分點)</th><th>大戶人數</th><th>人數增減</th><th>大戶持股增減(張)</th><th>總股東數增減</th><th>持有 ETF</th></tr></thead>
+    <tbody>
+      {% for r in rows %}
+      <tr class="{% if r.d_pct is defined and r.d_pct is not none and r.d_pct < 0 %}mg-row-down{% elif r.d_pct is defined and r.d_pct is not none and r.d_pct > 0 %}mg-row-up{% endif %}">
+        <td><strong>{{ r.code }}</strong></td>
+        <td>{{ r.name }}</td>
+        <td class="num">{% if r.cur %}{{ "%.2f"|format(r.cur.big_pct) }}%{% if r.prev %}<br /><small class="muted">前週 {{ "%.2f"|format(r.prev.big_pct) }}%</small>{% endif %}{% else %}<span class="muted">無資料</span>{% endif %}</td>
+        <td class="num">{{ dpp(r.d_pct if r.d_pct is defined else none) }}</td>
+        <td class="num">{% if r.cur %}{{ "{:,}".format(r.cur.big_holders) }}{% else %}—{% endif %}</td>
+        <td class="num">{{ dint(r.d_holders if r.d_holders is defined else none) }}</td>
+        <td class="num">{{ dint(r.d_lots if r.d_lots is defined else none) }}</td>
+        <td class="num">{{ dint(r.d_total_holders if r.d_total_holders is defined else none) }}</td>
+        <td>{% if r.etf_count > 3 %}<details><summary>{{ r.etf_count }} 檔</summary><small>{{ r.etfs|join("、") }}</small></details>{% else %}<small>{{ r.etfs|join("、") }}</small>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endmacro %}
+
+{% macro chips_note(cv) %}
+<p class="muted kd-note">
+  定義：<strong>千張大戶</strong> = 集保戶股權分散表「持股分級 15：1,000,001 股以上」（≥ 1,000 張）；比例為該級距占集保庫存數 %。週變化 = 本週比例 − 前週比例（個百分點），<span class="mg-up">紅 ▲ 為增加</span>、<span class="mg-down">綠 ▼ 為減少</span>（台股慣例）；「明顯」門檻為 ±{{ "%.1f"|format(cv.notable_pp) }} 個百分點。整體傾向：增加檔數 ≥ 減少檔數 1.3 倍為「偏增」，反之「偏減」，其餘「混雜」。<br />
+  股票範圍：本站所有追蹤 ETF（主動＋被動）最新持股中的台股去重；海外股票不適用。查不到集保資料者標示「無資料」，不推估。<br />
+  資料來源：<a href="{{ cv.sources.open_data }}" target="_blank" rel="noopener">臺灣集中保管結算所 開放資料 1-5 集保戶股權分散表</a>（最新週）、<a href="{{ cv.sources.history_query }}" target="_blank" rel="noopener">TDCC 集保戶股權分散表查詢</a>（前一週）。TDCC 每週最後一個營業日資料，通常於週五晚間／週六公布。僅供參考，不構成投資建議。
+</p>
+{% endmacro %}

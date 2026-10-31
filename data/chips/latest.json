@@ -1,0 +1,8031 @@
+{
+  "data_date": "20261030",
+  "prev_date": "20261022",
+  "generated_at": "2026-10-31T19:49:50+08:00",
+  "definition": "持股 1,000 張以上（TDCC 持股分級 15：1,000,001 股以上）",
+  "notable_pp": 0.5,
+  "sources": {
+    "open_data": "https://opendata.tdcc.com.tw/getOD.ashx?id=1-5",
+    "history_query": "https://www.tdcc.com.tw/portal/zh/smWeb/qryStock"
+  },
+  "summary": {
+    "stocks": 261,
+    "with_data": 261,
+    "missing": 0,
+    "up": 111,
+    "down": 129,
+    "flat": 21,
+    "notable_up": 26,
+    "notable_down": 49,
+    "tilt": "混雜（略偏減）",
+    "avg_d_pct_etf_weighted": -0.221
+  },
+  "increase": [
+    "3105",
+    "3406",
+    "6409",
+    "6214",
+    "6782",
+    "6805",
+    "4770",
+    "6770",
+    "6510",
+    "6531",
+    "9802",
+    "2344",
+    "2451",
+    "3008",
+    "3260",
+    "2356",
+    "2352",
+    "6691",
+    "2478",
+    "3211",
+    "5351",
+    "3714",
+    "2474",
+    "5439",
+    "2458",
+    "3006"
+  ],
+  "decrease": [
+    "3264",
+    "3653",
+    "1815",
+    "6672",
+    "2409",
+    "3450",
+    "6274",
+    "2303",
+    "6213",
+    "3665",
+    "5425",
+    "2313",
+    "4958",
+    "2351",
+    "8150",
+    "5536",
+    "3189",
+    "8358",
+    "6278",
+    "6488",
+    "3533",
+    "2404",
+    "2455",
+    "8021",
+    "1560",
+    "4979",
+    "6515",
+    "3081",
+    "4915",
+    "3042",
+    "8046",
+    "3443",
+    "5469",
+    "3023",
+    "6285",
+    "2441",
+    "6139",
+    "8464",
+    "3529",
+    "3167",
+    "1717",
+    "4966",
+    "5483",
+    "2449",
+    "6257",
+    "2385",
+    "1513",
+    "4746",
+    "2327"
+  ],
+  "rows": [
+    {
+      "code": "3105",
+      "name": "穩懋",
+      "etfs": [
+        "00406A",
+        "00985A",
+        "00982A",
+        "00993A",
+        "00408A",
+        "00994A"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 53,
+        "big_shares": 252989738,
+        "big_pct": 59.67,
+        "total_holders": 96723,
+        "total_shares": 423940384
+      },
+      "prev": {
+        "big_holders": 54,
+        "big_shares": 231498164,
+        "big_pct": 54.6,
+        "total_holders": 113398,
+        "total_shares": 423940384
+      },
+      "d_pct": 5.07,
+      "d_holders": -1,
+      "d_lots": 21492,
+      "d_total_holders": -16675
+    },
+    {
+      "code": "3406",
+      "name": "玉晶光",
+      "etfs": [
+        "00993A",
+        "00400A",
+        "00940"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 20,
+        "big_shares": 51486809,
+        "big_pct": 45.66,
+        "total_holders": 31966,
+        "total_shares": 112743063
+      },
+      "prev": {
+        "big_holders": 17,
+        "big_shares": 47454759,
+        "big_pct": 42.09,
+        "total_holders": 31729,
+        "total_shares": 112743063
+      },
+      "d_pct": 3.57,
+      "d_holders": 3,
+      "d_lots": 4032,
+      "d_total_holders": 237
+    },
+    {
+      "code": "6409",
+      "name": "旭隼科技",
+      "etfs": [
+        "00929",
+        "00939"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 19,
+        "big_shares": 48246310,
+        "big_pct": 54.66,
+        "total_holders": 17677,
+        "total_shares": 88253566
+      },
+      "prev": {
+        "big_holders": 17,
+        "big_shares": 45944469,
+        "big_pct": 52.05,
+        "total_holders": 17936,
+        "total_shares": 88253566
+      },
+      "d_pct": 2.61,
+      "d_holders": 2,
+      "d_lots": 2302,
+      "d_total_holders": -259
+    },
+    {
+      "code": "6214",
+      "name": "精誠",
+      "etfs": [
+        "00982A",
+        "00984A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 26,
+        "big_shares": 178036951,
+        "big_pct": 65.39,
+        "total_holders": 45786,
+        "total_shares": 272243066
+      },
+      "prev": {
+        "big_holders": 21,
+        "big_shares": 171660871,
+        "big_pct": 63.05,
+        "total_holders": 45983,
+        "total_shares": 272243066
+      },
+      "d_pct": 2.34,
+      "d_holders": 5,
+      "d_lots": 6376,
+      "d_total_holders": -197
+    },
+    {
+      "code": "6782",
+      "name": "視陽",
+      "etfs": [
+        "00993A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 9,
+        "big_shares": 24370586,
+        "big_pct": 38.68,
+        "total_holders": 5928,
+        "total_shares": 63000000
+      },
+      "prev": {
+        "big_holders": 8,
+        "big_shares": 22927586,
+        "big_pct": 36.39,
+        "total_holders": 6062,
+        "total_shares": 63000000
+      },
+      "d_pct": 2.29,
+      "d_holders": 1,
+      "d_lots": 1443,
+      "d_total_holders": -134
+    },
+    {
+      "code": "6805",
+      "name": "富世達",
+      "etfs": [
+        "00981A",
+        "00403A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00999A",
+        "00993A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A"
+      ],
+      "etf_count": 11,
+      "cur": {
+        "big_holders": 11,
+        "big_shares": 34084882,
+        "big_pct": 49.71,
+        "total_holders": 17597,
+        "total_shares": 68553896
+      },
+      "prev": {
+        "big_holders": 10,
+        "big_shares": 32862882,
+        "big_pct": 47.93,
+        "total_holders": 18538,
+        "total_shares": 68553896
+      },
+      "d_pct": 1.78,
+      "d_holders": 1,
+      "d_lots": 1222,
+      "d_total_holders": -941
+    },
+    {
+      "code": "4770",
+      "name": "上品綜合工業股份有限公司",
+      "etfs": [
+        "00995A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 20,
+        "big_shares": 49128627,
+        "big_pct": 61.42,
+        "total_holders": 8195,
+        "total_shares": 79976000
+      },
+      "prev": {
+        "big_holders": 19,
+        "big_shares": 47751827,
+        "big_pct": 59.7,
+        "total_holders": 8135,
+        "total_shares": 79976000
+      },
+      "d_pct": 1.72,
+      "d_holders": 1,
+      "d_lots": 1377,
+      "d_total_holders": 60
+    },
+    {
+      "code": "6770",
+      "name": "力積電",
+      "etfs": [
+        "00996A",
+        "00881"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 218,
+        "big_shares": 1939575180,
+        "big_pct": 41.08,
+        "total_holders": 677613,
+        "total_shares": 4720488654
+      },
+      "prev": {
+        "big_holders": 215,
+        "big_shares": 1868645038,
+        "big_pct": 39.58,
+        "total_holders": 693191,
+        "total_shares": 4720375294
+      },
+      "d_pct": 1.5,
+      "d_holders": 3,
+      "d_lots": 70930,
+      "d_total_holders": -15578
+    },
+    {
+      "code": "6510",
+      "name": "精測",
+      "etfs": [
+        "00981A",
+        "00405A",
+        "00406A",
+        "00982A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A"
+      ],
+      "etf_count": 9,
+      "cur": {
+        "big_holders": 4,
+        "big_shares": 15482200,
+        "big_pct": 47.01,
+        "total_holders": 24324,
+        "total_shares": 32929138
+      },
+      "prev": {
+        "big_holders": 4,
+        "big_shares": 15010051,
+        "big_pct": 45.58,
+        "total_holders": 22773,
+        "total_shares": 32929138
+      },
+      "d_pct": 1.43,
+      "d_holders": 0,
+      "d_lots": 472,
+      "d_total_holders": 1551
+    },
+    {
+      "code": "6531",
+      "name": "愛普科技",
+      "etfs": [
+        "00405A",
+        "00406A",
+        "00985A",
+        "00982A",
+        "00984A",
+        "00401A",
+        "00995A",
+        "00996A"
+      ],
+      "etf_count": 8,
+      "cur": {
+        "big_holders": 32,
+        "big_shares": 96619678,
+        "big_pct": 54.27,
+        "total_holders": 47693,
+        "total_shares": 178014979
+      },
+      "prev": {
+        "big_holders": 28,
+        "big_shares": 94299507,
+        "big_pct": 52.97,
+        "total_holders": 47557,
+        "total_shares": 178012979
+      },
+      "d_pct": 1.3,
+      "d_holders": 4,
+      "d_lots": 2320,
+      "d_total_holders": 136
+    },
+    {
+      "code": "9802",
+      "name": "鈺齊國際",
+      "etfs": [
+        "00408A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 29,
+        "big_shares": 110311915,
+        "big_pct": 54.88,
+        "total_holders": 12192,
+        "total_shares": 200991673
+      },
+      "prev": {
+        "big_holders": 27,
+        "big_shares": 107843620,
+        "big_pct": 53.65,
+        "total_holders": 12216,
+        "total_shares": 200991673
+      },
+      "d_pct": 1.23,
+      "d_holders": 2,
+      "d_lots": 2468,
+      "d_total_holders": -24
+    },
+    {
+      "code": "2344",
+      "name": "華邦電子",
+      "etfs": [
+        "00406A",
+        "00980A",
+        "00985A",
+        "00984A",
+        "00993A",
+        "00408A",
+        "00996A",
+        "0050",
+        "0056",
+        "009816"
+      ],
+      "etf_count": 10,
+      "cur": {
+        "big_holders": 297,
+        "big_shares": 3053709105,
+        "big_pct": 64.69,
+        "total_holders": 567020,
+        "total_shares": 4720490802
+      },
+      "prev": {
+        "big_holders": 296,
+        "big_shares": 2997148791,
+        "big_pct": 63.49,
+        "total_holders": 586605,
+        "total_shares": 4720490802
+      },
+      "d_pct": 1.2,
+      "d_holders": 1,
+      "d_lots": 56560,
+      "d_total_holders": -19585
+    },
+    {
+      "code": "2451",
+      "name": "創見",
+      "etfs": [
+        "00999A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 30,
+        "big_shares": 289640715,
+        "big_pct": 67.14,
+        "total_holders": 43365,
+        "total_shares": 431345675
+      },
+      "prev": {
+        "big_holders": 28,
+        "big_shares": 285068139,
+        "big_pct": 66.08,
+        "total_holders": 45408,
+        "total_shares": 431345675
+      },
+      "d_pct": 1.06,
+      "d_holders": 2,
+      "d_lots": 4573,
+      "d_total_holders": -2043
+    },
+    {
+      "code": "3008",
+      "name": "大立光",
+      "etfs": [
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00995A",
+        "0050",
+        "00881",
+        "00929",
+        "009816"
+      ],
+      "etf_count": 17,
+      "cur": {
+        "big_holders": 14,
+        "big_shares": 53270681,
+        "big_pct": 40.72,
+        "total_holders": 148037,
+        "total_shares": 130798197
+      },
+      "prev": {
+        "big_holders": 13,
+        "big_shares": 51999905,
+        "big_pct": 39.75,
+        "total_holders": 142537,
+        "total_shares": 130798197
+      },
+      "d_pct": 0.97,
+      "d_holders": 1,
+      "d_lots": 1271,
+      "d_total_holders": 5500
+    },
+    {
+      "code": "3260",
+      "name": "威剛科技",
+      "etfs": [
+        "00929"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 33,
+        "big_shares": 98984721,
+        "big_pct": 27.76,
+        "total_holders": 149437,
+        "total_shares": 356463418
+      },
+      "prev": {
+        "big_holders": 31,
+        "big_shares": 95824245,
+        "big_pct": 26.88,
+        "total_holders": 151293,
+        "total_shares": 356463418
+      },
+      "d_pct": 0.88,
+      "d_holders": 2,
+      "d_lots": 3160,
+      "d_total_holders": -1856
+    },
+    {
+      "code": "2356",
+      "name": "英業達",
+      "etfs": [
+        "0056",
+        "00878",
+        "00929",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 5,
+      "cur": {
+        "big_holders": 201,
+        "big_shares": 2562962237,
+        "big_pct": 71.44,
+        "total_holders": 238363,
+        "total_shares": 3587475066
+      },
+      "prev": {
+        "big_holders": 199,
+        "big_shares": 2532974379,
+        "big_pct": 70.6,
+        "total_holders": 244537,
+        "total_shares": 3587475066
+      },
+      "d_pct": 0.84,
+      "d_holders": 2,
+      "d_lots": 29988,
+      "d_total_holders": -6174
+    },
+    {
+      "code": "2352",
+      "name": "佳世達科",
+      "etfs": [
+        "00929"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 82,
+        "big_shares": 702270387,
+        "big_pct": 44.43,
+        "total_holders": 191370,
+        "total_shares": 1580506505
+      },
+      "prev": {
+        "big_holders": 77,
+        "big_shares": 689107481,
+        "big_pct": 43.6,
+        "total_holders": 190513,
+        "total_shares": 1580506505
+      },
+      "d_pct": 0.83,
+      "d_holders": 5,
+      "d_lots": 13163,
+      "d_total_holders": 857
+    },
+    {
+      "code": "2478",
+      "name": "大毅",
+      "etfs": [
+        "00982A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 20,
+        "big_shares": 60168185,
+        "big_pct": 41.57,
+        "total_holders": 64823,
+        "total_shares": 144731339
+      },
+      "prev": {
+        "big_holders": 19,
+        "big_shares": 59161184,
+        "big_pct": 40.87,
+        "total_holders": 64233,
+        "total_shares": 144731339
+      },
+      "d_pct": 0.7,
+      "d_holders": 1,
+      "d_lots": 1007,
+      "d_total_holders": 590
+    },
+    {
+      "code": "6691",
+      "name": "洋基工程股份有限公司",
+      "etfs": [
+        "00984A",
+        "00408A",
+        "00994A",
+        "00929"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 23,
+        "big_shares": 77697898,
+        "big_pct": 58.18,
+        "total_holders": 18176,
+        "total_shares": 133546930
+      },
+      "prev": {
+        "big_holders": 22,
+        "big_shares": 76763781,
+        "big_pct": 57.48,
+        "total_holders": 18043,
+        "total_shares": 133546930
+      },
+      "d_pct": 0.7,
+      "d_holders": 1,
+      "d_lots": 934,
+      "d_total_holders": 133
+    },
+    {
+      "code": "3211",
+      "name": "順達",
+      "etfs": [
+        "00403A",
+        "00929"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 14,
+        "big_shares": 61640503,
+        "big_pct": 39.91,
+        "total_holders": 83831,
+        "total_shares": 154418021
+      },
+      "prev": {
+        "big_holders": 13,
+        "big_shares": 60608267,
+        "big_pct": 39.24,
+        "total_holders": 83673,
+        "total_shares": 154418021
+      },
+      "d_pct": 0.67,
+      "d_holders": 1,
+      "d_lots": 1032,
+      "d_total_holders": 158
+    },
+    {
+      "code": "5351",
+      "name": "鈺創",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 26,
+        "big_shares": 92285009,
+        "big_pct": 28.04,
+        "total_holders": 115601,
+        "total_shares": 329046781
+      },
+      "prev": {
+        "big_holders": 27,
+        "big_shares": 90173202,
+        "big_pct": 27.4,
+        "total_holders": 117436,
+        "total_shares": 329046781
+      },
+      "d_pct": 0.64,
+      "d_holders": -1,
+      "d_lots": 2112,
+      "d_total_holders": -1835
+    },
+    {
+      "code": "3714",
+      "name": "富采",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 52,
+        "big_shares": 289320961,
+        "big_pct": 39.2,
+        "total_holders": 150359,
+        "total_shares": 737940460
+      },
+      "prev": {
+        "big_holders": 52,
+        "big_shares": 284842628,
+        "big_pct": 38.59,
+        "total_holders": 152787,
+        "total_shares": 737940460
+      },
+      "d_pct": 0.61,
+      "d_holders": 0,
+      "d_lots": 4478,
+      "d_total_holders": -2428
+    },
+    {
+      "code": "2474",
+      "name": "可成",
+      "etfs": [
+        "0056",
+        "00918",
+        "00919",
+        "00929",
+        "00940"
+      ],
+      "etf_count": 5,
+      "cur": {
+        "big_holders": 51,
+        "big_shares": 368854500,
+        "big_pct": 68.45,
+        "total_holders": 51117,
+        "total_shares": 538821068
+      },
+      "prev": {
+        "big_holders": 49,
+        "big_shares": 365665292,
+        "big_pct": 67.86,
+        "total_holders": 51563,
+        "total_shares": 538821068
+      },
+      "d_pct": 0.59,
+      "d_holders": 2,
+      "d_lots": 3189,
+      "d_total_holders": -446
+    },
+    {
+      "code": "5439",
+      "name": "高技",
+      "etfs": [
+        "00999A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 11,
+        "big_shares": 22627950,
+        "big_pct": 24.33,
+        "total_holders": 36306,
+        "total_shares": 92976751
+      },
+      "prev": {
+        "big_holders": 11,
+        "big_shares": 22086950,
+        "big_pct": 23.75,
+        "total_holders": 36329,
+        "total_shares": 92976751
+      },
+      "d_pct": 0.58,
+      "d_holders": 0,
+      "d_lots": 541,
+      "d_total_holders": -23
+    },
+    {
+      "code": "2458",
+      "name": "義隆",
+      "etfs": [
+        "00713",
+        "00919",
+        "00929",
+        "00940"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 41,
+        "big_shares": 150669714,
+        "big_pct": 49.58,
+        "total_holders": 63808,
+        "total_shares": 303880392
+      },
+      "prev": {
+        "big_holders": 40,
+        "big_shares": 149015714,
+        "big_pct": 49.03,
+        "total_holders": 63757,
+        "total_shares": 303880392
+      },
+      "d_pct": 0.55,
+      "d_holders": 1,
+      "d_lots": 1654,
+      "d_total_holders": 51
+    },
+    {
+      "code": "3006",
+      "name": "晶豪",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 40,
+        "big_shares": 123177948,
+        "big_pct": 41.31,
+        "total_holders": 71454,
+        "total_shares": 298127841
+      },
+      "prev": {
+        "big_holders": 41,
+        "big_shares": 121610805,
+        "big_pct": 40.79,
+        "total_holders": 73752,
+        "total_shares": 298127841
+      },
+      "d_pct": 0.52,
+      "d_holders": -1,
+      "d_lots": 1567,
+      "d_total_holders": -2298
+    },
+    {
+      "code": "2408",
+      "name": "南亞科技",
+      "etfs": [
+        "00991A",
+        "00403A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00984A",
+        "00993A",
+        "00408A",
+        "00994A",
+        "00996A",
+        "0050",
+        "0056",
+        "009816"
+      ],
+      "etf_count": 13,
+      "cur": {
+        "big_holders": 166,
+        "big_shares": 2724239771,
+        "big_pct": 78.95,
+        "total_holders": 406546,
+        "total_shares": 3450205894
+      },
+      "prev": {
+        "big_holders": 168,
+        "big_shares": 2707438732,
+        "big_pct": 78.47,
+        "total_holders": 418328,
+        "total_shares": 3450205894
+      },
+      "d_pct": 0.48,
+      "d_holders": -2,
+      "d_lots": 16801,
+      "d_total_holders": -11782
+    },
+    {
+      "code": "3034",
+      "name": "聯詠",
+      "etfs": [
+        "00984A",
+        "00401A",
+        "0056",
+        "00713",
+        "00881",
+        "00878",
+        "00919",
+        "00929",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 10,
+      "cur": {
+        "big_holders": 106,
+        "big_shares": 370829422,
+        "big_pct": 60.64,
+        "total_holders": 83593,
+        "total_shares": 611511469
+      },
+      "prev": {
+        "big_holders": 105,
+        "big_shares": 366129846,
+        "big_pct": 60.16,
+        "total_holders": 84909,
+        "total_shares": 608511469
+      },
+      "d_pct": 0.48,
+      "d_holders": 1,
+      "d_lots": 4700,
+      "d_total_holders": -1316
+    },
+    {
+      "code": "2353",
+      "name": "宏碁",
+      "etfs": [
+        "0056",
+        "00918"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 159,
+        "big_shares": 1056794387,
+        "big_pct": 34.67,
+        "total_holders": 381671,
+        "total_shares": 3047853828
+      },
+      "prev": {
+        "big_holders": 154,
+        "big_shares": 1042781456,
+        "big_pct": 34.21,
+        "total_holders": 383540,
+        "total_shares": 3047853828
+      },
+      "d_pct": 0.46,
+      "d_holders": 5,
+      "d_lots": 14013,
+      "d_total_holders": -1869
+    },
+    {
+      "code": "1215",
+      "name": "台灣卜蜂企業",
+      "etfs": [
+        "00400A",
+        "00713"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 15,
+        "big_shares": 155439252,
+        "big_pct": 52.72,
+        "total_holders": 97513,
+        "total_shares": 294790098
+      },
+      "prev": {
+        "big_holders": 14,
+        "big_shares": 154105504,
+        "big_pct": 52.27,
+        "total_holders": 97588,
+        "total_shares": 294790098
+      },
+      "d_pct": 0.45,
+      "d_holders": 1,
+      "d_lots": 1334,
+      "d_total_holders": -75
+    },
+    {
+      "code": "2421",
+      "name": "建準",
+      "etfs": [
+        "00940"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 46,
+        "big_shares": 152569884,
+        "big_pct": 53.17,
+        "total_holders": 52393,
+        "total_shares": 286943669
+      },
+      "prev": {
+        "big_holders": 45,
+        "big_shares": 151300344,
+        "big_pct": 52.72,
+        "total_holders": 52529,
+        "total_shares": 286943669
+      },
+      "d_pct": 0.45,
+      "d_holders": 1,
+      "d_lots": 1270,
+      "d_total_holders": -136
+    },
+    {
+      "code": "3596",
+      "name": "智易",
+      "etfs": [
+        "00713"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 31,
+        "big_shares": 129427510,
+        "big_pct": 58.73,
+        "total_holders": 25720,
+        "total_shares": 220354321
+      },
+      "prev": {
+        "big_holders": 30,
+        "big_shares": 128442510,
+        "big_pct": 58.28,
+        "total_holders": 25735,
+        "total_shares": 220354321
+      },
+      "d_pct": 0.45,
+      "d_holders": 1,
+      "d_lots": 985,
+      "d_total_holders": -15
+    },
+    {
+      "code": "6196",
+      "name": "帆宣",
+      "etfs": [
+        "00982A",
+        "00993A",
+        "00940"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 27,
+        "big_shares": 146956754,
+        "big_pct": 66.69,
+        "total_holders": 32660,
+        "total_shares": 220329529
+      },
+      "prev": {
+        "big_holders": 26,
+        "big_shares": 145978754,
+        "big_pct": 66.25,
+        "total_holders": 32533,
+        "total_shares": 220329529
+      },
+      "d_pct": 0.44,
+      "d_holders": 1,
+      "d_lots": 978,
+      "d_total_holders": 127
+    },
+    {
+      "code": "2481",
+      "name": "強茂",
+      "etfs": [
+        "00981A",
+        "00403A",
+        "00406A"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 44,
+        "big_shares": 181608419,
+        "big_pct": 47.52,
+        "total_holders": 108636,
+        "total_shares": 382114927
+      },
+      "prev": {
+        "big_holders": 42,
+        "big_shares": 180072159,
+        "big_pct": 47.12,
+        "total_holders": 108627,
+        "total_shares": 382114927
+      },
+      "d_pct": 0.4,
+      "d_holders": 2,
+      "d_lots": 1536,
+      "d_total_holders": 9
+    },
+    {
+      "code": "2504",
+      "name": "國產",
+      "etfs": [
+        "00713",
+        "00919"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 111,
+        "big_shares": 838049241,
+        "big_pct": 71.02,
+        "total_holders": 89461,
+        "total_shares": 1180000000
+      },
+      "prev": {
+        "big_holders": 111,
+        "big_shares": 833516035,
+        "big_pct": 70.63,
+        "total_holders": 89607,
+        "total_shares": 1180000000
+      },
+      "d_pct": 0.39,
+      "d_holders": 0,
+      "d_lots": 4533,
+      "d_total_holders": -146
+    },
+    {
+      "code": "9917",
+      "name": "中保科",
+      "etfs": [
+        "00713"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 56,
+        "big_shares": 337700954,
+        "big_pct": 71.28,
+        "total_holders": 57097,
+        "total_shares": 473756948
+      },
+      "prev": {
+        "big_holders": 55,
+        "big_shares": 335953986,
+        "big_pct": 70.91,
+        "total_holders": 57283,
+        "total_shares": 473756948
+      },
+      "d_pct": 0.37,
+      "d_holders": 1,
+      "d_lots": 1747,
+      "d_total_holders": -186
+    },
+    {
+      "code": "9958",
+      "name": "世紀鋼鐵結構",
+      "etfs": [
+        "00999A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 25,
+        "big_shares": 111886709,
+        "big_pct": 41.92,
+        "total_holders": 59498,
+        "total_shares": 266896665
+      },
+      "prev": {
+        "big_holders": 24,
+        "big_shares": 110899904,
+        "big_pct": 41.55,
+        "total_holders": 59662,
+        "total_shares": 266896665
+      },
+      "d_pct": 0.37,
+      "d_holders": 1,
+      "d_lots": 987,
+      "d_total_holders": -164
+    },
+    {
+      "code": "8069",
+      "name": "元太",
+      "etfs": [
+        "00918",
+        "00929",
+        "00940"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 144,
+        "big_shares": 765769844,
+        "big_pct": 66.28,
+        "total_holders": 106777,
+        "total_shares": 1155320105
+      },
+      "prev": {
+        "big_holders": 142,
+        "big_shares": 761738132,
+        "big_pct": 65.93,
+        "total_holders": 107505,
+        "total_shares": 1155280605
+      },
+      "d_pct": 0.35,
+      "d_holders": 2,
+      "d_lots": 4032,
+      "d_total_holders": -728
+    },
+    {
+      "code": "2002",
+      "name": "中鋼",
+      "etfs": [
+        "00981A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 467,
+        "big_shares": 7978099412,
+        "big_pct": 50.7,
+        "total_holders": 1287982,
+        "total_shares": 15734860997
+      },
+      "prev": {
+        "big_holders": 473,
+        "big_shares": 7927236685,
+        "big_pct": 50.38,
+        "total_holders": 1292771,
+        "total_shares": 15734860997
+      },
+      "d_pct": 0.32,
+      "d_holders": -6,
+      "d_lots": 50863,
+      "d_total_holders": -4789
+    },
+    {
+      "code": "2912",
+      "name": "統一超",
+      "etfs": [
+        "00401A",
+        "00713",
+        "00878",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 5,
+      "cur": {
+        "big_holders": 69,
+        "big_shares": 831158317,
+        "big_pct": 79.94,
+        "total_holders": 71668,
+        "total_shares": 1039622255
+      },
+      "prev": {
+        "big_holders": 68,
+        "big_shares": 827782241,
+        "big_pct": 79.62,
+        "total_holders": 72144,
+        "total_shares": 1039622255
+      },
+      "d_pct": 0.32,
+      "d_holders": 1,
+      "d_lots": 3376,
+      "d_total_holders": -476
+    },
+    {
+      "code": "8070",
+      "name": "長華*",
+      "etfs": [
+        "00982A",
+        "00929"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 59,
+        "big_shares": 510119295,
+        "big_pct": 70.29,
+        "total_holders": 35276,
+        "total_shares": 725648455
+      },
+      "prev": {
+        "big_holders": 57,
+        "big_shares": 507779841,
+        "big_pct": 69.97,
+        "total_holders": 35508,
+        "total_shares": 725648455
+      },
+      "d_pct": 0.32,
+      "d_holders": 2,
+      "d_lots": 2339,
+      "d_total_holders": -232
+    },
+    {
+      "code": "2211",
+      "name": "長榮鋼",
+      "etfs": [
+        "00919"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 33,
+        "big_shares": 320104033,
+        "big_pct": 76.74,
+        "total_holders": 25196,
+        "total_shares": 417091463
+      },
+      "prev": {
+        "big_holders": 32,
+        "big_shares": 318859692,
+        "big_pct": 76.44,
+        "total_holders": 25085,
+        "total_shares": 417091463
+      },
+      "d_pct": 0.3,
+      "d_holders": 1,
+      "d_lots": 1244,
+      "d_total_holders": 111
+    },
+    {
+      "code": "3491",
+      "name": "昇達科",
+      "etfs": [
+        "00406A",
+        "00985A",
+        "00982A",
+        "00993A",
+        "00401A",
+        "00987A"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 10,
+        "big_shares": 16291856,
+        "big_pct": 23.67,
+        "total_holders": 65426,
+        "total_shares": 68805125
+      },
+      "prev": {
+        "big_holders": 10,
+        "big_shares": 16085976,
+        "big_pct": 23.37,
+        "total_holders": 64449,
+        "total_shares": 68805125
+      },
+      "d_pct": 0.3,
+      "d_holders": 0,
+      "d_lots": 206,
+      "d_total_holders": 977
+    },
+    {
+      "code": "5871",
+      "name": "中租-KY",
+      "etfs": [
+        "00984A",
+        "00401A",
+        "00878",
+        "00919",
+        "00939"
+      ],
+      "etf_count": 5,
+      "cur": {
+        "big_holders": 210,
+        "big_shares": 1124700079,
+        "big_pct": 64.42,
+        "total_holders": 115757,
+        "total_shares": 1745649584
+      },
+      "prev": {
+        "big_holders": 206,
+        "big_shares": 1119381695,
+        "big_pct": 64.12,
+        "total_holders": 116045,
+        "total_shares": 1745649584
+      },
+      "d_pct": 0.3,
+      "d_holders": 4,
+      "d_lots": 5318,
+      "d_total_holders": -288
+    },
+    {
+      "code": "5904",
+      "name": "寶雅國際",
+      "etfs": [
+        "00980A",
+        "00999A",
+        "00984A",
+        "00401A"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 112,
+        "big_shares": 816486575,
+        "big_pct": 76.7,
+        "total_holders": 91990,
+        "total_shares": 1064438260
+      },
+      "prev": {
+        "big_holders": 111,
+        "big_shares": 813302380,
+        "big_pct": 76.4,
+        "total_holders": 93581,
+        "total_shares": 1064438260
+      },
+      "d_pct": 0.3,
+      "d_holders": 1,
+      "d_lots": 3184,
+      "d_total_holders": -1591
+    },
+    {
+      "code": "2006",
+      "name": "東和鋼鐵",
+      "etfs": [
+        "00984A",
+        "00993A",
+        "00713"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 90,
+        "big_shares": 547393536,
+        "big_pct": 74.96,
+        "total_holders": 57201,
+        "total_shares": 730213818
+      },
+      "prev": {
+        "big_holders": 87,
+        "big_shares": 545290688,
+        "big_pct": 74.67,
+        "total_holders": 57390,
+        "total_shares": 730213818
+      },
+      "d_pct": 0.29,
+      "d_holders": 3,
+      "d_lots": 2103,
+      "d_total_holders": -189
+    },
+    {
+      "code": "3036",
+      "name": "文曄",
+      "etfs": [
+        "00980A",
+        "00985A",
+        "00400A",
+        "0056",
+        "00713",
+        "00940"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 134,
+        "big_shares": 1061860137,
+        "big_pct": 78.85,
+        "total_holders": 82120,
+        "total_shares": 1346675351
+      },
+      "prev": {
+        "big_holders": 137,
+        "big_shares": 1058048528,
+        "big_pct": 78.56,
+        "total_holders": 83404,
+        "total_shares": 1346644351
+      },
+      "d_pct": 0.29,
+      "d_holders": -3,
+      "d_lots": 3812,
+      "d_total_holders": -1284
+    },
+    {
+      "code": "2464",
+      "name": "盟立",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 24,
+        "big_shares": 78728951,
+        "big_pct": 34.62,
+        "total_holders": 96540,
+        "total_shares": 227368886
+      },
+      "prev": {
+        "big_holders": 23,
+        "big_shares": 78080759,
+        "big_pct": 34.34,
+        "total_holders": 97281,
+        "total_shares": 227368886
+      },
+      "d_pct": 0.28,
+      "d_holders": 1,
+      "d_lots": 648,
+      "d_total_holders": -741
+    },
+    {
+      "code": "2486",
+      "name": "一詮精密",
+      "etfs": [
+        "00406A",
+        "00982A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 23,
+        "big_shares": 66860595,
+        "big_pct": 27.76,
+        "total_holders": 91274,
+        "total_shares": 240775410
+      },
+      "prev": {
+        "big_holders": 23,
+        "big_shares": 66255067,
+        "big_pct": 27.51,
+        "total_holders": 91413,
+        "total_shares": 240775410
+      },
+      "d_pct": 0.25,
+      "d_holders": 0,
+      "d_lots": 606,
+      "d_total_holders": -139
+    },
+    {
+      "code": "2357",
+      "name": "華碩",
+      "etfs": [
+        "00992A",
+        "00999A",
+        "00984A",
+        "00401A",
+        "0050",
+        "0056",
+        "00713",
+        "00878",
+        "00918",
+        "00919",
+        "00929",
+        "00939",
+        "00940",
+        "009816"
+      ],
+      "etf_count": 14,
+      "cur": {
+        "big_holders": 105,
+        "big_shares": 483504705,
+        "big_pct": 65.09,
+        "total_holders": 109355,
+        "total_shares": 742760280
+      },
+      "prev": {
+        "big_holders": 104,
+        "big_shares": 481697652,
+        "big_pct": 64.85,
+        "total_holders": 109168,
+        "total_shares": 742760280
+      },
+      "d_pct": 0.24,
+      "d_holders": 1,
+      "d_lots": 1807,
+      "d_total_holders": 187
+    },
+    {
+      "code": "6715",
+      "name": "嘉  基",
+      "etfs": [
+        "00406A",
+        "00995A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 12,
+        "big_shares": 51138881,
+        "big_pct": 68.85,
+        "total_holders": 5470,
+        "total_shares": 74274026
+      },
+      "prev": {
+        "big_holders": 12,
+        "big_shares": 50962881,
+        "big_pct": 68.61,
+        "total_holders": 5564,
+        "total_shares": 74274026
+      },
+      "d_pct": 0.24,
+      "d_holders": 0,
+      "d_lots": 176,
+      "d_total_holders": -94
+    },
+    {
+      "code": "8112",
+      "name": "至上",
+      "etfs": [
+        "00919",
+        "00929"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 44,
+        "big_shares": 172580515,
+        "big_pct": 30.49,
+        "total_holders": 117752,
+        "total_shares": 565911761
+      },
+      "prev": {
+        "big_holders": 42,
+        "big_shares": 171228255,
+        "big_pct": 30.25,
+        "total_holders": 118096,
+        "total_shares": 565882985
+      },
+      "d_pct": 0.24,
+      "d_holders": 2,
+      "d_lots": 1352,
+      "d_total_holders": -344
+    },
+    {
+      "code": "8039",
+      "name": "台虹科技",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 25,
+        "big_shares": 123821190,
+        "big_pct": 46.89,
+        "total_holders": 99246,
+        "total_shares": 264017994
+      },
+      "prev": {
+        "big_holders": 25,
+        "big_shares": 123215359,
+        "big_pct": 46.66,
+        "total_holders": 97163,
+        "total_shares": 264017994
+      },
+      "d_pct": 0.23,
+      "d_holders": 0,
+      "d_lots": 606,
+      "d_total_holders": 2083
+    },
+    {
+      "code": "2609",
+      "name": "陽明",
+      "etfs": [
+        "00985A",
+        "00939"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 172,
+        "big_shares": 2212322810,
+        "big_pct": 63.35,
+        "total_holders": 329647,
+        "total_shares": 3492104270
+      },
+      "prev": {
+        "big_holders": 171,
+        "big_shares": 2204696447,
+        "big_pct": 63.13,
+        "total_holders": 332443,
+        "total_shares": 3492104270
+      },
+      "d_pct": 0.22,
+      "d_holders": 1,
+      "d_lots": 7626,
+      "d_total_holders": -2796
+    },
+    {
+      "code": "3563",
+      "name": "牧德科技",
+      "etfs": [
+        "00929"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 9,
+        "big_shares": 26934409,
+        "big_pct": 42.11,
+        "total_holders": 37356,
+        "total_shares": 63960858
+      },
+      "prev": {
+        "big_holders": 9,
+        "big_shares": 26794521,
+        "big_pct": 41.89,
+        "total_holders": 37363,
+        "total_shares": 63960858
+      },
+      "d_pct": 0.22,
+      "d_holders": 0,
+      "d_lots": 140,
+      "d_total_holders": -7
+    },
+    {
+      "code": "1101",
+      "name": "臺灣水泥",
+      "etfs": [
+        "00985A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 390,
+        "big_shares": 3838480811,
+        "big_pct": 51.02,
+        "total_holders": 511815,
+        "total_shares": 7523181742
+      },
+      "prev": {
+        "big_holders": 382,
+        "big_shares": 3823084570,
+        "big_pct": 50.81,
+        "total_holders": 515095,
+        "total_shares": 7523181742
+      },
+      "d_pct": 0.21,
+      "d_holders": 8,
+      "d_lots": 15396,
+      "d_total_holders": -3280
+    },
+    {
+      "code": "1477",
+      "name": "聚陽實業",
+      "etfs": [
+        "00401A",
+        "00713",
+        "00919"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 40,
+        "big_shares": 123826340,
+        "big_pct": 50.19,
+        "total_holders": 29128,
+        "total_shares": 246693713
+      },
+      "prev": {
+        "big_holders": 40,
+        "big_shares": 123348103,
+        "big_pct": 50.0,
+        "total_holders": 29377,
+        "total_shares": 246693713
+      },
+      "d_pct": 0.19,
+      "d_holders": 0,
+      "d_lots": 478,
+      "d_total_holders": -249
+    },
+    {
+      "code": "2377",
+      "name": "微星",
+      "etfs": [
+        "00985A",
+        "00982A",
+        "0056",
+        "00713",
+        "00918",
+        "00929",
+        "00939"
+      ],
+      "etf_count": 7,
+      "cur": {
+        "big_holders": 113,
+        "big_shares": 543849048,
+        "big_pct": 64.37,
+        "total_holders": 85818,
+        "total_shares": 844856199
+      },
+      "prev": {
+        "big_holders": 111,
+        "big_shares": 542369614,
+        "big_pct": 64.19,
+        "total_holders": 87772,
+        "total_shares": 844856199
+      },
+      "d_pct": 0.18,
+      "d_holders": 2,
+      "d_lots": 1479,
+      "d_total_holders": -1954
+    },
+    {
+      "code": "2892",
+      "name": "第一金融控股",
+      "etfs": [
+        "00999A",
+        "00984A",
+        "0050",
+        "00713",
+        "00918",
+        "00939",
+        "00940",
+        "009816"
+      ],
+      "etf_count": 8,
+      "cur": {
+        "big_holders": 754,
+        "big_shares": 9917856634,
+        "big_pct": 68.97,
+        "total_holders": 431348,
+        "total_shares": 14379468650
+      },
+      "prev": {
+        "big_holders": 751,
+        "big_shares": 9892967285,
+        "big_pct": 68.79,
+        "total_holders": 432173,
+        "total_shares": 14379468650
+      },
+      "d_pct": 0.18,
+      "d_holders": 3,
+      "d_lots": 24889,
+      "d_total_holders": -825
+    },
+    {
+      "code": "5880",
+      "name": "合庫金",
+      "etfs": [
+        "0050",
+        "009816"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 740,
+        "big_shares": 11593741705,
+        "big_pct": 72.13,
+        "total_holders": 403182,
+        "total_shares": 16072960337
+      },
+      "prev": {
+        "big_holders": 739,
+        "big_shares": 11565466187,
+        "big_pct": 71.95,
+        "total_holders": 404312,
+        "total_shares": 16072960337
+      },
+      "d_pct": 0.18,
+      "d_holders": 1,
+      "d_lots": 28276,
+      "d_total_holders": -1130
+    },
+    {
+      "code": "2317",
+      "name": "鴻海精密",
+      "etfs": [
+        "00991A",
+        "00403A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00400A",
+        "00401A",
+        "00996A",
+        "0050",
+        "0056",
+        "00881",
+        "00929",
+        "009816"
+      ],
+      "etf_count": 13,
+      "cur": {
+        "big_holders": 831,
+        "big_shares": 9357427662,
+        "big_pct": 66.47,
+        "total_holders": 1146446,
+        "total_shares": 14075746497
+      },
+      "prev": {
+        "big_holders": 827,
+        "big_shares": 9333260027,
+        "big_pct": 66.3,
+        "total_holders": 1155294,
+        "total_shares": 14075746497
+      },
+      "d_pct": 0.17,
+      "d_holders": 4,
+      "d_lots": 24168,
+      "d_total_holders": -8848
+    },
+    {
+      "code": "2360",
+      "name": "致茂電子",
+      "etfs": [
+        "00992A",
+        "00406A",
+        "00980A",
+        "00982A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "0050",
+        "00881",
+        "009816"
+      ],
+      "etf_count": 14,
+      "cur": {
+        "big_holders": 73,
+        "big_shares": 224148534,
+        "big_pct": 52.71,
+        "total_holders": 42119,
+        "total_shares": 425245742
+      },
+      "prev": {
+        "big_holders": 73,
+        "big_shares": 223479935,
+        "big_pct": 52.55,
+        "total_holders": 41747,
+        "total_shares": 425245742
+      },
+      "d_pct": 0.16,
+      "d_holders": 0,
+      "d_lots": 669,
+      "d_total_holders": 372
+    },
+    {
+      "code": "2618",
+      "name": "長榮航",
+      "etfs": [
+        "00999A",
+        "00984A",
+        "0056",
+        "00713",
+        "00878",
+        "00918",
+        "00919",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 9,
+      "cur": {
+        "big_holders": 404,
+        "big_shares": 4352713035,
+        "big_pct": 80.59,
+        "total_holders": 187270,
+        "total_shares": 5400444335
+      },
+      "prev": {
+        "big_holders": 403,
+        "big_shares": 4343998469,
+        "big_pct": 80.43,
+        "total_holders": 188392,
+        "total_shares": 5400444335
+      },
+      "d_pct": 0.16,
+      "d_holders": 1,
+      "d_lots": 8715,
+      "d_total_holders": -1122
+    },
+    {
+      "code": "2324",
+      "name": "仁寶",
+      "etfs": [
+        "0056"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 328,
+        "big_shares": 2563454570,
+        "big_pct": 58.16,
+        "total_holders": 321420,
+        "total_shares": 4407146625
+      },
+      "prev": {
+        "big_holders": 327,
+        "big_shares": 2556664233,
+        "big_pct": 58.01,
+        "total_holders": 323810,
+        "total_shares": 4407146625
+      },
+      "d_pct": 0.15,
+      "d_holders": 1,
+      "d_lots": 6790,
+      "d_total_holders": -2390
+    },
+    {
+      "code": "2801",
+      "name": "彰銀",
+      "etfs": [
+        "00984A",
+        "00918",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 560,
+        "big_shares": 9013882983,
+        "big_pct": 74.74,
+        "total_holders": 279107,
+        "total_shares": 12060197409
+      },
+      "prev": {
+        "big_holders": 563,
+        "big_shares": 8996060568,
+        "big_pct": 74.59,
+        "total_holders": 280181,
+        "total_shares": 12060197409
+      },
+      "d_pct": 0.15,
+      "d_holders": -3,
+      "d_lots": 17822,
+      "d_total_holders": -1074
+    },
+    {
+      "code": "2890",
+      "name": "永豐金融",
+      "etfs": [
+        "00991A",
+        "00999A",
+        "00984A",
+        "00401A",
+        "0050",
+        "0056",
+        "00713",
+        "00918",
+        "00940",
+        "009816"
+      ],
+      "etf_count": 10,
+      "cur": {
+        "big_holders": 835,
+        "big_shares": 11570233471,
+        "big_pct": 78.27,
+        "total_holders": 451732,
+        "total_shares": 14782168721
+      },
+      "prev": {
+        "big_holders": 837,
+        "big_shares": 11549478805,
+        "big_pct": 78.13,
+        "total_holders": 452768,
+        "total_shares": 14782168721
+      },
+      "d_pct": 0.14,
+      "d_holders": -2,
+      "d_lots": 20755,
+      "d_total_holders": -1036
+    },
+    {
+      "code": "2412",
+      "name": "中華電信",
+      "etfs": [
+        "00985A",
+        "00401A",
+        "0050",
+        "00878",
+        "00929",
+        "00939",
+        "009816"
+      ],
+      "etf_count": 7,
+      "cur": {
+        "big_holders": 300,
+        "big_shares": 6089500644,
+        "big_pct": 78.49,
+        "total_holders": 290583,
+        "total_shares": 7757446545
+      },
+      "prev": {
+        "big_holders": 296,
+        "big_shares": 6079239815,
+        "big_pct": 78.36,
+        "total_holders": 291498,
+        "total_shares": 7757446545
+      },
+      "d_pct": 0.13,
+      "d_holders": 4,
+      "d_lots": 10261,
+      "d_total_holders": -915
+    },
+    {
+      "code": "4763",
+      "name": "材料*-KY",
+      "etfs": [
+        "00919"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 45,
+        "big_shares": 553786593,
+        "big_pct": 55.98,
+        "total_holders": 55156,
+        "total_shares": 989146670
+      },
+      "prev": {
+        "big_holders": 45,
+        "big_shares": 552454353,
+        "big_pct": 55.85,
+        "total_holders": 55339,
+        "total_shares": 989146670
+      },
+      "d_pct": 0.13,
+      "d_holders": 0,
+      "d_lots": 1332,
+      "d_total_holders": -183
+    },
+    {
+      "code": "2379",
+      "name": "瑞昱",
+      "etfs": [
+        "00984A",
+        "00401A",
+        "0056",
+        "00713",
+        "00881",
+        "00878",
+        "00918",
+        "00919",
+        "00929",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 11,
+      "cur": {
+        "big_holders": 88,
+        "big_shares": 310797306,
+        "big_pct": 60.28,
+        "total_holders": 81184,
+        "total_shares": 515512641
+      },
+      "prev": {
+        "big_holders": 88,
+        "big_shares": 310182057,
+        "big_pct": 60.16,
+        "total_holders": 81636,
+        "total_shares": 515512641
+      },
+      "d_pct": 0.12,
+      "d_holders": 0,
+      "d_lots": 615,
+      "d_total_holders": -452
+    },
+    {
+      "code": "2880",
+      "name": "華南金融",
+      "etfs": [
+        "00991A",
+        "00999A",
+        "00984A",
+        "00408A",
+        "00994A",
+        "0050",
+        "0056",
+        "00713",
+        "00878",
+        "00939",
+        "009816"
+      ],
+      "etf_count": 11,
+      "cur": {
+        "big_holders": 552,
+        "big_shares": 11229916455,
+        "big_pct": 79.89,
+        "total_holders": 467810,
+        "total_shares": 14056134739
+      },
+      "prev": {
+        "big_holders": 554,
+        "big_shares": 11212822919,
+        "big_pct": 79.77,
+        "total_holders": 468586,
+        "total_shares": 14056134739
+      },
+      "d_pct": 0.12,
+      "d_holders": -2,
+      "d_lots": 17094,
+      "d_total_holders": -776
+    },
+    {
+      "code": "2887",
+      "name": "台新新光",
+      "etfs": [
+        "00991A",
+        "00999A",
+        "00984A",
+        "00401A",
+        "0050",
+        "0056",
+        "00713",
+        "00878",
+        "00918",
+        "00919",
+        "00939",
+        "00940",
+        "009816"
+      ],
+      "etf_count": 13,
+      "cur": {
+        "big_holders": 1284,
+        "big_shares": 18027253694,
+        "big_pct": 71.77,
+        "total_holders": 712926,
+        "total_shares": 25115061997
+      },
+      "prev": {
+        "big_holders": 1294,
+        "big_shares": 17997061941,
+        "big_pct": 71.65,
+        "total_holders": 714814,
+        "total_shares": 25115061997
+      },
+      "d_pct": 0.12,
+      "d_holders": -10,
+      "d_lots": 30192,
+      "d_total_holders": -1888
+    },
+    {
+      "code": "2345",
+      "name": "智邦",
+      "etfs": [
+        "00981A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00995A",
+        "0050",
+        "00881",
+        "009816"
+      ],
+      "etf_count": 16,
+      "cur": {
+        "big_holders": 96,
+        "big_shares": 318088797,
+        "big_pct": 56.68,
+        "total_holders": 120985,
+        "total_shares": 561117897
+      },
+      "prev": {
+        "big_holders": 97,
+        "big_shares": 317476793,
+        "big_pct": 56.57,
+        "total_holders": 119509,
+        "total_shares": 561117897
+      },
+      "d_pct": 0.11,
+      "d_holders": -1,
+      "d_lots": 612,
+      "d_total_holders": 1476
+    },
+    {
+      "code": "2891",
+      "name": "中國信託",
+      "etfs": [
+        "00991A",
+        "00980A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00994A",
+        "0050",
+        "0056",
+        "00713",
+        "00878",
+        "00918",
+        "00919",
+        "00939",
+        "00940",
+        "009816"
+      ],
+      "etf_count": 15,
+      "cur": {
+        "big_holders": 957,
+        "big_shares": 15653911602,
+        "big_pct": 79.55,
+        "total_holders": 569626,
+        "total_shares": 19675932806
+      },
+      "prev": {
+        "big_holders": 955,
+        "big_shares": 15632250881,
+        "big_pct": 79.44,
+        "total_holders": 571239,
+        "total_shares": 19675932806
+      },
+      "d_pct": 0.11,
+      "d_holders": 2,
+      "d_lots": 21661,
+      "d_total_holders": -1613
+    },
+    {
+      "code": "3005",
+      "name": "神基",
+      "etfs": [
+        "0056"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 72,
+        "big_shares": 433943711,
+        "big_pct": 69.44,
+        "total_holders": 46148,
+        "total_shares": 624854050
+      },
+      "prev": {
+        "big_holders": 73,
+        "big_shares": 433260513,
+        "big_pct": 69.33,
+        "total_holders": 46615,
+        "total_shares": 624850050
+      },
+      "d_pct": 0.11,
+      "d_holders": -1,
+      "d_lots": 683,
+      "d_total_holders": -467
+    },
+    {
+      "code": "9910",
+      "name": "豐泰",
+      "etfs": [
+        "00919"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 61,
+        "big_shares": 857180140,
+        "big_pct": 86.8,
+        "total_holders": 23675,
+        "total_shares": 987482831
+      },
+      "prev": {
+        "big_holders": 61,
+        "big_shares": 856074557,
+        "big_pct": 86.69,
+        "total_holders": 23934,
+        "total_shares": 987482831
+      },
+      "d_pct": 0.11,
+      "d_holders": 0,
+      "d_lots": 1106,
+      "d_total_holders": -259
+    },
+    {
+      "code": "1102",
+      "name": "亞泥",
+      "etfs": [
+        "0056",
+        "00940"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 203,
+        "big_shares": 2862206064,
+        "big_pct": 80.7,
+        "total_holders": 97358,
+        "total_shares": 3546562881
+      },
+      "prev": {
+        "big_holders": 204,
+        "big_shares": 2858668356,
+        "big_pct": 80.6,
+        "total_holders": 97829,
+        "total_shares": 3546562881
+      },
+      "d_pct": 0.1,
+      "d_holders": -1,
+      "d_lots": 3538,
+      "d_total_holders": -471
+    },
+    {
+      "code": "2027",
+      "name": "大成鋼",
+      "etfs": [
+        "00985A",
+        "00999A",
+        "00993A",
+        "0056",
+        "00918",
+        "00939"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 207,
+        "big_shares": 1934585887,
+        "big_pct": 74.86,
+        "total_holders": 99902,
+        "total_shares": 2584260615
+      },
+      "prev": {
+        "big_holders": 204,
+        "big_shares": 1932028952,
+        "big_pct": 74.76,
+        "total_holders": 100887,
+        "total_shares": 2584260615
+      },
+      "d_pct": 0.1,
+      "d_holders": 3,
+      "d_lots": 2557,
+      "d_total_holders": -985
+    },
+    {
+      "code": "2633",
+      "name": "台灣高鐵",
+      "etfs": [
+        "00713"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 135,
+        "big_shares": 4804128302,
+        "big_pct": 85.35,
+        "total_holders": 102924,
+        "total_shares": 5628293058
+      },
+      "prev": {
+        "big_holders": 134,
+        "big_shares": 4798315894,
+        "big_pct": 85.25,
+        "total_holders": 103403,
+        "total_shares": 5628293058
+      },
+      "d_pct": 0.1,
+      "d_holders": 1,
+      "d_lots": 5812,
+      "d_total_holders": -479
+    },
+    {
+      "code": "3605",
+      "name": "宏致",
+      "etfs": [
+        "00405A",
+        "00984A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 35,
+        "big_shares": 112392090,
+        "big_pct": 62.04,
+        "total_holders": 44267,
+        "total_shares": 181145101
+      },
+      "prev": {
+        "big_holders": 36,
+        "big_shares": 112006701,
+        "big_pct": 61.94,
+        "total_holders": 44454,
+        "total_shares": 180822834
+      },
+      "d_pct": 0.1,
+      "d_holders": -1,
+      "d_lots": 385,
+      "d_total_holders": -187
+    },
+    {
+      "code": "4576",
+      "name": "大銀微系統",
+      "etfs": [
+        "00405A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 19,
+        "big_shares": 71121400,
+        "big_pct": 59.36,
+        "total_holders": 24231,
+        "total_shares": 119801848
+      },
+      "prev": {
+        "big_holders": 19,
+        "big_shares": 71003116,
+        "big_pct": 59.26,
+        "total_holders": 24589,
+        "total_shares": 119801848
+      },
+      "d_pct": 0.1,
+      "d_holders": 0,
+      "d_lots": 118,
+      "d_total_holders": -358
+    },
+    {
+      "code": "2885",
+      "name": "元大金融",
+      "etfs": [
+        "00991A",
+        "00406A",
+        "00999A",
+        "00982A",
+        "00984A",
+        "00401A",
+        "00995A",
+        "0050",
+        "0056",
+        "00713",
+        "00878",
+        "00939",
+        "00940",
+        "009816"
+      ],
+      "etf_count": 14,
+      "cur": {
+        "big_holders": 717,
+        "big_shares": 11177045239,
+        "big_pct": 80.61,
+        "total_holders": 453945,
+        "total_shares": 13864395944
+      },
+      "prev": {
+        "big_holders": 712,
+        "big_shares": 11165936515,
+        "big_pct": 80.53,
+        "total_holders": 455090,
+        "total_shares": 13864395944
+      },
+      "d_pct": 0.08,
+      "d_holders": 5,
+      "d_lots": 11109,
+      "d_total_holders": -1145
+    },
+    {
+      "code": "2886",
+      "name": "兆豐金融",
+      "etfs": [
+        "00991A",
+        "00406A",
+        "00999A",
+        "00984A",
+        "00401A",
+        "0050",
+        "0056",
+        "00878",
+        "00918",
+        "00939",
+        "009816"
+      ],
+      "etf_count": 11,
+      "cur": {
+        "big_holders": 477,
+        "big_shares": 12205519091,
+        "big_pct": 82.28,
+        "total_holders": 450341,
+        "total_shares": 14833378282
+      },
+      "prev": {
+        "big_holders": 474,
+        "big_shares": 12194351131,
+        "big_pct": 82.2,
+        "total_holders": 451544,
+        "total_shares": 14833378282
+      },
+      "d_pct": 0.08,
+      "d_holders": 3,
+      "d_lots": 11168,
+      "d_total_holders": -1203
+    },
+    {
+      "code": "1216",
+      "name": "統一企業",
+      "etfs": [
+        "00985A",
+        "00984A",
+        "00401A",
+        "00408A",
+        "0050",
+        "0056",
+        "00713",
+        "00878",
+        "00939",
+        "00940",
+        "009816"
+      ],
+      "etf_count": 11,
+      "cur": {
+        "big_holders": 456,
+        "big_shares": 4929602371,
+        "big_pct": 86.75,
+        "total_holders": 134390,
+        "total_shares": 5682015421
+      },
+      "prev": {
+        "big_holders": 454,
+        "big_shares": 4925312822,
+        "big_pct": 86.68,
+        "total_holders": 135629,
+        "total_shares": 5682015421
+      },
+      "d_pct": 0.07,
+      "d_holders": 2,
+      "d_lots": 4290,
+      "d_total_holders": -1239
+    },
+    {
+      "code": "2368",
+      "name": "金像電",
+      "etfs": [
+        "00981A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00993A",
+        "00400A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "0050",
+        "00881",
+        "009816"
+      ],
+      "etf_count": 18,
+      "cur": {
+        "big_holders": 56,
+        "big_shares": 362220662,
+        "big_pct": 68.26,
+        "total_holders": 120973,
+        "total_shares": 530594972
+      },
+      "prev": {
+        "big_holders": 57,
+        "big_shares": 361849580,
+        "big_pct": 68.19,
+        "total_holders": 119673,
+        "total_shares": 530594972
+      },
+      "d_pct": 0.07,
+      "d_holders": -1,
+      "d_lots": 371,
+      "d_total_holders": 1300
+    },
+    {
+      "code": "5289",
+      "name": "宜鼎國際",
+      "etfs": [
+        "00992A",
+        "00995A",
+        "00918"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 8,
+        "big_shares": 18148994,
+        "big_pct": 18.45,
+        "total_holders": 85102,
+        "total_shares": 98342931
+      },
+      "prev": {
+        "big_holders": 8,
+        "big_shares": 18083982,
+        "big_pct": 18.38,
+        "total_holders": 85427,
+        "total_shares": 98342931
+      },
+      "d_pct": 0.07,
+      "d_holders": 0,
+      "d_lots": 65,
+      "d_total_holders": -325
+    },
+    {
+      "code": "6526",
+      "name": "達發",
+      "etfs": [
+        "00985A",
+        "00408A",
+        "00994A",
+        "00996A"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 10,
+        "big_shares": 127846777,
+        "big_pct": 76.32,
+        "total_holders": 18151,
+        "total_shares": 167505554
+      },
+      "prev": {
+        "big_holders": 10,
+        "big_shares": 127723777,
+        "big_pct": 76.25,
+        "total_holders": 18262,
+        "total_shares": 167505554
+      },
+      "d_pct": 0.07,
+      "d_holders": 0,
+      "d_lots": 123,
+      "d_total_holders": -111
+    },
+    {
+      "code": "6670",
+      "name": "復盛應用科技",
+      "etfs": [
+        "00984A",
+        "00713",
+        "00919"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 36,
+        "big_shares": 91753798,
+        "big_pct": 65.82,
+        "total_holders": 6373,
+        "total_shares": 139386973
+      },
+      "prev": {
+        "big_holders": 36,
+        "big_shares": 91650798,
+        "big_pct": 65.75,
+        "total_holders": 6096,
+        "total_shares": 139386973
+      },
+      "d_pct": 0.07,
+      "d_holders": 0,
+      "d_lots": 103,
+      "d_total_holders": 277
+    },
+    {
+      "code": "1504",
+      "name": "東元電機",
+      "etfs": [
+        "00985A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 129,
+        "big_shares": 1616344353,
+        "big_pct": 68.01,
+        "total_holders": 198682,
+        "total_shares": 2376440684
+      },
+      "prev": {
+        "big_holders": 128,
+        "big_shares": 1614848484,
+        "big_pct": 67.95,
+        "total_holders": 199612,
+        "total_shares": 2376440684
+      },
+      "d_pct": 0.06,
+      "d_holders": 1,
+      "d_lots": 1496,
+      "d_total_holders": -930
+    },
+    {
+      "code": "2845",
+      "name": "遠東銀",
+      "etfs": [
+        "00713"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 237,
+        "big_shares": 3507808308,
+        "big_pct": 71.24,
+        "total_holders": 100658,
+        "total_shares": 4923424883
+      },
+      "prev": {
+        "big_holders": 239,
+        "big_shares": 3504839086,
+        "big_pct": 71.18,
+        "total_holders": 100949,
+        "total_shares": 4923424883
+      },
+      "d_pct": 0.06,
+      "d_holders": -2,
+      "d_lots": 2969,
+      "d_total_holders": -291
+    },
+    {
+      "code": "2883",
+      "name": "凱基金融",
+      "etfs": [
+        "00991A",
+        "00403A",
+        "00984A",
+        "00401A",
+        "0050",
+        "0056",
+        "00919",
+        "00939",
+        "00940",
+        "009816"
+      ],
+      "etf_count": 10,
+      "cur": {
+        "big_holders": 859,
+        "big_shares": 11126709137,
+        "big_pct": 65.54,
+        "total_holders": 723906,
+        "total_shares": 16974612475
+      },
+      "prev": {
+        "big_holders": 860,
+        "big_shares": 11115008369,
+        "big_pct": 65.48,
+        "total_holders": 724844,
+        "total_shares": 16974612475
+      },
+      "d_pct": 0.06,
+      "d_holders": -1,
+      "d_lots": 11701,
+      "d_total_holders": -938
+    },
+    {
+      "code": "2884",
+      "name": "玉山金融",
+      "etfs": [
+        "00991A",
+        "00980A",
+        "00999A",
+        "00984A",
+        "00401A",
+        "0050",
+        "0056",
+        "00713",
+        "00918",
+        "00939",
+        "009816"
+      ],
+      "etf_count": 11,
+      "cur": {
+        "big_holders": 953,
+        "big_shares": 12544973318,
+        "big_pct": 70.78,
+        "total_holders": 617141,
+        "total_shares": 17723510471
+      },
+      "prev": {
+        "big_holders": 957,
+        "big_shares": 12535077141,
+        "big_pct": 70.72,
+        "total_holders": 617425,
+        "total_shares": 17723510471
+      },
+      "d_pct": 0.06,
+      "d_holders": -4,
+      "d_lots": 9896,
+      "d_total_holders": -284
+    },
+    {
+      "code": "2634",
+      "name": "漢翔公司",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 31,
+        "big_shares": 435992487,
+        "big_pct": 46.29,
+        "total_holders": 112726,
+        "total_shares": 941867101
+      },
+      "prev": {
+        "big_holders": 32,
+        "big_shares": 435565561,
+        "big_pct": 46.24,
+        "total_holders": 113212,
+        "total_shares": 941867101
+      },
+      "d_pct": 0.05,
+      "d_holders": -1,
+      "d_lots": 427,
+      "d_total_holders": -486
+    },
+    {
+      "code": "2882",
+      "name": "國泰金融",
+      "etfs": [
+        "00991A",
+        "00403A",
+        "00984A",
+        "00401A",
+        "00996A",
+        "0050",
+        "00713",
+        "00878",
+        "00919",
+        "00939",
+        "009816"
+      ],
+      "etf_count": 11,
+      "cur": {
+        "big_holders": 683,
+        "big_shares": 12272114859,
+        "big_pct": 83.65,
+        "total_holders": 395249,
+        "total_shares": 14669210128
+      },
+      "prev": {
+        "big_holders": 684,
+        "big_shares": 12264680719,
+        "big_pct": 83.6,
+        "total_holders": 396989,
+        "total_shares": 14669210128
+      },
+      "d_pct": 0.05,
+      "d_holders": -1,
+      "d_lots": 7434,
+      "d_total_holders": -1740
+    },
+    {
+      "code": "5269",
+      "name": "祥碩",
+      "etfs": [
+        "00996A",
+        "00918",
+        "00929",
+        "00940"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 7,
+        "big_shares": 41801315,
+        "big_pct": 56.36,
+        "total_holders": 30556,
+        "total_shares": 74156359
+      },
+      "prev": {
+        "big_holders": 7,
+        "big_shares": 41764315,
+        "big_pct": 56.31,
+        "total_holders": 30903,
+        "total_shares": 74156359
+      },
+      "d_pct": 0.05,
+      "d_holders": 0,
+      "d_lots": 37,
+      "d_total_holders": -347
+    },
+    {
+      "code": "5876",
+      "name": "上海商銀",
+      "etfs": [
+        "00984A",
+        "0056",
+        "00713",
+        "00878"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 368,
+        "big_shares": 4113425892,
+        "big_pct": 83.77,
+        "total_holders": 48659,
+        "total_shares": 4910219171
+      },
+      "prev": {
+        "big_holders": 371,
+        "big_shares": 4111198995,
+        "big_pct": 83.72,
+        "total_holders": 48797,
+        "total_shares": 4910219171
+      },
+      "d_pct": 0.05,
+      "d_holders": -3,
+      "d_lots": 2227,
+      "d_total_holders": -138
+    },
+    {
+      "code": "6442",
+      "name": "光聖",
+      "etfs": [
+        "00403A",
+        "00980A",
+        "00985A"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 10,
+        "big_shares": 30364510,
+        "big_pct": 37.11,
+        "total_holders": 72398,
+        "total_shares": 81817552
+      },
+      "prev": {
+        "big_holders": 10,
+        "big_shares": 30324510,
+        "big_pct": 37.06,
+        "total_holders": 71572,
+        "total_shares": 81817552
+      },
+      "d_pct": 0.05,
+      "d_holders": 0,
+      "d_lots": 40,
+      "d_total_holders": 826
+    },
+    {
+      "code": "2472",
+      "name": "立隆電子工業",
+      "etfs": [
+        "00995A",
+        "00996A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 18,
+        "big_shares": 67790753,
+        "big_pct": 41.15,
+        "total_holders": 43720,
+        "total_shares": 164735137
+      },
+      "prev": {
+        "big_holders": 18,
+        "big_shares": 67737400,
+        "big_pct": 41.11,
+        "total_holders": 43725,
+        "total_shares": 164735137
+      },
+      "d_pct": 0.04,
+      "d_holders": 0,
+      "d_lots": 53,
+      "d_total_holders": -5
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "etfs": [
+        "00981A",
+        "00991A",
+        "00992A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00982A",
+        "00984A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00994A",
+        "0050",
+        "0056",
+        "00881",
+        "00878",
+        "00918",
+        "00929",
+        "00939",
+        "009816"
+      ],
+      "etf_count": 20,
+      "cur": {
+        "big_holders": 329,
+        "big_shares": 2271652777,
+        "big_pct": 66.23,
+        "total_holders": 331724,
+        "total_shares": 3429842250
+      },
+      "prev": {
+        "big_holders": 336,
+        "big_shares": 2270386957,
+        "big_pct": 66.19,
+        "total_holders": 333625,
+        "total_shares": 3429842250
+      },
+      "d_pct": 0.04,
+      "d_holders": -7,
+      "d_lots": 1266,
+      "d_total_holders": -1901
+    },
+    {
+      "code": "1210",
+      "name": "大成",
+      "etfs": [
+        "00713",
+        "00919"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 69,
+        "big_shares": 549147845,
+        "big_pct": 61.37,
+        "total_holders": 99974,
+        "total_shares": 894767222
+      },
+      "prev": {
+        "big_holders": 68,
+        "big_shares": 548928559,
+        "big_pct": 61.34,
+        "total_holders": 100039,
+        "total_shares": 894767222
+      },
+      "d_pct": 0.03,
+      "d_holders": 1,
+      "d_lots": 219,
+      "d_total_holders": -65
+    },
+    {
+      "code": "2382",
+      "name": "廣達電腦",
+      "etfs": [
+        "00991A",
+        "00980A",
+        "00999A",
+        "00401A",
+        "00408A",
+        "00996A",
+        "0050",
+        "0056",
+        "00713",
+        "00881",
+        "00878",
+        "00918",
+        "00919",
+        "00929",
+        "009816"
+      ],
+      "etf_count": 15,
+      "cur": {
+        "big_holders": 284,
+        "big_shares": 3340093166,
+        "big_pct": 81.31,
+        "total_holders": 281067,
+        "total_shares": 4107627432
+      },
+      "prev": {
+        "big_holders": 282,
+        "big_shares": 3338780249,
+        "big_pct": 81.28,
+        "total_holders": 281629,
+        "total_shares": 4107627432
+      },
+      "d_pct": 0.03,
+      "d_holders": 2,
+      "d_lots": 1313,
+      "d_total_holders": -562
+    },
+    {
+      "code": "2603",
+      "name": "長榮海運",
+      "etfs": [
+        "00991A",
+        "00985A",
+        "00999A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00994A",
+        "0050",
+        "0056",
+        "00878",
+        "00918",
+        "00919",
+        "00939",
+        "009816"
+      ],
+      "etf_count": 16,
+      "cur": {
+        "big_holders": 211,
+        "big_shares": 1568171997,
+        "big_pct": 72.43,
+        "total_holders": 253478,
+        "total_shares": 2165042996
+      },
+      "prev": {
+        "big_holders": 213,
+        "big_shares": 1567578875,
+        "big_pct": 72.4,
+        "total_holders": 255613,
+        "total_shares": 2165042996
+      },
+      "d_pct": 0.03,
+      "d_holders": -2,
+      "d_lots": 593,
+      "d_total_holders": -2135
+    },
+    {
+      "code": "2645",
+      "name": "長榮航太",
+      "etfs": [
+        "0056"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 13,
+        "big_shares": 292804235,
+        "big_pct": 78.17,
+        "total_holders": 30574,
+        "total_shares": 374570962
+      },
+      "prev": {
+        "big_holders": 13,
+        "big_shares": 292692851,
+        "big_pct": 78.14,
+        "total_holders": 30443,
+        "total_shares": 374570962
+      },
+      "d_pct": 0.03,
+      "d_holders": 0,
+      "d_lots": 111,
+      "d_total_holders": 131
+    },
+    {
+      "code": "3711",
+      "name": "日月光投控",
+      "etfs": [
+        "00981A",
+        "00991A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "0050",
+        "0056",
+        "00878",
+        "009816"
+      ],
+      "etf_count": 21,
+      "cur": {
+        "big_holders": 425,
+        "big_shares": 3653975277,
+        "big_pct": 81.37,
+        "total_holders": 354064,
+        "total_shares": 4490148549
+      },
+      "prev": {
+        "big_holders": 420,
+        "big_shares": 3652135070,
+        "big_pct": 81.34,
+        "total_holders": 354908,
+        "total_shares": 4489512948
+      },
+      "d_pct": 0.03,
+      "d_holders": 5,
+      "d_lots": 1840,
+      "d_total_holders": -844
+    },
+    {
+      "code": "9941",
+      "name": "裕融企業",
+      "etfs": [
+        "00999A",
+        "00919"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 30,
+        "big_shares": 388005739,
+        "big_pct": 66.08,
+        "total_holders": 43989,
+        "total_shares": 587149073
+      },
+      "prev": {
+        "big_holders": 30,
+        "big_shares": 387869652,
+        "big_pct": 66.05,
+        "total_holders": 44100,
+        "total_shares": 587149073
+      },
+      "d_pct": 0.03,
+      "d_holders": 0,
+      "d_lots": 136,
+      "d_total_holders": -111
+    },
+    {
+      "code": "4904",
+      "name": "遠傳電信",
+      "etfs": [
+        "00985A",
+        "00999A",
+        "00993A",
+        "00401A",
+        "0050",
+        "0056",
+        "00713",
+        "00881",
+        "00878",
+        "00929",
+        "00939",
+        "009816"
+      ],
+      "etf_count": 12,
+      "cur": {
+        "big_holders": 236,
+        "big_shares": 3292916614,
+        "big_pct": 91.27,
+        "total_holders": 83025,
+        "total_shares": 3607705357
+      },
+      "prev": {
+        "big_holders": 235,
+        "big_shares": 3292049088,
+        "big_pct": 91.25,
+        "total_holders": 83245,
+        "total_shares": 3607705357
+      },
+      "d_pct": 0.02,
+      "d_holders": 1,
+      "d_lots": 868,
+      "d_total_holders": -220
+    },
+    {
+      "code": "4938",
+      "name": "和碩",
+      "etfs": [
+        "00406A",
+        "00401A",
+        "0056",
+        "00919",
+        "00940"
+      ],
+      "etf_count": 5,
+      "cur": {
+        "big_holders": 226,
+        "big_shares": 2042668492,
+        "big_pct": 76.34,
+        "total_holders": 137325,
+        "total_shares": 2675708703
+      },
+      "prev": {
+        "big_holders": 226,
+        "big_shares": 2042201380,
+        "big_pct": 76.32,
+        "total_holders": 137842,
+        "total_shares": 2675708703
+      },
+      "d_pct": 0.02,
+      "d_holders": 0,
+      "d_lots": 467,
+      "d_total_holders": -517
+    },
+    {
+      "code": "2881",
+      "name": "富邦金融",
+      "etfs": [
+        "00991A",
+        "00984A",
+        "00400A",
+        "00401A",
+        "00996A",
+        "0050",
+        "00878",
+        "00919",
+        "00939",
+        "00940",
+        "009816"
+      ],
+      "etf_count": 11,
+      "cur": {
+        "big_holders": 526,
+        "big_shares": 11865169691,
+        "big_pct": 84.7,
+        "total_holders": 377187,
+        "total_shares": 14007364952
+      },
+      "prev": {
+        "big_holders": 529,
+        "big_shares": 11863224614,
+        "big_pct": 84.69,
+        "total_holders": 378251,
+        "total_shares": 14007364952
+      },
+      "d_pct": 0.01,
+      "d_holders": -3,
+      "d_lots": 1945,
+      "d_total_holders": -1064
+    },
+    {
+      "code": "4441",
+      "name": "振大環球",
+      "etfs": [
+        "00982A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 11,
+        "big_shares": 37927555,
+        "big_pct": 55.47,
+        "total_holders": 2513,
+        "total_shares": 68373078
+      },
+      "prev": {
+        "big_holders": 11,
+        "big_shares": 37920555,
+        "big_pct": 55.46,
+        "total_holders": 2526,
+        "total_shares": 68373078
+      },
+      "d_pct": 0.01,
+      "d_holders": 0,
+      "d_lots": 7,
+      "d_total_holders": -13
+    },
+    {
+      "code": "4749",
+      "name": "新應材",
+      "etfs": [
+        "00996A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 8,
+        "big_shares": 21429255,
+        "big_pct": 22.62,
+        "total_holders": 63063,
+        "total_shares": 94732865
+      },
+      "prev": {
+        "big_holders": 8,
+        "big_shares": 21426203,
+        "big_pct": 22.61,
+        "total_holders": 63088,
+        "total_shares": 94732865
+      },
+      "d_pct": 0.01,
+      "d_holders": 0,
+      "d_lots": 3,
+      "d_total_holders": -25
+    },
+    {
+      "code": "5274",
+      "name": "信驊",
+      "etfs": [
+        "00981A",
+        "00991A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00999A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00994A",
+        "00995A"
+      ],
+      "etf_count": 15,
+      "cur": {
+        "big_holders": 4,
+        "big_shares": 9101265,
+        "big_pct": 21.88,
+        "total_holders": 57677,
+        "total_shares": 41582953
+      },
+      "prev": {
+        "big_holders": 4,
+        "big_shares": 9095765,
+        "big_pct": 21.87,
+        "total_holders": 61020,
+        "total_shares": 41582953
+      },
+      "d_pct": 0.01,
+      "d_holders": 0,
+      "d_lots": 6,
+      "d_total_holders": -3343
+    },
+    {
+      "code": "5434",
+      "name": "崇越",
+      "etfs": [
+        "00999A",
+        "00984A",
+        "00400A",
+        "00408A",
+        "00713",
+        "00929"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 27,
+        "big_shares": 78067598,
+        "big_pct": 40.23,
+        "total_holders": 32354,
+        "total_shares": 194007983
+      },
+      "prev": {
+        "big_holders": 27,
+        "big_shares": 78032598,
+        "big_pct": 40.22,
+        "total_holders": 32285,
+        "total_shares": 194007983
+      },
+      "d_pct": 0.01,
+      "d_holders": 0,
+      "d_lots": 35,
+      "d_total_holders": 69
+    },
+    {
+      "code": "1605",
+      "name": "華新麗華",
+      "etfs": [
+        "00985A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 201,
+        "big_shares": 3261739932,
+        "big_pct": 73.6,
+        "total_holders": 241823,
+        "total_shares": 4431332948
+      },
+      "prev": {
+        "big_holders": 201,
+        "big_shares": 3261647162,
+        "big_pct": 73.6,
+        "total_holders": 242621,
+        "total_shares": 4431332948
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 93,
+      "d_total_holders": -798
+    },
+    {
+      "code": "2015",
+      "name": "豐興",
+      "etfs": [
+        "00713"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 93,
+        "big_shares": 478254872,
+        "big_pct": 82.23,
+        "total_holders": 11478,
+        "total_shares": 581599424
+      },
+      "prev": {
+        "big_holders": 93,
+        "big_shares": 478298872,
+        "big_pct": 82.23,
+        "total_holders": 11486,
+        "total_shares": 581599424
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": -44,
+      "d_total_holders": -8
+    },
+    {
+      "code": "2207",
+      "name": "和泰車",
+      "etfs": [
+        "00713"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 53,
+        "big_shares": 464194300,
+        "big_pct": 83.32,
+        "total_holders": 12812,
+        "total_shares": 557102768
+      },
+      "prev": {
+        "big_holders": 53,
+        "big_shares": 464199300,
+        "big_pct": 83.32,
+        "total_holders": 12876,
+        "total_shares": 557102768
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": -5,
+      "d_total_holders": -64
+    },
+    {
+      "code": "2428",
+      "name": "興勤電子工業",
+      "etfs": [
+        "00982A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 13,
+        "big_shares": 66904176,
+        "big_pct": 52.22,
+        "total_holders": 19826,
+        "total_shares": 128112726
+      },
+      "prev": {
+        "big_holders": 13,
+        "big_shares": 66904176,
+        "big_pct": 52.22,
+        "total_holders": 19883,
+        "total_shares": 128112726
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": -57
+    },
+    {
+      "code": "2597",
+      "name": "潤弘",
+      "etfs": [
+        "00919"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 25,
+        "big_shares": 242430406,
+        "big_pct": 78.02,
+        "total_holders": 12754,
+        "total_shares": 310716000
+      },
+      "prev": {
+        "big_holders": 25,
+        "big_shares": 242432406,
+        "big_pct": 78.02,
+        "total_holders": 12914,
+        "total_shares": 310716000
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": -2,
+      "d_total_holders": -160
+    },
+    {
+      "code": "3131",
+      "name": "弘塑科技",
+      "etfs": [
+        "00401A",
+        "00996A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 5,
+        "big_shares": 9664306,
+        "big_pct": 31.77,
+        "total_holders": 34078,
+        "total_shares": 30413601
+      },
+      "prev": {
+        "big_holders": 5,
+        "big_shares": 9664306,
+        "big_pct": 31.77,
+        "total_holders": 34035,
+        "total_shares": 30413601
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": 43
+    },
+    {
+      "code": "3583",
+      "name": "辛耘",
+      "etfs": [
+        "00403A",
+        "00982A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 11,
+        "big_shares": 39199950,
+        "big_pct": 46.74,
+        "total_holders": 33632,
+        "total_shares": 83858644
+      },
+      "prev": {
+        "big_holders": 11,
+        "big_shares": 39199950,
+        "big_pct": 46.74,
+        "total_holders": 33643,
+        "total_shares": 83858644
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": -11
+    },
+    {
+      "code": "3617",
+      "name": "碩天",
+      "etfs": [
+        "00982A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 16,
+        "big_shares": 49927879,
+        "big_pct": 52.68,
+        "total_holders": 6963,
+        "total_shares": 94762049
+      },
+      "prev": {
+        "big_holders": 16,
+        "big_shares": 49927879,
+        "big_pct": 52.68,
+        "total_holders": 6973,
+        "total_shares": 94762049
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": -10
+    },
+    {
+      "code": "4766",
+      "name": "南寶",
+      "etfs": [
+        "00713"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 14,
+        "big_shares": 76024961,
+        "big_pct": 63.05,
+        "total_holders": 9989,
+        "total_shares": 120570780
+      },
+      "prev": {
+        "big_holders": 14,
+        "big_shares": 76024961,
+        "big_pct": 63.05,
+        "total_holders": 10107,
+        "total_shares": 120570780
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": -118
+    },
+    {
+      "code": "4991",
+      "name": "環宇-KY",
+      "etfs": [
+        "00401A",
+        "00987A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 8,
+        "big_shares": 42024987,
+        "big_pct": 34.62,
+        "total_holders": 63576,
+        "total_shares": 121363372
+      },
+      "prev": {
+        "big_holders": 8,
+        "big_shares": 42026487,
+        "big_pct": 34.62,
+        "total_holders": 63425,
+        "total_shares": 121363372
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": -2,
+      "d_total_holders": 151
+    },
+    {
+      "code": "6197",
+      "name": "佳必琪",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 9,
+        "big_shares": 46212980,
+        "big_pct": 36.55,
+        "total_holders": 51470,
+        "total_shares": 126416886
+      },
+      "prev": {
+        "big_holders": 9,
+        "big_shares": 46212980,
+        "big_pct": 36.55,
+        "total_holders": 50955,
+        "total_shares": 126416886
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": 515
+    },
+    {
+      "code": "6640",
+      "name": "均華",
+      "etfs": [
+        "00982A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 2,
+        "big_shares": 18439750,
+        "big_pct": 63.21,
+        "total_holders": 13904,
+        "total_shares": 29168500
+      },
+      "prev": {
+        "big_holders": 2,
+        "big_shares": 18439750,
+        "big_pct": 63.21,
+        "total_holders": 13967,
+        "total_shares": 29168500
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": -63
+    },
+    {
+      "code": "6683",
+      "name": "雍智科技",
+      "etfs": [
+        "00996A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 1,
+        "big_shares": 3097490,
+        "big_pct": 11.24,
+        "total_holders": 36208,
+        "total_shares": 27552661
+      },
+      "prev": {
+        "big_holders": 1,
+        "big_shares": 3097490,
+        "big_pct": 11.24,
+        "total_holders": 36237,
+        "total_shares": 27552661
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": -29
+    },
+    {
+      "code": "6830",
+      "name": "汎銓",
+      "etfs": [
+        "00996A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 6,
+        "big_shares": 9402152,
+        "big_pct": 15.45,
+        "total_holders": 28126,
+        "total_shares": 60816571
+      },
+      "prev": {
+        "big_holders": 6,
+        "big_shares": 9402152,
+        "big_pct": 15.45,
+        "total_holders": 28310,
+        "total_shares": 60816571
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": -184
+    },
+    {
+      "code": "6831",
+      "name": "邁科科技",
+      "etfs": [
+        "00980A",
+        "00996A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 8,
+        "big_shares": 24516166,
+        "big_pct": 36.32,
+        "total_holders": 13003,
+        "total_shares": 67500000
+      },
+      "prev": {
+        "big_holders": 8,
+        "big_shares": 24516166,
+        "big_pct": 36.32,
+        "total_holders": 13066,
+        "total_shares": 67500000
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": -63
+    },
+    {
+      "code": "6890",
+      "name": "來億-KY",
+      "etfs": [
+        "00919"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 17,
+        "big_shares": 230238280,
+        "big_pct": 91.98,
+        "total_holders": 7405,
+        "total_shares": 250296650
+      },
+      "prev": {
+        "big_holders": 17,
+        "big_shares": 230238280,
+        "big_pct": 91.98,
+        "total_holders": 7384,
+        "total_shares": 250296650
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": 21
+    },
+    {
+      "code": "7750",
+      "name": "新  代",
+      "etfs": [
+        "00985A",
+        "00984A",
+        "00400A"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 16,
+        "big_shares": 44249147,
+        "big_pct": 61.59,
+        "total_holders": 11217,
+        "total_shares": 71843000
+      },
+      "prev": {
+        "big_holders": 16,
+        "big_shares": 44249147,
+        "big_pct": 61.59,
+        "total_holders": 11916,
+        "total_shares": 71843000
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": -699
+    },
+    {
+      "code": "7751",
+      "name": "竑騰",
+      "etfs": [
+        "00980A",
+        "00996A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 6,
+        "big_shares": 9937757,
+        "big_pct": 36.95,
+        "total_holders": 10050,
+        "total_shares": 26888600
+      },
+      "prev": {
+        "big_holders": 6,
+        "big_shares": 9937757,
+        "big_pct": 36.95,
+        "total_holders": 10019,
+        "total_shares": 26888600
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": 31
+    },
+    {
+      "code": "7828",
+      "name": "INNOSTAR SERVICE INC ORD TWD 10",
+      "etfs": [
+        "00401A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 10,
+        "big_shares": 21636256,
+        "big_pct": 53.38,
+        "total_holders": 16433,
+        "total_shares": 40531911
+      },
+      "prev": {
+        "big_holders": 10,
+        "big_shares": 21637256,
+        "big_pct": 53.38,
+        "total_holders": 16375,
+        "total_shares": 40531911
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": -1,
+      "d_total_holders": 58
+    },
+    {
+      "code": "7856",
+      "name": "漢測",
+      "etfs": [
+        "00401A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 9,
+        "big_shares": 16602105,
+        "big_pct": 50.3,
+        "total_holders": 19325,
+        "total_shares": 33000000
+      },
+      "prev": {
+        "big_holders": 9,
+        "big_shares": 16602105,
+        "big_pct": 50.3,
+        "total_holders": 19367,
+        "total_shares": 33000000
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": -42
+    },
+    {
+      "code": "8454",
+      "name": "富邦媒",
+      "etfs": [
+        "00919"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 10,
+        "big_shares": 210230887,
+        "big_pct": 79.33,
+        "total_holders": 37138,
+        "total_shares": 264975275
+      },
+      "prev": {
+        "big_holders": 10,
+        "big_shares": 210230887,
+        "big_pct": 79.33,
+        "total_holders": 37287,
+        "total_shares": 264975275
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": -149
+    },
+    {
+      "code": "1402",
+      "name": "遠東新",
+      "etfs": [
+        "00985A",
+        "00713",
+        "00919",
+        "00939"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 258,
+        "big_shares": 4678780708,
+        "big_pct": 87.4,
+        "total_holders": 86130,
+        "total_shares": 5352875227
+      },
+      "prev": {
+        "big_holders": 258,
+        "big_shares": 4679471490,
+        "big_pct": 87.41,
+        "total_holders": 86169,
+        "total_shares": 5352875227
+      },
+      "d_pct": -0.01,
+      "d_holders": 0,
+      "d_lots": -691,
+      "d_total_holders": -39
+    },
+    {
+      "code": "2476",
+      "name": "鉅祥",
+      "etfs": [
+        "00982A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 36,
+        "big_shares": 135389526,
+        "big_pct": 61.4,
+        "total_holders": 18185,
+        "total_shares": 220501259
+      },
+      "prev": {
+        "big_holders": 35,
+        "big_shares": 135401456,
+        "big_pct": 61.41,
+        "total_holders": 18108,
+        "total_shares": 220474858
+      },
+      "d_pct": -0.01,
+      "d_holders": 1,
+      "d_lots": -12,
+      "d_total_holders": 77
+    },
+    {
+      "code": "2637",
+      "name": "慧洋-KY",
+      "etfs": [
+        "00984A",
+        "00400A",
+        "00919"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 91,
+        "big_shares": 588778654,
+        "big_pct": 78.88,
+        "total_holders": 22162,
+        "total_shares": 746409199
+      },
+      "prev": {
+        "big_holders": 89,
+        "big_shares": 588904126,
+        "big_pct": 78.89,
+        "total_holders": 22240,
+        "total_shares": 746409199
+      },
+      "d_pct": -0.01,
+      "d_holders": 2,
+      "d_lots": -125,
+      "d_total_holders": -78
+    },
+    {
+      "code": "3227",
+      "name": "原相科技",
+      "etfs": [
+        "00929"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 13,
+        "big_shares": 38155811,
+        "big_pct": 25.11,
+        "total_holders": 56948,
+        "total_shares": 151912842
+      },
+      "prev": {
+        "big_holders": 13,
+        "big_shares": 38174811,
+        "big_pct": 25.12,
+        "total_holders": 57046,
+        "total_shares": 151912842
+      },
+      "d_pct": -0.01,
+      "d_holders": 0,
+      "d_lots": -19,
+      "d_total_holders": -98
+    },
+    {
+      "code": "1319",
+      "name": "東陽",
+      "etfs": [
+        "00919",
+        "00940"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 68,
+        "big_shares": 453538107,
+        "big_pct": 76.67,
+        "total_holders": 30651,
+        "total_shares": 591477068
+      },
+      "prev": {
+        "big_holders": 68,
+        "big_shares": 453652078,
+        "big_pct": 76.69,
+        "total_holders": 30812,
+        "total_shares": 591477068
+      },
+      "d_pct": -0.02,
+      "d_holders": 0,
+      "d_lots": -114,
+      "d_total_holders": -161
+    },
+    {
+      "code": "2059",
+      "name": "川湖科技",
+      "etfs": [
+        "00991A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "0050",
+        "00881",
+        "009816"
+      ],
+      "etf_count": 19,
+      "cur": {
+        "big_holders": 15,
+        "big_shares": 52017633,
+        "big_pct": 54.58,
+        "total_holders": 86271,
+        "total_shares": 95297072
+      },
+      "prev": {
+        "big_holders": 15,
+        "big_shares": 52035761,
+        "big_pct": 54.6,
+        "total_holders": 86332,
+        "total_shares": 95297072
+      },
+      "d_pct": -0.02,
+      "d_holders": 0,
+      "d_lots": -18,
+      "d_total_holders": -61
+    },
+    {
+      "code": "2851",
+      "name": "中央再保",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 59,
+        "big_shares": 535814685,
+        "big_pct": 66.94,
+        "total_holders": 27235,
+        "total_shares": 800388750
+      },
+      "prev": {
+        "big_holders": 57,
+        "big_shares": 535974501,
+        "big_pct": 66.96,
+        "total_holders": 27200,
+        "total_shares": 800388750
+      },
+      "d_pct": -0.02,
+      "d_holders": 2,
+      "d_lots": -160,
+      "d_total_holders": 35
+    },
+    {
+      "code": "6584",
+      "name": "南俊國際",
+      "etfs": [
+        "00992A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 11,
+        "big_shares": 44429833,
+        "big_pct": 62.24,
+        "total_holders": 15140,
+        "total_shares": 71379810
+      },
+      "prev": {
+        "big_holders": 11,
+        "big_shares": 44447833,
+        "big_pct": 62.26,
+        "total_holders": 15178,
+        "total_shares": 71379810
+      },
+      "d_pct": -0.02,
+      "d_holders": 0,
+      "d_lots": -18,
+      "d_total_holders": -38
+    },
+    {
+      "code": "2105",
+      "name": "正新",
+      "etfs": [
+        "0056",
+        "00919",
+        "00939"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 165,
+        "big_shares": 2543119695,
+        "big_pct": 78.45,
+        "total_holders": 78299,
+        "total_shares": 3241415536
+      },
+      "prev": {
+        "big_holders": 163,
+        "big_shares": 2543874878,
+        "big_pct": 78.48,
+        "total_holders": 78418,
+        "total_shares": 3241415536
+      },
+      "d_pct": -0.03,
+      "d_holders": 2,
+      "d_lots": -755,
+      "d_total_holders": -119
+    },
+    {
+      "code": "6187",
+      "name": "萬潤",
+      "etfs": [
+        "00981A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00984A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00994A",
+        "00995A"
+      ],
+      "etf_count": 10,
+      "cur": {
+        "big_holders": 16,
+        "big_shares": 33463127,
+        "big_pct": 34.05,
+        "total_holders": 54447,
+        "total_shares": 98262739
+      },
+      "prev": {
+        "big_holders": 16,
+        "big_shares": 33488127,
+        "big_pct": 34.08,
+        "total_holders": 53597,
+        "total_shares": 98262739
+      },
+      "d_pct": -0.03,
+      "d_holders": 0,
+      "d_lots": -25,
+      "d_total_holders": 850
+    },
+    {
+      "code": "1326",
+      "name": "台化",
+      "etfs": [
+        "00406A",
+        "00984A",
+        "00995A"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 280,
+        "big_shares": 4758321482,
+        "big_pct": 81.18,
+        "total_holders": 181781,
+        "total_shares": 5861186291
+      },
+      "prev": {
+        "big_holders": 275,
+        "big_shares": 4760501699,
+        "big_pct": 81.22,
+        "total_holders": 181805,
+        "total_shares": 5861186291
+      },
+      "d_pct": -0.04,
+      "d_holders": 5,
+      "d_lots": -2180,
+      "d_total_holders": -24
+    },
+    {
+      "code": "2330",
+      "name": "台積電",
+      "etfs": [
+        "00981A",
+        "00988A",
+        "00991A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "0050",
+        "00881",
+        "009816"
+      ],
+      "etf_count": 23,
+      "cur": {
+        "big_holders": 1478,
+        "big_shares": 21883958871,
+        "big_pct": 84.38,
+        "total_holders": 3185409,
+        "total_shares": 25932370067
+      },
+      "prev": {
+        "big_holders": 1476,
+        "big_shares": 21893080824,
+        "big_pct": 84.42,
+        "total_holders": 3166709,
+        "total_shares": 25932370067
+      },
+      "d_pct": -0.04,
+      "d_holders": 2,
+      "d_lots": -9122,
+      "d_total_holders": 18700
+    },
+    {
+      "code": "2347",
+      "name": "聯強",
+      "etfs": [
+        "00993A",
+        "0056",
+        "00713",
+        "00919",
+        "00929",
+        "00939"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 158,
+        "big_shares": 1420714406,
+        "big_pct": 85.17,
+        "total_holders": 37888,
+        "total_shares": 1667946968
+      },
+      "prev": {
+        "big_holders": 159,
+        "big_shares": 1421346750,
+        "big_pct": 85.21,
+        "total_holders": 38191,
+        "total_shares": 1667946968
+      },
+      "d_pct": -0.04,
+      "d_holders": -1,
+      "d_lots": -632,
+      "d_total_holders": -303
+    },
+    {
+      "code": "2855",
+      "name": "統一證券",
+      "etfs": [
+        "00984A",
+        "00919"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 106,
+        "big_shares": 1164065094,
+        "big_pct": 72.68,
+        "total_holders": 55741,
+        "total_shares": 1601414478
+      },
+      "prev": {
+        "big_holders": 108,
+        "big_shares": 1164605442,
+        "big_pct": 72.72,
+        "total_holders": 55830,
+        "total_shares": 1601414478
+      },
+      "d_pct": -0.04,
+      "d_holders": -2,
+      "d_lots": -540,
+      "d_total_holders": -89
+    },
+    {
+      "code": "3044",
+      "name": "健鼎科技",
+      "etfs": [
+        "00980A",
+        "00999A",
+        "00993A",
+        "00400A",
+        "00995A",
+        "0056",
+        "00881",
+        "00929",
+        "00940"
+      ],
+      "etf_count": 9,
+      "cur": {
+        "big_holders": 92,
+        "big_shares": 367232530,
+        "big_pct": 69.86,
+        "total_holders": 31660,
+        "total_shares": 525605898
+      },
+      "prev": {
+        "big_holders": 93,
+        "big_shares": 367423023,
+        "big_pct": 69.9,
+        "total_holders": 31629,
+        "total_shares": 525605898
+      },
+      "d_pct": -0.04,
+      "d_holders": -1,
+      "d_lots": -190,
+      "d_total_holders": 31
+    },
+    {
+      "code": "3045",
+      "name": "台灣大哥",
+      "etfs": [
+        "00984A",
+        "00408A",
+        "00994A",
+        "0050",
+        "0056",
+        "00713",
+        "00881",
+        "00878",
+        "00929",
+        "00939",
+        "00940",
+        "009816"
+      ],
+      "etf_count": 12,
+      "cur": {
+        "big_holders": 235,
+        "big_shares": 3406363976,
+        "big_pct": 90.78,
+        "total_holders": 57455,
+        "total_shares": 3752235094
+      },
+      "prev": {
+        "big_holders": 236,
+        "big_shares": 3402122126,
+        "big_pct": 90.82,
+        "total_holders": 57635,
+        "total_shares": 3745842858
+      },
+      "d_pct": -0.04,
+      "d_holders": -1,
+      "d_lots": 4242,
+      "d_total_holders": -180
+    },
+    {
+      "code": "1709",
+      "name": "和益",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 59,
+        "big_shares": 273648955,
+        "big_pct": 57.36,
+        "total_holders": 52351,
+        "total_shares": 477016272
+      },
+      "prev": {
+        "big_holders": 61,
+        "big_shares": 273876514,
+        "big_pct": 57.41,
+        "total_holders": 51990,
+        "total_shares": 477016272
+      },
+      "d_pct": -0.05,
+      "d_holders": -2,
+      "d_lots": -228,
+      "d_total_holders": 361
+    },
+    {
+      "code": "2610",
+      "name": "華航",
+      "etfs": [
+        "00985A",
+        "00713",
+        "00918",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 5,
+      "cur": {
+        "big_holders": 253,
+        "big_shares": 4354920895,
+        "big_pct": 70.86,
+        "total_holders": 236470,
+        "total_shares": 6144988558
+      },
+      "prev": {
+        "big_holders": 253,
+        "big_shares": 4357651551,
+        "big_pct": 70.91,
+        "total_holders": 237178,
+        "total_shares": 6144988558
+      },
+      "d_pct": -0.05,
+      "d_holders": 0,
+      "d_lots": -2731,
+      "d_total_holders": -708
+    },
+    {
+      "code": "6505",
+      "name": "台塑石化",
+      "etfs": [
+        "00991A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "0050",
+        "009816"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 112,
+        "big_shares": 9151854839,
+        "big_pct": 96.07,
+        "total_holders": 92962,
+        "total_shares": 9525959652
+      },
+      "prev": {
+        "big_holders": 117,
+        "big_shares": 9156632277,
+        "big_pct": 96.12,
+        "total_holders": 91988,
+        "total_shares": 9525959652
+      },
+      "d_pct": -0.05,
+      "d_holders": -5,
+      "d_lots": -4777,
+      "d_total_holders": 974
+    },
+    {
+      "code": "3693",
+      "name": "營邦",
+      "etfs": [
+        "00996A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 6,
+        "big_shares": 16916419,
+        "big_pct": 39.34,
+        "total_holders": 24030,
+        "total_shares": 42990694
+      },
+      "prev": {
+        "big_holders": 6,
+        "big_shares": 16944251,
+        "big_pct": 39.41,
+        "total_holders": 23327,
+        "total_shares": 42990694
+      },
+      "d_pct": -0.07,
+      "d_holders": 0,
+      "d_lots": -28,
+      "d_total_holders": 703
+    },
+    {
+      "code": "2301",
+      "name": "光寶科",
+      "etfs": [
+        "00403A",
+        "00992A",
+        "00982A",
+        "00984A",
+        "0050",
+        "0056",
+        "00878",
+        "00929",
+        "009816"
+      ],
+      "etf_count": 9,
+      "cur": {
+        "big_holders": 270,
+        "big_shares": 1706363038,
+        "big_pct": 73.67,
+        "total_holders": 202756,
+        "total_shares": 2316107763
+      },
+      "prev": {
+        "big_holders": 270,
+        "big_shares": 1708175135,
+        "big_pct": 73.75,
+        "total_holders": 202377,
+        "total_shares": 2316107763
+      },
+      "d_pct": -0.08,
+      "d_holders": 0,
+      "d_lots": -1812,
+      "d_total_holders": 379
+    },
+    {
+      "code": "3026",
+      "name": "禾伸堂企",
+      "etfs": [
+        "00991A",
+        "00992A",
+        "00980A",
+        "00999A",
+        "00408A",
+        "00994A"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 29,
+        "big_shares": 63356401,
+        "big_pct": 38.19,
+        "total_holders": 76145,
+        "total_shares": 165890318
+      },
+      "prev": {
+        "big_holders": 27,
+        "big_shares": 63494972,
+        "big_pct": 38.27,
+        "total_holders": 73893,
+        "total_shares": 165890318
+      },
+      "d_pct": -0.08,
+      "d_holders": 2,
+      "d_lots": -139,
+      "d_total_holders": 2252
+    },
+    {
+      "code": "3090",
+      "name": "日電貿",
+      "etfs": [
+        "00999A",
+        "00982A",
+        "00400A",
+        "00929"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 20,
+        "big_shares": 150375611,
+        "big_pct": 52.29,
+        "total_holders": 75650,
+        "total_shares": 287567150
+      },
+      "prev": {
+        "big_holders": 20,
+        "big_shares": 150640980,
+        "big_pct": 52.38,
+        "total_holders": 75692,
+        "total_shares": 287567150
+      },
+      "d_pct": -0.09,
+      "d_holders": 0,
+      "d_lots": -265,
+      "d_total_holders": -42
+    },
+    {
+      "code": "6239",
+      "name": "力成科技",
+      "etfs": [
+        "00982A",
+        "00996A",
+        "0056"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 89,
+        "big_shares": 410479500,
+        "big_pct": 54.07,
+        "total_holders": 196102,
+        "total_shares": 759146634
+      },
+      "prev": {
+        "big_holders": 92,
+        "big_shares": 411204776,
+        "big_pct": 54.16,
+        "total_holders": 196053,
+        "total_shares": 759146634
+      },
+      "d_pct": -0.09,
+      "d_holders": -3,
+      "d_lots": -725,
+      "d_total_holders": 49
+    },
+    {
+      "code": "9904",
+      "name": "寶成",
+      "etfs": [
+        "0056",
+        "00940"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 218,
+        "big_shares": 1896818608,
+        "big_pct": 64.36,
+        "total_holders": 102430,
+        "total_shares": 2946787213
+      },
+      "prev": {
+        "big_holders": 216,
+        "big_shares": 1899949002,
+        "big_pct": 64.47,
+        "total_holders": 102643,
+        "total_shares": 2946787213
+      },
+      "d_pct": -0.11,
+      "d_holders": 2,
+      "d_lots": -3130,
+      "d_total_holders": -213
+    },
+    {
+      "code": "6223",
+      "name": "旺矽",
+      "etfs": [
+        "00981A",
+        "00988A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00999A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "00881"
+      ],
+      "etf_count": 19,
+      "cur": {
+        "big_holders": 14,
+        "big_shares": 37085526,
+        "big_pct": 37.84,
+        "total_holders": 85105,
+        "total_shares": 97981309
+      },
+      "prev": {
+        "big_holders": 14,
+        "big_shares": 37196929,
+        "big_pct": 37.96,
+        "total_holders": 84148,
+        "total_shares": 97981309
+      },
+      "d_pct": -0.12,
+      "d_holders": 0,
+      "d_lots": -111,
+      "d_total_holders": 957
+    },
+    {
+      "code": "8016",
+      "name": "矽創",
+      "etfs": [
+        "00940"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 21,
+        "big_shares": 36163672,
+        "big_pct": 30.1,
+        "total_holders": 34849,
+        "total_shares": 120136876
+      },
+      "prev": {
+        "big_holders": 21,
+        "big_shares": 36306672,
+        "big_pct": 30.22,
+        "total_holders": 34975,
+        "total_shares": 120136876
+      },
+      "d_pct": -0.12,
+      "d_holders": 0,
+      "d_lots": -143,
+      "d_total_holders": -126
+    },
+    {
+      "code": "2615",
+      "name": "萬海",
+      "etfs": [
+        "00984A",
+        "00940"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 182,
+        "big_shares": 2427602873,
+        "big_pct": 86.51,
+        "total_holders": 88292,
+        "total_shares": 2806146293
+      },
+      "prev": {
+        "big_holders": 185,
+        "big_shares": 2431353155,
+        "big_pct": 86.64,
+        "total_holders": 88940,
+        "total_shares": 2806146293
+      },
+      "d_pct": -0.13,
+      "d_holders": -3,
+      "d_lots": -3750,
+      "d_total_holders": -648
+    },
+    {
+      "code": "6121",
+      "name": "新  普",
+      "etfs": [
+        "00999A",
+        "00400A",
+        "00919",
+        "00929"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 29,
+        "big_shares": 89027354,
+        "big_pct": 48.13,
+        "total_holders": 19665,
+        "total_shares": 184970519
+      },
+      "prev": {
+        "big_holders": 29,
+        "big_shares": 89278317,
+        "big_pct": 48.26,
+        "total_holders": 19892,
+        "total_shares": 184970519
+      },
+      "d_pct": -0.13,
+      "d_holders": 0,
+      "d_lots": -251,
+      "d_total_holders": -227
+    },
+    {
+      "code": "2606",
+      "name": "裕民",
+      "etfs": [
+        "00993A",
+        "00713",
+        "00919",
+        "00939"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 72,
+        "big_shares": 630432751,
+        "big_pct": 74.6,
+        "total_holders": 44788,
+        "total_shares": 845055712
+      },
+      "prev": {
+        "big_holders": 73,
+        "big_shares": 631625537,
+        "big_pct": 74.74,
+        "total_holders": 45034,
+        "total_shares": 845055712
+      },
+      "d_pct": -0.14,
+      "d_holders": -1,
+      "d_lots": -1193,
+      "d_total_holders": -246
+    },
+    {
+      "code": "3017",
+      "name": "奇鋐",
+      "etfs": [
+        "00981A",
+        "00988A",
+        "00991A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "0050",
+        "00881",
+        "009816"
+      ],
+      "etf_count": 22,
+      "cur": {
+        "big_holders": 53,
+        "big_shares": 212515402,
+        "big_pct": 53.74,
+        "total_holders": 109079,
+        "total_shares": 395439207
+      },
+      "prev": {
+        "big_holders": 54,
+        "big_shares": 213098319,
+        "big_pct": 53.88,
+        "total_holders": 108458,
+        "total_shares": 395439207
+      },
+      "d_pct": -0.14,
+      "d_holders": -1,
+      "d_lots": -583,
+      "d_total_holders": 621
+    },
+    {
+      "code": "2915",
+      "name": "潤泰全",
+      "etfs": [
+        "00940"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 86,
+        "big_shares": 704781078,
+        "big_pct": 63.82,
+        "total_holders": 57351,
+        "total_shares": 1104318772
+      },
+      "prev": {
+        "big_holders": 87,
+        "big_shares": 706506774,
+        "big_pct": 63.97,
+        "total_holders": 57460,
+        "total_shares": 1104318772
+      },
+      "d_pct": -0.15,
+      "d_holders": -1,
+      "d_lots": -1726,
+      "d_total_holders": -109
+    },
+    {
+      "code": "6191",
+      "name": "精成科",
+      "etfs": [
+        "00981A",
+        "00929"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 24,
+        "big_shares": 274286558,
+        "big_pct": 51.81,
+        "total_holders": 91673,
+        "total_shares": 529392200
+      },
+      "prev": {
+        "big_holders": 25,
+        "big_shares": 275085281,
+        "big_pct": 51.96,
+        "total_holders": 91797,
+        "total_shares": 529392200
+      },
+      "d_pct": -0.15,
+      "d_holders": -1,
+      "d_lots": -799,
+      "d_total_holders": -124
+    },
+    {
+      "code": "1301",
+      "name": "台塑",
+      "etfs": [
+        "00985A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 310,
+        "big_shares": 4673731847,
+        "big_pct": 73.42,
+        "total_holders": 310079,
+        "total_shares": 6365740781
+      },
+      "prev": {
+        "big_holders": 306,
+        "big_shares": 4684484976,
+        "big_pct": 73.58,
+        "total_holders": 308293,
+        "total_shares": 6365740781
+      },
+      "d_pct": -0.16,
+      "d_holders": 4,
+      "d_lots": -10753,
+      "d_total_holders": 1786
+    },
+    {
+      "code": "1409",
+      "name": "新纖",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 118,
+        "big_shares": 953756008,
+        "big_pct": 58.93,
+        "total_holders": 151098,
+        "total_shares": 1618409286
+      },
+      "prev": {
+        "big_holders": 117,
+        "big_shares": 956370491,
+        "big_pct": 59.09,
+        "total_holders": 150927,
+        "total_shares": 1618409286
+      },
+      "d_pct": -0.16,
+      "d_holders": 1,
+      "d_lots": -2614,
+      "d_total_holders": 171
+    },
+    {
+      "code": "2903",
+      "name": "遠百",
+      "etfs": [
+        "00713"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 81,
+        "big_shares": 1082805498,
+        "big_pct": 76.41,
+        "total_holders": 58322,
+        "total_shares": 1416940589
+      },
+      "prev": {
+        "big_holders": 82,
+        "big_shares": 1085002176,
+        "big_pct": 76.57,
+        "total_holders": 58366,
+        "total_shares": 1416940589
+      },
+      "d_pct": -0.16,
+      "d_holders": -1,
+      "d_lots": -2197,
+      "d_total_holders": -44
+    },
+    {
+      "code": "3265",
+      "name": "台星科股份有限公司",
+      "etfs": [
+        "00982A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 11,
+        "big_shares": 89027227,
+        "big_pct": 65.33,
+        "total_holders": 14321,
+        "total_shares": 136261659
+      },
+      "prev": {
+        "big_holders": 10,
+        "big_shares": 89248921,
+        "big_pct": 65.49,
+        "total_holders": 14009,
+        "total_shares": 136261659
+      },
+      "d_pct": -0.16,
+      "d_holders": 1,
+      "d_lots": -222,
+      "d_total_holders": 312
+    },
+    {
+      "code": "4551",
+      "name": "智伸科",
+      "etfs": [
+        "00999A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 17,
+        "big_shares": 79403277,
+        "big_pct": 68.91,
+        "total_holders": 8157,
+        "total_shares": 115222498
+      },
+      "prev": {
+        "big_holders": 17,
+        "big_shares": 79585224,
+        "big_pct": 69.07,
+        "total_holders": 8204,
+        "total_shares": 115222498
+      },
+      "d_pct": -0.16,
+      "d_holders": 0,
+      "d_lots": -182,
+      "d_total_holders": -47
+    },
+    {
+      "code": "2850",
+      "name": "新產",
+      "etfs": [
+        "00713"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 43,
+        "big_shares": 182680388,
+        "big_pct": 57.81,
+        "total_holders": 17618,
+        "total_shares": 315963300
+      },
+      "prev": {
+        "big_holders": 44,
+        "big_shares": 183226256,
+        "big_pct": 57.98,
+        "total_holders": 17622,
+        "total_shares": 315963300
+      },
+      "d_pct": -0.17,
+      "d_holders": -1,
+      "d_lots": -546,
+      "d_total_holders": -4
+    },
+    {
+      "code": "8422",
+      "name": "可寧衛股",
+      "etfs": [
+        "00929"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 52,
+        "big_shares": 475813336,
+        "big_pct": 34.94,
+        "total_holders": 146819,
+        "total_shares": 1361500990
+      },
+      "prev": {
+        "big_holders": 54,
+        "big_shares": 477822880,
+        "big_pct": 35.11,
+        "total_holders": 147173,
+        "total_shares": 1360688906
+      },
+      "d_pct": -0.17,
+      "d_holders": -2,
+      "d_lots": -2010,
+      "d_total_holders": -354
+    },
+    {
+      "code": "6147",
+      "name": "頎邦",
+      "etfs": [
+        "00406A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00995A"
+      ],
+      "etf_count": 5,
+      "cur": {
+        "big_holders": 86,
+        "big_shares": 435063321,
+        "big_pct": 58.43,
+        "total_holders": 163658,
+        "total_shares": 744577539
+      },
+      "prev": {
+        "big_holders": 85,
+        "big_shares": 436397766,
+        "big_pct": 58.61,
+        "total_holders": 161514,
+        "total_shares": 744577539
+      },
+      "d_pct": -0.18,
+      "d_holders": 1,
+      "d_lots": -1334,
+      "d_total_holders": 2144
+    },
+    {
+      "code": "6177",
+      "name": "達麗",
+      "etfs": [
+        "00982A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 61,
+        "big_shares": 315265746,
+        "big_pct": 66.74,
+        "total_holders": 20133,
+        "total_shares": 472370728
+      },
+      "prev": {
+        "big_holders": 62,
+        "big_shares": 315824463,
+        "big_pct": 66.92,
+        "total_holders": 20036,
+        "total_shares": 471891426
+      },
+      "d_pct": -0.18,
+      "d_holders": -1,
+      "d_lots": -559,
+      "d_total_holders": 97
+    },
+    {
+      "code": "7769",
+      "name": "鴻勁精密",
+      "etfs": [
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "0050",
+        "009816"
+      ],
+      "etf_count": 12,
+      "cur": {
+        "big_holders": 16,
+        "big_shares": 102099538,
+        "big_pct": 56.74,
+        "total_holders": 73791,
+        "total_shares": 179930000
+      },
+      "prev": {
+        "big_holders": 16,
+        "big_shares": 102418242,
+        "big_pct": 56.92,
+        "total_holders": 74825,
+        "total_shares": 179930000
+      },
+      "d_pct": -0.18,
+      "d_holders": 0,
+      "d_lots": -319,
+      "d_total_holders": -1034
+    },
+    {
+      "code": "2393",
+      "name": "億光",
+      "etfs": [
+        "00940"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 70,
+        "big_shares": 265987189,
+        "big_pct": 59.98,
+        "total_holders": 50200,
+        "total_shares": 443393086
+      },
+      "prev": {
+        "big_holders": 70,
+        "big_shares": 266795281,
+        "big_pct": 60.17,
+        "total_holders": 50289,
+        "total_shares": 443393086
+      },
+      "d_pct": -0.19,
+      "d_holders": 0,
+      "d_lots": -808,
+      "d_total_holders": -89
+    },
+    {
+      "code": "6415",
+      "name": "矽力杰",
+      "etfs": [
+        "00992A",
+        "00405A",
+        "00995A",
+        "00996A"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 68,
+        "big_shares": 252421830,
+        "big_pct": 64.61,
+        "total_holders": 25453,
+        "total_shares": 390642739
+      },
+      "prev": {
+        "big_holders": 69,
+        "big_shares": 253005531,
+        "big_pct": 64.8,
+        "total_holders": 26417,
+        "total_shares": 390429039
+      },
+      "d_pct": -0.19,
+      "d_holders": -1,
+      "d_lots": -584,
+      "d_total_holders": -964
+    },
+    {
+      "code": "6548",
+      "name": "長華科技",
+      "etfs": [
+        "00929"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 54,
+        "big_shares": 811087598,
+        "big_pct": 85.33,
+        "total_holders": 31270,
+        "total_shares": 950464700
+      },
+      "prev": {
+        "big_holders": 55,
+        "big_shares": 812917362,
+        "big_pct": 85.52,
+        "total_holders": 31002,
+        "total_shares": 950464700
+      },
+      "d_pct": -0.19,
+      "d_holders": -1,
+      "d_lots": -1830,
+      "d_total_holders": 268
+    },
+    {
+      "code": "2376",
+      "name": "技嘉",
+      "etfs": [
+        "00992A",
+        "00980A",
+        "00985A",
+        "00982A",
+        "0056",
+        "00713",
+        "00878",
+        "00918",
+        "00929"
+      ],
+      "etf_count": 9,
+      "cur": {
+        "big_holders": 81,
+        "big_shares": 431082955,
+        "big_pct": 64.35,
+        "total_holders": 94944,
+        "total_shares": 669888886
+      },
+      "prev": {
+        "big_holders": 80,
+        "big_shares": 432459628,
+        "big_pct": 64.55,
+        "total_holders": 94239,
+        "total_shares": 669888886
+      },
+      "d_pct": -0.2,
+      "d_holders": 1,
+      "d_lots": -1377,
+      "d_total_holders": 705
+    },
+    {
+      "code": "2467",
+      "name": "志聖",
+      "etfs": [
+        "00982A",
+        "00996A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 29,
+        "big_shares": 92328972,
+        "big_pct": 57.04,
+        "total_holders": 49839,
+        "total_shares": 161859439
+      },
+      "prev": {
+        "big_holders": 29,
+        "big_shares": 92645498,
+        "big_pct": 57.24,
+        "total_holders": 49758,
+        "total_shares": 161850443
+      },
+      "d_pct": -0.2,
+      "d_holders": 0,
+      "d_lots": -317,
+      "d_total_holders": 81
+    },
+    {
+      "code": "2542",
+      "name": "興富發",
+      "etfs": [
+        "00408A",
+        "00918",
+        "00919"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 109,
+        "big_shares": 1327970821,
+        "big_pct": 61.67,
+        "total_holders": 109102,
+        "total_shares": 2153083539
+      },
+      "prev": {
+        "big_holders": 111,
+        "big_shares": 1332195149,
+        "big_pct": 61.87,
+        "total_holders": 109305,
+        "total_shares": 2153083539
+      },
+      "d_pct": -0.2,
+      "d_holders": -2,
+      "d_lots": -4224,
+      "d_total_holders": -203
+    },
+    {
+      "code": "3481",
+      "name": "群創",
+      "etfs": [
+        "009816"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 405,
+        "big_shares": 2558782172,
+        "big_pct": 32.02,
+        "total_holders": 988833,
+        "total_shares": 7989197337
+      },
+      "prev": {
+        "big_holders": 405,
+        "big_shares": 2574297422,
+        "big_pct": 32.22,
+        "total_holders": 988745,
+        "total_shares": 7989197337
+      },
+      "d_pct": -0.2,
+      "d_holders": 0,
+      "d_lots": -15515,
+      "d_total_holders": 88
+    },
+    {
+      "code": "3661",
+      "name": "世芯-KY",
+      "etfs": [
+        "00405A",
+        "00406A",
+        "00985A",
+        "00984A",
+        "00400A",
+        "00995A"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 6,
+        "big_shares": 7109630,
+        "big_pct": 8.23,
+        "total_holders": 103416,
+        "total_shares": 86366239
+      },
+      "prev": {
+        "big_holders": 6,
+        "big_shares": 7292040,
+        "big_pct": 8.44,
+        "total_holders": 102780,
+        "total_shares": 86364239
+      },
+      "d_pct": -0.21,
+      "d_holders": 0,
+      "d_lots": -182,
+      "d_total_holders": 636
+    },
+    {
+      "code": "6472",
+      "name": "保瑞",
+      "etfs": [
+        "00982A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 12,
+        "big_shares": 57904764,
+        "big_pct": 45.22,
+        "total_holders": 30603,
+        "total_shares": 128027622
+      },
+      "prev": {
+        "big_holders": 12,
+        "big_shares": 58168218,
+        "big_pct": 45.43,
+        "total_holders": 30465,
+        "total_shares": 128027622
+      },
+      "d_pct": -0.21,
+      "d_holders": 0,
+      "d_lots": -263,
+      "d_total_holders": 138
+    },
+    {
+      "code": "2206",
+      "name": "三陽工業",
+      "etfs": [
+        "00713"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 59,
+        "big_shares": 631597261,
+        "big_pct": 81.63,
+        "total_holders": 67031,
+        "total_shares": 773675604
+      },
+      "prev": {
+        "big_holders": 60,
+        "big_shares": 633271380,
+        "big_pct": 81.85,
+        "total_holders": 67131,
+        "total_shares": 773675604
+      },
+      "d_pct": -0.22,
+      "d_holders": -1,
+      "d_lots": -1674,
+      "d_total_holders": -100
+    },
+    {
+      "code": "3455",
+      "name": "由田",
+      "etfs": [
+        "00987A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 6,
+        "big_shares": 7166471,
+        "big_pct": 11.97,
+        "total_holders": 44580,
+        "total_shares": 59850750
+      },
+      "prev": {
+        "big_holders": 6,
+        "big_shares": 7314808,
+        "big_pct": 12.22,
+        "total_holders": 44795,
+        "total_shares": 59850750
+      },
+      "d_pct": -0.25,
+      "d_holders": 0,
+      "d_lots": -148,
+      "d_total_holders": -215
+    },
+    {
+      "code": "3702",
+      "name": "大聯大",
+      "etfs": [
+        "00999A",
+        "0056",
+        "00918",
+        "00929",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 197,
+        "big_shares": 1364294906,
+        "big_pct": 77.89,
+        "total_holders": 96758,
+        "total_shares": 1751374307
+      },
+      "prev": {
+        "big_holders": 202,
+        "big_shares": 1368547086,
+        "big_pct": 78.14,
+        "total_holders": 96454,
+        "total_shares": 1751374307
+      },
+      "d_pct": -0.25,
+      "d_holders": -5,
+      "d_lots": -4252,
+      "d_total_holders": 304
+    },
+    {
+      "code": "1303",
+      "name": "南亞",
+      "etfs": [
+        "00988A",
+        "00991A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00999A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "0050",
+        "0056",
+        "009816"
+      ],
+      "etf_count": 19,
+      "cur": {
+        "big_holders": 398,
+        "big_shares": 6628054758,
+        "big_pct": 83.57,
+        "total_holders": 318974,
+        "total_shares": 7930821589
+      },
+      "prev": {
+        "big_holders": 401,
+        "big_shares": 6648586062,
+        "big_pct": 83.83,
+        "total_holders": 310692,
+        "total_shares": 7930821589
+      },
+      "d_pct": -0.26,
+      "d_holders": -3,
+      "d_lots": -20531,
+      "d_total_holders": 8282
+    },
+    {
+      "code": "6414",
+      "name": "樺漢",
+      "etfs": [
+        "00940"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 21,
+        "big_shares": 73659702,
+        "big_pct": 46.87,
+        "total_holders": 20239,
+        "total_shares": 157147655
+      },
+      "prev": {
+        "big_holders": 22,
+        "big_shares": 74064743,
+        "big_pct": 47.13,
+        "total_holders": 20165,
+        "total_shares": 157147655
+      },
+      "d_pct": -0.26,
+      "d_holders": -1,
+      "d_lots": -405,
+      "d_total_holders": 74
+    },
+    {
+      "code": "3376",
+      "name": "新日興",
+      "etfs": [
+        "00981A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 19,
+        "big_shares": 54141053,
+        "big_pct": 27.65,
+        "total_holders": 56336,
+        "total_shares": 195780215
+      },
+      "prev": {
+        "big_holders": 19,
+        "big_shares": 54662873,
+        "big_pct": 27.92,
+        "total_holders": 55990,
+        "total_shares": 195780215
+      },
+      "d_pct": -0.27,
+      "d_holders": 0,
+      "d_lots": -522,
+      "d_total_holders": 346
+    },
+    {
+      "code": "3706",
+      "name": "神達投資控股",
+      "etfs": [
+        "00999A",
+        "00918",
+        "00929",
+        "00940"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 77,
+        "big_shares": 778401962,
+        "big_pct": 53.31,
+        "total_holders": 198528,
+        "total_shares": 1459933715
+      },
+      "prev": {
+        "big_holders": 81,
+        "big_shares": 782446261,
+        "big_pct": 53.59,
+        "total_holders": 198713,
+        "total_shares": 1459933715
+      },
+      "d_pct": -0.28,
+      "d_holders": -4,
+      "d_lots": -4044,
+      "d_total_holders": -185
+    },
+    {
+      "code": "6446",
+      "name": "藥華醫藥",
+      "etfs": [
+        "00405A",
+        "00406A",
+        "00985A",
+        "00982A",
+        "00984A",
+        "0050",
+        "009816"
+      ],
+      "etf_count": 7,
+      "cur": {
+        "big_holders": 60,
+        "big_shares": 178036662,
+        "big_pct": 42.14,
+        "total_holders": 74312,
+        "total_shares": 422442636
+      },
+      "prev": {
+        "big_holders": 61,
+        "big_shares": 179239629,
+        "big_pct": 42.42,
+        "total_holders": 75977,
+        "total_shares": 422442636
+      },
+      "d_pct": -0.28,
+      "d_holders": -1,
+      "d_lots": -1203,
+      "d_total_holders": -1665
+    },
+    {
+      "code": "8926",
+      "name": "台汽電",
+      "etfs": [
+        "00713"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 57,
+        "big_shares": 430146561,
+        "big_pct": 51.8,
+        "total_holders": 61241,
+        "total_shares": 830282000
+      },
+      "prev": {
+        "big_holders": 57,
+        "big_shares": 432443245,
+        "big_pct": 52.08,
+        "total_holders": 61512,
+        "total_shares": 830282000
+      },
+      "d_pct": -0.28,
+      "d_holders": 0,
+      "d_lots": -2297,
+      "d_total_holders": -271
+    },
+    {
+      "code": "2308",
+      "name": "台達電",
+      "etfs": [
+        "00981A",
+        "00988A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00995A",
+        "00996A",
+        "0050",
+        "00881",
+        "009816"
+      ],
+      "etf_count": 18,
+      "cur": {
+        "big_holders": 265,
+        "big_shares": 1889653158,
+        "big_pct": 72.74,
+        "total_holders": 683108,
+        "total_shares": 2597543329
+      },
+      "prev": {
+        "big_holders": 265,
+        "big_shares": 1897147663,
+        "big_pct": 73.03,
+        "total_holders": 664867,
+        "total_shares": 2597543329
+      },
+      "d_pct": -0.29,
+      "d_holders": 0,
+      "d_lots": -7495,
+      "d_total_holders": 18241
+    },
+    {
+      "code": "2454",
+      "name": "聯發科",
+      "etfs": [
+        "00981A",
+        "00988A",
+        "00991A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "0050",
+        "0056",
+        "00881",
+        "00878",
+        "00940",
+        "009816"
+      ],
+      "etf_count": 26,
+      "cur": {
+        "big_holders": 229,
+        "big_shares": 998387631,
+        "big_pct": 62.2,
+        "total_holders": 761193,
+        "total_shares": 1604952613
+      },
+      "prev": {
+        "big_holders": 234,
+        "big_shares": 1002994566,
+        "big_pct": 62.49,
+        "total_holders": 746462,
+        "total_shares": 1604952613
+      },
+      "d_pct": -0.29,
+      "d_holders": -5,
+      "d_lots": -4607,
+      "d_total_holders": 14731
+    },
+    {
+      "code": "3363",
+      "name": "上詮",
+      "etfs": [
+        "00406A",
+        "00987A",
+        "00996A"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 11,
+        "big_shares": 30942813,
+        "big_pct": 27.22,
+        "total_holders": 75941,
+        "total_shares": 113640567
+      },
+      "prev": {
+        "big_holders": 11,
+        "big_shares": 31281813,
+        "big_pct": 27.52,
+        "total_holders": 75569,
+        "total_shares": 113640567
+      },
+      "d_pct": -0.3,
+      "d_holders": 0,
+      "d_lots": -339,
+      "d_total_holders": 372
+    },
+    {
+      "code": "6176",
+      "name": "瑞儀",
+      "etfs": [
+        "00940"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 42,
+        "big_shares": 112384216,
+        "big_pct": 32.22,
+        "total_holders": 61063,
+        "total_shares": 348770447
+      },
+      "prev": {
+        "big_holders": 40,
+        "big_shares": 113478956,
+        "big_pct": 32.53,
+        "total_holders": 60983,
+        "total_shares": 348770447
+      },
+      "d_pct": -0.31,
+      "d_holders": 2,
+      "d_lots": -1095,
+      "d_total_holders": 80
+    },
+    {
+      "code": "1802",
+      "name": "台玻",
+      "etfs": [
+        "00996A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 95,
+        "big_shares": 2184754238,
+        "big_pct": 75.12,
+        "total_holders": 201479,
+        "total_shares": 2908060800
+      },
+      "prev": {
+        "big_holders": 94,
+        "big_shares": 2194209459,
+        "big_pct": 75.45,
+        "total_holders": 200967,
+        "total_shares": 2908060800
+      },
+      "d_pct": -0.33,
+      "d_holders": 1,
+      "d_lots": -9455,
+      "d_total_holders": 512
+    },
+    {
+      "code": "1476",
+      "name": "儒鴻",
+      "etfs": [
+        "00400A",
+        "00713",
+        "00918"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 46,
+        "big_shares": 195269683,
+        "big_pct": 71.17,
+        "total_holders": 21249,
+        "total_shares": 274367111
+      },
+      "prev": {
+        "big_holders": 46,
+        "big_shares": 196314848,
+        "big_pct": 71.55,
+        "total_holders": 21642,
+        "total_shares": 274367111
+      },
+      "d_pct": -0.38,
+      "d_holders": 0,
+      "d_lots": -1045,
+      "d_total_holders": -393
+    },
+    {
+      "code": "5347",
+      "name": "世界先進",
+      "etfs": [
+        "00991A",
+        "00992A",
+        "00405A",
+        "00401A",
+        "00878",
+        "00929"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 144,
+        "big_shares": 1517037408,
+        "big_pct": 80.75,
+        "total_holders": 116753,
+        "total_shares": 1878502192
+      },
+      "prev": {
+        "big_holders": 139,
+        "big_shares": 1524247346,
+        "big_pct": 81.14,
+        "total_holders": 114777,
+        "total_shares": 1878502192
+      },
+      "d_pct": -0.39,
+      "d_holders": 5,
+      "d_lots": -7210,
+      "d_total_holders": 1976
+    },
+    {
+      "code": "6138",
+      "name": "茂達電子",
+      "etfs": [
+        "00999A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 8,
+        "big_shares": 25388837,
+        "big_pct": 33.56,
+        "total_holders": 30817,
+        "total_shares": 75633500
+      },
+      "prev": {
+        "big_holders": 8,
+        "big_shares": 25688837,
+        "big_pct": 33.96,
+        "total_holders": 30948,
+        "total_shares": 75633500
+      },
+      "d_pct": -0.4,
+      "d_holders": 0,
+      "d_lots": -300,
+      "d_total_holders": -131
+    },
+    {
+      "code": "8996",
+      "name": "高力",
+      "etfs": [
+        "00981A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00982A",
+        "00993A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A"
+      ],
+      "etf_count": 14,
+      "cur": {
+        "big_holders": 14,
+        "big_shares": 25703478,
+        "big_pct": 27.45,
+        "total_holders": 38836,
+        "total_shares": 93627273
+      },
+      "prev": {
+        "big_holders": 15,
+        "big_shares": 26084478,
+        "big_pct": 27.85,
+        "total_holders": 37189,
+        "total_shares": 93627273
+      },
+      "d_pct": -0.4,
+      "d_holders": -1,
+      "d_lots": -381,
+      "d_total_holders": 1647
+    },
+    {
+      "code": "8210",
+      "name": "勤誠",
+      "etfs": [
+        "00981A",
+        "00980A",
+        "00996A"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 12,
+        "big_shares": 66700892,
+        "big_pct": 53.09,
+        "total_holders": 56177,
+        "total_shares": 125619146
+      },
+      "prev": {
+        "big_holders": 12,
+        "big_shares": 67219892,
+        "big_pct": 53.51,
+        "total_holders": 55848,
+        "total_shares": 125619146
+      },
+      "d_pct": -0.42,
+      "d_holders": 0,
+      "d_lots": -519,
+      "d_total_holders": 329
+    },
+    {
+      "code": "8299",
+      "name": "群聯電子",
+      "etfs": [
+        "00991A",
+        "00980A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 22,
+        "big_shares": 58413973,
+        "big_pct": 26.37,
+        "total_holders": 206493,
+        "total_shares": 221439247
+      },
+      "prev": {
+        "big_holders": 23,
+        "big_shares": 59326535,
+        "big_pct": 26.79,
+        "total_holders": 211833,
+        "total_shares": 221439247
+      },
+      "d_pct": -0.42,
+      "d_holders": -1,
+      "d_lots": -913,
+      "d_total_holders": -5340
+    },
+    {
+      "code": "2383",
+      "name": "台光電",
+      "etfs": [
+        "00981A",
+        "00988A",
+        "00991A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "0050",
+        "00881",
+        "009816"
+      ],
+      "etf_count": 23,
+      "cur": {
+        "big_holders": 61,
+        "big_shares": 196570943,
+        "big_pct": 54.85,
+        "total_holders": 154694,
+        "total_shares": 358321114
+      },
+      "prev": {
+        "big_holders": 62,
+        "big_shares": 198091737,
+        "big_pct": 55.28,
+        "total_holders": 152411,
+        "total_shares": 358321114
+      },
+      "d_pct": -0.43,
+      "d_holders": -1,
+      "d_lots": -1521,
+      "d_total_holders": 2283
+    },
+    {
+      "code": "3293",
+      "name": "鈊象電子",
+      "etfs": [
+        "00980A",
+        "00999A",
+        "00400A",
+        "00918",
+        "00919",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 7,
+      "cur": {
+        "big_holders": 44,
+        "big_shares": 141635267,
+        "big_pct": 50.26,
+        "total_holders": 91635,
+        "total_shares": 281801560
+      },
+      "prev": {
+        "big_holders": 45,
+        "big_shares": 142923839,
+        "big_pct": 50.71,
+        "total_holders": 93543,
+        "total_shares": 281801560
+      },
+      "d_pct": -0.45,
+      "d_holders": -1,
+      "d_lots": -1289,
+      "d_total_holders": -1908
+    },
+    {
+      "code": "6271",
+      "name": "同欣電",
+      "etfs": [
+        "00981A",
+        "00400A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 36,
+        "big_shares": 89137904,
+        "big_pct": 42.63,
+        "total_holders": 61239,
+        "total_shares": 209058024
+      },
+      "prev": {
+        "big_holders": 36,
+        "big_shares": 90068034,
+        "big_pct": 43.08,
+        "total_holders": 61040,
+        "total_shares": 209058024
+      },
+      "d_pct": -0.45,
+      "d_holders": 0,
+      "d_lots": -930,
+      "d_total_holders": 199
+    },
+    {
+      "code": "9939",
+      "name": "宏全國際",
+      "etfs": [
+        "00400A",
+        "00713"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 51,
+        "big_shares": 154828077,
+        "big_pct": 52.34,
+        "total_holders": 27570,
+        "total_shares": 295786475
+      },
+      "prev": {
+        "big_holders": 50,
+        "big_shares": 156149784,
+        "big_pct": 52.79,
+        "total_holders": 27510,
+        "total_shares": 295786475
+      },
+      "d_pct": -0.45,
+      "d_holders": 1,
+      "d_lots": -1322,
+      "d_total_holders": 60
+    },
+    {
+      "code": "2395",
+      "name": "研華",
+      "etfs": [
+        "00405A",
+        "00406A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00408A",
+        "0050",
+        "009816"
+      ],
+      "etf_count": 8,
+      "cur": {
+        "big_holders": 95,
+        "big_shares": 666738728,
+        "big_pct": 76.67,
+        "total_holders": 35544,
+        "total_shares": 869561905
+      },
+      "prev": {
+        "big_holders": 98,
+        "big_shares": 670726466,
+        "big_pct": 77.13,
+        "total_holders": 35699,
+        "total_shares": 869534565
+      },
+      "d_pct": -0.46,
+      "d_holders": -3,
+      "d_lots": -3988,
+      "d_total_holders": -155
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "etfs": [
+        "00981A",
+        "00988A",
+        "00991A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "0050",
+        "00881",
+        "009816"
+      ],
+      "etf_count": 23,
+      "cur": {
+        "big_holders": 201,
+        "big_shares": 1147942908,
+        "big_pct": 69.82,
+        "total_holders": 297015,
+        "total_shares": 1644044304
+      },
+      "prev": {
+        "big_holders": 201,
+        "big_shares": 1155508549,
+        "big_pct": 70.28,
+        "total_holders": 285034,
+        "total_shares": 1644002181
+      },
+      "d_pct": -0.46,
+      "d_holders": 0,
+      "d_lots": -7566,
+      "d_total_holders": 11981
+    },
+    {
+      "code": "5522",
+      "name": "遠雄",
+      "etfs": [
+        "00919"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 27,
+        "big_shares": 670776620,
+        "big_pct": 85.82,
+        "total_holders": 17982,
+        "total_shares": 781596241
+      },
+      "prev": {
+        "big_holders": 29,
+        "big_shares": 674544368,
+        "big_pct": 86.3,
+        "total_holders": 18001,
+        "total_shares": 781596241
+      },
+      "d_pct": -0.48,
+      "d_holders": -2,
+      "d_lots": -3768,
+      "d_total_holders": -19
+    },
+    {
+      "code": "6669",
+      "name": "緯穎",
+      "etfs": [
+        "00981A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00401A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "0050",
+        "00918",
+        "009816"
+      ],
+      "etf_count": 18,
+      "cur": {
+        "big_holders": 57,
+        "big_shares": 365860933,
+        "big_pct": 62.69,
+        "total_holders": 226041,
+        "total_shares": 583572346
+      },
+      "prev": {
+        "big_holders": 59,
+        "big_shares": 368601476,
+        "big_pct": 63.17,
+        "total_holders": 226347,
+        "total_shares": 583476323
+      },
+      "d_pct": -0.48,
+      "d_holders": -2,
+      "d_lots": -2741,
+      "d_total_holders": -306
+    },
+    {
+      "code": "2327",
+      "name": "國巨*",
+      "etfs": [
+        "00981A",
+        "00991A",
+        "00403A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00995A",
+        "00996A",
+        "0050",
+        "009816"
+      ],
+      "etf_count": 14,
+      "cur": {
+        "big_holders": 191,
+        "big_shares": 1243474444,
+        "big_pct": 60.3,
+        "total_holders": 645464,
+        "total_shares": 2062025316
+      },
+      "prev": {
+        "big_holders": 194,
+        "big_shares": 1251825724,
+        "big_pct": 60.8,
+        "total_holders": 638155,
+        "total_shares": 2058730688
+      },
+      "d_pct": -0.5,
+      "d_holders": -3,
+      "d_lots": -8351,
+      "d_total_holders": 7309
+    },
+    {
+      "code": "1513",
+      "name": "中興電",
+      "etfs": [
+        "0056",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 40,
+        "big_shares": 205482773,
+        "big_pct": 40.84,
+        "total_holders": 154354,
+        "total_shares": 503112515
+      },
+      "prev": {
+        "big_holders": 41,
+        "big_shares": 208059078,
+        "big_pct": 41.35,
+        "total_holders": 154082,
+        "total_shares": 503112515
+      },
+      "d_pct": -0.51,
+      "d_holders": -1,
+      "d_lots": -2576,
+      "d_total_holders": 272
+    },
+    {
+      "code": "4746",
+      "name": "台耀化學",
+      "etfs": [
+        "00999A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 18,
+        "big_shares": 36468990,
+        "big_pct": 30.32,
+        "total_holders": 44775,
+        "total_shares": 120255963
+      },
+      "prev": {
+        "big_holders": 18,
+        "big_shares": 37086835,
+        "big_pct": 30.83,
+        "total_holders": 44696,
+        "total_shares": 120255963
+      },
+      "d_pct": -0.51,
+      "d_holders": 0,
+      "d_lots": -618,
+      "d_total_holders": 79
+    },
+    {
+      "code": "2385",
+      "name": "群光",
+      "etfs": [
+        "0056",
+        "00713",
+        "00919",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 5,
+      "cur": {
+        "big_holders": 97,
+        "big_shares": 520544619,
+        "big_pct": 67.98,
+        "total_holders": 51530,
+        "total_shares": 765721188
+      },
+      "prev": {
+        "big_holders": 99,
+        "big_shares": 525037537,
+        "big_pct": 68.56,
+        "total_holders": 51416,
+        "total_shares": 765721188
+      },
+      "d_pct": -0.58,
+      "d_holders": -2,
+      "d_lots": -4493,
+      "d_total_holders": 114
+    },
+    {
+      "code": "2449",
+      "name": "京元電子",
+      "etfs": [
+        "00981A",
+        "00991A",
+        "00403A",
+        "00405A",
+        "00406A",
+        "00400A",
+        "00408A",
+        "00995A",
+        "00996A",
+        "0050",
+        "0056",
+        "00881"
+      ],
+      "etf_count": 12,
+      "cur": {
+        "big_holders": 148,
+        "big_shares": 680700614,
+        "big_pct": 53.01,
+        "total_holders": 296310,
+        "total_shares": 1283882318
+      },
+      "prev": {
+        "big_holders": 151,
+        "big_shares": 688510092,
+        "big_pct": 53.62,
+        "total_holders": 291856,
+        "total_shares": 1283882318
+      },
+      "d_pct": -0.61,
+      "d_holders": -3,
+      "d_lots": -7809,
+      "d_total_holders": 4454
+    },
+    {
+      "code": "6257",
+      "name": "矽格股份",
+      "etfs": [
+        "00929"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 68,
+        "big_shares": 202694843,
+        "big_pct": 41.88,
+        "total_holders": 117893,
+        "total_shares": 483912325
+      },
+      "prev": {
+        "big_holders": 69,
+        "big_shares": 205624963,
+        "big_pct": 42.49,
+        "total_holders": 116602,
+        "total_shares": 483912325
+      },
+      "d_pct": -0.61,
+      "d_holders": -1,
+      "d_lots": -2930,
+      "d_total_holders": 1291
+    },
+    {
+      "code": "5483",
+      "name": "中美晶",
+      "etfs": [
+        "00982A",
+        "00929"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 85,
+        "big_shares": 339663588,
+        "big_pct": 52.97,
+        "total_holders": 154320,
+        "total_shares": 641221651
+      },
+      "prev": {
+        "big_holders": 90,
+        "big_shares": 343690926,
+        "big_pct": 53.59,
+        "total_holders": 152636,
+        "total_shares": 641221651
+      },
+      "d_pct": -0.62,
+      "d_holders": -5,
+      "d_lots": -4027,
+      "d_total_holders": 1684
+    },
+    {
+      "code": "1717",
+      "name": "長興",
+      "etfs": [
+        "00403A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 113,
+        "big_shares": 708984743,
+        "big_pct": 59.86,
+        "total_holders": 99450,
+        "total_shares": 1184245483
+      },
+      "prev": {
+        "big_holders": 118,
+        "big_shares": 716464485,
+        "big_pct": 60.49,
+        "total_holders": 99009,
+        "total_shares": 1184245483
+      },
+      "d_pct": -0.63,
+      "d_holders": -5,
+      "d_lots": -7480,
+      "d_total_holders": 441
+    },
+    {
+      "code": "3167",
+      "name": "大量",
+      "etfs": [
+        "00406A",
+        "00400A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 19,
+        "big_shares": 41208158,
+        "big_pct": 45.06,
+        "total_holders": 28577,
+        "total_shares": 91436795
+      },
+      "prev": {
+        "big_holders": 19,
+        "big_shares": 41785116,
+        "big_pct": 45.69,
+        "total_holders": 27520,
+        "total_shares": 91436795
+      },
+      "d_pct": -0.63,
+      "d_holders": 0,
+      "d_lots": -577,
+      "d_total_holders": 1057
+    },
+    {
+      "code": "3529",
+      "name": "力旺電子",
+      "etfs": [
+        "00406A",
+        "00980A",
+        "00999A",
+        "00400A",
+        "00987A"
+      ],
+      "etf_count": 5,
+      "cur": {
+        "big_holders": 14,
+        "big_shares": 24309713,
+        "big_pct": 32.54,
+        "total_holders": 31152,
+        "total_shares": 74686492
+      },
+      "prev": {
+        "big_holders": 14,
+        "big_shares": 24775113,
+        "big_pct": 33.17,
+        "total_holders": 30900,
+        "total_shares": 74686492
+      },
+      "d_pct": -0.63,
+      "d_holders": 0,
+      "d_lots": -465,
+      "d_total_holders": 252
+    },
+    {
+      "code": "4966",
+      "name": "譜瑞-KY",
+      "etfs": [
+        "00929"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 9,
+        "big_shares": 16511640,
+        "big_pct": 20.91,
+        "total_holders": 31967,
+        "total_shares": 78957788
+      },
+      "prev": {
+        "big_holders": 9,
+        "big_shares": 17012065,
+        "big_pct": 21.54,
+        "total_holders": 31856,
+        "total_shares": 78957788
+      },
+      "d_pct": -0.63,
+      "d_holders": 0,
+      "d_lots": -500,
+      "d_total_holders": 111
+    },
+    {
+      "code": "8464",
+      "name": "億  豐",
+      "etfs": [
+        "00401A",
+        "00713",
+        "00918"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 46,
+        "big_shares": 226387885,
+        "big_pct": 77.26,
+        "total_holders": 3810,
+        "total_shares": 293020200
+      },
+      "prev": {
+        "big_holders": 49,
+        "big_shares": 228407695,
+        "big_pct": 77.94,
+        "total_holders": 3913,
+        "total_shares": 293020200
+      },
+      "d_pct": -0.68,
+      "d_holders": -3,
+      "d_lots": -2020,
+      "d_total_holders": -103
+    },
+    {
+      "code": "6139",
+      "name": "亞翔",
+      "etfs": [
+        "00992A",
+        "00982A",
+        "00929",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 5,
+      "cur": {
+        "big_holders": 25,
+        "big_shares": 117017898,
+        "big_pct": 49.67,
+        "total_holders": 66698,
+        "total_shares": 235575724
+      },
+      "prev": {
+        "big_holders": 27,
+        "big_shares": 118688906,
+        "big_pct": 50.38,
+        "total_holders": 66648,
+        "total_shares": 235575724
+      },
+      "d_pct": -0.71,
+      "d_holders": -2,
+      "d_lots": -1671,
+      "d_total_holders": 50
+    },
+    {
+      "code": "2441",
+      "name": "超豐",
+      "etfs": [
+        "00999A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 36,
+        "big_shares": 360998837,
+        "big_pct": 63.46,
+        "total_holders": 60037,
+        "total_shares": 568845921
+      },
+      "prev": {
+        "big_holders": 39,
+        "big_shares": 365134030,
+        "big_pct": 64.18,
+        "total_holders": 59933,
+        "total_shares": 568845921
+      },
+      "d_pct": -0.72,
+      "d_holders": -3,
+      "d_lots": -4135,
+      "d_total_holders": 104
+    },
+    {
+      "code": "6285",
+      "name": "啟碁",
+      "etfs": [
+        "00403A",
+        "00405A",
+        "00406A",
+        "00985A",
+        "00401A",
+        "0056"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 56,
+        "big_shares": 265405472,
+        "big_pct": 54.89,
+        "total_holders": 97406,
+        "total_shares": 483441359
+      },
+      "prev": {
+        "big_holders": 58,
+        "big_shares": 268895711,
+        "big_pct": 55.62,
+        "total_holders": 96619,
+        "total_shares": 483441359
+      },
+      "d_pct": -0.73,
+      "d_holders": -2,
+      "d_lots": -3490,
+      "d_total_holders": 787
+    },
+    {
+      "code": "3023",
+      "name": "信邦",
+      "etfs": [
+        "0056",
+        "00929",
+        "00940"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 48,
+        "big_shares": 135379712,
+        "big_pct": 56.39,
+        "total_holders": 53056,
+        "total_shares": 240069014
+      },
+      "prev": {
+        "big_holders": 49,
+        "big_shares": 137183501,
+        "big_pct": 57.14,
+        "total_holders": 51792,
+        "total_shares": 240069014
+      },
+      "d_pct": -0.75,
+      "d_holders": -1,
+      "d_lots": -1804,
+      "d_total_holders": 1264
+    },
+    {
+      "code": "5469",
+      "name": "瀚宇博德",
+      "etfs": [
+        "00929",
+        "00940"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 41,
+        "big_shares": 337708402,
+        "big_pct": 69.46,
+        "total_holders": 36006,
+        "total_shares": 486166000
+      },
+      "prev": {
+        "big_holders": 42,
+        "big_shares": 341473207,
+        "big_pct": 70.23,
+        "total_holders": 35076,
+        "total_shares": 486166000
+      },
+      "d_pct": -0.77,
+      "d_holders": -1,
+      "d_lots": -3765,
+      "d_total_holders": 930
+    },
+    {
+      "code": "3443",
+      "name": "創意",
+      "etfs": [
+        "00981A",
+        "00988A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "0050",
+        "009816"
+      ],
+      "etf_count": 18,
+      "cur": {
+        "big_holders": 12,
+        "big_shares": 69533360,
+        "big_pct": 51.88,
+        "total_holders": 58137,
+        "total_shares": 134011911
+      },
+      "prev": {
+        "big_holders": 13,
+        "big_shares": 70619292,
+        "big_pct": 52.69,
+        "total_holders": 56494,
+        "total_shares": 134011911
+      },
+      "d_pct": -0.81,
+      "d_holders": -1,
+      "d_lots": -1086,
+      "d_total_holders": 1643
+    },
+    {
+      "code": "8046",
+      "name": "南電",
+      "etfs": [
+        "00981A",
+        "00991A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00984A",
+        "00993A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "0050",
+        "00881",
+        "009816"
+      ],
+      "etf_count": 19,
+      "cur": {
+        "big_holders": 43,
+        "big_shares": 518723601,
+        "big_pct": 80.27,
+        "total_holders": 94318,
+        "total_shares": 646165487
+      },
+      "prev": {
+        "big_holders": 47,
+        "big_shares": 524320562,
+        "big_pct": 81.14,
+        "total_holders": 91842,
+        "total_shares": 646165487
+      },
+      "d_pct": -0.87,
+      "d_holders": -4,
+      "d_lots": -5597,
+      "d_total_holders": 2476
+    },
+    {
+      "code": "3042",
+      "name": "台灣晶技",
+      "etfs": [
+        "00993A",
+        "00996A",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 49,
+        "big_shares": 158730030,
+        "big_pct": 46.27,
+        "total_holders": 92706,
+        "total_shares": 342992971
+      },
+      "prev": {
+        "big_holders": 52,
+        "big_shares": 161729054,
+        "big_pct": 47.15,
+        "total_holders": 91913,
+        "total_shares": 342992971
+      },
+      "d_pct": -0.88,
+      "d_holders": -3,
+      "d_lots": -2999,
+      "d_total_holders": 793
+    },
+    {
+      "code": "3081",
+      "name": "聯亞光電",
+      "etfs": [
+        "00991A",
+        "00992A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00993A",
+        "00400A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00881"
+      ],
+      "etf_count": 13,
+      "cur": {
+        "big_holders": 11,
+        "big_shares": 28264353,
+        "big_pct": 27.74,
+        "total_holders": 91965,
+        "total_shares": 101869004
+      },
+      "prev": {
+        "big_holders": 12,
+        "big_shares": 29181206,
+        "big_pct": 28.64,
+        "total_holders": 91017,
+        "total_shares": 101869004
+      },
+      "d_pct": -0.9,
+      "d_holders": -1,
+      "d_lots": -917,
+      "d_total_holders": 948
+    },
+    {
+      "code": "4915",
+      "name": "致伸",
+      "etfs": [
+        "00713",
+        "00919",
+        "00929",
+        "00940"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 64,
+        "big_shares": 238611845,
+        "big_pct": 50.56,
+        "total_holders": 34426,
+        "total_shares": 471880824
+      },
+      "prev": {
+        "big_holders": 68,
+        "big_shares": 242855197,
+        "big_pct": 51.46,
+        "total_holders": 34146,
+        "total_shares": 471880824
+      },
+      "d_pct": -0.9,
+      "d_holders": -4,
+      "d_lots": -4243,
+      "d_total_holders": 280
+    },
+    {
+      "code": "6515",
+      "name": "穎崴",
+      "etfs": [
+        "00981A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00999A",
+        "00401A",
+        "00987A",
+        "00995A"
+      ],
+      "etf_count": 9,
+      "cur": {
+        "big_holders": 7,
+        "big_shares": 11347657,
+        "big_pct": 31.1,
+        "total_holders": 75484,
+        "total_shares": 36483573
+      },
+      "prev": {
+        "big_holders": 7,
+        "big_shares": 11679657,
+        "big_pct": 32.01,
+        "total_holders": 75335,
+        "total_shares": 36483573
+      },
+      "d_pct": -0.91,
+      "d_holders": 0,
+      "d_lots": -332,
+      "d_total_holders": 149
+    },
+    {
+      "code": "1560",
+      "name": "中砂",
+      "etfs": [
+        "00403A",
+        "00406A",
+        "00984A",
+        "00993A",
+        "00408A",
+        "00994A",
+        "00995A"
+      ],
+      "etf_count": 7,
+      "cur": {
+        "big_holders": 30,
+        "big_shares": 76154573,
+        "big_pct": 50.06,
+        "total_holders": 26294,
+        "total_shares": 152111482
+      },
+      "prev": {
+        "big_holders": 31,
+        "big_shares": 77637092,
+        "big_pct": 51.04,
+        "total_holders": 26135,
+        "total_shares": 152096363
+      },
+      "d_pct": -0.98,
+      "d_holders": -1,
+      "d_lots": -1483,
+      "d_total_holders": 159
+    },
+    {
+      "code": "4979",
+      "name": "華星光",
+      "etfs": [
+        "00981A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 11,
+        "big_shares": 32215042,
+        "big_pct": 22.49,
+        "total_holders": 91192,
+        "total_shares": 143207131
+      },
+      "prev": {
+        "big_holders": 12,
+        "big_shares": 33556900,
+        "big_pct": 23.47,
+        "total_holders": 90287,
+        "total_shares": 142945328
+      },
+      "d_pct": -0.98,
+      "d_holders": -1,
+      "d_lots": -1342,
+      "d_total_holders": 905
+    },
+    {
+      "code": "8021",
+      "name": "尖點",
+      "etfs": [
+        "00992A",
+        "00405A",
+        "00996A"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 22,
+        "big_shares": 53729294,
+        "big_pct": 36.43,
+        "total_holders": 86561,
+        "total_shares": 147466316
+      },
+      "prev": {
+        "big_holders": 21,
+        "big_shares": 55211855,
+        "big_pct": 37.44,
+        "total_holders": 83559,
+        "total_shares": 147465817
+      },
+      "d_pct": -1.01,
+      "d_holders": 1,
+      "d_lots": -1483,
+      "d_total_holders": 3002
+    },
+    {
+      "code": "2455",
+      "name": "全新",
+      "etfs": [
+        "00403A",
+        "00982A",
+        "00993A",
+        "00401A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A"
+      ],
+      "etf_count": 8,
+      "cur": {
+        "big_holders": 31,
+        "big_shares": 68179280,
+        "big_pct": 35.89,
+        "total_holders": 70935,
+        "total_shares": 189917340
+      },
+      "prev": {
+        "big_holders": 34,
+        "big_shares": 69992263,
+        "big_pct": 36.91,
+        "total_holders": 70736,
+        "total_shares": 189579085
+      },
+      "d_pct": -1.02,
+      "d_holders": -3,
+      "d_lots": -1813,
+      "d_total_holders": 199
+    },
+    {
+      "code": "2404",
+      "name": "漢唐",
+      "etfs": [
+        "00992A",
+        "00984A",
+        "00918",
+        "00929",
+        "00939",
+        "00940"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 29,
+        "big_shares": 78528662,
+        "big_pct": 41.2,
+        "total_holders": 65233,
+        "total_shares": 190586698
+      },
+      "prev": {
+        "big_holders": 31,
+        "big_shares": 80638395,
+        "big_pct": 42.31,
+        "total_holders": 65221,
+        "total_shares": 190586698
+      },
+      "d_pct": -1.11,
+      "d_holders": -2,
+      "d_lots": -2110,
+      "d_total_holders": 12
+    },
+    {
+      "code": "3533",
+      "name": "嘉澤端子工業",
+      "etfs": [
+        "00400A",
+        "00996A"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 17,
+        "big_shares": 50951731,
+        "big_pct": 45.27,
+        "total_holders": 31266,
+        "total_shares": 112534691
+      },
+      "prev": {
+        "big_holders": 18,
+        "big_shares": 52211731,
+        "big_pct": 46.39,
+        "total_holders": 33459,
+        "total_shares": 112534691
+      },
+      "d_pct": -1.12,
+      "d_holders": -1,
+      "d_lots": -1260,
+      "d_total_holders": -2193
+    },
+    {
+      "code": "6488",
+      "name": "環球晶",
+      "etfs": [
+        "00403A",
+        "00406A",
+        "00985A",
+        "00982A",
+        "00400A",
+        "00994A"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 49,
+        "big_shares": 352086267,
+        "big_pct": 66.66,
+        "total_holders": 167924,
+        "total_shares": 528113725
+      },
+      "prev": {
+        "big_holders": 50,
+        "big_shares": 357968782,
+        "big_pct": 67.78,
+        "total_holders": 160809,
+        "total_shares": 528113725
+      },
+      "d_pct": -1.12,
+      "d_holders": -1,
+      "d_lots": -5883,
+      "d_total_holders": 7115
+    },
+    {
+      "code": "6278",
+      "name": "台表科",
+      "etfs": [
+        "00405A",
+        "00406A",
+        "00400A",
+        "00996A",
+        "00929",
+        "00940"
+      ],
+      "etf_count": 6,
+      "cur": {
+        "big_holders": 55,
+        "big_shares": 185626536,
+        "big_pct": 63.48,
+        "total_holders": 33250,
+        "total_shares": 292398353
+      },
+      "prev": {
+        "big_holders": 55,
+        "big_shares": 189394969,
+        "big_pct": 64.77,
+        "total_holders": 30580,
+        "total_shares": 292398353
+      },
+      "d_pct": -1.29,
+      "d_holders": 0,
+      "d_lots": -3768,
+      "d_total_holders": 2670
+    },
+    {
+      "code": "3189",
+      "name": "景碩科技",
+      "etfs": [
+        "00991A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00984A",
+        "00993A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "00881"
+      ],
+      "etf_count": 14,
+      "cur": {
+        "big_holders": 58,
+        "big_shares": 361324380,
+        "big_pct": 68.57,
+        "total_holders": 121923,
+        "total_shares": 526910360
+      },
+      "prev": {
+        "big_holders": 60,
+        "big_shares": 368184511,
+        "big_pct": 69.87,
+        "total_holders": 115442,
+        "total_shares": 526910360
+      },
+      "d_pct": -1.3,
+      "d_holders": -2,
+      "d_lots": -6860,
+      "d_total_holders": 6481
+    },
+    {
+      "code": "8358",
+      "name": "金居",
+      "etfs": [
+        "00981A",
+        "00406A",
+        "00987A",
+        "00995A"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 25,
+        "big_shares": 64162969,
+        "big_pct": 25.4,
+        "total_holders": 173811,
+        "total_shares": 252588000
+      },
+      "prev": {
+        "big_holders": 25,
+        "big_shares": 67463029,
+        "big_pct": 26.7,
+        "total_holders": 171428,
+        "total_shares": 252588000
+      },
+      "d_pct": -1.3,
+      "d_holders": 0,
+      "d_lots": -3300,
+      "d_total_holders": 2383
+    },
+    {
+      "code": "5536",
+      "name": "聖暉*",
+      "etfs": [
+        "00982A",
+        "00929"
+      ],
+      "etf_count": 2,
+      "cur": {
+        "big_holders": 18,
+        "big_shares": 43303295,
+        "big_pct": 34.89,
+        "total_holders": 37599,
+        "total_shares": 124080930
+      },
+      "prev": {
+        "big_holders": 19,
+        "big_shares": 44976902,
+        "big_pct": 36.24,
+        "total_holders": 37431,
+        "total_shares": 124080930
+      },
+      "d_pct": -1.35,
+      "d_holders": -1,
+      "d_lots": -1674,
+      "d_total_holders": 168
+    },
+    {
+      "code": "8150",
+      "name": "南茂科技",
+      "etfs": [
+        "00992A",
+        "00405A",
+        "00406A",
+        "00995A"
+      ],
+      "etf_count": 4,
+      "cur": {
+        "big_holders": 66,
+        "big_shares": 416033914,
+        "big_pct": 59.05,
+        "total_holders": 137770,
+        "total_shares": 704523126
+      },
+      "prev": {
+        "big_holders": 69,
+        "big_shares": 426234882,
+        "big_pct": 60.49,
+        "total_holders": 134378,
+        "total_shares": 704523126
+      },
+      "d_pct": -1.44,
+      "d_holders": -3,
+      "d_lots": -10201,
+      "d_total_holders": 3392
+    },
+    {
+      "code": "2351",
+      "name": "順德",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 45,
+        "big_shares": 126420728,
+        "big_pct": 63.98,
+        "total_holders": 22580,
+        "total_shares": 197589482
+      },
+      "prev": {
+        "big_holders": 47,
+        "big_shares": 129151375,
+        "big_pct": 65.43,
+        "total_holders": 22619,
+        "total_shares": 197361714
+      },
+      "d_pct": -1.45,
+      "d_holders": -2,
+      "d_lots": -2731,
+      "d_total_holders": -39
+    },
+    {
+      "code": "4958",
+      "name": "臻鼎-KY",
+      "etfs": [
+        "00992A",
+        "00406A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00987A",
+        "00995A",
+        "00996A",
+        "0050",
+        "00881",
+        "00878",
+        "009816"
+      ],
+      "etf_count": 14,
+      "cur": {
+        "big_holders": 114,
+        "big_shares": 754583551,
+        "big_pct": 66.45,
+        "total_holders": 211441,
+        "total_shares": 1135510067
+      },
+      "prev": {
+        "big_holders": 117,
+        "big_shares": 771119143,
+        "big_pct": 67.9,
+        "total_holders": 201647,
+        "total_shares": 1135510067
+      },
+      "d_pct": -1.45,
+      "d_holders": -3,
+      "d_lots": -16536,
+      "d_total_holders": 9794
+    },
+    {
+      "code": "2313",
+      "name": "華通",
+      "etfs": [
+        "00981A",
+        "00991A",
+        "00403A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00881"
+      ],
+      "etf_count": 8,
+      "cur": {
+        "big_holders": 115,
+        "big_shares": 669848811,
+        "big_pct": 54.29,
+        "total_holders": 284779,
+        "total_shares": 1233820589
+      },
+      "prev": {
+        "big_holders": 123,
+        "big_shares": 688201864,
+        "big_pct": 55.77,
+        "total_holders": 278388,
+        "total_shares": 1233820589
+      },
+      "d_pct": -1.48,
+      "d_holders": -8,
+      "d_lots": -18353,
+      "d_total_holders": 6391
+    },
+    {
+      "code": "5425",
+      "name": "台半",
+      "etfs": [
+        "00982A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 17,
+        "big_shares": 73295040,
+        "big_pct": 27.81,
+        "total_holders": 105778,
+        "total_shares": 263485486
+      },
+      "prev": {
+        "big_holders": 20,
+        "big_shares": 77202413,
+        "big_pct": 29.3,
+        "total_holders": 105745,
+        "total_shares": 263485486
+      },
+      "d_pct": -1.49,
+      "d_holders": -3,
+      "d_lots": -3907,
+      "d_total_holders": 33
+    },
+    {
+      "code": "3665",
+      "name": "貿聯-KY",
+      "etfs": [
+        "00981A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00987A",
+        "00408A",
+        "00995A",
+        "00996A",
+        "0050",
+        "00881",
+        "009816"
+      ],
+      "etf_count": 18,
+      "cur": {
+        "big_holders": 33,
+        "big_shares": 82822991,
+        "big_pct": 41.49,
+        "total_holders": 64022,
+        "total_shares": 199578405
+      },
+      "prev": {
+        "big_holders": 34,
+        "big_shares": 86037211,
+        "big_pct": 43.1,
+        "total_holders": 60924,
+        "total_shares": 199578405
+      },
+      "d_pct": -1.61,
+      "d_holders": -1,
+      "d_lots": -3214,
+      "d_total_holders": 3098
+    },
+    {
+      "code": "6213",
+      "name": "聯茂",
+      "etfs": [
+        "00992A",
+        "00406A",
+        "00980A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00995A",
+        "00996A"
+      ],
+      "etf_count": 8,
+      "cur": {
+        "big_holders": 37,
+        "big_shares": 208507163,
+        "big_pct": 57.34,
+        "total_holders": 82417,
+        "total_shares": 363617218
+      },
+      "prev": {
+        "big_holders": 38,
+        "big_shares": 214502793,
+        "big_pct": 58.99,
+        "total_holders": 73696,
+        "total_shares": 363617218
+      },
+      "d_pct": -1.65,
+      "d_holders": -1,
+      "d_lots": -5996,
+      "d_total_holders": 8721
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "etfs": [
+        "00981A",
+        "00991A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00401A",
+        "00408A",
+        "00995A",
+        "00996A",
+        "0050",
+        "0056",
+        "00713",
+        "00881",
+        "00878",
+        "00929",
+        "00940",
+        "009816"
+      ],
+      "etf_count": 22,
+      "cur": {
+        "big_holders": 663,
+        "big_shares": 8457932175,
+        "big_pct": 67.28,
+        "total_holders": 1154920,
+        "total_shares": 12570093899
+      },
+      "prev": {
+        "big_holders": 668,
+        "big_shares": 8677039363,
+        "big_pct": 69.02,
+        "total_holders": 1094162,
+        "total_shares": 12570093899
+      },
+      "d_pct": -1.74,
+      "d_holders": -5,
+      "d_lots": -219107,
+      "d_total_holders": 60758
+    },
+    {
+      "code": "6274",
+      "name": "台燿",
+      "etfs": [
+        "00981A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00999A",
+        "00982A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "00881"
+      ],
+      "etf_count": 17,
+      "cur": {
+        "big_holders": 48,
+        "big_shares": 153513156,
+        "big_pct": 51.25,
+        "total_holders": 137113,
+        "total_shares": 299509343
+      },
+      "prev": {
+        "big_holders": 53,
+        "big_shares": 158890317,
+        "big_pct": 53.05,
+        "total_holders": 131190,
+        "total_shares": 299507843
+      },
+      "d_pct": -1.8,
+      "d_holders": -5,
+      "d_lots": -5377,
+      "d_total_holders": 5923
+    },
+    {
+      "code": "3450",
+      "name": "聯鈞",
+      "etfs": [
+        "00403A",
+        "00405A",
+        "00406A",
+        "00984A",
+        "00995A"
+      ],
+      "etf_count": 5,
+      "cur": {
+        "big_holders": 11,
+        "big_shares": 29223670,
+        "big_pct": 20.05,
+        "total_holders": 90197,
+        "total_shares": 145681382
+      },
+      "prev": {
+        "big_holders": 13,
+        "big_shares": 31885612,
+        "big_pct": 21.88,
+        "total_holders": 90161,
+        "total_shares": 145681382
+      },
+      "d_pct": -1.83,
+      "d_holders": -2,
+      "d_lots": -2662,
+      "d_total_holders": 36
+    },
+    {
+      "code": "2409",
+      "name": "友達",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 348,
+        "big_shares": 3226769221,
+        "big_pct": 42.75,
+        "total_holders": 697282,
+        "total_shares": 7547098972
+      },
+      "prev": {
+        "big_holders": 355,
+        "big_shares": 3365259031,
+        "big_pct": 44.59,
+        "total_holders": 680099,
+        "total_shares": 7547098972
+      },
+      "d_pct": -1.84,
+      "d_holders": -7,
+      "d_lots": -138490,
+      "d_total_holders": 17183
+    },
+    {
+      "code": "6672",
+      "name": "騰輝電子-KY",
+      "etfs": [
+        "00982A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 13,
+        "big_shares": 25103587,
+        "big_pct": 30.49,
+        "total_holders": 55855,
+        "total_shares": 82311633
+      },
+      "prev": {
+        "big_holders": 14,
+        "big_shares": 26870995,
+        "big_pct": 32.64,
+        "total_holders": 52852,
+        "total_shares": 82311633
+      },
+      "d_pct": -2.15,
+      "d_holders": -1,
+      "d_lots": -1767,
+      "d_total_holders": 3003
+    },
+    {
+      "code": "1815",
+      "name": "富喬工業",
+      "etfs": [
+        "00992A",
+        "00406A",
+        "00987A"
+      ],
+      "etf_count": 3,
+      "cur": {
+        "big_holders": 65,
+        "big_shares": 318110386,
+        "big_pct": 51.75,
+        "total_holders": 161507,
+        "total_shares": 614703462
+      },
+      "prev": {
+        "big_holders": 68,
+        "big_shares": 333735487,
+        "big_pct": 54.29,
+        "total_holders": 155385,
+        "total_shares": 614703462
+      },
+      "d_pct": -2.54,
+      "d_holders": -3,
+      "d_lots": -15625,
+      "d_total_holders": 6122
+    },
+    {
+      "code": "3653",
+      "name": "健策",
+      "etfs": [
+        "00981A",
+        "00991A",
+        "00403A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00985A",
+        "00999A",
+        "00984A",
+        "00993A",
+        "00400A",
+        "00987A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00996A",
+        "0050",
+        "009816"
+      ],
+      "etf_count": 19,
+      "cur": {
+        "big_holders": 24,
+        "big_shares": 89543713,
+        "big_pct": 60.82,
+        "total_holders": 36439,
+        "total_shares": 147203878
+      },
+      "prev": {
+        "big_holders": 26,
+        "big_shares": 93629684,
+        "big_pct": 63.6,
+        "total_holders": 35563,
+        "total_shares": 147203878
+      },
+      "d_pct": -2.78,
+      "d_holders": -2,
+      "d_lots": -4086,
+      "d_total_holders": 876
+    },
+    {
+      "code": "3264",
+      "name": "欣銓",
+      "etfs": [
+        "00981A",
+        "00992A",
+        "00405A",
+        "00406A",
+        "00980A",
+        "00984A",
+        "00408A",
+        "00994A",
+        "00995A",
+        "00929"
+      ],
+      "etf_count": 10,
+      "cur": {
+        "big_holders": 62,
+        "big_shares": 265136688,
+        "big_pct": 54.09,
+        "total_holders": 102221,
+        "total_shares": 490170076
+      },
+      "prev": {
+        "big_holders": 62,
+        "big_shares": 282857496,
+        "big_pct": 57.7,
+        "total_holders": 92269,
+        "total_shares": 490170076
+      },
+      "d_pct": -3.61,
+      "d_holders": 0,
+      "d_lots": -17721,
+      "d_total_holders": 9952
+    }
+  ]
+}

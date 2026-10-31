@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% from "_kd_macros.html" import kd_card, kd_table, kd_note %}
 {% from "_margin_macros.html" import margin_card, margin_table, margin_note %}
+{% from "_chips_macros.html" import chips_card, chips_table, chips_note %}
 {% block title %}台灣主動式 ETF 持股異動日報{% endblock %}
 {% block heading %}台灣主動式 ETF 持股異動日報{% endblock %}
 {% block subtitle %}
@@ -17,6 +18,9 @@
       <div class="toc-sub"><ol><li><a href="taiex-kd.html">KD 走勢圖／完整歷史</a></li></ol></div>
     </li>{% endif %}
     {% if mg %}<li><a href="#part_margin">💰 大盤融資維持率</a></li>{% endif %}
+    {% if cv %}<li><a href="#part_chips">🐳 千張大戶籌碼（週）</a>
+      <div class="toc-sub"><ol><li><a href="chips.html">全部成分股明細</a></li></ol></div>
+    </li>{% endif %}
     <li><a href="#part1">第一部分：整體 ETF 新增／剔除</a>
       <div class="toc-sub"><ol>
         <li><a href="#part1_add">🆕 整體 ETF 新增標的</a></li>
@@ -71,6 +75,18 @@
   <h3 class="section-title">近 {{ mg.recent|length }} 個交易日</h3>
   {{ margin_table(mg.recent) }}
   {{ margin_note(mg) }}
+</section>
+{% endif %}
+
+{% if cv %}
+<section>
+  <h2 class="banner" id="part_chips">🐳 ETF 成分股 千張大戶籌碼（對照上週）</h2>
+  {{ chips_card(cv) }}
+  <h3 class="section-title inc">📈 大戶明顯增加（前 10，共 {{ cv.inc_rows|length }} 檔）</h3>
+  {% if cv.inc_rows %}{{ chips_table(cv.inc_rows[:10]) }}{% else %}<div class="empty-box">本週無。</div>{% endif %}
+  <h3 class="section-title dec">📉 大戶明顯減少（前 10，共 {{ cv.dec_rows|length }} 檔）</h3>
+  {% if cv.dec_rows %}{{ chips_table(cv.dec_rows[:10]) }}{% else %}<div class="empty-box">本週無。</div>{% endif %}
+  {{ chips_note(cv) }}
 </section>
 {% endif %}
 

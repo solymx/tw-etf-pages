@@ -254,6 +254,12 @@ def run_live(cfg: AppConfig | None = None, *, allow_fallback: bool = True) -> Pa
         update_margin(cfg.root)
     except Exception:  # noqa: BLE001 — margin ratio must never fail the run
         logger.exception("Margin ratio update failed")
+    try:
+        from .chips import update_chips
+
+        update_chips(cfg)
+    except Exception:  # noqa: BLE001 — chips must never fail the run
+        logger.exception("Chips (TDCC) update failed")
     site = render_site(cfg)
     from .utils import now_taipei_iso
 
@@ -268,3 +274,15 @@ def run_live(cfg: AppConfig | None = None, *, allow_fallback: bool = True) -> Pa
     if errors:
         logger.error("Completed with errors: %s", errors)
     return site
+
+
+def run_chips(cfg: AppConfig | None = None) -> Path:
+    """Weekly path (e.g. Saturday): refresh TDCC 大戶籌碼 only, then re-render."""
+    cfg = cfg or load_config()
+    try:
+        from .chips import update_chips
+
+        update_chips(cfg)
+    except Exception:  # noqa: BLE001
+        logger.exception("Chips (TDCC) update failed")
+    return render_site(cfg)

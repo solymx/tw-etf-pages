@@ -15,6 +15,7 @@ from .config import AppConfig
 from .trend import build_holdings_trend
 from .taiex_kd import build_kd_view
 from .margin_ratio import build_margin_view
+from .chips import build_chips_view
 from .utils import now_taipei_iso, read_json, write_json
 
 logger = logging.getLogger(__name__)
@@ -564,7 +565,23 @@ def render_site(cfg: AppConfig) -> Path:
         )
         logger.info("Wrote %s", site / "taiex-kd.html")
 
+    cv = None
+    try:
+        cv = build_chips_view(cfg.root)
+        if cv:
+            (site / "chips.html").write_text(
+                env.get_template("chips.html").render(
+                    cv=cv, generated_at=generated_at, assets_prefix="assets"
+                ),
+                encoding="utf-8",
+            )
+            logger.info("Wrote %s", site / "chips.html")
+    except Exception:  # noqa: BLE001 — never break the site for chips
+        logger.exception("Chips view failed")
+        cv = None
+
     index_html = env.get_template("index.html").render(
+        cv=cv,
         kd=kd,
         mg=mg,
         etfs=index_rows,

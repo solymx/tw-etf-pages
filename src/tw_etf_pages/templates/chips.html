@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% from "_chips_macros.html" import chips_card, chips_table, chips_note %}
+{% block title %}ETF 成分股 千張大戶籌碼週變化{% endblock %}
+{% block body %}
+<div class="layout single">
+  <div class="main">
+    <header class="page-header">
+      <h1>ETF 成分股 千張大戶籌碼週變化</h1>
+      <p class="muted">本站所有追蹤 ETF 的台股持股去重，對照上一週 TDCC 千張大戶持股比例。</p>
+      <nav class="nav-inline"><a href="index.html">← 回 ETF 持股異動日報</a><a href="#chips_inc">明顯增加</a><a href="#chips_dec">明顯減少</a><a href="#chips_all">全部明細</a></nav>
+    </header>
+    {{ chips_card(cv, link_more=False) }}
+    <section>
+      <h3 class="section-title inc" id="chips_inc">📈 大戶明顯增加（{{ cv.inc_rows|length }}）</h3>
+      {% if cv.inc_rows %}{{ chips_table(cv.inc_rows) }}{% else %}<div class="empty-box">本週無。</div>{% endif %}
+      <h3 class="section-title dec" id="chips_dec">📉 大戶明顯減少（{{ cv.dec_rows|length }}）</h3>
+      {% if cv.dec_rows %}{{ chips_table(cv.dec_rows) }}{% else %}<div class="empty-box">本週無。</div>{% endif %}
+      <h3 class="section-title" id="chips_all">全部 {{ cv.rows|length }} 檔（依週變化排序）</h3>
+      {{ chips_table(cv.rows) }}
+    </section>
+    {{ chips_note(cv) }}
+    <footer class="site-footer">
+      <p>時區：Asia/Taipei。最後產生時間：{{ generated_at }}。</p>
+    </footer>
+  </div>
+</div>
+{% endblock %}

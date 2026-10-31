@@ -24,8 +24,8 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "command",
-        choices=["dry-run", "run", "render"],
-        help="dry-run: 使用 samples/ 離線產生；run: 線上下載；render: 僅重繪 HTML",
+        choices=["dry-run", "run", "render", "chips"],
+        help="dry-run: 使用 samples/ 離線產生；run: 線上下載；render: 僅重繪 HTML；chips: 僅更新千張大戶籌碼並重繪",
     )
     parser.add_argument(
         "--root",
@@ -49,7 +49,7 @@ def main(argv: list[str] | None = None) -> int:
         sys.path.insert(0, str(src))
 
     from tw_etf_pages.config import load_config
-    from tw_etf_pages.pipeline import dry_run, run_live
+    from tw_etf_pages.pipeline import dry_run, run_chips, run_live
     from tw_etf_pages.render import render_site
 
     cfg = load_config(args.root)
@@ -60,6 +60,10 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "run":
         site = run_live(cfg, allow_fallback=not args.no_fallback)
         print(f"Run OK → {site}")
+        return 0
+    if args.command == "chips":
+        site = run_chips(cfg)
+        print(f"Chips OK → {site}")
         return 0
     if args.command == "render":
         site = render_site(cfg)
