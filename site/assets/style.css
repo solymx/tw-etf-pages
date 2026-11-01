@@ -509,3 +509,23 @@ table.report tr.mg-row-up { background: #fff5f5; }
 @keyframes mg-blink { 50% { opacity: 0.25; } }
 .mg-dist.warn { color: #c2410c; font-weight: 700; }
 .mg-dist.danger, .mg-dist.breach { color: #b91c1c; font-weight: 800; }
+
+/* TAIWAN VIX */
+.vix-card { border-left-color: #7c3aed; }
+.vix-card.high { border-left-color: #dc2626; box-shadow: 0 0 0 2px rgba(220,38,38,.25), 0 0 22px rgba(239,68,68,.35); }
+.vix-card.elevated { border-left-color: #f97316; }
+.vix-card.low { border-left-color: #2563eb; }
+.vix-big { display: flex; flex-direction: column; align-items: center; padding: 0.5rem 1.1rem; border-radius: 12px; background: #ede9fe; color: #5b21b6; min-width: 11rem; text-align: center; }
+.vix-big strong { font-size: 1.9rem; line-height: 1.15; }
+.vix-big span { font-size: 0.9rem; font-weight: 700; }
+.vix-big.high { background: #dc2626; color: #fff; animation: kd-glow-r 1.6s ease-in-out infinite; }
+.vix-big.elevated { background: #f97316; color: #fff; }
+.vix-big.low { background: #2563eb; color: #fff; }
+.vix-lvl { display: inline-block; font-size: 0.8rem; font-weight: 700; padding: 0.05rem 0.55rem; border-radius: 999px; color: #fff; background: #94a3b8; }
+.vix-lvl.high { background: #dc2626; }
+.vix-lvl.elevated { background: #f97316; }
+.vix-lvl.low { background: #2563eb; }
+table.report tr.vix-row-high { background: #fff1f2; }
+table.report tr.vix-row-elevated { background: #fff7ed; }
+table.report tr.vix-row-low { background: #eff6ff; }
+.vix-chart svg { width: 100%; height: auto; display: block; }

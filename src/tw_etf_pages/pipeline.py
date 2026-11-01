@@ -255,6 +255,12 @@ def run_live(cfg: AppConfig | None = None, *, allow_fallback: bool = True) -> Pa
     except Exception:  # noqa: BLE001 — margin ratio must never fail the run
         logger.exception("Margin ratio update failed")
     try:
+        from .taiwan_vix import update_vix
+
+        update_vix(cfg.root)
+    except Exception:  # noqa: BLE001 — VIX must never fail the run
+        logger.exception("TAIWAN VIX update failed")
+    try:
         from .chips import update_chips
 
         update_chips(cfg)

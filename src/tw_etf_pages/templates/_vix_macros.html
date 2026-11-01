@@ -1,0 +1,67 @@
+{% macro vchg(v, fmt="%+.2f", unit="") -%}
+{%- if v is none -%}<span class="muted">—</span>
+{%- elif v > 0 -%}<span class="mg-up">▲ {{ fmt|format(v) }}{{ unit }}</span>
+{%- elif v < 0 -%}<span class="mg-down">▼ {{ fmt|format(v) }}{{ unit }}</span>
+{%- else -%}<span class="muted">0.00</span>{%- endif -%}
+{%- endmacro %}
+
+{% macro lamp(r) -%}
+<span class="vix-lvl {{ r.level }}">{{ r.level_label }}</span>
+{%- endmacro %}
+
+{% macro vix_card(vx, link_more=True) %}
+{% set L = vx.latest %}
+<div class="mg-card vix-card {{ L.level }}">
+  <div class="kd-card-head">
+    <div>
+      <div class="kd-title">臺指選擇權波動率指數（TAIWAN VIX，台版恐慌指數）</div>
+      <div class="muted">資料日 <strong>{{ L.date }}</strong>／13:45 收盤值（收盤前 1 分鐘平均 {{ "%.2f"|format(L.close_1m_avg) if L.close_1m_avg is not none else "—" }}）</div>
+    </div>
+    <div class="vix-big {{ L.level }}">
+      <strong>{{ "%.2f"|format(L.close) }}</strong>
+      <span>{% if L.change is none %}—{% elif L.change > 0 %}▲ 上升 {{ "%.2f"|format(L.change) }}（{{ "%+.1f"|format(L.change_pct) }}%）{% elif L.change < 0 %}▼ 下降 {{ "%.2f"|format(-L.change) }}（{{ "%+.1f"|format(L.change_pct) }}%）{% else %}持平{% endif %}</span>
+    </div>
+  </div>
+  <div class="mg-callline">燈號：{{ lamp(L) }}
+    <span class="muted">（≥ {{ vx.thresholds.high|int }} 高度恐慌、{{ vx.thresholds.elevated|int }}–{{ vx.thresholds.high|int }} 警戒、≤ {{ vx.thresholds.low|int }} 低恐慌）</span></div>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>近 {{ vx.stats.days }} 日最高</span><strong>{{ "%.2f"|format(vx.stats.max) }}</strong></div>
+    <div class="kd-metric"><span>近 {{ vx.stats.days }} 日最低</span><strong>{{ "%.2f"|format(vx.stats.min) }}</strong></div>
+    <div class="kd-metric"><span>近 {{ vx.stats.days }} 日平均</span><strong>{{ "%.2f"|format(vx.stats.avg) }}</strong></div>
+    <div class="kd-metric"><span>目前位於近 {{ vx.stats.days }} 日百分位</span><strong>{{ vx.stats.pct_rank }}%</strong></div>
+  </div>
+  {% if link_more %}<p class="kd-more"><a href="taiex-kd.html#vix">查看 TAIWAN VIX 走勢圖與完整歷史 →</a></p>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro vix_chart(vx) %}
+<div class="kd-chart-wrap vix-chart">{{ vx.svg|safe }}</div>
+{% endmacro %}
+
+{% macro vix_table(rows) %}
+<div class="table-wrap">
+  <table class="report kd-table">
+    <thead><tr><th>日期</th><th>TAIWAN VIX</th><th>日變化</th><th>變化 %</th><th>收盤前 1 分鐘平均</th><th>燈號</th></tr></thead>
+    <tbody>
+      {% for r in rows %}
+      <tr class="vix-row-{{ r.level }}">
+        <td>{{ r.date }}</td>
+        <td class="num"><strong>{{ "%.2f"|format(r.close) }}</strong></td>
+        <td class="num">{{ vchg(r.change) }}</td>
+        <td class="num">{{ vchg(r.change_pct, "%+.1f", "%") }}</td>
+        <td class="num">{{ "%.2f"|format(r.close_1m_avg) if r.close_1m_avg is not none else "—" }}</td>
+        <td>{{ lamp(r) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endmacro %}
+
+{% macro vix_note(vx) %}
+<p class="muted kd-note">
+  說明：臺指選擇權波動率指數由<strong>臺灣期貨交易所</strong>編製，依 CBOE VIX 編製公式，以臺指選擇權（TXO）近月與次近月各履約價的價格，推算市場對<strong>未來 30 天</strong>加權指數的年化預期波動率（%）。數值越高代表選擇權買方越願意花錢避險，市場越緊張；常與加權指數反向走。<br />
+  與美國 VIX 的差異：美國 VIX 由 CBOE 用 S&amp;P 500 選擇權計算，長期均值約 19–20；臺指 VIX 的基期水準、成交量與流動性不同，數值不宜直接和美國 VIX 比大小，建議和自己的歷史比較（上方百分位）。燈號門檻（≥30 高度恐慌、25–30 警戒、≤18 低恐慌）為本站經驗設定，非官方標準。<br />
+  資料來源：<a href="{{ vx.source_page }}" target="_blank" rel="noopener">臺灣期貨交易所 前 3 個月每日收盤之臺指選擇權波動率指數（新 VIX 公式）</a>；每日約 16:00 更新，期交所免費檔僅提供近 3 個月，更早資料由本站逐日累積。上升為紅 ▲、下降為綠 ▼。僅供參考，不構成投資建議。
+</p>
+{% endmacro %}

@@ -2,6 +2,7 @@
 {% from "_kd_macros.html" import kd_card, kd_table, kd_note %}
 {% from "_margin_macros.html" import margin_card, margin_table, margin_note %}
 {% from "_chips_macros.html" import chips_card, chips_table, chips_note %}
+{% from "_vix_macros.html" import vix_card, vix_chart, vix_table, vix_note %}
 {% block title %}台灣主動式 ETF 持股異動日報{% endblock %}
 {% block heading %}台灣主動式 ETF 持股異動日報{% endblock %}
 {% block subtitle %}
@@ -18,6 +19,7 @@
       <div class="toc-sub"><ol><li><a href="taiex-kd.html">KD 走勢圖／完整歷史</a></li></ol></div>
     </li>{% endif %}
     {% if mg %}<li><a href="#part_margin">💰 大盤融資維持率</a></li>{% endif %}
+    {% if vx %}<li><a href="#part_vix">😱 臺指 VIX 恐慌指數</a></li>{% endif %}
     {% if cv %}<li><a href="#part_chips">🐳 千張大戶籌碼（週）</a>
       <div class="toc-sub"><ol><li><a href="chips.html">全部成分股明細</a></li></ol></div>
     </li>{% endif %}
@@ -75,6 +77,18 @@
   <h3 class="section-title">近 {{ mg.recent|length }} 個交易日</h3>
   {{ margin_table(mg.recent) }}
   {{ margin_note(mg) }}
+</section>
+{% endif %}
+
+{% if vx %}
+<section>
+  <h2 class="banner" id="part_vix">😱 臺指選擇權波動率指數（台版 VIX 恐慌指數）</h2>
+  {{ vix_card(vx) }}
+  <h3 class="section-title">近 {{ vx.stats.days }} 個交易日走勢</h3>
+  {{ vix_chart(vx) }}
+  <h3 class="section-title">近 {{ vx.recent|length }} 個交易日</h3>
+  {{ vix_table(vx.recent) }}
+  {{ vix_note(vx) }}
 </section>
 {% endif %}
 

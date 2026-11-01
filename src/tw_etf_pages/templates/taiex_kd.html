@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% from "_kd_macros.html" import kd_card, kd_table, kd_note %}
 {% from "_margin_macros.html" import margin_card, margin_table, margin_note %}
+{% from "_vix_macros.html" import vix_card, vix_chart, vix_table, vix_note %}
 {% block title %}台股加權指數 KD 指標{% endblock %}
 {% block heading %}台股加權指數 每日 KD 指標{% endblock %}
 {% block subtitle %}發行量加權股價指數（TAIEX）9 日 KD；K 或 D &lt; 20 亮燈「超賣」，&gt; 80 亮燈「超漲」。{% endblock %}
@@ -10,7 +11,7 @@
     <header class="page-header">
       <h1>台股加權指數 每日 KD 指標</h1>
       <p class="muted">發行量加權股價指數（TAIEX）9 日 KD；K 或 D &lt; 20 亮燈「超賣」，&gt; 80 亮燈「超漲」。</p>
-      <nav class="nav-inline"><a href="index.html">← 回 ETF 持股異動日報</a>{% if mg %}<a href="#margin">大盤融資維持率 ↓</a>{% endif %}</nav>
+      <nav class="nav-inline"><a href="index.html">← 回 ETF 持股異動日報</a>{% if mg %}<a href="#margin">大盤融資維持率 ↓</a>{% endif %}{% if vx %}<a href="#vix">臺指 VIX ↓</a>{% endif %}</nav>
     </header>
     {% if kd %}
     {{ kd_card(kd, link_more=False) }}
@@ -37,6 +38,17 @@
       <h3 class="section-title">歷史紀錄（新到舊）</h3>
       {{ margin_table(mg.full) }}
       {{ margin_note(mg) }}
+    </section>
+    {% endif %}
+    {% if vx %}
+    <section id="vix">
+      <h2 class="banner">😱 臺指選擇權波動率指數（TAIWAN VIX）</h2>
+      {{ vix_card(vx, link_more=False) }}
+      <h3 class="section-title">近 {{ vx.stats.days }} 個交易日走勢</h3>
+      {{ vix_chart(vx) }}
+      <h3 class="section-title">歷史紀錄（新到舊）</h3>
+      {{ vix_table(vx.full) }}
+      {{ vix_note(vx) }}
     </section>
     {% endif %}
     <footer class="site-footer">

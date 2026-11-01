@@ -16,6 +16,7 @@ from .trend import build_holdings_trend
 from .taiex_kd import build_kd_view
 from .margin_ratio import build_margin_view
 from .chips import build_chips_view
+from .taiwan_vix import build_vix_view
 from .utils import now_taipei_iso, read_json, write_json
 
 logger = logging.getLogger(__name__)
@@ -551,7 +552,13 @@ def render_site(cfg: AppConfig) -> Path:
     except Exception:  # noqa: BLE001 — never break the site for margin
         logger.exception("Margin ratio view failed")
         mg = None
-    if kd or mg:
+    vx = None
+    try:
+        vx = build_vix_view(cfg.root)
+    except Exception:  # noqa: BLE001 — never break the site for VIX
+        logger.exception("TAIWAN VIX view failed")
+        vx = None
+    if kd or mg or vx:
         if kd:
             kd["chart_json"] = _json.dumps(
                 [{"date": r["date"], "close": r["close"], "k": r["k"], "d": r["d"]} for r in kd["chart"]],
@@ -559,7 +566,7 @@ def render_site(cfg: AppConfig) -> Path:
             ).replace("</", "<\\/")
         (site / "taiex-kd.html").write_text(
             env.get_template("taiex_kd.html").render(
-                kd=kd, mg=mg, generated_at=generated_at, assets_prefix="assets"
+                kd=kd, mg=mg, vx=vx, generated_at=generated_at, assets_prefix="assets"
             ),
             encoding="utf-8",
         )
@@ -582,6 +589,7 @@ def render_site(cfg: AppConfig) -> Path:
 
     index_html = env.get_template("index.html").render(
         cv=cv,
+        vx=vx,
         kd=kd,
         mg=mg,
         etfs=index_rows,
