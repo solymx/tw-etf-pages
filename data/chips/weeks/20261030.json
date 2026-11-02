@@ -2,7 +2,7 @@
   "data_date": "20261030",
   "definition": "TDCC 集保戶股權分散表 持股分級15（1,000,001股以上＝千張大戶）",
   "source": "https://opendata.tdcc.com.tw/getOD.ashx?id=1-5",
-  "updated_at": "2026-11-01T19:52:34+08:00",
+  "updated_at": "2026-11-02T18:53:17+08:00",
   "stocks": {
     "1101": {
       "big_holders": 390,
