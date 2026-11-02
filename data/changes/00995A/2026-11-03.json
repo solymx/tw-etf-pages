@@ -2,7 +2,7 @@
   "etf_ticker": "00995A",
   "as_of_date": "2026-11-03",
   "prev_as_of_date": "2026-11-02",
-  "compared_at": "2026-11-02T18:52:42+08:00",
+  "compared_at": "2026-11-03T03:24:30+08:00",
   "source": "zdsetf",
   "placeholder_policy": {
     "max_shares": 1000,

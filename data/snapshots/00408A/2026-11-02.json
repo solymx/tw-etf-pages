@@ -2,14 +2,14 @@
   "etf_ticker": "00408A",
   "as_of_date": "2026-11-02",
   "source": "zdsetf",
-  "fetched_at": "2026-11-02T18:52:41+08:00",
-  "raw_file": "00408A_2026-11-02_zdsetf.json",
-  "raw_file_hash": "87bf0aee09970c0302cec6ae2ef15c82d0b0807726a3a819c9f773c6e9ebde82",
+  "fetched_at": "2026-11-03T03:24:29+08:00",
+  "raw_file": "00408A_2026-11-03_zdsetf.json",
+  "raw_file_hash": "9c3afd5a5ceb38a7ada68172552b2d18af4c40a0439b53b736a2190b7f2bc2e0",
   "holdings_count": 50,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=183",
-    "fetched_at_upstream": "2026-11-02T09:56:40"
+    "fetched_at_upstream": "2026-11-02T12:36:22"
   },
   "holdings": [
     {
@@ -188,16 +188,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "2059",
-      "stock_name": "川湖科技",
-      "shares": 1399,
+      "stock_code": "6187",
+      "stock_name": "萬潤",
+      "shares": 11000,
       "weight_pct": 0.97,
       "is_placeholder": false
     },
     {
-      "stock_code": "6187",
-      "stock_name": "萬潤",
-      "shares": 11000,
+      "stock_code": "2059",
+      "stock_name": "川湖科技",
+      "shares": 1399,
       "weight_pct": 0.97,
       "is_placeholder": false
     },
@@ -209,16 +209,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "7769",
-      "stock_name": "鴻勁精密",
-      "shares": 2500,
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "shares": 47000,
       "weight_pct": 0.91,
       "is_placeholder": false
     },
     {
-      "stock_code": "2449",
-      "stock_name": "京元電子",
-      "shares": 47000,
+      "stock_code": "7769",
+      "stock_name": "鴻勁精密",
+      "shares": 2500,
       "weight_pct": 0.91,
       "is_placeholder": false
     },

@@ -2,14 +2,14 @@
   "etf_ticker": "00994A",
   "as_of_date": "2026-11-02",
   "source": "zdsetf",
-  "fetched_at": "2026-11-02T18:52:42+08:00",
-  "raw_file": "00994A_2026-11-02_zdsetf.json",
-  "raw_file_hash": "ff198179536c9b88d3e77eb442f04c89be2b5e050f26481071f2ce05431db109",
+  "fetched_at": "2026-11-03T03:24:29+08:00",
+  "raw_file": "00994A_2026-11-03_zdsetf.json",
+  "raw_file_hash": "fa8273086f0abab0ec42e770da0c072fe04f51b81871e94b3a9bcf03ce44ffe8",
   "holdings_count": 39,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=182",
-    "fetched_at_upstream": "2026-11-02T09:42:25"
+    "fetched_at_upstream": "2026-11-02T12:22:36"
   },
   "holdings": [
     {
@@ -237,6 +237,13 @@
       "is_placeholder": false
     },
     {
+      "stock_code": "2408",
+      "stock_name": "南亞科技",
+      "shares": 25000,
+      "weight_pct": 0.31,
+      "is_placeholder": false
+    },
+    {
       "stock_code": "6488",
       "stock_name": "環球晶",
       "shares": 15000,
@@ -247,13 +254,6 @@
       "stock_code": "6510",
       "stock_name": "精測",
       "shares": 4000,
-      "weight_pct": 0.31,
-      "is_placeholder": false
-    },
-    {
-      "stock_code": "2408",
-      "stock_name": "南亞科技",
-      "shares": 25000,
       "weight_pct": 0.31,
       "is_placeholder": false
     },

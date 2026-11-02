@@ -2,14 +2,14 @@
   "etf_ticker": "00406A",
   "as_of_date": "2026-11-03",
   "source": "zdsetf",
-  "fetched_at": "2026-11-02T18:52:35+08:00",
-  "raw_file": "00406A_2026-11-02_zdsetf.json",
-  "raw_file_hash": "91e1c80056410b651b6b543be6d4f34cdd68c96e25ffb3e38ae1d8b697928001",
+  "fetched_at": "2026-11-03T03:24:22+08:00",
+  "raw_file": "00406A_2026-11-03_zdsetf.json",
+  "raw_file_hash": "a8332de7a49d00ec98d9ef6ed174023aba0b4362b7b8554d73d058c55326ce72",
   "holdings_count": 68,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.ctbcinvestments.com/etfprod/00406A/pcf",
-    "fetched_at_upstream": "2026-11-02T09:55:19"
+    "fetched_at_upstream": "2026-11-02T12:35:03"
   },
   "holdings": [
     {

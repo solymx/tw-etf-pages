@@ -495,10 +495,10 @@
           }
         },
         {
-          "stock_code": "2059",
-          "stock_name": "川湖科技",
-          "curr_shares": 1399,
-          "prev_shares": 1399,
+          "stock_code": "6187",
+          "stock_name": "萬潤",
+          "curr_shares": 11000,
+          "prev_shares": 11000,
           "shares_delta": 0,
           "curr_weight_pct": 0.97,
           "prev_weight_pct": 0.97,
@@ -513,10 +513,10 @@
           }
         },
         {
-          "stock_code": "6187",
-          "stock_name": "萬潤",
-          "curr_shares": 11000,
-          "prev_shares": 11000,
+          "stock_code": "2059",
+          "stock_name": "川湖科技",
+          "curr_shares": 1399,
+          "prev_shares": 1399,
           "shares_delta": 0,
           "curr_weight_pct": 0.97,
           "prev_weight_pct": 0.97,
@@ -549,10 +549,10 @@
           }
         },
         {
-          "stock_code": "7769",
-          "stock_name": "鴻勁精密",
-          "curr_shares": 2500,
-          "prev_shares": 2500,
+          "stock_code": "2449",
+          "stock_name": "京元電子",
+          "curr_shares": 47000,
+          "prev_shares": 47000,
           "shares_delta": 0,
           "curr_weight_pct": 0.91,
           "prev_weight_pct": 0.91,
@@ -567,10 +567,10 @@
           }
         },
         {
-          "stock_code": "2449",
-          "stock_name": "京元電子",
-          "curr_shares": 47000,
-          "prev_shares": 47000,
+          "stock_code": "7769",
+          "stock_name": "鴻勁精密",
+          "curr_shares": 2500,
+          "prev_shares": 2500,
           "shares_delta": 0,
           "curr_weight_pct": 0.91,
           "prev_weight_pct": 0.91,
