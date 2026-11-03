@@ -2,14 +2,14 @@
   "etf_ticker": "00408A",
   "as_of_date": "2026-11-03",
   "source": "zdsetf",
-  "fetched_at": "2026-11-03T18:55:01+08:00",
-  "raw_file": "00408A_2026-11-03_zdsetf.json",
-  "raw_file_hash": "7ebcced203a90c87976f2d8277cded43131ef31e8b5a0b48d45a7a6d0b59d3cb",
+  "fetched_at": "2026-11-04T00:57:36+08:00",
+  "raw_file": "00408A_2026-11-04_zdsetf.json",
+  "raw_file_hash": "d7e85a96b09f0620e2beb74a16d4bbe42a01a8f8622b05e83caf5da9ab273f75",
   "holdings_count": 48,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=183",
-    "fetched_at_upstream": "2026-11-03T09:55:49"
+    "fetched_at_upstream": "2026-11-03T12:36:23"
   },
   "holdings": [
     {
@@ -314,16 +314,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "6691",
-      "stock_name": "洋基工程股份有限公司",
-      "shares": 7000,
+      "stock_code": "6526",
+      "stock_name": "達發",
+      "shares": 6000,
       "weight_pct": 0.33,
       "is_placeholder": false
     },
     {
-      "stock_code": "6526",
-      "stock_name": "達發",
-      "shares": 6000,
+      "stock_code": "6691",
+      "stock_name": "洋基工程股份有限公司",
+      "shares": 7000,
       "weight_pct": 0.33,
       "is_placeholder": false
     },

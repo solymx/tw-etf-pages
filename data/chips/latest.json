@@ -1,7 +1,7 @@
 {
   "data_date": "20261030",
   "prev_date": "20261022",
-  "generated_at": "2026-11-03T21:32:26+08:00",
+  "generated_at": "2026-11-04T00:58:11+08:00",
   "definition": "持股 1,000 張以上（TDCC 持股分級 15：1,000,001 股以上）",
   "notable_pp": 0.5,
   "sources": {
@@ -9,16 +9,16 @@
     "history_query": "https://www.tdcc.com.tw/portal/zh/smWeb/qryStock"
   },
   "summary": {
-    "stocks": 256,
-    "with_data": 256,
+    "stocks": 257,
+    "with_data": 257,
     "missing": 0,
-    "up": 108,
+    "up": 109,
     "down": 127,
     "flat": 21,
     "notable_up": 24,
     "notable_down": 49,
     "tilt": "混雜（略偏減）",
-    "avg_d_pct_etf_weighted": -0.224
+    "avg_d_pct_etf_weighted": -0.223
   },
   "increase": [
     "3105",
@@ -2622,6 +2622,32 @@
       "d_holders": 0,
       "d_lots": 103,
       "d_total_holders": 277
+    },
+    {
+      "code": "6957",
+      "name": "裕慶-KY",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 11,
+        "big_shares": 30557734,
+        "big_pct": 52.15,
+        "total_holders": 2882,
+        "total_shares": 58593056
+      },
+      "prev": {
+        "big_holders": 11,
+        "big_shares": 30307734,
+        "big_pct": 52.08,
+        "total_holders": 2834,
+        "total_shares": 58187156
+      },
+      "d_pct": 0.07,
+      "d_holders": 0,
+      "d_lots": 250,
+      "d_total_holders": 48
     },
     {
       "code": "1504",
