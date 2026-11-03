@@ -1,7 +1,7 @@
 {
   "data_date": "20261030",
   "prev_date": "20261022",
-  "generated_at": "2026-11-03T03:25:09+08:00",
+  "generated_at": "2026-11-03T18:55:35+08:00",
   "definition": "持股 1,000 張以上（TDCC 持股分級 15：1,000,001 股以上）",
   "notable_pp": 0.5,
   "sources": {
@@ -9,16 +9,16 @@
     "history_query": "https://www.tdcc.com.tw/portal/zh/smWeb/qryStock"
   },
   "summary": {
-    "stocks": 257,
-    "with_data": 257,
+    "stocks": 256,
+    "with_data": 256,
     "missing": 0,
     "up": 108,
-    "down": 128,
+    "down": 127,
     "flat": 21,
     "notable_up": 24,
     "notable_down": 49,
     "tilt": "混雜（略偏減）",
-    "avg_d_pct_etf_weighted": -0.219
+    "avg_d_pct_etf_weighted": -0.224
   },
   "increase": [
     "3105",
@@ -105,11 +105,9 @@
         "00406A",
         "00985A",
         "00982A",
-        "00993A",
-        "00408A",
-        "00994A"
+        "00993A"
       ],
-      "etf_count": 6,
+      "etf_count": 4,
       "cur": {
         "big_holders": 53,
         "big_shares": 252989738,
@@ -332,7 +330,6 @@
       "name": "精測",
       "etfs": [
         "00981A",
-        "00405A",
         "00406A",
         "00982A",
         "00987A",
@@ -341,7 +338,7 @@
         "00995A",
         "00996A"
       ],
-      "etf_count": 9,
+      "etf_count": 8,
       "cur": {
         "big_holders": 4,
         "big_shares": 15482200,
@@ -3109,6 +3106,7 @@
       "name": "日月光投控",
       "etfs": [
         "00981A",
+        "00988A",
         "00991A",
         "00403A",
         "00992A",
@@ -3130,7 +3128,7 @@
         "00878",
         "009816"
       ],
-      "etf_count": 21,
+      "etf_count": 22,
       "cur": {
         "big_holders": 425,
         "big_shares": 3653975277,
@@ -5507,32 +5505,6 @@
       "d_total_holders": -100
     },
     {
-      "code": "3455",
-      "name": "由田",
-      "etfs": [
-        "00987A"
-      ],
-      "etf_count": 1,
-      "cur": {
-        "big_holders": 6,
-        "big_shares": 7166471,
-        "big_pct": 11.97,
-        "total_holders": 44580,
-        "total_shares": 59850750
-      },
-      "prev": {
-        "big_holders": 6,
-        "big_shares": 7314808,
-        "big_pct": 12.22,
-        "total_holders": 44795,
-        "total_shares": 59850750
-      },
-      "d_pct": -0.25,
-      "d_holders": 0,
-      "d_lots": -148,
-      "d_total_holders": -215
-    },
-    {
       "code": "3702",
       "name": "大聯大",
       "etfs": [
@@ -5845,11 +5817,10 @@
       "code": "3363",
       "name": "上詮",
       "etfs": [
-        "00406A",
         "00987A",
         "00996A"
       ],
-      "etf_count": 3,
+      "etf_count": 2,
       "cur": {
         "big_holders": 11,
         "big_shares": 30942813,
@@ -5899,9 +5870,10 @@
       "code": "1802",
       "name": "台玻",
       "etfs": [
+        "00981A",
         "00996A"
       ],
-      "etf_count": 1,
+      "etf_count": 2,
       "cur": {
         "big_holders": 95,
         "big_shares": 2184754238,
@@ -7067,14 +7039,13 @@
         "00981A",
         "00992A",
         "00405A",
-        "00406A",
         "00980A",
         "00999A",
         "00401A",
         "00987A",
         "00995A"
       ],
-      "etf_count": 9,
+      "etf_count": 8,
       "cur": {
         "big_holders": 7,
         "big_shares": 11347657,
@@ -7670,7 +7641,6 @@
         "00993A",
         "00400A",
         "00401A",
-        "00408A",
         "00995A",
         "00996A",
         "0050",
@@ -7682,7 +7652,7 @@
         "00940",
         "009816"
       ],
-      "etf_count": 21,
+      "etf_count": 20,
       "cur": {
         "big_holders": 663,
         "big_shares": 8457932175,
@@ -7910,11 +7880,10 @@
         "00980A",
         "00984A",
         "00408A",
-        "00994A",
         "00995A",
         "00929"
       ],
-      "etf_count": 10,
+      "etf_count": 9,
       "cur": {
         "big_holders": 62,
         "big_shares": 265136688,

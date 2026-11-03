@@ -2,7 +2,7 @@
   "etf_ticker": "00401A",
   "as_of_date": "2026-11-02",
   "prev_as_of_date": "2026-10-30",
-  "compared_at": "2026-11-03T03:24:27+08:00",
+  "compared_at": "2026-11-03T18:55:00+08:00",
   "source": "zdsetf",
   "placeholder_policy": {
     "max_shares": 1000,

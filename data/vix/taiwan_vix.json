@@ -3,7 +3,7 @@
   "publisher": "臺灣期貨交易所",
   "method": "依 CBOE VIX 編製公式，以臺指選擇權（TXO）近月、次近月價格計算之未來 30 日年化預期波動率",
   "source": "https://www.taifex.com.tw/cht/7/vixDaily3MNew",
-  "updated_at": "2026-11-02T18:53:13+08:00",
+  "updated_at": "2026-11-03T18:55:31+08:00",
   "rows": [
     {
       "date": "2026-08-03",
@@ -309,6 +309,11 @@
       "date": "2026-11-02",
       "close": 31.3,
       "close_1m_avg": 31.28
+    },
+    {
+      "date": "2026-11-03",
+      "close": 36.83,
+      "close_1m_avg": 36.83
     }
   ]
 }
