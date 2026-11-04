@@ -2,14 +2,14 @@
   "etf_ticker": "00408A",
   "as_of_date": "2026-11-04",
   "source": "zdsetf",
-  "fetched_at": "2026-11-04T18:51:49+08:00",
-  "raw_file": "00408A_2026-11-04_zdsetf.json",
-  "raw_file_hash": "74b4f28e765f7d2e533fa707bc54c0c96e6920f0549cd0af09bd9851480cd317",
+  "fetched_at": "2026-11-05T01:02:21+08:00",
+  "raw_file": "00408A_2026-11-05_zdsetf.json",
+  "raw_file_hash": "343cc3e9e6f6c00425b357f4bacffc167febb7f8427ad247e577cf92c7a0541c",
   "holdings_count": 48,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=183",
-    "fetched_at_upstream": "2026-11-04T09:52:15"
+    "fetched_at_upstream": "2026-11-04T12:35:06"
   },
   "holdings": [
     {
@@ -69,16 +69,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "3017",
-      "stock_name": "奇鋐科技",
-      "shares": 12900,
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "shares": 40999,
       "weight_pct": 2.76,
       "is_placeholder": false
     },
     {
-      "stock_code": "3037",
-      "stock_name": "欣興",
-      "shares": 40999,
+      "stock_code": "3017",
+      "stock_name": "奇鋐科技",
+      "shares": 12900,
       "weight_pct": 2.76,
       "is_placeholder": false
     },
@@ -195,6 +195,13 @@
       "is_placeholder": false
     },
     {
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "shares": 47000,
+      "weight_pct": 0.89,
+      "is_placeholder": false
+    },
+    {
       "stock_code": "6187",
       "stock_name": "萬潤",
       "shares": 11000,
@@ -209,23 +216,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "2449",
-      "stock_name": "京元電子",
-      "shares": 47000,
-      "weight_pct": 0.89,
+      "stock_code": "7769",
+      "stock_name": "鴻勁精密",
+      "shares": 2500,
+      "weight_pct": 0.83,
       "is_placeholder": false
     },
     {
       "stock_code": "2891",
       "stock_name": "中國信託金融控股",
       "shares": 150000,
-      "weight_pct": 0.83,
-      "is_placeholder": false
-    },
-    {
-      "stock_code": "7769",
-      "stock_name": "鴻勁精密",
-      "shares": 2500,
       "weight_pct": 0.83,
       "is_placeholder": false
     },

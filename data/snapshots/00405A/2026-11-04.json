@@ -2,14 +2,14 @@
   "etf_ticker": "00405A",
   "as_of_date": "2026-11-04",
   "source": "zdsetf",
-  "fetched_at": "2026-11-04T18:51:42+08:00",
-  "raw_file": "00405A_2026-11-04_zdsetf.json",
-  "raw_file_hash": "e36b8cf1b6da8f55bafcdf47f58f43c9b5238154762e7b09e77ebb90669bf244",
+  "fetched_at": "2026-11-05T01:02:14+08:00",
+  "raw_file": "00405A_2026-11-05_zdsetf.json",
+  "raw_file_hash": "1b97265228db52bd58d1d1a7d067d681dfe237bf11c98c4a5d673cf3e450556b",
   "holdings_count": 47,
   "placeholder_count": 5,
   "meta": {
     "source_url": "https://websys.fsit.com.tw/FubonETF/Trade/Assets.aspx?stkId=00405A&ddate=2026/11/05&lan=TW",
-    "fetched_at_upstream": "2026-11-04T09:51:13"
+    "fetched_at_upstream": "2026-11-04T12:34:04"
   },
   "holdings": [
     {

@@ -170,10 +170,10 @@
           }
         },
         {
-          "stock_code": "3017",
-          "stock_name": "奇鋐科技",
-          "curr_shares": 12900,
-          "prev_shares": 12900,
+          "stock_code": "3037",
+          "stock_name": "欣興",
+          "curr_shares": 40999,
+          "prev_shares": 40999,
           "shares_delta": 0,
           "curr_weight_pct": 2.76,
           "prev_weight_pct": 2.76,
@@ -188,10 +188,10 @@
           }
         },
         {
-          "stock_code": "3037",
-          "stock_name": "欣興",
-          "curr_shares": 40999,
-          "prev_shares": 40999,
+          "stock_code": "3017",
+          "stock_name": "奇鋐科技",
+          "curr_shares": 12900,
+          "prev_shares": 12900,
           "shares_delta": 0,
           "curr_weight_pct": 2.76,
           "prev_weight_pct": 2.76,
@@ -494,6 +494,24 @@
           }
         },
         {
+          "stock_code": "2449",
+          "stock_name": "京元電子",
+          "curr_shares": 47000,
+          "prev_shares": 47000,
+          "shares_delta": 0,
+          "curr_weight_pct": 0.89,
+          "prev_weight_pct": 0.89,
+          "weight_delta": 0.0,
+          "changed": false,
+          "change_kind": "flat",
+          "status": {
+            "kind": "flat",
+            "css": "status-flat",
+            "label": "持平",
+            "short": "持平"
+          }
+        },
+        {
           "stock_code": "6187",
           "stock_name": "萬潤",
           "curr_shares": 11000,
@@ -530,13 +548,13 @@
           }
         },
         {
-          "stock_code": "2449",
-          "stock_name": "京元電子",
-          "curr_shares": 47000,
-          "prev_shares": 47000,
+          "stock_code": "7769",
+          "stock_name": "鴻勁精密",
+          "curr_shares": 2500,
+          "prev_shares": 2500,
           "shares_delta": 0,
-          "curr_weight_pct": 0.89,
-          "prev_weight_pct": 0.89,
+          "curr_weight_pct": 0.83,
+          "prev_weight_pct": 0.83,
           "weight_delta": 0.0,
           "changed": false,
           "change_kind": "flat",
@@ -552,24 +570,6 @@
           "stock_name": "中國信託金融控股",
           "curr_shares": 150000,
           "prev_shares": 150000,
-          "shares_delta": 0,
-          "curr_weight_pct": 0.83,
-          "prev_weight_pct": 0.83,
-          "weight_delta": 0.0,
-          "changed": false,
-          "change_kind": "flat",
-          "status": {
-            "kind": "flat",
-            "css": "status-flat",
-            "label": "持平",
-            "short": "持平"
-          }
-        },
-        {
-          "stock_code": "7769",
-          "stock_name": "鴻勁精密",
-          "curr_shares": 2500,
-          "prev_shares": 2500,
           "shares_delta": 0,
           "curr_weight_pct": 0.83,
           "prev_weight_pct": 0.83,
