@@ -1,5 +1,7 @@
 {
   "mode": "live",
-  "generated_at": "2026-11-04T00:58:12+08:00",
-  "errors": []
+  "generated_at": "2026-11-04T18:52:36+08:00",
+  "errors": [
+    "00940: Yuanta Node extract failed for 00940: rc=3 stderr='yuanta: weightData.FundWeights not found\\n'"
+  ]
 }

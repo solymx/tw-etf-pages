@@ -1,7 +1,7 @@
 {
   "data_date": "20261030",
   "prev_date": "20261022",
-  "generated_at": "2026-11-04T00:58:11+08:00",
+  "generated_at": "2026-11-04T18:52:35+08:00",
   "definition": "持股 1,000 張以上（TDCC 持股分級 15：1,000,001 股以上）",
   "notable_pp": 0.5,
   "sources": {
@@ -6657,10 +6657,9 @@
         "00406A",
         "00980A",
         "00999A",
-        "00400A",
-        "00987A"
+        "00400A"
       ],
-      "etf_count": 5,
+      "etf_count": 4,
       "cur": {
         "big_holders": 14,
         "big_shares": 24309713,
