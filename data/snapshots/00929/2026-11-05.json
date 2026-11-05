@@ -2,9 +2,9 @@
   "etf_ticker": "00929",
   "as_of_date": "2026-11-05",
   "source": "fh_excel",
-  "fetched_at": "2026-11-05T19:45:07+08:00",
-  "raw_file": "00929_2026-11-05_fh.xlsx",
-  "raw_file_hash": "ab6138a55cfbbaf1febe7e7c0a83523515277a3e1e0ecb01c253e433f9b55a82",
+  "fetched_at": "2026-11-06T01:17:31+08:00",
+  "raw_file": "00929_2026-11-06_fh.xlsx",
+  "raw_file_hash": "42ec7b5b4931d27e6beee3eaff8950c0d2858787f9903827b682a536c4e3ae3f",
   "holdings_count": 50,
   "placeholder_count": 0,
   "meta": {
