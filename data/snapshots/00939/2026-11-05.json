@@ -10,7 +10,8 @@
   "meta": {
     "nav_total_raw": "NTD 27,655,189,702",
     "units_raw": "1,152,976,000",
-    "nav_pu_raw": "NTD 23.99"
+    "nav_pu_raw": "NTD 23.99",
+    "futures_seeded_at": "2026-11-05 manual baseline (ezmoney Excel re-download)"
   },
   "holdings": [
     {
@@ -293,5 +294,52 @@
       "weight_pct": 0.28,
       "is_placeholder": false
     }
-  ]
+  ],
+  "futures": [
+    {
+      "code": "TX",
+      "name": "台指期貨",
+      "weight_pct": 1.94,
+      "contracts": 64,
+      "month": "2026/11",
+      "position": "B",
+      "position_source": "ezmoney_page",
+      "notional": 536089600.0,
+      "currency": "NTD"
+    }
+  ],
+  "assets": {
+    "futures_notional": {
+      "raw": "NTD 536,089,600",
+      "currency": "NTD",
+      "amount": 536089600.0,
+      "weight_pct": 1.94
+    },
+    "stocks": {
+      "raw": "NTD 27,117,586,252",
+      "currency": "NTD",
+      "amount": 27117586252.0,
+      "weight_pct": 98.06
+    },
+    "cash": {
+      "raw": "NTD 52,037,639",
+      "currency": "NTD",
+      "amount": 52037639.0
+    },
+    "futures_margin": {
+      "raw": "NTD 182,111,703",
+      "currency": "NTD",
+      "amount": 182111703.0
+    },
+    "repo": {
+      "raw": "NTD 480,000,000",
+      "currency": "NTD",
+      "amount": 480000000.0
+    },
+    "settlement": {
+      "raw": "NTD 0",
+      "currency": "NTD",
+      "amount": 0.0
+    }
+  }
 }

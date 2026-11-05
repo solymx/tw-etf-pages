@@ -529,3 +529,22 @@ table.report tr.vix-row-high { background: #fff1f2; }
 table.report tr.vix-row-elevated { background: #fff7ed; }
 table.report tr.vix-row-low { background: #eff6ff; }
 .vix-chart svg { width: 100%; height: auto; display: block; }
+
+/* ---- ETF futures positions ---- */
+.fut-card{border:1px solid #e5e7eb;border-left:5px solid #7c3aed;border-radius:10px;padding:.9rem 1rem;background:#fff;margin:.6rem 0 1.2rem}
+.fut-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;margin-bottom:.6rem}
+.fut-sum strong{font-size:1.05rem}
+.fut-base{color:#7c3aed;font-weight:600}
+.fut-table td.num{text-align:right}
+.fut-up{color:#dc2626;font-weight:700}
+.fut-down{color:#16a34a;font-weight:700}
+.fut-pos{display:inline-block;padding:.1rem .5rem;border-radius:999px;font-weight:700;font-size:.85rem}
+.fut-pos-B{background:#fee2e2;color:#b91c1c}
+.fut-pos-S{background:#dcfce7;color:#15803d}
+.fut-badge{display:inline-block;padding:.1rem .5rem;border-radius:6px;font-size:.8rem;font-weight:700;background:#f3f4f6;color:#374151}
+.fut-badge-new,.fut-badge-up{background:#fee2e2;color:#b91c1c}
+.fut-badge-down,.fut-badge-closed{background:#dcfce7;color:#15803d}
+.fut-badge-roll{background:#fef3c7;color:#92400e}
+.fut-badge-base{background:#ede9fe;color:#6d28d9}
+.fut-hist{margin-top:.6rem}
+.small{font-size:.82rem}

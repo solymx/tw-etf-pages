@@ -78,6 +78,54 @@ def _holding(
     return row
 
 
+_UNI_ASSET_ROWS = {
+    "期貨(名目本金)": "futures_notional",
+    "股票": "stocks",
+    "現金": "cash",
+    "期貨保證金": "futures_margin",
+    "附買回債券": "repo",
+    "應收付證券款": "settlement",
+}
+
+
+def _parse_money(value: Any) -> tuple[str | None, float | None]:
+    """'NTD 7,262,338,800' → ('NTD', 7262338800.0); 'USD 1,001,263.41' → ('USD', ...)."""
+    if value is None:
+        return None, None
+    if isinstance(value, (int, float)):
+        return None, float(value)
+    s = str(value).strip()
+    cur = None
+    parts = s.split()
+    if len(parts) == 2 and parts[0].isalpha():
+        cur, s = parts[0].upper(), parts[1]
+    try:
+        return cur, float(s.replace(",", ""))
+    except ValueError:
+        return cur, None
+
+
+def _uni_future_row(row: tuple) -> dict[str, Any]:
+    """Uni futures row: 期貨代號, 期貨名稱, 持股權重, 口數, 契約年月."""
+    def cell(k: int) -> Any:
+        return row[k] if len(row) > k else None
+
+    contracts = parse_int(cell(3))
+    weight = parse_weight_pct(cell(2))
+    # Excel has no 多/空 column; a negative count/weight means short.
+    # Position may be overridden later from the ezmoney page (DataAsset JSON).
+    position = "S" if (contracts < 0 or weight < 0) else "B"
+    return {
+        "code": str(cell(0)).strip(),
+        "name": str(cell(1) or "").strip(),
+        "weight_pct": round(weight, 4),
+        "contracts": abs(contracts),
+        "month": str(cell(4) or "").strip(),
+        "position": position,
+        "position_source": "excel_inferred",
+    }
+
+
 def parse_uni_excel(
     path: Path,
     ticker: str,
@@ -90,11 +138,15 @@ def parse_uni_excel(
     as_of: date | None = None
     holdings: list[dict[str, Any]] = []
     in_stocks = False
+    in_futures = False
+    futures: list[dict[str, Any]] = []
+    assets: dict[str, Any] = {}
     meta: dict[str, Any] = {}
 
     for row in rows:
         cell0 = row[0] if row else None
         if cell0 is None:
+            in_futures = False
             if in_stocks:
                 # blank row after stocks ends the table
                 if holdings:
@@ -113,6 +165,28 @@ def parse_uni_excel(
         if text0 == "每單位淨值" and len(row) > 1 and row[1] is not None:
             meta["nav_pu_raw"] = str(row[1])
             continue
+        # Asset-allocation summary rows (期貨名目本金 / 保證金 / 現金 ...).
+        if not in_stocks and not in_futures and text0 in _UNI_ASSET_ROWS:
+            raw_amt = row[1] if len(row) > 1 else None
+            if raw_amt is not None:
+                cur, amt = _parse_money(raw_amt)
+                entry: dict[str, Any] = {"raw": str(raw_amt), "currency": cur, "amount": amt}
+                if len(row) > 2 and row[2] not in (None, ""):
+                    try:
+                        entry["weight_pct"] = round(parse_weight_pct(row[2]), 4)
+                    except ValueError:
+                        pass
+                assets[_UNI_ASSET_ROWS[text0]] = entry
+            continue
+        if text0 == "期貨代號":
+            in_futures = True
+            continue
+        if in_futures:
+            if text0 in {"股票", "股票代號"} or text0.endswith("代號"):
+                in_futures = False
+            else:
+                futures.append(_uni_future_row(row))
+                continue
         if text0 == "股票代號":
             in_stocks = True
             continue
@@ -132,7 +206,7 @@ def parse_uni_excel(
     if not holdings:
         raise ValueError(f"{path}: no stock holdings found")
 
-    return _snapshot(
+    snap = _snapshot(
         ticker=ticker,
         as_of_date=as_of,
         holdings=holdings,
@@ -140,6 +214,10 @@ def parse_uni_excel(
         raw_path=path,
         meta=meta,
     )
+    # Derivatives are kept OUTSIDE `holdings` so stock compare is unaffected.
+    snap["futures"] = futures
+    snap["assets"] = assets
+    return snap
 
 
 def parse_fh_excel(

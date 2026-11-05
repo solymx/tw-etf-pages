@@ -58,6 +58,16 @@ def process_etf(
 
     path, kind = fetch_etf_holdings(cfg, etf, allow_fallback=allow_fallback)
     snapshot = _parse_fetched(cfg, etf, path, kind)
+    if kind == "uni_excel" and snapshot.get("futures"):
+        try:
+            from .fetch import UNI_WARMUP, _session
+            from .futures import enrich_uni_futures
+
+            sess = _session(cfg)
+            sess.get(UNI_WARMUP, timeout=30)
+            enrich_uni_futures(snapshot, sess, etf.fund_code)
+        except Exception:  # noqa: BLE001 — enrichment must never fail the ETF
+            logger.exception("%s: futures enrichment failed", etf.ticker)
     snap_path = save_snapshot(cfg, snapshot)
     logger.info("Archived snapshot %s", snap_path)
 

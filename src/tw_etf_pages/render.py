@@ -490,7 +490,16 @@ def render_site(cfg: AppConfig) -> Path:
             },
         )
 
+        fut = None
+        try:
+            from .futures import build_futures_view
+
+            fut = build_futures_view(cfg.snapshots_dir, etf.ticker)
+        except Exception:  # noqa: BLE001 — futures view must never break render
+            logger.exception("%s: futures view failed", etf.ticker)
+        block["futures"] = fut
         html = env.get_template("etf.html").render(
+            futures=fut,
             ticker=etf.ticker,
             name=etf.name,
             anchor=block["anchor"],

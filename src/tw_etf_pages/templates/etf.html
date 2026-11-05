@@ -15,6 +15,7 @@
   <ol>
     <li><a href="index.html">← 回日報總覽</a></li>
     <li><a href="#{{ anchor }}">異動表</a></li>
+    {% if futures %}<li><a href="#futures">📈 期貨部位</a></li>{% endif %}
     <li><a href="#trend">近20天持股趨勢</a></li>
     <li><a href="#snapshot">快照摘要</a></li>
   </ol>
@@ -105,6 +106,60 @@
   <script type="application/json" data-change-history-json>{{ change_history | tojson }}</script>
   {% endif %}
 </section>
+
+{% if futures %}
+{% macro sgn(v, digits=0, suffix="") -%}
+{%- if v is none -%}—{%- elif v > 0 -%}<span class="fut-up">▲ +{{ ("%." ~ digits ~ "f") | format(v) }}{{ suffix }}</span>{%- elif v < 0 -%}<span class="fut-down">▼ {{ ("%." ~ digits ~ "f") | format(v) }}{{ suffix }}</span>{%- else -%}<span class="muted">0{{ suffix }}</span>{%- endif -%}
+{%- endmacro %}
+<section id="futures" class="fut-section">
+  <h2 class="banner sub">📈 期貨部位（衍生性商品，不列入上方股票異動）</h2>
+  <div class="fut-card">
+    <div class="fut-head">
+      <div>資料日 <strong>{{ futures.as_of_date }}</strong>{% if futures.prev_as_of_date %}／對比 <strong>{{ futures.prev_as_of_date }}</strong>{% else %}／<span class="fut-base">基準日（明日起顯示增減）</span>{% endif %}</div>
+      <div class="fut-sum">
+        {% if futures.has_position %}
+        期貨曝險合計 <strong>{{ "%.2f" | format(futures.weight_total) }}%</strong>
+        {% if futures.notional %}／名目本金 <strong>{{ "{:,.1f}".format(futures.notional / 1e8) }} 億</strong>{% endif %}
+        {% else %}<strong>目前無期貨部位</strong>{% endif %}
+        {% if futures.margin and futures.margin.amount %}／期貨保證金 {{ futures.margin.raw }}{% endif %}
+      </div>
+    </div>
+    {% if futures.rows %}
+    <table class="report fut-table">
+      <thead><tr><th>契約</th><th>多／空</th><th>口數</th><th>口數增減</th><th>占淨資產</th><th>權重增減</th><th>契約月份</th><th>狀態</th></tr></thead>
+      <tbody>
+      {% for r in futures.rows %}
+        <tr class="fut-{{ r.status }}">
+          <td><strong>{{ r.code }}</strong> {{ r.name }}</td>
+          <td><span class="fut-pos fut-pos-{{ r.position }}">{{ r.position_label }}</span></td>
+          <td class="num"><strong>{{ "{:,}".format(r.contracts) }}</strong>{% if r.prev_contracts is not none %}<div class="muted small">前 {{ "{:,}".format(r.prev_contracts) }}</div>{% endif %}</td>
+          <td class="num">{{ sgn(r.delta_contracts, 0, " 口") }}</td>
+          <td class="num">{{ "%.2f" | format(r.weight_pct) }}%</td>
+          <td class="num">{{ sgn(r.delta_weight, 2, "%") }}</td>
+          <td>{{ r.months }}{% if r.prev_months and r.prev_months != r.months %}<div class="muted small">前 {{ r.prev_months }}</div>{% endif %}</td>
+          <td><span class="fut-badge fut-badge-{{ r.status }}">{{ r.status_label }}</span></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+    {% if futures.history | length > 1 %}
+    <details class="fut-hist"><summary>近 {{ futures.history | length }} 日期貨部位</summary>
+      <table class="report"><thead><tr><th>資料日</th><th>部位</th><th>合計權重</th></tr></thead><tbody>
+      {% for h in futures.history %}
+        <tr><td>{{ h.date }}</td><td>{% for i in h["items"] %}{{ i.code }} {{ i.position_label }} {{ "{:,}".format(i.contracts) }} 口（{{ i.months }}）{% if not loop.last %}；{% endif %}{% else %}無{% endfor %}</td><td class="num">{{ "%.2f" | format(h.weight_total) }}%</td></tr>
+      {% endfor %}
+      </tbody></table>
+    </details>
+    {% endif %}
+    <p class="muted small">
+      說明：資料取自統一投信 ezmoney 每日投資組合（期貨名目本金／口數／契約年月；多空方向取自官網頁面，Excel 本身無多空欄）。
+      本站自 <strong>{{ futures.tracked_since }}</strong> 起才開始記錄期貨，之前的歷史快照沒有期貨資料，因此無法回溯當時的增減；
+      「口數增減」為本站相鄰兩個資料日的比較。台指期（TX）每口契約價值約為指數 × 200 元；轉倉（換月）時口數可能短暫變動。
+    </p>
+  </div>
+</section>
+{% endif %}
 
 <section id="trend" class="trend-section" data-trend-root>
   <h2 class="banner sub">近20天持股趨勢</h2>

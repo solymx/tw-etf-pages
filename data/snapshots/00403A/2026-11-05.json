@@ -10,7 +10,8 @@
   "meta": {
     "nav_total_raw": "NTD 113,160,360,833",
     "units_raw": "13,343,019,000",
-    "nav_pu_raw": "NTD 8.48"
+    "nav_pu_raw": "NTD 8.48",
+    "futures_seeded_at": "2026-11-05 manual baseline (ezmoney Excel re-download)"
   },
   "holdings": [
     {
@@ -363,5 +364,40 @@
       "weight_pct": 0.0,
       "is_placeholder": true
     }
-  ]
+  ],
+  "futures": [],
+  "assets": {
+    "futures_notional": {
+      "raw": "NTD 0",
+      "currency": "NTD",
+      "amount": 0.0,
+      "weight_pct": 0.0
+    },
+    "stocks": {
+      "raw": "NTD 95,055,250,800",
+      "currency": "NTD",
+      "amount": 95055250800.0,
+      "weight_pct": 84.0
+    },
+    "cash": {
+      "raw": "NTD 10,536,859,890",
+      "currency": "NTD",
+      "amount": 10536859890.0
+    },
+    "futures_margin": {
+      "raw": "NTD 0",
+      "currency": "NTD",
+      "amount": 0.0
+    },
+    "repo": {
+      "raw": "NTD 6,034,098,865",
+      "currency": "NTD",
+      "amount": 6034098865.0
+    },
+    "settlement": {
+      "raw": "NTD -992,466,732",
+      "currency": "NTD",
+      "amount": -992466732.0
+    }
+  }
 }
