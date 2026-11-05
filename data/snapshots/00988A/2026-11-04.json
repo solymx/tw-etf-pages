@@ -2,16 +2,15 @@
   "etf_ticker": "00988A",
   "as_of_date": "2026-11-04",
   "source": "uni_excel",
-  "fetched_at": "2026-11-05T18:51:26+08:00",
+  "fetched_at": "2026-11-05T19:44:43+08:00",
   "raw_file": "00988A_2026-11-05_uni.xlsx",
-  "raw_file_hash": "3820a8246a63110efe11cda35c5c6ec63a0276efad1a2e69aa3af8798ead02c7",
+  "raw_file_hash": "5a36750b774679b2d5d5eed7ed185be0729fa311b1fc4c7168fa43b4d762ef36",
   "holdings_count": 34,
   "placeholder_count": 0,
   "meta": {
     "nav_total_raw": "NTD 41,396,252,722",
     "units_raw": "3,029,937,000",
-    "nav_pu_raw": "NTD 13.66",
-    "futures_seeded_at": "2026-11-05 manual baseline (ezmoney Excel re-download)"
+    "nav_pu_raw": "NTD 13.66"
   },
   "holdings": [
     {

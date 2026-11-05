@@ -2,7 +2,7 @@
   "etf_ticker": "00400A",
   "as_of_date": "2026-11-05",
   "source": "zdsetf",
-  "fetched_at": "2026-11-05T18:51:34+08:00",
+  "fetched_at": "2026-11-05T19:44:51+08:00",
   "raw_file": "00400A_2026-11-05_zdsetf.json",
   "raw_file_hash": "daaf53f4906370fbc2f8bcffcb5dc327548f439e0e73b75759c49cc0a5626100",
   "holdings_count": 54,

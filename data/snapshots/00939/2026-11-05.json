@@ -2,16 +2,15 @@
   "etf_ticker": "00939",
   "as_of_date": "2026-11-05",
   "source": "uni_excel",
-  "fetched_at": "2026-11-05T18:51:52+08:00",
+  "fetched_at": "2026-11-05T19:45:09+08:00",
   "raw_file": "00939_2026-11-05_uni.xlsx",
-  "raw_file_hash": "cb7824c45eb7a997f02285d9a05c72286099af7bc2558f1d1e1c6fe5737713ae",
+  "raw_file_hash": "b9db85f3dad47b7145a281fe16a4b9844cc5736caa7545765269e3d845aaf0f0",
   "holdings_count": 40,
   "placeholder_count": 0,
   "meta": {
     "nav_total_raw": "NTD 27,655,189,702",
     "units_raw": "1,152,976,000",
-    "nav_pu_raw": "NTD 23.99",
-    "futures_seeded_at": "2026-11-05 manual baseline (ezmoney Excel re-download)"
+    "nav_pu_raw": "NTD 23.99"
   },
   "holdings": [
     {
