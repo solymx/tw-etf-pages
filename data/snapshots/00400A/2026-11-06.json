@@ -2,14 +2,14 @@
   "etf_ticker": "00400A",
   "as_of_date": "2026-11-06",
   "source": "zdsetf",
-  "fetched_at": "2026-11-06T18:59:30+08:00",
-  "raw_file": "00400A_2026-11-06_zdsetf.json",
-  "raw_file_hash": "a751187b6ec1ac5725a98e8366ea91fe5115d24e42142fe7a4e0c048220d1a89",
+  "fetched_at": "2026-11-07T00:41:57+08:00",
+  "raw_file": "00400A_2026-11-07_zdsetf.json",
+  "raw_file_hash": "f5528519c1683a86c2129ab4c541c608ce3aa8ad026a279e490bb86c55a19394",
   "holdings_count": 53,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.cathaysite.com.tw/",
-    "fetched_at_upstream": "2026-11-06T09:48:04"
+    "fetched_at_upstream": "2026-11-06T12:25:06"
   },
   "holdings": [
     {
