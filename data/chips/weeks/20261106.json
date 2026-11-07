@@ -1,0 +1,1807 @@
+{
+  "data_date": "20261106",
+  "definition": "TDCC 集保戶股權分散表 持股分級15（1,000,001股以上＝千張大戶）",
+  "source": "https://opendata.tdcc.com.tw/getOD.ashx?id=1-5",
+  "updated_at": "2026-11-07T17:05:13+08:00",
+  "stocks": {
+    "1101": {
+      "big_holders": 398,
+      "big_shares": 3863968572,
+      "big_pct": 51.36,
+      "total_holders": 509894,
+      "total_shares": 7523181742
+    },
+    "1102": {
+      "big_holders": 205,
+      "big_shares": 2872047116,
+      "big_pct": 80.98,
+      "total_holders": 96734,
+      "total_shares": 3546562881
+    },
+    "1210": {
+      "big_holders": 68,
+      "big_shares": 548369931,
+      "big_pct": 61.28,
+      "total_holders": 99749,
+      "total_shares": 894767222
+    },
+    "1215": {
+      "big_holders": 14,
+      "big_shares": 153051834,
+      "big_pct": 51.91,
+      "total_holders": 97570,
+      "total_shares": 294790098
+    },
+    "1216": {
+      "big_holders": 461,
+      "big_shares": 4944262420,
+      "big_pct": 87.01,
+      "total_holders": 131854,
+      "total_shares": 5682015421
+    },
+    "1301": {
+      "big_holders": 307,
+      "big_shares": 4651206108,
+      "big_pct": 73.06,
+      "total_holders": 309780,
+      "total_shares": 6365740781
+    },
+    "1303": {
+      "big_holders": 394,
+      "big_shares": 6571493545,
+      "big_pct": 82.86,
+      "total_holders": 345191,
+      "total_shares": 7930821589
+    },
+    "1319": {
+      "big_holders": 68,
+      "big_shares": 452956251,
+      "big_pct": 76.58,
+      "total_holders": 30524,
+      "total_shares": 591477068
+    },
+    "1326": {
+      "big_holders": 279,
+      "big_shares": 4743011558,
+      "big_pct": 80.92,
+      "total_holders": 182719,
+      "total_shares": 5861186291
+    },
+    "1402": {
+      "big_holders": 258,
+      "big_shares": 4679612514,
+      "big_pct": 87.42,
+      "total_holders": 85647,
+      "total_shares": 5352875227
+    },
+    "1476": {
+      "big_holders": 48,
+      "big_shares": 195847885,
+      "big_pct": 71.38,
+      "total_holders": 20530,
+      "total_shares": 274367111
+    },
+    "1477": {
+      "big_holders": 40,
+      "big_shares": 124423744,
+      "big_pct": 50.43,
+      "total_holders": 28377,
+      "total_shares": 246693713
+    },
+    "1504": {
+      "big_holders": 129,
+      "big_shares": 1612934782,
+      "big_pct": 67.87,
+      "total_holders": 198364,
+      "total_shares": 2376440684
+    },
+    "1513": {
+      "big_holders": 41,
+      "big_shares": 206183435,
+      "big_pct": 40.98,
+      "total_holders": 154579,
+      "total_shares": 503112515
+    },
+    "1560": {
+      "big_holders": 28,
+      "big_shares": 75045107,
+      "big_pct": 49.33,
+      "total_holders": 26977,
+      "total_shares": 152122027
+    },
+    "1605": {
+      "big_holders": 200,
+      "big_shares": 3220478516,
+      "big_pct": 72.67,
+      "total_holders": 244719,
+      "total_shares": 4431332948
+    },
+    "1709": {
+      "big_holders": 59,
+      "big_shares": 275296398,
+      "big_pct": 57.71,
+      "total_holders": 52537,
+      "total_shares": 477016272
+    },
+    "1717": {
+      "big_holders": 115,
+      "big_shares": 704870846,
+      "big_pct": 59.52,
+      "total_holders": 99684,
+      "total_shares": 1184245483
+    },
+    "1802": {
+      "big_holders": 101,
+      "big_shares": 2214468523,
+      "big_pct": 76.14,
+      "total_holders": 196247,
+      "total_shares": 2908060800
+    },
+    "1815": {
+      "big_holders": 57,
+      "big_shares": 272075495,
+      "big_pct": 44.26,
+      "total_holders": 179278,
+      "total_shares": 614703462
+    },
+    "2002": {
+      "big_holders": 466,
+      "big_shares": 7999399349,
+      "big_pct": 50.83,
+      "total_holders": 1285180,
+      "total_shares": 15734860997
+    },
+    "2006": {
+      "big_holders": 91,
+      "big_shares": 546896390,
+      "big_pct": 74.89,
+      "total_holders": 57075,
+      "total_shares": 730213818
+    },
+    "2015": {
+      "big_holders": 93,
+      "big_shares": 478431872,
+      "big_pct": 82.26,
+      "total_holders": 11482,
+      "total_shares": 581599424
+    },
+    "2027": {
+      "big_holders": 213,
+      "big_shares": 1942207622,
+      "big_pct": 75.15,
+      "total_holders": 99309,
+      "total_shares": 2584260615
+    },
+    "2059": {
+      "big_holders": 15,
+      "big_shares": 51678052,
+      "big_pct": 54.22,
+      "total_holders": 86551,
+      "total_shares": 95297072
+    },
+    "2105": {
+      "big_holders": 165,
+      "big_shares": 2547816132,
+      "big_pct": 78.6,
+      "total_holders": 77853,
+      "total_shares": 3241415536
+    },
+    "2206": {
+      "big_holders": 60,
+      "big_shares": 632529444,
+      "big_pct": 81.75,
+      "total_holders": 66939,
+      "total_shares": 773675604
+    },
+    "2207": {
+      "big_holders": 53,
+      "big_shares": 464050300,
+      "big_pct": 83.29,
+      "total_holders": 12594,
+      "total_shares": 557102768
+    },
+    "2211": {
+      "big_holders": 33,
+      "big_shares": 319281033,
+      "big_pct": 76.54,
+      "total_holders": 25187,
+      "total_shares": 417091463
+    },
+    "2301": {
+      "big_holders": 271,
+      "big_shares": 1668046218,
+      "big_pct": 73.28,
+      "total_holders": 203415,
+      "total_shares": 2276107763
+    },
+    "2303": {
+      "big_holders": 647,
+      "big_shares": 8338555037,
+      "big_pct": 66.33,
+      "total_holders": 1179353,
+      "total_shares": 12570093899
+    },
+    "2308": {
+      "big_holders": 262,
+      "big_shares": 1887966778,
+      "big_pct": 72.68,
+      "total_holders": 712573,
+      "total_shares": 2597543329
+    },
+    "2313": {
+      "big_holders": 112,
+      "big_shares": 657780809,
+      "big_pct": 53.31,
+      "total_holders": 287402,
+      "total_shares": 1233820589
+    },
+    "2317": {
+      "big_holders": 828,
+      "big_shares": 9374202736,
+      "big_pct": 66.59,
+      "total_holders": 1140615,
+      "total_shares": 14075746497
+    },
+    "2324": {
+      "big_holders": 331,
+      "big_shares": 2540013764,
+      "big_pct": 57.63,
+      "total_holders": 321607,
+      "total_shares": 4407146625
+    },
+    "2327": {
+      "big_holders": 180,
+      "big_shares": 1208440086,
+      "big_pct": 58.57,
+      "total_holders": 666901,
+      "total_shares": 2063128462
+    },
+    "2330": {
+      "big_holders": 1470,
+      "big_shares": 21846818147,
+      "big_pct": 84.24,
+      "total_holders": 3259221,
+      "total_shares": 25932370067
+    },
+    "2344": {
+      "big_holders": 293,
+      "big_shares": 2988819479,
+      "big_pct": 63.31,
+      "total_holders": 583766,
+      "total_shares": 4720490802
+    },
+    "2345": {
+      "big_holders": 98,
+      "big_shares": 324642454,
+      "big_pct": 57.85,
+      "total_holders": 121031,
+      "total_shares": 561117897
+    },
+    "2347": {
+      "big_holders": 159,
+      "big_shares": 1419867032,
+      "big_pct": 85.12,
+      "total_holders": 38059,
+      "total_shares": 1667946968
+    },
+    "2351": {
+      "big_holders": 46,
+      "big_shares": 126493001,
+      "big_pct": 63.94,
+      "total_holders": 22803,
+      "total_shares": 197801971
+    },
+    "2352": {
+      "big_holders": 73,
+      "big_shares": 686449969,
+      "big_pct": 43.43,
+      "total_holders": 193786,
+      "total_shares": 1580506505
+    },
+    "2353": {
+      "big_holders": 160,
+      "big_shares": 1035667973,
+      "big_pct": 33.98,
+      "total_holders": 382149,
+      "total_shares": 3047853828
+    },
+    "2356": {
+      "big_holders": 202,
+      "big_shares": 2561355474,
+      "big_pct": 71.39,
+      "total_holders": 237543,
+      "total_shares": 3587475066
+    },
+    "2357": {
+      "big_holders": 103,
+      "big_shares": 481896197,
+      "big_pct": 64.87,
+      "total_holders": 110137,
+      "total_shares": 742760280
+    },
+    "2360": {
+      "big_holders": 71,
+      "big_shares": 229003455,
+      "big_pct": 53.85,
+      "total_holders": 44179,
+      "total_shares": 425245742
+    },
+    "2368": {
+      "big_holders": 57,
+      "big_shares": 362262635,
+      "big_pct": 68.27,
+      "total_holders": 126717,
+      "total_shares": 530594972
+    },
+    "2376": {
+      "big_holders": 84,
+      "big_shares": 482636931,
+      "big_pct": 67.04,
+      "total_holders": 94534,
+      "total_shares": 719888886
+    },
+    "2377": {
+      "big_holders": 109,
+      "big_shares": 542780913,
+      "big_pct": 64.24,
+      "total_holders": 84963,
+      "total_shares": 844856199
+    },
+    "2379": {
+      "big_holders": 88,
+      "big_shares": 311722699,
+      "big_pct": 60.46,
+      "total_holders": 80099,
+      "total_shares": 515512641
+    },
+    "2382": {
+      "big_holders": 285,
+      "big_shares": 3340657458,
+      "big_pct": 81.32,
+      "total_holders": 279878,
+      "total_shares": 4107627432
+    },
+    "2383": {
+      "big_holders": 60,
+      "big_shares": 194461657,
+      "big_pct": 54.27,
+      "total_holders": 166401,
+      "total_shares": 358321114
+    },
+    "2385": {
+      "big_holders": 99,
+      "big_shares": 522513949,
+      "big_pct": 68.23,
+      "total_holders": 51069,
+      "total_shares": 765721188
+    },
+    "2393": {
+      "big_holders": 70,
+      "big_shares": 266782395,
+      "big_pct": 60.16,
+      "total_holders": 50131,
+      "total_shares": 443393086
+    },
+    "2395": {
+      "big_holders": 97,
+      "big_shares": 666357121,
+      "big_pct": 76.63,
+      "total_holders": 35685,
+      "total_shares": 869568973
+    },
+    "2404": {
+      "big_holders": 29,
+      "big_shares": 78543623,
+      "big_pct": 41.21,
+      "total_holders": 65574,
+      "total_shares": 190586698
+    },
+    "2408": {
+      "big_holders": 161,
+      "big_shares": 2686024310,
+      "big_pct": 77.85,
+      "total_holders": 421259,
+      "total_shares": 3450205894
+    },
+    "2409": {
+      "big_holders": 337,
+      "big_shares": 3114976496,
+      "big_pct": 41.27,
+      "total_holders": 707574,
+      "total_shares": 7547098972
+    },
+    "2412": {
+      "big_holders": 299,
+      "big_shares": 6099223490,
+      "big_pct": 78.62,
+      "total_holders": 289212,
+      "total_shares": 7757446545
+    },
+    "2421": {
+      "big_holders": 48,
+      "big_shares": 152273197,
+      "big_pct": 53.06,
+      "total_holders": 53021,
+      "total_shares": 286943669
+    },
+    "2428": {
+      "big_holders": 13,
+      "big_shares": 66962876,
+      "big_pct": 52.26,
+      "total_holders": 19596,
+      "total_shares": 128112726
+    },
+    "2441": {
+      "big_holders": 35,
+      "big_shares": 359572174,
+      "big_pct": 63.21,
+      "total_holders": 60426,
+      "total_shares": 568845921
+    },
+    "2449": {
+      "big_holders": 145,
+      "big_shares": 672662010,
+      "big_pct": 52.39,
+      "total_holders": 297542,
+      "total_shares": 1283882318
+    },
+    "2451": {
+      "big_holders": 30,
+      "big_shares": 288803672,
+      "big_pct": 66.95,
+      "total_holders": 43398,
+      "total_shares": 431345675
+    },
+    "2454": {
+      "big_holders": 224,
+      "big_shares": 989899078,
+      "big_pct": 61.67,
+      "total_holders": 814909,
+      "total_shares": 1604952613
+    },
+    "2455": {
+      "big_holders": 29,
+      "big_shares": 65366421,
+      "big_pct": 34.2,
+      "total_holders": 72372,
+      "total_shares": 191094483
+    },
+    "2458": {
+      "big_holders": 38,
+      "big_shares": 147968247,
+      "big_pct": 48.69,
+      "total_holders": 63755,
+      "total_shares": 303880392
+    },
+    "2467": {
+      "big_holders": 31,
+      "big_shares": 94421943,
+      "big_pct": 58.25,
+      "total_holders": 50247,
+      "total_shares": 162092034
+    },
+    "2472": {
+      "big_holders": 16,
+      "big_shares": 65972725,
+      "big_pct": 40.04,
+      "total_holders": 42937,
+      "total_shares": 164735137
+    },
+    "2474": {
+      "big_holders": 51,
+      "big_shares": 367957916,
+      "big_pct": 68.28,
+      "total_holders": 50891,
+      "total_shares": 538821068
+    },
+    "2476": {
+      "big_holders": 35,
+      "big_shares": 134740523,
+      "big_pct": 61.1,
+      "total_holders": 18138,
+      "total_shares": 220501259
+    },
+    "2478": {
+      "big_holders": 20,
+      "big_shares": 60189185,
+      "big_pct": 41.58,
+      "total_holders": 64516,
+      "total_shares": 144731339
+    },
+    "2481": {
+      "big_holders": 42,
+      "big_shares": 178604258,
+      "big_pct": 46.74,
+      "total_holders": 107791,
+      "total_shares": 382114927
+    },
+    "2486": {
+      "big_holders": 22,
+      "big_shares": 64705461,
+      "big_pct": 26.87,
+      "total_holders": 91130,
+      "total_shares": 240779410
+    },
+    "2504": {
+      "big_holders": 112,
+      "big_shares": 838582584,
+      "big_pct": 71.06,
+      "total_holders": 89568,
+      "total_shares": 1180000000
+    },
+    "2542": {
+      "big_holders": 112,
+      "big_shares": 1329665942,
+      "big_pct": 61.75,
+      "total_holders": 108417,
+      "total_shares": 2153083539
+    },
+    "2597": {
+      "big_holders": 25,
+      "big_shares": 242429406,
+      "big_pct": 78.02,
+      "total_holders": 12726,
+      "total_shares": 310716000
+    },
+    "2603": {
+      "big_holders": 211,
+      "big_shares": 1576377812,
+      "big_pct": 72.81,
+      "total_holders": 248516,
+      "total_shares": 2165042996
+    },
+    "2606": {
+      "big_holders": 74,
+      "big_shares": 630142151,
+      "big_pct": 74.56,
+      "total_holders": 44570,
+      "total_shares": 845055712
+    },
+    "2609": {
+      "big_holders": 179,
+      "big_shares": 2239107566,
+      "big_pct": 64.11,
+      "total_holders": 324580,
+      "total_shares": 3492104270
+    },
+    "2610": {
+      "big_holders": 251,
+      "big_shares": 4434214620,
+      "big_pct": 72.15,
+      "total_holders": 230711,
+      "total_shares": 6144988558
+    },
+    "2615": {
+      "big_holders": 189,
+      "big_shares": 2432495817,
+      "big_pct": 86.68,
+      "total_holders": 87546,
+      "total_shares": 2806146293
+    },
+    "2618": {
+      "big_holders": 407,
+      "big_shares": 4402731922,
+      "big_pct": 81.52,
+      "total_holders": 181985,
+      "total_shares": 5400444335
+    },
+    "2633": {
+      "big_holders": 138,
+      "big_shares": 4812819416,
+      "big_pct": 85.51,
+      "total_holders": 102426,
+      "total_shares": 5628293058
+    },
+    "2634": {
+      "big_holders": 31,
+      "big_shares": 436023495,
+      "big_pct": 46.29,
+      "total_holders": 111763,
+      "total_shares": 941867101
+    },
+    "2637": {
+      "big_holders": 93,
+      "big_shares": 589864440,
+      "big_pct": 79.02,
+      "total_holders": 21985,
+      "total_shares": 746409199
+    },
+    "2645": {
+      "big_holders": 14,
+      "big_shares": 294130150,
+      "big_pct": 78.52,
+      "total_holders": 30407,
+      "total_shares": 374570962
+    },
+    "2801": {
+      "big_holders": 566,
+      "big_shares": 9029546626,
+      "big_pct": 74.87,
+      "total_holders": 279411,
+      "total_shares": 12060197409
+    },
+    "2845": {
+      "big_holders": 241,
+      "big_shares": 3505882471,
+      "big_pct": 71.2,
+      "total_holders": 100669,
+      "total_shares": 4923424883
+    },
+    "2850": {
+      "big_holders": 43,
+      "big_shares": 182856933,
+      "big_pct": 57.87,
+      "total_holders": 17591,
+      "total_shares": 315963300
+    },
+    "2851": {
+      "big_holders": 60,
+      "big_shares": 533461705,
+      "big_pct": 66.65,
+      "total_holders": 27100,
+      "total_shares": 800388750
+    },
+    "2855": {
+      "big_holders": 105,
+      "big_shares": 1161618745,
+      "big_pct": 72.53,
+      "total_holders": 55819,
+      "total_shares": 1601414478
+    },
+    "2880": {
+      "big_holders": 555,
+      "big_shares": 11252961155,
+      "big_pct": 80.05,
+      "total_holders": 467012,
+      "total_shares": 14056134739
+    },
+    "2881": {
+      "big_holders": 531,
+      "big_shares": 11863225335,
+      "big_pct": 84.69,
+      "total_holders": 377626,
+      "total_shares": 14007364952
+    },
+    "2882": {
+      "big_holders": 683,
+      "big_shares": 12277235305,
+      "big_pct": 83.69,
+      "total_holders": 394889,
+      "total_shares": 14669210128
+    },
+    "2883": {
+      "big_holders": 853,
+      "big_shares": 11102246205,
+      "big_pct": 65.4,
+      "total_holders": 725341,
+      "total_shares": 16974612475
+    },
+    "2884": {
+      "big_holders": 956,
+      "big_shares": 12554964055,
+      "big_pct": 70.83,
+      "total_holders": 615711,
+      "total_shares": 17723510471
+    },
+    "2885": {
+      "big_holders": 722,
+      "big_shares": 11165122504,
+      "big_pct": 80.53,
+      "total_holders": 454995,
+      "total_shares": 13864395944
+    },
+    "2886": {
+      "big_holders": 477,
+      "big_shares": 12212497516,
+      "big_pct": 82.33,
+      "total_holders": 449473,
+      "total_shares": 14833378282
+    },
+    "2887": {
+      "big_holders": 1288,
+      "big_shares": 18045158532,
+      "big_pct": 71.84,
+      "total_holders": 712654,
+      "total_shares": 25115061997
+    },
+    "2890": {
+      "big_holders": 844,
+      "big_shares": 11584017991,
+      "big_pct": 78.36,
+      "total_holders": 452485,
+      "total_shares": 14782168721
+    },
+    "2891": {
+      "big_holders": 967,
+      "big_shares": 15663988365,
+      "big_pct": 79.6,
+      "total_holders": 568636,
+      "total_shares": 19675932806
+    },
+    "2892": {
+      "big_holders": 757,
+      "big_shares": 9927770312,
+      "big_pct": 69.04,
+      "total_holders": 431082,
+      "total_shares": 14379468650
+    },
+    "2903": {
+      "big_holders": 83,
+      "big_shares": 1082972848,
+      "big_pct": 76.43,
+      "total_holders": 58234,
+      "total_shares": 1416940589
+    },
+    "2912": {
+      "big_holders": 68,
+      "big_shares": 830407249,
+      "big_pct": 79.87,
+      "total_holders": 71218,
+      "total_shares": 1039622255
+    },
+    "2915": {
+      "big_holders": 86,
+      "big_shares": 704227744,
+      "big_pct": 63.77,
+      "total_holders": 57151,
+      "total_shares": 1104318772
+    },
+    "3005": {
+      "big_holders": 72,
+      "big_shares": 433482138,
+      "big_pct": 69.37,
+      "total_holders": 45780,
+      "total_shares": 624866050
+    },
+    "3008": {
+      "big_holders": 13,
+      "big_shares": 52445114,
+      "big_pct": 40.09,
+      "total_holders": 154046,
+      "total_shares": 130798197
+    },
+    "3017": {
+      "big_holders": 53,
+      "big_shares": 211258796,
+      "big_pct": 53.42,
+      "total_holders": 111707,
+      "total_shares": 395439207
+    },
+    "3023": {
+      "big_holders": 49,
+      "big_shares": 135961341,
+      "big_pct": 56.63,
+      "total_holders": 53467,
+      "total_shares": 240069014
+    },
+    "3026": {
+      "big_holders": 27,
+      "big_shares": 60600990,
+      "big_pct": 36.53,
+      "total_holders": 81855,
+      "total_shares": 165890318
+    },
+    "3034": {
+      "big_holders": 104,
+      "big_shares": 369149525,
+      "big_pct": 60.36,
+      "total_holders": 83395,
+      "total_shares": 611511469
+    },
+    "3036": {
+      "big_holders": 132,
+      "big_shares": 1061746397,
+      "big_pct": 78.76,
+      "total_holders": 81774,
+      "total_shares": 1347925051
+    },
+    "3037": {
+      "big_holders": 199,
+      "big_shares": 1135350837,
+      "big_pct": 69.05,
+      "total_holders": 324314,
+      "total_shares": 1644109013
+    },
+    "3042": {
+      "big_holders": 48,
+      "big_shares": 154847880,
+      "big_pct": 45.14,
+      "total_holders": 93343,
+      "total_shares": 342992971
+    },
+    "3044": {
+      "big_holders": 92,
+      "big_shares": 366554544,
+      "big_pct": 69.73,
+      "total_holders": 32232,
+      "total_shares": 525605898
+    },
+    "3045": {
+      "big_holders": 238,
+      "big_shares": 3410966972,
+      "big_pct": 90.7,
+      "total_holders": 57441,
+      "total_shares": 3760545662
+    },
+    "3081": {
+      "big_holders": 12,
+      "big_shares": 29460021,
+      "big_pct": 28.91,
+      "total_holders": 94162,
+      "total_shares": 101869004
+    },
+    "3090": {
+      "big_holders": 21,
+      "big_shares": 151104850,
+      "big_pct": 52.54,
+      "total_holders": 75028,
+      "total_shares": 287567150
+    },
+    "3105": {
+      "big_holders": 55,
+      "big_shares": 242187380,
+      "big_pct": 57.12,
+      "total_holders": 106350,
+      "total_shares": 423940384
+    },
+    "3131": {
+      "big_holders": 5,
+      "big_shares": 9669306,
+      "big_pct": 31.79,
+      "total_holders": 34040,
+      "total_shares": 30413601
+    },
+    "3167": {
+      "big_holders": 18,
+      "big_shares": 40290964,
+      "big_pct": 44.06,
+      "total_holders": 31977,
+      "total_shares": 91436795
+    },
+    "3189": {
+      "big_holders": 52,
+      "big_shares": 350859347,
+      "big_pct": 66.58,
+      "total_holders": 131438,
+      "total_shares": 526910360
+    },
+    "3211": {
+      "big_holders": 16,
+      "big_shares": 62069430,
+      "big_pct": 40.19,
+      "total_holders": 84657,
+      "total_shares": 154418021
+    },
+    "3227": {
+      "big_holders": 13,
+      "big_shares": 37925430,
+      "big_pct": 24.96,
+      "total_holders": 57052,
+      "total_shares": 151912842
+    },
+    "3231": {
+      "big_holders": 330,
+      "big_shares": 2242352056,
+      "big_pct": 65.37,
+      "total_holders": 339867,
+      "total_shares": 3429842250
+    },
+    "3260": {
+      "big_holders": 31,
+      "big_shares": 94779620,
+      "big_pct": 26.58,
+      "total_holders": 150714,
+      "total_shares": 356463418
+    },
+    "3264": {
+      "big_holders": 66,
+      "big_shares": 262351699,
+      "big_pct": 53.52,
+      "total_holders": 104721,
+      "total_shares": 490170076
+    },
+    "3265": {
+      "big_holders": 9,
+      "big_shares": 86992737,
+      "big_pct": 63.84,
+      "total_holders": 14588,
+      "total_shares": 136261659
+    },
+    "3293": {
+      "big_holders": 43,
+      "big_shares": 141443114,
+      "big_pct": 50.19,
+      "total_holders": 90141,
+      "total_shares": 281801560
+    },
+    "3363": {
+      "big_holders": 11,
+      "big_shares": 30322413,
+      "big_pct": 26.68,
+      "total_holders": 75571,
+      "total_shares": 113640567
+    },
+    "3376": {
+      "big_holders": 20,
+      "big_shares": 53185239,
+      "big_pct": 27.16,
+      "total_holders": 56346,
+      "total_shares": 195780215
+    },
+    "3406": {
+      "big_holders": 17,
+      "big_shares": 49028494,
+      "big_pct": 43.48,
+      "total_holders": 34335,
+      "total_shares": 112743063
+    },
+    "3443": {
+      "big_holders": 12,
+      "big_shares": 69665235,
+      "big_pct": 51.98,
+      "total_holders": 64186,
+      "total_shares": 134011911
+    },
+    "3450": {
+      "big_holders": 11,
+      "big_shares": 29573044,
+      "big_pct": 20.29,
+      "total_holders": 90062,
+      "total_shares": 145681382
+    },
+    "3481": {
+      "big_holders": 405,
+      "big_shares": 2515711513,
+      "big_pct": 31.48,
+      "total_holders": 989540,
+      "total_shares": 7989197337
+    },
+    "3491": {
+      "big_holders": 10,
+      "big_shares": 16295778,
+      "big_pct": 23.65,
+      "total_holders": 65050,
+      "total_shares": 68875125
+    },
+    "3529": {
+      "big_holders": 13,
+      "big_shares": 22235713,
+      "big_pct": 29.77,
+      "total_holders": 31600,
+      "total_shares": 74686492
+    },
+    "3533": {
+      "big_holders": 18,
+      "big_shares": 52882731,
+      "big_pct": 46.99,
+      "total_holders": 30774,
+      "total_shares": 112534691
+    },
+    "3563": {
+      "big_holders": 9,
+      "big_shares": 26587823,
+      "big_pct": 41.56,
+      "total_holders": 37340,
+      "total_shares": 63960858
+    },
+    "3583": {
+      "big_holders": 11,
+      "big_shares": 39199950,
+      "big_pct": 46.74,
+      "total_holders": 33359,
+      "total_shares": 83858644
+    },
+    "3596": {
+      "big_holders": 30,
+      "big_shares": 127505052,
+      "big_pct": 57.86,
+      "total_holders": 25816,
+      "total_shares": 220354321
+    },
+    "3605": {
+      "big_holders": 33,
+      "big_shares": 108724887,
+      "big_pct": 59.63,
+      "total_holders": 44983,
+      "total_shares": 182329428
+    },
+    "3617": {
+      "big_holders": 16,
+      "big_shares": 49927939,
+      "big_pct": 52.68,
+      "total_holders": 6894,
+      "total_shares": 94762049
+    },
+    "3653": {
+      "big_holders": 25,
+      "big_shares": 90244052,
+      "big_pct": 61.3,
+      "total_holders": 37669,
+      "total_shares": 147203878
+    },
+    "3661": {
+      "big_holders": 6,
+      "big_shares": 7147989,
+      "big_pct": 8.27,
+      "total_holders": 109071,
+      "total_shares": 86388514
+    },
+    "3665": {
+      "big_holders": 34,
+      "big_shares": 85684367,
+      "big_pct": 42.93,
+      "total_holders": 64086,
+      "total_shares": 199578405
+    },
+    "3693": {
+      "big_holders": 5,
+      "big_shares": 15614710,
+      "big_pct": 36.32,
+      "total_holders": 24254,
+      "total_shares": 42990694
+    },
+    "3702": {
+      "big_holders": 196,
+      "big_shares": 1357386614,
+      "big_pct": 77.5,
+      "total_holders": 97851,
+      "total_shares": 1751374307
+    },
+    "3706": {
+      "big_holders": 81,
+      "big_shares": 778770646,
+      "big_pct": 53.34,
+      "total_holders": 198674,
+      "total_shares": 1459933715
+    },
+    "3711": {
+      "big_holders": 432,
+      "big_shares": 3641999223,
+      "big_pct": 81.09,
+      "total_holders": 369076,
+      "total_shares": 4490754949
+    },
+    "4441": {
+      "big_holders": 11,
+      "big_shares": 37927555,
+      "big_pct": 55.46,
+      "total_holders": 2482,
+      "total_shares": 68375328
+    },
+    "4551": {
+      "big_holders": 17,
+      "big_shares": 79245857,
+      "big_pct": 68.77,
+      "total_holders": 8030,
+      "total_shares": 115222498
+    },
+    "4576": {
+      "big_holders": 20,
+      "big_shares": 71925997,
+      "big_pct": 60.03,
+      "total_holders": 24424,
+      "total_shares": 119801848
+    },
+    "4746": {
+      "big_holders": 17,
+      "big_shares": 35616142,
+      "big_pct": 29.61,
+      "total_holders": 44840,
+      "total_shares": 120255963
+    },
+    "4749": {
+      "big_holders": 8,
+      "big_shares": 21457602,
+      "big_pct": 22.65,
+      "total_holders": 62813,
+      "total_shares": 94732865
+    },
+    "4763": {
+      "big_holders": 44,
+      "big_shares": 552206412,
+      "big_pct": 55.82,
+      "total_holders": 54737,
+      "total_shares": 989146670
+    },
+    "4766": {
+      "big_holders": 15,
+      "big_shares": 77081961,
+      "big_pct": 63.93,
+      "total_holders": 9870,
+      "total_shares": 120570780
+    },
+    "4770": {
+      "big_holders": 20,
+      "big_shares": 49576293,
+      "big_pct": 61.98,
+      "total_holders": 8110,
+      "total_shares": 79976000
+    },
+    "4904": {
+      "big_holders": 236,
+      "big_shares": 3289866578,
+      "big_pct": 91.19,
+      "total_holders": 82689,
+      "total_shares": 3607705357
+    },
+    "4915": {
+      "big_holders": 64,
+      "big_shares": 238463477,
+      "big_pct": 50.53,
+      "total_holders": 34346,
+      "total_shares": 471880824
+    },
+    "4938": {
+      "big_holders": 227,
+      "big_shares": 2045593774,
+      "big_pct": 76.45,
+      "total_holders": 136340,
+      "total_shares": 2675708703
+    },
+    "4958": {
+      "big_holders": 120,
+      "big_shares": 748184357,
+      "big_pct": 65.88,
+      "total_holders": 221016,
+      "total_shares": 1135510067
+    },
+    "4966": {
+      "big_holders": 9,
+      "big_shares": 16295804,
+      "big_pct": 20.63,
+      "total_holders": 31855,
+      "total_shares": 78957788
+    },
+    "4979": {
+      "big_holders": 15,
+      "big_shares": 38225184,
+      "big_pct": 26.61,
+      "total_holders": 92072,
+      "total_shares": 143602321
+    },
+    "4991": {
+      "big_holders": 8,
+      "big_shares": 42024987,
+      "big_pct": 34.62,
+      "total_holders": 63466,
+      "total_shares": 121363372
+    },
+    "5269": {
+      "big_holders": 7,
+      "big_shares": 41994315,
+      "big_pct": 56.62,
+      "total_holders": 30647,
+      "total_shares": 74156359
+    },
+    "5274": {
+      "big_holders": 4,
+      "big_shares": 9025865,
+      "big_pct": 21.7,
+      "total_holders": 65258,
+      "total_shares": 41582953
+    },
+    "5289": {
+      "big_holders": 8,
+      "big_shares": 18134291,
+      "big_pct": 18.43,
+      "total_holders": 84842,
+      "total_shares": 98342931
+    },
+    "5347": {
+      "big_holders": 143,
+      "big_shares": 1499485147,
+      "big_pct": 79.82,
+      "total_holders": 120815,
+      "total_shares": 1878502192
+    },
+    "5351": {
+      "big_holders": 26,
+      "big_shares": 91851644,
+      "big_pct": 27.91,
+      "total_holders": 115543,
+      "total_shares": 329056781
+    },
+    "5425": {
+      "big_holders": 17,
+      "big_shares": 73478763,
+      "big_pct": 27.88,
+      "total_holders": 105513,
+      "total_shares": 263485486
+    },
+    "5434": {
+      "big_holders": 29,
+      "big_shares": 78573603,
+      "big_pct": 40.5,
+      "total_holders": 32558,
+      "total_shares": 194007983
+    },
+    "5439": {
+      "big_holders": 11,
+      "big_shares": 22179827,
+      "big_pct": 23.85,
+      "total_holders": 36289,
+      "total_shares": 92976751
+    },
+    "5469": {
+      "big_holders": 40,
+      "big_shares": 335196013,
+      "big_pct": 68.94,
+      "total_holders": 36317,
+      "total_shares": 486166000
+    },
+    "5483": {
+      "big_holders": 85,
+      "big_shares": 338968788,
+      "big_pct": 52.86,
+      "total_holders": 154314,
+      "total_shares": 641221651
+    },
+    "5522": {
+      "big_holders": 29,
+      "big_shares": 671806257,
+      "big_pct": 85.95,
+      "total_holders": 17960,
+      "total_shares": 781596241
+    },
+    "5536": {
+      "big_holders": 19,
+      "big_shares": 43834738,
+      "big_pct": 35.32,
+      "total_holders": 37409,
+      "total_shares": 124080930
+    },
+    "5871": {
+      "big_holders": 212,
+      "big_shares": 1121914551,
+      "big_pct": 64.26,
+      "total_holders": 115307,
+      "total_shares": 1745649584
+    },
+    "5876": {
+      "big_holders": 368,
+      "big_shares": 4115336184,
+      "big_pct": 83.81,
+      "total_holders": 48515,
+      "total_shares": 4910219171
+    },
+    "5880": {
+      "big_holders": 738,
+      "big_shares": 11625040669,
+      "big_pct": 72.32,
+      "total_holders": 402098,
+      "total_shares": 16072960337
+    },
+    "5904": {
+      "big_holders": 112,
+      "big_shares": 820271457,
+      "big_pct": 77.06,
+      "total_holders": 89123,
+      "total_shares": 1064438260
+    },
+    "6121": {
+      "big_holders": 29,
+      "big_shares": 88406966,
+      "big_pct": 47.79,
+      "total_holders": 19488,
+      "total_shares": 184970519
+    },
+    "6138": {
+      "big_holders": 6,
+      "big_shares": 23204237,
+      "big_pct": 30.67,
+      "total_holders": 30699,
+      "total_shares": 75633500
+    },
+    "6139": {
+      "big_holders": 25,
+      "big_shares": 117086266,
+      "big_pct": 49.7,
+      "total_holders": 66617,
+      "total_shares": 235575724
+    },
+    "6147": {
+      "big_holders": 87,
+      "big_shares": 430936849,
+      "big_pct": 57.87,
+      "total_holders": 165620,
+      "total_shares": 744577539
+    },
+    "6176": {
+      "big_holders": 40,
+      "big_shares": 108924725,
+      "big_pct": 31.23,
+      "total_holders": 61135,
+      "total_shares": 348770447
+    },
+    "6177": {
+      "big_holders": 60,
+      "big_shares": 315186707,
+      "big_pct": 66.72,
+      "total_holders": 19968,
+      "total_shares": 472370728
+    },
+    "6187": {
+      "big_holders": 14,
+      "big_shares": 30823162,
+      "big_pct": 31.36,
+      "total_holders": 56285,
+      "total_shares": 98262739
+    },
+    "6191": {
+      "big_holders": 22,
+      "big_shares": 272619881,
+      "big_pct": 51.49,
+      "total_holders": 91505,
+      "total_shares": 529392200
+    },
+    "6196": {
+      "big_holders": 26,
+      "big_shares": 145839232,
+      "big_pct": 66.19,
+      "total_holders": 33175,
+      "total_shares": 220329529
+    },
+    "6197": {
+      "big_holders": 9,
+      "big_shares": 46212980,
+      "big_pct": 36.55,
+      "total_holders": 51922,
+      "total_shares": 126417558
+    },
+    "6213": {
+      "big_holders": 35,
+      "big_shares": 206326876,
+      "big_pct": 56.74,
+      "total_holders": 88175,
+      "total_shares": 363617218
+    },
+    "6214": {
+      "big_holders": 14,
+      "big_shares": 193379116,
+      "big_pct": 71.03,
+      "total_holders": 44906,
+      "total_shares": 272243066
+    },
+    "6223": {
+      "big_holders": 14,
+      "big_shares": 36792618,
+      "big_pct": 37.55,
+      "total_holders": 86297,
+      "total_shares": 97981309
+    },
+    "6239": {
+      "big_holders": 88,
+      "big_shares": 407314037,
+      "big_pct": 53.65,
+      "total_holders": 197206,
+      "total_shares": 759146634
+    },
+    "6257": {
+      "big_holders": 69,
+      "big_shares": 200661357,
+      "big_pct": 41.46,
+      "total_holders": 119547,
+      "total_shares": 483912325
+    },
+    "6271": {
+      "big_holders": 38,
+      "big_shares": 88197967,
+      "big_pct": 42.18,
+      "total_holders": 61958,
+      "total_shares": 209058024
+    },
+    "6274": {
+      "big_holders": 47,
+      "big_shares": 147232777,
+      "big_pct": 49.15,
+      "total_holders": 146000,
+      "total_shares": 299509343
+    },
+    "6278": {
+      "big_holders": 55,
+      "big_shares": 184360057,
+      "big_pct": 63.05,
+      "total_holders": 35969,
+      "total_shares": 292398353
+    },
+    "6285": {
+      "big_holders": 56,
+      "big_shares": 264025901,
+      "big_pct": 54.61,
+      "total_holders": 97646,
+      "total_shares": 483441359
+    },
+    "6409": {
+      "big_holders": 19,
+      "big_shares": 48304934,
+      "big_pct": 54.73,
+      "total_holders": 17480,
+      "total_shares": 88253566
+    },
+    "6414": {
+      "big_holders": 21,
+      "big_shares": 73547828,
+      "big_pct": 46.8,
+      "total_holders": 20110,
+      "total_shares": 157147655
+    },
+    "6415": {
+      "big_holders": 67,
+      "big_shares": 251733020,
+      "big_pct": 64.44,
+      "total_holders": 25548,
+      "total_shares": 390642739
+    },
+    "6442": {
+      "big_holders": 11,
+      "big_shares": 29564062,
+      "big_pct": 36.13,
+      "total_holders": 72755,
+      "total_shares": 81817552
+    },
+    "6446": {
+      "big_holders": 62,
+      "big_shares": 180434926,
+      "big_pct": 42.71,
+      "total_holders": 72353,
+      "total_shares": 422442636
+    },
+    "6472": {
+      "big_holders": 12,
+      "big_shares": 57760158,
+      "big_pct": 45.11,
+      "total_holders": 30418,
+      "total_shares": 128027622
+    },
+    "6488": {
+      "big_holders": 51,
+      "big_shares": 346760714,
+      "big_pct": 65.66,
+      "total_holders": 176142,
+      "total_shares": 528113725
+    },
+    "6505": {
+      "big_holders": 111,
+      "big_shares": 9137101435,
+      "big_pct": 95.91,
+      "total_holders": 94763,
+      "total_shares": 9525959652
+    },
+    "6510": {
+      "big_holders": 4,
+      "big_shares": 15710200,
+      "big_pct": 47.7,
+      "total_holders": 24423,
+      "total_shares": 32929138
+    },
+    "6515": {
+      "big_holders": 7,
+      "big_shares": 11204419,
+      "big_pct": 30.71,
+      "total_holders": 75014,
+      "total_shares": 36483573
+    },
+    "6526": {
+      "big_holders": 10,
+      "big_shares": 127494836,
+      "big_pct": 76.11,
+      "total_holders": 18347,
+      "total_shares": 167505554
+    },
+    "6531": {
+      "big_holders": 31,
+      "big_shares": 95042192,
+      "big_pct": 53.38,
+      "total_holders": 48057,
+      "total_shares": 178016179
+    },
+    "6548": {
+      "big_holders": 54,
+      "big_shares": 810973120,
+      "big_pct": 85.32,
+      "total_holders": 31283,
+      "total_shares": 950464700
+    },
+    "6584": {
+      "big_holders": 11,
+      "big_shares": 43906833,
+      "big_pct": 61.51,
+      "total_holders": 15047,
+      "total_shares": 71379810
+    },
+    "6640": {
+      "big_holders": 2,
+      "big_shares": 18439750,
+      "big_pct": 63.21,
+      "total_holders": 13863,
+      "total_shares": 29168500
+    },
+    "6669": {
+      "big_holders": 57,
+      "big_shares": 368303383,
+      "big_pct": 63.11,
+      "total_holders": 226647,
+      "total_shares": 583578747
+    },
+    "6670": {
+      "big_holders": 36,
+      "big_shares": 91799798,
+      "big_pct": 65.85,
+      "total_holders": 6404,
+      "total_shares": 139386973
+    },
+    "6672": {
+      "big_holders": 11,
+      "big_shares": 19658706,
+      "big_pct": 23.88,
+      "total_holders": 58814,
+      "total_shares": 82311633
+    },
+    "6683": {
+      "big_holders": 1,
+      "big_shares": 3097490,
+      "big_pct": 11.24,
+      "total_holders": 36154,
+      "total_shares": 27552661
+    },
+    "6691": {
+      "big_holders": 21,
+      "big_shares": 75762158,
+      "big_pct": 56.73,
+      "total_holders": 18348,
+      "total_shares": 133546930
+    },
+    "6715": {
+      "big_holders": 12,
+      "big_shares": 52212881,
+      "big_pct": 70.29,
+      "total_holders": 5701,
+      "total_shares": 74274026
+    },
+    "6770": {
+      "big_holders": 215,
+      "big_shares": 1823097152,
+      "big_pct": 38.61,
+      "total_holders": 693664,
+      "total_shares": 4720754854
+    },
+    "6782": {
+      "big_holders": 9,
+      "big_shares": 24536551,
+      "big_pct": 38.94,
+      "total_holders": 5853,
+      "total_shares": 63000000
+    },
+    "6805": {
+      "big_holders": 10,
+      "big_shares": 31558656,
+      "big_pct": 46.03,
+      "total_holders": 18389,
+      "total_shares": 68553896
+    },
+    "6830": {
+      "big_holders": 6,
+      "big_shares": 9402152,
+      "big_pct": 15.45,
+      "total_holders": 27905,
+      "total_shares": 60816571
+    },
+    "6831": {
+      "big_holders": 8,
+      "big_shares": 24516166,
+      "big_pct": 36.32,
+      "total_holders": 12739,
+      "total_shares": 67500000
+    },
+    "6890": {
+      "big_holders": 17,
+      "big_shares": 230238280,
+      "big_pct": 91.98,
+      "total_holders": 7291,
+      "total_shares": 250296650
+    },
+    "6957": {
+      "big_holders": 11,
+      "big_shares": 30557734,
+      "big_pct": 52.01,
+      "total_holders": 2804,
+      "total_shares": 58744037
+    },
+    "7750": {
+      "big_holders": 16,
+      "big_shares": 44249147,
+      "big_pct": 61.59,
+      "total_holders": 11864,
+      "total_shares": 71843000
+    },
+    "7751": {
+      "big_holders": 6,
+      "big_shares": 9937757,
+      "big_pct": 36.95,
+      "total_holders": 10125,
+      "total_shares": 26888600
+    },
+    "7769": {
+      "big_holders": 15,
+      "big_shares": 101178514,
+      "big_pct": 56.23,
+      "total_holders": 74641,
+      "total_shares": 179930000
+    },
+    "7828": {
+      "big_holders": 10,
+      "big_shares": 21636256,
+      "big_pct": 53.38,
+      "total_holders": 16313,
+      "total_shares": 40531911
+    },
+    "7856": {
+      "big_holders": 9,
+      "big_shares": 16602105,
+      "big_pct": 50.3,
+      "total_holders": 19802,
+      "total_shares": 33000000
+    },
+    "8016": {
+      "big_holders": 21,
+      "big_shares": 36118672,
+      "big_pct": 30.06,
+      "total_holders": 34952,
+      "total_shares": 120136876
+    },
+    "8021": {
+      "big_holders": 19,
+      "big_shares": 50026586,
+      "big_pct": 33.02,
+      "total_holders": 91597,
+      "total_shares": 151483921
+    },
+    "8046": {
+      "big_holders": 42,
+      "big_shares": 517600716,
+      "big_pct": 80.1,
+      "total_holders": 100097,
+      "total_shares": 646165487
+    },
+    "8069": {
+      "big_holders": 147,
+      "big_shares": 765170226,
+      "big_pct": 66.22,
+      "total_holders": 106865,
+      "total_shares": 1155369905
+    },
+    "8070": {
+      "big_holders": 60,
+      "big_shares": 508674311,
+      "big_pct": 70.09,
+      "total_holders": 35237,
+      "total_shares": 725648455
+    },
+    "8112": {
+      "big_holders": 43,
+      "big_shares": 170116310,
+      "big_pct": 30.06,
+      "total_holders": 117432,
+      "total_shares": 565911761
+    },
+    "8150": {
+      "big_holders": 68,
+      "big_shares": 402451068,
+      "big_pct": 57.12,
+      "total_holders": 141219,
+      "total_shares": 704523126
+    },
+    "8210": {
+      "big_holders": 11,
+      "big_shares": 65374179,
+      "big_pct": 52.04,
+      "total_holders": 55925,
+      "total_shares": 125619146
+    },
+    "8299": {
+      "big_holders": 22,
+      "big_shares": 58153845,
+      "big_pct": 26.26,
+      "total_holders": 208551,
+      "total_shares": 221439247
+    },
+    "8358": {
+      "big_holders": 19,
+      "big_shares": 56774019,
+      "big_pct": 22.47,
+      "total_holders": 176245,
+      "total_shares": 252588000
+    },
+    "8422": {
+      "big_holders": 52,
+      "big_shares": 470862123,
+      "big_pct": 34.57,
+      "total_holders": 146512,
+      "total_shares": 1361779009
+    },
+    "8454": {
+      "big_holders": 10,
+      "big_shares": 210230887,
+      "big_pct": 79.33,
+      "total_holders": 37050,
+      "total_shares": 264975275
+    },
+    "8464": {
+      "big_holders": 47,
+      "big_shares": 227908090,
+      "big_pct": 77.77,
+      "total_holders": 3798,
+      "total_shares": 293020200
+    },
+    "8926": {
+      "big_holders": 58,
+      "big_shares": 430612200,
+      "big_pct": 51.86,
+      "total_holders": 60945,
+      "total_shares": 830282000
+    },
+    "8996": {
+      "big_holders": 14,
+      "big_shares": 25951478,
+      "big_pct": 27.71,
+      "total_holders": 40460,
+      "total_shares": 93627273
+    },
+    "9802": {
+      "big_holders": 31,
+      "big_shares": 113368116,
+      "big_pct": 56.4,
+      "total_holders": 12044,
+      "total_shares": 200991673
+    },
+    "9904": {
+      "big_holders": 221,
+      "big_shares": 1922694391,
+      "big_pct": 65.24,
+      "total_holders": 101220,
+      "total_shares": 2946787213
+    },
+    "9910": {
+      "big_holders": 64,
+      "big_shares": 857584271,
+      "big_pct": 86.84,
+      "total_holders": 23465,
+      "total_shares": 987482831
+    },
+    "9917": {
+      "big_holders": 56,
+      "big_shares": 338233060,
+      "big_pct": 71.39,
+      "total_holders": 57053,
+      "total_shares": 473756948
+    },
+    "9933": {
+      "big_holders": 82,
+      "big_shares": 561535960,
+      "big_pct": 58.37,
+      "total_holders": 51584,
+      "total_shares": 962011718
+    },
+    "9939": {
+      "big_holders": 52,
+      "big_shares": 154737853,
+      "big_pct": 52.31,
+      "total_holders": 27609,
+      "total_shares": 295786475
+    },
+    "9941": {
+      "big_holders": 31,
+      "big_shares": 389912038,
+      "big_pct": 66.4,
+      "total_holders": 43765,
+      "total_shares": 587149073
+    },
+    "9958": {
+      "big_holders": 25,
+      "big_shares": 111372209,
+      "big_pct": 41.72,
+      "total_holders": 59302,
+      "total_shares": 266896665
+    }
+  }
+}
