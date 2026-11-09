@@ -27,7 +27,7 @@
       "rows": [
         {
           "stock_code": "6531",
-          "stock_name": "愛普科技",
+          "stock_name": "愛普*",
           "curr_shares": 2829000,
           "prev_shares": 2300000,
           "shares_delta": 529000,
@@ -46,7 +46,7 @@
         },
         {
           "stock_code": "2454",
-          "stock_name": "聯發科技",
+          "stock_name": "聯發科",
           "curr_shares": 957000,
           "prev_shares": 892000,
           "shares_delta": 65000,
@@ -122,7 +122,7 @@
         },
         {
           "stock_code": "3265",
-          "stock_name": "台星科股份有限公司",
+          "stock_name": "台星科",
           "curr_shares": 3517000,
           "prev_shares": 3477000,
           "shares_delta": 40000,
@@ -179,7 +179,7 @@
         },
         {
           "stock_code": "3231",
-          "stock_name": "緯創資通",
+          "stock_name": "緯創",
           "curr_shares": 4981000,
           "prev_shares": 4946000,
           "shares_delta": 35000,
@@ -198,7 +198,7 @@
         },
         {
           "stock_code": "2428",
-          "stock_name": "興勤電子工業",
+          "stock_name": "興勤",
           "curr_shares": 2408000,
           "prev_shares": 2377000,
           "shares_delta": 31000,
@@ -274,7 +274,7 @@
         },
         {
           "stock_code": "2360",
-          "stock_name": "致茂電子",
+          "stock_name": "致茂",
           "curr_shares": 1001000,
           "prev_shares": 988000,
           "shares_delta": 13000,
@@ -312,7 +312,7 @@
         },
         {
           "stock_code": "3711",
-          "stock_name": "日月光投資控股",
+          "stock_name": "日月光投控",
           "curr_shares": 1391000,
           "prev_shares": 1382000,
           "shares_delta": 9000,
@@ -407,7 +407,7 @@
         },
         {
           "stock_code": "2059",
-          "stock_name": "川湖科技",
+          "stock_name": "川湖",
           "curr_shares": 141000,
           "prev_shares": 138000,
           "shares_delta": 3000,
@@ -464,7 +464,7 @@
         },
         {
           "stock_code": "2486",
-          "stock_name": "一詮精密",
+          "stock_name": "一詮",
           "curr_shares": 1071000,
           "prev_shares": 1607000,
           "shares_delta": -536000,
@@ -648,7 +648,7 @@
         },
         {
           "stock_code": "6223",
-          "stock_name": "旺矽科技",
+          "stock_name": "旺矽",
           "curr_shares": 301000,
           "prev_shares": 301000,
           "shares_delta": 0,
@@ -666,7 +666,7 @@
         },
         {
           "stock_code": "3017",
-          "stock_name": "奇鋐科技",
+          "stock_name": "奇鋐",
           "curr_shares": 388000,
           "prev_shares": 388000,
           "shares_delta": 0,
@@ -684,7 +684,7 @@
         },
         {
           "stock_code": "6669",
-          "stock_name": "緯穎科技服務",
+          "stock_name": "緯穎",
           "curr_shares": 506225,
           "prev_shares": 506225,
           "shares_delta": 0,
@@ -702,7 +702,7 @@
         },
         {
           "stock_code": "2301",
-          "stock_name": "光寶科技",
+          "stock_name": "光寶科",
           "curr_shares": 3320000,
           "prev_shares": 3320000,
           "shares_delta": 0,
@@ -738,7 +738,7 @@
         },
         {
           "stock_code": "6239",
-          "stock_name": "力成科技",
+          "stock_name": "力成",
           "curr_shares": 2410000,
           "prev_shares": 2410000,
           "shares_delta": 0,
@@ -774,7 +774,7 @@
         },
         {
           "stock_code": "8996",
-          "stock_name": "高力熱處理工業",
+          "stock_name": "高力",
           "curr_shares": 382000,
           "prev_shares": 382000,
           "shares_delta": 0,
@@ -792,7 +792,7 @@
         },
         {
           "stock_code": "5274",
-          "stock_name": "信驊科技",
+          "stock_name": "信驊",
           "curr_shares": 37900,
           "prev_shares": 37900,
           "shares_delta": 0,
@@ -864,7 +864,7 @@
         },
         {
           "stock_code": "3045",
-          "stock_name": "台灣大哥",
+          "stock_name": "台灣大",
           "curr_shares": 2856000,
           "prev_shares": 2856000,
           "shares_delta": 0,
@@ -936,7 +936,7 @@
         },
         {
           "stock_code": "6446",
-          "stock_name": "藥華醫藥",
+          "stock_name": "藥華藥",
           "curr_shares": 42000,
           "prev_shares": 42000,
           "shares_delta": 0,
@@ -1029,7 +1029,7 @@
       "increase": [
         {
           "stock_code": "6531",
-          "stock_name": "愛普科技",
+          "stock_name": "愛普*",
           "prev_shares": 2300000,
           "curr_shares": 2829000,
           "shares_delta": 529000,
@@ -1039,7 +1039,7 @@
         },
         {
           "stock_code": "2454",
-          "stock_name": "聯發科技",
+          "stock_name": "聯發科",
           "prev_shares": 892000,
           "curr_shares": 957000,
           "shares_delta": 65000,
@@ -1079,7 +1079,7 @@
         },
         {
           "stock_code": "3265",
-          "stock_name": "台星科股份有限公司",
+          "stock_name": "台星科",
           "prev_shares": 3477000,
           "curr_shares": 3517000,
           "shares_delta": 40000,
@@ -1109,7 +1109,7 @@
         },
         {
           "stock_code": "3231",
-          "stock_name": "緯創資通",
+          "stock_name": "緯創",
           "prev_shares": 4946000,
           "curr_shares": 4981000,
           "shares_delta": 35000,
@@ -1119,7 +1119,7 @@
         },
         {
           "stock_code": "2428",
-          "stock_name": "興勤電子工業",
+          "stock_name": "興勤",
           "prev_shares": 2377000,
           "curr_shares": 2408000,
           "shares_delta": 31000,
@@ -1159,7 +1159,7 @@
         },
         {
           "stock_code": "2360",
-          "stock_name": "致茂電子",
+          "stock_name": "致茂",
           "prev_shares": 988000,
           "curr_shares": 1001000,
           "shares_delta": 13000,
@@ -1179,7 +1179,7 @@
         },
         {
           "stock_code": "3711",
-          "stock_name": "日月光投資控股",
+          "stock_name": "日月光投控",
           "prev_shares": 1382000,
           "curr_shares": 1391000,
           "shares_delta": 9000,
@@ -1229,7 +1229,7 @@
         },
         {
           "stock_code": "2059",
-          "stock_name": "川湖科技",
+          "stock_name": "川湖",
           "prev_shares": 138000,
           "curr_shares": 141000,
           "shares_delta": 3000,
@@ -1261,7 +1261,7 @@
       "decrease": [
         {
           "stock_code": "2486",
-          "stock_name": "一詮精密",
+          "stock_name": "一詮",
           "prev_shares": 1607000,
           "curr_shares": 1071000,
           "shares_delta": -536000,

@@ -2,7 +2,7 @@
   "etf_ticker": "00881",
   "as_of_date": "2026-11-09",
   "source": "cathay",
-  "fetched_at": "2026-11-09T18:51:03+08:00",
+  "fetched_at": "2026-11-09T20:22:50+08:00",
   "raw_file": "00881_2026-11-09_cathay.json",
   "raw_file_hash": "80bc832c1d879d66323a281891a407293278fe0c0480efa09a041f3792f7fd51",
   "holdings_count": 30,

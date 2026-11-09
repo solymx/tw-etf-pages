@@ -27,7 +27,7 @@
       "rows": [
         {
           "stock_code": "2330",
-          "stock_name": "台積電",
+          "stock_name": "台灣積體電路製造",
           "curr_shares": 753000,
           "prev_shares": 753000,
           "shares_delta": 0,
@@ -81,7 +81,7 @@
         },
         {
           "stock_code": "2383",
-          "stock_name": "台光電",
+          "stock_name": "台光電子材料",
           "curr_shares": 144000,
           "prev_shares": 144000,
           "shares_delta": 0,
@@ -117,7 +117,7 @@
         },
         {
           "stock_code": "1303",
-          "stock_name": "南亞",
+          "stock_name": "南亞塑膠工業",
           "curr_shares": 2117000,
           "prev_shares": 2117000,
           "shares_delta": 0,
@@ -135,7 +135,7 @@
         },
         {
           "stock_code": "3653",
-          "stock_name": "健策",
+          "stock_name": "健策精密工業",
           "curr_shares": 90000,
           "prev_shares": 90000,
           "shares_delta": 0,
@@ -153,7 +153,7 @@
         },
         {
           "stock_code": "3037",
-          "stock_name": "欣興",
+          "stock_name": "欣興電子",
           "curr_shares": 625000,
           "prev_shares": 625000,
           "shares_delta": 0,
@@ -171,7 +171,7 @@
         },
         {
           "stock_code": "2308",
-          "stock_name": "台達電",
+          "stock_name": "台達電子工業",
           "curr_shares": 404000,
           "prev_shares": 404000,
           "shares_delta": 0,
@@ -261,7 +261,7 @@
         },
         {
           "stock_code": "3008",
-          "stock_name": "大立光",
+          "stock_name": "大立光電",
           "curr_shares": 65000,
           "prev_shares": 65000,
           "shares_delta": 0,
@@ -297,7 +297,7 @@
         },
         {
           "stock_code": "3443",
-          "stock_name": "創意",
+          "stock_name": "創意電子",
           "curr_shares": 45000,
           "prev_shares": 45000,
           "shares_delta": 0,
@@ -315,7 +315,7 @@
         },
         {
           "stock_code": "2368",
-          "stock_name": "金像電",
+          "stock_name": "金像電子（股）公司",
           "curr_shares": 337000,
           "prev_shares": 337000,
           "shares_delta": 0,
@@ -387,7 +387,7 @@
         },
         {
           "stock_code": "2376",
-          "stock_name": "技嘉",
+          "stock_name": "技嘉科技",
           "curr_shares": 877000,
           "prev_shares": 877000,
           "shares_delta": 0,
@@ -441,7 +441,7 @@
         },
         {
           "stock_code": "8046",
-          "stock_name": "南電",
+          "stock_name": "南亞電路板",
           "curr_shares": 251000,
           "prev_shares": 251000,
           "shares_delta": 0,
@@ -459,7 +459,7 @@
         },
         {
           "stock_code": "3081",
-          "stock_name": "聯亞",
+          "stock_name": "聯亞光電工業",
           "curr_shares": 119600,
           "prev_shares": 119600,
           "shares_delta": 0,
@@ -495,7 +495,7 @@
         },
         {
           "stock_code": "2303",
-          "stock_name": "聯電",
+          "stock_name": "聯華電子",
           "curr_shares": 2279000,
           "prev_shares": 2279000,
           "shares_delta": 0,
@@ -531,7 +531,7 @@
         },
         {
           "stock_code": "3665",
-          "stock_name": "貿聯-KY",
+          "stock_name": "貿聯控股（BizLink Holding In",
           "curr_shares": 143336,
           "prev_shares": 143336,
           "shares_delta": 0,
@@ -567,7 +567,7 @@
         },
         {
           "stock_code": "6213",
-          "stock_name": "聯茂",
+          "stock_name": "聯茂電子",
           "curr_shares": 356000,
           "prev_shares": 356000,
           "shares_delta": 0,
@@ -639,7 +639,7 @@
         },
         {
           "stock_code": "6274",
-          "stock_name": "台燿",
+          "stock_name": "台燿科技",
           "curr_shares": 176000,
           "prev_shares": 176000,
           "shares_delta": 0,
@@ -657,7 +657,7 @@
         },
         {
           "stock_code": "3036",
-          "stock_name": "文曄",
+          "stock_name": "文曄科技",
           "curr_shares": 906000,
           "prev_shares": 906000,
           "shares_delta": 0,
@@ -675,7 +675,7 @@
         },
         {
           "stock_code": "3026",
-          "stock_name": "禾伸堂",
+          "stock_name": "禾伸堂企業",
           "curr_shares": 286000,
           "prev_shares": 286000,
           "shares_delta": 0,
@@ -729,7 +729,7 @@
         },
         {
           "stock_code": "2327",
-          "stock_name": "國巨*",
+          "stock_name": "國巨",
           "curr_shares": 320000,
           "prev_shares": 320000,
           "shares_delta": 0,
@@ -801,7 +801,7 @@
         },
         {
           "stock_code": "7751",
-          "stock_name": "竑騰",
+          "stock_name": "竑騰科技",
           "curr_shares": 91000,
           "prev_shares": 91000,
           "shares_delta": 0,
