@@ -2,9 +2,9 @@
   "etf_ticker": "00982A",
   "as_of_date": "2026-11-09",
   "source": "zdsetf",
-  "fetched_at": "2026-11-09T20:22:32+08:00",
+  "fetched_at": "2026-11-09T21:36:46+08:00",
   "raw_file": "00982A_2026-11-09_zdsetf.json",
-  "raw_file_hash": "7fda51b5a2b9a8838d259788c9b4670d7543f8f901b5088134affb86c4caf1d1",
+  "raw_file_hash": "8f1068db59d484a2eb8462e05ca9f48667f4e1fe2216afad1201d146cc344992",
   "holdings_count": 58,
   "placeholder_count": 4,
   "meta": {
@@ -21,7 +21,7 @@
     },
     {
       "stock_code": "2454",
-      "stock_name": "聯發科",
+      "stock_name": "聯發科技",
       "shares": 957000,
       "weight_pct": 8.4528,
       "is_placeholder": false
@@ -42,7 +42,7 @@
     },
     {
       "stock_code": "6531",
-      "stock_name": "愛普*",
+      "stock_name": "愛普科技",
       "shares": 2829000,
       "weight_pct": 4.481,
       "is_placeholder": false
@@ -77,7 +77,7 @@
     },
     {
       "stock_code": "2360",
-      "stock_name": "致茂",
+      "stock_name": "致茂電子",
       "shares": 1001000,
       "weight_pct": 2.9669,
       "is_placeholder": false
@@ -91,49 +91,49 @@
     },
     {
       "stock_code": "2059",
-      "stock_name": "川湖",
+      "stock_name": "川湖科技",
       "shares": 141000,
       "weight_pct": 2.678,
       "is_placeholder": false
     },
     {
       "stock_code": "6223",
-      "stock_name": "旺矽",
+      "stock_name": "旺矽科技",
       "shares": 301000,
       "weight_pct": 2.6443,
       "is_placeholder": false
     },
     {
       "stock_code": "3017",
-      "stock_name": "奇鋐",
+      "stock_name": "奇鋐科技",
       "shares": 388000,
       "weight_pct": 2.3368,
       "is_placeholder": false
     },
     {
       "stock_code": "3231",
-      "stock_name": "緯創",
+      "stock_name": "緯創資通",
       "shares": 4981000,
       "weight_pct": 1.9901,
       "is_placeholder": false
     },
     {
       "stock_code": "6669",
-      "stock_name": "緯穎",
+      "stock_name": "緯穎科技服務",
       "shares": 506225,
       "weight_pct": 1.9745,
       "is_placeholder": false
     },
     {
       "stock_code": "3711",
-      "stock_name": "日月光投控",
+      "stock_name": "日月光投資控股",
       "shares": 1391000,
       "weight_pct": 1.8503,
       "is_placeholder": false
     },
     {
       "stock_code": "2301",
-      "stock_name": "光寶科",
+      "stock_name": "光寶科技",
       "shares": 3320000,
       "weight_pct": 1.7122,
       "is_placeholder": false
@@ -182,7 +182,7 @@
     },
     {
       "stock_code": "6239",
-      "stock_name": "力成",
+      "stock_name": "力成科技",
       "shares": 2410000,
       "weight_pct": 1.2772,
       "is_placeholder": false
@@ -196,7 +196,7 @@
     },
     {
       "stock_code": "3265",
-      "stock_name": "台星科",
+      "stock_name": "台星科股份有限公司",
       "shares": 3517000,
       "weight_pct": 1.2217,
       "is_placeholder": false
@@ -210,21 +210,21 @@
     },
     {
       "stock_code": "8996",
-      "stock_name": "高力",
+      "stock_name": "高力熱處理工業",
       "shares": 382000,
       "weight_pct": 1.1594,
       "is_placeholder": false
     },
     {
       "stock_code": "2428",
-      "stock_name": "興勤",
+      "stock_name": "興勤電子工業",
       "shares": 2408000,
       "weight_pct": 1.1048,
       "is_placeholder": false
     },
     {
       "stock_code": "5274",
-      "stock_name": "信驊",
+      "stock_name": "信驊科技",
       "shares": 37900,
       "weight_pct": 1.0514,
       "is_placeholder": false
@@ -259,7 +259,7 @@
     },
     {
       "stock_code": "3045",
-      "stock_name": "台灣大",
+      "stock_name": "台灣大哥",
       "shares": 2856000,
       "weight_pct": 0.8871,
       "is_placeholder": false
@@ -287,7 +287,7 @@
     },
     {
       "stock_code": "2486",
-      "stock_name": "一詮",
+      "stock_name": "一詮精密",
       "shares": 1071000,
       "weight_pct": 0.405,
       "is_placeholder": false
@@ -357,7 +357,7 @@
     },
     {
       "stock_code": "6446",
-      "stock_name": "藥華藥",
+      "stock_name": "藥華醫藥",
       "shares": 42000,
       "weight_pct": 0.1364,
       "is_placeholder": false
@@ -385,7 +385,7 @@
     },
     {
       "stock_code": "3529",
-      "stock_name": "力旺",
+      "stock_name": "力旺電子",
       "shares": 1000,
       "weight_pct": 0.0047,
       "is_placeholder": true
@@ -413,7 +413,7 @@
     },
     {
       "stock_code": "2881",
-      "stock_name": "富邦金",
+      "stock_name": "富邦金融控股",
       "shares": 250,
       "weight_pct": 0.0,
       "is_placeholder": true

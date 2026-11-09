@@ -45,7 +45,7 @@
         },
         {
           "stock_code": "3017",
-          "stock_name": "奇鋐",
+          "stock_name": "奇鋐科技",
           "curr_shares": 125000,
           "prev_shares": 125000,
           "shares_delta": 0,
@@ -63,7 +63,7 @@
         },
         {
           "stock_code": "2881",
-          "stock_name": "富邦金控",
+          "stock_name": "富邦金融控股",
           "curr_shares": 1958000,
           "prev_shares": 1958000,
           "shares_delta": 0,
@@ -207,7 +207,7 @@
         },
         {
           "stock_code": "2059",
-          "stock_name": "川湖",
+          "stock_name": "川湖科技",
           "curr_shares": 22000,
           "prev_shares": 22000,
           "shares_delta": 0,
@@ -243,7 +243,7 @@
         },
         {
           "stock_code": "3045",
-          "stock_name": "台灣大",
+          "stock_name": "台灣大哥",
           "curr_shares": 1283000,
           "prev_shares": 1283000,
           "shares_delta": 0,
@@ -261,7 +261,7 @@
         },
         {
           "stock_code": "3443",
-          "stock_name": "創意電子",
+          "stock_name": "創意",
           "curr_shares": 25000,
           "prev_shares": 25000,
           "shares_delta": 0,
@@ -315,7 +315,7 @@
         },
         {
           "stock_code": "2884",
-          "stock_name": "玉山金控",
+          "stock_name": "玉山金融控股",
           "curr_shares": 3495000,
           "prev_shares": 3495000,
           "shares_delta": 0,
@@ -351,7 +351,7 @@
         },
         {
           "stock_code": "2892",
-          "stock_name": "第一金",
+          "stock_name": "第一金融控股",
           "curr_shares": 3844000,
           "prev_shares": 3844000,
           "shares_delta": 0,
@@ -405,7 +405,7 @@
         },
         {
           "stock_code": "3711",
-          "stock_name": "日月光投控",
+          "stock_name": "日月光投資控股",
           "curr_shares": 279000,
           "prev_shares": 279000,
           "shares_delta": 0,
@@ -423,7 +423,7 @@
         },
         {
           "stock_code": "2890",
-          "stock_name": "永豐金控",
+          "stock_name": "永豐金融",
           "curr_shares": 3686000,
           "prev_shares": 3686000,
           "shares_delta": 0,
@@ -459,7 +459,7 @@
         },
         {
           "stock_code": "3008",
-          "stock_name": "大立光電",
+          "stock_name": "大立光",
           "curr_shares": 30000,
           "prev_shares": 30000,
           "shares_delta": 0,
@@ -495,7 +495,7 @@
         },
         {
           "stock_code": "2408",
-          "stock_name": "南亞科",
+          "stock_name": "南亞科技",
           "curr_shares": 314000,
           "prev_shares": 314000,
           "shares_delta": 0,
@@ -531,7 +531,7 @@
         },
         {
           "stock_code": "5904",
-          "stock_name": "寶雅*",
+          "stock_name": "寶雅國際",
           "curr_shares": 1450000,
           "prev_shares": 1450000,
           "shares_delta": 0,
@@ -621,7 +621,7 @@
         },
         {
           "stock_code": "2886",
-          "stock_name": "兆豐金控",
+          "stock_name": "兆豐金",
           "curr_shares": 1919000,
           "prev_shares": 1919000,
           "shares_delta": 0,
@@ -657,7 +657,7 @@
         },
         {
           "stock_code": "1216",
-          "stock_name": "統一",
+          "stock_name": "統一企業",
           "curr_shares": 1311000,
           "prev_shares": 1311000,
           "shares_delta": 0,
@@ -801,7 +801,7 @@
         },
         {
           "stock_code": "6669",
-          "stock_name": "緯穎",
+          "stock_name": "緯穎科技服務",
           "curr_shares": 43741,
           "prev_shares": 43741,
           "shares_delta": 0,
@@ -855,7 +855,7 @@
         },
         {
           "stock_code": "2891",
-          "stock_name": "中信金",
+          "stock_name": "中國信託金融控股",
           "curr_shares": 874000,
           "prev_shares": 874000,
           "shares_delta": 0,
@@ -873,7 +873,7 @@
         },
         {
           "stock_code": "6187",
-          "stock_name": "萬潤科技",
+          "stock_name": "萬潤",
           "curr_shares": 68000,
           "prev_shares": 68000,
           "shares_delta": 0,
@@ -963,7 +963,7 @@
         },
         {
           "stock_code": "1605",
-          "stock_name": "華新",
+          "stock_name": "華新麗華",
           "curr_shares": 1843000,
           "prev_shares": 1843000,
           "shares_delta": 0,
@@ -1125,7 +1125,7 @@
         },
         {
           "stock_code": "6670",
-          "stock_name": "復盛應用",
+          "stock_name": "復盛應用科技",
           "curr_shares": 223000,
           "prev_shares": 223000,
           "shares_delta": 0,
@@ -1161,7 +1161,7 @@
         },
         {
           "stock_code": "6691",
-          "stock_name": "洋基工程",
+          "stock_name": "洋基工程股份有限公司",
           "curr_shares": 103000,
           "prev_shares": 103000,
           "shares_delta": 0,
@@ -1179,7 +1179,7 @@
         },
         {
           "stock_code": "3264",
-          "stock_name": "欣銓",
+          "stock_name": "欣銓科技",
           "curr_shares": 309000,
           "prev_shares": 309000,
           "shares_delta": 0,
@@ -1269,7 +1269,7 @@
         },
         {
           "stock_code": "6415",
-          "stock_name": "矽力*-KY",
+          "stock_name": "矽力杰",
           "curr_shares": 118000,
           "prev_shares": 118000,
           "shares_delta": 0,
@@ -1413,7 +1413,7 @@
         },
         {
           "stock_code": "2454",
-          "stock_name": "聯發科",
+          "stock_name": "聯發科技",
           "curr_shares": 8000,
           "prev_shares": 8000,
           "shares_delta": 0,
@@ -1449,7 +1449,7 @@
         },
         {
           "stock_code": "2383",
-          "stock_name": "台光電子",
+          "stock_name": "台光電",
           "curr_shares": 4000,
           "prev_shares": 4000,
           "shares_delta": 0,
@@ -1467,7 +1467,7 @@
         },
         {
           "stock_code": "2317",
-          "stock_name": "鴻海",
+          "stock_name": "鴻海精密工業",
           "curr_shares": 17000,
           "prev_shares": 17000,
           "shares_delta": 0,

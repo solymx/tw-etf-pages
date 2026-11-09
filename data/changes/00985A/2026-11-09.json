@@ -2,7 +2,7 @@
   "etf_ticker": "00985A",
   "as_of_date": "2026-11-09",
   "prev_as_of_date": "2026-11-06",
-  "compared_at": "2026-11-09T20:22:31+08:00",
+  "compared_at": "2026-11-09T21:36:45+08:00",
   "source": "zdsetf",
   "placeholder_policy": {
     "max_shares": 1000,
@@ -19,7 +19,7 @@
   "increase": [
     {
       "stock_code": "2027",
-      "stock_name": "大成不銹鋼工業",
+      "stock_name": "大成鋼",
       "prev_shares": 11562000,
       "curr_shares": 13722000,
       "shares_delta": 2160000,
@@ -29,7 +29,7 @@
     },
     {
       "stock_code": "2609",
-      "stock_name": "陽明海運",
+      "stock_name": "陽明",
       "prev_shares": 6482000,
       "curr_shares": 8254000,
       "shares_delta": 1772000,
@@ -39,7 +39,7 @@
     },
     {
       "stock_code": "2303",
-      "stock_name": "聯華電子",
+      "stock_name": "聯電",
       "prev_shares": 4268000,
       "curr_shares": 5350000,
       "shares_delta": 1082000,
@@ -49,7 +49,7 @@
     },
     {
       "stock_code": "3036",
-      "stock_name": "文曄科技",
+      "stock_name": "文曄",
       "prev_shares": 4137000,
       "curr_shares": 4684000,
       "shares_delta": 547000,
@@ -69,7 +69,7 @@
     },
     {
       "stock_code": "2376",
-      "stock_name": "技嘉科技",
+      "stock_name": "技嘉",
       "prev_shares": 1769000,
       "curr_shares": 2100000,
       "shares_delta": 331000,
@@ -99,7 +99,7 @@
     },
     {
       "stock_code": "3037",
-      "stock_name": "欣興電子",
+      "stock_name": "欣興",
       "prev_shares": 601000,
       "curr_shares": 739000,
       "shares_delta": 138000,
@@ -109,7 +109,7 @@
     },
     {
       "stock_code": "8046",
-      "stock_name": "南亞電路板",
+      "stock_name": "南電",
       "prev_shares": 2000,
       "curr_shares": 117000,
       "shares_delta": 115000,
@@ -129,7 +129,7 @@
     },
     {
       "stock_code": "7750",
-      "stock_name": "新代科技",
+      "stock_name": "新  代",
       "prev_shares": 209000,
       "curr_shares": 278000,
       "shares_delta": 69000,
@@ -149,7 +149,7 @@
     },
     {
       "stock_code": "2330",
-      "stock_name": "台灣積體電路製造",
+      "stock_name": "台積電",
       "prev_shares": 1680000,
       "curr_shares": 1726000,
       "shares_delta": 46000,
@@ -159,7 +159,7 @@
     },
     {
       "stock_code": "2383",
-      "stock_name": "台光電子材料",
+      "stock_name": "台光電",
       "prev_shares": 172000,
       "curr_shares": 198000,
       "shares_delta": 26000,
@@ -169,7 +169,7 @@
     },
     {
       "stock_code": "3653",
-      "stock_name": "健策精密工業",
+      "stock_name": "健策",
       "prev_shares": 146000,
       "curr_shares": 165000,
       "shares_delta": 19000,
@@ -191,7 +191,7 @@
   "decrease": [
     {
       "stock_code": "2610",
-      "stock_name": "中華航空",
+      "stock_name": "華航",
       "prev_shares": 19301000,
       "curr_shares": 9650000,
       "shares_delta": -9651000,
@@ -211,7 +211,7 @@
     },
     {
       "stock_code": "1402",
-      "stock_name": "遠東新世紀",
+      "stock_name": "遠東新",
       "prev_shares": 13427000,
       "curr_shares": 6713000,
       "shares_delta": -6714000,

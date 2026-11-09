@@ -2,9 +2,9 @@
   "etf_ticker": "00980A",
   "as_of_date": "2026-11-09",
   "source": "zdsetf",
-  "fetched_at": "2026-11-09T20:22:30+08:00",
+  "fetched_at": "2026-11-09T21:36:44+08:00",
   "raw_file": "00980A_2026-11-09_zdsetf.json",
-  "raw_file_hash": "02fadab1ccaf71fdff15c19767999624371e6727f4ae3986c45c486647d9894e",
+  "raw_file_hash": "3787b59cbd3950daea570d92f4eb0b07af970e7cabbdcd60e24fff89bdb7bac6",
   "holdings_count": 50,
   "placeholder_count": 0,
   "meta": {
@@ -14,7 +14,7 @@
   "holdings": [
     {
       "stock_code": "2330",
-      "stock_name": "台灣積體電路製造",
+      "stock_name": "台積電",
       "shares": 753000,
       "weight_pct": 10.0,
       "is_placeholder": false
@@ -35,7 +35,7 @@
     },
     {
       "stock_code": "2383",
-      "stock_name": "台光電子材料",
+      "stock_name": "台光電",
       "shares": 144000,
       "weight_pct": 3.48,
       "is_placeholder": false
@@ -49,28 +49,28 @@
     },
     {
       "stock_code": "1303",
-      "stock_name": "南亞塑膠工業",
+      "stock_name": "南亞",
       "shares": 2117000,
       "weight_pct": 3.31,
       "is_placeholder": false
     },
     {
       "stock_code": "3653",
-      "stock_name": "健策精密工業",
+      "stock_name": "健策",
       "shares": 90000,
       "weight_pct": 3.01,
       "is_placeholder": false
     },
     {
       "stock_code": "3037",
-      "stock_name": "欣興電子",
+      "stock_name": "欣興",
       "shares": 625000,
       "weight_pct": 2.81,
       "is_placeholder": false
     },
     {
       "stock_code": "2308",
-      "stock_name": "台達電子工業",
+      "stock_name": "台達電",
       "shares": 404000,
       "weight_pct": 2.79,
       "is_placeholder": false
@@ -105,7 +105,7 @@
     },
     {
       "stock_code": "3008",
-      "stock_name": "大立光電",
+      "stock_name": "大立光",
       "shares": 65000,
       "weight_pct": 1.9,
       "is_placeholder": false
@@ -119,14 +119,14 @@
     },
     {
       "stock_code": "3443",
-      "stock_name": "創意電子",
+      "stock_name": "創意",
       "shares": 45000,
       "weight_pct": 1.79,
       "is_placeholder": false
     },
     {
       "stock_code": "2368",
-      "stock_name": "金像電子（股）公司",
+      "stock_name": "金像電",
       "shares": 337000,
       "weight_pct": 1.79,
       "is_placeholder": false
@@ -154,7 +154,7 @@
     },
     {
       "stock_code": "2376",
-      "stock_name": "技嘉科技",
+      "stock_name": "技嘉",
       "shares": 877000,
       "weight_pct": 1.61,
       "is_placeholder": false
@@ -175,14 +175,14 @@
     },
     {
       "stock_code": "8046",
-      "stock_name": "南亞電路板",
+      "stock_name": "南電",
       "shares": 251000,
       "weight_pct": 1.39,
       "is_placeholder": false
     },
     {
       "stock_code": "3081",
-      "stock_name": "聯亞光電工業",
+      "stock_name": "聯亞",
       "shares": 119600,
       "weight_pct": 1.37,
       "is_placeholder": false
@@ -196,7 +196,7 @@
     },
     {
       "stock_code": "2303",
-      "stock_name": "聯華電子",
+      "stock_name": "聯電",
       "shares": 2279000,
       "weight_pct": 1.31,
       "is_placeholder": false
@@ -210,7 +210,7 @@
     },
     {
       "stock_code": "3665",
-      "stock_name": "貿聯控股（BizLink Holding In",
+      "stock_name": "貿聯-KY",
       "shares": 143336,
       "weight_pct": 1.21,
       "is_placeholder": false
@@ -224,7 +224,7 @@
     },
     {
       "stock_code": "6213",
-      "stock_name": "聯茂電子",
+      "stock_name": "聯茂",
       "shares": 356000,
       "weight_pct": 1.12,
       "is_placeholder": false
@@ -252,21 +252,21 @@
     },
     {
       "stock_code": "6274",
-      "stock_name": "台燿科技",
+      "stock_name": "台燿",
       "shares": 176000,
       "weight_pct": 1.01,
       "is_placeholder": false
     },
     {
       "stock_code": "3036",
-      "stock_name": "文曄科技",
+      "stock_name": "文曄",
       "shares": 906000,
       "weight_pct": 0.98,
       "is_placeholder": false
     },
     {
       "stock_code": "3026",
-      "stock_name": "禾伸堂企業",
+      "stock_name": "禾伸堂",
       "shares": 286000,
       "weight_pct": 0.85,
       "is_placeholder": false
@@ -287,7 +287,7 @@
     },
     {
       "stock_code": "2327",
-      "stock_name": "國巨",
+      "stock_name": "國巨*",
       "shares": 320000,
       "weight_pct": 0.78,
       "is_placeholder": false
@@ -315,7 +315,7 @@
     },
     {
       "stock_code": "7751",
-      "stock_name": "竑騰科技",
+      "stock_name": "竑騰",
       "shares": 91000,
       "weight_pct": 0.57,
       "is_placeholder": false

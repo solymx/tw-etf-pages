@@ -2,9 +2,9 @@
   "etf_ticker": "00985A",
   "as_of_date": "2026-11-09",
   "source": "zdsetf",
-  "fetched_at": "2026-11-09T20:22:31+08:00",
+  "fetched_at": "2026-11-09T21:36:45+08:00",
   "raw_file": "00985A_2026-11-09_zdsetf.json",
-  "raw_file_hash": "8eaf3b2dea1bab7af7975ed2ecbf7442d0efa8d7f5eb0c257c65cc2202f663b4",
+  "raw_file_hash": "c7a96675a6c6aae6c04d40b2a40554180a0de41c105f831df03a0ff2f352ccb5",
   "holdings_count": 50,
   "placeholder_count": 0,
   "meta": {
@@ -14,7 +14,7 @@
   "holdings": [
     {
       "stock_code": "2330",
-      "stock_name": "台灣積體電路製造",
+      "stock_name": "台積電",
       "shares": 1726000,
       "weight_pct": 14.72,
       "is_placeholder": false
@@ -28,7 +28,7 @@
     },
     {
       "stock_code": "3653",
-      "stock_name": "健策精密工業",
+      "stock_name": "健策",
       "shares": 165000,
       "weight_pct": 3.55,
       "is_placeholder": false
@@ -42,14 +42,14 @@
     },
     {
       "stock_code": "3036",
-      "stock_name": "文曄科技",
+      "stock_name": "文曄",
       "shares": 4684000,
       "weight_pct": 3.24,
       "is_placeholder": false
     },
     {
       "stock_code": "2383",
-      "stock_name": "台光電子材料",
+      "stock_name": "台光電",
       "shares": 198000,
       "weight_pct": 3.08,
       "is_placeholder": false
@@ -63,7 +63,7 @@
     },
     {
       "stock_code": "2308",
-      "stock_name": "台達電子工業",
+      "stock_name": "台達電",
       "shares": 585000,
       "weight_pct": 2.59,
       "is_placeholder": false
@@ -77,14 +77,14 @@
     },
     {
       "stock_code": "2027",
-      "stock_name": "大成不銹鋼工業",
+      "stock_name": "大成鋼",
       "shares": 13722000,
       "weight_pct": 2.52,
       "is_placeholder": false
     },
     {
       "stock_code": "2376",
-      "stock_name": "技嘉科技",
+      "stock_name": "技嘉",
       "shares": 2100000,
       "weight_pct": 2.48,
       "is_placeholder": false
@@ -98,7 +98,7 @@
     },
     {
       "stock_code": "3037",
-      "stock_name": "欣興電子",
+      "stock_name": "欣興",
       "shares": 739000,
       "weight_pct": 2.14,
       "is_placeholder": false
@@ -112,14 +112,14 @@
     },
     {
       "stock_code": "2303",
-      "stock_name": "聯華電子",
+      "stock_name": "聯電",
       "shares": 5350000,
       "weight_pct": 1.97,
       "is_placeholder": false
     },
     {
       "stock_code": "3081",
-      "stock_name": "聯亞光電工業",
+      "stock_name": "聯亞",
       "shares": 261000,
       "weight_pct": 1.92,
       "is_placeholder": false
@@ -133,7 +133,7 @@
     },
     {
       "stock_code": "2609",
-      "stock_name": "陽明海運",
+      "stock_name": "陽明",
       "shares": 8254000,
       "weight_pct": 1.81,
       "is_placeholder": false
@@ -154,21 +154,21 @@
     },
     {
       "stock_code": "7750",
-      "stock_name": "新代科技",
+      "stock_name": "新  代",
       "shares": 278000,
       "weight_pct": 1.6,
       "is_placeholder": false
     },
     {
       "stock_code": "3008",
-      "stock_name": "大立光電",
+      "stock_name": "大立光",
       "shares": 84000,
       "weight_pct": 1.58,
       "is_placeholder": false
     },
     {
       "stock_code": "2327",
-      "stock_name": "國巨",
+      "stock_name": "國巨*",
       "shares": 999000,
       "weight_pct": 1.57,
       "is_placeholder": false
@@ -189,7 +189,7 @@
     },
     {
       "stock_code": "3665",
-      "stock_name": "貿聯控股（BizLink Holding In",
+      "stock_name": "貿聯-KY",
       "shares": 258000,
       "weight_pct": 1.4,
       "is_placeholder": false
@@ -203,7 +203,7 @@
     },
     {
       "stock_code": "6488",
-      "stock_name": "環球晶圓",
+      "stock_name": "環球晶",
       "shares": 600000,
       "weight_pct": 1.29,
       "is_placeholder": false
@@ -224,7 +224,7 @@
     },
     {
       "stock_code": "2368",
-      "stock_name": "金像電子（股）公司",
+      "stock_name": "金像電",
       "shares": 344000,
       "weight_pct": 1.17,
       "is_placeholder": false
@@ -266,21 +266,21 @@
     },
     {
       "stock_code": "2377",
-      "stock_name": "微星科技",
+      "stock_name": "微星",
       "shares": 1576000,
       "weight_pct": 0.86,
       "is_placeholder": false
     },
     {
       "stock_code": "2610",
-      "stock_name": "中華航空",
+      "stock_name": "華航",
       "shares": 9650000,
       "weight_pct": 0.8,
       "is_placeholder": false
     },
     {
       "stock_code": "6526",
-      "stock_name": "達發科技",
+      "stock_name": "達發",
       "shares": 314000,
       "weight_pct": 0.8,
       "is_placeholder": false
@@ -301,7 +301,7 @@
     },
     {
       "stock_code": "1402",
-      "stock_name": "遠東新世紀",
+      "stock_name": "遠東新",
       "shares": 6713000,
       "weight_pct": 0.7,
       "is_placeholder": false
@@ -315,7 +315,7 @@
     },
     {
       "stock_code": "3661",
-      "stock_name": "世芯電子",
+      "stock_name": "世芯-KY",
       "shares": 51000,
       "weight_pct": 0.61,
       "is_placeholder": false
@@ -329,28 +329,28 @@
     },
     {
       "stock_code": "1301",
-      "stock_name": "台灣塑膠工業",
+      "stock_name": "台塑",
       "shares": 1724000,
       "weight_pct": 0.45,
       "is_placeholder": false
     },
     {
       "stock_code": "8046",
-      "stock_name": "南亞電路板",
+      "stock_name": "南電",
       "shares": 117000,
       "weight_pct": 0.42,
       "is_placeholder": false
     },
     {
       "stock_code": "3491",
-      "stock_name": "昇達科技",
+      "stock_name": "昇達科",
       "shares": 73000,
       "weight_pct": 0.33,
       "is_placeholder": false
     },
     {
       "stock_code": "3105",
-      "stock_name": "穩懋半導體",
+      "stock_name": "穩懋",
       "shares": 194000,
       "weight_pct": 0.33,
       "is_placeholder": false

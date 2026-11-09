@@ -2,14 +2,14 @@
   "etf_ticker": "00994A",
   "as_of_date": "2026-11-09",
   "source": "zdsetf",
-  "fetched_at": "2026-11-09T20:22:37+08:00",
+  "fetched_at": "2026-11-09T21:36:50+08:00",
   "raw_file": "00994A_2026-11-09_zdsetf.json",
-  "raw_file_hash": "817c33d0ad4c63cf2c3d296bb29d1cedbd62f9d3c1b5809464a51ba0fe671ad3",
+  "raw_file_hash": "33bec467236bf2ea8db76cbb4b58bbf8598f73687b4dd0a2586310680191e73d",
   "holdings_count": 33,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=182",
-    "fetched_at_upstream": "2026-11-09T09:43:15"
+    "fetched_at_upstream": "2026-11-09T12:24:25"
   },
   "holdings": [
     {

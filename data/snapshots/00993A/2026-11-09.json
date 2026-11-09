@@ -2,9 +2,9 @@
   "etf_ticker": "00993A",
   "as_of_date": "2026-11-09",
   "source": "zdsetf",
-  "fetched_at": "2026-11-09T20:22:33+08:00",
+  "fetched_at": "2026-11-09T21:36:47+08:00",
   "raw_file": "00993A_2026-11-09_zdsetf.json",
-  "raw_file_hash": "a324e746f261c4989ace0a7dea107813c7c193d54ebdbaee6e60dccba6521ee4",
+  "raw_file_hash": "2cb5fbd9c40c77f60787e9df8f558e6250ad77d5340d8e7325d935faa56eda14",
   "holdings_count": 50,
   "placeholder_count": 0,
   "meta": {
@@ -21,7 +21,7 @@
     },
     {
       "stock_code": "3443",
-      "stock_name": "創意電子",
+      "stock_name": "創意",
       "shares": 62000,
       "weight_pct": 5.35,
       "is_placeholder": false
@@ -56,28 +56,28 @@
     },
     {
       "stock_code": "2383",
-      "stock_name": "台光電子",
+      "stock_name": "台光電",
       "shares": 62000,
       "weight_pct": 3.25,
       "is_placeholder": false
     },
     {
       "stock_code": "2059",
-      "stock_name": "川湖",
+      "stock_name": "川湖科技",
       "shares": 31000,
       "weight_pct": 3.2,
       "is_placeholder": false
     },
     {
       "stock_code": "2454",
-      "stock_name": "聯發科",
+      "stock_name": "聯發科技",
       "shares": 64000,
       "weight_pct": 3.07,
       "is_placeholder": false
     },
     {
       "stock_code": "2408",
-      "stock_name": "南亞科",
+      "stock_name": "南亞科技",
       "shares": 632000,
       "weight_pct": 3.01,
       "is_placeholder": false
@@ -98,7 +98,7 @@
     },
     {
       "stock_code": "3017",
-      "stock_name": "奇鋐",
+      "stock_name": "奇鋐科技",
       "shares": 88000,
       "weight_pct": 2.88,
       "is_placeholder": false
@@ -112,7 +112,7 @@
     },
     {
       "stock_code": "3711",
-      "stock_name": "日月光投控",
+      "stock_name": "日月光投資控股",
       "shares": 382000,
       "weight_pct": 2.76,
       "is_placeholder": false
@@ -133,7 +133,7 @@
     },
     {
       "stock_code": "3081",
-      "stock_name": "聯亞光電",
+      "stock_name": "聯亞",
       "shares": 90000,
       "weight_pct": 2.23,
       "is_placeholder": false
@@ -147,7 +147,7 @@
     },
     {
       "stock_code": "6223",
-      "stock_name": "旺矽",
+      "stock_name": "旺矽科技",
       "shares": 37000,
       "weight_pct": 1.76,
       "is_placeholder": false
@@ -182,7 +182,7 @@
     },
     {
       "stock_code": "2412",
-      "stock_name": "中華電",
+      "stock_name": "中華電信",
       "shares": 585000,
       "weight_pct": 1.2,
       "is_placeholder": false
@@ -203,7 +203,7 @@
     },
     {
       "stock_code": "3008",
-      "stock_name": "大立光電",
+      "stock_name": "大立光",
       "shares": 12000,
       "weight_pct": 0.76,
       "is_placeholder": false
@@ -217,7 +217,7 @@
     },
     {
       "stock_code": "2368",
-      "stock_name": "金像電子",
+      "stock_name": "金像電",
       "shares": 64000,
       "weight_pct": 0.74,
       "is_placeholder": false
@@ -238,21 +238,21 @@
     },
     {
       "stock_code": "3045",
-      "stock_name": "台灣大",
+      "stock_name": "台灣大哥",
       "shares": 415000,
       "weight_pct": 0.7,
       "is_placeholder": false
     },
     {
       "stock_code": "8996",
-      "stock_name": "高力",
+      "stock_name": "高力熱處理工業",
       "shares": 39000,
       "weight_pct": 0.64,
       "is_placeholder": false
     },
     {
       "stock_code": "6669",
-      "stock_name": "緯穎",
+      "stock_name": "緯穎科技服務",
       "shares": 29000,
       "weight_pct": 0.61,
       "is_placeholder": false
@@ -266,14 +266,14 @@
     },
     {
       "stock_code": "3231",
-      "stock_name": "緯創",
+      "stock_name": "緯創資通",
       "shares": 274000,
       "weight_pct": 0.59,
       "is_placeholder": false
     },
     {
       "stock_code": "2308",
-      "stock_name": "台達電子",
+      "stock_name": "台達電",
       "shares": 39000,
       "weight_pct": 0.58,
       "is_placeholder": false
@@ -294,7 +294,7 @@
     },
     {
       "stock_code": "4904",
-      "stock_name": "遠傳",
+      "stock_name": "遠傳電信",
       "shares": 374000,
       "weight_pct": 0.51,
       "is_placeholder": false
@@ -336,14 +336,14 @@
     },
     {
       "stock_code": "6415",
-      "stock_name": "矽力*-KY",
+      "stock_name": "矽力杰",
       "shares": 54000,
       "weight_pct": 0.3,
       "is_placeholder": false
     },
     {
       "stock_code": "2360",
-      "stock_name": "致茂",
+      "stock_name": "致茂電子",
       "shares": 18000,
       "weight_pct": 0.29,
       "is_placeholder": false
