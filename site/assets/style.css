@@ -548,3 +548,9 @@ table.report tr.vix-row-low { background: #eff6ff; }
 .fut-badge-base{background:#ede9fe;color:#6d28d9}
 .fut-hist{margin-top:.6rem}
 .small{font-size:.82rem}
+
+/* ---- CTBC options / covered call ---- */
+.opt-card{border-left-color:#0d9488}
+.opt-h{margin:.7rem 0 .3rem;font-size:1rem}
+.opt-explain{margin-top:.8rem;padding:.6rem .8rem;background:#f8fafc;border-radius:8px;font-size:.9rem}
+.opt-explain p{margin:.3rem 0}

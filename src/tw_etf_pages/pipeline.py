@@ -271,6 +271,12 @@ def run_live(cfg: AppConfig | None = None, *, allow_fallback: bool = True) -> Pa
     except Exception:  # noqa: BLE001 — VIX must never fail the run
         logger.exception("TAIWAN VIX update failed")
     try:
+        from .ctbc_derivatives import update_ctbc_derivatives
+
+        update_ctbc_derivatives(cfg.root, [e.ticker for e in cfg.etfs if e.issuer == "ctbc"])
+    except Exception:  # noqa: BLE001 — CTBC options must never fail the run
+        logger.exception("CTBC derivatives update failed")
+    try:
         from .chips import update_chips
 
         update_chips(cfg)

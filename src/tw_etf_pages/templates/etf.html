@@ -16,6 +16,7 @@
     <li><a href="index.html">← 回日報總覽</a></li>
     <li><a href="#{{ anchor }}">異動表</a></li>
     {% if futures %}<li><a href="#futures">📈 期貨部位</a></li>{% endif %}
+    {% if cdv %}<li><a href="#options">🛡️ 掩護性買權／選擇權</a></li>{% endif %}
     <li><a href="#trend">近20天持股趨勢</a></li>
     <li><a href="#snapshot">快照摘要</a></li>
   </ol>
@@ -157,6 +158,76 @@
       本站自 <strong>{{ futures.tracked_since }}</strong> 起才開始記錄期貨，之前的歷史快照沒有期貨資料，因此無法回溯當時的增減；
       「口數增減」為本站相鄰兩個資料日的比較。台指期（TX）每口契約價值約為指數 × 200 元；轉倉（換月）時口數可能短暫變動。
     </p>
+  </div>
+</section>
+{% endif %}
+
+{% if cdv %}
+{% macro sg(v, digits=0, suffix="") -%}
+{%- if v is none -%}—{%- elif v > 0 -%}<span class="fut-up">▲ +{{ ("{:,.%df}" % digits).format(v) }}{{ suffix }}</span>{%- elif v < 0 -%}<span class="fut-down">▼ {{ ("{:,.%df}" % digits).format(v) }}{{ suffix }}</span>{%- else -%}<span class="muted">0{{ suffix }}</span>{%- endif -%}
+{%- endmacro %}
+<section id="options" class="fut-section">
+  <h2 class="banner sub">🛡️ 掩護性買權／選擇權與期貨部位（中信官網投資組合）</h2>
+  <div class="fut-card opt-card">
+    <div class="fut-head">
+      <div>官方資料日 <strong>{{ cdv.as_of_date }}</strong>{% if cdv.prev_as_of_date %}／對比 <strong>{{ cdv.prev_as_of_date }}</strong>{% else %}／<span class="fut-base">基準日（下一個交易日起顯示增減）</span>{% endif %}</div>
+      <div class="fut-sum">
+        {% if cdv.has_covered_call %}賣出買權合計 <strong>{{ "{:,}".format(cdv.sold_call_contracts) }} 口</strong>／{% endif %}
+        官方「選擇權合計」權重 <strong>{{ cdv.option_sum_pct }}%</strong>
+        {% if cdv.future_sum_pct %}／期貨合計 <strong>{{ cdv.future_sum_pct }}%</strong>{% endif %}
+        {% if cdv.stock_sum_pct %}／股票合計 {{ cdv.stock_sum_pct }}%{% endif %}
+      </div>
+    </div>
+    <h4 class="opt-h">選擇權</h4>
+    {% if cdv.option_rows %}
+    <table class="report fut-table">
+      <thead><tr><th>商品代碼</th><th>商品名稱</th><th>方向</th><th>口數</th><th>口數增減</th><th>契約年月</th><th>官方權重</th><th>權重變化</th><th>狀態</th></tr></thead>
+      <tbody>
+      {% for r in cdv.option_rows %}
+        <tr class="fut-{{ r.status }}">
+          <td><strong>{{ r.code }}</strong></td>
+          <td>{{ r.name }}</td>
+          <td><span class="fut-pos {% if r.side == 'sell' %}fut-pos-S{% else %}fut-pos-B{% endif %}">{{ "賣出" if r.side == "sell" else "買進" }}{{ r.right_label }}</span></td>
+          <td class="num"><strong>{{ "{:,}".format(r.contracts) }}</strong>{% if r.prev_contracts is not none %}<div class="muted small">前 {{ "{:,}".format(r.prev_contracts) }}</div>{% endif %}</td>
+          <td class="num">{{ sg(r.delta_contracts, 0, " 口") }}</td>
+          <td>{{ r.month }}</td>
+          <td class="num">{{ "—" if r.weight_pct is none else "%.2f%%" | format(r.weight_pct) }}</td>
+          <td class="num">{{ sg(r.delta_weight, 2, "%") }}</td>
+          <td><span class="fut-badge fut-badge-{{ r.status }}">{{ r.status_label }}</span></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}<div class="empty-box">官方資料日無選擇權部位。</div>{% endif %}
+    {% if cdv.future_rows %}
+    <h4 class="opt-h">期貨</h4>
+    <table class="report fut-table">
+      <thead><tr><th>期貨代碼</th><th>名稱</th><th>多／空</th><th>口數</th><th>口數增減</th><th>契約年月</th><th>官方權重</th><th>狀態</th></tr></thead>
+      <tbody>
+      {% for r in cdv.future_rows %}
+        <tr><td><strong>{{ r.code }}</strong></td><td>{{ r.name }}</td>
+          <td><span class="fut-pos {% if r.side == 'long' %}fut-pos-B{% else %}fut-pos-S{% endif %}">{{ "多單" if r.side == "long" else "空單" }}</span></td>
+          <td class="num"><strong>{{ "{:,}".format(r.contracts) }}</strong>{% if r.prev_contracts is not none %}<div class="muted small">前 {{ "{:,}".format(r.prev_contracts) }}</div>{% endif %}</td>
+          <td class="num">{{ sg(r.delta_contracts, 0, " 口") }}</td>
+          <td>{{ r.month }}</td>
+          <td class="num">{{ "—" if r.weight_pct is none else "%.2f%%" | format(r.weight_pct) }}</td>
+          <td><span class="fut-badge fut-badge-{{ r.status }}">{{ r.status_label }}</span></td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+    {% if cdv.history | length > 1 %}
+    <details class="fut-hist"><summary>近 {{ cdv.history | length }} 個官方資料日</summary>
+      <table class="report"><thead><tr><th>資料日</th><th>選擇權</th><th>選擇權合計</th><th>期貨</th></tr></thead><tbody>
+      {% for h in cdv.history %}<tr><td>{{ h.date }}</td><td>{{ h.options }}</td><td class="num">{{ h.option_sum_pct }}%</td><td>{{ h.futures }}</td></tr>{% endfor %}
+      </tbody></table>
+    </details>
+    {% endif %}
+    <div class="opt-explain">
+      <p><strong>什麼是掩護性買權（Covered Call）？</strong>基金持有股票的同時「賣出」指數買權（Sell Call），先收一筆權利金當作收益來源；代價是大盤漲過履約價後，那部分的上漲空間讓給買方（漲幅被封頂）。權利金只能抵銷一部分下跌，<strong>不是保本或避險</strong>。</p>
+      <p><strong>25% 是上限，不是實際比重：</strong>依公開說明書，每營業日未沖銷之賣出買權總名目價值不得超過淨資產 {{ cdv.cap_pct | int }}%（名目價值＝履約價 × Delta × 契約乘數）。實際比重請看上表官方權重（負號代表賣出部位）。</p>
+      <p class="muted small">資料來源：<a href="{{ cdv.source_page }}" rel="noopener">中國信託投信官網 投資組合</a>（每日；僅揭露商品代碼、買賣權、口數、契約年月、權重；<strong>未揭露履約價</strong>，本站不推估）。口數增減為本站相鄰兩個官方資料日的部位比較，不代表當日實際成交明細；權重變化也會受指數漲跌影響，不一定是加減碼。本站自 {{ cdv.tracked_since }} 起保存（共 {{ cdv.days }} 個資料日）。上方股票異動表仍只含股票。</p>
+    </div>
   </div>
 </section>
 {% endif %}

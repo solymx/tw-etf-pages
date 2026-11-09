@@ -498,8 +498,17 @@ def render_site(cfg: AppConfig) -> Path:
         except Exception:  # noqa: BLE001 — futures view must never break render
             logger.exception("%s: futures view failed", etf.ticker)
         block["futures"] = fut
+        cdv = None
+        if etf.issuer == "ctbc":
+            try:
+                from .ctbc_derivatives import build_ctbc_derivatives_view
+
+                cdv = build_ctbc_derivatives_view(cfg.root, etf.ticker)
+            except Exception:  # noqa: BLE001 — never break render
+                logger.exception("%s: CTBC derivatives view failed", etf.ticker)
         html = env.get_template("etf.html").render(
             futures=fut,
+            cdv=cdv,
             ticker=etf.ticker,
             name=etf.name,
             anchor=block["anchor"],

@@ -1,0 +1,60 @@
+{
+  "etf_ticker": "00406A",
+  "as_of_date": "2026-10-27",
+  "source": "ctbc_official_holding_weight",
+  "source_page": "https://www.ctbcinvestments.com/etfprod/00406A/pcf",
+  "fetched_at": "2026-11-09T20:19:00+08:00",
+  "nav_total_raw": "118,850,518,424",
+  "option_sum_pct": -9.32,
+  "future_sum_pct": 20.87,
+  "stock_sum_pct": 84.81,
+  "options": [
+    {
+      "code": "TXZ",
+      "name": "臺指選擇權第五週週五到期契約",
+      "right": "C",
+      "side": "sell",
+      "contracts": 1357,
+      "month": "202610",
+      "weight_pct": -1.88,
+      "amount_raw": "3,045,400,000.00"
+    },
+    {
+      "code": "TX4",
+      "name": "臺指選擇權第四週週三到期契約",
+      "right": "C",
+      "side": "sell",
+      "contracts": 5579,
+      "month": "202610",
+      "weight_pct": -7.44,
+      "amount_raw": "12,563,620,000.00"
+    }
+  ],
+  "futures": [
+    {
+      "code": "TX",
+      "name": "臺股期貨",
+      "side": "long",
+      "contracts": 2690,
+      "month": "202611",
+      "weight_pct": 20.87
+    }
+  ],
+  "other_assets": {
+    "MARGIN": {
+      "name": "保證金",
+      "amount": 9428513815.0,
+      "weight_pct": 7.93
+    },
+    "CASH": {
+      "name": "現金",
+      "amount": 26636547386.0,
+      "weight_pct": 22.41
+    },
+    "PAYRCIV": {
+      "name": "應收(付)證券款",
+      "amount": -15321295970.0,
+      "weight_pct": 0.0
+    }
+  }
+}

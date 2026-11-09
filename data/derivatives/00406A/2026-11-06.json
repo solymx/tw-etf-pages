@@ -1,0 +1,60 @@
+{
+  "etf_ticker": "00406A",
+  "as_of_date": "2026-11-06",
+  "source": "ctbc_official_holding_weight",
+  "source_page": "https://www.ctbcinvestments.com/etfprod/00406A/pcf",
+  "fetched_at": "2026-11-09T20:20:51+08:00",
+  "nav_total_raw": "131,856,321,786",
+  "option_sum_pct": -17.35,
+  "future_sum_pct": 21.77,
+  "stock_sum_pct": 83.62,
+  "options": [
+    {
+      "code": "TXV",
+      "name": "臺指選擇權第二週週五到期契約",
+      "right": "C",
+      "side": "sell",
+      "contracts": 5000,
+      "month": "202611",
+      "weight_pct": -4.86,
+      "amount_raw": "9,640,000,000.00"
+    },
+    {
+      "code": "TX2",
+      "name": "臺指選擇權第二週週三到期契約",
+      "right": "C",
+      "side": "sell",
+      "contracts": 15000,
+      "month": "202611",
+      "weight_pct": -12.49,
+      "amount_raw": "29,395,000,000.00"
+    }
+  ],
+  "futures": [
+    {
+      "code": "TX",
+      "name": "臺股期貨",
+      "side": "long",
+      "contracts": 3620,
+      "month": "202611",
+      "weight_pct": 21.77
+    }
+  ],
+  "other_assets": {
+    "MARGIN": {
+      "name": "保證金",
+      "amount": 11379067803.0,
+      "weight_pct": 8.63
+    },
+    "CASH": {
+      "name": "現金",
+      "amount": 20610215819.0,
+      "weight_pct": 15.63
+    },
+    "PAYRCIV": {
+      "name": "應收(付)證券款",
+      "amount": -6182001991.0,
+      "weight_pct": 0.0
+    }
+  }
+}
