@@ -428,10 +428,10 @@
           }
         },
         {
-          "stock_code": "2603",
-          "stock_name": "長榮海運",
-          "curr_shares": 129000,
-          "prev_shares": 129000,
+          "stock_code": "2360",
+          "stock_name": "致茂電子",
+          "curr_shares": 25000,
+          "prev_shares": 25000,
           "shares_delta": 0,
           "curr_weight_pct": 1.02,
           "prev_weight_pct": 1.02,
@@ -446,10 +446,10 @@
           }
         },
         {
-          "stock_code": "2360",
-          "stock_name": "致茂電子",
-          "curr_shares": 25000,
-          "prev_shares": 25000,
+          "stock_code": "2603",
+          "stock_name": "長榮海運",
+          "curr_shares": 129000,
+          "prev_shares": 129000,
           "shares_delta": 0,
           "curr_weight_pct": 1.02,
           "prev_weight_pct": 1.02,

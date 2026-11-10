@@ -2,7 +2,7 @@
   "data_date": "20261106",
   "definition": "TDCC 集保戶股權分散表 持股分級15（1,000,001股以上＝千張大戶）",
   "source": "https://opendata.tdcc.com.tw/getOD.ashx?id=1-5",
-  "updated_at": "2026-11-10T18:57:24+08:00",
+  "updated_at": "2026-11-10T21:42:55+08:00",
   "stocks": {
     "1101": {
       "big_holders": 398,
@@ -480,6 +480,13 @@
       "total_holders": 63755,
       "total_shares": 303880392
     },
+    "2464": {
+      "big_holders": 22,
+      "big_shares": 76021933,
+      "big_pct": 33.43,
+      "total_holders": 96800,
+      "total_shares": 227368886
+    },
     "2467": {
       "big_holders": 31,
       "big_shares": 94421943,
@@ -759,6 +766,13 @@
       "big_pct": 69.37,
       "total_holders": 45780,
       "total_shares": 624866050
+    },
+    "3006": {
+      "big_holders": 42,
+      "big_shares": 118987353,
+      "big_pct": 39.91,
+      "total_holders": 73833,
+      "total_shares": 298127841
     },
     "3008": {
       "big_holders": 13,
@@ -1158,6 +1172,13 @@
       "big_pct": 20.63,
       "total_holders": 31855,
       "total_shares": 78957788
+    },
+    "4967": {
+      "big_holders": 7,
+      "big_shares": 14675465,
+      "big_pct": 14.88,
+      "total_holders": 66130,
+      "total_shares": 98566394
     },
     "4979": {
       "big_holders": 15,
@@ -1662,6 +1683,13 @@
       "big_pct": 33.02,
       "total_holders": 91597,
       "total_shares": 151483921
+    },
+    "8039": {
+      "big_holders": 22,
+      "big_shares": 119082693,
+      "big_pct": 45.1,
+      "total_holders": 99542,
+      "total_shares": 264017994
     },
     "8046": {
       "big_holders": 42,

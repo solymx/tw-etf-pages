@@ -2,14 +2,14 @@
   "etf_ticker": "00994A",
   "as_of_date": "2026-11-10",
   "source": "zdsetf",
-  "fetched_at": "2026-11-10T18:56:41+08:00",
+  "fetched_at": "2026-11-10T21:42:23+08:00",
   "raw_file": "00994A_2026-11-10_zdsetf.json",
-  "raw_file_hash": "6a6bc027eeaed1081ab2db2a0a74bb0e4346f99fffc3875bccca3fac5829785e",
+  "raw_file_hash": "88da1cf89fc13b3cc847a35a60bc958b78f70bfa339d0f7dcceb31235e78eb6b",
   "holdings_count": 33,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=182",
-    "fetched_at_upstream": "2026-11-10T09:41:57"
+    "fetched_at_upstream": "2026-11-10T12:23:34"
   },
   "holdings": [
     {
@@ -139,16 +139,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "2603",
-      "stock_name": "長榮海運",
-      "shares": 129000,
+      "stock_code": "2360",
+      "stock_name": "致茂電子",
+      "shares": 25000,
       "weight_pct": 1.02,
       "is_placeholder": false
     },
     {
-      "stock_code": "2360",
-      "stock_name": "致茂電子",
-      "shares": 25000,
+      "stock_code": "2603",
+      "stock_name": "長榮海運",
+      "shares": 129000,
       "weight_pct": 1.02,
       "is_placeholder": false
     },
