@@ -1,7 +1,7 @@
 {
   "data_date": "20261106",
   "prev_date": "20261030",
-  "generated_at": "2026-11-10T03:43:22+08:00",
+  "generated_at": "2026-11-10T18:57:26+08:00",
   "definition": "持股 1,000 張以上（TDCC 持股分級 15：1,000,001 股以上）",
   "notable_pp": 0.5,
   "sources": {
@@ -9,16 +9,16 @@
     "history_query": "https://www.tdcc.com.tw/portal/zh/smWeb/qryStock"
   },
   "summary": {
-    "stocks": 257,
-    "with_data": 257,
+    "stocks": 258,
+    "with_data": 258,
     "missing": 0,
     "up": 93,
     "down": 148,
-    "flat": 16,
+    "flat": 17,
     "notable_up": 23,
     "notable_down": 65,
     "tilt": "偏減",
-    "avg_d_pct_etf_weighted": -0.285
+    "avg_d_pct_etf_weighted": -0.286
   },
   "increase": [
     "6214",
@@ -724,10 +724,11 @@
         "00985A",
         "00982A",
         "00984A",
+        "00995A",
         "0050",
         "009816"
       ],
-      "etf_count": 7,
+      "etf_count": 8,
       "cur": {
         "big_holders": 62,
         "big_shares": 180434926,
@@ -1926,6 +1927,7 @@
         "00984A",
         "00400A",
         "00401A",
+        "00995A",
         "00996A",
         "0050",
         "0056",
@@ -1933,7 +1935,7 @@
         "00929",
         "009816"
       ],
-      "etf_count": 15,
+      "etf_count": 16,
       "cur": {
         "big_holders": 828,
         "big_shares": 9374202736,
@@ -2506,12 +2508,13 @@
       "code": "3661",
       "name": "世芯-KY",
       "etfs": [
+        "00992A",
         "00405A",
         "00406A",
         "00985A",
         "00400A"
       ],
-      "etf_count": 4,
+      "etf_count": 5,
       "cur": {
         "big_holders": 6,
         "big_shares": 7147989,
@@ -2947,6 +2950,32 @@
       "d_holders": 0,
       "d_lots": 21,
       "d_total_holders": -307
+    },
+    {
+      "code": "1727",
+      "name": "臺灣中華化學工業",
+      "etfs": [
+        "00406A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 10,
+        "big_shares": 59675471,
+        "big_pct": 46.61,
+        "total_holders": 26992,
+        "total_shares": 128019559
+      },
+      "prev": {
+        "big_holders": 10,
+        "big_shares": 59675471,
+        "big_pct": 46.61,
+        "total_holders": 27260,
+        "total_shares": 128019559
+      },
+      "d_pct": 0.0,
+      "d_holders": 0,
+      "d_lots": 0,
+      "d_total_holders": -268
     },
     {
       "code": "2597",
@@ -4580,9 +4609,10 @@
       "code": "4551",
       "name": "智伸科",
       "etfs": [
+        "00981A",
         "00999A"
       ],
-      "etf_count": 1,
+      "etf_count": 2,
       "cur": {
         "big_holders": 17,
         "big_shares": 79245857,
@@ -4889,10 +4919,9 @@
         "00400A",
         "00401A",
         "00987A",
-        "00994A",
         "00995A"
       ],
-      "etf_count": 16,
+      "etf_count": 15,
       "cur": {
         "big_holders": 4,
         "big_shares": 9025865,
@@ -5611,13 +5640,15 @@
         "00992A",
         "00982A",
         "00984A",
+        "00408A",
+        "00994A",
         "0050",
         "0056",
         "00878",
         "00929",
         "009816"
       ],
-      "etf_count": 9,
+      "etf_count": 11,
       "cur": {
         "big_holders": 271,
         "big_shares": 1668046218,
@@ -7856,6 +7887,7 @@
       "name": "富世達",
       "etfs": [
         "00981A",
+        "00991A",
         "00403A",
         "00405A",
         "00406A",
@@ -7867,7 +7899,7 @@
         "00994A",
         "00995A"
       ],
-      "etf_count": 11,
+      "etf_count": 12,
       "cur": {
         "big_holders": 10,
         "big_shares": 31558656,
