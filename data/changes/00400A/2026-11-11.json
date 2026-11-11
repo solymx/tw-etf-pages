@@ -2,7 +2,7 @@
   "etf_ticker": "00400A",
   "as_of_date": "2026-11-11",
   "prev_as_of_date": "2026-11-10",
-  "compared_at": "2026-11-11T18:51:17+08:00",
+  "compared_at": "2026-11-11T21:39:21+08:00",
   "source": "zdsetf",
   "placeholder_policy": {
     "max_shares": 1000,

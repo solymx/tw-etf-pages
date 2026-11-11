@@ -537,10 +537,10 @@
           }
         },
         {
-          "stock_code": "2408",
-          "stock_name": "南亞科技",
-          "curr_shares": 41000,
-          "prev_shares": 41000,
+          "stock_code": "3044",
+          "stock_name": "健鼎科技",
+          "curr_shares": 31000,
+          "prev_shares": 31000,
           "shares_delta": 0,
           "curr_weight_pct": 1.21,
           "prev_weight_pct": 1.21,
@@ -555,10 +555,10 @@
           }
         },
         {
-          "stock_code": "3044",
-          "stock_name": "健鼎科技",
-          "curr_shares": 31000,
-          "prev_shares": 31000,
+          "stock_code": "2408",
+          "stock_name": "南亞科技",
+          "curr_shares": 41000,
+          "prev_shares": 41000,
           "shares_delta": 0,
           "curr_weight_pct": 1.21,
           "prev_weight_pct": 1.21,

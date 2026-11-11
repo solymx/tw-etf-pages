@@ -484,10 +484,10 @@
           }
         },
         {
-          "stock_code": "3044",
-          "stock_name": "健鼎科技",
-          "curr_shares": 54000,
-          "prev_shares": 54000,
+          "stock_code": "3231",
+          "stock_name": "緯創資通",
+          "curr_shares": 161000,
+          "prev_shares": 161000,
           "shares_delta": 0,
           "curr_weight_pct": 0.83,
           "prev_weight_pct": 0.83,
@@ -502,10 +502,10 @@
           }
         },
         {
-          "stock_code": "3231",
-          "stock_name": "緯創資通",
-          "curr_shares": 161000,
-          "prev_shares": 161000,
+          "stock_code": "3044",
+          "stock_name": "健鼎科技",
+          "curr_shares": 54000,
+          "prev_shares": 54000,
           "shares_delta": 0,
           "curr_weight_pct": 0.83,
           "prev_weight_pct": 0.83,

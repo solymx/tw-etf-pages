@@ -2,14 +2,14 @@
   "etf_ticker": "00408A",
   "as_of_date": "2026-11-11",
   "source": "zdsetf",
-  "fetched_at": "2026-11-11T18:51:19+08:00",
+  "fetched_at": "2026-11-11T21:39:23+08:00",
   "raw_file": "00408A_2026-11-11_zdsetf.json",
-  "raw_file_hash": "5c60139337ca0d54d5605ee9536c4e85ce238e41850e04b7bdb018a52ec2a6dd",
+  "raw_file_hash": "01945c6238ba3ec5d64b514a1f823c4356f0eb2ab725b21fbf3398aa61b68c38",
   "holdings_count": 44,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=183",
-    "fetched_at_upstream": "2026-11-11T10:00:11"
+    "fetched_at_upstream": "2026-11-11T12:40:14"
   },
   "holdings": [
     {
@@ -188,16 +188,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "2408",
-      "stock_name": "南亞科技",
-      "shares": 41000,
+      "stock_code": "3044",
+      "stock_name": "健鼎科技",
+      "shares": 31000,
       "weight_pct": 1.21,
       "is_placeholder": false
     },
     {
-      "stock_code": "3044",
-      "stock_name": "健鼎科技",
-      "shares": 31000,
+      "stock_code": "2408",
+      "stock_name": "南亞科技",
+      "shares": 41000,
       "weight_pct": 1.21,
       "is_placeholder": false
     },

@@ -2,14 +2,14 @@
   "etf_ticker": "00994A",
   "as_of_date": "2026-11-11",
   "source": "zdsetf",
-  "fetched_at": "2026-11-11T18:51:20+08:00",
+  "fetched_at": "2026-11-11T21:39:24+08:00",
   "raw_file": "00994A_2026-11-11_zdsetf.json",
-  "raw_file_hash": "4d10f3bf09012b52113253e558b726477ab108f8be2b30e22b276836a3407f31",
+  "raw_file_hash": "da4b81ad38a7e8daf5344974a3065fc0a5eb08fa0ecf0821e71495a6eb096b1c",
   "holdings_count": 33,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=182",
-    "fetched_at_upstream": "2026-11-11T09:43:58"
+    "fetched_at_upstream": "2026-11-11T12:24:11"
   },
   "holdings": [
     {
@@ -160,16 +160,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "3044",
-      "stock_name": "健鼎科技",
-      "shares": 54000,
+      "stock_code": "3231",
+      "stock_name": "緯創資通",
+      "shares": 161000,
       "weight_pct": 0.83,
       "is_placeholder": false
     },
     {
-      "stock_code": "3231",
-      "stock_name": "緯創資通",
-      "shares": 161000,
+      "stock_code": "3044",
+      "stock_name": "健鼎科技",
+      "shares": 54000,
       "weight_pct": 0.83,
       "is_placeholder": false
     },

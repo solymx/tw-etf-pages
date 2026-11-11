@@ -1,7 +1,7 @@
 {
   "data_date": "20261106",
   "prev_date": "20261030",
-  "generated_at": "2026-11-11T18:52:34+08:00",
+  "generated_at": "2026-11-11T21:40:02+08:00",
   "definition": "持股 1,000 張以上（TDCC 持股分級 15：1,000,001 股以上）",
   "notable_pp": 0.5,
   "sources": {
@@ -9,16 +9,16 @@
     "history_query": "https://www.tdcc.com.tw/portal/zh/smWeb/qryStock"
   },
   "summary": {
-    "stocks": 260,
-    "with_data": 260,
+    "stocks": 261,
+    "with_data": 261,
     "missing": 0,
     "up": 93,
-    "down": 150,
+    "down": 151,
     "flat": 17,
     "notable_up": 23,
     "notable_down": 69,
     "tilt": "偏減",
-    "avg_d_pct_etf_weighted": -0.285
+    "avg_d_pct_etf_weighted": -0.284
   },
   "increase": [
     "6214",
@@ -394,6 +394,7 @@
         "00980A",
         "00985A",
         "00999A",
+        "00993A",
         "00400A",
         "00401A",
         "00995A",
@@ -401,7 +402,7 @@
         "00881",
         "009816"
       ],
-      "etf_count": 15,
+      "etf_count": 16,
       "cur": {
         "big_holders": 98,
         "big_shares": 324642454,
@@ -643,13 +644,14 @@
         "00981A",
         "00406A",
         "00982A",
+        "00993A",
         "00987A",
         "00408A",
         "00994A",
         "00995A",
         "00996A"
       ],
-      "etf_count": 8,
+      "etf_count": 9,
       "cur": {
         "big_holders": 4,
         "big_shares": 15710200,
@@ -1281,32 +1283,6 @@
       "d_total_holders": 91
     },
     {
-      "code": "6782",
-      "name": "視陽",
-      "etfs": [
-        "00993A"
-      ],
-      "etf_count": 1,
-      "cur": {
-        "big_holders": 9,
-        "big_shares": 24536551,
-        "big_pct": 38.94,
-        "total_holders": 5853,
-        "total_shares": 63000000
-      },
-      "prev": {
-        "big_holders": 9,
-        "big_shares": 24370586,
-        "big_pct": 38.68,
-        "total_holders": 5928,
-        "total_shares": 63000000
-      },
-      "d_pct": 0.26,
-      "d_holders": 0,
-      "d_lots": 166,
-      "d_total_holders": -75
-    },
-    {
       "code": "8996",
       "name": "高力",
       "etfs": [
@@ -1812,7 +1788,6 @@
       "etfs": [
         "00985A",
         "00984A",
-        "00993A",
         "00401A",
         "0050",
         "00878",
@@ -1820,7 +1795,7 @@
         "00939",
         "009816"
       ],
-      "etf_count": 9,
+      "etf_count": 8,
       "cur": {
         "big_holders": 299,
         "big_shares": 6099223490,
@@ -2252,6 +2227,32 @@
       "d_holders": 0,
       "d_lots": 59,
       "d_total_holders": -197
+    },
+    {
+      "code": "2466",
+      "name": "冠西",
+      "etfs": [
+        "00984A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 34,
+        "big_shares": 139296390,
+        "big_pct": 80.3,
+        "total_holders": 6874,
+        "total_shares": 173458697
+      },
+      "prev": {
+        "big_holders": 34,
+        "big_shares": 139197439,
+        "big_pct": 80.24,
+        "total_holders": 7183,
+        "total_shares": 173458697
+      },
+      "d_pct": 0.06,
+      "d_holders": 0,
+      "d_lots": 99,
+      "d_total_holders": -309
     },
     {
       "code": "2850",
@@ -3094,10 +3095,9 @@
       "code": "4991",
       "name": "環宇-KY",
       "etfs": [
-        "00401A",
         "00987A"
       ],
-      "etf_count": 2,
+      "etf_count": 1,
       "cur": {
         "big_holders": 8,
         "big_shares": 42024987,
@@ -3501,10 +3501,11 @@
         "00406A",
         "00985A",
         "00982A",
+        "00993A",
         "00401A",
         "00987A"
       ],
-      "etf_count": 5,
+      "etf_count": 6,
       "cur": {
         "big_holders": 10,
         "big_shares": 16295778,
@@ -3963,10 +3964,9 @@
       "name": "東和鋼鐵",
       "etfs": [
         "00984A",
-        "00993A",
         "00713"
       ],
-      "etf_count": 3,
+      "etf_count": 2,
       "cur": {
         "big_holders": 91,
         "big_shares": 546896390,
@@ -4145,7 +4145,6 @@
       "etfs": [
         "00982A",
         "00984A",
-        "00993A",
         "00408A",
         "00994A",
         "0050",
@@ -4158,7 +4157,7 @@
         "00940",
         "009816"
       ],
-      "etf_count": 14,
+      "etf_count": 13,
       "cur": {
         "big_holders": 238,
         "big_shares": 3410966972,
@@ -4184,7 +4183,6 @@
       "etfs": [
         "00985A",
         "00999A",
-        "00993A",
         "00401A",
         "00408A",
         "00994A",
@@ -4197,7 +4195,7 @@
         "00939",
         "009816"
       ],
-      "etf_count": 14,
+      "etf_count": 13,
       "cur": {
         "big_holders": 236,
         "big_shares": 3289866578,
@@ -4781,11 +4779,12 @@
       "etfs": [
         "00991A",
         "00984A",
+        "00993A",
         "00400A",
         "0050",
         "009816"
       ],
-      "etf_count": 5,
+      "etf_count": 6,
       "cur": {
         "big_holders": 111,
         "big_shares": 9137101435,
@@ -5462,6 +5461,32 @@
       "d_total_holders": -168
     },
     {
+      "code": "2049",
+      "name": "上銀科技",
+      "etfs": [
+        "00993A"
+      ],
+      "etf_count": 1,
+      "cur": {
+        "big_holders": 56,
+        "big_shares": 212166823,
+        "big_pct": 59.96,
+        "total_holders": 66508,
+        "total_shares": 353792240
+      },
+      "prev": {
+        "big_holders": 57,
+        "big_shares": 213323064,
+        "big_pct": 60.29,
+        "total_holders": 65832,
+        "total_shares": 353792240
+      },
+      "d_pct": -0.33,
+      "d_holders": -1,
+      "d_lots": -1156,
+      "d_total_holders": 676
+    },
+    {
       "code": "1717",
       "name": "長興",
       "etfs": [
@@ -5521,10 +5546,9 @@
       "name": "台塑",
       "etfs": [
         "00985A",
-        "00984A",
-        "00993A"
+        "00984A"
       ],
-      "etf_count": 3,
+      "etf_count": 2,
       "cur": {
         "big_holders": 307,
         "big_shares": 4651206108,
