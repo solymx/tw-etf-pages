@@ -2,14 +2,14 @@
   "etf_ticker": "00408A",
   "as_of_date": "2026-11-12",
   "source": "zdsetf",
-  "fetched_at": "2026-11-12T18:47:57+08:00",
+  "fetched_at": "2026-11-12T21:39:54+08:00",
   "raw_file": "00408A_2026-11-12_zdsetf.json",
-  "raw_file_hash": "59beabf4f01a7be96308d51c00d042e2eacea9c0b9c1f460409b89406d0ce600",
+  "raw_file_hash": "ec97d017b1d964aacdd326af12fb57133207ba22e28e467567733612931f5f07",
   "holdings_count": 43,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=183",
-    "fetched_at_upstream": "2026-11-12T10:01:04"
+    "fetched_at_upstream": "2026-11-12T12:41:35"
   },
   "holdings": [
     {
@@ -167,16 +167,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "3026",
-      "stock_name": "禾伸堂",
-      "shares": 34000,
+      "stock_code": "2880",
+      "stock_name": "華南金控",
+      "shares": 340000,
       "weight_pct": 1.35,
       "is_placeholder": false
     },
     {
-      "stock_code": "2880",
-      "stock_name": "華南金控",
-      "shares": 340000,
+      "stock_code": "3026",
+      "stock_name": "禾伸堂",
+      "shares": 34000,
       "weight_pct": 1.35,
       "is_placeholder": false
     },
@@ -209,16 +209,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "6669",
-      "stock_name": "緯穎科技服務",
-      "shares": 9767,
+      "stock_code": "6274",
+      "stock_name": "台燿",
+      "shares": 16000,
       "weight_pct": 1.2,
       "is_placeholder": false
     },
     {
-      "stock_code": "6274",
-      "stock_name": "台燿",
-      "shares": 16000,
+      "stock_code": "6669",
+      "stock_name": "緯穎科技服務",
+      "shares": 9767,
       "weight_pct": 1.2,
       "is_placeholder": false
     },

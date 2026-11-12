@@ -594,10 +594,10 @@
           }
         },
         {
-          "stock_code": "3026",
-          "stock_name": "禾伸堂",
-          "curr_shares": 34000,
-          "prev_shares": 34000,
+          "stock_code": "2880",
+          "stock_name": "華南金控",
+          "curr_shares": 340000,
+          "prev_shares": 340000,
           "shares_delta": 0,
           "curr_weight_pct": 1.35,
           "prev_weight_pct": 1.35,
@@ -612,10 +612,10 @@
           }
         },
         {
-          "stock_code": "2880",
-          "stock_name": "華南金控",
-          "curr_shares": 340000,
-          "prev_shares": 340000,
+          "stock_code": "3026",
+          "stock_name": "禾伸堂",
+          "curr_shares": 34000,
+          "prev_shares": 34000,
           "shares_delta": 0,
           "curr_weight_pct": 1.35,
           "prev_weight_pct": 1.35,

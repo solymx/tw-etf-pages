@@ -2,9 +2,9 @@
   "etf_ticker": "00403A",
   "as_of_date": "2026-11-12",
   "source": "uni_excel",
-  "fetched_at": "2026-11-12T18:47:49+08:00",
+  "fetched_at": "2026-11-12T21:39:46+08:00",
   "raw_file": "00403A_2026-11-12_uni.xlsx",
-  "raw_file_hash": "5fa0d42d2532f4e430bf6a4ea2c68faa6486c7c086f1a1d1df2058eaf6e3051c",
+  "raw_file_hash": "a0bcbc18106adb4079cff0c76fb82f2476faf9581642404f3d35d9decf8cb65c",
   "holdings_count": 50,
   "placeholder_count": 7,
   "meta": {
