@@ -2,14 +2,14 @@
   "etf_ticker": "00994A",
   "as_of_date": "2026-11-13",
   "source": "zdsetf",
-  "fetched_at": "2026-11-13T18:51:22+08:00",
+  "fetched_at": "2026-11-13T21:32:53+08:00",
   "raw_file": "00994A_2026-11-13_zdsetf.json",
-  "raw_file_hash": "7af33ed4ba6beb481411c78dec2a9a591359621accd19bbbf5c766cddf599cb2",
+  "raw_file_hash": "352d17fd3a81842f8a29f2a5998952713c9beafd3232bc1e485402584e9a1ec9",
   "holdings_count": 33,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=182",
-    "fetched_at_upstream": "2026-11-13T09:45:04"
+    "fetched_at_upstream": "2026-11-13T12:25:11"
   },
   "holdings": [
     {
@@ -104,16 +104,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "6510",
-      "stock_name": "精測",
-      "shares": 24000,
+      "stock_code": "3189",
+      "stock_name": "景碩科技",
+      "shares": 120000,
       "weight_pct": 2.44,
       "is_placeholder": false
     },
     {
-      "stock_code": "3189",
-      "stock_name": "景碩科技",
-      "shares": 120000,
+      "stock_code": "6510",
+      "stock_name": "精測",
+      "shares": 24000,
       "weight_pct": 2.44,
       "is_placeholder": false
     },
@@ -202,16 +202,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "6526",
-      "stock_name": "達發",
-      "shares": 16000,
+      "stock_code": "2345",
+      "stock_name": "智邦科技",
+      "shares": 8000,
       "weight_pct": 0.37,
       "is_placeholder": false
     },
     {
-      "stock_code": "2345",
-      "stock_name": "智邦科技",
-      "shares": 8000,
+      "stock_code": "6526",
+      "stock_name": "達發",
+      "shares": 16000,
       "weight_pct": 0.37,
       "is_placeholder": false
     },
