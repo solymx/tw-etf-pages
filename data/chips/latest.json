@@ -1,7 +1,7 @@
 {
   "data_date": "20261113",
   "prev_date": "20261106",
-  "generated_at": "2026-11-14T19:05:07+08:00",
+  "generated_at": "2026-11-16T21:06:09+08:00",
   "definition": "持股 1,000 張以上（TDCC 持股分級 15：1,000,001 股以上）",
   "notable_pp": 0.5,
   "sources": {
@@ -9,16 +9,16 @@
     "history_query": "https://www.tdcc.com.tw/portal/zh/smWeb/qryStock"
   },
   "summary": {
-    "stocks": 261,
-    "with_data": 261,
+    "stocks": 260,
+    "with_data": 260,
     "missing": 0,
     "up": 134,
-    "down": 120,
+    "down": 119,
     "flat": 7,
     "notable_up": 39,
-    "notable_down": 40,
+    "notable_down": 39,
     "tilt": "混雜（略偏增）",
-    "avg_d_pct_etf_weighted": -0.019
+    "avg_d_pct_etf_weighted": -0.023
   },
   "increase": [
     "1802",
@@ -65,7 +65,6 @@
     "6274",
     "3167",
     "3006",
-    "6584",
     "5439",
     "3653",
     "3026",
@@ -108,10 +107,9 @@
       "code": "1802",
       "name": "台玻",
       "etfs": [
-        "00981A",
         "00996A"
       ],
-      "etf_count": 2,
+      "etf_count": 1,
       "cur": {
         "big_holders": 102,
         "big_shares": 2489833760,
@@ -1402,9 +1400,10 @@
         "00994A",
         "00995A",
         "00996A",
-        "00881"
+        "00881",
+        "009816"
       ],
-      "etf_count": 14,
+      "etf_count": 15,
       "cur": {
         "big_holders": 48,
         "big_shares": 353099799,
@@ -2014,9 +2013,10 @@
       "etfs": [
         "00406A",
         "00984A",
-        "00995A"
+        "00995A",
+        "009816"
       ],
-      "etf_count": 3,
+      "etf_count": 4,
       "cur": {
         "big_holders": 282,
         "big_shares": 4760754887,
@@ -3506,9 +3506,10 @@
       "name": "台塑",
       "etfs": [
         "00985A",
-        "00984A"
+        "00984A",
+        "009816"
       ],
-      "etf_count": 2,
+      "etf_count": 3,
       "cur": {
         "big_holders": 309,
         "big_shares": 4655259724,
@@ -4225,9 +4226,10 @@
       "code": "4770",
       "name": "上品綜合工業股份有限公司",
       "etfs": [
+        "00406A",
         "00995A"
       ],
-      "etf_count": 1,
+      "etf_count": 2,
       "cur": {
         "big_holders": 20,
         "big_shares": 49576293,
@@ -4390,13 +4392,12 @@
         "00400A",
         "00401A",
         "00408A",
-        "00994A",
         "00995A",
         "00996A",
         "0050",
         "009816"
       ],
-      "etf_count": 14,
+      "etf_count": 13,
       "cur": {
         "big_holders": 179,
         "big_shares": 1208223351,
@@ -5156,13 +5157,12 @@
         "00980A",
         "00985A",
         "00993A",
-        "00408A",
         "00996A",
         "0050",
         "0056",
         "009816"
       ],
-      "etf_count": 9,
+      "etf_count": 8,
       "cur": {
         "big_holders": 291,
         "big_shares": 2983374399,
@@ -7358,11 +7358,10 @@
         "00406A",
         "00984A",
         "00993A",
-        "00408A",
         "00994A",
         "00995A"
       ],
-      "etf_count": 7,
+      "etf_count": 6,
       "cur": {
         "big_holders": 27,
         "big_shares": 73594107,
@@ -7921,32 +7920,6 @@
       "d_holders": -1,
       "d_lots": -1637,
       "d_total_holders": -108
-    },
-    {
-      "code": "6584",
-      "name": "南俊國際",
-      "etfs": [
-        "00992A"
-      ],
-      "etf_count": 1,
-      "cur": {
-        "big_holders": 10,
-        "big_shares": 42554833,
-        "big_pct": 59.61,
-        "total_holders": 15152,
-        "total_shares": 71379810
-      },
-      "prev": {
-        "big_holders": 11,
-        "big_shares": 43906833,
-        "big_pct": 61.51,
-        "total_holders": 15047,
-        "total_shares": 71379810
-      },
-      "d_pct": -1.9,
-      "d_holders": -1,
-      "d_lots": -1352,
-      "d_total_holders": 105
     },
     {
       "code": "3006",
