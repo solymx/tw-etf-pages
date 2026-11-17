@@ -498,10 +498,10 @@
           }
         },
         {
-          "stock_code": "2345",
-          "stock_name": "智邦科技",
-          "curr_shares": 8000,
-          "prev_shares": 8000,
+          "stock_code": "6526",
+          "stock_name": "達發",
+          "curr_shares": 16000,
+          "prev_shares": 16000,
           "shares_delta": 0,
           "curr_weight_pct": 0.38,
           "prev_weight_pct": 0.38,
@@ -516,10 +516,10 @@
           }
         },
         {
-          "stock_code": "6526",
-          "stock_name": "達發",
-          "curr_shares": 16000,
-          "prev_shares": 16000,
+          "stock_code": "2345",
+          "stock_name": "智邦科技",
+          "curr_shares": 8000,
+          "prev_shares": 8000,
           "shares_delta": 0,
           "curr_weight_pct": 0.38,
           "prev_weight_pct": 0.38,

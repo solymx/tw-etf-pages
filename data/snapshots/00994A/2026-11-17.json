@@ -2,14 +2,14 @@
   "etf_ticker": "00994A",
   "as_of_date": "2026-11-17",
   "source": "zdsetf",
-  "fetched_at": "2026-11-17T19:41:04+08:00",
-  "raw_file": "00994A_2026-11-17_zdsetf.json",
-  "raw_file_hash": "2f6d7bc477e6f7a824b53d0ab26ec28c042a8e54d77d03b8a607b8d70ceb3b24",
+  "fetched_at": "2026-11-18T02:24:03+08:00",
+  "raw_file": "00994A_2026-11-18_zdsetf.json",
+  "raw_file_hash": "5e80b2a51016b38fc63be59de485b69fb9a073ffb9cfae102c121c71a361bee2",
   "holdings_count": 31,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=182",
-    "fetched_at_upstream": "2026-11-17T09:44:28"
+    "fetched_at_upstream": "2026-11-17T12:27:59"
   },
   "holdings": [
     {
@@ -188,16 +188,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "2345",
-      "stock_name": "智邦科技",
-      "shares": 8000,
+      "stock_code": "6526",
+      "stock_name": "達發",
+      "shares": 16000,
       "weight_pct": 0.38,
       "is_placeholder": false
     },
     {
-      "stock_code": "6526",
-      "stock_name": "達發",
-      "shares": 16000,
+      "stock_code": "2345",
+      "stock_name": "智邦科技",
+      "shares": 8000,
       "weight_pct": 0.38,
       "is_placeholder": false
     },
