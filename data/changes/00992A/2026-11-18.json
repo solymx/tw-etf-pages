@@ -2,8 +2,8 @@
   "etf_ticker": "00992A",
   "as_of_date": "2026-11-18",
   "prev_as_of_date": "2026-11-17",
-  "compared_at": "2026-11-18T19:54:43+08:00",
-  "source": "zdsetf",
+  "compared_at": "2026-11-19T01:56:13+08:00",
+  "source": "capital",
   "placeholder_policy": {
     "max_shares": 1000,
     "max_weight_pct": 0.01,
