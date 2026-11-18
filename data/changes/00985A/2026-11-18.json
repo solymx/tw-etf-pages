@@ -1,0 +1,94 @@
+{
+  "etf_ticker": "00985A",
+  "as_of_date": "2026-11-18",
+  "prev_as_of_date": "2026-11-17",
+  "compared_at": "2026-11-18T19:54:45+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 4,
+    "decrease": 3,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "3105",
+      "stock_name": "穩懋",
+      "prev_shares": 267000,
+      "curr_shares": 665000,
+      "shares_delta": 398000,
+      "prev_weight_pct": 0.52,
+      "curr_weight_pct": 1.26,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨*",
+      "prev_shares": 1182000,
+      "curr_shares": 1407000,
+      "shares_delta": 225000,
+      "prev_weight_pct": 1.74,
+      "curr_weight_pct": 1.99,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "8996",
+      "stock_name": "高力熱處理工業",
+      "prev_shares": 335000,
+      "curr_shares": 432000,
+      "shares_delta": 97000,
+      "prev_weight_pct": 1.6,
+      "curr_weight_pct": 1.97,
+      "streak_days": 3
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "prev_shares": 421000,
+      "curr_shares": 484000,
+      "shares_delta": 63000,
+      "prev_weight_pct": 1.36,
+      "curr_weight_pct": 1.51,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "prev_shares": 4298000,
+      "curr_shares": 2002000,
+      "shares_delta": -2296000,
+      "prev_weight_pct": 1.05,
+      "curr_weight_pct": 0.49,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮海運",
+      "prev_shares": 996000,
+      "curr_shares": 465000,
+      "shares_delta": -531000,
+      "prev_weight_pct": 1.04,
+      "curr_weight_pct": 0.48,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6446",
+      "stock_name": "藥華醫藥",
+      "prev_shares": 460000,
+      "curr_shares": 337000,
+      "shares_delta": -123000,
+      "prev_weight_pct": 2.4,
+      "curr_weight_pct": 1.69,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": []
+}

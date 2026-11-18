@@ -2,14 +2,14 @@
   "etf_ticker": "00401A",
   "as_of_date": "2026-11-17",
   "source": "zdsetf",
-  "fetched_at": "2026-11-18T02:24:01+08:00",
+  "fetched_at": "2026-11-18T19:54:49+08:00",
   "raw_file": "00401A_2026-11-18_zdsetf.json",
-  "raw_file_hash": "adfb0f26818913829c3cef604ad452e7fb19b626f5e2001131e2f94dba252dc4",
+  "raw_file_hash": "49902d6d0d1141491e16828d82098b487b455bd33fa89a6d02dc7d7eebb34d0f",
   "holdings_count": 58,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/asiapacific/tw/zh/regulatory/etf-supplement/jpm_apac_tw_etf_pcf_updates_00401A_TW00000401A1.xlsx",
-    "fetched_at_upstream": "2026-11-17T12:42:42"
+    "fetched_at_upstream": "2026-11-18T09:59:22"
   },
   "holdings": [
     {
@@ -214,7 +214,7 @@
     },
     {
       "stock_code": "7828",
-      "stock_name": "INNOSTAR SERVICE INC ORD TWD 10",
+      "stock_name": "創新服務",
       "shares": 37270,
       "weight_pct": 0.0,
       "is_placeholder": false,
