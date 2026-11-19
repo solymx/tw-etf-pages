@@ -1,7 +1,7 @@
 {
   "data_date": "20261113",
   "prev_date": "20261106",
-  "generated_at": "2026-11-19T01:59:02+08:00",
+  "generated_at": "2026-11-19T18:56:55+08:00",
   "definition": "持股 1,000 張以上（TDCC 持股分級 15：1,000,001 股以上）",
   "notable_pp": 0.5,
   "sources": {
@@ -18,7 +18,7 @@
     "notable_up": 40,
     "notable_down": 39,
     "tilt": "混雜（略偏增）",
-    "avg_d_pct_etf_weighted": -0.015
+    "avg_d_pct_etf_weighted": -0.017
   },
   "increase": [
     "1802",
@@ -530,10 +530,9 @@
       "name": "強茂",
       "etfs": [
         "00981A",
-        "00403A",
         "00406A"
       ],
-      "etf_count": 3,
+      "etf_count": 2,
       "cur": {
         "big_holders": 43,
         "big_shares": 183972615,
@@ -584,10 +583,9 @@
       "code": "3583",
       "name": "辛耘",
       "etfs": [
-        "00403A",
-        "00982A"
+        "00403A"
       ],
-      "etf_count": 2,
+      "etf_count": 1,
       "cur": {
         "big_holders": 12,
         "big_shares": 40281950,
