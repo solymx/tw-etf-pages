@@ -1,0 +1,53 @@
+{
+  "etf_ticker": "00418A",
+  "as_of_date": "2026-11-16",
+  "prev_as_of_date": "2026-11-13",
+  "compared_at": "2026-11-20T13:30:32+08:00",
+  "source": "fh_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 0,
+    "decrease": 3,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [],
+  "decrease": [
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光投",
+      "prev_shares": 573000,
+      "curr_shares": 247000,
+      "shares_delta": -326000,
+      "prev_weight_pct": 3.762,
+      "curr_weight_pct": 1.71,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3406",
+      "stock_name": "玉晶光電",
+      "prev_shares": 99000,
+      "curr_shares": 20000,
+      "shares_delta": -79000,
+      "prev_weight_pct": 1.073,
+      "curr_weight_pct": 0.224,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台灣積體",
+      "prev_shares": 284000,
+      "curr_shares": 264000,
+      "shares_delta": -20000,
+      "prev_weight_pct": 7.328,
+      "curr_weight_pct": 7.359,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": []
+}
