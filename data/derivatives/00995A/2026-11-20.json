@@ -1,0 +1,30 @@
+{
+  "etf_ticker": "00995A",
+  "as_of_date": "2026-11-20",
+  "source": "ctbc_official_holding_weight",
+  "source_page": "https://www.ctbcinvestments.com/etfprod/00995A/pcf",
+  "fetched_at": "2026-11-20T21:36:43+08:00",
+  "nav_total_raw": "2,937,861,545",
+  "option_sum_pct": null,
+  "future_sum_pct": null,
+  "stock_sum_pct": 93.41,
+  "options": [],
+  "futures": [],
+  "other_assets": {
+    "MARGIN": {
+      "name": "保證金",
+      "amount": 23771854.0,
+      "weight_pct": 0.81
+    },
+    "CASH": {
+      "name": "現金",
+      "amount": 236002421.0,
+      "weight_pct": 8.03
+    },
+    "PAYRCIV": {
+      "name": "應收(付)證券款",
+      "amount": -18091695.0,
+      "weight_pct": 0.0
+    }
+  }
+}

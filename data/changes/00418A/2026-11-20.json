@@ -1,0 +1,75 @@
+{
+  "etf_ticker": "00418A",
+  "as_of_date": "2026-11-20",
+  "prev_as_of_date": "2026-11-19",
+  "compared_at": "2026-11-20T21:35:52+08:00",
+  "source": "fh_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 1,
+    "decrease": 3,
+    "full_exit": 1
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "3008",
+      "stock_name": "大立光電",
+      "prev_shares": 54000,
+      "curr_shares": 55000,
+      "shares_delta": 1000,
+      "prev_weight_pct": 3.158,
+      "curr_weight_pct": 3.292,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光投",
+      "prev_shares": 247000,
+      "curr_shares": 130000,
+      "shares_delta": -117000,
+      "prev_weight_pct": 1.829,
+      "curr_weight_pct": 0.969,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2454",
+      "stock_name": "聯發科技",
+      "prev_shares": 109000,
+      "curr_shares": 69000,
+      "shares_delta": -40000,
+      "prev_weight_pct": 5.959,
+      "curr_weight_pct": 3.77,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台灣積體",
+      "prev_shares": 264000,
+      "curr_shares": 247000,
+      "shares_delta": -17000,
+      "prev_weight_pct": 8.147,
+      "curr_weight_pct": 8.057,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": [
+    {
+      "stock_code": "5274",
+      "stock_name": "信驊科技",
+      "prev_shares": 5000,
+      "curr_shares": 0,
+      "shares_delta": -5000,
+      "prev_weight_pct": 0.641,
+      "curr_weight_pct": null,
+      "streak_days": 1
+    }
+  ]
+}

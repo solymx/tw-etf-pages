@@ -1,0 +1,203 @@
+{
+  "etf_ticker": "00406A",
+  "as_of_date": "2026-11-23",
+  "prev_as_of_date": "2026-11-20",
+  "compared_at": "2026-11-20T21:35:57+08:00",
+  "source": "zdsetf",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 18,
+    "decrease": 0,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "prev_shares": 10685000,
+      "curr_shares": 12685000,
+      "shares_delta": 2000000,
+      "prev_weight_pct": 4.3,
+      "curr_weight_pct": 4.89,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "prev_shares": 20668000,
+      "curr_shares": 22168000,
+      "shares_delta": 1500000,
+      "prev_weight_pct": 1.23,
+      "curr_weight_pct": 1.28,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "4958",
+      "stock_name": "臻鼎-KY",
+      "prev_shares": 3979000,
+      "curr_shares": 5179000,
+      "shares_delta": 1200000,
+      "prev_weight_pct": 0.92,
+      "curr_weight_pct": 1.15,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6147",
+      "stock_name": "頎邦",
+      "prev_shares": 5877000,
+      "curr_shares": 7077000,
+      "shares_delta": 1200000,
+      "prev_weight_pct": 0.51,
+      "curr_weight_pct": 0.59,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3189",
+      "stock_name": "景碩科技",
+      "prev_shares": 4006000,
+      "curr_shares": 5006000,
+      "shares_delta": 1000000,
+      "prev_weight_pct": 1.41,
+      "curr_weight_pct": 1.69,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "prev_shares": 4048000,
+      "curr_shares": 4848000,
+      "shares_delta": 800000,
+      "prev_weight_pct": 2.16,
+      "curr_weight_pct": 2.47,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "8358",
+      "stock_name": "金居",
+      "prev_shares": 235000,
+      "curr_shares": 955000,
+      "shares_delta": 720000,
+      "prev_weight_pct": 0.04,
+      "curr_weight_pct": 0.17,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "prev_shares": 5646000,
+      "curr_shares": 6296000,
+      "shares_delta": 650000,
+      "prev_weight_pct": 2.66,
+      "curr_weight_pct": 2.84,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦科技",
+      "prev_shares": 2543000,
+      "curr_shares": 3043000,
+      "shares_delta": 500000,
+      "prev_weight_pct": 2.32,
+      "curr_weight_pct": 2.69,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3167",
+      "stock_name": "大量",
+      "prev_shares": 950000,
+      "curr_shares": 1330000,
+      "shares_delta": 380000,
+      "prev_weight_pct": 0.36,
+      "curr_weight_pct": 0.49,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2308",
+      "stock_name": "台達電",
+      "prev_shares": 2773000,
+      "curr_shares": 3123000,
+      "shares_delta": 350000,
+      "prev_weight_pct": 1.87,
+      "curr_weight_pct": 2.02,
+      "streak_days": 4
+    },
+    {
+      "stock_code": "6213",
+      "stock_name": "聯茂",
+      "prev_shares": 1501000,
+      "curr_shares": 1821000,
+      "shares_delta": 320000,
+      "prev_weight_pct": 0.4,
+      "curr_weight_pct": 0.46,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "6715",
+      "stock_name": "嘉  基",
+      "prev_shares": 2810000,
+      "curr_shares": 3110000,
+      "shares_delta": 300000,
+      "prev_weight_pct": 0.57,
+      "curr_weight_pct": 0.64,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "prev_shares": 2580000,
+      "curr_shares": 2780000,
+      "shares_delta": 200000,
+      "prev_weight_pct": 5.43,
+      "curr_weight_pct": 5.61,
+      "streak_days": 4
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎科技服務",
+      "prev_shares": 871711,
+      "curr_shares": 1071711,
+      "shares_delta": 200000,
+      "prev_weight_pct": 0.83,
+      "curr_weight_pct": 1.02,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3665",
+      "stock_name": "貿聯-KY",
+      "prev_shares": 1530800,
+      "curr_shares": 1630800,
+      "shares_delta": 100000,
+      "prev_weight_pct": 1.49,
+      "curr_weight_pct": 1.52,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "2059",
+      "stock_name": "川湖科技",
+      "prev_shares": 353000,
+      "curr_shares": 413000,
+      "shares_delta": 60000,
+      "prev_weight_pct": 1.41,
+      "curr_weight_pct": 1.59,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "3008",
+      "stock_name": "大立光",
+      "prev_shares": 295000,
+      "curr_shares": 345000,
+      "shares_delta": 50000,
+      "prev_weight_pct": 0.79,
+      "curr_weight_pct": 0.91,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [],
+  "full_exit": []
+}
