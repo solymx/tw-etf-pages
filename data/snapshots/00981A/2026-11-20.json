@@ -2,9 +2,9 @@
   "etf_ticker": "00981A",
   "as_of_date": "2026-11-20",
   "source": "uni_excel",
-  "fetched_at": "2026-11-20T21:35:46+08:00",
-  "raw_file": "00981A_2026-11-20_uni.xlsx",
-  "raw_file_hash": "ebb4efa57ccd0f23eaed7ed75f5391d1051e5fb56203b426c3de2d2c68ca58b0",
+  "fetched_at": "2026-11-21T01:41:55+08:00",
+  "raw_file": "00981A_2026-11-21_uni.xlsx",
+  "raw_file_hash": "f56c24bfae930788496b1a17dcafc31711364006372fd6c31350f69eb5f73e24",
   "holdings_count": 50,
   "placeholder_count": 13,
   "meta": {
