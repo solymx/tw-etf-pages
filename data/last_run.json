@@ -1,5 +1,10 @@
 {
   "mode": "live",
-  "generated_at": "2026-11-21T01:42:55+08:00",
-  "errors": []
+  "generated_at": "2026-11-21T17:03:02+08:00",
+  "errors": [
+    "0050: Yuanta Node extract failed for 0050: rc=3 stderr='yuanta: weightData.FundWeights not found\\n'",
+    "0056: Yuanta Node extract failed for 0056: rc=3 stderr='yuanta: weightData.FundWeights not found\\n'",
+    "00713: Yuanta Node extract failed for 00713: rc=3 stderr='yuanta: weightData.FundWeights not found\\n'",
+    "00940: Yuanta Node extract failed for 00940: rc=3 stderr='yuanta: weightData.FundWeights not found\\n'"
+  ]
 }
