@@ -2,9 +2,9 @@
   "etf_ticker": "00418A",
   "as_of_date": "2026-11-23",
   "source": "fh_excel",
-  "fetched_at": "2026-11-23T21:41:18+08:00",
-  "raw_file": "00418A_2026-11-23_fh.xlsx",
-  "raw_file_hash": "bc697feb8f61649fe1d47922f344c993ff046b5a812f2b489d1c0e1fc2d7d8e2",
+  "fetched_at": "2026-11-24T05:09:17+08:00",
+  "raw_file": "00418A_2026-11-24_fh.xlsx",
+  "raw_file_hash": "72c63c0d72c3de480deffd048eba4e290ea2fed15868463c89ed01a6709f18e0",
   "holdings_count": 32,
   "placeholder_count": 0,
   "meta": {
