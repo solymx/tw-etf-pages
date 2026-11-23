@@ -2,14 +2,14 @@
   "etf_ticker": "00408A",
   "as_of_date": "2026-11-23",
   "source": "zdsetf",
-  "fetched_at": "2026-11-23T18:57:06+08:00",
+  "fetched_at": "2026-11-23T21:41:26+08:00",
   "raw_file": "00408A_2026-11-23_zdsetf.json",
-  "raw_file_hash": "dd2a7e569ce3f7eb6648d12dfadbd890b531a2ec35c71ad41248ce6a0f495376",
+  "raw_file_hash": "69bc20476b1563563c7f20c05f65fc19f339cffdc38732d6fc44eddcb9be1683",
   "holdings_count": 33,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.fsitc.com.tw/FundDetail.aspx?ID=183",
-    "fetched_at_upstream": "2026-11-23T10:09:54"
+    "fetched_at_upstream": "2026-11-23T12:49:37"
   },
   "holdings": [
     {
@@ -167,16 +167,16 @@
       "is_placeholder": false
     },
     {
-      "stock_code": "6223",
-      "stock_name": "旺矽科技",
-      "shares": 4000,
+      "stock_code": "2880",
+      "stock_name": "華南金控",
+      "shares": 340000,
       "weight_pct": 1.42,
       "is_placeholder": false
     },
     {
-      "stock_code": "2880",
-      "stock_name": "華南金控",
-      "shares": 340000,
+      "stock_code": "6223",
+      "stock_name": "旺矽科技",
+      "shares": 4000,
       "weight_pct": 1.42,
       "is_placeholder": false
     },
