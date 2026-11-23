@@ -1,0 +1,154 @@
+{
+  "etf_ticker": "00418A",
+  "as_of_date": "2026-11-23",
+  "prev_as_of_date": "2026-11-20",
+  "compared_at": "2026-11-23T18:54:26+08:00",
+  "source": "fh_excel",
+  "placeholder_policy": {
+    "max_shares": 1000,
+    "max_weight_pct": 0.01,
+    "exclude_from_changes": true
+  },
+  "summary": {
+    "first_buy": 0,
+    "increase": 1,
+    "decrease": 12,
+    "full_exit": 0
+  },
+  "first_buy": [],
+  "increase": [
+    {
+      "stock_code": "3653",
+      "stock_name": "健策精密",
+      "prev_shares": 64000,
+      "curr_shares": 67000,
+      "shares_delta": 3000,
+      "prev_weight_pct": 3.868,
+      "curr_weight_pct": 3.842,
+      "streak_days": 1
+    }
+  ],
+  "decrease": [
+    {
+      "stock_code": "7795",
+      "stock_name": "長廣精機",
+      "prev_shares": 112000,
+      "curr_shares": 87000,
+      "shares_delta": -25000,
+      "prev_weight_pct": 0.448,
+      "curr_weight_pct": 0.343,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "8358",
+      "stock_name": "金居開發",
+      "prev_shares": 225000,
+      "curr_shares": 200000,
+      "shares_delta": -25000,
+      "prev_weight_pct": 0.906,
+      "curr_weight_pct": 0.758,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3026",
+      "stock_name": "禾伸堂企",
+      "prev_shares": 399000,
+      "curr_shares": 381000,
+      "shares_delta": -18000,
+      "prev_weight_pct": 2.109,
+      "curr_weight_pct": 1.957,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "4958",
+      "stock_name": "臻鼎-KY",
+      "prev_shares": 579000,
+      "curr_shares": 561000,
+      "shares_delta": -18000,
+      "prev_weight_pct": 2.928,
+      "curr_weight_pct": 2.894,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光投",
+      "prev_shares": 130000,
+      "curr_shares": 117000,
+      "shares_delta": -13000,
+      "prev_weight_pct": 0.969,
+      "curr_weight_pct": 0.878,
+      "streak_days": 2
+    },
+    {
+      "stock_code": "1560",
+      "stock_name": "中國砂輪",
+      "prev_shares": 188000,
+      "curr_shares": 177000,
+      "shares_delta": -11000,
+      "prev_weight_pct": 1.604,
+      "curr_weight_pct": 1.523,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3167",
+      "stock_name": "大量科技",
+      "prev_shares": 246000,
+      "curr_shares": 235000,
+      "shares_delta": -11000,
+      "prev_weight_pct": 2.042,
+      "curr_weight_pct": 2.044,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "6187",
+      "stock_name": "萬潤科技",
+      "prev_shares": 96000,
+      "curr_shares": 87000,
+      "shares_delta": -9000,
+      "prev_weight_pct": 0.979,
+      "curr_weight_pct": 0.911,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南亞電路",
+      "prev_shares": 309000,
+      "curr_shares": 300000,
+      "shares_delta": -9000,
+      "prev_weight_pct": 3.17,
+      "curr_weight_pct": 3.128,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "2360",
+      "stock_name": "致茂電子",
+      "prev_shares": 97000,
+      "curr_shares": 90000,
+      "shares_delta": -7000,
+      "prev_weight_pct": 1.467,
+      "curr_weight_pct": 1.298,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "8996",
+      "stock_name": "高力熱處",
+      "prev_shares": 105000,
+      "curr_shares": 98000,
+      "shares_delta": -7000,
+      "prev_weight_pct": 1.581,
+      "curr_weight_pct": 1.309,
+      "streak_days": 1
+    },
+    {
+      "stock_code": "3081",
+      "stock_name": "聯亞光電",
+      "prev_shares": 48000,
+      "curr_shares": 44000,
+      "shares_delta": -4000,
+      "prev_weight_pct": 1.069,
+      "curr_weight_pct": 0.952,
+      "streak_days": 1
+    }
+  ],
+  "full_exit": []
+}
