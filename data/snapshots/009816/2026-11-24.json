@@ -2,7 +2,7 @@
   "etf_ticker": "009816",
   "as_of_date": "2026-11-24",
   "source": "kgi",
-  "fetched_at": "2026-11-24T18:55:28+08:00",
+  "fetched_at": "2026-11-24T21:41:09+08:00",
   "raw_file": "009816_2026-11-24_kgi.json",
   "raw_file_hash": "f8cb85312da57f4f00126153cd482244cee0751908b4dc211edd6ec82dd89f07",
   "holdings_count": 50,

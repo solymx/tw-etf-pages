@@ -2,14 +2,14 @@
   "etf_ticker": "00401A",
   "as_of_date": "2026-11-24",
   "source": "zdsetf",
-  "fetched_at": "2026-11-24T18:54:55+08:00",
+  "fetched_at": "2026-11-24T21:40:35+08:00",
   "raw_file": "00401A_2026-11-24_zdsetf.json",
-  "raw_file_hash": "04545acaecc4c85d6e8e6685d397910f046e4af5a94a27ec1e76460ad33f444b",
+  "raw_file_hash": "13dcb0cee6e465fd677f5a30fa9d1f077f860a005a47da66f4e6cd4c70ff83f4",
   "holdings_count": 57,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/asiapacific/tw/zh/regulatory/etf-supplement/jpm_apac_tw_etf_pcf_updates_00401A_TW00000401A1.xlsx",
-    "fetched_at_upstream": "2026-11-24T10:04:34"
+    "fetched_at_upstream": "2026-11-24T12:44:58"
   },
   "holdings": [
     {

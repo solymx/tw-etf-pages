@@ -2,14 +2,14 @@
   "etf_ticker": "00992A",
   "as_of_date": "2026-11-24",
   "source": "zdsetf",
-  "fetched_at": "2026-11-24T18:54:48+08:00",
+  "fetched_at": "2026-11-24T21:40:28+08:00",
   "raw_file": "00992A_2026-11-24_zdsetf.json",
-  "raw_file_hash": "e8bceb9a167b5148ea010fdcdce2dd635dc954e2b915cb528239bddd2ad62278",
+  "raw_file_hash": "da7e77ed87afa5e313e89e4e0e3376e62276bdb1d87c73a130b95fcc1b29d575",
   "holdings_count": 43,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.capitalfund.com.tw/etf/product/detail/500/portfolio",
-    "fetched_at_upstream": "2026-11-24T09:44:15"
+    "fetched_at_upstream": "2026-11-24T12:24:46"
   },
   "holdings": [
     {
