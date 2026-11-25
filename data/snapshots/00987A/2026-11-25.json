@@ -2,7 +2,7 @@
   "etf_ticker": "00987A",
   "as_of_date": "2026-11-25",
   "source": "zdsetf",
-  "fetched_at": "2026-11-25T21:34:55+08:00",
+  "fetched_at": "2026-11-25T21:41:29+08:00",
   "raw_file": "00987A_2026-11-25_zdsetf.json",
   "raw_file_hash": "f4c7ef2da2c75b4d92c56bbb491923c2421236dd65572937d70934060afac74b",
   "holdings_count": 24,
