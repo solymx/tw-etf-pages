@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav %}
+{% block title %}借券賣出餘額（空方壓力）{% endblock %}
+{% block body %}
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>🐻 借券賣出餘額（空方壓力）</h1>
+  <p class="muted">資料日 <strong>{{ sb.date }}</strong>；20 日增幅對照 {{ sb.base_date or "（歷史不足）" }}。已存 {{ sb.days }} 個交易日。</p>
+  {{ page_nav() }}
+</header>
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">大盤：全市場借券賣出總餘額 20 日增幅</div>
+      <div class="muted">&gt; +10% 偏空、&lt; −10% 偏多，其餘中性</div></div>
+    <div class="mg-big">{{ badge(sb.label) }}<strong>{{ pct(sb.g_total, 1) }}</strong></div>
+  </div>
+  <p>{{ sb.reason }}</p>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>總餘額（股）</span><strong>{{ "{:,.0f}".format(sb.total) }}</strong></div>
+    <div class="kd-metric"><span>偏空（空方壓力高）</span><strong>{{ sb.n_bear }} 檔</strong></div>
+    <div class="kd-metric"><span>空方減壓</span><strong>{{ sb.n_relief }} 檔</strong></div>
+  </div>
+</div>
+<section>
+  <h3 class="section-title dec" id="bear">🐻 偏空（空方壓力高）：佔股本比率全市場前 10%，且 20 日增幅 &gt; 0（{{ sb.n_bear }} 檔）</h3>
+  {{ search_box("sb-bear") }}
+  {{ sbl_table(sb["items"]|selectattr("kind", "equalto", "bear")|list, "sb-bear") }}
+  <h3 class="section-title inc" id="relief">🌤️ 空方減壓：比率前 20%，但 20 日增幅 &lt; −20%（{{ sb.n_relief }} 檔）</h3>
+  {{ sbl_table(sb["items"]|selectattr("kind", "equalto", "relief")|list, "sb-relief") }}
+  <h3 class="section-title" id="all">佔股本比率前 300 名</h3>
+  {{ search_box("sb-all") }}
+  {{ sbl_table(sb["items"][:300], "sb-all") }}
+</section>
+<div class="kd-note">
+  <p><strong>定義</strong>：佔股本比率＝借券賣出餘額 ÷ 已發行普通股數；20 日增幅＝今日餘額 ÷ 20 個交易日前餘額 − 1。券資比＝融券餘額 ÷ 融資餘額（只顯示，不判讀{% if sb.margin_date %}，融資融券資料日 {{ sb.margin_date }}{% endif %}）。</p>
+  <p><strong>判讀</strong>：偏空（空方壓力高）＝比率全市場前 10% 且 20 日增幅 &gt; 0；空方減壓（轉中性偏多）＝比率前 20% 但 20 日增幅 &lt; −20%（空方在回補）；其餘中性。</p>
+  <p><strong>注意</strong>：借券賣出包含權證避險與套利交易，不等於看空；券資比高也不代表會軋空（回測不支持）。</p>
+  <p><strong>資料來源</strong>：<a href="{{ sb.src_l }}" target="_blank" rel="noopener">證交所 信用額度總量管制餘額表（TWT93U）</a>、<a href="{{ sb.src_o }}" target="_blank" rel="noopener">櫃買中心 借券賣出餘額</a>、公司基本資料（發行股數）、融資融券餘額。證交所約 18:30 後才公布當日資料，尚未公布時顯示前一交易日。</p>
+</div>
+{{ page_footer(generated_at) }}
+</div></div>
+{% endblock %}
+{% macro sbl_table(items, tid) %}
+{% if items %}
+<div class="table-wrap st-scroll">
+<table class="report kd-table st-table" id="{{ tid }}" data-sortable>
+<thead><tr><th>代號</th><th>名稱</th><th>市場</th><th data-type="num">借券賣出餘額(張)</th><th data-type="num">佔股本比率</th><th data-type="num">20 日增幅</th><th data-type="num">融券餘額(張)</th><th data-type="num">券資比</th><th>空方壓力標記</th></tr></thead>
+<tbody>
+{% for r in items %}
+<tr><td><strong>{{ r.code }}</strong></td><td>{{ r.name }}</td><td>{{ r.market }}</td>
+<td class="num" data-v="{{ r.sbl }}">{{ "{:,.0f}".format(r.sbl / 1000) }}</td>
+<td class="num" data-v="{{ r.ratio if r.ratio is not none else '' }}">{% if r.ratio is not none %}{{ "%.2f"|format(r.ratio) }}%{% else %}<span class="muted">資料暫缺</span>{% endif %}</td>
+<td class="num" data-v="{{ r.g20 if r.g20 is not none else '' }}">{{ pct(r.g20) }}</td>
+<td class="num" data-v="{{ r.short }}">{{ "{:,.0f}".format(r.short / 1000) }}</td>
+<td class="num" data-v="{{ r.short_ratio if r.short_ratio is not none else '' }}">{% if r.short_ratio is not none %}{{ "%.1f"|format(r.short_ratio) }}%{% else %}—{% endif %}</td>
+<td>{{ kindbadge(r.kind, r.label) }}</td></tr>
+{% endfor %}
+</tbody></table></div>
+{% else %}<div class="empty-box">目前沒有符合條件的股票。</div>{% endif %}
+{% endmacro %}

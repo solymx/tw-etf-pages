@@ -499,4 +499,42 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { drawMg(0); });
   else drawMg(0);
+
+  // strategy pages: table search + click-to-sort
+  qsa('[data-table-search]').forEach(function (inp) {
+    var table = document.getElementById(inp.getAttribute('data-table-search'));
+    if (!table) return;
+    inp.addEventListener('input', function () {
+      var q = inp.value.trim().toLowerCase();
+      qsa('tbody tr', table).forEach(function (tr) {
+        tr.style.display = !q || tr.textContent.toLowerCase().indexOf(q) >= 0 ? '' : 'none';
+      });
+    });
+  });
+  qsa('table[data-sortable]').forEach(function (table) {
+    qsa('thead th', table).forEach(function (th, idx) {
+      th.addEventListener('click', function () {
+        var num = th.getAttribute('data-type') === 'num';
+        var asc = !th.classList.contains('sorted-asc');
+        qsa('thead th', table).forEach(function (h) { h.classList.remove('sorted-asc', 'sorted-desc'); });
+        th.classList.add(asc ? 'sorted-asc' : 'sorted-desc');
+        var tbody = qs('tbody', table);
+        var rows = qsa('tr', tbody);
+        rows.sort(function (a, b) {
+          var ca = a.children[idx], cb = b.children[idx];
+          var va = ca ? (ca.getAttribute('data-v') !== null ? ca.getAttribute('data-v') : ca.textContent.trim()) : '';
+          var vb = cb ? (cb.getAttribute('data-v') !== null ? cb.getAttribute('data-v') : cb.textContent.trim()) : '';
+          if (num) {
+            var na = va === '' ? NaN : parseFloat(va), nb = vb === '' ? NaN : parseFloat(vb);
+            if (isNaN(na) && isNaN(nb)) return 0;
+            if (isNaN(na)) return 1;
+            if (isNaN(nb)) return -1;
+            return asc ? na - nb : nb - na;
+          }
+          return asc ? va.localeCompare(vb, 'zh-Hant') : vb.localeCompare(va, 'zh-Hant');
+        });
+        rows.forEach(function (r) { tbody.appendChild(r); });
+      });
+    });
+  });
 })();

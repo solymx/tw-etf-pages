@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% from "_strategy_macros.html" import badge, pct, search_box, page_footer, page_nav %}
+{% block title %}高殖利率＋低波動{% endblock %}
+{% block body %}
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>🛡️ 高殖利率＋低波動（防守型名單）</h1>
+  <p class="muted">收盤資料日 <strong>{{ dv.date }}</strong>；殖利率資料日 上市 {{ dv.fund_dates.get("上市", "—") }}／上櫃 {{ dv.fund_dates.get("上櫃", "—") }}。本期名單（{{ dv.period }} 期）建立於 {{ dv.formed_on }}，每年 6、12 月換股。</p>
+  {{ page_nav() }}
+</header>
+{% if dv.provisional %}<div class="empty-box">⚠️ 暫定名單：目前只累積 {{ dv.price_days }} 個交易日收盤價（規格要 250 日），波動度以現有天數計算，之後每天自動累積、補足後名單才會固定。</div>{% endif %}
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">市場氣氛：入選組合 vs 0050（近 20 日）</div>
+      <div class="muted">此策略是防守型，不判斷大盤方向；只看資金偏保守或偏追高</div></div>
+    <div class="mg-big">{{ badge(dv.mood_label) }}</div>
+  </div>
+  <p>{{ dv.reason }}</p>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>入選組合 20 日報酬（等權）</span><strong>{{ pct(dv.basket20, 2) }}</strong></div>
+    <div class="kd-metric"><span>0050 20 日報酬</span><strong>{{ pct(dv.bench20, 2) }}</strong></div>
+    <div class="kd-metric"><span>標「穩健」</span><strong>{{ dv.n_steady }} 檔</strong></div>
+    <div class="kd-metric"><span>標「殖利率陷阱警示」</span><strong>{{ dv.n_trap }} 檔</strong></div>
+  </div>
+</div>
+<section>
+  <h3 class="section-title inc" id="picked">✅ 入選 {{ dv.picked|length }} 檔（等權重，依年化波動度由低到高）</h3>
+  {{ search_box("dv-picked") }}
+  {{ dv_table(dv.picked, "dv-picked") }}
+  <h3 class="section-title" id="pool">高殖利率前 1/3 候選池（{{ dv.top_n }} 檔；流動性合格 {{ dv.pool_n }} 檔中殖利率最高的 1/3）</h3>
+  {{ search_box("dv-pool") }}
+  {{ dv_table(dv.top, "dv-pool") }}
+</section>
+<div class="kd-note">
+  <p><strong>選股規則</strong>：上市櫃普通股（4 碼代號，排除 ETF、特別股、權證；排除目前處置中的股票），近 20 日平均成交值 ≥ 3,000 萬元 → 取殖利率前 1/3 → 品質濾網（連續 ≥ 5 年配發現金股利、近四季 EPS &gt; 0）→ 近 250 日日報酬標準差最低的 30 檔（年化＝日標準差 × √250），等權重。</p>
+  <p><strong>個股標籤</strong>：「穩健」＝入選、殖利率 &gt; 5%、最新收盤價在 60 日均線之上。「殖利率陷阱警示」＝在高殖利率候選池中，但近 60 日跌幅 &gt; 15% 或近四季 EPS ≤ 0（殖利率高常是股價跌出來的）。</p>
+  <p><strong>計算說明</strong>：近四季 EPS ＝ 收盤價 ÷ 交易所公布的本益比（本益比即以近四季 EPS 計算，空白代表 EPS ≤ 0）。配息年數以「每年是否有除息」計算（證交所除權息計算結果表／櫃買中心除權除息結果，{{ "資料完整" if dv.div_complete else "部分年度暫缺" }}）。單日漲跌超過 11%（超過漲跌幅限制，通常是減資或分割）不納入波動度；除息造成的跳空未還原。</p>
+  <p><strong>資料來源</strong>：<a href="{{ dv.src_l }}" target="_blank" rel="noopener">證交所 個股本益比、殖利率及股價淨值比</a>、<a href="{{ dv.src_o }}" target="_blank" rel="noopener">櫃買中心 個股本益比、殖利率</a>、兩市每日收盤行情、除權息結果表、處置股公告。</p>
+  {% if dv.errors %}<p class="muted">本次抓取問題：{{ dv.errors|join("；") }}</p>{% endif %}
+</div>
+{{ page_footer(generated_at) }}
+</div></div>
+{% endblock %}
+{% macro dv_table(items, tid) %}
+<div class="table-wrap st-scroll">
+<table class="report kd-table st-table" id="{{ tid }}" data-sortable>
+<thead><tr><th>代號</th><th>名稱</th><th>市場</th><th data-type="num">殖利率</th><th data-type="num">年化波動度</th><th data-type="num">配息連續年數</th><th data-type="num">近四季 EPS</th><th data-type="num">收盤</th><th data-type="num">60 日漲跌</th><th>是否入選</th><th>標籤</th></tr></thead>
+<tbody>
+{% for r in items %}
+<tr class="{% if r.picked %}mg-row-up{% endif %}"><td><strong>{{ r.code }}</strong></td><td>{{ r.name }}</td><td>{{ r.market }}</td>
+<td class="num" data-v="{{ r.yield }}">{{ "%.2f"|format(r.yield) }}%</td>
+<td class="num" data-v="{{ r.vol if r.vol is not none else '' }}">{% if r.vol is not none %}{{ "%.1f"|format(r.vol) }}%{% else %}<span class="muted">資料暫缺</span>{% endif %}</td>
+<td class="num" data-v="{{ r.div_years }}">{{ r.div_years }}{% if r.div_years >= 7 %}+{% endif %}</td>
+<td class="num" data-v="{{ r.eps4q if r.eps4q is not none else '' }}">{% if r.eps4q is not none %}{{ "%.2f"|format(r.eps4q) }}{% else %}<span class="muted">≤0／無</span>{% endif %}</td>
+<td class="num" data-v="{{ r.close }}">{{ "%.2f"|format(r.close) }}</td>
+<td class="num" data-v="{{ r.chg60 if r.chg60 is not none else '' }}">{{ pct(r.chg60) }}</td>
+<td>{% if r.picked %}✅ 入選{% else %}—{% endif %}</td>
+<td>{% if r.steady %}<span class="st-badge st-bull">穩健</span>{% endif %}{% if r.trap %}<span class="st-badge st-warn" title="{{ r.trap_why }}">殖利率陷阱警示</span>{% endif %}{% if not r.steady and not r.trap %}<span class="muted">—</span>{% endif %}</td></tr>
+{% endfor %}
+</tbody></table></div>
+{% endmacro %}

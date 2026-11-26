@@ -5,6 +5,7 @@
 {% from "_sitc_macros.html" import sitc_card, sitc_table, sitc_note %}
 {% from "_vix_macros.html" import vix_card, vix_chart, vix_table, vix_note %}
 {% from "_news_macros.html" import news_card, news_list, news_note %}
+{% from "_strategy_macros.html" import overview as st_overview %}
 {% block title %}台灣主動式 ETF 持股異動日報{% endblock %}
 {% block heading %}台灣主動式 ETF 持股異動日報{% endblock %}
 {% block subtitle %}
@@ -17,6 +18,14 @@
 <nav class="toc" id="toc" aria-label="頁面目錄">
   <h2>目錄</h2>
   <ol>
+    {% if st %}<li><a href="#part_overview">🚦 今日多空總覽</a>
+      <div class="toc-sub"><ol>
+        <li><a href="revenue.html">📊 月營收動能</a></li>
+        <li><a href="dividend-lowvol.html">🛡️ 高殖利率＋低波動</a></li>
+        <li><a href="futures-pc.html">🧭 外資期貨＋P/C</a></li>
+        <li><a href="sbl.html">🐻 借券賣出餘額</a></li>
+      </ol></div>
+    </li>{% endif %}
     {% if kd %}<li><a href="#part_kd">📈 加權指數 KD 指標</a>
       <div class="toc-sub"><ol><li><a href="taiex-kd.html">KD 走勢圖／完整歷史</a></li></ol></div>
     </li>{% endif %}
@@ -55,6 +64,7 @@
 {% endblock %}
 {% block nav %}
 <nav class="nav-inline">
+  {% if st %}<a href="#part_overview">🚦 今日多空總覽</a><a href="revenue.html">📊 月營收動能</a><a href="dividend-lowvol.html">🛡️ 高殖利率低波動</a><a href="futures-pc.html">🧭 外資期貨＋P/C</a><a href="sbl.html">🐻 借券賣出</a>{% endif %}
   {% if nv %}<a href="news.html">📰 今日財經新聞</a>{% endif %}
   {% if sv %}<a href="sitc-first-buy.html">🏦 投信第一次買超</a>{% endif %}
   {% for e in etfs %}
@@ -69,6 +79,14 @@
 </div>
 {% endblock %}
 {% block content %}
+
+{% if st %}
+<section>
+  <h2 class="banner" id="part_overview">🚦 今日多空總覽</h2>
+  {{ st_overview(st) }}
+  {% if st.dv %}<p class="muted">另：<a href="dividend-lowvol.html">🛡️ 高殖利率＋低波動</a>（防守型，不判斷方向）目前為「{{ st.dv.mood_label.text }}」——{{ st.dv.reason }}</p>{% endif %}
+</section>
+{% endif %}
 
 {% if kd %}
 <section>

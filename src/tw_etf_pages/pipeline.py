@@ -289,6 +289,12 @@ def run_live(cfg: AppConfig | None = None, *, allow_fallback: bool = True) -> Pa
     except Exception:  # noqa: BLE001 — 投信第一次買超 must never fail the run
         logger.exception("SITC first-buy update failed")
     try:
+        from .strat_render import update_strategies
+
+        update_strategies(cfg.root)
+    except Exception:  # noqa: BLE001 — strategy pages must never fail the run
+        logger.exception("Strategy update failed")
+    try:
         from .news import update_news
 
         update_news(cfg.root)

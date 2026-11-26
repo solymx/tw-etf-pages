@@ -1,0 +1,47 @@
+{% macro badge(lb) -%}<span class="st-badge st-{{ lb.cls }}">{{ lb.text }}</span>{%- endmacro %}
+
+{% macro pct(v, d=1, signed=True) -%}
+{%- if v is none -%}<span class="muted">—</span>
+{%- elif signed and v > 0 -%}<span class="mg-up">+{{ ("%." ~ d ~ "f")|format(v) }}%</span>
+{%- elif signed and v < 0 -%}<span class="mg-down">{{ ("%." ~ d ~ "f")|format(v) }}%</span>
+{%- else -%}{{ ("%." ~ d ~ "f")|format(v) }}%{%- endif -%}
+{%- endmacro %}
+
+{% macro kindbadge(kind, text) -%}
+<span class="st-badge st-{{ {'bull':'bull','bear':'bear','relief':'bull','neutral':'neutral'}.get(kind, 'neutral') }}">{{ text }}</span>
+{%- endmacro %}
+
+{% macro search_box(target, placeholder="搜尋代號或名稱…") -%}
+<div class="st-tools"><input type="search" class="st-search" data-table-search="{{ target }}" placeholder="{{ placeholder }}" aria-label="{{ placeholder }}"><span class="muted">點欄位標題可排序</span></div>
+{%- endmacro %}
+
+{% macro page_footer(generated_at) %}
+<footer class="site-footer">
+  <p><strong>不構成投資建議；判讀規則屬經驗法則，非研究保證。</strong></p>
+  <p>時區：Asia/Taipei。最後產生時間：{{ generated_at }}。</p>
+</footer>
+{% endmacro %}
+
+{% macro page_nav() %}
+<nav class="nav-inline">
+  <a href="index.html#part_overview">← 回首頁「今日多空總覽」</a>
+  <a href="revenue.html">📊 月營收動能</a>
+  <a href="dividend-lowvol.html">🛡️ 高殖利率＋低波動</a>
+  <a href="futures-pc.html">🧭 外資期貨＋P/C</a>
+  <a href="sbl.html">🐻 借券賣出餘額</a>
+</nav>
+{% endmacro %}
+
+{% macro overview(st) %}
+<div class="st-overview">
+  {% for c in st.cards %}
+  <a class="st-ov-card st-ov-{{ c.label.cls }}" href="{{ c.href }}">
+    <div class="st-ov-title">{{ c.title }}</div>
+    <div class="st-ov-badge">{{ badge(c.label) }}</div>
+    <div class="st-ov-reason">{{ c.reason }}</div>
+    <div class="muted st-ov-date">資料日 {{ c.date or "—" }}{% if c.flag %}｜<span class="st-flag">{{ c.flag }}</span>{% endif %}</div>
+  </a>
+  {% endfor %}
+</div>
+<p class="muted">三個標籤各自獨立計算，彼此可能矛盾；點卡片看完整數據與規則。不構成投資建議；判讀規則屬經驗法則，非研究保證。</p>
+{% endmacro %}

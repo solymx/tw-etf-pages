@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav %}
+{% block title %}月營收年增率動能{% endblock %}
+{% block body %}
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>📊 月營收年增率動能</h1>
+  <p class="muted">上市＋上櫃（排除金融保險業），依「單月營收年增率」排名。資料年月 <strong>{{ rv.ym }}</strong>。</p>
+  {{ page_nav() }}
+</header>
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">大盤溫度計：單月營收年增 &gt; 0 的公司比例</div>
+      <div class="muted">資料年月 {{ rv.ym }}；&gt; 60% 偏多、&lt; 40% 偏空，其餘中性</div></div>
+    <div class="mg-big">{{ badge(rv.label) }}<strong>{% if rv.share_pos is not none %}{{ "%.1f"|format(rv.share_pos) }}%{% else %}資料暫缺{% endif %}</strong></div>
+  </div>
+  <p>{{ rv.reason }}</p>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>上市年增率中位數</span><strong>{{ pct(rv.median_listed) }}</strong></div>
+    <div class="kd-metric"><span>篩選通過（偏多）</span><strong>{{ rv.n_bull }} 家</strong></div>
+    <div class="kd-metric"><span>創 12 個月新高</span><strong>{{ rv.n_high12 }} 家</strong></div>
+    <div class="kd-metric"><span>偏空（單月與累計皆衰退）</span><strong>{{ rv.n_bear }} 家</strong></div>
+  </div>
+</div>
+<section>
+  <h3 class="section-title inc" id="screen">✅ 篩選名單：單月年增 ≥ 20%、累計年增 ≥ 20%、月增 &gt; 0（{{ rv.screened|length }} 家）</h3>
+  {{ search_box("rv-screen") }}
+  {{ rev_table(rv.screened, "rv-screen") }}
+  <h3 class="section-title" id="all">全部公司（依單月年增排序，{{ rv["items"]|length }} 家）</h3>
+  {{ search_box("rv-all") }}
+  {{ rev_table(rv["items"], "rv-all") }}
+</section>
+<div class="kd-note">
+  <p><strong>個股判讀</strong>：偏多＝單月年增 ≥ 20% 且累計年增 ≥ 20% 且月增 &gt; 0；若當月營收同時是近 12 個月最高，標「偏多（強）」。偏空＝單月年增 &lt; 0 且累計年增 &lt; 0。其餘中性。「連續月數」＝往回數連續幾個月單月年增 &gt; 20%（本站存有 {{ rv.months_stored|length }} 個月：{{ rv.months_stored[0] }} ～ {{ rv.months_stored[-1] }}）。</p>
+  <p><strong>注意</strong>：只看營收創高要搭配股價趨勢；季節性行業（觀光、農業、零售、電子旺淡季）與去年基期偏低時容易誤判。月營收每月 10 日前公布，本頁在資料年月換月時重算；月初公司陸續公布，名單會逐日補齊。</p>
+  <p><strong>資料來源</strong>：<a href="https://openapi.twse.com.tw/" target="_blank" rel="noopener">證交所 OpenAPI t187ap05_L</a>、<a href="https://www.tpex.org.tw/openapi/" target="_blank" rel="noopener">櫃買中心 OpenAPI mopsfin_t187ap05_O</a>；歷史月份取自 <a href="{{ rv.source }}" target="_blank" rel="noopener">公開資訊觀測站 每月營收彙總表</a>。</p>
+</div>
+{{ page_footer(generated_at) }}
+</div></div>
+{% endblock %}
+{% macro rev_table(items, tid) %}
+<div class="table-wrap st-scroll">
+<table class="report kd-table st-table" id="{{ tid }}" data-sortable>
+<thead><tr><th>代號</th><th>名稱</th><th>市場</th><th>產業</th><th>資料年月</th><th data-type="num">當月營收(千元)</th><th data-type="num">單月年增</th><th data-type="num">累計年增</th><th data-type="num">月增</th><th>創 12 月新高</th><th data-type="num">連續月數</th><th>判讀</th></tr></thead>
+<tbody>
+{% for r in items %}
+<tr><td><strong>{{ r.code }}</strong></td><td>{{ r.name }}</td><td>{{ r.market }}</td><td>{{ r.industry }}</td><td>{{ rv.ym }}</td>
+<td class="num" data-v="{{ r.revenue }}">{{ "{:,.0f}".format(r.revenue) }}</td>
+<td class="num" data-v="{{ r.yoy if r.yoy is not none else '' }}">{{ pct(r.yoy) }}</td>
+<td class="num" data-v="{{ r.cum_yoy if r.cum_yoy is not none else '' }}">{{ pct(r.cum_yoy) }}</td>
+<td class="num" data-v="{{ r.mom if r.mom is not none else '' }}">{{ pct(r.mom) }}</td>
+<td>{% if r.high12 %}⭐ 是{% elif r.high12_known %}否{% else %}<span class="muted">資料不足</span>{% endif %}</td>
+<td class="num" data-v="{{ r.streak }}">{{ r.streak }}</td>
+<td>{{ kindbadge(r.kind, r.label) }}</td></tr>
+{% endfor %}
+</tbody></table></div>
+{% endmacro %}

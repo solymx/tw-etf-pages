@@ -637,7 +637,17 @@ def render_site(cfg: AppConfig) -> Path:
         logger.exception("SITC first-buy view failed")
         sv = None
 
+    st = None
+    try:
+        from .strat_render import render_strategies
+
+        st = render_strategies(env, site, cfg.root, generated_at)
+    except Exception:  # noqa: BLE001 — never break the site for strategy pages
+        logger.exception("Strategy pages failed")
+        st = None
+
     index_html = env.get_template("index.html").render(
+        st=st,
         nv=nv,
         sv=sv,
         cv=cv,
