@@ -3,8 +3,10 @@
     "https://www.taifex.com.tw/cht/3/futContractsDate",
     "https://www.taifex.com.tw/cht/3/pcRatio"
   ],
-  "updated_at": "2026-11-26T21:14:41+08:00",
-  "fetch_errors": [],
+  "updated_at": "2026-11-26T21:53:32+08:00",
+  "fetch_errors": [
+    "openapi futures: TAIFEX 期貨三大法人欄位格式變動: ['[{\"Date\":\"20261125\"', 'ContractCode:\"臺股期貨\"', 'Item:\"自營商\"', 'TradingVolume(Long):\"12398\"', 'TradingValue(Long)(Thousands):\"95130790\"', 'TradingVolume(Short):\"12674\"', 'TradingValue(Short)(Thousands):\"96711128\"', 'TradingVolume(Net):\"-276\"', 'TradingValue(Net)(Thousands):\"-1580337\"', 'OpenInterest(Long):\"3247\"', 'ContractValueofOpenInterest(Long)(Thousands):\"24767239\"', 'OpenInterest(Short):\"3898\"', 'ContractValueofOpenInterest(Short)(Thousands):\"29738573\"', 'OpenInterest(Net):\"-651\"', 'ContractValueofOpenInterest(Net)(Thousands):\"-4971334\"}', '']"
+  ],
   "rows": [
     {
       "date": "2025-10-01",
