@@ -1,7 +1,7 @@
 {
   "data_date": "20261120",
   "prev_date": "20261113",
-  "generated_at": "2026-11-26T03:07:41+08:00",
+  "generated_at": "2026-11-26T18:58:00+08:00",
   "definition": "持股 1,000 張以上（TDCC 持股分級 15：1,000,001 股以上）",
   "notable_pp": 0.5,
   "sources": {
@@ -9,16 +9,16 @@
     "history_query": "https://www.tdcc.com.tw/portal/zh/smWeb/qryStock"
   },
   "summary": {
-    "stocks": 263,
-    "with_data": 263,
+    "stocks": 261,
+    "with_data": 261,
     "missing": 0,
     "up": 118,
-    "down": 134,
-    "flat": 11,
+    "down": 133,
+    "flat": 10,
     "notable_up": 41,
     "notable_down": 54,
     "tilt": "混雜（略偏減）",
-    "avg_d_pct_etf_weighted": -0.035
+    "avg_d_pct_etf_weighted": -0.033
   },
   "increase": [
     "3026",
@@ -544,16 +544,18 @@
     },
     {
       "code": "1560",
-      "name": "中國砂輪",
+      "name": "中砂",
       "etfs": [
+        "00981A",
         "00418A",
         "00403A",
+        "00992A",
         "00406A",
         "00984A",
         "00993A",
         "00995A"
       ],
-      "etf_count": 6,
+      "etf_count": 8,
       "cur": {
         "big_holders": 28,
         "big_shares": 75509907,
@@ -704,7 +706,7 @@
       "name": "致茂電子",
       "etfs": [
         "00418A",
-        "00992A",
+        "00403A",
         "00980A",
         "00400A",
         "00401A",
@@ -802,12 +804,14 @@
         "00984A",
         "00400A",
         "00401A",
+        "00408A",
+        "00994A",
         "00995A",
         "0050",
         "00918",
         "009816"
       ],
-      "etf_count": 17,
+      "etf_count": 19,
       "cur": {
         "big_holders": 58,
         "big_shares": 372893453,
@@ -971,9 +975,10 @@
       "code": "3131",
       "name": "弘塑科技",
       "etfs": [
+        "00999A",
         "00996A"
       ],
-      "etf_count": 1,
+      "etf_count": 2,
       "cur": {
         "big_holders": 5,
         "big_shares": 9992306,
@@ -1093,11 +1098,10 @@
       "name": "尖點",
       "etfs": [
         "00992A",
-        "00405A",
         "00993A",
         "00996A"
       ],
-      "etf_count": 4,
+      "etf_count": 3,
       "cur": {
         "big_holders": 19,
         "big_shares": 51906490,
@@ -1955,7 +1959,6 @@
       "code": "2301",
       "name": "光寶科技",
       "etfs": [
-        "00992A",
         "00984A",
         "00993A",
         "00408A",
@@ -1966,7 +1969,7 @@
         "00929",
         "009816"
       ],
-      "etf_count": 10,
+      "etf_count": 9,
       "cur": {
         "big_holders": 266,
         "big_shares": 1678919737,
@@ -2228,6 +2231,7 @@
       "name": "貿聯-KY",
       "etfs": [
         "00981A",
+        "00988A",
         "00991A",
         "00403A",
         "00992A",
@@ -2246,7 +2250,7 @@
         "0050",
         "00881"
       ],
-      "etf_count": 18,
+      "etf_count": 19,
       "cur": {
         "big_holders": 34,
         "big_shares": 87051034,
@@ -2389,10 +2393,11 @@
       "code": "3533",
       "name": "嘉澤端子工業",
       "etfs": [
+        "00405A",
         "00400A",
         "00996A"
       ],
-      "etf_count": 2,
+      "etf_count": 3,
       "cur": {
         "big_holders": 18,
         "big_shares": 54564831,
@@ -3005,8 +3010,9 @@
     },
     {
       "code": "3008",
-      "name": "大立光電",
+      "name": "大立光",
       "etfs": [
+        "00981A",
         "00991A",
         "00418A",
         "00403A",
@@ -3027,7 +3033,7 @@
         "00929",
         "009816"
       ],
-      "etf_count": 19,
+      "etf_count": 20,
       "cur": {
         "big_holders": 13,
         "big_shares": 52844572,
@@ -3158,10 +3164,9 @@
       "code": "2481",
       "name": "強茂",
       "etfs": [
-        "00981A",
-        "00406A"
+        "00981A"
       ],
-      "etf_count": 2,
+      "etf_count": 1,
       "cur": {
         "big_holders": 44,
         "big_shares": 184146094,
@@ -3770,32 +3775,6 @@
       "d_total_holders": -1130
     },
     {
-      "code": "3583",
-      "name": "辛耘",
-      "etfs": [
-        "00403A"
-      ],
-      "etf_count": 1,
-      "cur": {
-        "big_holders": 12,
-        "big_shares": 40281950,
-        "big_pct": 48.03,
-        "total_holders": 33179,
-        "total_shares": 83858644
-      },
-      "prev": {
-        "big_holders": 12,
-        "big_shares": 40281950,
-        "big_pct": 48.03,
-        "total_holders": 33359,
-        "total_shares": 83858644
-      },
-      "d_pct": 0.0,
-      "d_holders": 0,
-      "d_lots": 0,
-      "d_total_holders": -180
-    },
-    {
       "code": "4770",
       "name": "上品綜合工業股份有限公司",
       "etfs": [
@@ -3996,13 +3975,15 @@
         "00993A",
         "00400A",
         "00401A",
+        "00408A",
+        "00994A",
         "00995A",
         "00996A",
         "0050",
         "00881",
         "009816"
       ],
-      "etf_count": 18,
+      "etf_count": 20,
       "cur": {
         "big_holders": 254,
         "big_shares": 1886733841,
@@ -4646,9 +4627,10 @@
         "00993A",
         "00400A",
         "00401A",
+        "00995A",
         "0056"
       ],
-      "etf_count": 9,
+      "etf_count": 10,
       "cur": {
         "big_holders": 53,
         "big_shares": 261004679,
@@ -4981,6 +4963,7 @@
         "00993A",
         "00400A",
         "00401A",
+        "00408A",
         "00994A",
         "00995A",
         "00996A",
@@ -4989,7 +4972,7 @@
         "00878",
         "009816"
       ],
-      "etf_count": 22,
+      "etf_count": 23,
       "cur": {
         "big_holders": 434,
         "big_shares": 3631303846,
@@ -6066,38 +6049,13 @@
       "d_total_holders": -149
     },
     {
-      "code": "2486",
-      "name": "一詮精密",
-      "etfs": [
-        "00406A"
-      ],
-      "etf_count": 1,
-      "cur": {
-        "big_holders": 22,
-        "big_shares": 64188694,
-        "big_pct": 26.65,
-        "total_holders": 90523,
-        "total_shares": 240814910
-      },
-      "prev": {
-        "big_holders": 23,
-        "big_shares": 65018574,
-        "big_pct": 27.0,
-        "total_holders": 90827,
-        "total_shares": 240804910
-      },
-      "d_pct": -0.35,
-      "d_holders": -1,
-      "d_lots": -830,
-      "d_total_holders": -304
-    },
-    {
       "code": "6257",
-      "name": "矽格股份",
+      "name": "矽格",
       "etfs": [
+        "00999A",
         "00929"
       ],
-      "etf_count": 1,
+      "etf_count": 2,
       "cur": {
         "big_holders": 67,
         "big_shares": 193770543,
@@ -6857,6 +6815,7 @@
         "00993A",
         "00400A",
         "00401A",
+        "00987A",
         "00408A",
         "00994A",
         "00995A",
@@ -6865,7 +6824,7 @@
         "0056",
         "009816"
       ],
-      "etf_count": 20,
+      "etf_count": 21,
       "cur": {
         "big_holders": 397,
         "big_shares": 6551875275,
@@ -7174,14 +7133,13 @@
         "00400A",
         "00401A",
         "00987A",
-        "00995A",
         "00996A",
         "0050",
         "00881",
         "00878",
         "009816"
       ],
-      "etf_count": 16,
+      "etf_count": 15,
       "cur": {
         "big_holders": 116,
         "big_shares": 741724085,
@@ -7744,12 +7702,13 @@
         "00992A",
         "00405A",
         "00980A",
+        "00999A",
         "00984A",
         "00400A",
         "00995A",
         "00929"
       ],
-      "etf_count": 8,
+      "etf_count": 9,
       "cur": {
         "big_holders": 62,
         "big_shares": 248467698,
@@ -7800,10 +7759,9 @@
       "name": "聯鈞",
       "etfs": [
         "00403A",
-        "00405A",
         "00984A"
       ],
-      "etf_count": 3,
+      "etf_count": 2,
       "cur": {
         "big_holders": 10,
         "big_shares": 27956306,
@@ -7883,9 +7841,10 @@
       "name": "同欣電",
       "etfs": [
         "00981A",
-        "00400A"
+        "00400A",
+        "00995A"
       ],
-      "etf_count": 2,
+      "etf_count": 3,
       "cur": {
         "big_holders": 35,
         "big_shares": 85935775,
@@ -7909,13 +7868,12 @@
       "code": "6531",
       "name": "愛普科技",
       "etfs": [
-        "00405A",
         "00985A",
         "00982A",
         "00401A",
         "00996A"
       ],
-      "etf_count": 5,
+      "etf_count": 4,
       "cur": {
         "big_holders": 30,
         "big_shares": 90143128,
@@ -7963,11 +7921,12 @@
     },
     {
       "code": "3563",
-      "name": "牧德科技",
+      "name": "牧德",
       "etfs": [
+        "00999A",
         "00929"
       ],
-      "etf_count": 1,
+      "etf_count": 2,
       "cur": {
         "big_holders": 8,
         "big_shares": 25447418,
