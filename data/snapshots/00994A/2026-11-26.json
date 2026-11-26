@@ -2,7 +2,7 @@
   "etf_ticker": "00994A",
   "as_of_date": "2026-11-26",
   "source": "zdsetf",
-  "fetched_at": "2026-11-26T22:11:26+08:00",
+  "fetched_at": "2026-11-26T22:13:54+08:00",
   "raw_file": "00994A_2026-11-26_zdsetf.json",
   "raw_file_hash": "350dbcb0439001a1b1f23054ef2b9a0ae32835fcd75f7d847d0bba6846a99066",
   "holdings_count": 34,

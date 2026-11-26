@@ -1,6 +1,6 @@
 {
   "as_of_date": "2026-11-26",
-  "generated_at": "2026-11-26T22:12:34+08:00",
+  "generated_at": "2026-11-26T22:15:11+08:00",
   "sources": [
     {
       "id": "ctee_stock",
@@ -62,7 +62,7 @@
       "id": "gnews_taigu",
       "name": "Google 新聞",
       "ok": true,
-      "count": 102,
+      "count": 100,
       "error": null
     },
     {
@@ -111,37 +111,69 @@
     "自由時報"
   ],
   "failed_sources": [],
-  "today_count": 350,
+  "today_count": 333,
   "prior_evening_count": 0,
-  "total": 350,
+  "total": 333,
   "per_source": {
-    "經濟日報": 73,
+    "經濟日報": 71,
     "自由時報": 40,
-    "Yahoo股市": 51,
+    "Yahoo股市": 45,
     "中央社": 20,
-    "工商時報": 69,
+    "工商時報": 70,
     "鉅亨網": 34,
-    "永豐金證券": 5,
-    "信傳媒": 1,
-    "非凡新聞台": 1,
-    "ETtoday財經雲": 5,
-    "CMoney投資網誌": 1,
-    "UDN": 7,
+    "永豐金證券": 6,
+    "ETtoday財經雲": 2,
+    "UDN": 5,
     "造咖": 1,
-    "財訊": 1,
     "MoneyDJ": 20,
     "三立新聞": 4,
-    "中央社 CNA": 3,
     "理財周刊": 2,
     "東森電視": 2,
     "口袋證券": 1,
     "Yahoo新聞": 3,
-    "自由財經": 3,
+    "自由財經": 2,
+    "中央社 CNA": 2,
     "鏡週刊Mirror Media": 1,
     "今周刊": 1,
     "Mobile01": 1
   },
   "items": [
+    {
+      "title": "今彩539第115286期 頭獎1注中獎",
+      "url": "https://money.udn.com/money/story/5612/9904524",
+      "source": "經濟日報",
+      "source_id": "udn_stock",
+      "published_at": "2026-11-26T22:12:45+08:00",
+      "published_hm": "22:12",
+      "bucket": "today"
+    },
+    {
+      "title": "威力彩第115095期 頭獎槓龜",
+      "url": "https://money.udn.com/money/story/5612/9904523",
+      "source": "經濟日報",
+      "source_id": "udn_stock",
+      "published_at": "2026-11-26T22:12:35+08:00",
+      "published_hm": "22:12",
+      "bucket": "today"
+    },
+    {
+      "title": "世芯不只靠AWS！第二家大客戶明年貢獻營收 Google TPU商機也受矚目",
+      "url": "https://money.udn.com/money/story/5607/9904187",
+      "source": "經濟日報",
+      "source_id": "udn_market",
+      "published_at": "2026-11-26T22:11:02+08:00",
+      "published_hm": "22:11",
+      "bucket": "today"
+    },
+    {
+      "title": "廖子奇領軍不動產經營管理協會 攜手龍德營建45周年公益捐贈45萬元",
+      "url": "https://money.udn.com/money/story/5612/9904519",
+      "source": "經濟日報",
+      "source_id": "udn_stock",
+      "published_at": "2026-11-26T22:10:21+08:00",
+      "published_hm": "22:10",
+      "bucket": "today"
+    },
     {
       "title": "中國信託證券投顧：明年台股獲利成長約30% AI 仍是核心要角",
       "url": "https://money.udn.com/money/story/5607/9904510",
@@ -431,15 +463,6 @@
       "bucket": "today"
     },
     {
-      "title": "輝達於印度推RTX Spark新平台 攜手台廠搶攻AI PC",
-      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPQVpqaTEwaWpWNlZLSnozeVdKVXFpWWotUk5GWWRxUG9MZjRwbXVBeXF4N2hsYWlnQjFFQ3pPVVVNRlFCZ1FaQUEzZEkzbW9tcDB2OVU3ZUJDbEdxS2s2SE9VeDhLR0N1aGdDZndIcGR4VW55T1VMck5rWkExdkctN3RtVWhUSVRUT2FiNFp2bV9PZ0lnYlV5Y1U4M1Nvb2h5WUJLMlp6MzJqWU14MEpXcm9FMFU0WVpNWVpXcUR6clRsVFVUcTF1bGh0cFh0QjJTemhXR21lRnE5cks2WVpDenNWVmxOV0E1bmxMSk5MZHZyUUhyUVlkLTQ5MjRLdGExaXZuVnlDdlVXa2hhQy1JdmI1enBVX0RMUDlkTFlaN0Z0MVE",
-      "source": "Yahoo股市（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T20:51:52+08:00",
-      "published_hm": "20:51",
-      "bucket": "today"
-    },
-    {
       "title": "美擬對馬來西亞課最高18%關稅 學者估半導體投資影響有限",
       "url": "https://www.cna.com.tw/news/aopl/202611260290.aspx",
       "source": "中央社",
@@ -697,15 +720,6 @@
       "source": "經濟日報",
       "source_id": "udn_industry",
       "published_at": "2026-11-26T20:00:23+08:00",
-      "published_hm": "20:00",
-      "bucket": "today"
-    },
-    {
-      "title": "股價暴跌45%後拉回！外資結束3連賣、今搶補這「面板股」2.4萬張居冠力積電、華通齊進掃貨名單",
-      "url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxNNlpIdTZfSEpWbHBrak44eHBmUl9vNG1iTElJY0g3d2JqT1d3RmZoRVA2ajQ2SHA5UWJYSTdmUGVyUTRZbkVJWW1yUVZKaXdrZUVEMXNDZld4VEoyeVpEVHdvV3VOSjZ1aVlET0xBbXB1RXRRSGs2c2ROd3JXbUptWTFXa29pT1Y3QjhEXzhpRDB0STQzVXNzd2xtZkI2SW5BT2RrUWNEN2RlekdNc0liczRHQkRhcnZwU3dYZXFYTDYwOEQ0a1oteDFIc1JGRHRodkprZFRRaDdVa05OZEtwRlIwdi1Kb3BIcXA3dUUtVzBlVTlWZG55bXZ6RjdaQzVKLVNsSjNxbGtwajJVbGFHWDJSX1RPT0NJeXJuaF93S0czZF9kREwtYnBWUERSVnhLOUhodDI0dTdKNlVGd1NhTVVyTFZSUG5iVlhxUjFDTlJsUEk4",
-      "source": "Yahoo股市（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T20:00:00+08:00",
       "published_hm": "20:00",
       "bucket": "today"
     },
@@ -1070,15 +1084,6 @@
       "bucket": "today"
     },
     {
-      "title": "明年EPS估大增逾5成、目標價喊300元！「這檔塑化股」搭上ASIC商機投信砸15億元買進逾6千張",
-      "url": "https://news.google.com/rss/articles/CBMi5wNBVV95cUxPdXlVQmtQODlobUhaMDFYbjQ0aVJINXRoUnhmbDFYS2tQOUxobTB6MzhLUUtPc2IyX0NjVUd3dE1iSlQ4dnRhdlhGMGJhQ2xKUjJlRF9ZYXl3aHpoYTNCTjhXcjBPMzJpMDdrNVA3Y0JOTmxDeXdVWkJobTdRMEJyNk13VjdMYmVsSm5DOGZpaDRFQ3Nud1JWUFRlVDdrNW1qQnhkd2MwZGdIcVk5UmhkTHFyaXZEMnFZYTNiVG8tNUJKMnRUWGFuS19IcTFzM0tPdloweHN0UV9LVXU4TE5kS2k4ZUwwaWI4T0E0SWZXTjNXcW5pY0wwZGtyLUtGUVd1d0Ftc2NrUGtfTk9GZ2Myb0dfSWJaNGRqNDJ0RW9lNGpHWFRWSjJHRHphQmVlcVJJMWprNUp4bmZBVEhsNXkxU0FZNm1oUFFnOHdxa0RPU3VjbjZraVJlem85ZWhVWkY4Q0prbDkwVDhtNnVqNTBzZlgyY2p6U1M3eWszT3Zray14NkV0aS1CTDI0di1IWlcydzZsb2JHN2tmWkJhOGVRdHRESGdmRHlBM0NxQjNGeUZ0djkzRkRScXl4NjJwck92TEdTVmFtUUwxOC15S3BjTWxvQmREUF9GYldRNWhIVGFlNkduV3ln",
-      "source": "Yahoo股市（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T19:00:00+08:00",
-      "published_hm": "19:00",
-      "bucket": "today"
-    },
-    {
       "title": "緯創押寶台灣版「鋼鐵人」！外骨骼機器人早鳥價約4.5萬元 搶攻全球銀髮商機",
       "url": "https://money.udn.com/money/story/5612/9904245",
       "source": "經濟日報",
@@ -1151,15 +1156,6 @@
       "bucket": "today"
     },
     {
-      "title": "仁寶攜手國科會推動「AI 創新獎」 12月醫療展預熱展現智慧醫療新解方",
-      "url": "https://money.udn.com/money/story/5612/9904234",
-      "source": "經濟日報",
-      "source_id": "udn_stock",
-      "published_at": "2026-11-26T18:48:26+08:00",
-      "published_hm": "18:48",
-      "bucket": "today"
-    },
-    {
       "title": "外資連9賣續砍491億元 減碼玻璃傳產與金融股",
       "url": "https://www.cna.com.tw/news/afe/202611260262.aspx",
       "source": "中央社",
@@ -1178,30 +1174,12 @@
       "bucket": "today"
     },
     {
-      "title": "科研成果轉商機 FITI累計促成民間投資逾135億元",
-      "url": "https://money.udn.com/money/story/5612/9904229",
-      "source": "經濟日報",
-      "source_id": "udn_stock",
-      "published_at": "2026-11-26T18:45:30+08:00",
-      "published_hm": "18:45",
-      "bucket": "today"
-    },
-    {
       "title": "006208分割投票開跑！一張21萬有望變3萬 預估一拆七、明年2月執行",
       "url": "https://money.udn.com/money/story/12040/9904224",
       "source": "經濟日報",
       "source_id": "udn_5592",
       "published_at": "2026-11-26T18:41:17+08:00",
       "published_hm": "18:41",
-      "bucket": "today"
-    },
-    {
-      "title": "台灣竟有「零庫存」藥廠！半夜製藥、清晨送醫院 吉晟生技揭核藥商機",
-      "url": "https://money.udn.com/money/story/5612/9904209",
-      "source": "經濟日報",
-      "source_id": "udn_stock",
-      "published_at": "2026-11-26T18:37:38+08:00",
-      "published_hm": "18:37",
       "bucket": "today"
     },
     {
@@ -1219,15 +1197,6 @@
       "source": "鉅亨網",
       "source_id": "cnyes",
       "published_at": "2026-11-26T18:35:32+08:00",
-      "published_hm": "18:35",
-      "bucket": "today"
-    },
-    {
-      "title": "台積電2度測試年線漲回、台股漲956點 明大選投票前一日股民爭論是否攻上4萬點",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA4cnhoc24zeTJEdm1aRkFjdG9rUWp5ek5YOGNLa1hDM3VsWFA5OGN6a1hpSF9TTEZ5SVdkOW9fdzBOdjR3MGNEUjJiT1pfR0VKN3ZXcnlDUW9SQQ",
-      "source": "信傳媒（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T18:35:15+08:00",
       "published_hm": "18:35",
       "bucket": "today"
     },
@@ -1256,15 +1225,6 @@
       "source_id": "ltn",
       "published_at": "2026-11-26T18:24:09+08:00",
       "published_hm": "18:24",
-      "bucket": "today"
-    },
-    {
-      "title": "301關稅15%不疊加 台股量縮漲956點重回3萬9",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBNR3YyTFBDcUdCcDRhMm9MUWdId24xaXp0NDhNNktNbkRQWGJQdnM0NE40Skx0em1PRHFyUXZmc0dqSXJiLW9EVlN1QjRyNVhyUm43dXdqeC1nSTlU",
-      "source": "非凡新聞台（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T18:23:43+08:00",
-      "published_hm": "18:23",
       "bucket": "today"
     },
     {
@@ -1394,15 +1354,6 @@
       "bucket": "today"
     },
     {
-      "title": "關稅利空淡化，台股反彈 956 點仍卡年線下！跟上主動式ETF挑「投信真愛股」",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBYZ0VlS1dWTjhiQTZIVk5NWFhoTGxDUUU0cmRRaEgza09XYjlhNzFXdDNlUkVWeXNXU0s0MnFZUmtnZDRYYnUtbHZpVUg3VU41NTFNMjZSQ1lFTWppQmRaZE9iQXFCVmRIRFc5c0JxU3k1TjQ2NWgzbm1LRUh4dw",
-      "source": "CMoney投資網誌（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T18:01:19+08:00",
-      "published_hm": "18:01",
-      "bucket": "today"
-    },
-    {
       "title": "台股收盤／加權指數大漲956點收復3萬9台積電逆勢收黑",
       "url": "https://news.cnyes.com/news/id/6673048",
       "source": "鉅亨網",
@@ -1498,15 +1449,6 @@
       "source": "經濟日報",
       "source_id": "udn_market",
       "published_at": "2026-11-26T17:47:47+08:00",
-      "published_hm": "17:47",
-      "bucket": "today"
-    },
-    {
-      "title": "台股3檔「抓去關」新名單 千金股漢測明起處置到12／3",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB2Y04xcmpnbWU1OHZsVVEzaGFpSW9nUlFkWnlFdTdXRnl0M3R5Tk0yaEJuWHNYSkhwSUcwMUJJVzUtYzBTQkFWckdaMkRXUGhlZmfSAVBBVV95cUxNZ2ZmZ3BBS1NWRXVhVTVkM1BpWlVMTUhxVWtJQVpMR24zZGV5ZUU1T2MwVElOZjY3blZWaDlidWdzbnQ4Q3JydFlqRHI1TS01Wg",
-      "source": "ETtoday財經雲（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T17:47:00+08:00",
       "published_hm": "17:47",
       "bucket": "today"
     },
@@ -1754,15 +1696,6 @@
       "bucket": "today"
     },
     {
-      "title": "中信投顧陳柏州：2027台股倒吃甘蔗，高低點看48000到57000",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5CS0JxZUo1Y1NYYXFVY2dOQWRfUWRIUUx4bzJqQ3V2UmIyOVdzSzJSVGU3di1YQUVTV0NCZllqd1VTc0czM1FpNm5tY0lnZ09nZ09ydTNIbG9NVUFkU1VYOVB5ckxFNjRqZ0JVUGdrWl9qUEl6QW5xNFdFRQ",
-      "source": "財訊（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T17:17:11+08:00",
-      "published_hm": "17:17",
-      "bucket": "today"
-    },
-    {
       "title": "綠營批張善政趕走科技業 桃市府澄清：積極協調美光勞資爭議",
       "url": "https://ec.ltn.com.tw/article/breakingnews/5654442",
       "source": "自由時報",
@@ -1777,15 +1710,6 @@
       "source": "工商時報",
       "source_id": "ctee_industry",
       "published_at": "2026-11-26T17:14:23+08:00",
-      "published_hm": "17:14",
-      "bucket": "today"
-    },
-    {
-      "title": "股價自高點腰斬跌近57%！股王信驊祭史上第2次庫藏股 將買回100張護盤",
-      "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxQZVdQLXNHRS11LUFEQzJpcmRFQS1YR3ZYNE9MZU9qb1hPUGluMmlGX3dQQnI4UTVuTGNySmhkWmk1a0J2bGRsVUxBdmhfaTVHbzZTbFMzYl9wUGRfM3Vhd0ZFM0Z4SGFDR2MzUGFMNHE3R2o2VlcxcVBSaFE0OUVwTHBmRGN0NzNOZ19pMmJ4TzllNEtKOXBxMV9scjZkbmZvRjk4UVdGZFVidnZObVhzd1B3M2IxaGozUmwzblBiQlFKci1DQWlPYm5Pd091VTRWQm13U1lOQ2xodzdIRXNqazJVWWFwdTVYYzZuRnp1Y3h5WFBFcEFScXNEaGk2X3RhejR6RWc4Yk9PTzlHYW1ZTVBhNlNsbVZWM2xNdUM4MVZPNzVCWUh1N3VIdnpQV1F6R3F0UmxEa2MxOEgtcmJ1MmlZUGo1NUptcUFicTl3SlZxYjBnb05zaUV6Zm85cUdxdUdvdUlHU3o2dFJ5dnJ6VmQ4WjVyenlDdmxQVG1ORVVvSUs1cG9ONDJzSUw0UmVfOVdib0ljaXNsemZkWlVNbFR2alByZEJNVHc",
-      "source": "Yahoo股市（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T17:14:00+08:00",
       "published_hm": "17:14",
       "bucket": "today"
     },
@@ -1844,15 +1768,6 @@
       "bucket": "today"
     },
     {
-      "title": "外資又賣491億！ 買超前10名「7檔是主動」 它被砍8萬張最兇",
-      "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxNbFJUNGUyZEd1NUVFM2NqcEZEU25IR0FUemdHNFVxQ1RuZ2Fpbl9ITG5YTnBnam45dTlnOFIweExrS3NROHNwVTJxN09zUU9sRE5uRWNJTGFwd0ZGekdJNzI0MWhzM3lSS0YtMFZxeVBiekZZenFVb0NHWlhUUnpLRFkyQzRSQkdhMlBSd29SNGdGeHFrQ1ozdU5hUG12T29HY3VQYy1vdlFxWV9hcEhaQlVxZzMtd2RVYURtS1BMUUtaQ1hXdHhXOVRleWRLNXpGNW8yTXNBT3F1d2R6ZFdzU0haTUpBRDk2blZpNVBVTFVlUU9JS2JGNVFnc01tY19XeDZTcVhIZUhtaWw0c2hsWlNsanNIbmNBQ0paeW8tb2ZZYmdtYmlvTHdyeTNqcktmNjFMd0FhTkVManhfX3ZTWE5xcW1tS0xxeU5mZmI1VFZPdFZOdVItUw",
-      "source": "Yahoo股市（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T17:08:00+08:00",
-      "published_hm": "17:08",
-      "bucket": "today"
-    },
-    {
       "title": "美時攜手西班牙藥廠 搶攻40億美元口服GLP-1商機",
       "url": "https://www.ctee.com.tw/news/20261126701713-430503",
       "source": "工商時報",
@@ -1898,29 +1813,11 @@
       "bucket": "today"
     },
     {
-      "title": "外資連10砍台積電12萬張！今提款台股491億 進出前10大曝光",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9JUnR4VHU3ZkNqbGloTmNweE5tR2JiNjY0Q0ZfOEZxelZMUVNnVFQ4alJNb243ckVXVzRFZHdfaXEyWmROcTlRejBvY1pfcVJrWGfSAVBBVV95cUxPZHBHT0VqMWptTGwwVUx5RDBDWXFqMnZNT1ZTSHVncFV6MXBnU3ViZUVPTDB1aFBQdkx6TDVMWkloNkpTQ05VRHMwTTViMl9Idw",
-      "source": "ETtoday財經雲（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T16:56:00+08:00",
-      "published_hm": "16:56",
-      "bucket": "today"
-    },
-    {
       "title": "遠傳「以投代購」砸逾15億組雙基金 10個月布局17大IP",
       "url": "https://ec.ltn.com.tw/article/breakingnews/5654416",
       "source": "自由時報",
       "source_id": "ltn",
       "published_at": "2026-11-26T16:54:07+08:00",
-      "published_hm": "16:54",
-      "bucket": "today"
-    },
-    {
-      "title": "台股逐洞賽｜內資接盤強彈近千點中小型成長股全面點火- 證券",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE92ZDZFeXhwRUJTa3dqWkhKMlZiOGs0c1MtTEVad3g2d3drdEk2QVdLRHJBTGFabXp0cDJQTjg5MzZVRF93R3prTDFfay0tN1hyYWtuZkF4NFJGT3ZwMFVZ",
-      "source": "工商時報（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T16:54:00+08:00",
       "published_hm": "16:54",
       "bucket": "today"
     },
@@ -2123,15 +2020,6 @@
       "bucket": "today"
     },
     {
-      "title": "新台幣收32.947元 大升1.79角",
-      "url": "https://money.udn.com/money/story/12509/9903907",
-      "source": "經濟日報",
-      "source_id": "udn_market",
-      "published_at": "2026-11-26T16:18:47+08:00",
-      "published_hm": "16:18",
-      "bucket": "today"
-    },
-    {
       "title": "台股重挫1926點！郭哲榮揭洗盤真相：抱緊這6檔AI股等逆轉",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFAySElFY0lpZXhMVGtBUUhUcWt0SnlZVGN5YW9Ud2VybEVMcmVnN0s5UTN2cTFXcWlwUFBLLVdxcFp0WmN4MkVOaE9MZw",
       "source": "三立新聞（Google 新聞）",
@@ -2147,15 +2035,6 @@
       "source_id": "cnyes",
       "published_at": "2026-11-26T16:14:59+08:00",
       "published_hm": "16:14",
-      "bucket": "today"
-    },
-    {
-      "title": "金融時報：輝達暫停對東南亞4國出貨防堵中國取得AI算力| 國際",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1SVjBZNm9jZjl1RjY3QnNZb3AwQTZ4VkhMcjhkekhSLUwxcmd3ZGtrUGR0WFZkdkJXSDRjdDBBejZnNzVUUExvcEFMaDNiLWN0WlVBbmVIN1pBWlQzTEJJ",
-      "source": "中央社 CNA（Google 新聞）",
-      "source_id": "gnews_biz",
-      "published_at": "2026-11-26T16:08:00+08:00",
-      "published_hm": "16:08",
       "bucket": "today"
     },
     {
@@ -2276,15 +2155,6 @@
       "bucket": "today"
     },
     {
-      "title": "中信投顧2027投資展望：台股震盪續航 聚焦五大關鍵轉折看點",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB6c1ZxYmxRT21jbGI5Y0RsZFZvQ3dsZjBWUDh6Y0M1MlFoM19nRWo4cXBvMnhkbXU4U2NDMkJhQmpoV19qdGgyZnFxUHRtUDFJ0gFWQVVfeXFMTmQ1NjhhMG9jTWhNWFNZYmhEeVVFRkRvUkNTRUY1MUVDRVg4S18wWTVvS1dOdVpnN0FSaHprazFJUUw2Q09XVFAzTDRXZzc2VU9GRUhXQ0E",
-      "source": "UDN（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T15:21:20+08:00",
-      "published_hm": "15:21",
-      "bucket": "today"
-    },
-    {
       "title": "【11/26台股收盤】川湖漲停漲650元，台股反彈956點",
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5BT1hjejg0czdJMWluZnFnSW9vTkJrOTBmVHk5WHpVcU9SeEN1dE1udTNHSU9WX0lIaVV4OXFVZkVjeW5CaUpvdm9CSFdETS1iSEQ4X3BiVVFvQlVGRWlzeFg4Yl9fUQ",
       "source": "口袋證券（Google 新聞）",
@@ -2363,15 +2233,6 @@
       "source_id": "gnews_biz",
       "published_at": "2026-11-26T14:54:52+08:00",
       "published_hm": "14:54",
-      "bucket": "today"
-    },
-    {
-      "title": "股后川湖帶頭衝！32檔千金股13檔閃紅燈 台積電獨自收黑",
-      "url": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxQbW9TVm5qcnZwQ04zdVN6SzhYc3BWbk44NlZJRXFVel9EbENWYkxOTGJRVzV6N3VxT0pfQ2lpUFRYbHRiMi0weEtOSm9SWGN0emhpV3U0RWg2bFZqY0NVTThuY3o5UXdrTHNWaHNFMzg5N05ZQXZfNmVfWl8zV0VtMUw4YnJpZVYwbDM2TmhOcWlfTXlCRWJMS2tmSDM3WVMyNW4xcV8yc2xoUTg3R19BZE1MblJYRW04THoxVGpkQ2pEYjZyYW10TzJUWkNPY01uTE5uYmdLUU5GZm9UZWRxeXhUV1FoOUgxWW5jdWNwdF9kYkdYVHMyRE5hLVQxODk3NlJ6RWdVMC16bGlhSjRHR1NQemVNVHpYYnhVdlkyVWliTWxGeDFrQ3g1Wlo2ZkYwa0xycDc2ellWZkNPXzRVcEVSTWRnaVJRd1VQODJzSnRVb1ZnR0JvZW5XeEhFWnNvMmVwMmhyS3c2U1lYTktlbEwtVU44dw",
-      "source": "Yahoo股市（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T14:48:46+08:00",
-      "published_hm": "14:48",
       "bucket": "today"
     },
     {
@@ -2456,15 +2317,6 @@
       "bucket": "today"
     },
     {
-      "title": "台股加權收復3萬9 大盤一度漲逾1200點 台積熄火",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5iQnZVQzRseEZGQ1Z4ZW9hLUpfUFFEZ2ZoZHRtNDNrZlA5Y0lFMUxDNUlGQ005TTZlU3ZWVXU2U0pwenlxSTZqLUpEazdSc2M2TUU5YzRqQlI2d9IBX0FVX3lxTE13Q1BsVGtfZ0hUenh5aDdtVjdtdnZFbkk4REtGRmpaOXFTUjRlcmV4cXpFdVRla3J4ek5WOHVHbE9KM2JQVE1LZ2hnVW41YS1UeTNrZEtOZDRsWEdxVlJR",
-      "source": "經濟日報（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T14:10:47+08:00",
-      "published_hm": "14:10",
-      "bucket": "today"
-    },
-    {
       "title": "〈台股盤後〉電子族群強勢反彈帶動收漲近千點 護盤指標股台積電收小跌",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5NLTJUNmkxcVpWYzduX3RTRE1jOTg3VkhCMHNzd3NfZERvUWJEVkhoUjcyT24zX1JfSjQweFd0QS1hMUY3bi1ZQWtfY1JDdU0",
       "source": "鉅亨網（Google 新聞）",
@@ -2480,15 +2332,6 @@
       "source_id": "gnews_taigu",
       "published_at": "2026-11-26T14:09:07+08:00",
       "published_hm": "14:09",
-      "bucket": "today"
-    },
-    {
-      "title": "記憶體、封測反攻！台股收漲956點 穎崴董座看旺明年、股價亮燈",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE82WWpSNkJvREwwSU1PZ2poNWw1cFhrNk5ickFldEwzRjg0NWRLdXR6U0RySEFXNTdZMDNNNW9mUEZsRFlJVFdZT0VXeGdMajc10gFWQVVfeXFMT0hseFFYdmFGNHhCT01YSU82a3FQb0oyWnNEeHJMVlhNOVh5WjZtS2ZkWHY1WHBkWEJ3dmxzVkpXVy05TmVHTXcwMUVXVE5wZEN0UXhENEE",
-      "source": "UDN（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T14:07:46+08:00",
-      "published_hm": "14:07",
       "bucket": "today"
     },
     {
@@ -2519,39 +2362,12 @@
       "bucket": "today"
     },
     {
-      "title": "郭哲榮砸2.3億買0050昨虧千萬今翻正！漲跌全憑情緒…再喊台股5萬點",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBubnFuVFF2N1BVTGswbzJndEkzbXNXa0w1b3JCNUNKaXF2N1NFLXpnS1lZYzltMTJHYmpEZ3FRSjhEVVJTTDBUSEYtZU8yRUhqdTlB0gFYQVVfeXFMT1ZlYjZuNHNZbE94bmxzQlZiOFktQV9uSDhPeEJGY0Q3MlJvVlVVNzk2MUpVdHpYMEMwN1h2OXlVQ294UjJDQ1ZVcllWVGZmNkZ6MDhZR2dYdQ",
-      "source": "UDN（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T13:56:00+08:00",
-      "published_hm": "13:56",
-      "bucket": "today"
-    },
-    {
-      "title": "台股上漲956點收39151點 PCB散熱族群反彈| 證券",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1YWHZtSDB0ZUJDVnBFcTVaS2J6cmNGMFpJbkZTREFqeWNQWTJFb3ZFa3E2V0xza3I4ZUFmMXRYeXlya3I3SWxTc3d0dmJKNVJ0RV9famdtM0tWdE1hQnc",
-      "source": "中央社 CNA（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T13:52:00+08:00",
-      "published_hm": "13:52",
-      "bucket": "today"
-    },
-    {
       "title": "台股一路向北！南亞科、欣興領1645家齊飆 指數收漲956點",
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9QcmJya2NlYUJEa0NoQnZONUVzaVdnQW1fLUtFZTQyOVJsM3JRcDRVR0ZWS0VRNGZLU1g1b2VhZkhoNXBrUkZRV2ZfY1FFN1Vna3RUWXdHNEVjbUlPdmlB0gFkQVVfeXFMTThGSjBGcFVaa2IxcVhhUlB6X3V4WVkwTmZnSkJ2Nzcxci1aT2o4TkNaSVRlSUhneS0zWE9aXzlHdzFVZlVLcVpUTmU3Z0I5NEh0NVRJZGMyaDRNVi10TElMV2gzOA",
       "source": "自由財經（Google 新聞）",
       "source_id": "gnews_taigu",
       "published_at": "2026-11-26T13:49:00+08:00",
       "published_hm": "13:49",
-      "bucket": "today"
-    },
-    {
-      "title": "快訊／台股收漲956點 台積電跌5元至2145",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xb1U0dFNhb1JwSURXMmxQSXZGTmdzTG1OWG1FUVZ2TllnTjFfWmtFanptd2w3T0NhUEhaQzBsWWRzODNpTVI3SlNRREdqVXhTYlHSAVBBVV95cUxQREpac09Qc21ub2RPRFdBRlN1QjhHaWRSTGJ6emY2WHFzWmdjRk56WGttVGUxWmIwNnFqSlkzbll0VnFMR3doR21nOFFsVVdnMg",
-      "source": "ETtoday財經雲（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T13:34:00+08:00",
-      "published_hm": "13:34",
       "bucket": "today"
     },
     {
@@ -2654,6 +2470,15 @@
       "bucket": "today"
     },
     {
+      "title": "加權指數重挫 1,926 點，創歷史第 6 大紀錄！股災 3 大潛在原因、重災區與避風港一次看｜股市話題",
+      "url": "https://news.google.com/rss/articles/CBMitwRBVV95cUxQVERtdnRSd0NLY0RscnhJcnZCcFhNeVVoRW1TOTZKLWRDWVRZbFdMV2lxWmJfMGJzZnNoNHlJQ3ZXR1VqY2RodG5BQ2dZNDktc0ZoRXFlT2Z3ZU82TmFpOEZnNVVLTGN2X05xZjYtWTY3MW9CMzJjX2o0VEpwZE04WUlBdW5qUkFTQnhCNnd0SVY0WTdIU00xcmp4MUwzb21ITnN4OVNUbDBlTlNQSEVCUlV2T0htcmNHbGxkd2FuQjVaOGFBMFppUTl1YTk4bm5aNUszQnlwT0dIQnlOcy04NmZMbnVMSVhmZWRBWEZIaERxVGxPcGMzcXZtMDdDVUdsLTZ5MnBqODcySmZkcXBmSDhrQi1kUDlaVzRMMHlaOVIteWdwUVZId191dFhBYXZGbHIwejR6V1dJbmJFQnF1elJwNngxd1Q2MGV4WkpsYzFvVjc3b2xXaGVFOE1BQ2tacFNQRmVfY0tQRUVxTEhJZjQ5ZGZ3LVJBXzBWckZTT0syS2hDLUFNMHIwWWNsd3VWQXh1bi1qQ216MEJiaWtfZkE5bXRDMEU0NGEzWXA4X0VCNFNZZVlBMDhQLTZMNEd3WUs1dEJLRWdoRzdSZjZESE9yVnAwS0V1cFZsQnQ3YzZHLXVVb213cTFtdks4SGl4dHNZRmdaeDdVOTlVVnBaVzRyZlliX1pyM1VzTUNaajNnYTlFZEtpTFpOaHo1TkF4RV9RRmVvZzk1NGdmc2VGOEZrYl9BVDg",
+      "source": "永豐金證券（Google 新聞）",
+      "source_id": "gnews_taigu",
+      "published_at": "2026-11-26T12:38:32+08:00",
+      "published_hm": "12:38",
+      "bucket": "today"
+    },
+    {
       "title": "台股反攻、新台幣同步強彈 午盤升1.76角 收復32.9元價位",
       "url": "https://www.ctee.com.tw/news/20261126701097-430302",
       "source": "工商時報",
@@ -2717,6 +2542,15 @@
       "bucket": "today"
     },
     {
+      "title": "才剛嗆聲「台灣偷晶片」！川普12/4將赴台積電美國廠動土典禮 白宮證實行程",
+      "url": "https://news.google.com/rss/articles/CBMiwANBVV95cUxNM2Vqbnh3WWFtUXNGN1VNMlNveFZDSnhnUHh6LVl4MFdDVUlXZ2RxZmdLV2trMzZWYkMzbmlMaHZmcDJ4QWNtV2dEUHBmQjhBSmVJalRvLXhpLVN4QWpramdzbnNSMHBhLTNlSHBfU3JrcEVMMWtpbmJJM2dEaWwxa0l2SjVLRUROOXN5WHpfbU5kR1RETXpab0IwZnlLMEduMVJVeGRDQnI2bTBCSGpBenctQklQMnMyZm52SG1jRE1Zb0YwVHJEN3ZqSjR0ZXBmc1pqc3RLX0hpakZkc3RhZUoxM2xqdDM1NU1vS2x5Ym52V3ZNZ2psTGxQRDdDRmZzYVdqWVVoN1JNS0ozZV9rWTFlZ3JKRGlhWUxfUHRiSUUtUi1FZkp1dnBDZEV6Qlhab3N6eGtUVGR2eTh0WXFFOG4xT0VVdXRJT05pX21pR1UxcE1zR2dkTEVZNS05QXFLUGduOENueDZrSmV4Skx2RENZSjRoREpTZzZPR3Y5TldhNklsdkJOVkV0ODctVk9qQi04T1h2alh1eklaRHIzZ1MtWEE4NUZJS2hzSGxMZUlSOFRmdUNYR091em50WVZD",
+      "source": "Yahoo股市（Google 新聞）",
+      "source_id": "gnews_biz",
+      "published_at": "2026-11-26T12:09:53+08:00",
+      "published_hm": "12:09",
+      "bucket": "today"
+    },
+    {
       "title": "韓央行如預期升息1碼 大幅上修經濟成長展望",
       "url": "https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=a6f62567-f71c-4599-a297-2afcaac03e17",
       "source": "MoneyDJ",
@@ -2732,6 +2566,15 @@
       "source_id": "gnews_taigu",
       "published_at": "2026-11-26T12:02:05+08:00",
       "published_hm": "12:02",
+      "bucket": "today"
+    },
+    {
+      "title": "原因曝光！18家銀行用戶遭盜轉1742萬 下載追劇App被植入惡意程式",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBST1VaTU9JX3BMd1NpVHJzWGthRENuRkdOZUVqY0hDMEdaVTJRZDE1ZUhpZEhLSHR4VV9yV0hEazZ0TnlhTHpwRTdDV09OMlE3WVJBNUxTYjNiUdIBX0FVX3lxTE1hc29hOW5hSnZoSHBFTHN4M0FodW1Xalc3TWZOY1lBTmJLMzdaYUVTd0JMdG5KSXpUOWpKY3NHR09LbUpXM3JZT2cyVV93ZGptVkVTOFNoY0ZjS1BZaFdR",
+      "source": "經濟日報（Google 新聞）",
+      "source_id": "gnews_biz",
+      "published_at": "2026-11-26T11:57:12+08:00",
+      "published_hm": "11:57",
       "bucket": "today"
     },
     {
@@ -2942,15 +2785,6 @@
       "bucket": "today"
     },
     {
-      "title": "【九合一選舉燒台股】從沈伯洋、蔣萬安等政見挖寶！分析師點名「三大受惠族群」",
-      "url": "https://news.google.com/rss/articles/CBMilwRBVV95cUxOSi13QzlWTGE4Vk1QcE1iTjg0YmRHRWd6U2dSTzltU2FNb2wxWl9icEVtUTFMVVlfYm13TjA5UHBhbzVDMjhzZ3FKOFF4SHdSX2NpQnE4Z2pmQkpjeWVYeEJaWktGdXBSTk00cDBlZjVCZWhQa1loMUtKQVcxTHRhaERpVm9RekdpUTFOUVU3MTJPT0tOZ1ItVHkwbm9DMzRnd2ZQM3ZjRGI3OXVkZUl3YzdPZW1GdWxJLXQ4ZjFwNG9oeUItQlN1RlN5QS0wSGtLMkN1dnFMcktoZm0yZXN4Y2hXeDRHVGd3MF9Mbm5kZEhuLVFNcDdGenhNcnNpcU5qMmM5VzRNcmtxSVN4MFVILUNDMHNsNXF3eWNFLTZjM2xjRFp4QkdhWG1mbkdYOVBScnBGVk15T2l0SG0xMEJDMXdhbkxhcUQxQmZ2S29fWkZjTE5LWHpwRW1DSXhOaEtLcFcwZWdFcGRzRUxLajRTNXE4V0RwbXZVdXI2NmNvc2xHZkpvaFJnanUybmlaWTBOSFpaYjV0cUgtMkY2N3VUSEdvNGRGU3lSR2h5UF9KRmhyeFRydXBVXzBHem1oem9Wak1PUkVXZ0ZxNVNqOVJ2M0p4dE1DY21GdVo5d01YbEJUTm14VjU3WXk5R3dLcEpBakZFRDdBeTVYRzFCdHlnZnpQV2ZPWFJsZm5xU2paeFZadDAzRlh3",
-      "source": "Yahoo股市（Google 新聞）",
-      "source_id": "gnews_taigu",
-      "published_at": "2026-11-26T10:25:28+08:00",
-      "published_hm": "10:25",
-      "bucket": "today"
-    },
-    {
       "title": "中信投顧：台股「這時」迎5萬 2027最高上看57K",
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE16TGJXSHpfRDhyNGZTQ3Q5bXJwdFY0S2JId2ZXNExDSzdOSUZWM2ZfOGdyN3dENm8wSjFCQUl0UjFDOVhsRll1cWRueGROXzdzNTNxUTkybWtleHJkWlZz",
       "source": "工商時報（Google 新聞）",
@@ -3050,6 +2884,15 @@
       "bucket": "today"
     },
     {
+      "title": "301台灣稅率估15% 鄭麗君：等同美FTA國優於中國東南亞| 政治",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE94eGtieExxRVBhcTJRSk00Q20yek1LdU9RSXE4NzhqbGt5RzNWQl9FZVJBYUR6Z0VpVU5YSmZYcnFDYmFWczBnUzVWX2hwTUV5TWJVVkxob0VtOHA4bHdZ",
+      "source": "中央社 CNA（Google 新聞）",
+      "source_id": "gnews_biz",
+      "published_at": "2026-11-26T09:31:00+08:00",
+      "published_hm": "09:31",
+      "bucket": "today"
+    },
+    {
       "title": "台股開盤衝39K！台積電熄火、台達電漲逾半根 南電、華通亮燈「多檔PCB」點火進攻",
       "url": "https://news.google.com/rss/articles/CBMi-AJBVV95cUxPbURJdkVkV0MzMWFMcVdMT0FCWkpNdXU5U095aGQtY3JIM04xN3IxbXBMY1dPVDU4blQxRThsV3ZlNG9qUWFHUEZvM2d5QXBjWWNMdWpxUmp5eTcweG0zZTF6MjM5TTBfNDZpSDFGR1FOblVLY0YxMFhRMlZPODNmMEpONFQ4b3JXYWlIR0dCOTNHOC0xZnJiQnBhVVF1ZmdyLTRIc2JRQ2I2U1pIaEVDeHlieGNDNlppSFRJaHBRZ2N3SDJyMmFTVnltMFNmQ2RHUmI2M05PaWF0VlRrSXA5TjNQWmpHN0RtbTR3YUF1REt3QzlSSnRDSE1sOFNlTVNsZkZSc0lkNzR0d1lhUkhGdFUxWnpEa3dpdUplVnBGdG9YTXA1a1NDd1JlNlhHaHI1MkF5b0xIVDIxSUl6eXJXYzJ1MXVLbTZiRkE4T3AtTEgtR3ZGdVNGTjhFYTBrd0JQUk1xYTBaOXp1ZUpoTnlTeTZLdUlabTh5",
       "source": "Yahoo股市（Google 新聞）",
@@ -3065,6 +2908,15 @@
       "source_id": "moneydj",
       "published_at": "2026-11-26T09:13:00+08:00",
       "published_hm": "09:13",
+      "bucket": "today"
+    },
+    {
+      "title": "聯發科近4交易日2漲停2跌停！股民看傻眼：根本台股大怒神| 台股雜談| 股市",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9pZXhqQnJNUXd0WkRnajNTSDdvZzZZNDhGblJKcEhNZTJsOEEtZ3E3dlJPVWc4V1laVzl2dHQ2ZHJlWXozNTBxQTFJU1JDYndxZ2c",
+      "source": "UDN（Google 新聞）",
+      "source_id": "gnews_biz",
+      "published_at": "2026-11-26T08:53:10+08:00",
+      "published_hm": "08:53",
       "bucket": "today"
     },
     {
@@ -3095,6 +2947,24 @@
       "bucket": "today"
     },
     {
+      "title": "美收緊晶片管制！輝達GPU掀轉售潮數千顆B300急尋新買家- 國際",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9xYWRyeVZrMkFrUE5ZdUwyYWRWZlR4Qy0xU1FRNDRfc0hNWldtWm54LW1fdFVlWDU2LVA3blRzLXozeHdCamdTb3FLUGtDblNrSmlNS0N2VFhpemp5SFNn",
+      "source": "工商時報（Google 新聞）",
+      "source_id": "gnews_biz",
+      "published_at": "2026-11-26T06:58:00+08:00",
+      "published_hm": "06:58",
+      "bucket": "today"
+    },
+    {
+      "title": "美股｜AI股跌勢未歇！道瓊盤中崩逾千點 終場收紅164點 輝達再挫近4％",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9ET09zYXE3MEFVQmR2aXBkMGppWG5YZll5akRQMm1PN2hGd2YySTc1cG51cGhHd2hCQmhCcno5U2t3Q1daZ09EY0NYdXJFUjVwcWN6N2QxX2thYndmMWtz",
+      "source": "工商時報（Google 新聞）",
+      "source_id": "gnews_biz",
+      "published_at": "2026-11-26T06:42:00+08:00",
+      "published_hm": "06:42",
+      "bucket": "today"
+    },
+    {
       "title": "台股大跌又反彈！他想趁低點加碼006208 內行曝關鍵：真的很難預測",
       "url": "https://news.google.com/rss/articles/CBMikwNBVV95cUxOdUZtTGxvLV9CZW93MkRqS3g2QmE0b1dkOUJyM0t1MFB2QVREYzVPbzZhNXF4LTJ5Tm5UeTE5MTFuRnZmdHhqdFU0cmRVMnBrRHM2MEhiaFRFQUxMSkpEbjNjZXRhT3FhNFFqUnUwYy1jcGZZdHJMMUFWRkRoSUVpcjI1dkl2VFBFSnIyaVkzdTJxT3ZVZ3ZIeGdaUWJzSUU4U21OSy1yUGxxVlNWTGJySTI2TkFiVFUyUkdpak1QYXI3aWZRdGNsMmotdkpwcHRVZVA4R0JSUFR3aVJ3VGpCQ0FTd2JxUnNqNkJDQnc4R2ZvcG5DcndibzE1LU5sckl5ZzlmalBYZDY5YVJna0hybmhBM2JjX0hNdlh5V0NJT2N5S1NHNFBvcDFvdXB2MHoyNkFVYUlfMG84ajVRYjJDWDhmNzFjS3BQMngwMWpUZXYxaGx4cHZjVkF2Wkp2ZncyTlN6RnlSdHRzU0ZxbzI1c0dCUnJzSm55SkNkZ3VyWHhTcTdoSG4zRDI5RUlfNlc1VVZF",
       "source": "Yahoo股市（Google 新聞）",
@@ -3122,30 +2992,12 @@
       "bucket": "today"
     },
     {
-      "title": "美股收盤》逢低買盤進場！道瓊收復千點跌幅上漲 台積電ADR跌近2％",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBfR19sbC0xWlFOV2dxSER4X09jZkNrTHo3UTZISnZlaV9XTFJhVFFvVU1ja052Q0N6QUpLZXpxQ010UzdtVHktcG9IWGNRanIwWEF2dzFNbDBUcXZuelNV0gFkQVVfeXFMUC1tOHY4eHhwZUptSGxnTDhobmVPOFZHc2xTQXk0YU1NODNjWDN2UVNJQnpFYUdVRm9rQ1pSMDk0Uzl2MlNfWVZVOUFXa1FZRlV3MUhsLTdwb3hvc0ZRTE9zQ3ltaQ",
-      "source": "自由財經（Google 新聞）",
-      "source_id": "gnews_biz",
-      "published_at": "2026-11-26T06:05:05+08:00",
-      "published_hm": "06:05",
-      "bucket": "today"
-    },
-    {
       "title": "起底黃仁勳婚外情女主角！紐時揭黃樂出身湖南兵工廠 涉國安間諜疑雲",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE12WElEZklyOWx3N2dxRXVXYWVDM3RjZWpTRXMtUnpWM0JFQldCNUhQYXhMMGZQZjk5dEtHOENNYnhVWFZ1ZWlkctIBTEFVX3lxTE5vUmdaM1NBTnRrakYtNDk1bWl4MHE0cHFCQl90Q2drOXlTcDVHd3pjTW9DSHVwOWY0MjZQdDNoMDZNTUlvNW1xMEpWWDc",
       "source": "三立新聞（Google 新聞）",
       "source_id": "gnews_biz",
       "published_at": "2026-11-26T04:36:00+08:00",
       "published_hm": "04:36",
-      "bucket": "today"
-    },
-    {
-      "title": "台積電美國擴廠典禮 川普要來 凸顯 AI 鏈關鍵戰略地位",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBKR1NSOElXUV9yeld4cGxqbGMyUU9oQmY2TWdROU9HeGhnWnQ0ZHpmSGZINEc2M2RrUmo1cDhLcGVreHRaOXU2WWFIdVFoQjkwajE1amFobnVTZ9IBX0FVX3lxTE9lZ1FVNmU0cTBhd0t4bGJ3Ml84Tk1YMlhNMER4bmRPTDBMVTR5MTU1azlBYjdDZHNZWF90NzcxX2RTNkp0eG1pTTM1YXJUT1dZcTZ4SnllSlJ4N2tZTFow",
-      "source": "經濟日報（Google 新聞）",
-      "source_id": "gnews_biz",
-      "published_at": "2026-11-26T03:33:14+08:00",
-      "published_hm": "03:33",
       "bucket": "today"
     },
     {
@@ -3281,15 +3133,6 @@
       "source_id": "gnews_biz",
       "published_at": "2026-11-26T03:00:00+08:00",
       "published_hm": "03:00",
-      "bucket": "today"
-    },
-    {
-      "title": "美301開鍘擬對台課 15% 關稅 對14 個貿易夥伴加稅 對陸疊加20%",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE16NE1NcHFKcnZnQzBFck1LUEpXX1FXMlN1MmFMbkFMTnVtdi1PTjVpTC1MV0JnTTdORDZJWjZCNnRuWkU4TGJxWGJzTVR4NF9VOXo1aUpwWm5IZ9IBX0FVX3lxTE1SYWFCemNYVWN6bmNtS3pGS2U0LUY0ZWZtVExhSE1scWd1V2xsXy1KRE1zMmFnN0Q1aDdhaXRyV3JTUWdlcFZ0SGVyNFZwNUJhUUF6Z2dHeGRsaDdhN05V",
-      "source": "經濟日報（Google 新聞）",
-      "source_id": "gnews_biz",
-      "published_at": "2026-11-26T01:32:25+08:00",
-      "published_hm": "01:32",
       "bucket": "today"
     }
   ],
