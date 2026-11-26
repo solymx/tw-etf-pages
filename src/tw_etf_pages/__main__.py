@@ -24,8 +24,8 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "command",
-        choices=["dry-run", "run", "render", "chips"],
-        help="dry-run: 使用 samples/ 離線產生；run: 線上下載；render: 僅重繪 HTML；chips: 僅更新千張大戶籌碼並重繪",
+        choices=["dry-run", "run", "render", "chips", "sitc"],
+        help="dry-run: 使用 samples/ 離線產生；run: 線上下載；render: 僅重繪 HTML；chips: 僅更新千張大戶籌碼並重繪；sitc: 僅更新投信第一次買超並重繪",
     )
     parser.add_argument(
         "--root",
@@ -64,6 +64,12 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "chips":
         site = run_chips(cfg)
         print(f"Chips OK → {site}")
+        return 0
+    if args.command == "sitc":
+        from tw_etf_pages.sitc_first_buy import update_sitc
+
+        update_sitc(cfg.root)
+        print(f"SITC OK → {render_site(cfg)}")
         return 0
     if args.command == "render":
         site = render_site(cfg)

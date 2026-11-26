@@ -17,6 +17,7 @@ from .taiex_kd import build_kd_view
 from .margin_ratio import build_margin_view
 from .chips import build_chips_view
 from .taiwan_vix import build_vix_view
+from .sitc_first_buy import build_sitc_view
 from .utils import now_taipei_iso, read_json, write_json
 
 logger = logging.getLogger(__name__)
@@ -605,7 +606,23 @@ def render_site(cfg: AppConfig) -> Path:
         logger.exception("Chips view failed")
         cv = None
 
+    sv = None
+    try:
+        sv = build_sitc_view(cfg)
+        if sv:
+            (site / "sitc-first-buy.html").write_text(
+                env.get_template("sitc_first_buy.html").render(
+                    sv=sv, generated_at=generated_at, assets_prefix="assets"
+                ),
+                encoding="utf-8",
+            )
+            logger.info("Wrote %s", site / "sitc-first-buy.html")
+    except Exception:  # noqa: BLE001 — never break the site for 投信 tracker
+        logger.exception("SITC first-buy view failed")
+        sv = None
+
     index_html = env.get_template("index.html").render(
+        sv=sv,
         cv=cv,
         vx=vx,
         kd=kd,

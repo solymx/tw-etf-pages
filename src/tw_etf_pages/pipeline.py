@@ -282,6 +282,12 @@ def run_live(cfg: AppConfig | None = None, *, allow_fallback: bool = True) -> Pa
         update_chips(cfg)
     except Exception:  # noqa: BLE001 — chips must never fail the run
         logger.exception("Chips (TDCC) update failed")
+    try:
+        from .sitc_first_buy import update_sitc
+
+        update_sitc(cfg.root)
+    except Exception:  # noqa: BLE001 — 投信第一次買超 must never fail the run
+        logger.exception("SITC first-buy update failed")
     site = render_site(cfg)
     from .utils import now_taipei_iso
 

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% from "_sitc_macros.html" import sitc_card, sitc_table, sitc_note, sitc_amount %}
+{% block title %}投信今天第一次買超{% endblock %}
+{% block body %}
+<div class="layout single">
+  <div class="main">
+    <header class="page-header">
+      <h1>投信今天第一次買超</h1>
+      <p class="muted">今天投信買超、且前 {{ sv.lookback }} 個交易日都沒有買超的個股（上市＋上櫃），依買超金額排序。</p>
+      <nav class="nav-inline"><a href="index.html">← 回 ETF 持股異動日報</a><a href="#sitc_today">今日名單</a><a href="#sitc_history">近期歷史</a></nav>
+    </header>
+    {{ sitc_card(sv, link_more=False) }}
+    <section>
+      <h3 class="section-title inc" id="sitc_today">📅 {{ sv.latest.date }}（共 {{ sv.latest.total }} 檔）</h3>
+      {% if sv.latest["items"] %}{{ sitc_table(sv.latest["items"]) }}{% else %}<div class="empty-box">這天沒有符合條件的股票。</div>{% endif %}
+      <h3 class="section-title" id="sitc_history">近 {{ sv.history|length }} 個交易日</h3>
+      <div class="table-wrap">
+        <table class="report kd-table">
+          <thead><tr><th>日期</th><th>檔數</th><th>上市</th><th>上櫃</th><th>合計買超金額(約)</th><th>前 5 名（依金額）</th></tr></thead>
+          <tbody>
+            {% for d in sv.history %}
+            <tr>
+              <td><a href="#day_{{ d.date }}">{{ d.date }}</a></td>
+              <td class="num">{{ d.total }}</td><td class="num">{{ d.listed }}</td><td class="num">{{ d.otc }}</td>
+              <td class="num">{{ sitc_amount(d.total_amount) }}</td>
+              <td>{% for x in d["items"][:5] %}{{ x.code }} {{ x.name }}{% if not loop.last %}、{% endif %}{% endfor %}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% for d in sv.history[1:] %}
+      <details id="day_{{ d.date }}">
+        <summary><strong>{{ d.date }}</strong>（{{ d.total }} 檔：上市 {{ d.listed }}／上櫃 {{ d.otc }}）</summary>
+        {% if d["items"] %}{{ sitc_table(d["items"]) }}{% else %}<div class="empty-box">無。</div>{% endif %}
+      </details>
+      {% endfor %}
+    </section>
+    {{ sitc_note(sv) }}
+    <footer class="site-footer">
+      <p>時區：Asia/Taipei。最後產生時間：{{ generated_at }}。不構成投資建議。</p>
+    </footer>
+  </div>
+</div>
+{% endblock %}

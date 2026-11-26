@@ -1,0 +1,64 @@
+{% macro sitc_amount(v) -%}
+{%- if v is none -%}<span class="muted">—</span>
+{%- elif v >= 100000000 -%}{{ "%.2f"|format(v / 100000000) }} 億
+{%- else -%}{{ "%.0f"|format(v / 10000) }} 萬{%- endif -%}
+{%- endmacro %}
+
+{% macro sitc_pct(v) -%}
+{%- if v is none -%}<span class="muted">—</span>
+{%- elif v > 0 -%}<span class="mg-up">▲ {{ "%.2f"|format(v) }}%</span>
+{%- elif v < 0 -%}<span class="mg-down">▼ {{ "%.2f"|format(-v) }}%</span>
+{%- else -%}<span class="muted">0.00%</span>{%- endif -%}
+{%- endmacro %}
+
+{% macro sitc_card(sv, link_more=True) %}
+{% set L = sv.latest %}
+<div class="mg-card up">
+  <div class="kd-card-head">
+    <div>
+      <div class="kd-title">投信今天第一次買超</div>
+      <div class="muted">資料日 <strong>{{ L.date }}</strong>／定義：今天投信買超，且前 {{ sv.lookback }} 個交易日（{{ L.prev_from }} ～ {{ L.prev_to }}）都沒有買超</div>
+    </div>
+    <div class="mg-big up">
+      <strong>{{ L.total }} 檔</strong>
+      <span>上市 {{ L.listed }} 檔／上櫃 {{ L.otc }} 檔</span>
+    </div>
+  </div>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>合計買超金額（約）</span><strong>{{ sitc_amount(L.total_amount) }}</strong></div>
+    <div class="kd-metric"><span>買超 ≥ 100 張</span><strong>{{ L.big }} 檔</strong></div>
+    <div class="kd-metric"><span>其中本站追蹤 ETF 持有</span><strong>{{ L.in_etf }} 檔</strong></div>
+  </div>
+  {% if link_more %}<p class="kd-more"><a href="sitc-first-buy.html">查看完整名單與近 {{ sv.history|length }} 日歷史 →</a></p>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro sitc_table(items) %}
+<div class="table-wrap">
+  <table class="report kd-table">
+    <thead><tr><th>代號</th><th>名稱</th><th>市場</th><th>投信買超(張)</th><th>收盤價</th><th>漲跌%</th><th>買超金額(約)</th><th>追蹤 ETF 持有</th></tr></thead>
+    <tbody>
+      {% for r in items %}
+      <tr class="{% if r.etfs %}mg-row-up{% endif %}">
+        <td><strong>{{ r.code }}</strong></td>
+        <td>{{ r.name }}</td>
+        <td>{{ r.market }}</td>
+        <td class="num">{{ "{:,.0f}".format(r.net_lots) }}</td>
+        <td class="num">{% if r.close is not none %}{{ "%.2f"|format(r.close) }}{% else %}—{% endif %}</td>
+        <td class="num">{{ sitc_pct(r.chg_pct) }}</td>
+        <td class="num">{{ sitc_amount(r.amount) }}</td>
+        <td>{% if r.etfs %}{% for t in r.etfs %}<a href="{{ t }}.html">{{ t }}</a>{% if not loop.last %}、{% endif %}{% endfor %}{% else %}<span class="muted">—</span>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endmacro %}
+
+{% macro sitc_note(sv) %}
+<div class="kd-note">
+  <p><strong>定義</strong>：當日投信買賣超股數 &gt; 0，且前 {{ sv.lookback }} 個交易日每一天的投信買賣超都 ≤ 0（賣超、持平或沒有交易）。只列普通股（4 碼代號），不含 ETF、權證、特別股；上市、上櫃都算。名單不設張數門檻，買超 1 張也算（所以上面另外統計 ≥ 100 張的檔數，並依金額排序）。</p>
+  <p><strong>資料來源</strong>：<a href="{{ sv.source_twse }}" target="_blank" rel="noopener">臺灣證券交易所 三大法人買賣超日報（T86）</a>、<a href="{{ sv.source_tpex }}" target="_blank" rel="noopener">證券櫃檯買賣中心 三大法人買賣明細</a>；收盤價取自兩家交易所每日收盤行情。</p>
+  <p class="muted">買超金額＝投信買超股數 × 收盤價，為約略值（實際成交價不同）。櫃買中心資料為「不含綜合帳戶之投信買賣成交量」。資料收盤後才公布，尚未公布時會顯示最近一個交易日。本頁僅為資料整理，不構成投資建議。</p>
+</div>
+{% endmacro %}

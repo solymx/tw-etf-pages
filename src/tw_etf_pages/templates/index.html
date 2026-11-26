@@ -2,6 +2,7 @@
 {% from "_kd_macros.html" import kd_card, kd_table, kd_note %}
 {% from "_margin_macros.html" import margin_card, margin_table, margin_note %}
 {% from "_chips_macros.html" import chips_card, chips_table, chips_note %}
+{% from "_sitc_macros.html" import sitc_card, sitc_table, sitc_note %}
 {% from "_vix_macros.html" import vix_card, vix_chart, vix_table, vix_note %}
 {% block title %}台灣主動式 ETF 持股異動日報{% endblock %}
 {% block heading %}台灣主動式 ETF 持股異動日報{% endblock %}
@@ -20,6 +21,9 @@
     </li>{% endif %}
     {% if mg %}<li><a href="#part_margin">💰 大盤融資維持率</a></li>{% endif %}
     {% if vx %}<li><a href="#part_vix">😱 臺指 VIX 恐慌指數</a></li>{% endif %}
+    {% if sv %}<li><a href="#part_sitc">🏦 投信今天第一次買超</a>
+      <div class="toc-sub"><ol><li><a href="sitc-first-buy.html">完整名單／近期歷史</a></li></ol></div>
+    </li>{% endif %}
     {% if cv %}<li><a href="#part_chips">🐳 千張大戶籌碼（週）</a>
       <div class="toc-sub"><ol><li><a href="chips.html">全部成分股明細</a></li></ol></div>
     </li>{% endif %}
@@ -47,6 +51,7 @@
 {% endblock %}
 {% block nav %}
 <nav class="nav-inline">
+  {% if sv %}<a href="sitc-first-buy.html">🏦 投信第一次買超</a>{% endif %}
   {% for e in etfs %}
   <a href="{{ e.ticker }}.html">{{ e.ticker }} 明細頁</a>
   {% endfor %}
@@ -89,6 +94,16 @@
   <h3 class="section-title">近 {{ vx.recent|length }} 個交易日</h3>
   {{ vix_table(vx.recent) }}
   {{ vix_note(vx) }}
+</section>
+{% endif %}
+
+{% if sv %}
+<section>
+  <h2 class="banner" id="part_sitc">🏦 投信今天第一次買超（前 {{ sv.lookback }} 個交易日都沒買超）</h2>
+  {{ sitc_card(sv) }}
+  {% if sv.latest["items"] %}{{ sitc_table(sv.latest["items"][:10]) }}{% else %}<div class="empty-box">這天沒有符合條件的股票。</div>{% endif %}
+  <p class="kd-more"><a href="sitc-first-buy.html">完整 {{ sv.latest.total }} 檔名單與近期歷史 →</a></p>
+  {{ sitc_note(sv) }}
 </section>
 {% endif %}
 
