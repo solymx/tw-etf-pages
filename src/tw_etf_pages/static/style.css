@@ -554,3 +554,50 @@ table.report tr.vix-row-low { background: #eff6ff; }
 .opt-h{margin:.7rem 0 .3rem;font-size:1rem}
 .opt-explain{margin-top:.8rem;padding:.6rem .8rem;background:#f8fafc;border-radius:8px;font-size:.9rem}
 .opt-explain p{margin:.3rem 0}
+
+
+/* ---- 今日台灣財經新聞 ---- */
+.news-card { border-left-color: #2563eb; }
+.news-updated { font-size: 1.05rem !important; font-weight: 700; word-break: break-all; }
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.news-list li {
+  display: grid;
+  grid-template-columns: 4.4rem 9.2rem minmax(0, 1fr);
+  gap: 0.35rem 0.75rem;
+  align-items: baseline;
+  padding: 0.58rem 0.95rem;
+  border-bottom: 1px solid var(--border);
+}
+.news-list li:last-child { border-bottom: none; }
+.news-list time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.88rem;
+}
+.news-source { color: var(--muted); font-size: 0.82rem; }
+.news-source em {
+  font-style: normal;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-left: 0.2rem;
+  padding: 0.05rem 0.35rem;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #475569;
+}
+.news-list a { font-weight: 600; }
+.news-list li.news-prior a { font-weight: 500; }
+@media (max-width: 700px) {
+  .news-list li {
+    grid-template-columns: 4.2rem minmax(0, 1fr);
+  }
+  .news-source { grid-column: 2; }
+  .news-list a { grid-column: 1 / -1; }
+}

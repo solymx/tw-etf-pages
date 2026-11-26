@@ -52,6 +52,13 @@
 
 本機預覽：`python -m tw_etf_pages render` 後以瀏覽器開啟 `site/index.html`（或 `python -m http.server -d site`）。
 
+### 今日台灣財經新聞
+
+[`news.html`](https://solymx.github.io/tw-etf-pages/news.html) 每天彙整台灣財經／股市標題清單（只列標題、來源、時間；點了開原文，不轉載內文）。來源為工商時報、經濟日報、Google 新聞、鉅亨網、中央社、MoneyDJ、自由時報的公開 RSS／API；相近標題會去重。富途牛牛沒有公開 RSS，故未列入。
+
+排程：每天台灣時間 07:00（`Update Taiwan finance news`，cron `0 23 * * *` UTC）與 17:00（平日由 `Update ETF holdings` 一併更新；週六日由新聞 workflow，cron `0 9 * * 0,6` UTC）。兩個 workflow 共用 concurrency group `pages-update`，避免互相覆蓋網站。GitHub 排程可能延遲數小時。
+
+
 ### 近20天持股趨勢（ETF 明細頁）
 
 各檔 `site/{TICKER}.html` 新增 **「近20天持股趨勢」** 區塊：

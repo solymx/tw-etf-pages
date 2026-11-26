@@ -14,7 +14,7 @@
 | Repo | https://github.com/solymx/tw-etf-pages （**公開**，`main` 分支，無分支保護） |
 | 正式站 | https://solymx.github.io/tw-etf-pages/ （GitHub Pages，Source = GitHub Actions） |
 | 技術 | Python 3.11 + Jinja2 靜態輸出、資料以 JSON 存回 git；Node.js 20 僅元大（yuanta）抽取用 |
-| 排程 | GitHub Actions `Update ETF holdings`：平日 17:00 台灣時間（cron `0 9 * * 1-5` UTC）＋週六 12:00 台灣時間只更新千張大戶籌碼（cron `0 4 * * 6`），也可手動 `workflow_dispatch` |
+| 排程 | GitHub Actions `Update ETF holdings`：平日 17:00 台灣時間（cron `0 9 * * 1-5` UTC）＋週六 12:00 台灣時間只更新千張大戶籌碼（cron `0 4 * * 6`），也可手動 `workflow_dispatch`。另有 `Update Taiwan finance news`：每天 07:00 台灣時間（cron `0 23 * * *` UTC）與週六日 17:00（cron `0 9 * * 0,6` UTC）；平日 17:00 新聞由 holdings 的 `run_live` 一併更新。兩個 workflow 共用 concurrency group `pages-update` |
 | Secrets | **不需要任何自訂 Secrets**（只用內建 `GITHUB_TOKEN`；資料來源皆為公開端點） |
 | 觀察清單 | 32 檔（21 檔主動型 `…A`＋11 檔被動型），見附錄 A |
 | 測試 | `pytest` 90 個測試全數通過（2026-11-26 在 Python 3.11+ 本機驗證） |

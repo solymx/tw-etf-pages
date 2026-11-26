@@ -18,6 +18,7 @@ from .margin_ratio import build_margin_view
 from .chips import build_chips_view
 from .taiwan_vix import build_vix_view
 from .sitc_first_buy import build_sitc_view
+from .news import build_news_view
 from .utils import now_taipei_iso, read_json, write_json
 
 logger = logging.getLogger(__name__)
@@ -606,6 +607,21 @@ def render_site(cfg: AppConfig) -> Path:
         logger.exception("Chips view failed")
         cv = None
 
+    nv = None
+    try:
+        nv = build_news_view(cfg.root)
+        if nv:
+            (site / "news.html").write_text(
+                env.get_template("news.html").render(
+                    nv=nv, generated_at=generated_at, assets_prefix="assets"
+                ),
+                encoding="utf-8",
+            )
+            logger.info("Wrote %s", site / "news.html")
+    except Exception:  # noqa: BLE001 — never break the site for news
+        logger.exception("News view failed")
+        nv = None
+
     sv = None
     try:
         sv = build_sitc_view(cfg)
@@ -622,6 +638,7 @@ def render_site(cfg: AppConfig) -> Path:
         sv = None
 
     index_html = env.get_template("index.html").render(
+        nv=nv,
         sv=sv,
         cv=cv,
         vx=vx,

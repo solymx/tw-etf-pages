@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "_news_macros.html" import news_card, news_list, news_note %}
+{% block title %}今日台灣財經新聞{% endblock %}
+{% block body %}
+<div class="layout single">
+  <div class="main">
+    <header class="page-header">
+      <h1>今日台灣財經新聞</h1>
+      <p class="muted">台灣今天發生哪些財經、股市相關事情。點標題即可開啟原文。</p>
+      <nav class="nav-inline">
+        <a href="index.html">← 回 ETF 持股異動日報</a>
+        <a href="#news_today">今日新聞</a>
+        {% if nv.evening_items %}<a href="#news_evening">昨晚補覽</a>{% endif %}
+      </nav>
+    </header>
+    {{ news_card(nv, link_more=False) }}
+    <section>
+      <h3 class="section-title inc" id="news_today">📅 {{ nv.as_of_date }} 今日（{{ nv.today_count }} 則）</h3>
+      {{ news_list(nv.today_items) }}
+      {% if nv.evening_items %}
+      <h3 class="section-title" id="news_evening">昨晚（前一晚 17:00 以後，{{ nv.prior_evening_count }} 則）</h3>
+      {{ news_list(nv.evening_items) }}
+      {% endif %}
+    </section>
+    {{ news_note(nv) }}
+    <footer class="site-footer">
+      <p>時區：Asia/Taipei。新聞清單最後更新：{{ nv.generated_at_display or nv.generated_at }}。頁面產生時間：{{ generated_at }}。不構成投資建議。</p>
+    </footer>
+  </div>
+</div>
+{% endblock %}

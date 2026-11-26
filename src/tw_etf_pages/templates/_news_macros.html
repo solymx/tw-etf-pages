@@ -1,0 +1,45 @@
+{% macro news_time(it) -%}
+<time datetime="{{ it.published_at or '' }}">{{ it.published_hm }}</time>
+{%- endmacro %}
+
+{% macro news_list(items) %}
+{% if items %}
+<ul class="news-list">
+  {% for it in items %}
+  <li{% if it.bucket == 'prior_evening' %} class="news-prior"{% endif %}>
+    {{ news_time(it) }}
+    <span class="news-source">{{ it.source }}{% if it.bucket == 'prior_evening' %} <em>昨晚</em>{% endif %}</span>
+    <a href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<div class="empty-box">目前還沒有符合今天的新聞。</div>
+{% endif %}
+{% endmacro %}
+
+{% macro news_card(nv, link_more=True) %}
+<div class="kd-card news-card">
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>資料日</span><strong>{{ nv.as_of_date }}</strong></div>
+    <div class="kd-metric"><span>今日則數</span><strong>{{ nv.today_count }}</strong></div>
+    {% if nv.prior_evening_count %}<div class="kd-metric"><span>昨晚（補覽）</span><strong>{{ nv.prior_evening_count }}</strong></div>{% endif %}
+    <div class="kd-metric"><span>最後更新</span><strong class="news-updated">{{ nv.generated_at_display or nv.generated_at }}</strong></div>
+  </div>
+  <p class="kd-note">來源成功：{% if nv.ok_sources %}{{ nv.ok_sources|join("、") }}{% else %}無{% endif %}{% if nv.failed_sources %}；未能讀取：{{ nv.failed_sources|join("、") }}{% endif %}。</p>
+  {% if link_more %}<p class="kd-more"><a href="news.html">查看今日完整新聞清單 →</a></p>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro news_note(nv) %}
+<div class="notes">
+  <strong>說明</strong>
+  <ul>
+    <li>本頁只列出標題，點選後會在新分頁開啟原文；不轉載、不儲存文章內文。</li>
+    <li>只收台灣時間當天的新聞。若早上則數偏少，會另外補上前一晚 17:00 以後的條目，並標示「昨晚」。</li>
+    <li>相近標題（跨媒體轉述）只保留一則，優先官方媒體，其次較早刊出者。</li>
+    <li>{{ nv.note_futu }}</li>
+    <li>各來源以公開 RSS 或公開 API 獨立抓取；單一來源失敗不會讓整頁空白。這不是投資建議。</li>
+  </ul>
+</div>
+{% endmacro %}
