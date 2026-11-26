@@ -2,14 +2,14 @@
   "etf_ticker": "00985A",
   "as_of_date": "2026-11-26",
   "source": "zdsetf",
-  "fetched_at": "2026-11-26T20:05:14+08:00",
+  "fetched_at": "2026-11-26T21:38:00+08:00",
   "raw_file": "00985A_2026-11-26_zdsetf.json",
-  "raw_file_hash": "b62a68e7350058bafb612019d450d60ad3f322fe292e519201207d9c421ad93c",
+  "raw_file_hash": "d7c9b623e081d763f20ac7df0407b8ebef91f27093cad4e49f1ed8d822222640",
   "holdings_count": 50,
   "placeholder_count": 0,
   "meta": {
     "source_url": "https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00985A&tab=Shareholding",
-    "fetched_at_upstream": "2026-11-26T09:34:44"
+    "fetched_at_upstream": "2026-11-26T12:15:08"
   },
   "holdings": [
     {

@@ -2,14 +2,14 @@
   "etf_ticker": "00995A",
   "as_of_date": "2026-11-27",
   "source": "zdsetf",
-  "fetched_at": "2026-11-26T20:05:19+08:00",
+  "fetched_at": "2026-11-26T21:38:05+08:00",
   "raw_file": "00995A_2026-11-26_zdsetf.json",
-  "raw_file_hash": "6602ea026d0b54eafd097fbce13dbfa45f6f0a4579a5ab602a75cc7f90f48ee8",
+  "raw_file_hash": "925429c68e473e0f9c0a6d01ffa8d6cd0490f302e78c3aa5c85580749a3053d3",
   "holdings_count": 56,
   "placeholder_count": 2,
   "meta": {
     "source_url": "https://www.ctbcinvestments.com/etfprod/00995A/pcf",
-    "fetched_at_upstream": "2026-11-26T09:51:12"
+    "fetched_at_upstream": "2026-11-26T12:31:30"
   },
   "holdings": [
     {
