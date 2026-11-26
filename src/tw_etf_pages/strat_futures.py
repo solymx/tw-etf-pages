@@ -59,6 +59,29 @@ def parse_fut_csv(text: str) -> dict[str, int]:
     return out
 
 
+def parse_fut_any(text: str) -> dict[str, int]:
+    """openapi sometimes answers JSON instead of CSV (seen from GitHub Actions); accept both."""
+    t = text.lstrip("\ufeff").lstrip()
+    if not t.startswith("["):
+        return parse_fut_csv(t)
+    import json
+
+    out: dict[str, int] = {}
+    for r in json.loads(t):
+        vals = {str(k): str(v).strip() for k, v in r.items()}
+        date_v = vals.get("Date") or vals.get("日期")
+        is_tx = any(v in ("臺股期貨", "TX", "TXF") for k, v in vals.items() if "ontract" in k or "商品" in k)
+        is_fi = any(("外資" in v or v.lower().startswith("foreign")) for k, v in vals.items()
+                    if "tem" in k or "dentit" in k or "身份" in k or "nvestor" in k)
+        net_k = [k for k in vals if ("OpenInterest" in k or "未平倉" in k) and ("Net" in k or "淨額" in k)
+                 and not any(x in k for x in ("Amount", "Value", "金額"))]
+        if date_v and is_tx and is_fi and len(net_k) == 1:
+            v = num(vals[net_k[0]])
+            if v is not None:
+                out[any_to_date(date_v).isoformat()] = int(v)
+    return out
+
+
 def parse_pc_csv(text: str) -> dict[str, dict[str, float]]:
     out: dict[str, dict[str, float]] = {}
     rd = csv.reader(io.StringIO(text.lstrip("\ufeff")))
@@ -94,18 +117,21 @@ def update_futures(root: Path, today: date | None = None) -> int:
     errors: list[str] = []
     fut: dict[str, int] = {}
     pc: dict[str, dict[str, float]] = {}
-    # 1) history backfill when we have little data
+    # 1) history download: full backfill when short of data, otherwise the last ~5 weeks (most up to date source)
     oldest_needed = today - timedelta(days=BACKFILL_DAYS)
     have_fut = sorted(d for d, r in rows.items() if r.get("foreign_net") is not None)
-    if not have_fut or have_fut[0] > (oldest_needed + timedelta(days=10)).isoformat():
+    full = not have_fut or have_fut[0] > (oldest_needed + timedelta(days=10)).isoformat()
+    fut_start = oldest_needed if full else today - timedelta(days=35)
+    if True:
         try:
-            r = http(sess, HIST_FUT, data={"queryStartDate": oldest_needed.strftime("%Y/%m/%d"),
+            r = http(sess, HIST_FUT, data={"queryStartDate": fut_start.strftime("%Y/%m/%d"),
                                             "queryEndDate": today.strftime("%Y/%m/%d"), "commodityId": "TXF"})
             fut.update(parse_fut_csv(r.content.decode("big5", errors="replace")))
         except Exception as exc:  # noqa: BLE001
             errors.append(f"futContractsDateDown: {exc}")
     have_pc = sorted(d for d, r in rows.items() if r.get("pc_oi") is not None)
-    start = oldest_needed if not have_pc or have_pc[0] > (oldest_needed + timedelta(days=10)).isoformat() else None
+    start = oldest_needed if not have_pc or have_pc[0] > (oldest_needed + timedelta(days=10)).isoformat() else (
+        date(today.year - (today.month == 1), (today.month - 2) % 12 + 1, 1))
     if start:
         m = date(start.year, start.month, 1)
         while m <= today:
@@ -120,11 +146,11 @@ def update_futures(root: Path, today: date | None = None) -> int:
             m = nxt
     # 2) latest month from openapi
     try:
-        fut.update(parse_fut_csv(http(sess, OPEN_FUT).content.decode("utf-8-sig", errors="replace")))
+        fut.update({k: v for k, v in parse_fut_any(http(sess, OPEN_FUT).content.decode("utf-8-sig", errors="replace")).items() if k not in fut})
     except Exception as exc:  # noqa: BLE001
         errors.append(f"openapi futures: {exc}")
     try:
-        pc.update(parse_pc_json(http(sess, OPEN_PC).json()))
+        pc.update({k: v for k, v in parse_pc_json(http(sess, OPEN_PC).json()).items() if k not in pc})
     except Exception as exc:  # noqa: BLE001
         errors.append(f"openapi PutCallRatio: {exc}")
     before = len(rows)

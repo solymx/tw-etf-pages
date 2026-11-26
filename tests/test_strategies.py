@@ -107,3 +107,10 @@ def test_div_parsers():
     assert dv.rebalance_key(date(2026, 11, 26)) == "2026-06"
     assert dv.rebalance_key(date(2026, 12, 1)) == "2026-12"
     assert dv.rebalance_key(date(2026, 3, 1)) == "2025-12"
+
+
+def test_parse_fut_any_json():
+    js = '[{"Date":"20261125","ContractCode":"臺股期貨","Item":"外資及陸資","OpenInterest(Net)":"-105709","OpenInterestContractAmount(Net)":"-1"},' \
+         '{"Date":"20261125","ContractCode":"臺股期貨","Item":"投信","OpenInterest(Net)":"100918","OpenInterestContractAmount(Net)":"1"}]'
+    assert fut.parse_fut_any(js) == {"2026-11-25": -105709}
+    assert fut.parse_fut_any(FUT_CSV) == {"2026-11-25": -105709}
