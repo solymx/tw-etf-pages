@@ -38,16 +38,17 @@
   <dl class="st-intro-list">
     <dt>1. 這是什麼</dt><dd>看外資在臺股期貨的淨未平倉口數，加上選擇權的 Put/Call（P/C）未平倉比，當作大盤的籌碼背景。</dd>
     <dt>2. 為什麼可能有用</dt><dd>外資資金大，期貨部位「變化」可能反映他們對大盤的看法；P/C 比在台灣常被解讀為賣權賣方撐盤的程度。</dd>
-    <dt>3. 怎麼看這頁</dt><dd>外資分數與 P/C 分數各自是 +1／0／−1，合計 +2 標「偏多」、−2 標「偏空」，其餘「中性」；水位極端另標「極端水位」；結算週標「訊號可能失真」。這些規則是台灣常見解讀，規格沒有註明是研究值或經驗值（待補）。</dd>
-    <dt>4. 證據</dt><dd>尚未標註等級（規格未提供，待補）。頁面註明：扣除交易成本後的回測並不支持直接拿來當買賣訊號，所以只當籌碼背景。</dd>
+    <dt>3. 怎麼看這頁</dt><dd>外資分數與 P/C 分數各自是 +1／0／−1，合計 +2 標「偏多」、−2 標「偏空」，其餘「中性」；水位極端另標「極端水位」；結算週標「訊號可能失真」。+1／0／−1 計分為經驗值。回測不支持把這些訊號直接當買賣依據，本頁只當籌碼背景。</dd>
+    <dt>4. 證據</dt><dd>〔B〕<a href="https://finlab.finance/blog/taiwan-market-timing-signals-backtest" target="_blank" rel="noopener">FinLab 13 擇時訊號</a>：外資淨未平倉&gt;20 日均就持有，夏普 0.05 vs 0050 0.75；不扣成本 0.82，但 727 次換手成本吃光報酬。 〔B〕<a href="https://finlab.finance/blog/put-call-open-interest-ratio-hedge" target="_blank" rel="noopener">FinLab P/C 未平倉</a>：夏普 0.66 vs 0050 1.20，9 組參數全輸。 〔B〕<a href="https://onepunchmed.com/markets/taifex-chip-signals.html" target="_blank" rel="noopener">onepunchmed 期貨籌碼訊號</a>：6 個訊號扣成本後皆不顯著。</dd>
     <dt>5. 限制與風險</dt><dd>外資期貨空單常是現貨部位的避險，看「變化」比看「水位」有意義；結算週前後容易失真；期交所約 15:00 後才公布，資料可能晚一天。不構成投資建議。</dd>
   </dl>
+  <p class="muted st-intro-legend">證據等級：A 學術論文；B 第三方回測（數字出自該文，本站未重跑）；C 僅搜尋摘要或無出處。</p>
 </section>
 
 <div class="mg-card st-card">
   <div class="kd-card-head">
     <div><div class="kd-title">合計分數 -2</div>
-      <div class="muted">外資分數 + P/C 分數；+2 偏多、−2 偏空，其餘中性</div></div>
+      <div class="muted">外資分數 + P/C 分數；+2 偏多、−2 偏空，其餘中性（計分為經驗值）</div></div>
     <div class="mg-big"><span class="st-badge st-bear">偏空</span>
       <span class="st-badge st-warn">極端水位</span>
       </div>
@@ -434,15 +435,15 @@
   </tbody></table></div>
 </section>
 <div class="kd-note">
-  <p><strong>判讀規則</strong>：外資分數：淨未平倉高於 20 日均且比前一日增加＝+1（加多或回補空單）；低於 20 日均且比前一日減少＝−1；其餘 0。P/C 分數（台灣常見解讀：P/C 未平倉比高代表賣權賣方撐盤）：近 60 日百分位 ≥ 70＝+1，≤ 30＝−1，其餘 0。合計 +2 偏多、−2 偏空，其餘中性。外資水位 60 日百分位 ≥ 90 或 ≤ 10 另標「極端水位」。每月第三個週三（結算日）前後 5 個交易日標「結算週：訊號可能失真」。</p>
-  <p><strong>重要</strong>：外資期貨空單常是現貨部位的避險，看「變化」比看「水位」有意義；扣除交易成本後的回測並不支持直接拿來當買賣訊號，本頁只當籌碼背景參考。</p>
+  <p><strong>判讀規則</strong>：外資分數：淨未平倉高於 20 日均且比前一日增加＝+1（加多或回補空單）；低於 20 日均且比前一日減少＝−1；其餘 0。P/C 分數（台灣常見解讀：P/C 未平倉比高代表賣權賣方撐盤）：近 60 日百分位 ≥ 70＝+1，≤ 30＝−1，其餘 0。合計 +2 偏多、−2 偏空，其餘中性。+1／0／−1 計分為<strong>經驗值</strong>。外資水位 60 日百分位 ≥ 90 或 ≤ 10 另標「極端水位」。每月第三個週三（結算日）前後 5 個交易日標「結算週：訊號可能失真」。</p>
+  <p><strong>重要</strong>：外資期貨空單常是現貨部位的避險，看「變化」比看「水位」有意義；扣除交易成本後的回測並不支持直接拿來當買賣訊號（見頁首「策略介紹」的 FinLab、onepunchmed 出處），本頁只當籌碼背景參考。</p>
   <p><strong>資料來源</strong>：<a href="https://www.taifex.com.tw/cht/3/futContractsDate" target="_blank" rel="noopener">臺灣期貨交易所 三大法人－區分各期貨契約</a>（臺股期貨 TX，外資及陸資「多空未平倉口數淨額」）、<a href="https://www.taifex.com.tw/cht/3/pcRatio" target="_blank" rel="noopener">臺指選擇權 Put/Call 比</a>。期交所 OpenAPI 只保留約 1 個月，本站每天自行存檔；加權指數取自本站 KD 資料（證交所）。期交所約 15:00 後公布、每天 17:00 更新，晚間例行更新會再補一次。</p>
   <p class="muted">本次抓取問題：futContractsDateDown: TAIFEX 期貨三大法人欄位格式變動: [&#39;&lt;!DOCTYPE HTML PUBLIC &#34;-//W3C//DTD HTML 4.01//EN&#34; &#34;http://www.w3.org/TR/html4/strict.dtd&#34;&gt;&#39;]</p>
 </div>
 
 <footer class="site-footer">
   <p><strong>不構成投資建議；判讀規則屬經驗法則，非研究保證。</strong></p>
-  <p>時區：Asia/Taipei。最後產生時間：2026-11-27T13:08:34+08:00。</p>
+  <p>時區：Asia/Taipei。最後產生時間：2026-11-27T13:25:04+08:00。</p>
 </footer>
 
 </div></div>

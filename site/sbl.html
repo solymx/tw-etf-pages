@@ -37,16 +37,17 @@
   <dl class="st-intro-list">
     <dt>1. 這是什麼</dt><dd>看借券賣出餘額占股本的比率，以及近 20 日的增減，衡量市場的空方壓力。</dd>
     <dt>2. 為什麼可能有用</dt><dd>借券賣出是常見的放空管道；餘額高又持續增加，賣壓可能還在；餘額明顯減少則代表空方在回補、壓力減輕。</dd>
-    <dt>3. 怎麼看這頁</dt><dd>大盤：總餘額 20 日增幅 &gt; +10% 標「偏空」、&lt; −10% 標「偏多」，其餘「中性」。個股：占股本比率在全市場前 10% 且 20 日增幅 &gt; 0 標「偏空（空方壓力高）」；比率前 20% 但 20 日增幅 &lt; −20% 標「空方減壓」（轉中性偏多）。券資比只顯示、不判讀。門檻規格沒有註明是研究值或經驗值（待補）。</dd>
-    <dt>4. 證據</dt><dd>尚未標註等級（規格未提供，待補）。頁面註明：券資比高不代表會軋空（回測不支持）。</dd>
+    <dt>3. 怎麼看這頁</dt><dd>大盤：總餘額 20 日增幅 &gt; +10% 標「偏空」、&lt; −10% 標「偏多」，其餘「中性」。個股：占股本比率在全市場前 10% 且 20 日增幅 &gt; 0 標「偏空（空方壓力高）」；比率前 20% 但 20 日增幅 &lt; −20% 標「空方減壓」（轉中性偏多）。±10%、前 10%、前 20%、−20% 皆為經驗值。券資比只顯示、不判讀。本頁只當空方壓力觀察，不是買賣訊號。</dd>
+    <dt>4. 證據</dt><dd>〔B〕<a href="https://finlab.finance/blog/taiwan-chip-signals-backtest" target="_blank" rel="noopener">FinLab 籌碼訊號</a>：借券增加最多組年化 8.3%、最少組 9.5%；Rank IC −0.007、t=−1.5；券資比最高組年化 7.3% 為五組最低，「軋空」說法不成立；借券含避險部位。</dd>
     <dt>5. 限制與風險</dt><dd>借券賣出包含權證避險與套利交易，不等於看空；證交所約 18:30 後才公布當日資料，尚未公布時顯示前一交易日。不構成投資建議。</dd>
   </dl>
+  <p class="muted st-intro-legend">證據等級：A 學術論文；B 第三方回測（數字出自該文，本站未重跑）；C 僅搜尋摘要或無出處。</p>
 </section>
 
 <div class="mg-card st-card">
   <div class="kd-card-head">
     <div><div class="kd-title">大盤：全市場借券賣出總餘額 20 日增幅</div>
-      <div class="muted">&gt; +10% 偏空、&lt; −10% 偏多，其餘中性</div></div>
+      <div class="muted">&gt; +10% 偏空、&lt; −10% 偏多，其餘中性（經驗值）</div></div>
     <div class="mg-big"><span class="st-badge st-neutral">中性</span><strong><span class="mg-up">+5.0%</span></strong></div>
   </div>
   <p>全市場借券賣出餘額 148.47 億股，較 20 個交易日前（2026-10-29）增加 5.0%，在 ±10% 內。</p>
@@ -3399,14 +3400,14 @@
 </section>
 <div class="kd-note">
   <p><strong>定義</strong>：佔股本比率＝借券賣出餘額 ÷ 已發行普通股數；20 日增幅＝今日餘額 ÷ 20 個交易日前餘額 − 1。券資比＝融券餘額 ÷ 融資餘額（只顯示，不判讀，融資融券資料日 2026-11-26）。</p>
-  <p><strong>判讀</strong>：偏空（空方壓力高）＝比率全市場前 10% 且 20 日增幅 &gt; 0；空方減壓（轉中性偏多）＝比率前 20% 但 20 日增幅 &lt; −20%（空方在回補）；其餘中性。</p>
-  <p><strong>注意</strong>：借券賣出包含權證避險與套利交易，不等於看空；券資比高也不代表會軋空（回測不支持）。</p>
+  <p><strong>判讀</strong>：偏空（空方壓力高）＝比率全市場前 10% 且 20 日增幅 &gt; 0；空方減壓（轉中性偏多）＝比率前 20% 但 20 日增幅 &lt; −20%（空方在回補）；其餘中性。±10%、前 10%、前 20%、−20% 皆為<strong>經驗值</strong>。</p>
+  <p><strong>注意</strong>：借券賣出包含權證避險與套利交易，不等於看空；券資比高也不代表會軋空（<a href="https://finlab.finance/blog/taiwan-chip-signals-backtest" target="_blank" rel="noopener">FinLab 籌碼訊號</a>：券資比最高組年化最低，「軋空」說法不成立）。</p>
   <p><strong>資料來源</strong>：<a href="https://www.twse.com.tw/zh/trading/margin/twt93u.html" target="_blank" rel="noopener">證交所 信用額度總量管制餘額表（TWT93U）</a>、<a href="https://www.tpex.org.tw/zh-tw/mainboard/trading/margin-trading/sbl.html" target="_blank" rel="noopener">櫃買中心 借券賣出餘額</a>、公司基本資料（發行股數）、融資融券餘額。證交所約 18:30 後才公布當日資料，尚未公布時顯示前一交易日。</p>
 </div>
 
 <footer class="site-footer">
   <p><strong>不構成投資建議；判讀規則屬經驗法則，非研究保證。</strong></p>
-  <p>時區：Asia/Taipei。最後產生時間：2026-11-27T13:08:34+08:00。</p>
+  <p>時區：Asia/Taipei。最後產生時間：2026-11-27T13:25:04+08:00。</p>
 </footer>
 
 </div></div>
