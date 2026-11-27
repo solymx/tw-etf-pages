@@ -24,6 +24,10 @@
         <li><a href="dividend-lowvol.html">🛡️ 高殖利率＋低波動</a></li>
         <li><a href="futures-pc.html">🧭 外資期貨＋P/C</a></li>
         <li><a href="sbl.html">🐻 借券賣出餘額</a></li>
+        <li><a href="52week.html">🏔️ 52 週新高</a></li>
+        <li><a href="buyback.html">🔁 庫藏股買回</a></li>
+        <li><a href="insider.html">🧾 內部人轉讓</a></li>
+        <li><a href="attention.html">⚠️ 注意股</a></li>
       </ol></div>
     </li>{% endif %}
     {% if kd %}<li><a href="#part_kd">📈 加權指數 KD 指標</a>
@@ -64,7 +68,7 @@
 {% endblock %}
 {% block nav %}
 <nav class="nav-inline">
-  {% if st %}<a href="#part_overview">🚦 今日多空總覽</a><a href="revenue.html">📊 月營收動能</a><a href="dividend-lowvol.html">🛡️ 高殖利率低波動</a><a href="futures-pc.html">🧭 外資期貨＋P/C</a><a href="sbl.html">🐻 借券賣出</a>{% endif %}
+  {% if st %}<a href="#part_overview">🚦 今日多空總覽</a><a href="revenue.html">📊 月營收動能</a><a href="dividend-lowvol.html">🛡️ 高殖利率低波動</a><a href="futures-pc.html">🧭 外資期貨＋P/C</a><a href="sbl.html">🐻 借券賣出</a><a href="52week.html">🏔️ 52 週新高</a><a href="buyback.html">🔁 庫藏股</a><a href="insider.html">🧾 內部人轉讓</a><a href="attention.html">⚠️ 注意股</a>{% endif %}
   {% if nv %}<a href="news.html">📰 今日財經新聞</a>{% endif %}
   {% if sv %}<a href="sitc-first-buy.html">🏦 投信第一次買超</a>{% endif %}
   {% for e in etfs %}

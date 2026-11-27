@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav %}
+{% block title %}注意股{% endblock %}
+{% block body %}
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>⚠️ 注意股（公布注意交易資訊）</h1>
+  <p class="muted">最新公告日 <strong>{{ at.date }}</strong>；本站存有 {{ at["from"] }} 起 {{ at.n_days }} 個公告日。下表列近 10 個交易日（{{ at.window_from }} 起）被列注意的普通股，每檔顯示最新一次。</p>
+  {{ page_nav() }}
+</header>
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">大盤：當日注意股中「漲幅型」占比</div>
+      <div class="muted">≥ 50% → 偏空（過熱），其餘中性（經驗值）；沒有偏多</div></div>
+    <div class="mg-big">{{ badge(at.label) }}<strong>{% if at.share_up is not none %}{{ "%.1f"|format(at.share_up) }}%{% else %}—{% endif %}</strong></div>
+  </div>
+  <p>{{ at.reason }}</p>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>當日注意股</span><strong>{{ at.n_today }} 檔</strong></div>
+    <div class="kd-metric"><span>漲幅型／跌幅型</span><strong>{{ at.n_up }}／{{ at.n_down }}</strong></div>
+    <div class="kd-metric"><span>近 10 日被注意 ≥ 3 次（接近處置）</span><strong>{{ at.n_near }} 檔</strong></div>
+  </div>
+</div>
+<section>
+  <h3 class="section-title" id="list">近 10 個交易日注意股（{{ at["items"]|length }} 檔）</h3>
+  {{ search_box("at-all") }}
+  <div class="table-wrap st-scroll">
+  <table class="report kd-table st-table" id="at-all" data-sortable>
+  <thead><tr><th>公告日</th><th>代號</th><th>名稱</th><th>市場</th><th>款別</th><th>方向</th><th data-type="num">累計次數</th><th data-type="num">收盤價</th><th data-type="num">公告後第幾天</th><th>標籤</th></tr></thead>
+  <tbody>
+  {% for r in at["items"] %}
+  <tr><td>{{ r.date }}</td><td><strong>{{ r.code }}</strong></td><td>{{ r.name }}</td><td>{{ r.market }}</td>
+  <td title="{{ r.info }}">{{ r.clause }}</td><td>{{ r.direction }}</td>
+  <td class="num" data-v="{{ r.count10 }}">{{ r.count10 }}</td>
+  <td class="num" data-v="{{ r.close if r.close is not none else '' }}">{% if r.close is not none %}{{ "%.2f"|format(r.close) }}{% else %}—{% endif %}</td>
+  <td class="num" data-v="{{ r.day_after if r.day_after is not none else '' }}">{% if r.day_after is not none %}{{ r.day_after }}{% else %}—{% endif %}</td>
+  <td>{{ kindbadge(r.kind, r.label) }}{% if r.near_disposal %}<span class="st-badge st-warn">接近處置</span>{% endif %}</td></tr>
+  {% endfor %}
+  </tbody></table></div>
+</section>
+<div class="kd-note">
+  <p><strong>個股標籤</strong>：漲幅型（說明含「漲幅達」）→ 公告後第 1～5 個交易日標「偏空（風險）」，避免追高，第 6 天起改中性；跌幅型（「跌幅達」）→ 中性觀察，第 6 個交易日後再看；其他款別（量能放大、週轉率、當沖比率等）→ 中性。近 10 個交易日被注意 ≥ 3 次另標「接近處置」（<strong>經驗值</strong>；是否真的處置以交易所公告為準）。沒有偏多。</p>
+  <p><strong>欄位說明</strong>：累計次數＝本站存檔中近 10 個交易日被列注意的次數；公告後第幾天＝公告日之後經過的交易日數（公告當天為 0）；收盤價為最新收盤。</p>
+  <p><strong>資料來源</strong>：<a href="{{ at.src_l }}" target="_blank" rel="noopener">證交所 公布注意有價證券資訊</a>、<a href="{{ at.src_o }}" target="_blank" rel="noopener">櫃買中心 公布注意股票</a>。</p>
+  {% if at.fetch_errors %}<p class="muted">本次抓取問題：{{ at.fetch_errors|join("；") }}</p>{% endif %}
+</div>
+{{ page_footer(generated_at) }}
+</div></div>
+{% endblock %}

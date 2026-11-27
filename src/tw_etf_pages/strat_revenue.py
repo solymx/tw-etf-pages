@@ -200,4 +200,8 @@ def build_revenue_view(root: Path) -> dict[str, Any] | None:
     if v:
         write_json(strategy_dir(root) / "revenue" / "latest_summary.json",
                    {k: v[k] for k in ("ym", "share_pos", "n_pos", "n_total", "median_listed", "verdict", "reason")})
+        from .strat_daily_compact import write_compact as _wc
+
+        _wc(strategy_dir(root) / "revenue" / "labels.json",
+            {"ym": v["ym"], "labels": {x["code"]: [x["kind"], x["label"], x["yoy"]] for x in v["items"]}})
     return v

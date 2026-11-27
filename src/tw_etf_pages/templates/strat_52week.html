@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav %}
+{% block title %}52 週新高動能{% endblock %}
+{% block body %}
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>🏔️ 52 週新高動能</h1>
+  <p class="muted">資料日 <strong>{{ wk.date }}</strong>。比值＝今日收盤 ÷ 近 250 個交易日（還原除權息）最高收盤。只看近 20 日平均成交金額 ≥ 2,000 萬元的普通股（經驗值），共 {{ wk.n }} 檔。</p>
+  {{ page_nav() }}
+</header>
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">大盤：比值 ≥ 0.9 的股票占比</div>
+      <div class="muted">&gt; 40% 偏多、&lt; 15% 偏空，其餘中性（門檻為經驗值）</div></div>
+    <div class="mg-big">{{ badge(wk.label) }}<strong>{% if wk.share is not none %}{{ "%.1f"|format(wk.share) }}%{% else %}資料暫缺{% endif %}</strong></div>
+  </div>
+  <p>{{ wk.reason }}</p>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>今日創 52 週新高</span><strong>{{ wk.n_new_high }} 檔</strong></div>
+    <div class="kd-metric"><span>個股偏多</span><strong>{{ wk.n_bull }} 檔</strong></div>
+    <div class="kd-metric"><span>個股偏空（比值 &lt; 0.7）</span><strong>{{ wk.n_bear }} 檔</strong></div>
+  </div>
+</div>
+<section>
+  <h3 class="section-title">近 60 個交易日占比走勢（較早日期的 52 週窗口以現有 ≥200 個交易日計算）</h3>
+  <div class="kd-chart-wrap vix-chart">{{ wk.svg|safe }}</div>
+  <h3 class="section-title" id="all">全部 {{ wk["items"]|length }} 檔（依比值排序）</h3>
+  {{ search_box("wk-all") }}
+  <div class="table-wrap st-scroll">
+  <table class="report kd-table st-table" id="wk-all" data-sortable>
+  <thead><tr><th>代號</th><th>名稱</th><th>市場</th><th data-type="num">收盤</th><th data-type="num">52 週高（還原）</th><th data-type="num">比值</th><th data-type="num">百分位</th><th data-type="num">20 日均成交金額(億)</th><th>標籤</th><th>月營收動能</th></tr></thead>
+  <tbody>
+  {% for r in wk["items"] %}
+  <tr class="{% if r.top20 %}mg-row-up{% endif %}"><td><strong>{{ r.code }}</strong></td><td>{{ r.name }}</td><td>{{ r.market }}</td>
+  <td class="num" data-v="{{ r.close }}">{{ "%.2f"|format(r.close) }}</td>
+  <td class="num" data-v="{{ r.high }}">{{ "%.2f"|format(r.high) }}</td>
+  <td class="num" data-v="{{ r.ratio }}">{{ "%.3f"|format(r.ratio) }}</td>
+  <td class="num" data-v="{{ r.pct }}">{{ "%.0f"|format(r.pct) }}{% if r.top20 %} ⭐{% endif %}</td>
+  <td class="num" data-v="{{ r.turn20 }}">{{ "%.2f"|format(r.turn20 / 1e8) }}</td>
+  <td>{{ kindbadge(r.kind, r.label) }}{% if r.kind == 'bear' and wk.january %}<span class="muted">（1 月常有低價股反彈，可信度較低）</span>{% endif %}{% if r.kind != 'bull' and (r.ratio >= 0.9 or r.new_high) and not r.vol_ok %}<span class="muted">（量縮）</span>{% endif %}{% if r.jump %}<span class="muted" title="單日漲跌超過 11%，可能有減資或分割未還原">＊</span>{% endif %}</td>
+  <td>{% if r.rev %}<a href="revenue.html">{{ kindbadge(r.rev[0], r.rev[1]) }}</a>{% else %}<span class="muted">—</span>{% endif %}</td></tr>
+  {% endfor %}
+  </tbody></table></div>
+</section>
+<div class="kd-note">
+  <p><strong>個股標籤</strong>：偏多＝比值 ≥ 0.9（或今天創新高），而且量能沒有明顯萎縮（近 5 日平均成交金額 ≥ 近 20 日平均的 0.7 倍）；中性＝0.7～0.9（或接近高點但量縮）；偏空＝比值 &lt; 0.7。0.9／0.7／0.7 倍都是<strong>經驗值</strong>；研究只驗證過「全市場比值最高的 1/5（百分位 &gt; 80，標 ⭐）」表現較好。{% if wk.january %}<strong>1 月常有低價股反彈，偏空標籤可信度較低。</strong>{% endif %}</p>
+  <p><strong>計算說明</strong>：除權息以「除權息參考價 ÷ 除權息前收盤價」往前還原（{{ wk.factor_years|join("、") }} 年資料）；減資、分割、增資未還原，單日漲跌超過 11% 的股票以 ＊ 標註。量能用成交金額代替成交股數。收盤資料 {{ wk.price_from }} 起共 {{ wk.price_days }} 個交易日；交易日不足 200 天的新股不列入。</p>
+  <p><strong>資料來源</strong>：證交所每日收盤行情（MI_INDEX）、櫃買中心上櫃收盤行情、證交所除權息計算結果表（TWT49U）、櫃買中心除權除息結果。</p>
+</div>
+{{ page_footer(generated_at) }}
+</div></div>
+{% endblock %}

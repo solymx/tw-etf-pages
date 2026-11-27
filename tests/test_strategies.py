@@ -114,3 +114,63 @@ def test_parse_fut_any_json():
          '{"Date":"20261125","ContractCode":"臺股期貨","Item":"投信","OpenInterest(Net)":"100918","OpenInterestContractAmount(Net)":"1"}]'
     assert fut.parse_fut_any(js) == {"2026-11-25": -105709}
     assert fut.parse_fut_any(FUT_CSV) == {"2026-11-25": -105709}
+
+
+from tw_etf_pages import strat_52week as wk
+from tw_etf_pages import strat_buyback as bb
+from tw_etf_pages import strat_insider as ins
+from tw_etf_pages import strat_attention as att
+
+
+def test_52week_adjust_and_classify():
+    closes = [("2026-01-02", 100.0), ("2026-01-05", 100.0), ("2026-01-06", 95.0)]
+    adj = wk.adjusted(closes, [["2026-01-06", 0.95]])
+    assert adj == [95.0, 95.0, 95.0]
+    assert wk.classify(0.95, False, True) == "bull"
+    assert wk.classify(0.95, False, False) == "neutral"
+    assert wk.classify(0.8, False, True) == "neutral"
+    assert wk.classify(0.6, False, True) == "bear"
+    assert wk.classify(1.0, True, True) == "bull"
+
+
+def test_twt49u_factors():
+    js = {"stat": "OK", "fields": ["資料日期", "股票代號", "股票名稱", "除權息前收盤價", "除權息參考價"],
+          "data": [["115年06月11日", "2330", "台積電", "2,000.00", "1,994.00"], ["115年06月11日", "00940", "ETF", "9", "8.9"]]}
+    assert wk.parse_twt49u_factors(js) == {"2330": [["2026-06-11", 0.997]]}
+
+
+DESC = ("1.董事會決議日期:115/11/26\r\n2.買回股份目的:維護公司信用及股東權益並註銷股份\r\n4.買回股份總金額上限(元):1\r\n"
+        "5.預定買回之期間:115/11/27~116/01/26\r\n7.買回區間價格(元):75.00~197.00，公司股價低於區間價格下限，將繼續買回\r\n"
+        "9.預定買回股份占公司已發行股份總數之比率(%):2.41\r\n")
+
+
+def test_buyback_parse_and_filter():
+    d = bb.parse_desc(DESC)
+    assert d["lo"] == 75.0 and d["hi"] == 197.0 and d["ratio"] == 2.41
+    assert d["from"] == "2026-11-27" and d["to"] == "2027-01-26"
+    assert "註銷" in d["tags"] and "維護股東權益" in d["tags"]
+    js = [{"發言日期": "1151126", "公司代號": "6902", "公司名稱": "X", "主旨 ": "公告本公司董事會決議買回庫藏股", "符合條款": "第35款", "說明": DESC},
+          {"發言日期": "1151126", "公司代號": "6903", "公司名稱": "Y", "主旨 ": "公告本公司買回庫藏股執行完畢", "符合條款": "第35款", "說明": DESC},
+          {"發言日期": "1151126", "公司代號": "6904", "公司名稱": "Z", "主旨 ": "公告更名", "符合條款": "第51款", "說明": ""}]
+    rows = bb.parse_rows(js, "上市")
+    assert [r["code"] for r in rows] == ["6902"]
+    assert bb.classify(rows[0], 0.2) == "bull"
+    assert bb.classify(rows[0], 0.7) == "neutral"
+
+
+def test_insider_classify():
+    base = {"method": "一般交易", "identity": "董事本人", "ratio": 12.0}
+    assert ins.classify(base) == "bear"
+    assert ins.classify({**base, "method": "贈與"}) == "neutral"
+    assert ins.classify({**base, "ratio": 2.0}) == "neutral"
+    assert ins.classify({**base, "ratio": 5.0}) == "watch"
+    assert ins.classify({**base, "identity": "經理人本人"}) == "watch"
+
+
+def test_attention_parse():
+    assert att.parse_info("最近六個營業日累積收盤價漲幅達59.00%﹝第一款﹞。") == ("第1款", "漲幅")
+    assert att.parse_info("當日沖銷成交量占總成交量比率達65.99%（第十三款)") == ("第13款", "其他")
+    assert att.parse_info("跌幅達48.92%(第一款)") == ("第1款", "跌幅")
+    assert att.cn_num("二十一") == 21
+    assert att.classify("漲幅", 3)[0] == "bear"
+    assert att.classify("漲幅", 6)[0] == "neutral"

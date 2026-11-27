@@ -1,0 +1,84 @@
+{
+  "started": "2026-11-27",
+  "records": [
+    {
+      "key": "5c7aea40b287",
+      "date": "2026-11-26",
+      "code": "7732",
+      "company": "金興精密",
+      "market": "上市",
+      "identity": "經理人本人",
+      "person": "施孟謹",
+      "method": "贈與",
+      "shares": 68000,
+      "holding": 1330001,
+      "ratio": 5.11,
+      "receiver": "盈謚投資股份有限公司",
+      "period": "1151126~1151128"
+    },
+    {
+      "key": "fa5f31bc174e",
+      "date": "2026-11-26",
+      "code": "5274",
+      "company": "信驊",
+      "market": "上櫃",
+      "identity": "董事本人",
+      "person": "林鴻明",
+      "method": "贈與",
+      "shares": 5000,
+      "holding": 417219,
+      "ratio": 1.2,
+      "receiver": "林漢威",
+      "period": "1151126~1151128"
+    },
+    {
+      "key": "cd618cbdbe4f",
+      "date": "2026-11-26",
+      "code": "3131",
+      "company": "弘塑",
+      "market": "上櫃",
+      "identity": "董事本人",
+      "person": "張鴻泰",
+      "method": "贈與",
+      "shares": 200000,
+      "holding": 3611338,
+      "ratio": 5.54,
+      "receiver": "蘇世玲",
+      "period": "1151126~1151128"
+    },
+    {
+      "key": "635a0586aedb",
+      "date": "2026-11-26",
+      "code": "3003",
+      "company": "健和興",
+      "market": "上市",
+      "identity": "董事本人",
+      "person": "鄭傑元",
+      "method": "洽特定人",
+      "shares": 1954000,
+      "holding": 3926057,
+      "ratio": 49.77,
+      "receiver": "茞凱資本股份有限公司籌備處代表人鄭傑元",
+      "period": "1151126~1151128"
+    },
+    {
+      "key": "1aeb740eedc2",
+      "date": "2026-11-26",
+      "code": "2883",
+      "company": "凱基金",
+      "market": "上市",
+      "identity": "子公司經理人本人",
+      "person": "胡軒文",
+      "method": "一般交易(每日得轉讓股數限制)",
+      "shares": 75000,
+      "holding": 105550,
+      "ratio": 71.06,
+      "receiver": "",
+      "period": "1151129~1151228"
+    }
+  ],
+  "days": [
+    "2026-11-26"
+  ],
+  "updated_at": "2026-11-27T08:52:22+08:00"
+}

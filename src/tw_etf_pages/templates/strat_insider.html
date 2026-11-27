@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav %}
+{% block title %}內部人轉讓申報{% endblock %}
+{% block body %}
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>🧾 內部人持股轉讓事前申報</h1>
+  <p class="muted">最新申報日 <strong>{{ ins.date or "—" }}</strong>；本站從 {{ ins.started }} 起每天存檔（已累積 {{ ins.n_days }} 個申報日）。</p>
+  {{ page_nav() }}
+</header>
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">大盤：當日偏空申報筆數</div>
+      <div class="muted">當日偏空 ≥ 3 筆且超過近 20 個申報日平均的 2 倍 → 偏空，其餘中性（經驗值）；沒有偏多</div></div>
+    <div class="mg-big">{{ badge(ins.label) }}<strong>{{ ins.n_bear_today }} 筆</strong></div>
+  </div>
+  <p>{{ ins.reason }}</p>
+</div>
+<section>
+  <h3 class="section-title" id="list">申報明細（{{ ins["items"]|length }} 筆）</h3>
+  {{ search_box("ins-all") }}
+  <div class="table-wrap st-scroll">
+  <table class="report kd-table st-table" id="ins-all" data-sortable>
+  <thead><tr><th>申報日</th><th>代號</th><th>名稱</th><th>身分</th><th>方式</th><th data-type="num">股數(張)</th><th data-type="num">比例</th><th>有效期間</th><th>標籤</th></tr></thead>
+  <tbody>
+  {% for r in ins["items"] %}
+  <tr><td>{{ r.date }}</td><td><strong>{{ r.code }}</strong></td><td>{{ r.company }}</td><td>{{ r.identity }}</td>
+  <td>{{ r.method }}{% if r.receiver %}<span class="muted">（受讓：{{ r.receiver }}）</span>{% endif %}</td>
+  <td class="num" data-v="{{ r.shares }}">{{ "{:,.0f}".format(r.shares / 1000) }}</td>
+  <td class="num" data-v="{{ r.ratio if r.ratio is not none else '' }}">{% if r.ratio is not none %}{{ "%.1f"|format(r.ratio) }}%{% else %}—{% endif %}</td>
+  <td>{{ r.period }}</td>
+  <td>{{ kindbadge(r.kind, r.label) }}</td></tr>
+  {% endfor %}
+  </tbody></table></div>
+</section>
+<div class="kd-note">
+  <p><strong>個股標籤（只看風險）</strong>：偏空＝不是贈與、申報人是董事或大股東、預定轉讓股數 ÷ 目前持股 ≥ 10%；中性＝贈與，或比例 &lt; 3%；介於中間標「留意」。沒有偏多。門檻是<strong>經驗值</strong>。比例＝預定轉讓總股數 ÷ 目前持有股數（自有＋保留運用決定權信託）。</p>
+  <p><strong>注意</strong>：申報不等於一定會賣（可在有效期間內不轉讓），學術研究結論也不一致；洽特定人、信託移轉常是家族或法人間的安排。</p>
+  <p><strong>資料來源</strong>：證交所 OpenAPI t187ap12_L、櫃買中心 OpenAPI mopsfin_t187ap12_O（只提供最新一天，本站每天存檔）；原文可到 <a href="{{ ins.src }}" target="_blank" rel="noopener">公開資訊觀測站</a> 查。</p>
+</div>
+{{ page_footer(generated_at) }}
+</div></div>
+{% endblock %}
