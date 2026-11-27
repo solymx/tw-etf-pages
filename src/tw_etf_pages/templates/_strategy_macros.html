@@ -15,6 +15,8 @@
 <div class="st-tools"><input type="search" class="st-search" data-table-search="{{ target }}" placeholder="{{ placeholder }}" aria-label="{{ placeholder }}"><span class="muted">點欄位標題可排序</span></div>
 {%- endmacro %}
 
+{% macro risk_banner() %}<div class="empty-box">⚠️ <strong>風險警示，不是買賣訊號。</strong>本頁只提醒可能的風險來源。</div>{% endmacro %}
+
 {% macro page_footer(generated_at) %}
 <footer class="site-footer">
   <p><strong>不構成投資建議；判讀規則屬經驗法則，非研究保證。</strong></p>
@@ -33,6 +35,9 @@
   <a href="buyback.html">🔁 庫藏股買回</a>
   <a href="insider.html">🧾 內部人轉讓</a>
   <a href="attention.html">⚠️ 注意股</a>
+  <a href="cb.html">🧷 可轉債警示</a>
+  <a href="dilution.html">💧 現增稀釋</a>
+  <a href="lottery.html">🎰 樂透股警示</a>
 </nav>
 {% endmacro %}
 

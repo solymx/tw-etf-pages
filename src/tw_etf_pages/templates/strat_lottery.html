@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav, risk_banner %}
+{% block title %}樂透股警示{% endblock %}
+{% block body %}
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>🎰 樂透股警示（近 21 日最大單日漲幅）</h1>
+  <p class="muted">資料日 <strong>{{ lt.date }}</strong>；觀察窗口 {{ lt["from"] }} ～ {{ lt.date }}（21 個交易日）。個股只看近 20 日平均成交金額 ≥ 2,000 萬元（經驗值），共 {{ lt["items"]|length }} 檔。</p>
+  {{ page_nav() }}
+</header>
+{{ risk_banner() }}
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">大盤：近 21 日曾單日上漲 ≥ 9.5% 的股票占比</div>
+      <div class="muted">&gt; 22.4%（FinLab 2014–2026 長期平均，經驗值）→「投機過熱」，其餘中性；沒有偏多</div></div>
+    <div class="mg-big">{{ badge(lt.label) }}<strong>{% if lt.share is not none %}{{ "%.1f"|format(lt.share) }}%{% else %}—{% endif %}</strong></div>
+  </div>
+  <p>{{ lt.reason }}</p>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>偏空（個股風險高）</span><strong>{{ lt.n_bear }} 檔</strong></div>
+    <div class="kd-metric"><span>相對防守</span><strong>{{ lt.n_relief }} 檔</strong></div>
+  </div>
+</div>
+<section>
+  <h3 class="section-title">占比走勢（{{ lt.trend_from }} 起 {{ lt.n_trend }} 個交易日）</h3>
+  <div class="kd-chart-wrap vix-chart">{{ lt.svg|safe }}</div>
+  <h3 class="section-title" id="all">全部 {{ lt["items"]|length }} 檔（依近 21 日最大日漲幅排序）</h3>
+  {{ search_box("lt-all") }}
+  <div class="table-wrap st-scroll">
+  <table class="report kd-table st-table" id="lt-all" data-sortable>
+  <thead><tr><th>代號</th><th>名稱</th><th>市場</th><th data-type="num">近 21 日最大日漲幅</th><th data-type="num">≥9.5% 天數</th><th data-type="num">百分位</th><th>標籤</th><th data-type="num">20 日均成交額(億)</th></tr></thead>
+  <tbody>
+  {% for r in lt["items"] %}
+  <tr><td><strong>{{ r.code }}</strong></td><td>{{ r.name }}</td><td>{{ r.market }}</td>
+  <td class="num" data-v="{{ r.max }}">{{ pct(r.max, 2) }}</td><td class="num" data-v="{{ r.limit_days }}">{{ r.limit_days }}</td>
+  <td class="num" data-v="{{ r.pct }}">{{ "%.0f"|format(r.pct) }}</td>
+  <td>{{ kindbadge(r.kind, r.label) }}</td>
+  <td class="num" data-v="{{ r.turn20 }}">{{ "%.2f"|format(r.turn20 / 1e8) }}</td></tr>
+  {% endfor %}
+  </tbody></table></div>
+</section>
+<div class="kd-note">
+  <p><strong>標籤（依全市場百分位，不用固定門檻）</strong>：近 21 日最大單日漲幅位於前 20%＝「偏空（個股風險高）」；中間 60%＝中性；最低 20%＝「相對防守」——<strong>長期不贏 0050，只代表少踩雷</strong>。同分（例如都漲停 10%）視為同一百分位。</p>
+  <p><strong>研究依據</strong>：Bali, Cakici &amp; Whitelaw (2011, <em>Journal of Financial Economics</em>) 發現過去一個月最大日報酬高的股票，之後報酬偏低（MAX 效應）；FinLab 以 2014–2026 台股驗證類似現象，並統計「近 21 日曾漲停股票占比」長期平均約 22.4%。</p>
+  <p><strong>計算說明</strong>：日報酬＝收盤 ÷ 參考價 − 1，參考價＝前一日收盤（除權息日乘上 除權息參考價 ÷ 除權息前收盤價），所以除權息日不會被誤算成大跌。單日漲跌超過 10.5%（超過漲跌幅限制，例如減資恢復交易、無漲跌幅限制日）排除；新上市前 5 個交易日排除。只看普通股（4 碼代號、首碼 1–9）。大盤占比用所有資料足夠的普通股，不設成交金額門檻。</p>
+  <p><strong>資料來源</strong>：證交所每日收盤行情（MI_INDEX）、櫃買中心上櫃收盤行情、除權息計算結果表。</p>
+</div>
+{{ page_footer(generated_at) }}
+</div></div>
+{% endblock %}

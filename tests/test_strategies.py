@@ -174,3 +174,43 @@ def test_attention_parse():
     assert att.cn_num("二十一") == 21
     assert att.classify("漲幅", 3)[0] == "bear"
     assert att.classify("漲幅", 6)[0] == "neutral"
+
+
+from tw_etf_pages import strat_cb as cbm
+from tw_etf_pages import strat_dilution as dlm
+from tw_etf_pages import strat_lottery as ltm
+
+
+def test_cb_parse_and_kinds():
+    js = [{"IssuerCode": "2492", "IssuerName": "華新科", "BondCode": "24922", "ShortName": "華新科二", "ListingStatus": "2",
+           "IssueDate": "20261106", "ListingDate": "20261106", "IssueAmount": "4500000000", "OutstandingAmount": "4500000000",
+           "Conversion/ExchangePriceAtIssuance": "497.0000"},
+          {"IssuerCode": "00009815", "BondCode": "", "ListingStatus": "5", "IssueDate": "20260309"},
+          {"IssuerCode": "1234", "BondCode": "1234E", "ListingStatus": "2", "IssueDate": "20260309"}]
+    rows = cbm.parse_rows(js)
+    assert list(rows) == ["24922"] and rows["24922"]["listing_date"] == "2026-11-06"
+    assert cbm.change_kind("債權人執行賣回權") == "redeem"
+    assert cbm.change_kind("債權人執行轉換") == "convert"
+    assert cbm.trading_days_since("2026-11-20", ["2026-11-20", "2026-11-23", "2026-11-24"]) == 2
+
+
+def test_dilution_parsers():
+    t48 = [{"Date": "1151207", "Code": "2646", "Name": "星宇航空", "SubscriptionRatio": "0.09970967", "SubscriptionPricePerShare": "尚未公告"},
+           {"Date": "1151208", "Code": "00400A", "Name": "ETF", "SubscriptionRatio": ""},
+           {"Date": "1151208", "Code": "2330", "Name": "台積電", "SubscriptionRatio": ""}]
+    rows = dlm.parse_twt48u(t48)
+    assert len(rows) == 1 and rows[0]["ratio"] == 9.971 and rows[0]["ex_date"] == "2026-12-07" and rows[0]["price"] is None
+    pre = [{"ExRrightsExDividendDate": "1151203", "SecuritiesCompanyCode": "6160", "CompanyName": "欣技",
+            "SubscriptionRatioToNewSharesIssued": "0.16060945", "SubscriptionPricePerShare": "註4"},
+           {"ExRrightsExDividendDate": "1151117", "SecuritiesCompanyCode": "00740B", "SubscriptionRatioToNewSharesIssued": "0.00000000"}]
+    r2 = dlm.parse_tpex_pre(pre)
+    assert len(r2) == 1 and r2[0]["ratio"] == 16.061 and r2[0]["price_note"] == "尚未公告"
+
+
+def test_lottery_returns_use_exright_reference_and_drop_limits():
+    mk = lambda d, c: {"date": d, "rows": {"1111": ["A", "上市", c, 1e8], "2222": ["B", "上市", 10.0, 1e8]}}
+    series = [mk("2026-01-02", 100.0), mk("2026-01-05", 95.0), mk("2026-01-06", 120.0)]
+    series[0]["rows"]["2222"][2] = 10.0
+    rets = ltm.daily_returns(series, {"1111": [["2026-01-05", 0.95]]})
+    assert abs(rets[1]["1111"]) < 1e-9          # ex-dividend day is flat vs reference
+    assert "1111" not in rets[2]                # +26% exceeds price limit → excluded

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav, risk_banner %}
+{% block title %}可轉債發行公司警示{% endblock %}
+{% block body %}
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>🧷 可轉債發行公司警示</h1>
+  <p class="muted">資料日 <strong>{{ cb.date }}</strong>。本站從 {{ cb.first_snap }} 起每天存快照（{{ cb.n_snaps }} 份）{% if cb.base_date %}，月轉換比例對照 {{ cb.base_date }}{% else %}，月轉換比例要累積約一個月快照後才有{% endif %}。</p>
+  {{ page_nav() }}
+</header>
+{{ risk_banner() }}
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">大盤：可轉債新掛牌供給</div>
+      <div class="muted">近 20 個交易日新掛牌檔數 &gt; 過去一年月平均的 1.5 倍 → 偏空，其餘中性（經驗值）</div></div>
+    <div class="mg-big">{{ badge(cb.label) }}<strong>{{ cb.n_recent }} 檔</strong></div>
+  </div>
+  <p>{{ cb.reason }}</p>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>掛牌 250 日內（偏空）</span><strong>{{ cb.n_bear }} 檔</strong></div>
+    <div class="kd-metric"><span>偏空（加重）</span><strong>{{ cb.n_heavy }} 檔</strong></div>
+    <div class="kd-metric"><span>即將掛牌</span><strong>{{ cb.n_upcoming }} 檔</strong></div>
+  </div>
+</div>
+<section>
+  <h3 class="section-title" id="list">上櫃可轉債（{{ cb["items"]|length }} 檔，不含交換債、私募債）</h3>
+  {{ search_box("cb-all") }}
+  <div class="table-wrap st-scroll">
+  <table class="report kd-table st-table" id="cb-all" data-sortable>
+  <thead><tr><th>代號</th><th>名稱</th><th>債名</th><th>掛牌日</th><th data-type="num">距掛牌交易日</th><th data-type="num">發行額(億)</th><th data-type="num">餘額比</th><th data-type="num">近一月轉換</th><th data-type="num">發行額／市值</th><th data-type="num">發行時轉換價</th><th>標籤</th></tr></thead>
+  <tbody>
+  {% for r in cb["items"] %}
+  <tr><td><strong>{{ r.issuer }}</strong></td><td>{{ r.issuer_name }}</td><td>{{ r.short }}（{{ r.code }}）</td><td>{{ r.listing_date or "—" }}</td>
+  <td class="num" data-v="{{ r.days if r.days is not none else '' }}">{% if r.days is not none %}{{ r.days }}{% else %}—{% endif %}</td>
+  <td class="num" data-v="{{ r.issue }}">{{ "%.2f"|format(r.issue / 1e8) }}</td>
+  <td class="num" data-v="{{ r.out_ratio if r.out_ratio is not none else '' }}">{% if r.out_ratio is not none %}{{ "%.1f"|format(r.out_ratio) }}%{% else %}—{% endif %}</td>
+  <td class="num" data-v="{{ r.conv_m if r.conv_m is not none else '' }}">{% if r.conv_m is not none %}{{ "%.1f"|format(r.conv_m) }}%{% elif r.redeem_m is not none %}<span class="muted">賣回／買回 {{ "%.1f"|format(r.redeem_m) }}%</span>{% else %}<span class="muted">累積中</span>{% endif %}</td>
+  <td class="num" data-v="{{ r.mcap_pct if r.mcap_pct is not none else '' }}">{% if r.mcap_pct is not none %}{{ "%.1f"|format(r.mcap_pct) }}%{% else %}—{% endif %}</td>
+  <td class="num" data-v="{{ r.conv_price or '' }}">{% if r.conv_price %}{{ "%.2f"|format(r.conv_price) }}{% else %}—{% endif %}</td>
+  <td>{{ kindbadge(r.kind, r.label) }}</td></tr>
+  {% endfor %}
+  </tbody></table></div>
+</section>
+<div class="kd-note">
+  <p><strong>標籤</strong>：偏空＝可轉債掛牌後 0～250 個交易日內、仍有餘額；若近一個月轉換金額 ≥ 發行額 20%，標「偏空（加重）」（轉換出的新股可能形成賣壓）。中性＝已無餘額或掛牌超過 250 個交易日。「即將掛牌」是經驗做法，提醒即將進入觀察期。沒有偏多。</p>
+  <p><strong>研究依據</strong>：250 日與 20% 是研究窗口——FinLab 統計 1,441 檔可轉債掛牌後 250 個交易日，發行公司股價平均落後大盤 7.90%。不是保證，個股差異很大。</p>
+  <p><strong>計算說明</strong>：餘額比＝目前餘額 ÷ 發行額；近一月轉換＝與約一個月前快照相比的餘額減少 ÷ 發行額，餘額異動說明含「賣回／買回／贖回」的視為賣回或買回，不算轉換。發行額／市值只供參考（股數取公司基本資料）。不計算轉換溢價；不回補歷史（避免只看到存活下來的債），從上線日起累積。距掛牌交易日在本站收盤資料之前的部分以平日數估算。</p>
+  <p><strong>資料來源</strong>：櫃買中心 OpenAPI bond_ISSBD5_data（可轉換公司債發行資料），<a href="{{ cb.src }}" target="_blank" rel="noopener">櫃買中心債券資訊</a>。</p>
+</div>
+{{ page_footer(generated_at) }}
+</div></div>
+{% endblock %}
