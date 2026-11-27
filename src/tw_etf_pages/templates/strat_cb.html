@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav, risk_banner %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav, risk_banner, strategy_intro %}
 {% block title %}可轉債發行公司警示{% endblock %}
 {% block body %}
 <div class="layout single"><div class="main">
@@ -8,6 +8,7 @@
   <p class="muted">資料日 <strong>{{ cb.date }}</strong>。本站從 {{ cb.first_snap }} 起每天存快照（{{ cb.n_snaps }} 份）{% if cb.base_date %}，月轉換比例對照 {{ cb.base_date }}{% else %}，月轉換比例要累積約一個月快照後才有{% endif %}。</p>
   {{ page_nav() }}
 </header>
+{{ strategy_intro("cb") }}
 {{ risk_banner() }}
 <div class="mg-card st-card">
   <div class="kd-card-head">

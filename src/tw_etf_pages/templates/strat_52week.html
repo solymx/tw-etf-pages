@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav, strategy_intro %}
 {% block title %}52 週新高動能{% endblock %}
 {% block body %}
 <div class="layout single"><div class="main">
@@ -8,6 +8,7 @@
   <p class="muted">資料日 <strong>{{ wk.date }}</strong>。比值＝今日收盤 ÷ 近 250 個交易日（還原除權息）最高收盤。只看近 20 日平均成交金額 ≥ 2,000 萬元的普通股（經驗值），共 {{ wk.n }} 檔。</p>
   {{ page_nav() }}
 </header>
+{{ strategy_intro("52week") }}
 <div class="mg-card st-card">
   <div class="kd-card-head">
     <div><div class="kd-title">大盤：比值 ≥ 0.9 的股票占比</div>

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav, risk_banner %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav, risk_banner, strategy_intro %}
 {% block title %}現金增資與股本稀釋{% endblock %}
 {% block body %}
 <div class="layout single"><div class="main">
@@ -8,6 +8,7 @@
   <p class="muted">預告資料日 <strong>{{ dl.date }}</strong>；現價為 {{ dl.price_date }} 收盤。本站從 {{ dl.first_forecast }} 起每天存預告快照。</p>
   {{ page_nav() }}
 </header>
+{{ strategy_intro("dilution") }}
 {{ risk_banner() }}
 <div class="mg-card st-card">
   <div class="kd-card-head">

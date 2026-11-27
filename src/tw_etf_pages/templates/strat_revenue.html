@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav, strategy_intro %}
 {% block title %}月營收年增率動能{% endblock %}
 {% block body %}
 <div class="layout single"><div class="main">
@@ -8,6 +8,7 @@
   <p class="muted">上市＋上櫃（排除金融保險業），依「單月營收年增率」排名。資料年月 <strong>{{ rv.ym }}</strong>。</p>
   {{ page_nav() }}
 </header>
+{{ strategy_intro("revenue") }}
 <div class="mg-card st-card">
   <div class="kd-card-head">
     <div><div class="kd-title">大盤溫度計：單月營收年增 &gt; 0 的公司比例</div>

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav, strategy_intro %}
 {% block title %}注意股{% endblock %}
 {% block body %}
 <div class="layout single"><div class="main">
@@ -8,6 +8,7 @@
   <p class="muted">最新公告日 <strong>{{ at.date }}</strong>；本站存有 {{ at["from"] }} 起 {{ at.n_days }} 個公告日。下表列近 10 個交易日（{{ at.window_from }} 起）被列注意的普通股，每檔顯示最新一次。</p>
   {{ page_nav() }}
 </header>
+{{ strategy_intro("attention") }}
 <div class="mg-card st-card">
   <div class="kd-card-head">
     <div><div class="kd-title">大盤：當日注意股中「漲幅型」占比</div>

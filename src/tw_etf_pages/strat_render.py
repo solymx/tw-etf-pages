@@ -60,6 +60,9 @@ def render_strategies(env: Any, site: Path, root: Path, generated_at: str) -> di
     from .strat_regime import build_regime_view
     from .strat_options import build_options_view
 
+    from .strat_intro import INTROS
+
+    env.globals["STRAT_INTROS"] = INTROS
     views: dict[str, Any] = {}
     pages = (("rv", build_revenue_view, "strat_revenue.html", "revenue.html"),
              ("dv", build_divlowvol_view, "strat_divlowvol.html", "dividend-lowvol.html"),

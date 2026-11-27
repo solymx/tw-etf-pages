@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_strategy_macros.html" import badge, pct, search_box, page_footer, page_nav %}
+{% from "_strategy_macros.html" import badge, pct, search_box, page_footer, page_nav, strategy_intro %}
 {% block title %}高殖利率＋低波動{% endblock %}
 {% block body %}
 <div class="layout single"><div class="main">
@@ -8,6 +8,7 @@
   <p class="muted">收盤資料日 <strong>{{ dv.date }}</strong>；殖利率資料日 上市 {{ dv.fund_dates.get("上市", "—") }}／上櫃 {{ dv.fund_dates.get("上櫃", "—") }}。本期名單（{{ dv.period }} 期）建立於 {{ dv.formed_on }}，每年 6、12 月換股。</p>
   {{ page_nav() }}
 </header>
+{{ strategy_intro("dividend-lowvol") }}
 {% if dv.provisional %}<div class="empty-box">⚠️ 暫定名單：目前只累積 {{ dv.price_days }} 個交易日收盤價（規格要 250 日），波動度以現有天數計算，之後每天自動累積、補足後名單才會固定。</div>{% endif %}
 <div class="mg-card st-card">
   <div class="kd-card-head">

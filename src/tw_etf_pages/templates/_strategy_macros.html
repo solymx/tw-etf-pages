@@ -17,6 +17,19 @@
 
 {% macro risk_banner() %}<div class="empty-box">⚠️ <strong>風險警示，不是買賣訊號。</strong>本頁只提醒可能的風險來源。</div>{% endmacro %}
 
+{% macro strategy_intro(key) %}{% set it = STRAT_INTROS[key] %}
+<section class="mg-card st-card st-intro" id="intro">
+  <h2 class="kd-title">📖 策略介紹</h2>
+  <dl class="st-intro-list">
+    <dt>1. 這是什麼</dt><dd>{{ it.what }}</dd>
+    <dt>2. 為什麼可能有用</dt><dd>{{ it.why }}</dd>
+    <dt>3. 怎麼看這頁</dt><dd>{{ it.how }}</dd>
+    <dt>4. 證據</dt><dd>{{ it.evidence }}</dd>
+    <dt>5. 限制與風險</dt><dd>{{ it.limits }}</dd>
+  </dl>
+</section>
+{% endmacro %}
+
 {% macro page_footer(generated_at) %}
 <footer class="site-footer">
   <p><strong>不構成投資建議；判讀規則屬經驗法則，非研究保證。</strong></p>

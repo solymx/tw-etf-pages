@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav, strategy_intro %}
 {% block title %}借券賣出餘額（空方壓力）{% endblock %}
 {% block body %}
 <div class="layout single"><div class="main">
@@ -8,6 +8,7 @@
   <p class="muted">資料日 <strong>{{ sb.date }}</strong>；20 日增幅對照 {{ sb.base_date or "（歷史不足）" }}。已存 {{ sb.days }} 個交易日。</p>
   {{ page_nav() }}
 </header>
+{{ strategy_intro("sbl") }}
 <div class="mg-card st-card">
   <div class="kd-card-head">
     <div><div class="kd-title">大盤：全市場借券賣出總餘額 20 日增幅</div>

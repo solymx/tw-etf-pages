@@ -304,3 +304,16 @@ def test_parse_opt_regular_session_only():
             "CallPut": "買權", "TradingSession": "一般"}]
     d, c = sop.parse_opt(raw)
     assert d == "2026-11-26" and c == {"202612W1": [[38000.0, "P", 120.0, 118.0, 1234.0, 50.0]]}
+
+
+def test_strategy_intro_blocks_have_five_parts():
+    from tw_etf_pages.strat_intro import INTROS
+    keys = {"revenue", "dividend-lowvol", "futures-pc", "sbl", "52week", "buyback", "insider", "attention",
+            "cb", "dilution", "lottery", "regime", "option-seller"}
+    assert set(INTROS) == keys
+    for k, d in INTROS.items():
+        assert list(d) == ["what", "why", "how", "evidence", "limits"], k
+        assert all(str(v).strip() for v in d.values()), k
+        assert "不構成投資建議" in d["limits"], k
+    assert "doi.org" not in INTROS["regime"]["evidence"] and "連結待查證" in INTROS["regime"]["evidence"]
+    assert "期刊論文（臺灣銀行季刊）" in INTROS["option-seller"]["evidence"]

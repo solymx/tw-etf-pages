@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_strategy_macros.html" import badge, kindbadge, page_footer, page_nav, risk_banner %}
+{% from "_strategy_macros.html" import badge, kindbadge, page_footer, page_nav, risk_banner, strategy_intro %}
 {% block title %}賣方風險燈號{% endblock %}
 {% block body %}
 <div class="layout single"><div class="main">
@@ -8,6 +8,7 @@
   <p class="muted">選擇權快照日 <strong>{{ op.snap_date or "資料暫缺" }}</strong>（本站每天存一份，目前 {{ op.n_snaps }} 份）{% if op.spot %}；價外距離以加權指數 {{ op.spot_date }} 收盤 {{ "{:,.2f}".format(op.spot) }} 計算{% endif %}。</p>
   {{ page_nav() }}
 </header>
+{{ strategy_intro("option-seller") }}
 {{ risk_banner() }}
 {% if op.stale or not op.status.ok %}<div class="empty-box">⚠️ 期交所 OpenAPI 本次抓取失敗{% if op.status.error %}（{{ op.status.error }}）{% endif %}；{% if op.snap_date %}以下沿用 {{ op.snap_date }} 的快照。{% else %}目前沒有任何快照，資料暫缺。{% endif %}</div>{% endif %}
 <div class="mg-card st-card">
@@ -53,7 +54,7 @@
   <p><strong>研究依據〔A，論文摘要〕</strong>：</p>
   <ul>
     <li><a href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id%3D%22113TNIO0041004%22.&searchmode=basic" target="_blank" rel="noopener">戴珮樺（2024），〈台指選擇權賣出勒式策略之實證研究〉，東南科技大學碩士論文</a>：2019–2023 週選與月選賣出勒式平均報酬為正、勝率 70% 以上（樣本內回測）。</li>
-    <li><a href="https://tkuir.lib.tku.edu.tw/dspace/handle/987654321/124126" target="_blank" rel="noopener">李沃牆、林弘凱，〈台指週選擇權交易策略績效之分析〉，臺灣銀行季刊 74(2)</a>：2018-12～2021-12 週選，以最大未平倉量為支撐壓力的賣出勒式獲利機率 75%、年化 24%；結算價 ±300 點版本獲利機率 83%、年化 22%，低於大盤 23%。</li>
+    <li><a href="https://tkuir.lib.tku.edu.tw/dspace/handle/987654321/124126" target="_blank" rel="noopener">李沃牆、林弘凱，〈台指週選擇權交易策略績效之分析〉，期刊論文（臺灣銀行季刊 74(2)）</a>：2018-12～2021-12 週選，以最大未平倉量為支撐壓力的賣出勒式獲利機率 75%、年化 24%；結算價 ±300 點版本獲利機率 83%、年化 22%，低於大盤 23%。</li>
   </ul>
   <p>這些研究都是樣本內回測，<strong>高勝率也伴隨少數幾次大虧</strong>，所以本頁只在最平靜的盤型亮綠燈，而且只談有保護的價差。</p>
   <p><strong>計算說明</strong>：只用一般交易時段；最近週選＝快照日之後最早到期的週選（W＝週三、F＝週五），最近月選＝最早到期的月選（第三個週三）。到期日以規則推算，未扣除假日順延。</p>

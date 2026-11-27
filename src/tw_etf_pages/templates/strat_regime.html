@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_strategy_macros.html" import badge, kindbadge, page_footer, page_nav %}
+{% from "_strategy_macros.html" import badge, kindbadge, page_footer, page_nav, strategy_intro %}
 {% block title %}震盪盤判定器{% endblock %}
 {% block body %}
 {% set o = rg.ind %}
@@ -9,6 +9,7 @@
   <p class="muted">資料日 <strong>{{ rg.date }}</strong>；加權指數收盤 {{ "{:,.2f}".format(rg.close) }}。日 K 資料 {{ rg.first }} 起共 {{ rg.n_rows }} 個交易日{% if rg.yahoo_n %}（其中 {{ rg.yahoo_n }} 天用 Yahoo ^TWII 非官方資料補缺）{% else %}，全部為證交所官方資料{% endif %}。</p>
   {{ page_nav() }}
 </header>
+{{ strategy_intro("regime") }}
 <div class="empty-box">ℹ️ <strong>本頁描述「現在是什麼盤」、預告波動大小，不預測漲跌方向。</strong></div>
 <div class="mg-card st-card">
   <div class="kd-card-head">
@@ -86,7 +87,7 @@
 
 <div class="kd-note">
   <p><strong>回測備註（使用者自算，樣本 2020-11～2026-11，僅樣本內）</strong>：趨勢類指標對「未來 10 天會不會走趨勢」沒有預測力——不論目前是哪一種狀態，未來 10 日 ER 都在 0.30–0.36；波動類指標有：布林帶寬百分位 ≤20% 時，未來 10 日平均區間 3.9%，≥80% 時 5.6%。所以本頁只描述「現在的狀態」並預告「波動大小」，<strong>不預測方向</strong>。</p>
-  <p><strong>學術依據</strong>：洪國哲（2007）以三狀態馬可夫轉換模型把台股分成多頭、空頭、盤整三種狀態（<a href="https://doi.org/10.29631/acm.200705.d009" target="_blank" rel="noopener">doi:10.29631/acm.200705.d009</a>）。</p>
+  <p><strong>學術依據</strong>：學術文獻（洪國哲，2007，三狀態馬可夫轉換，連結待查證）。</p>
   <p><strong>計算說明</strong>：ADX／+DI／−DI 為 Wilder(14) 平滑；布林帶寬＝4 × 20 日收盤標準差 ÷ 20 日均價，百分位＝近 120 個交易日（含今天）中 ≤ 今天的比例；20 日區間＝(20 日最高 − 20 日最低) ÷ 20 日最低；CHOP(14)＝100 × log10(14 日真實區間合計 ÷ (14 日最高 − 14 日最低)) ÷ log10(14)；ER＝|N 日淨變動| ÷ N 日每日變動絕對值合計；均線糾結＝(MA5/10/20/60 最大 − 最小) ÷ 收盤；區間位置＝(收盤 − 20 日最低) ÷ (20 日最高 − 20 日最低)；20 日年化波動＝日報酬標準差 × √252。</p>
   <p><strong>資料來源</strong>：證交所 <a href="https://www.twse.com.tw/zh/indices/taiex/mi-5min-hist.html" target="_blank" rel="noopener">發行量加權股價指數歷史資料（MI_5MINS_HIST）</a>、證交所 OpenAPI indicesReport/MI_5MINS_HIST（當月每日累積）、期交所臺指 VIX、本站上市融資維持率。</p>
 </div>

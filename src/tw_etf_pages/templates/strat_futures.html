@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_strategy_macros.html" import badge, pct, page_footer, page_nav %}
+{% from "_strategy_macros.html" import badge, pct, page_footer, page_nav, strategy_intro %}
 {% block title %}外資期貨淨未平倉＋P/C 比{% endblock %}
 {% block body %}
 {% set L = fv.latest %}
@@ -9,6 +9,7 @@
   <p class="muted">資料日 <strong>{{ L.date }}</strong>。歷史 {{ fv.coverage.from }} ～ {{ fv.coverage.to }}（{{ fv.coverage.days }} 個交易日）。</p>
   {{ page_nav() }}
 </header>
+{{ strategy_intro("futures-pc") }}
 <div class="mg-card st-card">
   <div class="kd-card-head">
     <div><div class="kd-title">合計分數 {% if L.score is not none %}{{ "%+d"|format(L.score) }}{% else %}—{% endif %}</div>

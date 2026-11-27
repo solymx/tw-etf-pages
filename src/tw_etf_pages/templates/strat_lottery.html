@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav, risk_banner %}
+{% from "_strategy_macros.html" import badge, pct, kindbadge, search_box, page_footer, page_nav, risk_banner, strategy_intro %}
 {% block title %}樂透股警示{% endblock %}
 {% block body %}
 <div class="layout single"><div class="main">
@@ -8,6 +8,7 @@
   <p class="muted">資料日 <strong>{{ lt.date }}</strong>；觀察窗口 {{ lt["from"] }} ～ {{ lt.date }}（21 個交易日）。個股只看近 20 日平均成交金額 ≥ 2,000 萬元（經驗值），共 {{ lt["items"]|length }} 檔。</p>
   {{ page_nav() }}
 </header>
+{{ strategy_intro("lottery") }}
 {{ risk_banner() }}
 <div class="mg-card st-card">
   <div class="kd-card-head">
