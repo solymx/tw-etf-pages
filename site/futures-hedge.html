@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>小台／微台 Beta 避險口數</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>🛡️ 小台／微台 Beta 避險口數</h1>
+  <p class="muted">期貨資料日 <strong>2026-11-26</strong>；加權指數同日收盤 39,151.81（最新指數日 2026-11-27 收盤 39,308.08，未與期貨混用）。每天 13:45 後更新。</p>
+  
+<nav class="nav-inline">
+  <a href="index.html#part_overview">← 回首頁「今日多空總覽」</a>
+  <a href="revenue.html">📊 月營收動能</a>
+  <a href="dividend-lowvol.html">🛡️ 高殖利率＋低波動</a>
+  <a href="futures-pc.html">🧭 外資期貨＋P/C</a>
+  <a href="sbl.html">🐻 借券賣出餘額</a>
+  <a href="52week.html">🏔️ 52 週新高</a>
+  <a href="buyback.html">🔁 庫藏股買回</a>
+  <a href="insider.html">🧾 內部人轉讓</a>
+  <a href="attention.html">⚠️ 注意股</a>
+  <a href="cb.html">🧷 可轉債警示</a>
+  <a href="dilution.html">💧 現增稀釋</a>
+  <a href="lottery.html">🎰 樂透股警示</a>
+  <a href="regime.html">🌀 震盪盤判定器</a>
+  <a href="option-seller.html">🚥 賣方風險燈號</a>
+  <a href="futures-hedge.html">🛡️ 小台／微台避險</a>
+  <a href="inverse-etf.html">📉 00632R 耗損</a>
+  <a href="protective-put.html">☂️ 保護性賣權</a>
+  <a href="trend-filter.html">📏 均線濾網</a>
+</nav>
+
+</header>
+
+<section class="mg-card st-card st-intro" id="intro">
+  <h2 class="kd-title">📖 策略介紹</h2>
+  <dl class="st-intro-list">
+    
+    <dt>1. 白話說明</dt><dd>用小型臺指期貨（小台 MTX）或微型臺指期貨（微台 TMF）估算：若要對沖手上的股票組合，理論上要賣幾口。這是避險口數工具，不是買賣訊號。</dd>
+    <dt>2. 具體規則</dt><dd>避險比率採最小變異法 OLS：h*＝Cov(Rs,Rf)／Var(Rf)，Rs 是加權指數（或你自己填的組合）報酬，Rf 是近月小台結算價報酬。本頁同時顯示 60 日與 250 日兩個視窗（研究值；不是唯一最佳窗），兩窗差很多會標「beta 不穩定」（自算：相差 ≥0.20 或相對差距 ≥25%）。口數 N＝beta × 組合市值 ÷（近月一般時段結算價 × 乘數）；小台乘數 50、微台乘數 10（官方）。只用近月、排除到期月份含「／」的價差單與週契約。顯示理論口數、四捨五入整口、整口後剩餘淨曝險。到期為交割月第三個週三，碰上本站休市日表會往前調整，並標示；休市日表可能不完整，以期交所公告為準。</dd>
+    <dt>3. 多空讀法</dt><dd>中性／未避險＝空單 0；偏避險＝空單約理論口數 80–120%（經驗值）；偏空＝明顯超過（淨空）；偏多＝明顯少於（避險不足）。未在試算器輸入部位時，本頁視為未避險。</dd>
+    <dt>4. 證據與限制</dt><dd>〔A〕<a href="https://ba.cycu.edu.tw/wp-content/uploads/2020/05/2005V3N1-6.pdf" target="_blank" rel="noopener">倪衍森、張雯琪</a>：最小變異法多半最好。〔A〕<a href="https://ba.cycu.edu.tw/wp-content/uploads/2020/07/4.pdf" target="_blank" rel="noopener">蘇恩德等</a>：避險期 7／14／21 天時 OLS 較好。〔A，方法論補充〕<a href="https://www.cabmt.org.tw/front/download_pdfdoc.php?file=cda33189c93ecfa6226d562a940776f9.pdf" target="_blank" rel="noopener">黃祈華等（2018）</a>：標的為新加坡摩根台指期，只當方法論補充，不引用該文避險比率數字。文獻支持的是「降風險」，不要寫成避險後報酬變高。限制：整口誤差、保證金追繳、換月成本、基差、漲跌停 10%；組合與大盤相關性低時效果差。不構成投資建議。</dd>
+    <dt>5. 資料來源</dt><dd><a href="https://www.taifex.com.tw/cht/2/mTX" target="_blank" rel="noopener">期交所小台</a>、<a href="https://www.taifex.com.tw/cht/2/tMF" target="_blank" rel="noopener">微台</a>；<a href="https://openapi.taifex.com.tw/v1/DailyMarketReportFut" target="_blank" rel="noopener">DailyMarketReportFut</a>、<a href="https://openapi.taifex.com.tw/v1/IndexFuturesAndOptionsMargining" target="_blank" rel="noopener">保證金</a>、<a href="https://openapi.taifex.com.tw/v1/FinalSettlementPriceIndexFutures" target="_blank" rel="noopener">期貨最後結算價</a>；加權指數日 K 沿用本站證交所資料。</dd>
+    
+  </dl>
+  <p class="muted st-intro-legend">證據等級：A 學術論文；B 第三方回測（數字出自該文，本站未重跑）；C 僅搜尋摘要或無出處。</p>
+</section>
+
+<div class="empty-box">🛡️ <strong>避險工具，不是買賣訊號。</strong>本頁用來估算避險口數或說明風險，不承諾績效。</div>
+
+
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">部位讀法（需自行輸入目前空單）</div>
+      <div class="muted">中性／未避險＝空單 0；偏避險＝空單約理論口數 80–120%（經驗值）；偏空＝明顯超過（淨空）；偏多＝明顯少於（避險不足）。預設未輸入＝未避險。</div></div>
+    <div class="mg-big"><span class="st-badge st-neutral">中性／未避險</span></div>
+  </div>
+  <p>近月 MTX 202612 結算價 39,492（一口名目約 1,974,600 元）；原始／維持保證金 175,250／134,500 元；beta 序列目前 0 個報酬日，60／250 日窗資料累積中；本頁是避險工具，未輸入部位時視為空單 0（中性／未避險）。</p>
+</div>
+
+
+<section>
+  <h3 class="section-title">近月契約（已排除價差單與週契約）</h3>
+  <div class="table-wrap">
+  <table class="report kd-table st-table">
+  <thead><tr><th>契約</th><th>近月</th><th>結算價</th><th>成交量</th><th>未平倉 OI</th><th>一口名目</th><th>原始保證金</th><th>維持保證金</th><th>到期</th><th>距到期</th></tr></thead>
+  <tbody>
+  
+  <tr>
+    <td><strong>小型臺指期貨（小台）</strong>（乘數 50）</td>
+    <td>202612</td>
+    <td class="num">39,492</td>
+    <td class="num">164,335</td>
+    <td class="num">29,305</td>
+    <td class="num">1,974,600 元</td>
+    <td class="num">175,250 元</td>
+    <td class="num">134,500 元</td>
+    <td>2026-12-16</td>
+    <td class="num">20 天</td>
+  </tr>
+  
+  <tr>
+    <td><strong>微型臺指期貨（微台）</strong>（乘數 10）</td>
+    <td>202612</td>
+    <td class="num">39,492</td>
+    <td class="num">319,246</td>
+    <td class="num">54,517</td>
+    <td class="num">394,920 元</td>
+    <td class="num">35,050 元</td>
+    <td class="num">26,900 元</td>
+    <td>2026-12-16</td>
+    <td class="num">20 天</td>
+  </tr>
+  
+  </tbody></table></div>
+  <p class="muted">到期日若碰上本站休市日表中的日期，會往前調整到前一個營業日；休市日表可能不完整，以期交所公告為準。保證金資料日 2026-11-26，每天重抓，不寫死。</p>
+</section>
+
+
+<section>
+  <h3 class="section-title">60／250 日 OLS beta</h3>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>報酬序列天數</span><strong>0</strong></div>
+    <div class="kd-metric"><span>60 日 beta（研究值）</span><strong>累積中</strong></div>
+    <div class="kd-metric"><span>250 日 beta（研究值）</span><strong>累積中</strong></div>
+    <div class="kd-metric"><span>穩定度（自算）</span><strong>—</strong></div>
+  </div>
+  <p class="muted">h*＝Cov(Rs,Rf)／Var(Rf)，Rs＝加權指數日報酬，Rf＝近月小台結算價日報酬。兩窗相差 ≥0.20 或相對差距 ≥25% 標「beta 不穩定」（自算）。序列從本站上線日起累積，不足時請在試算器自填 beta。</p>
+</section>
+
+<section class="mg-card st-card" id="calc">
+  <h3 class="kd-title">口數試算器（瀏覽器端計算，不會上傳）</h3>
+  <p class="muted">N ＝ beta × 組合市值 ÷（近月一般時段結算價 × 乘數）。顯示理論口數、四捨五入整口、整口後剩餘淨曝險（＝組合市值×beta − 整口數×一口名目）。</p>
+  <div class="st-calc" data-hedge-calc
+       data-settle-mtx="39492.0"
+       data-mult-mtx="50"
+       data-settle-tmf="39492.0"
+       data-mult-tmf="10"
+       data-beta="1">
+    <label>持股市值（元）<input type="number" name="value" min="0" step="10000" placeholder="請輸入"></label>
+    <label>beta（資料累積中，預設 1，請自行修改）<input type="number" name="beta" step="0.01" value="1"></label>
+    <label>目前空單口數（可留空）<input type="number" name="short" step="1" placeholder="0＝未避險"></label>
+    <label>試算契約
+      <select name="contract">
+        <option value="mtx">小台 MTX（×50）</option>
+        <option value="tmf">微台 TMF（×10）</option>
+      </select>
+    </label>
+    <div class="st-calc-out">
+      <p>理論口數：<strong data-out="n">—</strong></p>
+      <p>四捨五入整口：<strong data-out="nint">—</strong></p>
+      <p>剩餘淨曝險：<strong data-out="resid">—</strong></p>
+      <p>讀法：<strong data-out="read">—</strong></p>
+    </div>
+  </div>
+</section>
+
+<div class="kd-note">
+  <p>文獻支持的是「降風險」，不要理解成避險後報酬變高。整口會有誤差；還有保證金追繳、換月成本、基差、漲跌停 10% 等限制。組合與大盤相關性低時，效果會變差。</p>
+</div>
+
+<footer class="site-footer">
+  <p><strong>不構成投資建議；判讀規則屬經驗法則，非研究保證。</strong></p>
+  <p>時區：Asia/Taipei。最後產生時間：2026-11-27T22:19:49+08:00。</p>
+</footer>
+
+</div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

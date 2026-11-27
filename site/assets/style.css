@@ -627,3 +627,10 @@ table[data-sortable] th.sorted-asc::after{content:" ▲";font-size:.7em}
 table[data-sortable] th.sorted-desc::after{content:" ▼";font-size:.7em}
 .st-ov-warn{border-left-color:#f59e0b}
 .st-intro{border-left:4px solid #3b82f6}.st-intro-list dt{font-weight:700;margin-top:.6rem}.st-intro-list dd{margin:.15rem 0 0 0}
+
+.st-calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.7rem;margin-top:.6rem}
+.st-calc label{display:flex;flex-direction:column;gap:.25rem;font-size:.9rem;color:#475569}
+.st-calc input,.st-calc select{padding:.4rem .5rem;border:1px solid #cbd5e1;border-radius:8px;font:inherit}
+.st-calc-out{grid-column:1/-1;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:.7rem 1rem}
+.st-calc-out p{margin:.2rem 0}
+
