@@ -309,12 +309,19 @@ def test_parse_opt_regular_session_only():
 def test_strategy_intro_blocks_have_five_parts():
     from tw_etf_pages.strat_intro import INTROS
     keys = {"revenue", "dividend-lowvol", "futures-pc", "sbl", "52week", "buyback", "insider", "attention",
-            "cb", "dilution", "lottery", "regime", "option-seller"}
+            "cb", "dilution", "lottery", "regime", "option-seller",
+            "futures-hedge", "inverse-etf", "protective-put", "trend-filter"}
     assert set(INTROS) == keys
+    hedge = {"futures-hedge", "inverse-etf", "protective-put", "trend-filter"}
     for k, d in INTROS.items():
-        assert list(d) == ["what", "why", "how", "evidence", "limits"], k
+        if k in hedge:
+            assert d.get("schema") == "hedge", k
+            assert all(d.get(p) for p in ("what", "rules", "read", "evidence", "sources")), k
+            assert "不構成投資建議" in d["evidence"], k
+        else:
+            assert all(d.get(p) for p in ("what", "why", "how", "evidence", "limits")), k
+            assert "不構成投資建議" in d["limits"], k
         assert all(str(v).strip() for v in d.values()), k
-        assert "不構成投資建議" in d["limits"], k
     assert "doi.org" not in INTROS["regime"]["evidence"] and "連結待查證" in INTROS["regime"]["evidence"]
     assert "期刊論文（臺灣銀行季刊）" in INTROS["option-seller"]["evidence"]
     blob = "\n".join(str(v) for d in INTROS.values() for v in d.values())
@@ -327,3 +334,104 @@ def test_strategy_intro_blocks_have_five_parts():
     assert "只證明三狀態存在" in INTROS["regime"]["evidence"]
     assert 'href="https://finlab.finance/blog/monthly-revenue-momentum"' in INTROS["revenue"]["evidence"]
     assert "經驗值" in INTROS["revenue"]["how"]
+
+
+# ---------------------------------------------------------------- batch 5: hedge tools
+from tw_etf_pages import strat_futhedge as fh
+from tw_etf_pages import strat_inverse as inv
+from tw_etf_pages import strat_put as sput
+from tw_etf_pages import strat_trendfilter as tf
+
+
+def test_futhedge_parse_excludes_spreads_and_weeklies():
+    rows = [
+        {"Date": "20261126", "Contract": "MTX", "ContractMonth(Week)": "202612", "SettlementPrice": "39,492",
+         "Last": "39456", "Volume": "164335", "OpenInterest": "29305", "TradingSession": "一般"},
+        {"Date": "20261126", "Contract": "MTX", "ContractMonth(Week)": "202612/202701", "SettlementPrice": "1",
+         "TradingSession": "一般"},
+        {"Date": "20261126", "Contract": "MTX", "ContractMonth(Week)": "202612W1", "SettlementPrice": "2",
+         "TradingSession": "一般"},
+        {"Date": "20261126", "Contract": "MTX", "ContractMonth(Week)": "202612", "SettlementPrice": "1",
+         "TradingSession": "盤後"},
+        {"Date": "20261126", "Contract": "TMF", "ContractMonth(Week)": "202612", "SettlementPrice": "39492",
+         "Last": "39450", "Volume": "10", "OpenInterest": "20", "TradingSession": "一般"},
+    ]
+    d, items = fh.parse_fut(rows)
+    assert d == "2026-11-26" and set(items) == {"MTX:202612", "TMF:202612"}
+    assert items["MTX:202612"]["settle"] == 39492
+    # 不寫死為頁面常數，但公式應與核對值一致
+    n = fh.contracts_needed(1.0, 10_000_000, 39492, 50)
+    assert n["notional"] == 1_974_600 and n["n"] == 10_000_000 / 1_974_600
+    n2 = fh.contracts_needed(1.0, 1_000_000, 39492, 10)
+    assert n2["notional"] == 394_920
+    md, mg = fh.parse_margins([
+        {"Contract": "小型臺指", "InitialMargin": "175250", "MaintenanceMargin": "134500", "ClearingMargin": "1", "Date": "20261126"},
+        {"Contract": "微型臺指期貨", "InitialMargin": "35050", "MaintenanceMargin": "26900", "ClearingMargin": "1", "Date": "20261126"},
+        {"Contract": "臺股期貨", "InitialMargin": "701000", "Date": "20261126"},
+    ])
+    assert md == "2026-11-26" and mg["MTX"]["initial"] == 175250 and mg["TMF"]["initial"] == 35050
+
+
+def test_futhedge_ols_beta_and_reads():
+    # Rf = 2 * Rs → beta should be 0.5 (Rs on Rf)
+    rs = [0.01, 0.02, -0.01, 0.00] * 20
+    rf = [2 * x for x in rs]
+    b = fh.ols_beta(rs, rf)
+    assert abs(b - 0.5) < 1e-9
+    assert fh.beta_unstable(0.5, 0.5) is False
+    assert fh.beta_unstable(0.8, 0.5) is True
+    assert fh.position_read(0)["text"] == "中性／未避險"
+    assert fh.position_read(1.0)["text"] == "偏避險"
+    assert fh.position_read(1.5)["cls"] == "bear"
+    assert fh.position_read(0.5)["cls"] == "bull"
+
+
+def test_inverse_decay_and_merge_adjust():
+    assert inv.adj_close({"date": "2024-12-01", "close": 10}) == 70
+    assert inv.adj_close({"date": "2024-12-11", "close": 70}) == 70
+    series_i = [{"date": "d0", "close": 100}, {"date": "d1", "close": 102}]
+    series_b = [{"date": "d0", "close": 100}, {"date": "d1", "close": 98}]
+    g = inv.decay_gap(series_i, series_b, 1)
+    assert abs(g) < 1e-12
+    # extra decay: inv 0%, bench -2% → should have been +2%, gap -0.02
+    g2 = inv.decay_gap([{"date": "d0", "close": 100}, {"date": "d1", "close": 100}],
+                       [{"date": "d0", "close": 100}, {"date": "d1", "close": 98}], 1)
+    assert abs(g2 - (0 - 0.02)) < 1e-12
+
+
+def test_put_strikes_and_spread():
+    spot = 40000
+    rows = []
+    for k in range(36000, 44001, 100):
+        vol = 200 if k in (40000, 38000, 36000) else 0
+        rows.append([k, "P", 10, 10, 50, vol])
+    t = sput.pick_puts(rows, spot)
+    assert [r["pct"] for r in t] == [0, 5, 10]
+    assert t[0]["strike"] == 40000 and t[1]["strike"] == 38000 and t[2]["strike"] == 36000
+    sp = sput.spread(t[0], t[1])
+    assert sp["width"] == 2000 and sp["net"] == 0 and sp["cap"] == 2000
+    assert sput.position_read(0)["text"] == "無保護"
+    assert sput.position_read(1)["text"] == "中性偏防守"
+
+
+def test_trend_filter_state_machine():
+    rows = [{"date": f"2020-01-{i:03d}", "close": 100.0} for i in range(130)]
+    rows.append({"date": "up", "close": 101.0})  # > MA → in
+    rows.append({"date": "x", "close": 97.0})    # < 120MA*0.98 → hedge
+    rows.append({"date": "y", "close": 99.0})    # between → keep hedge
+    rows.append({"date": "z", "close": 102.0})   # > MA → in
+    st = tf.series_states(rows)
+    assert st[-3]["signal"] == "hedge" and st[-3]["exec"] == "in"
+    assert st[-2]["signal"] == "hedge" and st[-2]["exec"] == "hedge"
+    assert st[-1]["signal"] == "in" and st[-1]["exec"] == "hedge"
+    assert tf.parse_month({"stat": "OK", "data": [["115/11/26", "100,000.50"]]})[0]["close"] == 100000.50
+    assert tf.parse_openapi([{"Date": "1151102", "TAIEXTotalReturnIndex": "103873.24"}])[0]["date"] == "2026-11-02"
+
+
+def test_front_month_skips_expired():
+    items = {
+        "MTX:202611": {"contract": "MTX", "month": "202611", "settle": 1},
+        "MTX:202612": {"contract": "MTX", "month": "202612", "settle": 2},
+    }
+    f = fh.front_month("2026-11-26", items, "MTX")
+    assert f["month"] == "202612"  # 202611 第三個週三已過

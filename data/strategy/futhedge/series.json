@@ -1,0 +1,14 @@
+{
+  "source": "https://openapi.taifex.com.tw/v1/DailyMarketReportFut",
+  "updated_at": "2026-11-27T22:08:36+08:00",
+  "rows": [
+    {
+      "date": "2026-11-26",
+      "taiex": 39151.81,
+      "mtx": 39492.0,
+      "tmf": 39492.0,
+      "mtx_month": "202612",
+      "tmf_month": "202612"
+    }
+  ]
+}

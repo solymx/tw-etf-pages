@@ -181,8 +181,91 @@ _RAW: dict[str, dict[str, str]] = {
         ),
         "limits": "賣方獲利有上限、虧損沒有上限；勝率高不等於賺錢，少數幾次大虧就可能吃掉所有權利金。新手不要裸賣勒式。資料是期交所每日快照，不是即時報價。",
     },
+    "futures-hedge": {
+        "schema": "hedge",
+        "what": "用小型臺指期貨（小台 MTX）或微型臺指期貨（微台 TMF）估算：若要對沖手上的股票組合，理論上要賣幾口。這是避險口數工具，不是買賣訊號。",
+        "rules": "避險比率採最小變異法 OLS：h*＝Cov(Rs,Rf)／Var(Rf)，Rs 是加權指數（或你自己填的組合）報酬，Rf 是近月小台結算價報酬。本頁同時顯示 60 日與 250 日兩個視窗（研究值；不是唯一最佳窗），兩窗差很多會標「beta 不穩定」（自算：相差 ≥0.20 或相對差距 ≥25%）。口數 N＝beta × 組合市值 ÷（近月一般時段結算價 × 乘數）；小台乘數 50、微台乘數 10（官方）。只用近月、排除到期月份含「／」的價差單與週契約。顯示理論口數、四捨五入整口、整口後剩餘淨曝險。到期為交割月第三個週三，碰上本站休市日表會往前調整，並標示；休市日表可能不完整，以期交所公告為準。",
+        "read": "中性／未避險＝空單 0；偏避險＝空單約理論口數 80–120%（經驗值）；偏空＝明顯超過（淨空）；偏多＝明顯少於（避險不足）。未在試算器輸入部位時，本頁視為未避險。",
+        "evidence": (
+            f"〔A〕{_a('https://ba.cycu.edu.tw/wp-content/uploads/2020/05/2005V3N1-6.pdf', '倪衍森、張雯琪')}：最小變異法多半最好。"
+            f"〔A〕{_a('https://ba.cycu.edu.tw/wp-content/uploads/2020/07/4.pdf', '蘇恩德等')}：避險期 7／14／21 天時 OLS 較好。"
+            f"〔A，方法論補充〕{_a('https://www.cabmt.org.tw/front/download_pdfdoc.php?file=cda33189c93ecfa6226d562a940776f9.pdf', '黃祈華等（2018）')}：標的為新加坡摩根台指期，只當方法論補充，不引用該文避險比率數字。"
+            "文獻支持的是「降風險」，不要寫成避險後報酬變高。限制：整口誤差、保證金追繳、換月成本、基差、漲跌停 10%；組合與大盤相關性低時效果差。"
+        ),
+        "sources": (
+            f"{_a('https://www.taifex.com.tw/cht/2/mTX', '期交所小台')}、"
+            f"{_a('https://www.taifex.com.tw/cht/2/tMF', '微台')}；"
+            f"{_a('https://openapi.taifex.com.tw/v1/DailyMarketReportFut', 'DailyMarketReportFut')}、"
+            f"{_a('https://openapi.taifex.com.tw/v1/IndexFuturesAndOptionsMargining', '保證金')}、"
+            f"{_a('https://openapi.taifex.com.tw/v1/FinalSettlementPriceIndexFutures', '期貨最後結算價')}；加權指數日 K 沿用本站證交所資料。"
+        ),
+    },
+    "inverse-etf": {
+        "schema": "hedge",
+        "what": "說明元大台灣 50 單日反向 1 倍 ETF（00632R）為什麼容易耗損：它追求的是「單日」反向，不是長期放空工具。本頁做風險說明，不做自動買賣燈號。",
+        "rules": "對照 00632R 與 0050 的 1／5／20 日報酬。衰減缺口（自算）＝近 N 日 00632R 報酬 −（−1 × 同期 0050 報酬），N＝5、20。長期走勢把 2024-12 七併一（約 2024-12-11 恢復交易）還原，並標示合併期間可能缺價。公開說明書載明不適合長期持有。",
+        "read": "只適合極短線、方向明確的下跌對沖；長抱不是驗證過的放空法；震盪市最易磨損；大盤上漲時持有＝方向成本＋衰減。本頁不給買賣燈號。",
+        "evidence": (
+            f"〔A〕{_a('https://joim.com/article/the-dynamics-of-leveraged-and-inverse-exchange-traded-funds/', 'Cheng &amp; Madhavan（2009）')}；"
+            f"{_a('https://math.nyu.edu/inmemoriam/avellaneda/SIAMLETFS.pdf', 'Avellaneda &amp; Zhang（2010）')}。"
+            f"〔B〕{_a('https://finlab.finance/blog/00632r-inverse-etf-hedge-backtest', 'FinLab 00632R 對沖回測')}："
+            "9 組均線觸發對沖全部沒通過，均輸給 0050 含息；長抱年化 −19.45%、最大回撤 −94.34%；2022 年 0050 含息 −21.37%、00632R ＋15.88%。"
+            "限制：適格投資人資格、折溢價、流動性、每日重設、管理費；下市／清算條款以公開說明書為準。"
+        ),
+        "sources": (
+            f"{_a('https://www.yuantaetfs.com/product/detail/00632R/Basic_information', '元大投信 00632R 基本資訊')}、"
+            f"{_a('https://www.yuantaetfs.com/product/detail/00632R/download', '下載區')}；"
+            "證交所 STOCK_DAY_ALL、STOCK_DAY；0050 收盤沿用本站證交所存檔。"
+        ),
+    },
+    "protective-put": {
+        "schema": "hedge",
+        "what": "估算用臺指選擇權（TXO）買入賣權，幫股票組合買保險要花多少權利金、理論上要買幾口。這是買方避險，和「賣方風險燈號」那一頁不同。",
+        "rules": "需避險金額＝組合市值 × beta（可與期貨避險頁共用；沒輸入時用 1 並標示假設）。理論口數＝需避險金額 ÷（指數 × 50）；TXO 是歐式，每點 50 元。在近週或近月「有成交量」的序列中，列出價平、約價外 5%、約價外 10% 三檔賣權的權利金、量、以及權利金占組合比重；5%、10% 是經驗值／示例。也顯示賣權價差：買高履約、賣低履約，淨權利金與最大保護＝履約差 − 淨權利金。只用一般時段、有成交量的序列；沒有成交量時會註明。週選最後結算價由本站自行存檔。權利金只是當日示例，不是每年固定成本（短樣本示例／C）。",
+        "read": "中性偏防守＝約 1 倍理論口數；偏空＝明顯超過；無保護＝沒有部位或已到期。價差跌破低履約後不再保護。未輸入部位時視為無保護。權利金會隨隱含波動變貴或變便宜，本頁不把 VIX 做成訊號。",
+        "evidence": (
+            f"〔A〕{_a('https://journal.nptu.edu.tw/ccm/vol_file.aspx?fid=A112-003&lang=cht', '簡巧雯、曹美蘭（屏東大學學報）')}"
+            f"（華藝備援 {_a('https://www.airitilibrary.com/Article/Detail/P20190221001-N202402290007-00003', 'Airiti')}）："
+            "期貨避險較能降低變異數；賣權夏普值較高。"
+            "頁上的權利金占比是當日成本示例（短樣本示例／C），不要寫成每年固定保費。"
+            "限制：長期續買保費貴、隱含波動升高權利金變貴、整口會買超、週選只保該週、買方可能到期歸零、價差有保護上限。"
+        ),
+        "sources": (
+            f"{_a('https://www.taifex.com.tw/cht/2/tXO', '期交所臺指選擇權')}；"
+            f"{_a('https://openapi.taifex.com.tw/v1/DailyMarketReportOpt', 'DailyMarketReportOpt')}、"
+            f"{_a('https://openapi.taifex.com.tw/v1/FinalSettlementPriceIndexOptions', '選擇權最後結算價')}、"
+            f"{_a('https://openapi.taifex.com.tw/v1/FinalSettlementPrice', 'FinalSettlementPrice')}。"
+        ),
+    },
+    "trend-filter": {
+        "schema": "hedge",
+        "what": "用發行量加權股價「報酬」指數的均線，判斷現在該「在場」還是「減碼／啟動避險」。這是進出場濾網，不是預測漲跌，也和「震盪盤判定器」不同；可以當作期貨避險或保護性賣權的開關提示。",
+        "rules": "採用 FinLab 原參數（研究值）：收盤 &lt; 120MA × 0.98 → 減碼／啟動避險；收盤 &gt; 120MA → 在場；介於之間維持前一天狀態。當日收盤判斷，下一交易日執行。60／240 日均線與 0%／4% 緩衝只當說明，不改用回測看起來最好的那組；只看 60 日、不留緩衝的版本在該回測最差。",
+        "read": "偏多／在場＝收盤在 120MA 之上；中性＝兩線之間、沿用前一天；偏防守＝跌破 120MA × 0.98。",
+        "evidence": (
+            f"〔A〕{_a('https://mebfaber.com/wp-content/uploads/2016/05/SSRN-id962461.pdf', 'Faber（2007）')}。"
+            f"〔B〕{_a('https://finlab.finance/blog/taiex-moving-average-market-filter', 'FinLab 大盤均線濾網')}："
+            "31 支策略中 27 支最大回撤變淺，中位數約淺 6.1 個百分點；31 支年化報酬全部變少，中位數約少 4.3 個百分點；空手日約 24.8%，這些日子指數年化仍約 +1.2%。"
+            "限制：降低報酬、訊號落後、V 型反彈時會賣低買晚。不要把「回撤變淺」理解成績效變好。"
+        ),
+        "sources": (
+            f"{_a('https://openapi.twse.com.tw/v1/indicesReport/MFI94U', '證交所 OpenAPI MFI94U')}（當月）；"
+            f"{_a('https://data.gov.tw/dataset/11871', '政府資料開放平臺資料集 11871')}；"
+            "歷史回補用證交所官方月檔 indicesReport/MFI94U（JSON）。不用第三方行情。"
+        ),
+    },
 }
 
-INTROS: dict[str, dict[str, Markup]] = {
-    k: {p: Markup(v + (DISCLAIM if p == "limits" else "")) for p, v in d.items()} for k, d in _RAW.items()
-}
+def _pack(d: dict[str, str]) -> dict[str, Markup]:
+    schema = d.get("schema", "default")
+    tail_key = "evidence" if schema == "hedge" else "limits"
+    out = {}
+    for k, v in d.items():
+        if k == "schema":
+            out[k] = v  # type: ignore[assignment]
+            continue
+        out[k] = Markup(v + (DISCLAIM if k == tail_key else ""))
+    return out
+
+
+INTROS: dict[str, dict[str, Markup]] = {k: _pack(d) for k, d in _RAW.items()}

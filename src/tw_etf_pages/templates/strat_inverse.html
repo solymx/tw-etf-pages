@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% from "_strategy_macros.html" import badge, pct, page_footer, page_nav, strategy_intro, hedge_banner %}
+{% block title %}00632R 反向 ETF 耗損說明{% endblock %}
+{% block body %}
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>📉 00632R 反向 ETF 耗損說明</h1>
+  <p class="muted">資料日 <strong>{{ iv.date }}</strong>；00632R 收盤 {{ "%.2f"|format(iv.close) }}{% if iv.volume %}，成交量 {{ "{:,.0f}".format(iv.volume) }} 股{% endif %}{% if iv.bench_close %}。0050 收盤資料日 {{ iv.bench_date }}，{{ "%.2f"|format(iv.bench_close) }}{% endif %}。</p>
+  {{ page_nav() }}
+</header>
+{{ strategy_intro("inverse-etf") }}
+{{ hedge_banner() }}
+
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">風險說明（不做自動買賣燈號）</div>
+      <div class="muted">只適合極短線、方向明確的下跌對沖；長抱不是驗證過的放空法；震盪市最易磨損；大盤上漲時持有＝方向成本＋衰減。</div></div>
+    <div class="mg-big">{{ badge(iv.label) }}</div>
+  </div>
+  <p>{{ iv.reason }}</p>
+</div>
+
+<section>
+  <h3 class="section-title">1／5／20 日報酬對照與衰減缺口（自算）</h3>
+  <p class="muted">衰減缺口 ＝ 近 N 日 00632R 報酬 −（−1 × 同期 0050 報酬）。正值代表反向 ETF 跌得比「恰好反向」少（或漲得比較多），負值代表額外耗損。</p>
+  <div class="table-wrap">
+  <table class="report kd-table st-table">
+  <thead><tr><th>期間</th><th>00632R 報酬</th><th>0050 報酬</th><th>「恰好反向」應為</th><th>衰減缺口（自算）</th></tr></thead>
+  <tbody>
+  {% for t in iv.table %}
+  <tr>
+    <td>{{ t.lab }}</td>
+    <td class="num">{{ pct(t.inv * 100 if t.inv is not none else none, 2) }}</td>
+    <td class="num">{{ pct(t.bench * 100 if t.bench is not none else none, 2) }}</td>
+    <td class="num">{{ pct(-t.bench * 100 if t.bench is not none else none, 2) }}</td>
+    <td class="num">{{ pct(t.gap * 100 if t.gap is not none else none, 2) }}</td>
+  </tr>
+  {% endfor %}
+  </tbody></table></div>
+</section>
+
+<section>
+  <h3 class="section-title">長期走勢（還原 2024-12 七併一）</h3>
+  <p class="muted">合併約於 {{ iv.merge }} 恢復交易，更早的收盤價乘上 {{ iv.merge_ratio }} 倍以便連續比較。合併期間可能缺價。資料 {{ iv.first }} 起共 {{ iv.n }} 個交易日（合併前 {{ iv.pre_n }}、合併後 {{ iv.post_n }}）。</p>
+  <div class="kd-chart-wrap">{{ iv.svg|safe }}</div>
+</section>
+
+<div class="empty-box">
+  <p><strong>不適合長抱（公開說明書／產品頁原文）</strong></p>
+  <p>「{{ iv.prospectus }}」</p>
+  <p class="muted">適格條件以臺灣證券交易所及公開說明書為準。下市／清算條款、折溢價、流動性、每日重設與管理費亦以公開說明書為準。</p>
+</div>
+{{ page_footer(generated_at) }}
+</div></div>
+{% endblock %}

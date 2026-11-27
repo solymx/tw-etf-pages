@@ -17,15 +17,25 @@
 
 {% macro risk_banner() %}<div class="empty-box">⚠️ <strong>風險警示，不是買賣訊號。</strong>本頁只提醒可能的風險來源。</div>{% endmacro %}
 
+{% macro hedge_banner() %}<div class="empty-box">🛡️ <strong>避險工具，不是買賣訊號。</strong>本頁用來估算避險口數或說明風險，不承諾績效。</div>{% endmacro %}
+
 {% macro strategy_intro(key) %}{% set it = STRAT_INTROS[key] %}
 <section class="mg-card st-card st-intro" id="intro">
   <h2 class="kd-title">📖 策略介紹</h2>
   <dl class="st-intro-list">
+    {% if it.schema == 'hedge' %}
+    <dt>1. 白話說明</dt><dd>{{ it.what }}</dd>
+    <dt>2. 具體規則</dt><dd>{{ it.rules }}</dd>
+    <dt>3. 多空讀法</dt><dd>{{ it.read }}</dd>
+    <dt>4. 證據與限制</dt><dd>{{ it.evidence }}</dd>
+    <dt>5. 資料來源</dt><dd>{{ it.sources }}</dd>
+    {% else %}
     <dt>1. 這是什麼</dt><dd>{{ it.what }}</dd>
     <dt>2. 為什麼可能有用</dt><dd>{{ it.why }}</dd>
     <dt>3. 怎麼看這頁</dt><dd>{{ it.how }}</dd>
     <dt>4. 證據</dt><dd>{{ it.evidence }}</dd>
     <dt>5. 限制與風險</dt><dd>{{ it.limits }}</dd>
+    {% endif %}
   </dl>
   <p class="muted st-intro-legend">證據等級：A 學術論文；B 第三方回測（數字出自該文，本站未重跑）；C 僅搜尋摘要或無出處。</p>
 </section>
@@ -54,6 +64,10 @@
   <a href="lottery.html">🎰 樂透股警示</a>
   <a href="regime.html">🌀 震盪盤判定器</a>
   <a href="option-seller.html">🚥 賣方風險燈號</a>
+  <a href="futures-hedge.html">🛡️ 小台／微台避險</a>
+  <a href="inverse-etf.html">📉 00632R 耗損</a>
+  <a href="protective-put.html">☂️ 保護性賣權</a>
+  <a href="trend-filter.html">📏 均線濾網</a>
 </nav>
 {% endmacro %}
 

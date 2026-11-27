@@ -537,4 +537,93 @@
       });
     });
   });
+
+  // batch 5: client-side hedge / put calculators
+  function fmt(n, d) {
+    if (n === null || n === undefined || isNaN(n)) return '—';
+    return n.toLocaleString('zh-TW', { maximumFractionDigits: d, minimumFractionDigits: d });
+  }
+  function hedgeRead(ratio) {
+    if (ratio === null || ratio === 0) return '中性／未避險';
+    if (ratio >= 0.8 && ratio <= 1.2) return '偏避險';
+    if (ratio > 1.2) return '偏空（淨空）';
+    return '偏多（避險不足）';
+  }
+  function putRead(ratio) {
+    if (ratio === null || ratio === 0) return '無保護';
+    if (ratio >= 0.8 && ratio <= 1.2) return '中性偏防守';
+    if (ratio > 1.2) return '偏空';
+    return '保護不足';
+  }
+  qsa('[data-hedge-calc]').forEach(function (root) {
+    function settleOf() {
+      var c = qs('[name=contract]', root).value;
+      var s = parseFloat(root.getAttribute(c === 'tmf' ? 'data-settle-tmf' : 'data-settle-mtx'));
+      var m = parseFloat(root.getAttribute(c === 'tmf' ? 'data-mult-tmf' : 'data-mult-mtx'));
+      return { settle: s, mult: m };
+    }
+    function recalc() {
+      var v = parseFloat(qs('[name=value]', root).value);
+      var beta = parseFloat(qs('[name=beta]', root).value);
+      var sh = qs('[name=short]', root).value;
+      var short = sh === '' ? 0 : parseFloat(sh);
+      var sm = settleOf();
+      if (!isFinite(v) || v <= 0 || !isFinite(beta) || !isFinite(sm.settle) || !sm.settle) {
+        qsa('[data-out]', root).forEach(function (el) { el.textContent = '—'; });
+        return;
+      }
+      var notion = sm.settle * sm.mult;
+      var n = beta * v / notion;
+      var nint = Math.round(n);
+      var resid = beta * v - nint * notion;
+      qs('[data-out=n]', root).textContent = fmt(n, 2) + ' 口';
+      qs('[data-out=nint]', root).textContent = String(nint) + ' 口';
+      qs('[data-out=resid]', root).textContent = fmt(resid, 0) + ' 元';
+      var ratio = n === 0 ? 0 : short / n;
+      qs('[data-out=read]', root).textContent = hedgeRead(short === 0 ? 0 : ratio);
+    }
+    qsa('input,select', root).forEach(function (el) { el.addEventListener('input', recalc); el.addEventListener('change', recalc); });
+    recalc();
+  });
+  qsa('[data-put-calc]').forEach(function (root) {
+    function recalc() {
+      var v = parseFloat(qs('[name=value]', root).value);
+      var rawB = qs('[name=beta]', root).value;
+      var assumed = rawB === '';
+      var beta = assumed ? 1 : parseFloat(rawB);
+      var lo = qs('[name=long]', root).value;
+      var long = lo === '' ? 0 : parseFloat(lo);
+      var spot = parseFloat(root.getAttribute('data-spot'));
+      var mult = parseFloat(root.getAttribute('data-mult'));
+      if (!isFinite(v) || v <= 0 || !isFinite(beta) || !isFinite(spot) || !spot) {
+        qsa('[data-out]', root).forEach(function (el) { if (el.getAttribute('data-out') !== 'beta-note') el.textContent = '—'; });
+        var box = qs('[data-prem-rows]', root);
+        if (box) box.innerHTML = '';
+        return;
+      }
+      var need = v * beta;
+      var n = need / (spot * mult);
+      var nint = Math.round(n);
+      qs('[data-out=need]', root).textContent = fmt(need, 0) + ' 元';
+      qs('[data-out=beta-note]', root).textContent = assumed ? '（beta 以 1 計算，假設）' : '';
+      qs('[data-out=n]', root).textContent = fmt(n, 2) + ' 口';
+      qs('[data-out=nint]', root).textContent = String(nint) + ' 口';
+      qs('[data-out=read]', root).textContent = putRead(n === 0 ? 0 : (long === 0 ? 0 : long / n));
+      var box = qs('[data-prem-rows]', root);
+      if (box) {
+        var html = '';
+        qsa('[data-put-table] tbody tr').forEach(function (tr) {
+          var twd = parseFloat(tr.getAttribute('data-twd'));
+          var lab = tr.getAttribute('data-label') || '';
+          if (!isFinite(twd)) return;
+          var pct = twd * nint / v * 100;
+          html += '<p>整口後，「' + lab + '」權利金約 ' + fmt(twd * nint, 0) + ' 元，占組合 ' + fmt(pct, 2) + '%（當日示例／C，不是每年固定成本）</p>';
+        });
+        box.innerHTML = html;
+      }
+    }
+    qsa('input', root).forEach(function (el) { el.addEventListener('input', recalc); });
+    recalc();
+  });
+
 })();

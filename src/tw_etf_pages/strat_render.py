@@ -33,9 +33,14 @@ def update_strategies(root: Path) -> None:
 
     from .strat_regime import update_regime
     from .strat_options import update_options
+    from .strat_futhedge import update_futhedge
+    from .strat_inverse import update_inverse
+    from .strat_trendfilter import update_trend
 
     steps += [("CB", lambda: update_cb(root)), ("dilution", lambda: update_dilution(root)),
-              ("regime OHLC", lambda: update_regime(root)), ("TXO options", lambda: update_options(root))]
+              ("regime OHLC", lambda: update_regime(root)), ("TXO options", lambda: update_options(root)),
+              ("futures hedge", lambda: update_futhedge(root)), ("inverse ETF", lambda: update_inverse(root)),
+              ("trend TRI", lambda: update_trend(root))]
     steps += [("ex-right factors", lambda: update_exright(root)), ("buyback", lambda: update_buyback(root)),
               ("insider", lambda: update_insider(root)), ("attention", lambda: update_attention(root))]
     for name, fn in steps:
@@ -59,6 +64,10 @@ def render_strategies(env: Any, site: Path, root: Path, generated_at: str) -> di
     from .strat_lottery import build_lottery_view
     from .strat_regime import build_regime_view
     from .strat_options import build_options_view
+    from .strat_futhedge import build_futhedge_view
+    from .strat_inverse import build_inverse_view
+    from .strat_put import build_put_view
+    from .strat_trendfilter import build_trend_view
 
     from .strat_intro import INTROS
 
@@ -76,7 +85,11 @@ def render_strategies(env: Any, site: Path, root: Path, generated_at: str) -> di
              ("dl", build_dilution_view, "strat_dilution.html", "dilution.html"),
              ("lt", build_lottery_view, "strat_lottery.html", "lottery.html"),
              ("rg", build_regime_view, "strat_regime.html", "regime.html"),
-             ("op", build_options_view, "strat_options.html", "option-seller.html"))
+             ("op", build_options_view, "strat_options.html", "option-seller.html"),
+             ("fh", build_futhedge_view, "strat_futhedge.html", "futures-hedge.html"),
+             ("iv", build_inverse_view, "strat_inverse.html", "inverse-etf.html"),
+             ("pp", build_put_view, "strat_put.html", "protective-put.html"),
+             ("tf", build_trend_view, "strat_trendfilter.html", "trend-filter.html"))
     for key, build, tpl, out in pages:
         try:
             v = build(root)
@@ -122,4 +135,19 @@ def render_strategies(env: Any, site: Path, root: Path, generated_at: str) -> di
                   "label": op["label"] if op else na, "reason": op["reason"] if op else "資料暫缺。",
                   "date": op["date"] if op else None,
                   "flag": ("期交所資料未更新" if op and op["stale"] else None)})
+    fh, iv, pp, tf = views.get("fh"), views.get("iv"), views.get("pp"), views.get("tf")
+    cards.append({"title": "⑭ 小台／微台 Beta 避險", "href": "futures-hedge.html",
+                  "label": fh["label"] if fh else na, "reason": fh["reason"] if fh else "資料暫缺。",
+                  "date": fh["date"] if fh else None,
+                  "flag": ("期交所資料未更新" if fh and fh.get("stale") else None)})
+    cards.append({"title": "⑮ 00632R 反向 ETF 耗損", "href": "inverse-etf.html",
+                  "label": iv["label"] if iv else na, "reason": iv["reason"] if iv else "資料暫缺。",
+                  "date": iv["date"] if iv else None, "flag": None})
+    cards.append({"title": "⑯ 買方保護性賣權", "href": "protective-put.html",
+                  "label": pp["label"] if pp else na, "reason": pp["reason"] if pp else "資料暫缺。",
+                  "date": pp["date"] if pp else None,
+                  "flag": ("期交所資料未更新" if pp and pp.get("stale") else None)})
+    cards.append({"title": "⑰ 大盤均線濾網", "href": "trend-filter.html",
+                  "label": tf["label"] if tf else na, "reason": tf["reason"] if tf else "資料暫缺。",
+                  "date": tf["date"] if tf else None, "flag": None})
     return {"cards": cards, "dv": dv}

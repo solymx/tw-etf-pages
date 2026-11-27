@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% from "_strategy_macros.html" import badge, kindbadge, page_footer, page_nav, strategy_intro, hedge_banner %}
+{% block title %}大盤均線濾網{% endblock %}
+{% block body %}
+{% set o = tf.ind %}
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>📏 大盤均線濾網（加權報酬指數）</h1>
+  <p class="muted">資料日 <strong>{{ tf.date }}</strong>；發行量加權股價報酬指數收盤 {{ "{:,.2f}".format(tf.close) }}。官方資料 {{ tf.first }} 起共 {{ tf.n }} 個交易日。收盤後更新。這是進出場濾網，和「震盪盤判定器」不同；也可用來當 <a href="futures-hedge.html">期貨避險</a>、<a href="protective-put.html">保護性賣權</a> 的開關提示。</p>
+  {{ page_nav() }}
+</header>
+{{ strategy_intro("trend-filter") }}
+{{ hedge_banner() }}
+
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">今日收盤訊號（下一交易日執行，研究值）</div>
+      <div class="muted">收盤 &gt; 120MA → 在場；收盤 &lt; 120MA×0.98 → 減碼／啟動避險；介於之間維持前一天狀態。當日收盤判斷，下一交易日執行。</div></div>
+    <div class="mg-big">{{ badge(tf.sig_label) }}</div>
+  </div>
+  <p>{{ tf.reason }}</p>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>報酬指數</span><strong>{{ "{:,.0f}".format(o.close) }}</strong></div>
+    <div class="kd-metric"><span>120MA（研究值）</span><strong>{% if o.ma120 %}{{ "{:,.0f}".format(o.ma120) }}{% else %}資料暫缺{% endif %}</strong></div>
+    <div class="kd-metric"><span>2% 緩衝線（120MA×0.98）</span><strong>{% if o.buf2 %}{{ "{:,.0f}".format(o.buf2) }}{% else %}—{% endif %}</strong></div>
+    <div class="kd-metric"><span>距 120MA</span><strong>{% if o.dist is not none %}{{ "%+.2f"|format(o.dist) }}%{% else %}—{% endif %}</strong></div>
+    <div class="kd-metric"><span>前一天狀態（今日盤中適用）</span><strong>{{ tf.exec_label.text }}</strong></div>
+    <div class="kd-metric"><span>連續同一訊號天數</span><strong>{{ tf.streak_sig }} 天</strong></div>
+  </div>
+</div>
+
+{% if tf.note_240 %}<div class="empty-box">⚠️ {{ tf.note_240 }}</div>{% endif %}
+
+<section>
+  <h3 class="section-title">均線一覽（60／240 與 0%／4% 緩衝只當說明，不改用）</h3>
+  <p class="muted">本頁實際規則只用 120MA 與 2% 緩衝（FinLab 原參數，研究值）。只看 60 日、不留緩衝的版本在該回測最差，所以不改用那一組。</p>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>60MA（僅說明）</span><strong>{% if o.ma60 %}{{ "{:,.0f}".format(o.ma60) }}{% else %}資料暫缺{% endif %}</strong></div>
+    <div class="kd-metric"><span>120MA</span><strong>{% if o.ma120 %}{{ "{:,.0f}".format(o.ma120) }}{% else %}資料暫缺{% endif %}</strong></div>
+    <div class="kd-metric"><span>240MA（僅說明）</span><strong>{% if o.ma240 %}{{ "{:,.0f}".format(o.ma240) }}{% else %}資料暫缺{% endif %}</strong></div>
+    <div class="kd-metric"><span>0% 緩衝＝120MA（僅說明）</span><strong>{% if o.ma120 %}{{ "{:,.0f}".format(o.ma120) }}{% else %}—{% endif %}</strong></div>
+    <div class="kd-metric"><span>4% 緩衝線（僅說明）</span><strong>{% if o.ma120 %}{{ "{:,.0f}".format(o.ma120 * 0.96) }}{% else %}—{% endif %}</strong></div>
+  </div>
+  <div class="kd-chart-wrap">{{ tf.svg|safe }}</div>
+  <p class="muted"><span style="display:inline-block;width:12px;height:3px;background:#1e293b;vertical-align:middle"></span> 報酬指數
+    　<span style="color:#dc2626">—— 120MA</span>
+    　<span style="color:#16a34a">-- 2% 緩衝</span>
+    　<span style="color:#94a3b8">-- 60MA（說明）</span>
+    　<span style="color:#7c3aed">-- 240MA（說明）</span></p>
+</section>
+{{ page_footer(generated_at) }}
+</div></div>
+{% endblock %}

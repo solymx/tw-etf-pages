@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% from "_strategy_macros.html" import badge, kindbadge, page_footer, page_nav, strategy_intro, hedge_banner %}
+{% block title %}買臺指賣權當保險{% endblock %}
+{% block body %}
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>☂️ 買臺指賣權當保險</h1>
+  <p class="muted">選擇權快照日 <strong>{{ pp.snap_date or "資料暫缺" }}</strong>{% if pp.spot %}；指數 {{ pp.spot_date }} 收盤 {{ "{:,.2f}".format(pp.spot) }}，一口名目 {{ "{:,.0f}".format(pp.notional) }} 元（每點 50 元，TXO 歐式）{% endif %}。本頁是<strong>買方避險</strong>，和「賣方風險燈號」不同。每天 13:45 後更新。</p>
+  {{ page_nav() }}
+</header>
+{{ strategy_intro("protective-put") }}
+{{ hedge_banner() }}
+{% if pp.stale %}<div class="empty-box">⚠️ 期交所 OpenAPI 本次抓取失敗{% if pp.status.error %}（{{ pp.status.error }}）{% endif %}；{% if pp.snap_date %}以下沿用 {{ pp.snap_date }} 的快照。{% else %}目前沒有快照，資料暫缺。{% endif %}</div>{% endif %}
+
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">部位讀法（需自行輸入買入口數）</div>
+      <div class="muted">中性偏防守＝約 1 倍理論口數；偏空＝明顯超過；無保護＝沒有部位或已到期。價差跌破低履約後不再保護。預設未輸入＝無保護。</div></div>
+    <div class="mg-big">{{ badge(pp.label) }}</div>
+  </div>
+  <p>{{ pp.reason }}</p>
+</div>
+
+<section class="mg-card st-card" id="calc">
+  <h3 class="kd-title">理論口數試算（瀏覽器端，不會上傳）</h3>
+  <p class="muted">需避險金額 ＝ 組合市值 × beta；理論口數 ＝ 需避險金額 ÷（指數 × 50）。沒輸入 beta 時以 1 計算並標示假設。</p>
+  <div class="st-calc" data-put-calc
+       data-spot="{{ pp.spot or '' }}"
+       data-mult="{{ pp.mult }}">
+    <label>持股市值（元）<input type="number" name="value" min="0" step="10000" placeholder="請輸入"></label>
+    <label>beta（空白＝假設 1）<input type="number" name="beta" step="0.01" placeholder="1（假設）"></label>
+    <label>已買入賣權口數（可留空）<input type="number" name="long" step="1" placeholder="0＝無保護"></label>
+    <div class="st-calc-out">
+      <p>需避險金額：<strong data-out="need">—</strong> <span class="muted" data-out="beta-note"></span></p>
+      <p>理論口數：<strong data-out="n">—</strong></p>
+      <p>四捨五入整口：<strong data-out="nint">—</strong></p>
+      <p>讀法：<strong data-out="read">—</strong></p>
+      <div data-prem-rows></div>
+    </div>
+  </div>
+</section>
+
+{% for b in pp.blocks %}
+<section>
+  <h3 class="section-title">{{ b.name }} {{ b.code }}（到期 {{ b.expiry }}，距快照 {{ b.days }} 天）{% if not b.has_vol %} <span class="muted">— 此序列當日三檔示例成交量皆為 0，改列有未平倉的履約價，流動性請自行判斷</span>{% endif %}</h3>
+  <div class="table-wrap">
+  <table class="report kd-table st-table" data-put-table data-code="{{ b.code }}">
+  <thead><tr><th>檔位</th><th>履約價</th><th>實際價外</th><th>結算價（點）</th><th>權利金 ×50（元／口）</th><th>收盤</th><th>成交量</th><th>未平倉</th><th>流動性</th></tr></thead>
+  <tbody>
+  {% for r in b.puts %}
+  <tr data-prem="{{ r.prem if r.prem is not none else '' }}" data-twd="{{ r.twd if r.twd is not none else '' }}" data-label="{{ r.label }}">
+    <td>{{ r.label }}{% if r.pct %}（經驗值／示例）{% endif %}</td>
+    <td class="num"><strong>{{ "{:,.0f}".format(r.strike) }}</strong></td>
+    <td class="num">{{ "%+.1f"|format(r.otm) }}%</td>
+    <td class="num">{% if r.settle is not none %}{{ r.settle }}{% else %}資料暫缺{% endif %}</td>
+    <td class="num">{% if r.twd is not none %}{{ "{:,.0f}".format(r.twd) }}{% else %}—{% endif %}</td>
+    <td class="num">{% if r.close is not none %}{{ r.close }}{% else %}—{% endif %}</td>
+    <td class="num">{% if r.vol is not none %}{{ "{:,.0f}".format(r.vol) }}{% else %}—{% endif %}</td>
+    <td class="num">{% if r.oi is not none %}{{ "{:,.0f}".format(r.oi) }}{% else %}—{% endif %}</td>
+    <td>{% if r.low_liq %}<span class="muted">成交偏低（&lt;100 口，自算）</span>{% else %}—{% endif %}</td>
+  </tr>
+  {% endfor %}
+  </tbody></table></div>
+  {% if b.spread %}
+  <p>示例價差（經驗值／示例）：買 {{ "{:,.0f}".format(b.spread.buy.strike) }} 賣權、賣 {{ "{:,.0f}".format(b.spread.sell.strike) }} 賣權。
+     淨權利金 {{ "%.1f"|format(b.spread.net) }} 點（{{ "{:,.0f}".format(b.spread.net_twd) }} 元／組）；
+     最大保護 ＝ 履約差 {{ "{:,.0f}".format(b.spread.width) }} − 淨權利金 ＝ {{ "%.1f"|format(b.spread.cap) }} 點（{{ "{:,.0f}".format(b.spread.cap_twd) }} 元）。
+     指數跌破低履約後不再加保護。</p>
+  {% endif %}
+</section>
+{% else %}
+<p class="empty-box">資料暫缺：還沒有可用的選擇權快照。</p>
+{% endfor %}
+<p class="muted">權利金占組合比重請在上方試算器輸入市值後查看。此為當日成本示例，不是每年固定保費（短樣本示例／C）。</p>
+{{ page_footer(generated_at) }}
+</div></div>
+{% endblock %}
