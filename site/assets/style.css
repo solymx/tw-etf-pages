@@ -625,3 +625,4 @@ table.report tr.vix-row-low { background: #eff6ff; }
 table[data-sortable] th{cursor:pointer;user-select:none}
 table[data-sortable] th.sorted-asc::after{content:" ▲";font-size:.7em}
 table[data-sortable] th.sorted-desc::after{content:" ▼";font-size:.7em}
+.st-ov-warn{border-left-color:#f59e0b}

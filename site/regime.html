@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>震盪盤判定器</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  
+
+<div class="layout single"><div class="main">
+<header class="page-header">
+  <h1>🌀 震盪盤判定器（加權指數）</h1>
+  <p class="muted">資料日 <strong>2026-11-26</strong>；加權指數收盤 39,151.81。日 K 資料 2020-01-02 起共 1676 個交易日，全部為證交所官方資料。</p>
+  
+<nav class="nav-inline">
+  <a href="index.html#part_overview">← 回首頁「今日多空總覽」</a>
+  <a href="revenue.html">📊 月營收動能</a>
+  <a href="dividend-lowvol.html">🛡️ 高殖利率＋低波動</a>
+  <a href="futures-pc.html">🧭 外資期貨＋P/C</a>
+  <a href="sbl.html">🐻 借券賣出餘額</a>
+  <a href="52week.html">🏔️ 52 週新高</a>
+  <a href="buyback.html">🔁 庫藏股買回</a>
+  <a href="insider.html">🧾 內部人轉讓</a>
+  <a href="attention.html">⚠️ 注意股</a>
+  <a href="cb.html">🧷 可轉債警示</a>
+  <a href="dilution.html">💧 現增稀釋</a>
+  <a href="lottery.html">🎰 樂透股警示</a>
+  <a href="regime.html">🌀 震盪盤判定器</a>
+  <a href="option-seller.html">🚥 賣方風險燈號</a>
+</nav>
+
+</header>
+<div class="empty-box">ℹ️ <strong>本頁描述「現在是什麼盤」、預告波動大小，不預測漲跌方向。</strong></div>
+<div class="mg-card st-card">
+  <div class="kd-card-head">
+    <div><div class="kd-title">今日盤型</div>
+      <div class="muted">趨勢盤：ADX≥25 且 ER20≥0.35；低波動盤整：ADX&lt;20、ER20&lt;0.25、帶寬百分位≤30%、20 日區間≤7%；高波動動盪：（帶寬百分位≥80% 或 20 日區間≥14%）且 ER20&lt;0.35；其餘「過渡」（經驗值）。方向依 +DI／−DI。</div></div>
+    <div class="mg-big"><span class="st-badge st-bear">高波動動盪・偏空</span></div>
+  </div>
+  <p>布林帶寬在近 120 日的 97% 百分位、20 日區間 30.2%，波動很大；但效率比 ER20 只有 0.26，漲跌來回、不是單向趨勢。−DI 在上，方向偏空。</p>
+  <div class="kd-metrics">
+    <div class="kd-metric"><span>ADX(14)</span><strong>38.8</strong></div>
+    <div class="kd-metric"><span>+DI／−DI</span><strong>18.8／42.6</strong></div>
+    <div class="kd-metric"><span>ER20</span><strong>0.26</strong></div>
+    <div class="kd-metric"><span>帶寬百分位（120 日）</span><strong>96.7%</strong></div>
+    <div class="kd-metric"><span>20 日區間</span><strong>30.2%</strong></div>
+  </div>
+</div>
+
+<div class="mg-card st-card" id="dca">
+  <div class="kd-card-head">
+    <div><div class="kd-title">💰 定期定額狀態提示</div>
+      <div class="muted">趨勢盤偏多或低波動盤整 → 照常扣款（中性偏多）；高波動動盪偏空或趨勢盤偏空 → 照常扣款，但不加碼、不借錢加碼（偏空）；高波動動盪偏多 → 照常扣款，不追高加碼（中性）；過渡 → 照常扣款（中性）；上市融資維持率 &lt; 150%（本站警戒線）→ 加「先降槓桿」（經驗值）。</div></div>
+    <div class="mg-big"><span class="st-badge st-bear">照常扣款，但不加碼、不借錢加碼（偏空）</span></div>
+  </div>
+  <p>盤型「高波動動盪・偏空」→ 照常扣款，但不加碼、不借錢加碼。上市融資維持率 159.7%（2026-11-26），未低於 150%。<strong>任何狀態都不建議停扣。</strong></p>
+  <div class="kd-note">
+    <p><strong>依據</strong>：</p>
+    <ul>
+      <li>〔B〕<a href="https://onepunchmed.com/markets/dca-vs-dip-0050.html" target="_blank" rel="noopener">onepunchmed：0050 定期定額 vs 逢低加碼（2010–2026）</a>：主要版本（距一年高點 −20% 才加碼）在 81 個 10 年視窗全部落後定期定額，期末財富中位數少 16.8%；差距主要來自留現金等待。</li>
+      <li>〔C〕<a href="https://vidgist.app/s/2LLz-_wLIBY" target="_blank" rel="noopener">清流君影片摘要（VidGist）</a>：0050 回測 28 種逢低買進設定，27 組輸給定期定額（有觸發的 27 組平均少 9.56%）。</li>
+      <li>〔C，反方〕<a href="https://pyecontech.com/quant-investing/wp-2467/" target="_blank" rel="noopener">PyInvest：三種定期定額策略（0050，2008–2020）</a>：若手上「另有銀彈」，加碼成功時逢低加碼可優於單純定期定額——前提是加碼的錢不是從定期定額挪出來、也不是借來的。</li>
+    </ul>
+  </div>
+</div>
+
+<section>
+  <h3 class="section-title">各指標判讀</h3>
+  <div class="table-wrap">
+  <table class="report kd-table st-table">
+  <thead><tr><th>指標</th><th>數值</th><th>補充</th><th>判讀</th><th>規則</th></tr></thead>
+  <tbody>
+  
+  <tr><td><strong>ADX(14)</strong></td><td class="num">38.8</td><td>+DI 18.8／−DI 42.6</td><td><span class="st-badge st-bear">偏空（趨勢成形、−DI 在上）</span></td><td class="muted">≥25 且 +DI&gt;−DI 偏多；≥25 且 −DI&gt;+DI 偏空；&lt;20 盤整；20–25 過渡（經驗值）</td></tr>
+  
+  <tr><td><strong>效率比 ER20</strong></td><td class="num">0.26</td><td>ER10 0.26</td><td><span class="st-badge st-neutral">中性</span></td><td class="muted">≥0.40 依淨漲跌方向判偏多／偏空；≤0.25 來回盤（經驗值）</td></tr>
+  
+  <tr><td><strong>CHOP(14)</strong></td><td class="num">44.2</td><td>本站歷史百分位 56%</td><td><span class="st-badge st-neutral">中性</span></td><td class="muted">≤38.2 趨勢；≥61.8 盤整（經驗值）；台股 6 年 p90 只有 56.4，所以很少到盤整線，請一併看百分位</td></tr>
+  
+  <tr><td><strong>布林帶寬 (20,2)</strong></td><td class="num">24.93%</td><td>近 120 日百分位 96.7%</td><td><span class="st-badge st-neutral">高波動</span></td><td class="muted">百分位 ≤20% 壓縮；≥80% 高波動（經驗值）</td></tr>
+  
+  <tr><td><strong>20 日區間幅度</strong></td><td class="num">30.2%</td><td>高 46,140／低 35,442</td><td><span class="st-badge st-neutral">寬（≥14%）</span></td><td class="muted">≤7% 是低波動盤整條件之一；≥14% 是高波動條件之一（經驗值）</td></tr>
+  
+  <tr><td><strong>均線糾結 (5/10/20/60)</strong></td><td class="num">18.4%</td><td></td><td><span class="st-badge st-neutral">發散</span></td><td class="muted">≤3% 糾結（經驗值）</td></tr>
+  
+  <tr><td><strong>區間位置</strong></td><td class="num">0.35</td><td>只有在「低波動盤整」才有意義</td><td><span class="st-badge st-neutral">中段（非盤整，不判讀）</span></td><td class="muted">≤0.2 下緣；≥0.8 上緣（經驗值）</td></tr>
+  
+  <tr><td><strong>20 日年化波動</strong></td><td class="num">63.7%</td><td></td><td><span class="st-badge st-neutral">僅顯示</span></td><td class="muted">日報酬標準差 × √252</td></tr>
+  
+  <tr><td><strong>KD(9,3,3)</strong></td><td class="num">K 35.6／D 32.3</td><td><a href="taiex-kd.html">KD 頁</a></td><td><span class="st-badge st-neutral">僅顯示</span></td><td class="muted">沿用本站 KD 指標</td></tr>
+  <tr><td><strong>臺指 VIX</strong></td><td class="num">55.18</td><td>2026-11-26</td><td><span class="st-badge st-neutral">僅顯示</span></td><td class="muted">期交所公布值</td></tr>
+  </tbody></table></div>
+  <p class="muted">本站 2020-01-02 起資料的 CHOP 第 90 百分位 = 56.2（自算）。</p>
+
+  <h3 class="section-title">盤整結束訊號（三取二）</h3>
+  <div class="mg-card st-card">
+    <p><span class="st-badge st-neutral">未觸發</span> 三個條件中有 1 個成立（要 2 個才算「盤整結束」）。</p>
+    <ul>
+    <li>✅ <strong>收盤突破 20 日高／低</strong>：2026-11-20 收盤跌破前 20 日低點</li><li>⬜ <strong>ADX 由 &lt;20 升到 ≥25</strong>：近 10 日 ADX 最低 33.5，今天 38.8</li><li>⬜ <strong>帶寬百分位從 ≤20% 翻升</strong>：近 10 日帶寬百分位最低 96%，今天 97%</li>
+    </ul>
+    <p class="muted">回看窗（自算）：突破看近 5 個交易日內有沒有收盤 &gt; 前 20 日最高價或 &lt; 前 20 日最低價；ADX 看近 10 個交易日內曾 &lt;20、今天 ≥25；帶寬看近 10 個交易日內百分位曾 ≤20%，今天比那個低點高 ≥10 個百分點且比昨天高。門檻為經驗值。</p>
+  </div>
+
+  <h3 class="section-title">近 60 個交易日盤型色帶</h3>
+  <div class="kd-chart-wrap"><svg viewBox="0 0 760 64" class="kd-svg" role="img" aria-label="近 60 日盤型色帶"><rect x="0.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-08-28 過渡・中性</title></rect><rect x="12.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-08-31 過渡・中性</title></rect><rect x="25.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-01 過渡・中性</title></rect><rect x="38.0" y="0" width="13.2" height="46" fill="#94a3b8"><title>2026-09-02 低波動盤整・中性</title></rect><rect x="50.7" y="0" width="13.2" height="46" fill="#94a3b8"><title>2026-09-03 低波動盤整・中性</title></rect><rect x="63.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-04 過渡・中性</title></rect><rect x="76.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-07 過渡・中性</title></rect><rect x="88.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-08 過渡・中性</title></rect><rect x="101.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-09 過渡・中性</title></rect><rect x="114.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-10 過渡・中性</title></rect><rect x="126.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-11 過渡・中性</title></rect><rect x="139.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-14 過渡・中性</title></rect><rect x="152.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-15 過渡・中性</title></rect><rect x="164.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-16 過渡・中性</title></rect><rect x="177.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-17 過渡・中性</title></rect><rect x="190.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-18 過渡・中性</title></rect><rect x="202.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-21 過渡・中性</title></rect><rect x="215.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-22 過渡・中性</title></rect><rect x="228.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-23 過渡・中性</title></rect><rect x="240.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-24 過渡・中性</title></rect><rect x="253.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-29 過渡・中性</title></rect><rect x="266.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-09-30 過渡・中性</title></rect><rect x="278.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-01 過渡・中性</title></rect><rect x="291.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-02 過渡・中性</title></rect><rect x="304.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-05 過渡・中性</title></rect><rect x="316.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-06 過渡・中性</title></rect><rect x="329.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-07 過渡・中性</title></rect><rect x="342.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-08 過渡・中性</title></rect><rect x="354.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-12 過渡・中性</title></rect><rect x="367.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-13 過渡・中性</title></rect><rect x="380.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-14 過渡・中性</title></rect><rect x="392.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-15 過渡・中性</title></rect><rect x="405.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-16 過渡・中性</title></rect><rect x="418.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-19 過渡・中性</title></rect><rect x="430.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-20 過渡・中性</title></rect><rect x="443.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-21 過渡・中性</title></rect><rect x="456.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-22 過渡・中性</title></rect><rect x="468.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-27 過渡・中性</title></rect><rect x="481.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-28 過渡・中性</title></rect><rect x="494.0" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-29 過渡・中性</title></rect><rect x="506.7" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-10-30 過渡・中性</title></rect><rect x="519.3" y="0" width="13.2" height="46" fill="#e2e8f0"><title>2026-11-02 過渡・中性</title></rect><rect x="532.0" y="0" width="13.2" height="46" fill="#16a34a"><title>2026-11-03 趨勢盤・偏空</title></rect><rect x="544.7" y="0" width="13.2" height="46" fill="#16a34a"><title>2026-11-04 趨勢盤・偏空</title></rect><rect x="557.3" y="0" width="13.2" height="46" fill="#16a34a"><title>2026-11-05 趨勢盤・偏空</title></rect><rect x="570.0" y="0" width="13.2" height="46" fill="#16a34a"><title>2026-11-06 趨勢盤・偏空</title></rect><rect x="582.7" y="0" width="13.2" height="46" fill="#16a34a"><title>2026-11-09 趨勢盤・偏空</title></rect><rect x="595.3" y="0" width="13.2" height="46" fill="#16a34a"><title>2026-11-10 趨勢盤・偏空</title></rect><rect x="608.0" y="0" width="13.2" height="46" fill="#86efac"><title>2026-11-11 高波動動盪・偏空</title></rect><rect x="620.7" y="0" width="13.2" height="46" fill="#86efac"><title>2026-11-12 高波動動盪・偏空</title></rect><rect x="633.3" y="0" width="13.2" height="46" fill="#86efac"><title>2026-11-13 高波動動盪・偏空</title></rect><rect x="646.0" y="0" width="13.2" height="46" fill="#86efac"><title>2026-11-16 高波動動盪・偏空</title></rect><rect x="658.7" y="0" width="13.2" height="46" fill="#86efac"><title>2026-11-17 高波動動盪・偏空</title></rect><rect x="671.3" y="0" width="13.2" height="46" fill="#86efac"><title>2026-11-18 高波動動盪・偏空</title></rect><rect x="684.0" y="0" width="13.2" height="46" fill="#16a34a"><title>2026-11-19 趨勢盤・偏空</title></rect><rect x="696.7" y="0" width="13.2" height="46" fill="#16a34a"><title>2026-11-20 趨勢盤・偏空</title></rect><rect x="709.3" y="0" width="13.2" height="46" fill="#16a34a"><title>2026-11-23 趨勢盤・偏空</title></rect><rect x="722.0" y="0" width="13.2" height="46" fill="#86efac"><title>2026-11-24 高波動動盪・偏空</title></rect><rect x="734.7" y="0" width="13.2" height="46" fill="#86efac"><title>2026-11-25 高波動動盪・偏空</title></rect><rect x="747.3" y="0" width="13.2" height="46" fill="#86efac"><title>2026-11-26 高波動動盪・偏空</title></rect><text x="6.3" y="60" font-size="11" fill="#64748b" text-anchor="start">26-08-28</text><text x="386.3" y="60" font-size="11" fill="#64748b" text-anchor="middle">26-10-14</text><text x="753.7" y="60" font-size="11" fill="#64748b" text-anchor="end">26-11-26</text></svg></div>
+  <p class="muted">
+  <span style="display:inline-block;width:12px;height:12px;background:#dc2626;border:1px solid #cbd5e1;vertical-align:middle"></span> 趨勢盤・偏多　<span style="display:inline-block;width:12px;height:12px;background:#16a34a;border:1px solid #cbd5e1;vertical-align:middle"></span> 趨勢盤・偏空　<span style="display:inline-block;width:12px;height:12px;background:#86efac;border:1px solid #cbd5e1;vertical-align:middle"></span> 高波動動盪・偏空　<span style="display:inline-block;width:12px;height:12px;background:#fca5a5;border:1px solid #cbd5e1;vertical-align:middle"></span> 高波動動盪・偏多　<span style="display:inline-block;width:12px;height:12px;background:#94a3b8;border:1px solid #cbd5e1;vertical-align:middle"></span> 低波動盤整　<span style="display:inline-block;width:12px;height:12px;background:#e2e8f0;border:1px solid #cbd5e1;vertical-align:middle"></span> 過渡　<br>
+  近 60 日：過渡 40 天、低波動盤整 2 天、趨勢盤 9 天、高波動動盪 9 天。</p>
+  <details><summary>逐日明細</summary>
+  <div class="table-wrap st-scroll">
+  <table class="report kd-table st-table">
+  <thead><tr><th>日期</th><th>收盤</th><th>盤型</th><th>ADX</th><th>+DI</th><th>−DI</th><th>ER20</th><th>帶寬百分位</th><th>20 日區間</th><th>CHOP</th></tr></thead>
+  <tbody>
+  
+  <tr><td>2026-11-26</td><td class="num">39,151.81</td><td>高波動動盪・偏空</td>
+  <td class="num">38.8</td><td class="num">18.8</td><td class="num">42.6</td>
+  <td class="num">0.26</td><td class="num">96.7%</td><td class="num">30.2%</td><td class="num">44.2</td></tr>
+  
+  <tr><td>2026-11-25</td><td class="num">38,195.43</td><td>高波動動盪・偏空</td>
+  <td class="num">38.8</td><td class="num">19.7</td><td class="num">44.8</td>
+  <td class="num">0.32</td><td class="num">98.3%</td><td class="num">32.7%</td><td class="num">47.3</td></tr>
+  
+  <tr><td>2026-11-24</td><td class="num">40,122.35</td><td>高波動動盪・偏空</td>
+  <td class="num">38.7</td><td class="num">22.7</td><td class="num">40.8</td>
+  <td class="num">0.23</td><td class="num">99.2%</td><td class="num">32.8%</td><td class="num">44.8</td></tr>
+  
+  <tr><td>2026-11-23</td><td class="num">36,811.89</td><td>趨勢盤・偏空</td>
+  <td class="num">39.5</td><td class="num">11.8</td><td class="num">47.2</td>
+  <td class="num">0.40</td><td class="num">100.0%</td><td class="num">32.8%</td><td class="num">42.9</td></tr>
+  
+  <tr><td>2026-11-20</td><td class="num">36,033.29</td><td>趨勢盤・偏空</td>
+  <td class="num">38.0</td><td class="num">12.8</td><td class="num">49.5</td>
+  <td class="num">0.47</td><td class="num">100.0%</td><td class="num">32.4%</td><td class="num">43.9</td></tr>
+  
+  <tr><td>2026-11-19</td><td class="num">38,426.89</td><td>趨勢盤・偏空</td>
+  <td class="num">36.4</td><td class="num">14.5</td><td class="num">43.7</td>
+  <td class="num">0.37</td><td class="num">100.0%</td><td class="num">25.1%</td><td class="num">48.6</td></tr>
+  
+  <tr><td>2026-11-18</td><td class="num">40,194.91</td><td>高波動動盪・偏空</td>
+  <td class="num">35.3</td><td class="num">16.0</td><td class="num">43.1</td>
+  <td class="num">0.33</td><td class="num">97.5%</td><td class="num">25.1%</td><td class="num">43.2</td></tr>
+  
+  <tr><td>2026-11-17</td><td class="num">40,092.11</td><td>高波動動盪・偏空</td>
+  <td class="num">34.5</td><td class="num">17.4</td><td class="num">44.1</td>
+  <td class="num">0.34</td><td class="num">96.7%</td><td class="num">25.1%</td><td class="num">38.4</td></tr>
+  
+  <tr><td>2026-11-16</td><td class="num">41,040.08</td><td>高波動動盪・偏空</td>
+  <td class="num">33.8</td><td class="num">18.9</td><td class="num">41.6</td>
+  <td class="num">0.30</td><td class="num">95.8%</td><td class="num">25.6%</td><td class="num">37.0</td></tr>
+  
+  <tr><td>2026-11-13</td><td class="num">43,675.12</td><td>高波動動盪・偏空</td>
+  <td class="num">33.5</td><td class="num">21.7</td><td class="num">33.9</td>
+  <td class="num">0.26</td><td class="num">95.8%</td><td class="num">27.9%</td><td class="num">34.2</td></tr>
+  
+  <tr><td>2026-11-12</td><td class="num">43,091.87</td><td>高波動動盪・偏空</td>
+  <td class="num">34.4</td><td class="num">23.4</td><td class="num">36.5</td>
+  <td class="num">0.29</td><td class="num">96.7%</td><td class="num">29.7%</td><td class="num">32.9</td></tr>
+  
+  <tr><td>2026-11-11</td><td class="num">44,257.15</td><td>高波動動盪・偏空</td>
+  <td class="num">35.3</td><td class="num">24.0</td><td class="num">39.8</td>
+  <td class="num">0.28</td><td class="num">97.5%</td><td class="num">29.8%</td><td class="num">31.9</td></tr>
+  
+  <tr><td>2026-11-10</td><td class="num">42,711.92</td><td>趨勢盤・偏空</td>
+  <td class="num">36.2</td><td class="num">19.7</td><td class="num">43.2</td>
+  <td class="num">0.40</td><td class="num">99.2%</td><td class="num">30.6%</td><td class="num">30.6</td></tr>
+  
+  <tr><td>2026-11-09</td><td class="num">41,661.70</td><td>趨勢盤・偏空</td>
+  <td class="num">36.1</td><td class="num">16.9</td><td class="num">46.9</td>
+  <td class="num">0.51</td><td class="num">100.0%</td><td class="num">31.6%</td><td class="num">29.6</td></tr>
+  
+  <tr><td>2026-11-06</td><td class="num">39,701.64</td><td>趨勢盤・偏空</td>
+  <td class="num">35.2</td><td class="num">7.9</td><td class="num">54.5</td>
+  <td class="num">0.72</td><td class="num">100.0%</td><td class="num">32.1%</td><td class="num">24.8</td></tr>
+  
+  <tr><td>2026-11-05</td><td class="num">41,574.72</td><td>趨勢盤・偏空</td>
+  <td class="num">32.2</td><td class="num">10.1</td><td class="num">42.6</td>
+  <td class="num">0.66</td><td class="num">100.0%</td><td class="num">20.4%</td><td class="num">33.7</td></tr>
+  
+  <tr><td>2026-11-04</td><td class="num">42,948.91</td><td>趨勢盤・偏空</td>
+  <td class="num">29.9</td><td class="num">11.1</td><td class="num">44.6</td>
+  <td class="num">0.45</td><td class="num">89.2%</td><td class="num">19.4%</td><td class="num">30.3</td></tr>
+  
+  <tr><td>2026-11-03</td><td class="num">43,307.54</td><td>趨勢盤・偏空</td>
+  <td class="num">27.6</td><td class="num">12.8</td><td class="num">40.7</td>
+  <td class="num">0.42</td><td class="num">75.0%</td><td class="num">15.7%</td><td class="num">36.1</td></tr>
+  
+  <tr><td>2026-11-02</td><td class="num">44,920.14</td><td>過渡</td>
+  <td class="num">25.7</td><td class="num">14.7</td><td class="num">36.4</td>
+  <td class="num">0.28</td><td class="num">65.8%</td><td class="num">12.5%</td><td class="num">39.7</td></tr>
+  
+  <tr><td>2026-10-30</td><td class="num">45,211.83</td><td>過渡</td>
+  <td class="num">24.4</td><td class="num">15.7</td><td class="num">36.1</td>
+  <td class="num">0.22</td><td class="num">59.2%</td><td class="num">11.7%</td><td class="num">38.8</td></tr>
+  
+  <tr><td>2026-10-29</td><td class="num">46,368.33</td><td>過渡</td>
+  <td class="num">23.3</td><td class="num">18.0</td><td class="num">29.6</td>
+  <td class="num">0.16</td><td class="num">40.8%</td><td class="num">9.4%</td><td class="num">41.6</td></tr>
+  
+  <tr><td>2026-10-28</td><td class="num">47,035.58</td><td>過渡</td>
+  <td class="num">23.2</td><td class="num">19.5</td><td class="num">29.1</td>
+  <td class="num">0.12</td><td class="num">35.0%</td><td class="num">9.4%</td><td class="num">40.1</td></tr>
+  
+  <tr><td>2026-10-27</td><td class="num">46,096.23</td><td>過渡</td>
+  <td class="num">23.4</td><td class="num">16.9</td><td class="num">31.6</td>
+  <td class="num">0.19</td><td class="num">32.5%</td><td class="num">9.4%</td><td class="num">41.1</td></tr>
+  
+  <tr><td>2026-10-22</td><td class="num">46,041.43</td><td>過渡</td>
+  <td class="num">22.9</td><td class="num">18.3</td><td class="num">30.9</td>
+  <td class="num">0.19</td><td class="num">30.0%</td><td class="num">8.5%</td><td class="num">42.5</td></tr>
+  
+  <tr><td>2026-10-21</td><td class="num">46,887.77</td><td>過渡</td>
+  <td class="num">22.7</td><td class="num">20.6</td><td class="num">30.8</td>
+  <td class="num">0.03</td><td class="num">26.7%</td><td class="num">8.2%</td><td class="num">41.0</td></tr>
+  
+  <tr><td>2026-10-20</td><td class="num">46,292.93</td><td>過渡</td>
+  <td class="num">22.9</td><td class="num">19.7</td><td class="num">33.6</td>
+  <td class="num">0.00</td><td class="num">25.0%</td><td class="num">8.2%</td><td class="num">40.3</td></tr>
+  
+  <tr><td>2026-10-19</td><td class="num">46,822.08</td><td>過渡</td>
+  <td class="num">22.7</td><td class="num">20.1</td><td class="num">36.3</td>
+  <td class="num">0.11</td><td class="num">25.0%</td><td class="num">8.8%</td><td class="num">39.2</td></tr>
+  
+  <tr><td>2026-10-16</td><td class="num">47,111.26</td><td>過渡</td>
+  <td class="num">22.2</td><td class="num">21.9</td><td class="num">31.5</td>
+  <td class="num">0.18</td><td class="num">25.8%</td><td class="num">9.7%</td><td class="num">44.0</td></tr>
+  
+  <tr><td>2026-10-15</td><td class="num">46,969.87</td><td>過渡</td>
+  <td class="num">22.6</td><td class="num">23.1</td><td class="num">33.2</td>
+  <td class="num">0.12</td><td class="num">28.3%</td><td class="num">9.8%</td><td class="num">44.0</td></tr>
+  
+  <tr><td>2026-10-14</td><td class="num">48,625.83</td><td>過渡</td>
+  <td class="num">22.9</td><td class="num">27.6</td><td class="num">22.7</td>
+  <td class="num">0.31</td><td class="num">36.7%</td><td class="num">10.1%</td><td class="num">50.9</td></tr>
+  
+  <tr><td>2026-10-13</td><td class="num">48,341.31</td><td>過渡</td>
+  <td class="num">24.0</td><td class="num">29.7</td><td class="num">24.5</td>
+  <td class="num">0.17</td><td class="num">43.3%</td><td class="num">10.1%</td><td class="num">44.9</td></tr>
+  
+  <tr><td>2026-10-12</td><td class="num">49,301.96</td><td>過渡</td>
+  <td class="num">25.0</td><td class="num">33.9</td><td class="num">19.9</td>
+  <td class="num">0.28</td><td class="num">45.0%</td><td class="num">10.1%</td><td class="num">34.3</td></tr>
+  
+  <tr><td>2026-10-08</td><td class="num">49,313.44</td><td>過渡</td>
+  <td class="num">25.0</td><td class="num">36.4</td><td class="num">16.7</td>
+  <td class="num">0.29</td><td class="num">37.5%</td><td class="num">10.1%</td><td class="num">30.8</td></tr>
+  
+  <tr><td>2026-10-07</td><td class="num">49,806.37</td><td>過渡</td>
+  <td class="num">24.0</td><td class="num">38.9</td><td class="num">13.6</td>
+  <td class="num">0.34</td><td class="num">32.5%</td><td class="num">10.1%</td><td class="num">27.1</td></tr>
+  
+  <tr><td>2026-10-06</td><td class="num">49,822.55</td><td>過渡</td>
+  <td class="num">22.2</td><td class="num">40.5</td><td class="num">14.2</td>
+  <td class="num">0.40</td><td class="num">27.5%</td><td class="num">10.1%</td><td class="num">27.1</td></tr>
+  
+  <tr><td>2026-10-05</td><td class="num">49,712.04</td><td>過渡</td>
+  <td class="num">20.2</td><td class="num">40.5</td><td class="num">14.9</td>
+  <td class="num">0.44</td><td class="num">25.0%</td><td class="num">9.6%</td><td class="num">29.2</td></tr>
+  
+  <tr><td>2026-10-02</td><td class="num">48,475.74</td><td>過渡</td>
+  <td class="num">18.2</td><td class="num">32.1</td><td class="num">17.1</td>
+  <td class="num">0.30</td><td class="num">24.2%</td><td class="num">7.1%</td><td class="num">39.8</td></tr>
+  
+  <tr><td>2026-10-01</td><td class="num">48,353.49</td><td>過渡</td>
+  <td class="num">17.2</td><td class="num">31.6</td><td class="num">17.6</td>
+  <td class="num">0.17</td><td class="num">21.7%</td><td class="num">7.1%</td><td class="num">41.1</td></tr>
+  
+  <tr><td>2026-09-30</td><td class="num">47,940.13</td><td>過渡</td>
+  <td class="num">16.4</td><td class="num">33.1</td><td class="num">18.4</td>
+  <td class="num">0.21</td><td class="num">15.0%</td><td class="num">7.1%</td><td class="num">41.2</td></tr>
+  
+  <tr><td>2026-09-29</td><td class="num">47,631.96</td><td>過渡</td>
+  <td class="num">15.4</td><td class="num">32.2</td><td class="num">19.9</td>
+  <td class="num">0.15</td><td class="num">13.3%</td><td class="num">7.1%</td><td class="num">40.4</td></tr>
+  
+  <tr><td>2026-09-24</td><td class="num">48,024.60</td><td>過渡</td>
+  <td class="num">14.8</td><td class="num">33.7</td><td class="num">19.0</td>
+  <td class="num">0.24</td><td class="num">11.7%</td><td class="num">7.1%</td><td class="num">42.0</td></tr>
+  
+  <tr><td>2026-09-23</td><td class="num">48,157.29</td><td>過渡</td>
+  <td class="num">13.8</td><td class="num">35.1</td><td class="num">18.4</td>
+  <td class="num">0.27</td><td class="num">8.3%</td><td class="num">7.1%</td><td class="num">43.4</td></tr>
+  
+  <tr><td>2026-09-22</td><td class="num">47,800.17</td><td>過渡</td>
+  <td class="num">12.5</td><td class="num">36.9</td><td class="num">19.3</td>
+  <td class="num">0.29</td><td class="num">3.3%</td><td class="num">8.2%</td><td class="num">43.9</td></tr>
+  
+  <tr><td>2026-09-21</td><td class="num">47,718.84</td><td>過渡</td>
+  <td class="num">11.0</td><td class="num">31.8</td><td class="num">21.0</td>
+  <td class="num">0.32</td><td class="num">2.5%</td><td class="num">8.0%</td><td class="num">55.3</td></tr>
+  
+  <tr><td>2026-09-18</td><td class="num">47,180.75</td><td>過渡</td>
+  <td class="num">10.3</td><td class="num">28.1</td><td class="num">22.1</td>
+  <td class="num">0.21</td><td class="num">2.5%</td><td class="num">7.6%</td><td class="num">59.2</td></tr>
+  
+  <tr><td>2026-09-17</td><td class="num">46,288.00</td><td>過渡</td>
+  <td class="num">10.2</td><td class="num">27.6</td><td class="num">24.0</td>
+  <td class="num">0.16</td><td class="num">2.5%</td><td class="num">7.6%</td><td class="num">59.2</td></tr>
+  
+  <tr><td>2026-09-16</td><td class="num">45,848.90</td><td>過渡</td>
+  <td class="num">10.4</td><td class="num">22.5</td><td class="num">26.4</td>
+  <td class="num">0.13</td><td class="num">5.8%</td><td class="num">7.6%</td><td class="num">57.6</td></tr>
+  
+  <tr><td>2026-09-15</td><td class="num">45,511.49</td><td>過渡</td>
+  <td class="num">10.6</td><td class="num">23.1</td><td class="num">27.8</td>
+  <td class="num">0.02</td><td class="num">7.5%</td><td class="num">7.6%</td><td class="num">57.6</td></tr>
+  
+  <tr><td>2026-09-14</td><td class="num">45,862.52</td><td>過渡</td>
+  <td class="num">10.7</td><td class="num">24.2</td><td class="num">29.2</td>
+  <td class="num">0.00</td><td class="num">7.5%</td><td class="num">7.6%</td><td class="num">51.8</td></tr>
+  
+  <tr><td>2026-09-11</td><td class="num">46,184.85</td><td>過渡</td>
+  <td class="num">10.8</td><td class="num">26.0</td><td class="num">26.3</td>
+  <td class="num">0.04</td><td class="num">7.5%</td><td class="num">7.6%</td><td class="num">43.4</td></tr>
+  
+  <tr><td>2026-09-10</td><td class="num">46,940.49</td><td>過渡</td>
+  <td class="num">11.6</td><td class="num">28.5</td><td class="num">22.8</td>
+  <td class="num">0.11</td><td class="num">7.5%</td><td class="num">7.6%</td><td class="num">41.9</td></tr>
+  
+  <tr><td>2026-09-09</td><td class="num">47,183.36</td><td>過渡</td>
+  <td class="num">11.7</td><td class="num">30.1</td><td class="num">19.6</td>
+  <td class="num">0.20</td><td class="num">6.7%</td><td class="num">7.6%</td><td class="num">42.2</td></tr>
+  
+  <tr><td>2026-09-08</td><td class="num">47,105.78</td><td>過渡</td>
+  <td class="num">10.9</td><td class="num">31.4</td><td class="num">20.4</td>
+  <td class="num">0.23</td><td class="num">5.0%</td><td class="num">7.6%</td><td class="num">43.0</td></tr>
+  
+  <tr><td>2026-09-07</td><td class="num">47,326.27</td><td>過渡</td>
+  <td class="num">10.2</td><td class="num">31.6</td><td class="num">21.4</td>
+  <td class="num">0.28</td><td class="num">2.5%</td><td class="num">7.3%</td><td class="num">46.3</td></tr>
+  
+  <tr><td>2026-09-04</td><td class="num">46,551.13</td><td>過渡</td>
+  <td class="num">9.5</td><td class="num">27.0</td><td class="num">23.1</td>
+  <td class="num">0.27</td><td class="num">0.8%</td><td class="num">6.2%</td><td class="num">52.3</td></tr>
+  
+  <tr><td>2026-09-03</td><td class="num">45,857.66</td><td>低波動盤整</td>
+  <td class="num">9.6</td><td class="num">27.8</td><td class="num">24.6</td>
+  <td class="num">0.18</td><td class="num">0.8%</td><td class="num">6.8%</td><td class="num">51.1</td></tr>
+  
+  <tr><td>2026-09-02</td><td class="num">46,164.72</td><td>低波動盤整</td>
+  <td class="num">9.8</td><td class="num">29.4</td><td class="num">23.2</td>
+  <td class="num">0.20</td><td class="num">0.8%</td><td class="num">6.8%</td><td class="num">50.8</td></tr>
+  
+  <tr><td>2026-09-01</td><td class="num">46,948.72</td><td>過渡</td>
+  <td class="num">9.7</td><td class="num">31.4</td><td class="num">24.8</td>
+  <td class="num">0.43</td><td class="num">0.8%</td><td class="num">7.2%</td><td class="num">50.5</td></tr>
+  
+  <tr><td>2026-08-31</td><td class="num">46,128.47</td><td>過渡</td>
+  <td class="num">9.5</td><td class="num">27.6</td><td class="num">26.5</td>
+  <td class="num">0.36</td><td class="num">0.8%</td><td class="num">8.6%</td><td class="num">54.3</td></tr>
+  
+  <tr><td>2026-08-28</td><td class="num">46,331.45</td><td>過渡</td>
+  <td class="num">10.1</td><td class="num">29.6</td><td class="num">23.3</td>
+  <td class="num">0.42</td><td class="num">3.3%</td><td class="num">8.9%</td><td class="num">53.0</td></tr>
+  
+  </tbody></table></div></details>
+</section>
+
+<div class="kd-note">
+  <p><strong>回測備註（使用者自算，樣本 2020-11～2026-11，僅樣本內）</strong>：趨勢類指標對「未來 10 天會不會走趨勢」沒有預測力——不論目前是哪一種狀態，未來 10 日 ER 都在 0.30–0.36；波動類指標有：布林帶寬百分位 ≤20% 時，未來 10 日平均區間 3.9%，≥80% 時 5.6%。所以本頁只描述「現在的狀態」並預告「波動大小」，<strong>不預測方向</strong>。</p>
+  <p><strong>學術依據</strong>：洪國哲（2007）以三狀態馬可夫轉換模型把台股分成多頭、空頭、盤整三種狀態（<a href="https://doi.org/10.29631/acm.200705.d009" target="_blank" rel="noopener">doi:10.29631/acm.200705.d009</a>）。</p>
+  <p><strong>計算說明</strong>：ADX／+DI／−DI 為 Wilder(14) 平滑；布林帶寬＝4 × 20 日收盤標準差 ÷ 20 日均價，百分位＝近 120 個交易日（含今天）中 ≤ 今天的比例；20 日區間＝(20 日最高 − 20 日最低) ÷ 20 日最低；CHOP(14)＝100 × log10(14 日真實區間合計 ÷ (14 日最高 − 14 日最低)) ÷ log10(14)；ER＝|N 日淨變動| ÷ N 日每日變動絕對值合計；均線糾結＝(MA5/10/20/60 最大 − 最小) ÷ 收盤；區間位置＝(收盤 − 20 日最低) ÷ (20 日最高 − 20 日最低)；20 日年化波動＝日報酬標準差 × √252。</p>
+  <p><strong>資料來源</strong>：證交所 <a href="https://www.twse.com.tw/zh/indices/taiex/mi-5min-hist.html" target="_blank" rel="noopener">發行量加權股價指數歷史資料（MI_5MINS_HIST）</a>、證交所 OpenAPI indicesReport/MI_5MINS_HIST（當月每日累積）、期交所臺指 VIX、本站上市融資維持率。</p>
+</div>
+
+<footer class="site-footer">
+  <p><strong>不構成投資建議；判讀規則屬經驗法則，非研究保證。</strong></p>
+  <p>時區：Asia/Taipei。最後產生時間：2026-11-27T10:46:18+08:00。</p>
+</footer>
+
+</div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
