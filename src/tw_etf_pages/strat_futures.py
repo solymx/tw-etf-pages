@@ -79,6 +79,10 @@ def parse_fut_any(text: str) -> dict[str, int]:
             v = num(vals[net_k[0]])
             if v is not None:
                 out[any_to_date(date_v).isoformat()] = int(v)
+    if not out:
+        rows = json.loads(t)
+        logger.warning("TAIFEX openapi JSON not recognised; keys=%s sample=%s",
+                       list(rows[0].keys()) if rows else None, rows[:2])
     return out
 
 
