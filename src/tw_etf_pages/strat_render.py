@@ -31,7 +31,11 @@ def update_strategies(root: Path) -> None:
     from .strat_cb import update_cb
     from .strat_dilution import update_dilution
 
-    steps += [("CB", lambda: update_cb(root)), ("dilution", lambda: update_dilution(root))]
+    from .strat_regime import update_regime
+    from .strat_options import update_options
+
+    steps += [("CB", lambda: update_cb(root)), ("dilution", lambda: update_dilution(root)),
+              ("regime OHLC", lambda: update_regime(root)), ("TXO options", lambda: update_options(root))]
     steps += [("ex-right factors", lambda: update_exright(root)), ("buyback", lambda: update_buyback(root)),
               ("insider", lambda: update_insider(root)), ("attention", lambda: update_attention(root))]
     for name, fn in steps:
@@ -53,6 +57,8 @@ def render_strategies(env: Any, site: Path, root: Path, generated_at: str) -> di
     from .strat_cb import build_cb_view
     from .strat_dilution import build_dilution_view
     from .strat_lottery import build_lottery_view
+    from .strat_regime import build_regime_view
+    from .strat_options import build_options_view
 
     views: dict[str, Any] = {}
     pages = (("rv", build_revenue_view, "strat_revenue.html", "revenue.html"),
@@ -65,7 +71,9 @@ def render_strategies(env: Any, site: Path, root: Path, generated_at: str) -> di
              ("at", build_attention_view, "strat_attention.html", "attention.html"),
              ("cb", build_cb_view, "strat_cb.html", "cb.html"),
              ("dl", build_dilution_view, "strat_dilution.html", "dilution.html"),
-             ("lt", build_lottery_view, "strat_lottery.html", "lottery.html"))
+             ("lt", build_lottery_view, "strat_lottery.html", "lottery.html"),
+             ("rg", build_regime_view, "strat_regime.html", "regime.html"),
+             ("op", build_options_view, "strat_options.html", "option-seller.html"))
     for key, build, tpl, out in pages:
         try:
             v = build(root)
@@ -101,4 +109,14 @@ def render_strategies(env: Any, site: Path, root: Path, generated_at: str) -> di
         v = views.get(key)
         cards.append({"title": title, "href": href, "label": v["label"] if v else na,
                       "reason": v["reason"] if v else "資料暫缺。", "date": v.get(date_key) if v else None, "flag": None})
+    rg = views.get("rg")
+    cards.append({"title": "⑫ 震盪盤判定器（含定期定額提示）", "href": "regime.html",
+                  "label": rg["label"] if rg else na,
+                  "reason": f"{rg['reason']} 定期定額：{rg['dca']['label']['text']}。" if rg else "資料暫缺。",
+                  "date": rg["date"] if rg else None, "flag": None})
+    op = views.get("op")
+    cards.append({"title": "⑬ 賣方風險燈號", "href": "option-seller.html",
+                  "label": op["label"] if op else na, "reason": op["reason"] if op else "資料暫缺。",
+                  "date": op["date"] if op else None,
+                  "flag": ("期交所資料未更新" if op and op["stale"] else None)})
     return {"cards": cards, "dv": dv}

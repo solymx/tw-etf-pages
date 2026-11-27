@@ -214,3 +214,93 @@ def test_lottery_returns_use_exright_reference_and_drop_limits():
     rets = ltm.daily_returns(series, {"1111": [["2026-01-05", 0.95]]})
     assert abs(rets[1]["1111"]) < 1e-9          # ex-dividend day is flat vs reference
     assert "1111" not in rets[2]                # +26% exceeds price limit → excluded
+
+
+# ---------------------------------------------------------------- batch 4: regime / option seller
+from datetime import date as _date
+
+from tw_etf_pages import strat_options as sop
+from tw_etf_pages import strat_regime as srg
+
+
+def test_regime_parsers_roc_and_openapi():
+    js = {"stat": "OK", "data": [["115/11/26", "38,100.10", "38,500.00", "37,900.50", "38,200.00"]]}
+    assert srg.parse_rwd(js) == [{"date": "2026-11-26", "open": 38100.1, "high": 38500.0, "low": 37900.5, "close": 38200.0}]
+    assert srg.parse_rwd({"stat": "很抱歉"}) == []
+    rows = srg.parse_openapi([{"Date": "1151102", "OpeningIndex": "45034.53", "HighestIndex": "45156.17",
+                               "LowestIndex": "44399.10", "ClosingIndex": "44920.14"}])
+    assert rows[0]["date"] == "2026-11-02" and rows[0]["close"] == 44920.14
+
+
+def test_yahoo_drops_today_and_never_overrides_official():
+    ts = [1764000000, 1764086400]  # 2025-11-25 / 26 (UTC+8 dates)
+    js = {"chart": {"result": [{"timestamp": ts, "indicators": {"quote": [
+        {"open": [1, 2], "high": [1, 2], "low": [1, 2], "close": [1, 2]}]}}]}}
+    d1 = srg.datetime.fromtimestamp(ts[1], srg.timezone(srg.timedelta(hours=8))).date()
+    rows = srg.parse_yahoo(js, d1)
+    assert len(rows) == 1 and rows[0]["src"] == "yahoo"
+    by = {rows[0]["date"]: {"date": rows[0]["date"], "open": 9, "high": 9, "low": 9, "close": 9, "src": "twse"}}
+    assert srg.merge_rows(by, rows, "yahoo") == 0 and by[rows[0]["date"]]["close"] == 9
+
+
+def _synthetic(closes):
+    return [{"date": f"2020-01-{i:03d}", "open": c, "high": c * 1.005, "low": c * 0.995, "close": c}
+            for i, c in enumerate(closes)]
+
+
+def test_regime_trend_and_range_classification():
+    up = srg.indicators(_synthetic([100 * 1.004 ** i for i in range(260)]))
+    last = up[-1]
+    assert last["adx"] > 25 and last["pdi"] > last["mdi"] and last["er20"] > 0.9
+    assert last["regime"] == "趨勢盤" and last["direction"] == "偏多"
+    flat = [100 + (0.3 if i % 2 else -0.3) for i in range(260)]
+    o = srg.indicators(_synthetic(flat))[-1]
+    assert o["er20"] < 0.1 and o["regime"] != "趨勢盤"
+    assert srg.classify({"adx": 38.8, "pdi": 18.8, "mdi": 42.6, "er20": 0.26, "width_pct": 98.7, "range20": 10}) == ("高波動動盪", "偏空")
+    assert srg.classify({"adx": 22, "pdi": 20, "mdi": 18, "er20": 0.3, "width_pct": 50, "range20": 8}) == ("過渡", "中性")
+    assert srg.classify({"adx": 15, "pdi": 20, "mdi": 18, "er20": 0.2, "width_pct": 25, "range20": 6}) == ("低波動盤整", "中性")
+
+
+def test_dca_advice_and_margin():
+    assert srg.dca_advice("低波動盤整", "中性", 170)["text"] == "照常扣款"
+    a = srg.dca_advice("高波動動盪", "偏空", 145)
+    assert a["text"].startswith("照常扣款，但不加碼、不借錢加碼") and "先降槓桿" in a["text"] and a["label"]["cls"] == "bear"
+    assert srg.dca_advice("過渡", "中性", None)["label"]["cls"] == "neutral"
+
+
+def test_option_expiry_and_picks():
+    assert sop.expiry_of("202612W1")[0] == _date(2026, 12, 2)
+    assert sop.expiry_of("202611F4") == (_date(2026, 11, 27), "weekly")
+    assert sop.expiry_of("202612") == (_date(2026, 12, 16), "monthly")
+    picks = sop.pick_contracts("2026-11-26", {"202611F4": [], "202612W1": [], "202612": [], "202701": []})
+    assert picks == {"weekly": "202611F4", "monthly": "202612"}
+    rows = [[k, cp, None, 10.0, 100, 5] for k in range(36000, 44001, 100) for cp in "CP"]
+    t = sop.strike_table(rows, 40000)
+    assert [(r["cp"][:2], r["strike"]) for r in t] == [("賣權", 38000), ("賣權", 36000), ("買權", 42000), ("買權", 44000)]
+    assert t[0]["twd"] == 500
+
+
+def test_option_light_and_vix_stable():
+    calm = [{"date": f"d{i}", "close": 16.0} for i in range(30)]
+    ok, _ = sop.vix_stable(calm)
+    assert ok is True
+    spike = calm[:-1] + [{"date": "x", "close": 21.0}]
+    assert sop.vix_stable(spike)[0] is False
+    assert sop.light("低波動盤整", True)["color"] == "green"
+    assert sop.light("低波動盤整", False)["color"] == "yellow"
+    assert sop.light("高波動動盪", True)["text"] == "紅（偏空，不碰賣方）"
+    assert sop.light("趨勢盤", True)["text"] == "紅（不碰賣方）"
+    assert sop.light("過渡", True)["color"] == "yellow"
+
+
+def test_parse_opt_regular_session_only():
+    raw = [{"Date": "20261126", "Contract": "TXO", "ContractMonth(Week)": "202612W1", "StrikePrice": "38000",
+            "CallPut": "賣權", "Close": "120", "SettlementPrice": "118", "OpenInterest": "1,234", "Volume": "50",
+            "TradingSession": "一般"},
+           {"Date": "20261126", "Contract": "TXO", "ContractMonth(Week)": "202612W1", "StrikePrice": "38000",
+            "CallPut": "賣權", "Close": "-", "SettlementPrice": "-", "OpenInterest": "-", "Volume": "0",
+            "TradingSession": "盤後"},
+           {"Date": "20261126", "Contract": "CAO", "ContractMonth(Week)": "202612", "StrikePrice": "1",
+            "CallPut": "買權", "TradingSession": "一般"}]
+    d, c = sop.parse_opt(raw)
+    assert d == "2026-11-26" and c == {"202612W1": [[38000.0, "P", 120.0, 118.0, 1234.0, 50.0]]}

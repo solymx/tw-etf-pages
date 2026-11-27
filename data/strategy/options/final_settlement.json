@@ -1,0 +1,11 @@
+{
+  "source": "https://openapi.taifex.com.tw/v1/FinalSettlementPriceIndexOptions",
+  "rows": [
+    {
+      "contract": "TXO",
+      "month": "202611W4",
+      "date": "2026-11-25",
+      "price": 38230.0
+    }
+  ]
+}
