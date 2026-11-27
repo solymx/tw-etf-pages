@@ -3,7 +3,7 @@
     "https://www.twse.com.tw/rwd/zh/TAIEX/MI_5MINS_HIST",
     "https://openapi.twse.com.tw/v1/indicesReport/MI_5MINS_HIST"
   ],
-  "updated_at": "2026-11-27T10:42:55+08:00",
+  "updated_at": "2026-11-27T21:35:24+08:00",
   "fetch_errors": [],
   "rows": [
     {
@@ -13412,6 +13412,14 @@
       "high": 39459.95,
       "low": 38435.99,
       "close": 39151.81,
+      "src": "twse"
+    },
+    {
+      "date": "2026-11-27",
+      "open": 39168.57,
+      "high": 39495.41,
+      "low": 38890.53,
+      "close": 39308.08,
       "src": "twse"
     }
   ]

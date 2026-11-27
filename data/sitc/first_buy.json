@@ -1,8 +1,65 @@
 {
-  "generated_at": "2026-11-27T13:35:18+08:00",
+  "generated_at": "2026-11-27T21:34:34+08:00",
   "lookback": 10,
-  "latest_stored_date": "2026-11-26",
+  "latest_stored_date": "2026-11-27",
   "days": [
+    {
+      "date": "2026-11-27",
+      "prev_from": "2026-11-13",
+      "prev_to": "2026-11-26",
+      "items": [
+        {
+          "code": "2316",
+          "name": "楠梓電",
+          "market": "上市",
+          "net_shares": 1927000,
+          "net_lots": 1927.0,
+          "close": 122.5,
+          "chg_pct": 9.87,
+          "amount": 236057500
+        },
+        {
+          "code": "8155",
+          "name": "博智",
+          "market": "上櫃",
+          "net_shares": 200000,
+          "net_lots": 200.0,
+          "close": 210.5,
+          "chg_pct": -0.47,
+          "amount": 42100000
+        },
+        {
+          "code": "2356",
+          "name": "英業達",
+          "market": "上市",
+          "net_shares": 826000,
+          "net_lots": 826.0,
+          "close": 41.9,
+          "chg_pct": 0.0,
+          "amount": 34609400
+        },
+        {
+          "code": "4174",
+          "name": "浩鼎",
+          "market": "上櫃",
+          "net_shares": 157000,
+          "net_lots": 157.0,
+          "close": 65.5,
+          "chg_pct": 9.9,
+          "amount": 10283500
+        },
+        {
+          "code": "5288",
+          "name": "豐祥-KY",
+          "market": "上市",
+          "net_shares": 5000,
+          "net_lots": 5.0,
+          "close": 153.5,
+          "chg_pct": -1.92,
+          "amount": 767500
+        }
+      ]
+    },
     {
       "date": "2026-11-26",
       "prev_from": "2026-11-12",
@@ -2241,143 +2298,6 @@
           "close": 14.65,
           "chg_pct": -0.34,
           "amount": 14650
-        }
-      ]
-    },
-    {
-      "date": "2026-10-30",
-      "prev_from": "2026-10-14",
-      "prev_to": "2026-10-29",
-      "items": [
-        {
-          "code": "2618",
-          "name": "長榮航",
-          "market": "上市",
-          "net_shares": 2242000,
-          "net_lots": 2242.0,
-          "close": 42.7,
-          "chg_pct": -0.12,
-          "amount": 95733400
-        },
-        {
-          "code": "6139",
-          "name": "亞翔",
-          "market": "上市",
-          "net_shares": 31927,
-          "net_lots": 31.927,
-          "close": 636.0,
-          "chg_pct": -4.36,
-          "amount": 20305572
-        },
-        {
-          "code": "5871",
-          "name": "中租-KY",
-          "market": "上市",
-          "net_shares": 28921,
-          "net_lots": 28.921,
-          "close": 105.5,
-          "chg_pct": -1.4,
-          "amount": 3051166
-        },
-        {
-          "code": "4105",
-          "name": "東洋",
-          "market": "上櫃",
-          "net_shares": 22000,
-          "net_lots": 22.0,
-          "close": 79.9,
-          "chg_pct": -0.62,
-          "amount": 1757800
-        },
-        {
-          "code": "4766",
-          "name": "南寶",
-          "market": "上市",
-          "net_shares": 4000,
-          "net_lots": 4.0,
-          "close": 352.0,
-          "chg_pct": -2.63,
-          "amount": 1408000
-        },
-        {
-          "code": "8215",
-          "name": "明基材",
-          "market": "上市",
-          "net_shares": 37000,
-          "net_lots": 37.0,
-          "close": 27.8,
-          "chg_pct": -4.3,
-          "amount": 1028600
-        },
-        {
-          "code": "5309",
-          "name": "系統電",
-          "market": "上櫃",
-          "net_shares": 16000,
-          "net_lots": 16.0,
-          "close": 63.5,
-          "chg_pct": -8.63,
-          "amount": 1016000
-        },
-        {
-          "code": "1723",
-          "name": "中碳",
-          "market": "上市",
-          "net_shares": 12000,
-          "net_lots": 12.0,
-          "close": 79.5,
-          "chg_pct": -1.24,
-          "amount": 954000
-        },
-        {
-          "code": "5234",
-          "name": "達興材料",
-          "market": "上市",
-          "net_shares": 3000,
-          "net_lots": 3.0,
-          "close": 264.5,
-          "chg_pct": -8.16,
-          "amount": 793500
-        },
-        {
-          "code": "3078",
-          "name": "僑威",
-          "market": "上櫃",
-          "net_shares": 4000,
-          "net_lots": 4.0,
-          "close": 43.45,
-          "chg_pct": -2.69,
-          "amount": 173800
-        },
-        {
-          "code": "2015",
-          "name": "豐興",
-          "market": "上市",
-          "net_shares": 1000,
-          "net_lots": 1.0,
-          "close": 63.5,
-          "chg_pct": -1.85,
-          "amount": 63500
-        },
-        {
-          "code": "6790",
-          "name": "永豐實",
-          "market": "上市",
-          "net_shares": 1000,
-          "net_lots": 1.0,
-          "close": 37.8,
-          "chg_pct": -0.4,
-          "amount": 37800
-        },
-        {
-          "code": "2605",
-          "name": "新興",
-          "market": "上市",
-          "net_shares": 1000,
-          "net_lots": 1.0,
-          "close": 34.95,
-          "chg_pct": -0.57,
-          "amount": 34950
         }
       ]
     }
