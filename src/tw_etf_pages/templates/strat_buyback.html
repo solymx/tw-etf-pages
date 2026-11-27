@@ -12,7 +12,7 @@
 <div class="mg-card st-card">
   <div class="kd-card-head">
     <div><div class="kd-title">大盤：本月買回公告件數（{{ bb.ym }}）</div>
-      <div class="muted">月件數 &gt; 歷史平均＋1.5σ →「偏多（抄底區）」，其餘中性；沒有偏空</div></div>
+      <div class="muted">月件數 &gt; 歷史平均＋1.5σ →「偏多（抄底區）」，其餘中性；沒有偏空（研究值，B）</div></div>
     <div class="mg-big">{{ badge(bb.label) }}<strong>{{ bb.this_month }} 件</strong></div>
   </div>
   <p>{{ bb.reason }}</p>
@@ -40,7 +40,7 @@
 </section>
 <div class="kd-note">
   <p><strong>個股標籤</strong>：偏多＝目的是「註銷」或「維護公司信用及股東權益」，且預定買回佔已發行股份 ≥ 2%，且現價落在買回價格區間的下半部（現價位置 &lt; 50%）；其餘中性（<strong>經驗值</strong>）。轉讓員工型的買回通常不是護盤訊號。現價位置＝(現價−區間下限) ÷ (區間上限−區間下限)。</p>
-  <p><strong>大盤判讀</strong>：門檻（平均＋1.5σ）來自 FinLab 的回測；本站沒辦法自動下載官方歷史，所以從上線日起累積，滿 12 個月才開始判讀，之前顯示「資料累積中」。</p>
+  <p><strong>大盤判讀</strong>：大盤門檻（平均＋1.5σ）是研究值（B），出自 <a href="https://finlab.finance/blog/treasury-stock-buyback-bottom-signal" target="_blank" rel="noopener">FinLab 抄底訊號</a>。該回測裡「只在訊號時買 0050」9 組全輸；通過的是「危機後加碼正 2」（平常抱 0050、訊號後 250 日改抱 00631L）。本站沒辦法自動下載官方歷史，所以從上線日起累積，滿 12 個月才開始判讀，之前顯示「資料累積中」。</p>
   <p><strong>篩選方式</strong>：重大訊息中「符合條款」為第 35 款、主旨含「買回」，且說明有「買回股份目的」的董事會決議公告；排除執行完畢、未執行完畢、註銷、轉讓、金額達標等後續公告。</p>
   <p><strong>資料來源</strong>：證交所 OpenAPI t187ap04_L、櫃買中心 OpenAPI mopsfin_t187ap04_O（上市櫃公司每日重大訊息）；可到 <a href="{{ bb.src }}" target="_blank" rel="noopener">公開資訊觀測站</a> 查原文。</p>
 </div>

@@ -12,7 +12,7 @@
 <div class="mg-card st-card">
   <div class="kd-card-head">
     <div><div class="kd-title">大盤：全市場借券賣出總餘額 20 日增幅</div>
-      <div class="muted">&gt; +10% 偏空、&lt; −10% 偏多，其餘中性</div></div>
+      <div class="muted">&gt; +10% 偏空、&lt; −10% 偏多，其餘中性（經驗值）</div></div>
     <div class="mg-big">{{ badge(sb.label) }}<strong>{{ pct(sb.g_total, 1) }}</strong></div>
   </div>
   <p>{{ sb.reason }}</p>
@@ -34,8 +34,8 @@
 </section>
 <div class="kd-note">
   <p><strong>定義</strong>：佔股本比率＝借券賣出餘額 ÷ 已發行普通股數；20 日增幅＝今日餘額 ÷ 20 個交易日前餘額 − 1。券資比＝融券餘額 ÷ 融資餘額（只顯示，不判讀{% if sb.margin_date %}，融資融券資料日 {{ sb.margin_date }}{% endif %}）。</p>
-  <p><strong>判讀</strong>：偏空（空方壓力高）＝比率全市場前 10% 且 20 日增幅 &gt; 0；空方減壓（轉中性偏多）＝比率前 20% 但 20 日增幅 &lt; −20%（空方在回補）；其餘中性。</p>
-  <p><strong>注意</strong>：借券賣出包含權證避險與套利交易，不等於看空；券資比高也不代表會軋空（回測不支持）。</p>
+  <p><strong>判讀</strong>：偏空（空方壓力高）＝比率全市場前 10% 且 20 日增幅 &gt; 0；空方減壓（轉中性偏多）＝比率前 20% 但 20 日增幅 &lt; −20%（空方在回補）；其餘中性。±10%、前 10%、前 20%、−20% 皆為<strong>經驗值</strong>。</p>
+  <p><strong>注意</strong>：借券賣出包含權證避險與套利交易，不等於看空；券資比高也不代表會軋空（<a href="https://finlab.finance/blog/taiwan-chip-signals-backtest" target="_blank" rel="noopener">FinLab 籌碼訊號</a>：券資比最高組年化最低，「軋空」說法不成立）。</p>
   <p><strong>資料來源</strong>：<a href="{{ sb.src_l }}" target="_blank" rel="noopener">證交所 信用額度總量管制餘額表（TWT93U）</a>、<a href="{{ sb.src_o }}" target="_blank" rel="noopener">櫃買中心 借券賣出餘額</a>、公司基本資料（發行股數）、融資融券餘額。證交所約 18:30 後才公布當日資料，尚未公布時顯示前一交易日。</p>
 </div>
 {{ page_footer(generated_at) }}

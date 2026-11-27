@@ -317,3 +317,13 @@ def test_strategy_intro_blocks_have_five_parts():
         assert "不構成投資建議" in d["limits"], k
     assert "doi.org" not in INTROS["regime"]["evidence"] and "連結待查證" in INTROS["regime"]["evidence"]
     assert "期刊論文（臺灣銀行季刊）" in INTROS["option-seller"]["evidence"]
+    blob = "\n".join(str(v) for d in INTROS.values() for v in d.values())
+    assert "待補" not in blob
+    assert "2022 年低波贏" not in blob
+    assert "未打開全文" in INTROS["dilution"]["evidence"]
+    assert "未核到全文數字" in INTROS["attention"]["evidence"]
+    assert "申報後平均不一定為負" in INTROS["insider"]["how"]
+    assert "危機後加碼正 2" in INTROS["buyback"]["evidence"]
+    assert "只證明三狀態存在" in INTROS["regime"]["evidence"]
+    assert 'href="https://finlab.finance/blog/monthly-revenue-momentum"' in INTROS["revenue"]["evidence"]
+    assert "經驗值" in INTROS["revenue"]["how"]

@@ -12,7 +12,7 @@
 <div class="mg-card st-card">
   <div class="kd-card-head">
     <div><div class="kd-title">大盤溫度計：單月營收年增 &gt; 0 的公司比例</div>
-      <div class="muted">資料年月 {{ rv.ym }}；&gt; 60% 偏多、&lt; 40% 偏空，其餘中性</div></div>
+      <div class="muted">資料年月 {{ rv.ym }}；&gt; 60% 偏多、&lt; 40% 偏空，其餘中性（經驗值）</div></div>
     <div class="mg-big">{{ badge(rv.label) }}<strong>{% if rv.share_pos is not none %}{{ "%.1f"|format(rv.share_pos) }}%{% else %}資料暫缺{% endif %}</strong></div>
   </div>
   <p>{{ rv.reason }}</p>
@@ -32,7 +32,7 @@
   {{ rev_table(rv["items"], "rv-all") }}
 </section>
 <div class="kd-note">
-  <p><strong>個股判讀</strong>：偏多＝單月年增 ≥ 20% 且累計年增 ≥ 20% 且月增 &gt; 0；若當月營收同時是近 12 個月最高，標「偏多（強）」。偏空＝單月年增 &lt; 0 且累計年增 &lt; 0。其餘中性。「連續月數」＝往回數連續幾個月單月年增 &gt; 20%（本站存有 {{ rv.months_stored|length }} 個月：{{ rv.months_stored[0] }} ～ {{ rv.months_stored[-1] }}）。</p>
+  <p><strong>個股判讀</strong>：偏多＝單月年增 ≥ 20% 且累計年增 ≥ 20% 且月增 &gt; 0（20% 為經驗值）；若當月營收同時是近 12 個月最高，標「偏多（強）」。偏空＝單月年增 &lt; 0 且累計年增 &lt; 0。其餘中性。「連續月數」＝往回數連續幾個月單月年增 &gt; 20%（本站存有 {{ rv.months_stored|length }} 個月：{{ rv.months_stored[0] }} ～ {{ rv.months_stored[-1] }}）。</p>
   <p><strong>注意</strong>：只看營收創高要搭配股價趨勢；季節性行業（觀光、農業、零售、電子旺淡季）與去年基期偏低時容易誤判。月營收每月 10 日前公布，本頁在資料年月換月時重算；月初公司陸續公布，名單會逐日補齊。</p>
   <p><strong>資料來源</strong>：<a href="https://openapi.twse.com.tw/" target="_blank" rel="noopener">證交所 OpenAPI t187ap05_L</a>、<a href="https://www.tpex.org.tw/openapi/" target="_blank" rel="noopener">櫃買中心 OpenAPI mopsfin_t187ap05_O</a>；歷史月份取自 <a href="{{ rv.source }}" target="_blank" rel="noopener">公開資訊觀測站 每月營收彙總表</a>。</p>
 </div>

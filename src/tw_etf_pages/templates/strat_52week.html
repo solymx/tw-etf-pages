@@ -44,7 +44,7 @@
   </tbody></table></div>
 </section>
 <div class="kd-note">
-  <p><strong>個股標籤</strong>：偏多＝比值 ≥ 0.9（或今天創新高），而且量能沒有明顯萎縮（近 5 日平均成交金額 ≥ 近 20 日平均的 0.7 倍）；中性＝0.7～0.9（或接近高點但量縮）；偏空＝比值 &lt; 0.7。0.9／0.7／0.7 倍都是<strong>經驗值</strong>；研究只驗證過「全市場比值最高的 1/5（百分位 &gt; 80，標 ⭐）」表現較好。{% if wk.january %}<strong>1 月常有低價股反彈，偏空標籤可信度較低。</strong>{% endif %}</p>
+  <p><strong>個股標籤</strong>：偏多＝比值 ≥ 0.9（或今天創新高），而且量能沒有明顯萎縮（近 5 日平均成交金額 ≥ 近 20 日平均的 0.7 倍）；中性＝0.7～0.9（或接近高點但量縮）；偏空＝比值 &lt; 0.7。0.9／0.7／0.7 倍都是<strong>經驗值</strong>；標 ⭐（全市場比值最高的 1/5）是 <a href="https://finlab.finance/blog/tw-academic-anomalies-backtest" target="_blank" rel="noopener">FinLab 學術異常</a>五分位回測的研究結果（B），不代表本頁 0.9／0.7 切點已驗證。學術源見 <a href="https://bauer.uh.edu/TGeorge/papers/gh4-paper.pdf" target="_blank" rel="noopener">George &amp; Hwang（2004）</a>。{% if wk.january %}<strong>1 月常有低價股反彈，偏空標籤可信度較低。</strong>{% endif %}</p>
   <p><strong>計算說明</strong>：除權息以「除權息參考價 ÷ 除權息前收盤價」往前還原（{{ wk.factor_years|join("、") }} 年資料）；減資、分割、增資未還原，單日漲跌超過 11% 的股票以 ＊ 標註。量能用成交金額代替成交股數。收盤資料 {{ wk.price_from }} 起共 {{ wk.price_days }} 個交易日；交易日不足 200 天的新股不列入。</p>
   <p><strong>資料來源</strong>：證交所每日收盤行情（MI_INDEX）、櫃買中心上櫃收盤行情、證交所除權息計算結果表（TWT49U）、櫃買中心除權除息結果。</p>
 </div>
