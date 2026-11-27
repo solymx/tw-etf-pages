@@ -626,3 +626,4 @@ table[data-sortable] th{cursor:pointer;user-select:none}
 table[data-sortable] th.sorted-asc::after{content:" ▲";font-size:.7em}
 table[data-sortable] th.sorted-desc::after{content:" ▼";font-size:.7em}
 .st-ov-warn{border-left-color:#f59e0b}
+.st-intro{border-left:4px solid #3b82f6}.st-intro-list dt{font-weight:700;margin-top:.6rem}.st-intro-list dd{margin:.15rem 0 0 0}
