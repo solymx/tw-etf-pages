@@ -4,7 +4,7 @@
     "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL",
     "https://www.twse.com.tw/exchangeReport/STOCK_DAY"
   ],
-  "updated_at": "2026-11-27T22:18:58+08:00",
+  "updated_at": "2026-11-28T02:49:59+08:00",
   "rows": [
     {
       "date": "2025-10-30",

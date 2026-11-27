@@ -3,8 +3,10 @@
     "https://www.taifex.com.tw/cht/3/futContractsDate",
     "https://www.taifex.com.tw/cht/3/pcRatio"
   ],
-  "updated_at": "2026-11-27T22:18:39+08:00",
-  "fetch_errors": [],
+  "updated_at": "2026-11-28T02:49:36+08:00",
+  "fetch_errors": [
+    "futContractsDateDown: TAIFEX 期貨三大法人欄位格式變動: ['<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">']"
+  ],
   "rows": [
     {
       "date": "2025-10-01",
